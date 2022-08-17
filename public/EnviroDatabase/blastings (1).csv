@@ -1,0 +1,8 @@
+id,user_id,point_id,standard_id,date,peak_vektor_std,time,transversal_freq,vertical_freq,longitudinal_freq,transversal_ppv,vertical_ppv,longitudinal_ppv,peak_vektor,noise_level,blast_location,weather,sampler,remarks
+1,1,2,1,2015-09-17,7,12:31 PM,17.0,20.0,13.0,1.140,1.240,1.570,1.700,59.7,Araren Pit,Bright,AP/AL/CR,-
+1,1,2,1,2015-09-19,7,11:59 AM,18.0,22.0,10.0,1.570,1.370,2.100,2.190,62.9,Araren Pit,Bright,-,-
+1,1,2,1,2015-09-21,7,11:54 AM,14.0,24.0,15.0,1.810,1.860,2.400,2.780,57.6,Araren Pit,Bright,RT/RH,-
+1,1,2,1,2015-09-22,7,11:57 AM,16.0,20.0,18.0,2.710,1.970,2.640,3.820,57.1,Araren Pit,Bright,AL/RH/CR,-
+1,1,2,1,2015-09-25,7,12:19 PM,17.0,22.0,12.0,0.651,0.873,1.130,1.430,56.3,Araren Pit,Bright,AL/DA,-
+1,1,2,1,2015-09-28,7,12:37 PM,2.0,21.0,13.0,1.060,0.825,0.905,1.240,66.7,Araren Pit,Bright,DA/RT/BK,-
+1,1,2,1,2015-10-02,7,12:26 PM,19.0,26.0,14.0,0.571,0.619,0.825,0.853,72.7,Araren Pit,Bright,DA/CR,-

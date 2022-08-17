@@ -19,6 +19,7 @@ class CreateBlastingsTable extends Migration
             $table->foreignId('point_id');
             $table->foreignId('standard_id');
             $table->date('date');
+            $table->string('peak_vektor_std');
             $table->string('time');
             $table->string('transversal_freq');
             $table->string('vertical_freq');
@@ -31,6 +32,7 @@ class CreateBlastingsTable extends Migration
             $table->string('blast_location');
             $table->string('weather');
             $table->string('sampler');
+            $table->string('remarks');
             $table->timestamps();
 
         });

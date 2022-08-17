@@ -66,8 +66,8 @@
                                                 <div class="card-tools row">
                                                     <form action="/dashboard/monitoring/marine" class="form-inline">
                                                         <!-- <label for="fromDate" class="mr-2">From</label> -->
-                                                        <div class="input-group date mr-2" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate7" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
                                                         <!-- <label for="fromDate" class="mr-2 ml-2">To</label>
     
@@ -169,7 +169,7 @@
                                                             
                                                             <td>{{ $marine->locationBiota->nama }}</td>
                                                             <td>{{ $marine->Biota->nama }}</td>
-                                                            <td>{{ date('d-m-Y', strtotime( $marine->date))}}</td>
+                                                            <td>{{ date('d-M-Y', strtotime( $marine->date))}}</td>
                                                             <td>{{ $marine->taxa_richness }}</td>
                                                             <td>{{ $marine->species_density }}</td>
                                                             <td>{{ $marine->diversity_index }}</td>
@@ -220,7 +220,7 @@
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file"required name="file" class="custom-file-input" id="exampleInputFile">
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                             </div>
 

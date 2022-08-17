@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/monitoring/location">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/monitoring/location">Home</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/monitoring/location" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/monitoring/location" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
                         <div class="row">

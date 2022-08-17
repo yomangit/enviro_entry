@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/dashboard/index/dataentry">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/surfacewater/qualityperiode">Home</a></li>
                             <li class="breadcrumb-item active">Edit Data</li>
 
                         </ol>
@@ -31,7 +31,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/dashboard/index/dataentry/{{ $Input->id }}" method="post"
+                        <form action="/surfacewater/qualityperiode/{{ $Input->id }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group row">
-                                        <label style="font-size: 12px" class="col-sm-4 col-form-label">Tanggal</label>
+                                        <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                         <div class="col-sm-7">
                                             <div class="input-group date" id="reservationdate4" data-target-input="nearest">
                                                 <input type="text" name="date"
@@ -75,26 +75,49 @@
                                 </div>
                                 {{-- end tanggal --}}
                                 <div class="col-12 col-md-6">
-                                    <!-- /.form-group -->
                                     <div class="form-group row">
-                                        <label style="font-size: 12px" class="col-sm-4 col-form-label">Jam Sampling</label>
+                                        <label style="font-size: 12px"
+                                            class="col-sm-4 col-form-label">Start Time Sampling</label>
                                         <div class="col-sm-7">
-                                            <div class="input-group date" id="timepicker" data-target-input="nearest">
+                                            <div class="input-group date" id="timepicker"
+                                                data-target-input="nearest">
                                                 <input name="start_time" type="text"
                                                     value="{{ old('start_time', $Input->start_time) }}"
                                                     class="form-control datetimepicker-input form-control-sm @error('start_time') is-invalid @enderror"
-                                                    data-target="#timepicker" data-toggle="datetimepicker" />
+                                                    data-target="#timepicker"
+                                                    data-toggle="datetimepicker" />
                                                 @error('start_time')
-                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                    <span
+                                                        class=" invalid-feedback">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- /.form-group -->
+        
                                 </div>
-                                {{-- end jam sampling --}}
-                              
+                                {{-- end start time sampling --}}
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group row">
+                                        <label style="font-size: 12px"
+                                            class="col-sm-4 col-form-label">Finish Time Sampling</label>
+                                        <div class="col-sm-7">
+                                            <div class="input-group date" id="timepicker1"
+                                                data-target-input="nearest">
+                                                <input name="stop_time" type="text"
+                                                    value="{{ old('stop_time', $Input->stop_time) }}"
+                                                    class="form-control datetimepicker-input form-control-sm @error('stop_time') is-invalid @enderror"
+                                                    data-target="#timepicker1"
+                                                    data-toggle="datetimepicker" />
+                                                @error('stop_time')
+                                                    <span
+                                                        class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                {{-- end finish time sampling --}}
                            
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
@@ -264,8 +287,7 @@
                                                     class="form-control form-control-sm @error('cyanide') is-invalid @enderror"
                                                     value="{{ old('cyanide', $Input->cyanide) }}" />
                                                 @error('cyanide')
-                                                    <span>
-                                                        class=" invalid-feedback">{{ $message }}</span>
+                                                    <span class=" invalid-feedback">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                         </div>
@@ -346,8 +368,7 @@
                                                         class="form-control form-control-sm @error('tl_tsf') is-invalid @enderror"
                                                         value="{{ old('tl_tsf', $Input->tl_tsf) }}" />
                                                     @error('tl_tsf')
-                                                        <span>
-                                                            class=" invalid-feedback">{{ $message }}</span>
+                                                        <span class=" invalid-feedback">{{ $message }}</span>
                                                     @enderror
                                                 </div>
                                             </div>
@@ -364,8 +385,7 @@
                                                         class="form-control form-control-sm @error('tl_wall') is-invalid @enderror"
                                                         value="{{ old('tl_wall', $Input->tl_wall) }}" />
                                                     @error('tl_wall')
-                                                        <span>
-                                                            class=" invalid-feedback">{{ $message }}</span>
+                                                        <span class=" invalid-feedback">{{ $message }}</span>
                                                     @enderror
                                                 </div>
                                             </div>
@@ -566,6 +586,24 @@
                                                     class="form-control form-control-sm @error('sampler') is-invalid @enderror"
                                                     value="{{ old('sampler', $Input->sampler) }}" />
                                                 @error('sampler')
+                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>
+                                {{-- sampler --}}
+                                   {{-- sumber pencemaran --}}
+                                   <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group row">
+                                            <label style="font-size: 12px" class="col-sm-4 col-form-label">Remarks</label>
+                                            <div class="col-sm-7">
+                                                <input name="remarks" type="text"
+                                                    class="form-control form-control-sm @error('remarks') is-invalid @enderror"
+                                                    value="{{ old('remarks', $Input->remarks) }}" />
+                                                @error('remarks')
                                                     <span class=" invalid-feedback">{{ $message }}</span>
                                                 @enderror
                                             </div>

@@ -22,9 +22,7 @@ class ResourceDataEntryController extends Controller
     public function index()
     {
         $grafiks = Dataentry::with('user')
-            ->filter(request(['fromDate', 'search']))
-            ->paginate(30)
-            ->withQueryString();
+            ->filter(request(['fromDate', 'search']))->get();
         $tanggal = [];
         $suhu = [];
         $conductivity = [];
@@ -42,39 +40,39 @@ class ResourceDataEntryController extends Controller
             $nama[] = $grafik->CodeSample->nama;
             $lokasi[] = $grafik->CodeSample->lokasi;
             $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-            if ($suhu1[] = $grafik->temperatur === 'error') {
+            if ($suhu1[] = $grafik->temperatur === '-') {
                 //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
                 $suhu[] = '';
-            } elseif ($suhu1[] = $grafik->temperatur != 'error') {
+            } elseif ($suhu1[] = $grafik->temperatur != '-') {
                 //  $tanggal[] = date('d-m-Y', strtotime($grafik->date));
                 $suhu[] = $suhu1[] = doubleval($grafik->temperatur);
             }
-            if ($conductivity1[] = $grafik->conductivity === 'error') {
+            if ($conductivity1[] = $grafik->conductivity === '-') {
                 // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
                 $conductivity[] = '';
-            } elseif ($conductivity1[] = $grafik->conductivity != 'error') {
+            } elseif ($conductivity1[] = $grafik->conductivity != '-') {
                 // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
                 $conductivity[] = $conductivity1[] = doubleval($grafik->conductivity);
             }
-            if ($tds1[] = $grafik->tds === 'error') {
+            if ($tds1[] = $grafik->tds === '-') {
                 $tds[] = '';
                 // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
-            } elseif ($tds1[] = $grafik->tds != 0.1) {
+            } elseif ($tds1[] = $grafik->tds !='-') {
                 $tds[] = $tds1[] = doubleval($grafik->tds);
                 // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
             }
-            if ($tss1[] = $grafik->tss === 'error') {
+            if ($tss1[] = $grafik->tss === '-' ) {
                 //  $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
                 $tss[] = '';
-            } elseif ($tss1[] = $grafik->tss != 0.1) {
+            } elseif ($tss1[] = $grafik->tss !='-') {
                 $tss[] = $tss1[] = doubleval($grafik->tss);
                 // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
                 # code...
             }
-            if ($ph1[] = $grafik->ph === 'error') {
+            if ($ph1[] = $grafik->ph === '-') {
                 // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
                 $ph[] = '';
-            } elseif ($ph1[] = $grafik->ph != 0.1) {
+            } elseif ($ph1[] = $grafik->ph !='-') {
                 $ph[] = $ph1[] = doubleval($grafik->ph); # code...
                 // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
             }
@@ -128,8 +126,14 @@ class ResourceDataEntryController extends Controller
         $file = $request->file('file');
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase', $nameFile);
-        Excel::import(new DataImport(), public_path('/EnviroDatabase/' . $nameFile));
-        return redirect('/dashboard/index/dataentry')->with('success', 'New Data Entry has been Imported!');
+        try{
+            Excel::import(new DataImport(), public_path('/EnviroDatabase/' . $nameFile));
+            return redirect('/surfacewater/qualityperiode')->with('success', 'New Data Entry has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+             return back()->withFailures($e->failures());
+         }
+       
     }
 
     /**
@@ -142,6 +146,7 @@ class ResourceDataEntryController extends Controller
     {
         $validatedData = $request->validate([
             'start_time' => 'required|max:255',
+            'stop_time' => 'required|max:255',
             'cyanide' => 'required',
             'level' => 'required',
             'codesample_id' => 'required',
@@ -166,8 +171,8 @@ class ResourceDataEntryController extends Controller
             'rain_during_sampling' => 'required',
             'oil_layer' => 'required',
             'source_pollution' => 'required',
+            'remarks' => 'required',
             'sampler' => 'required',
-            'hard_copy.*' => 'required|mimes:jpg,jpeg,png,bmp,gif,svg,webp,pdf,docx|max:1024',
         ]);
         if ($request->file('hard_copy')) {
             $validatedData['hard_copy'] = $request->file('hard_copy')->store('data-images');
@@ -176,31 +181,31 @@ class ResourceDataEntryController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['standard_id'] = '1';
         Dataentry::create($validatedData);
-        return redirect('/dashboard/index/dataentry')->with('success', 'New Data Entry has been added!');
+        return redirect('/surfacewater/qualityperiode')->with('success', 'New Data Entry has been added!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Dataentry  $dataentry
+     * @param  \App\Models\Dataentry  $qualityperiode
      * @return \Illuminate\Http\Response
      */
-    public function show(Dataentry $dataentry)
+    public function show(Dataentry $qualityperiode)
     {
         return view('dashboard.Index.Entrydata.show', [
             'tittle' => 'Surface Water',
             'breadcrumb' => 'Surface Water',
-            'Input' => $dataentry,
+            'Input' => $qualityperiode,
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Dataentry  $dataentry
+     * @param  \App\Models\Dataentry  $qualityperiode
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dataentry $dataentry)
+    public function edit(Dataentry $qualityperiode)
     {
         if (!auth()->check() || !auth()->user()->is_admin) {
             abort(403);
@@ -209,7 +214,7 @@ class ResourceDataEntryController extends Controller
             'code_units' => Codesample::all(),
             'tittle' => 'Surface Water',
             'breadcrumb' => 'Surface Water',
-            'Input' => $dataentry,
+            'Input' => $qualityperiode,
         ]);
     }
 
@@ -217,13 +222,14 @@ class ResourceDataEntryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Dataentry  $dataentry
+     * @param  \App\Models\Dataentry  $qualityperiode
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dataentry $dataentry)
+    public function update(Request $request, Dataentry $qualityperiode)
     {
         $rules = [
             'codesample_id' => 'required',
+            'stop_time' => 'required|max:255',
             'start_time' => 'required|max:255',
             'level' => 'required',
             'cyanide' => 'required',
@@ -249,7 +255,7 @@ class ResourceDataEntryController extends Controller
             'oil_layer' => 'required',
             'source_pollution' => 'required',
             'sampler' => 'required',
-            'hard_copy.*' => 'required|mimes:jpg,jpeg,png,bmp,gif,svg,webp,pdf,docx|max:1024',
+            'remarks' => 'required',
         ];
 
         $validatedData = $request->validate($rules);
@@ -262,22 +268,20 @@ class ResourceDataEntryController extends Controller
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['standard_id'] = '1';
-        Dataentry::where('id', $dataentry->id)->update($validatedData);
-        return redirect('/dashboard/index/dataentry')->with('success', ' Data Entry has been updated!');
+        Dataentry::where('id', $qualityperiode->id)->update($validatedData);
+        return redirect('/surfacewater/qualityperiode')->with('success', ' Data Entry has been updated!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Dataentry  $dataentry
+     * @param  \App\Models\Dataentry  $qualityperiode
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dataentry $dataentry)
+    public function destroy(Dataentry $qualityperiode)
     {
-        if ($dataentry->hard_copy) {
-            Storage::delete($dataentry->hard_copy);
-        }
-        Dataentry::destroy($dataentry->id);
-        return redirect('/dashboard/index/dataentry')->with('success', ' Data Entry has been deleted!');
+      
+        Dataentry::destroy($qualityperiode->id);
+        return redirect('/surfacewater/qualityperiode')->with('success', ' Data Entry has been deleted!');
     }
 }

@@ -10,8 +10,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="dasboard/index/dataentry">Home</a></li>
-                            <li class="breadcrumb-item"><a href="/dashboard/index/codesample">{{ $tittle }}</a></li>
+                            <li class="breadcrumb-item"><a href="/surfacewater/qualityperiode">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/surfacewater/qualityperiode/codesample">{{ $tittle }}</a></li>
                             <li class="breadcrumb-item active">Edit Data</li>
 
                         </ol>
@@ -28,7 +28,7 @@
                     
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/dashboard/index/codesample/{{ $Codes->failed_at }}" method="post"
+                        <form action="/surfacewater/qualityperiode/codesample/{{ $Codes->id }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf

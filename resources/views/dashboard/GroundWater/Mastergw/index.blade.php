@@ -27,7 +27,7 @@
                                 </div>
                             @endif
                             @can('admin')
-                            <a href="/dashboard/groundwater/mastergw/codesamplegw"
+                            <a href="/groundwater/mastergw/codesamplegw"
                             class="btn bg-gradient-info btn-xs ml-5 mt-3">Code Sample</a>
                             @endcan
                         </div>
@@ -38,9 +38,9 @@
                                     <div class="col-12">
                                         <div class="card">
                                             <div class="card-header ">
-                                                @if($code_units->count())
+                                                @if($code_units->count() && $table_standard->count())
                                                 @can('admin')
-                                                <a href="/dashboard/groundwater/mastergw/create"class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
+                                                <a href="/groundwater/mastergw/create"class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
 
                                                 <a href="/exportmastergw" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                                 <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal"data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
@@ -50,15 +50,15 @@
 
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
-                                                        <form action="/dashboard/groundwater/mastergw" class="form-inline">
+                                                        <form action="/groundwater/mastergw" class="form-inline">
                                                             <label for="fromDate" class="mr-2">From</label>
-                                                            <div class="input-group date" id="reservationdate1" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate1" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                             </div>
                                                             <label for="fromDate" class="mr-2 ml-2">To</label>
     
-                                                            <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                             </div>
     
                                                             <div style="width: 118px;" class="input-group mr-1">
@@ -77,7 +77,7 @@
                                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                             </div>
                                                         </form>
-                                                        <form action="/dashboard/groundwater/mastergw">
+                                                        <form action="/groundwater/mastergw">
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                         </form>
                                                     </div>
@@ -87,7 +87,7 @@
                                                     <button type="button" class="close" data-dismiss="alert"
                                                         aria-hidden="true">×</button>
                                                     <h5 class="mr-2"><i class="icon fas fa-info"></i>Info</h5>
-                                                    <b>You must enter code sample first!!</b>
+                                                    <b>You must enter code sample & table standard first!!</b>
                                                 </div>
                                                 @endif
                                             </div>
@@ -109,8 +109,7 @@
                                                             <th>Well Water</th>
                                                             
                                                             <th>H</th>
-                                                            <th>Diameter of the pipe(m)
-                                                            </th>
+                                                            <th>Diameter of the pipe(m)</th>
                                                             <th>TT</th>
                                                             <th>r<sup>2</sup></th>
                                                             <th>Water Volumes(L)</th>
@@ -143,13 +142,13 @@
                                                             <td>
                                                                 <div style="width: 50px">
     
-                                                                    {{-- <a href="/dashboard/groundwater/mastergw/{{ $data->failed_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
+                                                                    {{-- <a href="/groundwater/mastergw/{{ $data->failed_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
                                                                         <i class="far fa-eye"></i>
                                                                     </a> --}}
-                                                                    <a href="/dashboard/groundwater/mastergw/{{ $data->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                    <a href="/groundwater/mastergw/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/groundwater/mastergw/{{ $data->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/groundwater/mastergw/{{ $data->id }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -167,9 +166,9 @@
                                                             <td>{{ $data->well }}</td>
                                                             <td>{{ $data->well_water }}</td>
                                                             <td>{{ $data->h }}</td>
-                                                            <td>{{ $data->d_pipe }}</td>
-                                                            <td>{{ $data->tt }}</td>
-                                                            <td>{{ $data->r }}</td>
+                                                            <td>{{ $data->tablestandard->d_pipe }}</td>
+                                                            <td>{{ $data->tablestandard->tt }}</td>
+                                                            <td>{{ $data->tablestandard->r }}</td>
                                                             <td>{{ $data->water_volume }}</td>
                                                             <td>{{ $data->temperatur }}</td>
                                                             <td>{{ $data->ph }}</td>
@@ -211,6 +210,13 @@
                                                 </div>
     
                                             </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <figure class="highcharts-figure">
+                                                        <div class="invoice p-3 mb-3" id="container"></div>
+                                                    </figure>
+                                                </div>
+                                            </div>
                                             @else
                                             <p class="text-center fs-4">Not Data Found</p>
                                             @endif
@@ -228,8 +234,12 @@
                                                             @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile">
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                                @error('file')
+                                                                    <span
+                                                                        class=" invalid-feedback ">{{ $message }}</span>
+                                                                @enderror
                                                             </div>
                                                        
                                                         </div>
@@ -259,76 +269,61 @@
             </div><!-- /.container-fluid -->
         </section>
     </div>
-    @section('footer')
-    <script>
-        $(function() {
-            $('#reservationdate1').datetimepicker({
-                format: 'YYYY-MM-DD'
-            });
-            $('#reservationdate2').datetimepicker({
-                format: 'YYYY-MM-DD'
-            });
-        })
-        // BS-Stepper Init
-        document.addEventListener('DOMContentLoaded', function() {
-            window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-        })
-
-        // DropzoneJS Demo Code Start
-        Dropzone.autoDiscover = false
-
-        // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-        var previewNode = document.querySelector("#template")
-        previewNode.id = ""
-        var previewTemplate = previewNode.parentNode.innerHTML
-        previewNode.parentNode.removeChild(previewNode)
-
-        var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-            url: "/target-url", // Set the url
-            thumbnailWidth: 80,
-            thumbnailHeight: 80,
-            parallelUploads: 20,
-            previewTemplate: previewTemplate,
-            autoQueue: false, // Make sure the files aren't queued until manually added
-            previewsContainer: "#previews", // Define the container to display the previews
-            clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-        })
-
-        myDropzone.on("addedfile", function(file) {
-            // Hookup the start button
-            file.previewElement.querySelector(".start").onclick = function() {
-                myDropzone.enqueueFile(file)
+ 
+<script>
+        Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com'
+        },
+        xAxis: {
+            categories: {!!json_encode($date)!!}
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
             }
-        })
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#F4CC70',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Temperature',
+            marker: {
+                symbol: 'square'
+            },
+            color:'#1F2833',
+            data:{!!json_encode($suhu)!!}
 
-        // Update the total progress bar
-        myDropzone.on("totaluploadprogress", function(progress) {
-            document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
-        })
-
-        myDropzone.on("sending", function(file) {
-            // Show the total progress bar when upload starts
-            document.querySelector("#total-progress").style.opacity = "1"
-            // And disable the start button
-            file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
-        })
-
-        // Hide the total progress bar when nothing's uploading anymore
-        myDropzone.on("queuecomplete", function(progress) {
-            document.querySelector("#total-progress").style.opacity = "0"
-        })
-
-        // Setup the buttons for all transfers
-        // The "add files" button doesn't need to be setup because the config
-        // `clickable` has already been specified.
-        document.querySelector("#actions .start").onclick = function() {
-            myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
-        }
-        document.querySelector("#actions .cancel").onclick = function() {
-            myDropzone.removeAllFiles(true)
-        }
-        // DropzoneJS Demo Code End
-    </script>
-@endsection
+        }, {
+                name: 'PH',
+                color:'#6AB187',
+                marker: {
+                    symbol: 'triangle-down'
+                },
+                data: {!! json_encode($ph) !!}
+            }]
+        });
+</script>
 
 @endsection

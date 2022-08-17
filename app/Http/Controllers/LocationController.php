@@ -24,18 +24,24 @@ class LocationController extends Controller
 
          ]);
     }
-    public function ExportLocation()
+    public function ExportLocationNoise()
     {
-        return Excel::download(new LocationExport,'lokasis.xlsx');
+        return Excel::download(new LocationExport,'lokasis.csv');
     }
-    public function ImportLocation(Request $request)
+    public function ImportLocationNoise(Request $request)
     { 
         $file=$request->file('file');
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase',$nameFile);
         
-        Excel::import(new LocationImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/dustgauge/noisemeter/noise/location')->with('success','New data noise has been Imported!');
+       
+        try {
+            Excel::import(new LocationImport, public_path('/EnviroDatabase/'.$nameFile));
+            return redirect('/airquality/noisemeter/noise/location')->with('success','New data noise has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+             return back()->withFailures($e->failures());
+         }
     }
     /**
      * Show the form for creating a new resource.
@@ -67,7 +73,7 @@ class LocationController extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         Lokasi::create($validatedData);
-        return redirect('/dashborad/dustgauge/noisemeter/noise/location/create')->with('success','New code Location noise meter has been added!');
+        return redirect('/airquality/noisemeter/noise/location/create')->with('success','New code Location noise meter has been added!');
     }
 
     /**
@@ -118,7 +124,7 @@ class LocationController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Lokasi::where('id', $location->id)
             ->update($validatedData);
-        return redirect('/dashborad/dustgauge/noisemeter/noise/location')->with('success', ' code Location noise meter has been updated!');
+        return redirect('/airquality/noisemeter/noise/location')->with('success', ' code Location noise meter has been updated!');
     }
 
     /**
@@ -131,6 +137,6 @@ class LocationController extends Controller
     {
         
         Lokasi::destroy($location->id);
-        return redirect('/dashborad/dustgauge/noisemeter/noise/location')->with('success',' code location noise meter has been deleted!');
+        return redirect('/airquality/noisemeter/noise/location')->with('success',' code location noise meter has been deleted!');
     }
 }

@@ -17,15 +17,13 @@ class CreateMastergwsTable extends Migration
             $table->id ( );
             $table->foreignId('user_id');
             $table->foreignId('gwcodesample_id');
+            $table->foreignId('gwtablestandard_id');
             $table->date ('date' );
             $table->string ('start_time' );
             $table->string ('stop_time' );
             $table->string('well' );
             $table->string ('well_water' );
             $table->string ('h' );
-            $table->string('d_pipe' );
-            $table->string ('tt' );
-            $table->string ('r' );
             $table->string ('water_volume' );
             $table->string ('temperatur' );
             $table->string ('ph' );
@@ -42,6 +40,7 @@ class CreateMastergwsTable extends Migration
             $table->string ('oil_layer' );
             $table->string ('source_pollution' );
             $table->string ('sampler' );
+            $table->string ('remarks' );
             $table->timestamps();
             $table->timestamp('failed_at')->useCurrent();
         });

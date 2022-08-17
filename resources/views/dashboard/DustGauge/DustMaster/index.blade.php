@@ -28,7 +28,7 @@
                                 </div>
                             @endif
                            @can('admin')
-                            <a href="/dashboard/dustgauge/dust/codesampledg"
+                            <a href="/airquality/dustgauge/dust/codesampledg"
                             class="btn bg-gradient-info btn-xs ml-5 mt-3">Code Sample</a>@endcan
                         </div>
                         <div class="card-body">
@@ -41,25 +41,25 @@
                                             <div class="card-header">
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
-                                                        <form action="/dashboard/dustgauge/dust" class="form-inline">
+                                                        <form action="/airquality/dustgauge/dust" class="form-inline">
                                                             <label for="fromDate" class="mr-2">From</label>
-                                                            <div class="input-group date" id="reservationdate1" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate1" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                             </div>
                                                             <label for="fromDate" class="mr-2 ml-2">To</label>
     
-                                                            <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                             </div>
     
                                                             <div style="width: 118px;" class="input-group mr-1">
                                                                 <select class="form-control form-control-sm " name="search">
                                                                   <option value="" selected>Code Sample</option>
                                                                   @foreach ($code_units as $code)
-                                                                    @if ( request('search')==$code->namespace)
-                                                                    <option value="{{($code->namespace)}}"  selected>{{$code->nama}}</option>
+                                                                    @if ( request('search')==$code->nama)
+                                                                    <option value="{{($code->nama)}}"  selected>{{$code->nama}}</option>
                                                                     @else
-                                                                    <option value="{{$code->namespace}}" >{{$code->nama}}</option>
+                                                                    <option value="{{$code->nama}}" >{{$code->nama}}</option>
                                                                     @endif
                                                                     @endforeach
                                                                 </select>
@@ -68,18 +68,20 @@
                                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                             </div>
                                                         </form>
-                                                        <form action="/dashboard/dustgauge/dust">
+                                                        <form action="/airquality/dustgauge/dust">
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <a href="/dashboard/dustgauge/dust/create"
+                                                @can('admin')
+                                                <a href="/airquality/dustgauge/dust/create"
                                                     class="btn bg-gradient-secondary btn-xs mt-2"><i
                                                         class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                                        <a href="/exportcodesampledg" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                                                        <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal"data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
-                                                            <i class="fas fa-upload mr-1"></i>Excel
-                                                        </a>
+                                                        <a href="/export/dust" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                                        <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                                                <i class="fas fa-upload mr-1"></i>Excel
+                                            </a>
+                                                @endcan
                                             </div>
                                         @else
                                         <div class="alert alert-info alert-dismissible form-inline">
@@ -125,7 +127,7 @@
                                                         </thead>
                                                         <tbody style="text-align: center">
                                                             @php
-                                                            $insoluble=0;$soluble=0;
+                                                            $insoluble=0;$soluble=0;$total=0;
                                                             $no = 1 + ($Dust->currentPage() - 1) * $Dust->perPage();
                                                         @endphp
                                                             @foreach ($Dust as  $code)
@@ -133,14 +135,14 @@
                                                                     <td>{{ $no++ }}</td>
                                                                     <td>
                                                                         
-                                                                            <a href="/dashboard/dustgauge/dust/{{ $code->failed_at }}/edit"
+                                                                            <a href="/airquality/dustgauge/dust/{{ $code->failed_at }}/edit"
                                                                                 class="btn btn-outline-warning btn-xs btn-group"
                                                                                 data-toggle="tooltip"
                                                                                 data-placement="top" title="Edit">
                                                                                 <i class="fas fa-pen"></i>
                                                                             </a>
                                                                             <form
-                                                                                action="/dashboard/dustgauge/dust/{{ $code->failed_at }}"
+                                                                                action="/airquality/dustgauge/dust/{{ $code->failed_at }}"
                                                                                 method="POST"
                                                                                 class="d-inline">
                                                                                 @method('delete')
@@ -156,7 +158,7 @@
                                                                             </form>
                                                                     </td>
                                                                     <td>{{ $code->codedust->nama }}</td>
-                                                                    <td>{{ date('m-Y', strtotime( $code->date_out)) }}</td>
+                                                                    <td>{{ date('M-Y', strtotime( $code->date_out)) }}</td>
 
                                                                     <td>{{ date('d-m-Y', strtotime( $code->date_in)) }}</td>
                                                                     <td>{{ date('d-m-Y', strtotime( $code->date_out)) }}</td>
@@ -167,13 +169,22 @@
                                                                     <td>{{ $code->m5 }}</td>
                                                                     <td>150</td>
                                                                     <td>30</td>
-                                                                    @if ($selisi!=0) 
-                                                                    <td>{{ $insoluble= (round((doubleval($code->m4) - doubleval($code->m3))/(3.14*0.005625*$selisi),4)) }}</td>
-                                                                    <td>{{ $soluble= (round(((doubleval($code->m6) - doubleval($code->m5))* doubleval($code->total_vlm_water) )/(3.14*0.005625*$selisi*$code->volume_filtrat),2)) }}</td>
-                                                                    <td>{{round(($soluble + $insoluble),2)}}</td>
-                                                                    @else
-                                                                    <td style="color: red">error</td>
+                                                                    
+                                                                    @if ($code->m4 ==='-' && $code->m3==='-')
+                                                                    <td>-</td>
+                                                                    @elseif($code->m6 ==='-' && $code->m5==='-')
+                                                                    <td>{{ $insoluble= (round((doubleval($code->m4) - doubleval($code->m3))*1000000*4*30/(3.14*150*150*$selisi),2)) }}</td>
+                                                                    @elseif($code->m4 !='-' && $code->m3!='-' && $code->m6 !='-' && $code->m5!='-') 
+                                                                    <td>{{ $insoluble= (round((doubleval($code->m4) - doubleval($code->m3))/(3.14*0.005625*$selisi),2)) }}</td>
+                                                                   
                                                                     @endif
+                                                                    @if($code->m6 ==='-' && $code->m5==='-')
+                                                                    <td>-</td>
+                                                                    @else
+                                                                    <td>{{ $soluble= (round(((doubleval($code->m6) - doubleval($code->m5))* doubleval($code->total_vlm_water) )/(3.14*0.005625*$selisi*$code->volume_filtrat),2)) }}</td>
+                                                                    @endif
+                                                                    <td>{{$total=round(($insoluble+$soluble),3)}}</td>
+                                                                 
                                                                     <td>{{ $code->no_insect }}</td>
                                                                     <td>{{ $code->vb_dirt }}</td>
                                                                     <td>{{ $code->vb_algae }}</td>
@@ -207,10 +218,24 @@
                                                     </div>
                                                     
                                                 </div>
+                                               
+                                           
+                                            <!-- /.card-body -->
+                                        </div>
+
+                                        <!-- /.card -->
+                                        <div class="row">
+                                                    <div class="col-md-12">
+                                                        <figure class="highcharts-figure">
+                                                            <div class="invoice p-3 mb-3" id="container"></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
                                             @else
                                                 <p class="text-center fs-4">Not Data Found</p>
                                             @endif
-                                            <div class="modal fade" id="modal-default">
+                                    </div>
+                                    <div class="modal fade" id="modal-default">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -219,11 +244,11 @@
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
-                                                        <form action="/importcodesampledg" method="POST" enctype="multipart/form-data">
+                                                        <form action="/import/dust" method="POST" enctype="multipart/form-data">
                                                             @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile"required>
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                             </div>
                                                        
@@ -238,11 +263,6 @@
                                                 </div>
     
                                             </div>
-                                            <!-- /.card-body -->
-                                        </div>
-
-                                        <!-- /.card -->
-                                    </div>
                                 </div>
                                 <!-- /.container-fluid -->
                             </section>
@@ -253,6 +273,51 @@
             </div><!-- /.container-fluid -->
         </section>
     </div>
+    @foreach ($Dust as  $codes)
+    <script>
+            Highcharts.chart('container', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Dust Deposition Gauge, Total Solids results'
+    },
+    xAxis: {
+        categories: {!! json_encode($tanggal) !!},
+        accessibility: {
+            description: 'Months of the year'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Value'
+        }
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#faf2c3',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: 'Total Solid',
+        color:'#0cd7da',
+        marker: {
+            symbol: 'square'
+        },
+        data: {!! json_encode($value) !!}
+
+    }]
+});
+    </script>
+    @endforeach
     @section('footer')
     <script>
         $(function() {

@@ -28,12 +28,40 @@ class MarineController extends Controller
         $dominance_index=[];
         $date=[];
        foreach ($grafiks as $grafik ) {
-        $date[]=date('m-Y', strtotime( $grafik->date));
-        $taxa_richness[]=$grafik->taxa_richness;
-        $species_density[]=$grafik->species_density;  
-        $diversity_index[]=$grafik->diversity_index;
-        $evenness_value[]=$grafik->evenness_value;
-        $dominance_index[]=$grafik->dominance_index;
+        if ($grafik->taxa_richness==='-') {
+            $taxa_richness[]='';
+        }
+        elseif ($grafik->taxa_richness!='-') {
+            $taxa_richness[]=doubleval($grafik->taxa_richness);
+        }
+        if ($grafik->species_density==='-') {
+            $species_density[]='';    
+        }
+        elseif ($grafik->species_density!='-') {
+            $species_density[]= doubleval($grafik->species_density);  
+
+        }
+        if ($grafik->diversity_index==='-') {
+            $diversity_index[]='';
+        }
+        elseif ($grafik->diversity_index!='-') {
+            $diversity_index[]=doubleval($grafik->diversity_index);
+
+        }
+        if ($grafik->evenness_value==='-') {
+            $evenness_value[]='';
+        }
+        elseif ($grafik->evenness_value!='-') {
+            $evenness_value[]= doubleval($grafik->evenness_value);
+
+        }
+        if ($grafik->dominance_index==='-') {
+            $dominance_index[]='';
+        }
+        elseif ($grafik->dominance_index!='-') {
+            $dominance_index[]=doubleval($grafik->dominance_index);
+
+        }
        }
         return view('dashboard.BiotaMonitoring.Marine.index', [
             "tittle" => "Marine",
@@ -60,7 +88,7 @@ class MarineController extends Controller
         $file->move('EnviroDatabase',$nameFile);
         try {
         Excel::import(new MarineImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/monitoring/marine')->with('success','New biota marine has been Imported!');
+        return redirect('/monitoring/marine')->with('success','New biota marine has been Imported!');
     } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
         $e->failures();
          return back()->withFailures($e->failures());
@@ -108,7 +136,7 @@ class MarineController extends Controller
        
         $validatedData['user_id']=auth()->user()->id;
         Marine::create($validatedData);
-        return redirect('/dashboard/monitoring/marine/create')->with('success','New Data Biota Marine has been added!');
+        return redirect('/monitoring/marine/create')->with('success','New Data Biota Marine has been added!');
     }
 
     /**
@@ -167,7 +195,7 @@ class MarineController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Marine::where('id', $marine->id)
             ->update($validatedData);
-        return redirect('/dashboard/monitoring/marine')->with('success', ' Data biota Marine has been updated!');
+        return redirect('/monitoring/marine')->with('success', ' Data biota Marine has been updated!');
     }
 
     /**
@@ -179,6 +207,6 @@ class MarineController extends Controller
     public function destroy(Marine $marine)
     {
         Marine::destroy($marine->id);
-        return redirect('/dashboard/monitoring/marine')->with('success','Data biota Marine has been deleted!');
+        return redirect('/monitoring/marine')->with('success','Data biota Marine has been deleted!');
     }
 }

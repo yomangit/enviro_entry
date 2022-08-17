@@ -10,8 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard/index/dataentry">{{$tittle}}</a></li>
+                        <li class="breadcrumb-item"><a href="/surfacewater/qualityperiode">Home</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -31,7 +30,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/index/dataentry" method="post" checked
+                    <form action="/surfacewater/qualityperiode" method="post" checked
                     enctype="multipart/form-data" autocomplete="off">
                     @csrf
                     
@@ -79,28 +78,49 @@
                         </div>
                         {{-- end tanggal --}}
                         <div class="col-12 col-md-6">
-                            <!-- /.form-group -->
-                            <div class="form-group row">
-                                <label style="font-size: 12px"
-                                    class="col-sm-4 col-form-label">Jam Sampling</label>
-                                <div class="col-sm-7">
-                                    <div class="input-group date" id="timepicker"
-                                        data-target-input="nearest">
-                                        <input name="start_time" type="text"
-                                            value="{{ old('start_time') }}"
-                                            class="form-control datetimepicker-input form-control-sm @error('start_time') is-invalid @enderror"
-                                            data-target="#timepicker"
-                                            data-toggle="datetimepicker" />
-                                        @error('start_time')
-                                            <span
-                                                class=" invalid-feedback">{{ $message }}</span>
-                                        @enderror
+                                <div class="form-group row">
+                                    <label style="font-size: 12px"
+                                        class="col-sm-4 col-form-label">Start Time Sampling</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group date" id="timepicker"
+                                            data-target-input="nearest">
+                                            <input name="start_time" type="text"
+                                                value="{{ old('start_time') }}"
+                                                class="form-control datetimepicker-input form-control-sm @error('start_time') is-invalid @enderror"
+                                                data-target="#timepicker"
+                                                data-toggle="datetimepicker" />
+                                            @error('start_time')
+                                                <span
+                                                    class=" invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
+    
                             </div>
-
-                            <!-- /.form-group -->
-                        </div>
+                            {{-- end start time sampling --}}
+                            <div class="col-12 col-md-6">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px"
+                                        class="col-sm-4 col-form-label">Finish Time Sampling</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group date" id="timepicker1"
+                                            data-target-input="nearest">
+                                            <input name="stop_time" type="text"
+                                                value="{{ old('stop_time') }}"
+                                                class="form-control datetimepicker-input form-control-sm @error('stop_time') is-invalid @enderror"
+                                                data-target="#timepicker1"
+                                                data-toggle="datetimepicker" />
+                                            @error('stop_time')
+                                                <span
+                                                    class=" invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            {{-- end finish time sampling --}}
                         {{-- end jam sampling --}}
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
@@ -426,6 +446,13 @@
                                                 for="waterCondition2"> Surut
                                             </label>
                                         </div>
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" name="water_condition"
+                                                value="No Data" id="waterCondition3">
+                                            <label style="font-size: 12px"
+                                                for="waterCondition3"> No Data
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -457,6 +484,13 @@
                                             <label style="font-size: 12px" for="watercolor3">K
                                             </label>
                                         </div>
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" name="water_color"
+                                                value="No Data" id="watercolor4">
+                                            <label style="font-size: 12px"
+                                                for="watercolor4"> No Data
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -477,11 +511,17 @@
                                             </label>
                                         </div>
                                         <div class="icheck-success d-inline">
-
                                             <input type="radio" name="odor" value="Tidak"
                                                 id="waterScant2">
                                             <label style="font-size: 12px"
                                                 for="waterScant2">Tidak
+                                            </label>
+                                        </div>
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" name="odor" value="No Data"
+                                                id="waterScant3">
+                                            <label style="font-size: 12px"
+                                                for="waterScant2">No Data
                                             </label>
                                         </div>
                                     </div>
@@ -510,6 +550,12 @@
                                             <label style="font-size: 12px" for="rain2">Tidak
                                             </label>
                                         </div>
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" name="rain" value="No Data"
+                                                id="rain2">
+                                            <label style="font-size: 12px" for="rain2">No Data
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -532,15 +578,19 @@
                                             </label>
                                         </div>
                                         <div class="icheck-success d-inline">
-
                                             <input type="radio" name="rain_during_sampling"
-                                                @error('rain_during_sampling') checked @enderror
                                                 value="Tidak" id="rainSampling2">
                                             <label style="font-size: 12px"
                                                 for="rainSampling2">Tidak
                                             </label>
                                         </div>
-
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" name="rain_during_sampling"
+                                                value="Tidak" id="rainSampling2">
+                                            <label style="font-size: 12px"
+                                                for="rainSampling2">No Data
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -603,6 +653,25 @@
                                             class="form-control form-control-sm @error('sampler') is-invalid @enderror"
                                             value="{{ old('sampler') }}" />
                                         @error('sampler')
+                                            <span
+                                                class=" invalid-feedback">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        {{-- end sampler --}}
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px"
+                                        class="col-sm-4 col-form-label">Remarks</label>
+                                    <div class="col-sm-7">
+                                        <input name="remarks" type="text"
+                                            class="form-control form-control-sm @error('remarks') is-invalid @enderror"
+                                            value="{{ old('remarks') }}" />
+                                        @error('remarks')
                                             <span
                                                 class=" invalid-feedback">{{ $message }}</span>
                                         @enderror

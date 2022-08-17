@@ -35,7 +35,7 @@ class ResourceCodeSampleDgController extends Controller
        
         try {
             Excel::import(new CodeDustImport, public_path('/EnviroDatabase/'.$nameFile));
-            return redirect('/dashboard/dustgauge/dust/codesampledg')->with('success','New Data Ground Water has been Imported!');
+            return redirect('/airquality/dustgauge/dust/codesampledg')->with('success','New Data Ground Water has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
             return back()->withFailures($e->failures());
@@ -74,7 +74,7 @@ class ResourceCodeSampleDgController extends Controller
     
         $validatedData['user_id']=auth()->user()->id;
         Codesampledg::create($validatedData);
-        return redirect('/dashboard/dustgauge/dust/codesampledg/create')->with('success','New  Code Sample Dust Gaugehas been added!');
+        return redirect('/airquality/dustgauge/dust/codesampledg/create')->with('success','New  Code Sample Dust Gaugehas been added!');
     
     }
 
@@ -125,7 +125,7 @@ class ResourceCodeSampleDgController extends Controller
         $validatedData['user_id']=auth()->user()->id;
         Codesampledg::where('id',$codesampledg->id)
         ->update($validatedData);
-        return redirect('/dashboard/dustgauge/masternoise/noisemeter')->with('success','  Code Sample Dust Gauge has been updated!');
+        return redirect('/airquality/dustgauge/masternoise/noisemeter')->with('success','  Code Sample Dust Gauge has been updated!');
     
     }
 
@@ -138,7 +138,7 @@ class ResourceCodeSampleDgController extends Controller
     public function destroy(Codesampledg $codesampledg)
     {
         Codesampledg::destroy($codesampledg->id);
-        return redirect('/dashboard/dustgauge/masternoise/noisemeter')->with('success',' Code Sample Dust Gauge has been deleted!');
+        return redirect('/airquality/dustgauge/masternoise/noisemeter')->with('success',' Code Sample Dust Gauge has been deleted!');
 
     }
 }

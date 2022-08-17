@@ -6,12 +6,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Form Edit {{ $tittle }}</h1>
+                        <h1>Edit {{ $tittle }}</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="/dashboard/codesample">{{ $tittle }}</a></li>
+                            <li class="breadcrumb-item"><a href="/dashboard/groundwater/standard">{{ $tittle }}</a></li>
                             <li class="breadcrumb-item active">Edit Data</li>
 
                         </ol>
@@ -28,7 +27,7 @@
                     
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/dashboard/groundwater/codesamplegw/{{ $Codes->failed_at }}" method="post"
+                        <form action="/dashboard/groundwater/standard/{{ $Codes->id }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf
@@ -36,43 +35,66 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <div class="form-group row">
-                                            <label style="font-size: 12px" class="col-sm-4 col-form-label">Nama</label>
+                                            <label style="font-size: 12px"
+                                                class="col-sm-4 col-form-label">Diameter Pipe
+                                                (m)</label>
                                             <div class="col-sm-7">
-                                                <input name="nama" type="text"
-                                                    class="form-control form-control-sm @error('nama') is-invalid @enderror"
-                                                    value="{{ old('nama', $Codes->nama) }}" />
-                                                @error('nama')
-                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                <input name="d_pipe" type="number" step="0.01"
+                                                    class="form-control form-control-sm @error('d_pipe') is-invalid @enderror"
+                                                    value="{{ old('d_pipe',$Codes->d_pipe) }}" />
+                                                @error('d_pipe')
+                                                    <span
+                                                        class=" invalid-feedback">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                         </div>
                                     </div>
                                     <!-- /.form-group -->
                                 </div>
-                                {{-- nama --}}
+                                {{-- end Conductivity --}}
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <div class="form-group row">
-                                            <label style="font-size: 12px" class="col-sm-4 col-form-label">Lokasi</label>
+                                            <label style="font-size: 12px"
+                                                class="col-sm-4 col-form-label">TT</label>
                                             <div class="col-sm-7">
-                                                <input name="lokasi" type="text"
-                                                    class="form-control form-control-sm @error('lokasi') is-invalid @enderror"
-                                                    value="{{ old('lokasi', $Codes->lokasi) }}" />
-                                                @error('lokasi')
-                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                <input name="tt" type="number" step="0.01"
+                                                    class="form-control form-control-sm @error('tt') is-invalid @enderror"
+                                                    value="{{ old('tt',$Codes->tt) }}" />
+                                                @error('tt')
+                                                    <span
+                                                        class=" invalid-feedback">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                         </div>
                                     </div>
                                     <!-- /.form-group -->
                                 </div>
-                                {{-- lokasi --}}
-                            
-                                <!-- /.col -->
+                                {{-- end turbidity --}}
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group row">
+                                            <label style="font-size: 14px"
+                                                class="col-sm-4 col-form-label">r <sup>2</sup> </label>
+                                            <div class="col-sm-7">
+                                                <input name="r" type="number" step="0.01"
+                                                    class="form-control form-control-sm @error('r') is-invalid @enderror"
+                                                    value="{{ old('r',$Codes->r) }}" />
+                                                @error('r')
+                                                    <span
+                                                        class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>
+                                {{-- end do --}}
                             </div>
                             <!-- /.row -->
                             <div class="card-footer d-flex justify-content-end">
-                                <button type="submit" class="btn bg-gradient-success btn-sm ">Save</button>
+                                <button type="submit"
+                                    class="btn bg-gradient-success btn-sm ">Save</button>
                             </div>
                         </form>
 

@@ -11,7 +11,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="/dashboard/codesample">{{ $tittle }}</a></li>
+                            <li class="breadcrumb-item"><a href="/codesample">{{ $tittle }}</a></li>
                             <li class="breadcrumb-item active">Edit Data</li>
 
                         </ol>
@@ -28,7 +28,7 @@
                     
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/dashboard/groundwater/masterttn/{{ $Master->failed_at }}" method="post"
+                        <form action="/groundwater/masterttn/{{ $Master->id }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf
@@ -170,64 +170,7 @@
                                     </div>
                                 </div>
                                 {{-- end ORP --}}
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-group row">
-                                            <label style="font-size: 12px"
-                                                class="col-sm-4 col-form-label">Diameter Pipe
-                                                (m)</label>
-                                            <div class="col-sm-7">
-                                                <input name="d_pipe" type="number" step="0.01"
-                                                    class="form-control form-control-sm @error('d_pipe') is-invalid @enderror"
-                                                    value="{{ old('d_pipe',$Master->d_pipe) }}" />
-                                                @error('d_pipe')
-                                                    <span
-                                                        class=" invalid-feedback">{{ $message }}</span>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.form-group -->
-                                </div>
-                                {{-- end Conductivity --}}
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-group row">
-                                            <label style="font-size: 12px"
-                                                class="col-sm-4 col-form-label">TT</label>
-                                            <div class="col-sm-7">
-                                                <input name="tt" type="number" step="0.01"
-                                                    class="form-control form-control-sm @error('tt') is-invalid @enderror"
-                                                    value="{{ old('tt',$Master->tt) }}" />
-                                                @error('tt')
-                                                    <span
-                                                        class=" invalid-feedback">{{ $message }}</span>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.form-group -->
-                                </div>
-                                {{-- end turbidity --}}
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-group row">
-                                            <label style="font-size: 14px"
-                                                class="col-sm-4 col-form-label">r <sup>2</sup> </label>
-                                            <div class="col-sm-7">
-                                                <input name="r" type="number" step="0.01"
-                                                    class="form-control form-control-sm @error('r') is-invalid @enderror"
-                                                    value="{{ old('r',$Master->r) }}" />
-                                                @error('r')
-                                                    <span
-                                                        class=" invalid-feedback">{{ $message }}</span>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.form-group -->
-                                </div>
-                                {{-- end do --}}
+                                
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <div class="form-group row">
@@ -572,40 +515,25 @@
                                 {{-- end sampler --}}
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
-                                        @if ($Master->hard_copy)
-                                            <img src="{{ asset('storage/' . $Master->hard_copy) }}"
-                                                class="img-preview img-fluid mb-2 col-sm-5 d-block">
-                                        @else
-                                            <img class="img-preview img-fluid">
-                                        @endif
                                         <div class="form-group row">
-
-                                            <label for="hard_copy" class="col-sm-4 col-form-label ">Hard Copy</label>
-                                            <input type="hidden" name="oldHard_copy" value="{{ $Master->hard_copy }}">
-                                            <div class="input-group col-sm-7">
-                                                <div class="custom-file row">
-
-                                                    <input type="file" name="hard_copy"
-                                                        value="{{ asset('storage/' . $Master->hard_copy) }}"
-                                                        class="form-control  @error('hard_copy') is-invalid @enderror"
-                                                        id="hard_copy" onchange="previewImage()" />
-
-                                                    <label class="custom-file-label"
-                                                        for="hard_copy">{{ asset('storage/' . $Master->hard_copy) }}</label>
-                                                    @error('hard_copy')
-                                                        <span class=" invalid-feedback ">{{ $message }}</span>
-                                                    @enderror
-                                                </div>
+                                            <label style="font-size: 12px" class="col-sm-4 col-form-label">Remarks</label>
+                                            <div class="col-sm-7">
+                                                <input name="remarks" type="text"
+                                                    class="form-control form-control-sm @error('remarks') is-invalid @enderror"
+                                                    value="{{ old('remarks', $Master->remarks) }}" />
+                                                @error('remarks')
+                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- /.form-group -->
                                 </div>
-                                {{-- end hardcopy --}}
                             </div>
                             <!-- /.row -->
                             <div class="card-footer d-flex justify-content-end">
                                 <button type="submit"
-                                    class="btn bg-gradient-primary btn-sm ">Create</button>
+                                    class="btn bg-gradient-success btn-sm ">Save</button>
                             </div>
                         </form>
 

@@ -10,8 +10,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise">Home</a></li>
-                            <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise/codesamplenm">{{ $tittle }}</a></li>
+                            <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise/codesamplenm">{{ $tittle }}</a></li>
                             <li class="breadcrumb-item active">Edit Data</li>
 
                         </ol>
@@ -27,7 +27,7 @@
                     
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/dashboard/dustgauge/noisemeter/noise/codesamplenm/{{ $Codes->failed_at }}" method="post"
+                        <form action="/airquality/noisemeter/noise/codesamplenm/{{ $Codes->failed_at }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf

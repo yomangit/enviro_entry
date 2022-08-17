@@ -21,7 +21,7 @@ class ResourceWellLevelController extends Controller
             "tittle"=>"Code Unit",
             'code_units'=>Codesamplegw::all(),
             'breadcrumb'=>'Ground Well Level',
-      'Codes'=>Mastergw::with('user')->latest()->filter(request(['fromDate','search']))->paginate(80)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+      'Codes'=>Mastergw::with('user')->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
     }

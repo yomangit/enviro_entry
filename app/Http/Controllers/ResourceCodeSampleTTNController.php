@@ -23,7 +23,7 @@ class ResourceCodeSampleTTNController extends Controller
         
         return view('dashboard.GroundWater.CodesampleTTN.index', [
             "tittle" => "Code Sample",
-            'breadcrumb' => 'Code Sample Ground Water TTN',
+            'breadcrumb' => 'Code Sample Groundwell Community',
             'Codes' => Codesamplettn::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
 
         ]);
@@ -41,7 +41,7 @@ class ResourceCodeSampleTTNController extends Controller
         $file->move('EnviroDatabase', $nameFile);
         try {
             Excel::import(new CodeSampleTTNImport, public_path('/EnviroDatabase/' . $nameFile));
-            return redirect('/dashboard/groundwater/masterttn/codesamplettn')->with('success', 'New Data Ground Water has been Imported!');
+            return redirect('/groundwater/masterttn/codesamplettn')->with('success', 'New Data Ground Water has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
             return back()->withFailures($e->failures());
@@ -56,7 +56,7 @@ class ResourceCodeSampleTTNController extends Controller
     {
         return view('dashboard.GroundWater.CodesampleTTN.create', [
             "tittle" => "Code Sample TTN",
-            'breadcrumb' => 'Code Sample Ground Water TTN',
+            'breadcrumb' => 'Code Sample Groundwell Community',
 
             'Codes' => Codesamplettn::where('user_id', auth()->user()->id)->filter(request(['fromDate']))->get() //with diguanakan untuk mengatasi N+1 problem
 
@@ -80,7 +80,7 @@ class ResourceCodeSampleTTNController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
         Codesamplettn::create($validatedData);
-        return redirect('/dashboard/groundwater/masterttn/codesamplettn/create')->with('success', 'New Code Sample TTN has been added!');
+        return redirect('/groundwater/masterttn/codesamplettn/create')->with('success', 'New Code Sample TTN has been added!');
     }
 
     /**
@@ -103,7 +103,7 @@ class ResourceCodeSampleTTNController extends Controller
     {
         return view('dashboard.GroundWater.CodesampleTTN.edit', [
             "tittle" => "Code Sample TTN",
-            'breadcrumb' => 'Code Sample Ground Water TTN',
+            'breadcrumb' => 'Code Sample Groundwell Community',
             'Codes' => $codesamplettn
         ]);
     }
@@ -131,7 +131,7 @@ class ResourceCodeSampleTTNController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Codesamplettn::where('id', $codesamplettn->id)
             ->update($validatedData);
-        return redirect('/dashboard/groundwater/masterttn/codesamplettn')->with('success', ' Code Sample TTN has been updated!');
+        return redirect('/groundwater/masterttn/codesamplettn')->with('success', ' Code Sample TTN has been updated!');
     }
 
     /**
@@ -143,6 +143,6 @@ class ResourceCodeSampleTTNController extends Controller
     public function destroy(Codesamplettn $codesamplettn)
     {
         Codesamplettn::destroy($codesamplettn->id);
-        return redirect('/dashboard/groundwater/masterttn/codesamplettn')->with('success', 'Code Sample TTN has been deleted!');
+        return redirect('/groundwater/masterttn/codesamplettn')->with('success', 'Code Sample TTN has been deleted!');
     }
 }

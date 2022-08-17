@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Codesamplenm;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\CodeSampleNoiseExport;
+use App\Imports\CodeSampleNoiseImport;
 
 class CodeSampleNMController extends Controller
 {
@@ -20,6 +23,27 @@ class CodeSampleNMController extends Controller
       'Codes'=>Codesamplenm::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
+    }
+    public function ExportCodeSampleNM()
+    {
+
+        return Excel::download(new CodeSampleNoiseExport, 'codesamplenms.csv');
+    }
+    public function ImportCodeSampleNM(Request $request)
+    {
+
+        $file = $request->file('file');
+        $nameFile = $file->getClientOriginalName();
+        $file->move('EnviroDatabase', $nameFile);
+        $import = new CodeSampleNoiseImport;
+
+        try {
+            Excel::import($import, public_path('/EnviroDatabase/' . $nameFile));
+            return redirect('/airquality/noisemeter/noise/codesamplenm')->with('success', 'New Code Sample Noise has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+            return back()->withFailures($e->failures());
+        }
     }
 
     /**
@@ -52,7 +76,7 @@ class CodeSampleNMController extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         Codesamplenm::create($validatedData);
-        return redirect('/dashboard/dustgauge/noisemeter/noise/codesamplenm/create')->with('success','New code sample noise meter has been added!');
+        return redirect('/airquality/noisemeter/noise/codesamplenm/create')->with('success','New code sample noise meter has been added!');
     }
 
     /**
@@ -101,7 +125,7 @@ class CodeSampleNMController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Codesamplenm::where('id', $codesamplenm->id)
             ->update($validatedData);
-        return redirect('/dashboard/dustgauge/noisemeter/noise/codesamplenm')->with('success', ' code sample noise meter has been updated!');
+        return redirect('/airquality/noisemeter/noise/codesamplenm')->with('success', ' code sample noise meter has been updated!');
     }
 
     /**
@@ -113,6 +137,6 @@ class CodeSampleNMController extends Controller
     public function destroy(Codesamplenm $codesamplenm)
     {
         Codesamplenm::destroy($codesamplenm->id);
-        return redirect('/dashboard/dustgauge/noisemeter/noise/codesamplenm')->with('success',' code sample noise meter has been deleted!');
+        return redirect('/airquality/noisemeter/noise/codesamplenm')->with('success',' code sample noise meter has been deleted!');
     }
 }

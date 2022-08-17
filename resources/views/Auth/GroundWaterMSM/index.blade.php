@@ -50,15 +50,15 @@
 
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
-                                                        <form action="/dashboard/groundwater/mastergw" class="form-inline">
+                                                        <form action="/auth/groundwater/msm" class="form-inline">
                                                             <label for="fromDate" class="mr-2">From</label>
-                                                            <div class="input-group date" id="reservationdate1" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate1" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                             </div>
                                                             <label for="fromDate" class="mr-2 ml-2">To</label>
     
-                                                            <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                             </div>
     
                                                             <div style="width: 118px;" class="input-group mr-1">
@@ -77,7 +77,7 @@
                                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                             </div>
                                                         </form>
-                                                        <form action="/dashboard/groundwater/mastergw">
+                                                        <form action="/auth/groundwater/msm">
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                         </form>
                                                     </div>
@@ -167,9 +167,9 @@
                                                             <td>{{ $data->well }}</td>
                                                             <td>{{ $data->well_water }}</td>
                                                             <td>{{ $data->h }}</td>
-                                                            <td>{{ $data->d_pipe }}</td>
-                                                            <td>{{ $data->tt }}</td>
-                                                            <td>{{ $data->r }}</td>
+                                                            <td>{{ $data->tablestandard->d_pipe }}</td>
+                                                            <td>{{ $data->tablestandard->tt }}</td>
+                                                            <td>{{ $data->tablestandard->r }}</td>
                                                             <td>{{ $data->water_volume }}</td>
                                                             <td>{{ $data->temperatur }}</td>
                                                             <td>{{ $data->ph }}</td>
@@ -210,6 +210,13 @@
                                                     </div>
                                                 </div>
     
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <figure class="highcharts-figure">
+                                                        <div class="invoice p-3 mb-3" id="container"></div>
+                                                    </figure>
+                                                </div>
                                             </div>
                                             @else
                                             <p class="text-center fs-4">Not Data Found</p>
@@ -259,7 +266,61 @@
             </div><!-- /.container-fluid -->
         </section>
     </div>
-    @section('footer')
+    <script>
+        Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com'
+        },
+        xAxis: {
+            categories: {!!json_encode($date)!!}
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#F4CC70',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Temperature',
+            marker: {
+                symbol: 'square'
+            },
+            color:'#1F2833',
+            data:{!!json_encode($suhu)!!}
+
+        }, {
+                name: 'PH',
+                color:'#6AB187',
+                marker: {
+                    symbol: 'triangle-down'
+                },
+                data: {!! json_encode($ph) !!}
+            }]
+        });
+</script>
     <script>
         $(function() {
             $('#reservationdate1').datetimepicker({
@@ -329,6 +390,6 @@
         }
         // DropzoneJS Demo Code End
     </script>
-@endsection
+
 
 @endsection

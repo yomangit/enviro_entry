@@ -14,7 +14,7 @@ class Dust extends Model
     public function scopefilter($query,array $filters)
     {
         $query->when($filters['fromDate']?? false, function($query){
-            return $query->whereBetween('date', array( date('Y-m-d',strtotime(request('fromDate'))),date('Y-m-d',strtotime( request('toDate'))))); 
+            return $query->whereBetween('date_out', array( date('Y-m-d',strtotime(request('fromDate'))),date('Y-m-d',strtotime( request('toDate'))))); 
             });
             // $query->when($filters['search']??false,function($query,$search){
             //     return  $query->where('nama', 'like', '%' . $search . '%')
@@ -22,7 +22,7 @@ class Dust extends Model
             // });
             $query->when($filters['search']??false,function($query,$search){
                 return $query->whereHas('CodeDust',function($query)use($search){
-                    $query->where('nama', 'like', '%' . $search . '%');
+                    $query->where('nama', 'like', $search );
                 });
             }); 
     }

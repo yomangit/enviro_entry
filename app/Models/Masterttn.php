@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Masterttn extends Model
-{
-   
+{  
     public $table = "masterttns";
     use HasFactory;
     protected $guarded=['id'];
@@ -32,9 +31,8 @@ class Masterttn extends Model
             });
           
     }
-  
-     public function standard(){
-    return $this->belongsTo(TblStandard::class,'standard_id');
+    public function tablestandard(){
+        return $this->belongsTo(GroundWaterStandard::class,'gwtablestandard_id');
     }
     public function CodeSampleTTN(){
         return $this->belongsTo(Codesamplettn::class,'codesamplettn_id');
@@ -44,6 +42,6 @@ class Masterttn extends Model
     }
     public function getRouteKeyName()
 {
-    return 'failed_at';
+    return 'id';
 }
 }

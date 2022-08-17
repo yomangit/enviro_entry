@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\StandardBlasting;
 use Illuminate\Http\Request;
+use App\Models\StandardBlasting;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\TableStandardBlastingExport;
+use App\Imports\TableStandardBlastingImport;
 
 class StdBlastingTable extends Controller
 {
@@ -20,6 +23,23 @@ class StdBlastingTable extends Controller
             'TableStandard'=>StandardBlasting::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
 
          ]);
+    }
+    public function ExportStandardBlasting()
+    {
+        return Excel::download(new TableStandardBlastingExport,'standard_blastings.csv');
+    }
+    public function ImportStandardBlasting(Request $request)
+    { 
+        $file=$request->file('file');
+        $nameFile = $file->getClientOriginalName();
+        $file->move('EnviroDatabase',$nameFile);
+        try {
+        Excel::import(new TableStandardBlastingImport, public_path('/EnviroDatabase/'.$nameFile));
+        return redirect('/blasting/tablestandard')->with('success','New table Standard has been Imported!');
+    } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+        $e->failures();
+         return back()->withFailures($e->failures());
+     }
     }
 
     /**
@@ -54,7 +74,7 @@ class StdBlastingTable extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         StandardBlasting::create($validatedData);
-        return redirect('/dashboard/blasting/tablestandard/create')->with('success','New Standard value Blasting has been added!');
+        return redirect('/blasting/tablestandard/create')->with('success','New Standard value Blasting has been added!');
     }
 
     /**
@@ -106,7 +126,7 @@ class StdBlastingTable extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         StandardBlasting::where('id', $tablestandard->id)
             ->update($validatedData);
-        return redirect('/dashboard/blasting/tablestandard')->with('success', ' Standard Value Blasting has been updated!');
+        return redirect('/blasting/tablestandard')->with('success', ' Standard Value Blasting has been updated!');
     }
 
     /**
@@ -118,6 +138,6 @@ class StdBlastingTable extends Controller
     public function destroy(StandardBlasting $tablestandard)
     {
         StandardBlasting::destroy($tablestandard->id);
-        return redirect('/dashboard/blasting/tablestandard')->with('success','Standard Value Blasting has been deleted!');
+        return redirect('/blasting/tablestandard')->with('success','Standard Value Blasting has been deleted!');
     }
 }

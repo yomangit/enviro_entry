@@ -1,0 +1,118 @@
+id,user_id,gwcodesample_id,date,gwtablestandard_id,start_time,stop_time,well,well_water,h,water_volume,temperatur,ph,conductivity,tds,redox,do,salinity,turbidity,water_color,odor,rain_before_sampling,rain_during_sampling,oil_layer,source_pollution,sampler,remarks
+1,1,1,2011-09-29,1,-,-,77.7,28.7,49,99.24,26.7,7.65,496,230*ppm,-,-,0.2,-,slightly turbid,Yes,-,No,No,No,OS/AL,-
+1,1,1,2011-11-18,1,-,-,77.54,28.54,49,99.24,34.7,7.07,328,153,-,-,NA,-,slightly turbid,Yes,No,No,No,No,OS/MW,-
+1,1,1,2011-12-15,1,-,-,77.55,47.73,29.82,60.39,NA,NA,NA,NA,NA,NA,NA,-,-,-,-,-,-,-,-,-
+1,1,1,2012-01-06,1,-,-,77.48,47.47,30.01,60.78,29.7,7.27,297,138,763,7.28,NA,-,Turbid,Yes (acid),Yes,No,No,TSF catchment,OL/MW,-
+1,1,1,2012-02-16,1,-,-,77.08,47.2,29.88,60.52,26.05,6.85,308,142,878,4.51,NA,-,Normal,No,No,No,No,TSF catchment,OL/MW/RH,-
+1,1,1,2012-03-14,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-04-04,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-05-04,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-06-04,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-07-04,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-08-04,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-09-04,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,No sampling (Van belt ground water machine broke)
+1,1,1,2012-10-13,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,AP/AL,Tidak ada air
+1,1,1,2013-05-07,1,11:00 AM,-,77.44,34.04,43.4,87.9,33.3,7.3,306,200,190,3.16,NA,-,slightly turbid,No,No,No,No,Waste dump Toka,AP/RH,-
+1,1,1,2013-06-05,1,2:25 PM,-,77.87,32.34,45.53,92.21,33.3,6.6,314,210,269,4.16,0.02,-,slightly turbid,Yes,No,No,No,Waste dump Toka,AP/RH/CR,-
+1,1,1,2013-07-04,1,2:10 PM,-,90,33.72,56.28,113.98,31.6,6.34,291,190,275,3.24,NA,-,slightly turbid,No,No,No,No,TSF catchment,AL/RH,-
+1,1,1,2013-08-15,1,8:54 AM,-,90,34.19,55.81,113.03,33,6.22,290,188,192,2.08,NA,-,Normal,No,No,No,No,TSF catchment,AL/MT,Has sample duplicate (GWD 01)
+1,1,1,2013-09-11,1,1:18 PM,1:44 PM,76.52,34.33,42.19,85.45,30.4,6.57,323,210,154,2.4,NA,-,Normal,No,No,No,No,TSF catchment,AP/AL/CR,-
+1,1,1,2013-10-04,1,8:04 AM,-,76.53,35.04,41.49,84.03,31.5,6.39,292,188,180,3.18,NA,-,Normal,No,No,No,No,TSF catchment,AL/RH,Has sample duplicate (GWD 01)
+1,1,1,2013-11-13,1,9:15 AM,-,-,35.12,-,-,31.3,6.76,312,203,157,2.03,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,FB/AL/SM,-
+1,1,1,2013-12-11,1,10:00 AM,10:30 AM,-,-,-,-,31.3,7.95,300,169,270,1.4,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/CR,-
+1,1,1,2014-01-08,1,9:00 AM,9:27 AM,76.69,30,46.69,94.56,27.4,6.89,180,119.9,100,2.01,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/CR,Has sample duplicate (GWD 01)
+1,1,1,2014-02-11,1,8:30 AM,9:05 AM,76.68,34.5,42.18,85.43,27.6,6.86,282,180.6,105,1.4,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AP/CR,-
+1,1,1,2014-03-12,1,8:35 AM,8:58 AM,76.68,35.88,40.8,82.63,31,6.17,338,220,183,3.04,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/CR/RT,-
+1,1,1,2014-04-07,1,9:30 AM,9:56 AM,76.69,32.3,44.39,89.9,27.4,6.87,282,180,185,1.28,NA,-,Agak keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,AP/SP,-
+1,1,1,2014-05-07,1,8:50 AM,9:05 AM,76.69,36.12,40.57,82.17,32,6.32,352,230,254,2.48,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/CR/RT,-
+1,1,1,2014-06-10,1,8:45 AM,9:12 AM,76.69,36.28,40.41,81.84,32.7,6.36,335,219,224,2.32,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RH/RT,-
+1,1,1,2014-07-03,1,9:09 AM,9:27 AM,76.69,36.45,40.24,81.5,31.5,6.6,419,268,231,2.52,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/AL,Has sample duplicate (GWD 01)
+1,1,1,2014-07-23,1,1:45 PM,2:10 PM,76.69,35.22,41.47,83.99,31.9,6.46,294,192,208,2.45,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RH/RT,-
+1,1,1,2014-08-06,1,9:02 AM,9:19 AM,76.69,32.46,44.23,89.58,31.8,6.62,294,190,257,2.94,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/AP/CR,-
+1,1,1,2014-09-04,1,9:02 AM,9:30 AM,76.69,34.42,42.27,85.61,30,7.18,286,186,195,2.61,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RT,-
+1,1,1,2014-10-09,1,9:15 AM,9:50 AM,76.69,31.4,45.29,91.73,29.9,6.71,295,190,251,2.51,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/CR/RT,-
+1,1,1,2014-11-11,1,8:45 AM,8:59 AM,76.69,35.62,41.07,83.18,31.2,6.9,365,234,273,2.53,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/RT,-
+1,1,1,2014-12-07,1,9:10 AM,9:30 AM,76.69,33.5,43.19,87.47,30.9,6.86,332,215,171,2.36,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/AL,-
+1,1,1,2015-01-13,1,9:58 AM,10:15 AM,76.69,36.78,39.91,80.83,31.7,6.87,314,204,207,2.69,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AL/CR,-
+1,1,1,2015-01-12,1,2:30 PM,2:45 PM,76.69,26.4,50.29,101.85,31.2,7.15,349,227,222,2.05,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AP/RT/BK,-
+1,1,1,2015-03-06,1,8:30 AM,8:45 AM,76.69,34.7,41.99,85.04,32,6.79,301,195,255,2.03,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AP/RT/BK,Has sample duplicate (GWD 01)
+1,1,1,2015-04-08,1,9:15 AM,9:30 AM,76.69,36.2,40.49,82,31.5,7.13,356,232,184,2.44,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/CR/AL,-
+1,1,1,2015-05-05,1,9:30 AM,9:45 AM,76.69,51.4,25.29,51.22,29.6,7.19,347,229,190,2.4,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/BK/CR,-
+1,1,1,2015-06-04,1,10:02 AM,10:24 AM,76.69,34.4,42.29,85.65,32.7,7.08,317,206,252,2.85,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/CR/AL,-
+1,1,1,2015-07-08,1,9:09 AM,9:25 AM,76.69,35.12,41.57,84.19,31.8,7.21,321,209,247,2.86,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/BK/CR,-
+1,1,1,2015-08-05,1,9:20 AM,9:35 AM,76.69,30.08,46.61,94.4,32,7.02,340,221,196,1.73,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RH/RT,-
+1,1,1,2015-09-06,1,9:20 AM,9:35 AM,76.69,39.8,36.89,74.71,31.5,6.59,349,226,212,1.3,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AP/RT/BK,-
+1,1,1,2015-10-09,1,8:25 AM,8:45 AM,76.69,32.2,44.49,90.11,33.4,6.51,319,208,212,2.21,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AP/AL/CR,-
+1,1,1,2015-11-05,1,9:29 AM,9:54 AM,76.69,30.6,46.09,93.35,33.8,7.02,361,234,136,2,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/CR/RH/RT,-
+1,1,1,2015-12-03,1,9:32 AM,9:42 AM,76.69,32.6,44.09,89.3,33.9,6.61,349,227,145,2.76,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RH/RT,-
+1,1,1,2016-01-07,1,9:00 AM,9:20 AM,76.69,31.4,45.29,91.73,33.4,6.29,328,213,217,4.21,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RT/CR/BK,-
+1,1,1,2016-02-04,1,9:00 AM,9:15 AM,76.69,35,41.69,84.43,32.6,6.86,336,221,218,4.93,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/RT/CR,-
+1,1,1,2016-03-03,1,9:10 AM,9:04 AM,76.69,32,44.69,90.51,32.6,6.54,334,218,198,2.87,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/BK/RT,-
+1,1,1,2016-04-07,1,9:30 AM,9:45 AM,76.69,37,39.69,80.38,31.5,7.19,354,229,253,2.94,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/CR/BK/RT,-
+1,1,1,2016-04-15,1,9:00 AM,9:20 AM,76.69,39,37.69,76.33,31.9,6.66,324,210,216,3.58,NA,-,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,AP/RH/RT,Resampling
+1,1,1,2016-05-10,1,8:47 AM,8:59 AM,76.69,34.25,42.44,85.95,33.7,6.63,357,231,251,2.41,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AL/RT/RH/CR,-
+1,1,1,2016-06-07,1,8:20 AM,8:35 AM,76.69,36,40.69,82.41,32.4,6.82,387,250,321,2.37,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/RT/BK/CR,-
+1,1,1,2016-07-08,1,9:34 AM,9:56 AM,76.69,40,36.69,74.31,34.1,6.42,371,241,255,2.33,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RT/RH/BK,-
+1,1,1,2016-08-04,1,9:00 AM,9:13 AM,76.69,31.6,45.09,91.32,32.8,6.58,395,257,231,2.74,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AL/RH/RT/BK,-
+1,1,1,2016-09-04,1,8:33 AM,8:53 AM,76.69,34,42.69,86.46,31.5,6.11,344,223,169,1.92,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,RH/RT/BK,-
+1,1,1,2016-10-06,1,10:03 AM,10:12 AM,76.69,31,45.69,92.54,33.2,6.6,361,238,160,3.36,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AL/RH/BK,-
+1,1,1,2016-11-04,1,8:20 AM,8:40 AM,76.69,34,42.69,86.46,31.4,6.5,365,238,178,3.9,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/RT/BK,-
+1,1,1,2016-12-07,1,9:52 AM,10:00 AM,76.69,33,43.69,88.49,33,6.46,344,220,114,2.51,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RT/RH/BK,-
+1,1,1,2017-01-01,1,9:00 AM,9:15 AM,76.69,52,24.69,50,29.8,7.08,312,165,190,3.4,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/DA,-
+1,1,1,2017-02-06,1,11:20 AM,11:25 AM,76.69,42,34.69,70.26,29,6.57,319,169,163,4.2,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/BK,-
+1,1,1,2017-03-05,1,2:00 PM,2:45 PM,76.69,36.31,40.38,81.78,25.8,7.63,311,160,203,5.01,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AP/DA/BK,Has duplicate sample (GWD 01)
+1,1,1,2017-04-06,1,10:02 AM,10:12 AM,76.69,25,51.69,104.69,33.2,6.98,350,185,227,3.32,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,AL/RH/RT,-
+1,1,1,2017-05-02,1,8:35 AM,8:55 AM,76.69,39,37.69,76.33,30.1,7.44,334,176,285,3.9,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RT/BK,-
+1,1,1,2017-06-06,1,8:17 AM,8:35 AM,76.69,37,39.69,80.38,31.1,6.62,317,168,300,2.46,NA,-,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,RH/RT/BK,-
+1,1,1,2017-07-11,1,8:51 AM,9:06 AM,76.69,37,39.69,80.38,30.3,6.97,313,166,202,2.92,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/RT,-
+1,1,1,2017-08-08,1,8:50 AM,9:10 AM,76.69,39,37.69,76.33,31,6.7,312,165,261,3.1,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/RT/BK,-
+1,1,1,2017-09-07,1,9:45 AM,10:05 AM,76.69,35,41.69,84.43,39.1,6.87,306,162,343,3.04,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,AL/DS,-
+1,1,1,2017-10-08,1,8:15 AM,8:40 AM,76.69,36,40.69,82.41,29.8,6.61,308,170,304,340,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/RT,-
+1,1,1,2017-11-07,1,9:25 AM,9:30 AM,76.69,34,42.69,86.46,28.8,6.63,315,167,232,6.63,NA,-,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,BK/TH/RT,-
+1,1,1,2018-01-09,1,8:45 AM,9:04 AM,76.69,44,32.69,66.21,29.6,7.6,360,196,293,2.48,NA,-,Normal,No,Yes,No,No,TSF,BK/RT/AL,-
+1,1,1,2018-02-06,1,8:24 AM,8:34 AM,76.69,42,34.69,70.26,27.7,7.12,333,175,3.64,176,NA,-,Normal,No,Yes,No,No,TSF,BK/AL,-
+1,1,1,2018-03-06,1,8:45 AM,9:00 AM,76.69,37,39.69,80.38,30.6,7.06,326,173,194,2.41,NA,-,Normal,No,Yes,No,No,TSF,AL/MW/HM,-
+1,1,1,2018-04-11,1,2:41 PM,2:50 PM,76.69,44,32.69,66.21,30.3,6.75,402,262,205,3.14,NA,-,Normal,No,Yes,No,No,-,BK/AL,-
+1,1,1,2018-05-05,1,3:40 PM,3:58 PM,76.69,40,36.69,74.31,32.6,6.48,399,259,188,3.42,NA,-,Normal,No,Yes,No,No,-,MW/AL,-
+1,1,1,2018-06-07,1,8:50 AM,9:05 AM,76.69,37,39.69,80.38,30.8,7.52,412,269,234,5.14,NA,-,Normal,No,No,No,No,-,RT/FP,-
+1,1,1,2018-07-09,1,8:47 AM,9:00 AM,76.69,38,38.69,78.36,32.3,7.13,413,269,212,3.52,NA,-,Normal,No,No,No,No,-,RT/FP/AL,-
+1,1,1,2018-08-03,1,10:40 AM,10:55 AM,76.69,46,30.69,62.16,32.1,6.78,421,274,206,3.96,NA,-,Normal,No,No,No,No,-,RM/RH/FP,-
+1,1,1,2018-09-11,1,10:30 AM,10:45 AM,76.69,68.9,7.79,15.78,29.9,6.62,434,282,191,5.58,NA,-,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,RKM/MU,-
+1,1,1,2018-10-03,1,2:26 PM,2:47 PM,76.69,59,17.69,35.83,33.6,6.56,412,268,190,4.17,NA,-,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,BK/AL/FP,-
+1,1,1,2018-11-05,1,9:38 AM,9:57 AM,76.69,40,36.69,74.31,33.7,6.72,348,226,229,6.93,NA,-,Normal,No,No,No,No,Waste dump Toka & TSF catchment,RH/FP,-
+1,1,1,2018-12-07,1,3:10 PM,3:25 PM,76.69,41,35.69,72.28,29.8,7.02,1460,933,175,3.1,NA,-,Agak keruh,No,Yes,No,No,TSF,RT/HM,-
+1,1,1,2019-08-13,1,8:56 AM,9:03 AM,76.69,27,49.69,100.64,29.7,8.82,1340,856,147,3.03,0.66,85.3,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,AL/BK/RT,-
+1,1,1,2019-09-05,1,9:10 AM,9:30 AM,76.69,30,46.69,94.56,27.6,8.96,1240,793,109,1.52,NA,NA,keruh,No,No,No,No,Waste dump Toka & TSF catchment,RT/AL/BK,-
+1,1,1,2019-10-09,1,8:50 AM,9:10 AM,76.69,27,49.69,100.64,28.9,9.09,1160,745,152,2.41,0.5,37.5,keruh,No,No,No,No,Waste dump Toka & TSF catchment,RT/AL/FP,-
+1,1,1,2019-11-06,1,9:20 AM,9:45 AM,76.69,38,38.69,78.36,31.6,8.08,1110,712,197,3.44,0.5,84.8,keruh,No,No,No,No,Waste dump Toka & TSF catchment,RT/AL/FR,-
+1,1,1,2019-12-04,1,9:00 AM,9:20 AM,76.69,40,36.69,74.31,30.6,9.13,1050,672,153,1.14,0.5,105,keruh,No,No,No,No,Waste dump Toka & TSF catchment,RT/FR/NB/OS,-
+1,1,1,2020-01-03,1,8:43 AM,9:03 AM,76.69,38,38.69,78.36,30.1,8.85,993,635,175,3.27,0.4,40.3,Agak keruh,YES,No,No,No,Waste dump Toka & TSF catchment,RT/JK,-
+1,1,1,2020-02-11,1,9:30 AM,9:50 AM,82.83,47,35.83,72.57,28.4,8.23,909,582,97,4.17,0.4,64.9,Agak keruh,No,No,Yes,No,Waste dump Toka & TSF catchment,RT/BK/FR,-
+1,1,1,2020-03-12,1,9:25 AM,9:40 AM,82.83,47.8,35.03,70.95,30.5,8.08,973,623,114,3.02,0.4,62.7,keruh,No,Yes,No,No,Waste dump Toka & TSF catchment,RT/BK/FR,-
+1,1,1,2020-04-01,1,9:30 AM,9:50 AM,82.83,47,35.83,72.57,30.5,7.96,1020,652,106,2.31,0.5,73.6,keruh,No,Yes,No,No,Waste dump Toka & TSF catchment,RT/FR/NB,-
+1,1,1,2020-05-06,1,9:25 AM,9:48 AM,82.83,48,34.83,70.54,31.28,7.2,1020,652,176,4.1,0.5,44,keruh,Yes,Yes,No,No,Waste dump Toka & TSF catchment,NB/FR,-
+1,1,1,2020-06-13,1,8:30 AM,9:00 AM,82.83,51,31.83,64.47,31.5,7.98,822,584,184,2.37,0.4,85.4,Agak keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,RT/FR,-
+1,1,1,2020-07-02,1,8:45 AM,9:05 AM,82.83,50,32.83,66.49,30.3,7.19,884,568,207,3.84,0.4,43.1,Agak keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,RT/FR/NB,-
+1,1,1,2020-08-06,1,8:39 AM,8:56 AM,82.83,55,27.83,56.36,27.2,6.09,936,598,155,3.97,0.4,42.6,Agak keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,RT/FR/FP,-
+1,1,1,2020-09-09,1,9:00 AM,9:20 AM,82.83,65,17.83,36.11,30.9,7.8,882,565,114,3.28,0.4,47.2,keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,RT/FR,-
+1,1,1,2020-10-07,1,9:06 AM,9:20 AM,82.83,43,39.83,80.67,32,5.73,850,544,125,4,0.4,54.9,keruh,Yes,Yes,No,No,Waste dump Toka & TSF catchment,FP/JK/BK,-
+1,1,1,2020-11-08,1,8:30 AM,8:50 AM,82.83,51,31.83,64.47,27.7,7.5,850,544,205,2.39,0.4,40.3,keruh,Yes,Yes,No,No,Waste dump Toka & TSF catchment,RT/FR,-
+1,1,1,2020-12-04,1,10:40 AM,10:50 AM,82.83,46,36.83,74.59,33.9,8.1,825,528,236,2.39,0.4,86,keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,BK/FP,-
+1,1,1,2021-01-06,1,8:10 AM,8:28 AM,82.83,47,35.83,72.57,24.9,8.02,989,622,114,4.6,0.5,21.8,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,RT/FP/NB,-
+1,1,1,2021-02-10,1,1:34 PM,1:46 PM,82.83,56,26.83,54.34,32,8.1,651,326,145,3.4,0.31,34.5,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,NB/FP,-
+1,1,1,2021-03-10,1,10:40 AM,10:57 AM,82.83,60,22.83,46.24,28.2,7.6,748,479,113,3.58,0.3,24.5,Agak keruh,Yes,Yes,No,No,Waste dump Toka & TSF catchment,BK/RT/FR,-
+1,1,1,2021-04-06,1,10:00 AM,10:10 AM,82.83,63,19.83,40.16,32.8,7.88,657,421,121,4.33,0.3,18.7,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,BK/FP/NB,-
+1,1,1,2021-05-06,1,10:40 AM,10:58 AM,82.83,55,27.83,56.36,33.2,8.6,720,461,154,4.85,0.3,23.8,Agak keruh,No,No,No,No,Waste dump Toka & TSF catchment,BK/FP/FR,-
+1,1,1,2021-06-10,1,11:13 AM,11:23 AM,82.83,55,27.83,56.36,34,8.2,583,292,195,4.2,0.28,22.7,Agak keruh,Yes,Yes,No,No,Waste dump Toka & TSF catchment,BK/FR/RT,-
+1,1,1,2021-07-08,1,10:38 AM,10:40 AM,82.83,54,28.83,58.39,29.7,8.34,677,433,149,4.14,0.3,42.6,Agak keruh,Yes,No,No,No,Waste dump Toka & TSF catchment,BK/NB/FR,-
+1,1,1,2021-08-06,1,1:50 PM,2:00 PM,82.83,57,25.83,52.31,31.5,8.56,564,361,110,3.3,0.25,45.8,Normal,No,No,No,No,Waste dump Toka & TSF catchment,FR/FK,-
+1,1,1,2021-09-03,1,1:45 PM,1:55 PM,82.83,65,17.83,36.11,34.18,8.91,673,431,104,3.5,0.3,47.3,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,BK/FK,-
+1,1,1,2021-10-06,1,7:57 AM,8:23 AM,82.83,56,26.83,54.34,31.8,8.55,682,435,75,4.7,0.3,53.4,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,FP/NB/FR,-
+1,1,1,2021-11-01,1,9:45 AM,10:16 AM,82.83,56,26.83,54.34,32.9,8.66,620,395,66,5.64,0.3,39.5,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,FP/FR/HM,-
+1,1,1,2021-12-08,1,8:17 AM,8:34 AM,82.83,58,24.83,50.29,32.8,8.07,574,367,133,3.26,0.2,35.1,Agak keruh,yes,Yes,No,No,Waste dump Toka & TSF catchment,BK/FR/FP,-
+1,1,1,2022-01-05,1,1:48 PM,1:58 PM,82.83,60,22.83,46.24,34.1,8.18,652,417,73,4.01,0.3,37.5,keruh,yes,Yes,No,No,Waste dump Toka & TSF catchment,NB/BK/FR,-
+1,1,1,2022-02-08,1,1:47 PM,1:57 PM,82.83,56,26.83,54.34,36.1,8.31,577,370,94,3.94,0.3,6.6,Normal,No,Yes,No,No,Waste dump Toka & TSF catchment,NB/BK/FR,-
+1,1,1,2022-03-08,1,10:30 AM,10:42 AM,82.83,66,16.83,34.09,27,8.66,603,386,45,4.47,0.3,16.8,Agak keruh,yes,Yes,No,No,Waste dump Toka & TSF catchment,NB/BK/FR,-
+1,1,1,2022-04-06,1,2:50 PM,3:11 PM,82.83,68,14.83,30.04,33.7,8.5,634,406,156,3.84,0.3,18.6,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,BK/HM,-
+1,1,1,2022-05-04,1,1:19 PM,1:29 PM,82.83,57,25.83,52.31,32.7,8.4,550,406,352,3.93,0.2,21,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,BK/FR,-
+1,1,1,2022-06-07,1,"14""50",3:02 PM,82.83,60,22.83,46.24,34,8.13,658,421,65,4.01,0.3,6.2,keruh,yes,No,No,No,Waste dump Toka & TSF catchment,BK/NB,-

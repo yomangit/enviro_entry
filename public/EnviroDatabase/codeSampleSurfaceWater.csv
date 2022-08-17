@@ -1,0 +1,42 @@
+id,user_id,nama,lokasi
+1,1,ARP-01,Araren-Pit
+2,1,DP-01,Toka
+3,1,DP-02,Pangisan
+4,1,WQ-02,"Koba Creek down stream, before meet with Maen river"
+5,1,WQ-01(A),Koba River
+6,1,WQ-03,Upper Maen River (before effected by Koba Creek)
+7,1,WQ-04,Maen River at Winuri Village (After effected by Koba Creek)
+8,1,WQ-05,Maen River under bridge at Maen Village
+9,1,WQ-06,Maen oki creek 
+10,1,WQ-07,Pangisan River
+11,1,WQ-07(A),Pangisan River
+12,1,WQ-RS01,Pangisan River at bridge of Resetlemen road.
+13,1,WQ-08,Marawuwung River at bridge of Maen-Likupang road.
+14,1,WQ-09,Kayuwale
+15,1,WQ-10,Upper Araren River (before affected by WQ 9)
+16,1,WQ-11,Upper Araren River (after affected by WQ 9)
+17,1,WQ-11(B),Araren-River
+18,1,WQ-11 (C),Araren-River
+19,1,WQ-11(D),Araren-River
+20,1,WQ-12,Batu Panga River
+21,1,WQ-13,Batu Panga River
+22,1,WQ-14 (Batas Kota),Tugu Perbatasan Kota Bitung Minut
+23,1,WQ-14,Kayuwale
+24,1,WQ-14(A),Kayuwale
+25,1,WQ-14(B),Kayuwale
+26,1,WQ-14(C),Kayuwale
+27,1,WQ-15,Araren-River
+28,1,WQ-16,Araren-River
+29,1,MQ-01,Mix Maen river & Koba river
+30,1,PSP-01,Pangisan Sediment Pond
+31,1,PS-02 ,-
+32,1,PS-03,-
+33,1,KS-01,Koba sediment pond
+34,1,TS-01,Toka Sediment Pond
+35,1,TKP-01,Toka Pit
+36,1,TSF,Tailing Storage Facility
+37,1,TWRE-01,TWRE
+38,1,TSF-02 Pipe Outlet,Tailing Storage Facility Cell 02
+39,1,ARP-02,Araren-Pit
+40,1,ARP-OUT,Araren-pit
+41,1,Alaskar-Pit,Alaskar

@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/dust">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/dustgauge/dust">Home</a></li>
                         <li class="breadcrumb-item active">Edit Data</li>
                     </ol>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/dustgauge/dust/{{ $Codes->failed_at }}" method="post"
+                    <form action="/airquality/dustgauge/dust/{{ $Codes->failed_at }}" method="post"
                         enctype="multipart/form-data" autocomplete="off">
                         @method('put')
                         @csrf

@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/groundwater/masterttn">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/groundwater/masterttn">Home</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/groundwater/masterttn" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/groundwater/masterttn" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -178,64 +178,7 @@
                                 </div>
                             </div>
                             {{-- end ORP --}}
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group row">
-                                        <label style="font-size: 12px"
-                                            class="col-sm-4 col-form-label">Diameter Pipe
-                                            (m)</label>
-                                        <div class="col-sm-7">
-                                            <input name="d_pipe" type="number" step="0.01"
-                                                class="form-control form-control-sm @error('d_pipe') is-invalid @enderror"
-                                                value="{{ old('d_pipe') }}" />
-                                            @error('d_pipe')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.form-group -->
-                            </div>
-                            {{-- end Conductivity --}}
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group row">
-                                        <label style="font-size: 12px"
-                                            class="col-sm-4 col-form-label">TT</label>
-                                        <div class="col-sm-7">
-                                            <input name="tt" type="number" step="0.01"
-                                                class="form-control form-control-sm @error('tt') is-invalid @enderror"
-                                                value="{{ old('tt') }}" />
-                                            @error('tt')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.form-group -->
-                            </div>
-                            {{-- end turbidity --}}
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group row">
-                                        <label style="font-size: 12px"
-                                            class="col-sm-4 col-form-label">r <sup>2</sup> </label>
-                                        <div class="col-sm-7">
-                                            <input name="r" type="number" step="0.01"
-                                                class="form-control form-control-sm @error('r') is-invalid @enderror"
-                                                value="{{ old('r') }}" />
-                                            @error('r')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.form-group -->
-                            </div>
-                            {{-- end do --}}
+                           
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <div class="form-group row">
@@ -590,30 +533,21 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <div class="form-group row">
-                                        <img class="img-preview img-fluid">
-    
-                                        <label style="font-size: 12px" for="hard_copy"
-                                            class="col-sm-4 col-form-label ">Hard Copy</label>
-                                        <div class="input-group col-sm-7">
-                                            <div class="custom-file row">
-    
-                                                <input type="file" name="hard_copy"
-                                                    class="form-control   @error('hard_copy') is-invalid @enderror"
-                                                    id="hard_copy" required
-                                                    onchange="previewImage()" />
-                                                <label style="font-size: 12px"
-                                                    class="custom-file-label @error('hard_copy') is-invalid @enderror"
-                                                    for="hard_copy">Choose file</label>
-                                                @error('hard_copy')
-                                                    <span
-                                                        class=" invalid-feedback ">{{ $message }}</span>
-                                                @enderror
-                                            </div>
+                                        <label style="font-size: 12px"
+                                            class="col-sm-4 col-form-label">Remarks</label>
+                                        <div class="col-sm-7">
+                                            <input name="remarks" type="text"
+                                                class="form-control form-control-sm @error('remarks') is-invalid @enderror"
+                                                value="{{ old('remarks') }}" />
+                                            @error('remarks')
+                                                <span
+                                                    class=" invalid-feedback">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
+                            <!-- /.form-group -->
                             </div>
-                            {{-- end hardcopy --}}
                         </div>
                         <!-- /.row -->
                         <div class="card-footer d-flex justify-content-end">

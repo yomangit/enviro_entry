@@ -52,7 +52,7 @@
                                                 </a>@endcan
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
-                                                        <form action="/dashboard/groundwater/masterttn" class="form-inline">
+                                                        <form action="/auth/groundwater/ttn" class="form-inline">
                                                             <label for="fromDate" class="mr-2">From</label>
                                                             <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                                                 <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -79,7 +79,7 @@
                                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                             </div>
                                                         </form>
-                                                        <form action="/dashboard/groundwater/masterttn">
+                                                        <form action="/auth/groundwater/ttn">
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                         </form>
                                                     </div>
@@ -215,6 +215,13 @@
                                                 </div>
     
                                             </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <figure class="highcharts-figure">
+                                                        <div class="invoice p-3 mb-3" id="container"></div>
+                                                    </figure>
+                                                </div>
+                                            </div>
                                             @else
                                             <p class="text-center fs-4">Not Data Found</p>
                                             @endif
@@ -334,5 +341,53 @@
         // DropzoneJS Demo Code End
     </script>
 @endsection
+<script>
+        Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+      
+        xAxis: {
+            categories: {!!json_encode($date)!!}
+        },
+        yAxis: {
+            title: {
+                text: 'Value'
+            },
+            
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#F4CC70',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Temperature',
+            marker: {
+                symbol: 'square'
+            },
+            color:'#1F2833',
+            data:{!!json_encode($suhu)!!}
 
+        }, {
+                name: 'PH',
+                color:'#6AB187',
+                marker: {
+                    symbol: 'triangle-down'
+                },
+                data: {!! json_encode($ph) !!}
+            }]
+        });
+</script>
 @endsection

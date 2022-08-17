@@ -53,7 +53,7 @@
                                             @endcan
                                             <div class="card-tools row">
 
-                                                <form action="/dashboard/blasting" class="form-inline">
+                                                <form action="/auth/blasting" class="form-inline">
                                                     <label for="fromDate" class="mr-2">From</label>
                                                     <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                                         <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -80,7 +80,7 @@
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                     </div>
                                                 </form>
-                                                <form action="/dashboard/blasting">
+                                                <form action="/auth/blasting">
                                                     <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                 </form>
                                             </div>
@@ -244,50 +244,49 @@
 </div>
 
 <script>
-    Highcharts.chart('container', {
-        chart: {
-            type: 'column'
-        },
+ Highcharts.chart('container', {
+       chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vibration Monitoring Results'
+    },
+    xAxis: {
+        categories: {!! json_encode($date) !!}
+    },
+    yAxis: [{
+        min: 0,
         title: {
-            text: 'Monthly Average Rainfall'
-        },
-        subtitle: {
-            text: 'Source: WorldClimate.com'
-        },
-        xAxis: {
-            categories:{!! json_encode($date) !!},
-            crosshair: true
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Getaran (mm/s)'
-            }
-        },
-        tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
-        },
-        plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
-        },
-        series: [{
-            name: 'third grade maximum vibration',
-            data: {!! json_encode($freq) !!},
-
-        },  {
-            name: 'peak vibration ',
-            data: {!! json_encode($peak) !!},
-
-
-        }]
+            text: 'Vibration (mm/s)'
+        }
+    }],
+    legend: {
+        shadow: false
+    },
+    tooltip: {
+        shared: true
+    },
+    plotOptions: {
+        column: {
+            grouping: false,
+            shadow: false,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'maximum vibration class 3',
+        color: 'rgba(248,161,63,1)',
+        data: {!! json_encode($peak_std) !!},
+        pointPadding: 0.1,
+       
+       
+    }, {
+        name: 'peak vibration',
+        color: 'rgba(186,60,61,.9)',
+        data: {!! json_encode($peak) !!},
+        pointPadding: 0.2,
+       
+    }]
     });
 </script>
 

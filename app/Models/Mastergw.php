@@ -16,7 +16,7 @@ class Mastergw extends Model
     public function scopefilter($query,array $filters)
     {
            $query->when($filters['fromDate']?? false, function($query){
-                return $query->whereBetween('date', array(request('fromDate'), request('toDate'))); 
+                return $query->whereBetween('date', array(date('Y-m-d',strtotime(request('fromDate'))), date('Y-m-d',strtotime(request('toDate'))))); 
                });
         
             //    $query->when($filters['search']??false,function($query,$search){
@@ -31,16 +31,17 @@ class Mastergw extends Model
             });
           
     }
-  
-
     public function GWCodeSample(){
         return $this->belongsTo(Codesamplegw::class,'gwcodesample_id');
+    }
+    public function tablestandard(){
+        return $this->belongsTo(GroundWaterStandard::class,'gwtablestandard_id');
     }
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
     public function getRouteKeyName()
 {
-    return 'failed_at';
+    return 'id';
 }
 }

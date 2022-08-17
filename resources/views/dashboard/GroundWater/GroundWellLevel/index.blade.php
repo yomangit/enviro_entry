@@ -9,12 +9,7 @@
                     <div class="col-sm-6">
                         <h1>{{ $breadcrumb }}</h1>
                     </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Input Data</li>
-                        </ol>
-                    </div>
+                  
                 </div>
             </div><!-- /.container-fluid -->
         </section>
@@ -41,15 +36,15 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="card-tools row">
-                                                    <form action="/dashboard/groundwater/level" class="form-inline">
+                                                    <form action="/groundwater/level" class="form-inline">
                                                         <label for="fromDate" class="mr-2">From</label>
-                                                        <div class="input-group date" id="reservationdate1" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate1" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
                                                         <label for="fromDate" class="mr-2 ml-2">To</label>
 
-                                                        <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                         </div>
 
                                                         <div style="width: 118px;" class="input-group mr-1">
@@ -68,7 +63,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/groundwater/level">
+                                                    <form action="/groundwater/level">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -99,13 +94,13 @@
                                                             @foreach ($Codes as  $code)
                                                                 <tr style="font-size: 12px">
                                                                     <td>{{ $no++ }}</td>
-                                                                    <td>{{ $code->date }}</td>
+                                                                    <td>{{ date('d-m-Y',strtotime($code->date)) }}</td>
                                                                     <td>{{ $code->GWCodeSample->nama }}</td>
                                                                     <td>{{$code->GWCodeSample->total}}</td>
                                                                     <td>{{$code->GWCodeSample->gl}}</td>
                                                                     <td>{{$code->GWCodeSample->rl}}</td>
                                                                     <td>{{ $code->well }}</td>
-                                                                    <td>{{ $hasil =($code->GWCodeSample->rl-($code->well-$code->GWCodeSample->gl)) }}</td>
+                                                                    <td>{{ $hasil =(doubleval($code->GWCodeSample->rl)-(doubleval($code->well)-doubleval($code->GWCodeSample->gl))) }}</td>
                                                                    
                                                                 </tr>
                                                             @endforeach

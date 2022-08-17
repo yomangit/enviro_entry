@@ -20,10 +20,6 @@ class Codesamplettn extends Model
                             ->orWhere('lokasi', 'like', '%' . $search . '%');
             });
     }
-
-    public function standard(){
-    return $this->belongsTo(TblStandard::class,'standard_id');
-    }
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }

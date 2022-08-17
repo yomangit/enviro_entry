@@ -26,6 +26,7 @@ class BlastingController extends Controller
 
         $grafiks = Blasting::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(20)->withQueryString();
         $tanggal = [];
+        $peak_std=[];
         $freq = [];
         $peak = [];
         $freq1 = [];
@@ -34,6 +35,7 @@ class BlastingController extends Controller
 
             
              $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+             $peak_std[]= doubleval($grafik->peak_vektor_std);
             if ($freq1[] = $grafik->StandardID->ppv === 'error') {
                 //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
                 $freq[] = '';
@@ -58,6 +60,7 @@ class BlastingController extends Controller
             'Point_ID'=>PointIdBlasting::all(),
             'freq'=>$freq,
             'peak'=>$peak,
+            'peak_std'=>$peak_std,
             'date'=>$tanggal,
             'Standard_id'=>StandardBlasting::all(),
             'Blasting'=>Blasting::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
@@ -75,7 +78,7 @@ class BlastingController extends Controller
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase', $nameFile);
         Excel::import(new BlastingImport, public_path('/EnviroDatabase/' . $nameFile));
-        return redirect('/dashboard/blasting')->with('success', 'New Data Blasting has been Imported!');
+        return redirect('/blasting')->with('success', 'New Data Blasting has been Imported!');
     }
 
     /**
@@ -115,7 +118,7 @@ class BlastingController extends Controller
             'transversal_freq' => 'required',
             'vertical_freq' => 'required',
             'longitudinal_freq' => 'required',
-
+            'peak_vektor_std'=>'required',
             'transversal_ppv' => 'required',
             'vertical_ppv' => 'required',
             'longitudinal_ppv' => 'required',
@@ -125,12 +128,13 @@ class BlastingController extends Controller
             'blast_location' => 'required',
             'weather' => 'required',
             'sampler' => 'required',
+            'remarks' => 'required',
         ]);
 
         $validatedData['date']= date('Y-m-d',strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
         Blasting::create($validatedData);
-        return redirect('/dashboard/blasting/create')->with('success', 'New Data Blasting has been added!');
+        return redirect('/blasting/create')->with('success', 'New Data Blasting has been added!');
     }
 
     /**
@@ -183,6 +187,7 @@ class BlastingController extends Controller
             'transversal_freq' => 'required',
             'vertical_freq' => 'required',
             'longitudinal_freq' => 'required',
+            'peak_vektor_std'=>'required',
 
             'transversal_ppv' => 'required',
             'vertical_ppv' => 'required',
@@ -192,6 +197,7 @@ class BlastingController extends Controller
             'noise_level' => 'required|max:255',
             'blast_location' => 'required',
             'weather' => 'required',
+            'remarks' => 'required',
             'sampler' => 'required',
         ];
 
@@ -203,7 +209,7 @@ class BlastingController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Blasting::where('id', $blasting->id)
             ->update($validatedData);
-        return redirect('/dashboard/blasting')->with('success', ' Data Entry has been updated!');
+        return redirect('/blasting')->with('success', ' Data Entry has been updated!');
     }
 
     /**
@@ -215,6 +221,6 @@ class BlastingController extends Controller
     public function destroy(Blasting $blasting)
     {
         Blasting::destroy($blasting->id);
-        return redirect('/dashboard/blasting')->with('success','Data Blasting has been deleted!');
+        return redirect('/blasting')->with('success','Data Blasting has been deleted!');
     }
 }

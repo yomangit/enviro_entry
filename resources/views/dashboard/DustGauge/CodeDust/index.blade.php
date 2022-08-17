@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/dust">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/dustgauge/dust">Home</a></li>
                         <li class="breadcrumb-item active">Code Sample</li>
                     </ol>
                 </div>
@@ -58,7 +58,7 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-tools row">
-                                                {{-- <form action="/dashboard/codesample" class="form-inline">
+                                                {{-- <form action="/airquality/codesample" class="form-inline">
                                                         <label for="fromDate" class="mr-2">From</label>
                                                         <div class="input-group date" id="reservationdate1"
                                                             style="width: 85px;" data-target-input="nearest">
@@ -77,11 +77,11 @@
                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                             </div>
                                             </form>
-                                            <form action="/dashboard/codesample">
+                                            <form action="/airquality/codesample">
                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                             </form> --}}
 
-                                            <form action="/dashboard/dustgauge/dust/codesampledg">
+                                            <form action="/airquality/dustgauge/dust/codesampledg">
                                                 <div class="input-group input-group-sm" style="width: 150px;">
                                                     <input type="text" name="search" class="form-control float-right" placeholder="Search" value="{{ request('search') }}">
                                                     <div class="input-group-append">
@@ -92,7 +92,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <a href="/dashboard/dustgauge/dust/codesampledg/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                        <a href="/airquality/dustgauge/dust/codesampledg/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                         <a href="/exportcodesampledg" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                         <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                             <i class="fas fa-upload mr-1"></i>Excel
@@ -121,10 +121,10 @@
                                                     <td>{{ $no++ }}</td>
                                                     <td>
                                                         <div style="">
-                                                            <a href="/dashboard/dustgauge/dust/codesampledg/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <a href="/airquality/dustgauge/dust/codesampledg/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="fas fa-pen"></i>
                                                             </a>
-                                                            <form action="/dashboard/dustgauge/dust/codesampledg/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                            <form action="/airquality/dustgauge/dust/codesampledg/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                 @method('delete')
                                                                 @csrf
                                                                 <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -178,7 +178,7 @@
                                                     @csrf
                                                     <div class="modal-body">
                                                         <div class="custom-file">
-                                                            <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                            <input type="file" name="file" class="custom-file-input" id="exampleInputFile"required>
                                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                         </div>
 

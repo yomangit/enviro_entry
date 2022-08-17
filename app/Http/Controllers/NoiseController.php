@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Noise;
+use App\Models\Lokasi;
 use App\Models\Codesamplenm;
 use Illuminate\Http\Request;
 use App\Exports\ExportDataNoise;
 use App\Imports\ImportDataNoise;
-use App\Models\Lokasi;
+use App\Models\ResumeBulananNoise;
 use Maatwebsite\Excel\Facades\Excel;
 
 class NoiseController extends Controller
@@ -17,14 +18,16 @@ class NoiseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index( Lokasi $lokasiResume)
     {
         return view('dashboard.NoiseMeter.NoiseMaster.index', [
             "tittle" => "Noise Meter",
             'code_sample'=>Codesamplenm::all(),
             'code_location'=>Lokasi::all(),
             'breadcrumb' => 'Noise Meter',
-            'Codes'=>Noise::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(7)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'lokasiResume'=>$lokasiResume,
+            'ResumeBulanan' => ResumeBulananNoise::where('user_id', auth()->user()->id)->get(),
+            'Codes'=>Noise::where('user_id',auth()->user()->id)->filter(request(['fromDate','search','location']))->paginate(7)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
 
         ]);
@@ -39,7 +42,7 @@ class NoiseController extends Controller
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase',$nameFile);
         Excel::import(new ImportDataNoise, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/dustgauge/noisemeter/noise')->with('success','New data noise has been Imported!');
+        return redirect('/airquality/noisemeter/noise')->with('success','New data noise has been Imported!');
     }
 
     /**
@@ -91,7 +94,7 @@ class NoiseController extends Controller
 
         $validatedData['user_id']=auth()->user()->id;
         Noise::create($validatedData);
-        return redirect('/dashboard/dustgauge/noisemeter/noise/create')->with('success','New data Noise has been added!');
+        return redirect('/airquality/noisemeter/noise/create')->with('success','New data Noise has been added!');
     }
 
     /**
@@ -160,7 +163,7 @@ class NoiseController extends Controller
         $validatedData['user_id']=auth()->user()->id;
         Noise::where('id',$noise->id)
         ->update($validatedData);
-        return redirect('/dashboard/dustgauge/noisemeter/noise')->with('success',' Data noise has been updated!');
+        return redirect('/airquality/noisemeter/noise')->with('success',' Data noise has been updated!');
     }
 
     /**
@@ -172,6 +175,6 @@ class NoiseController extends Controller
     public function destroy(Noise $noise)
     {
         Noise::destroy($noise->id);
-        return redirect('/dashboard/dustgauge/noisemeter/noise')->with('success', ' Data noise has been deleted!');
+        return redirect('/airquality/noisemeter/noise')->with('success', ' Data noise has been deleted!');
     }
 }

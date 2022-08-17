@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Codesample;
+use App\Models\GroundWaterStandard;
 use App\Models\Mq1;
 use App\Models\TblStandard;
 use App\Models\Toka;
@@ -37,6 +38,12 @@ class DatabaseSeeder extends Seeder
             'email'=>'yomandenis@gmail.com',
             'password'=>bcrypt('123'),
             'is_admin'=>'1'
+        ]);
+        GroundWaterStandard::create([
+            'user_id'=>'1',
+            'd_pipe'=>'0.0762',
+            'tt'=>'3.14',
+            'r'=>'0.000645'
         ]);
      
        

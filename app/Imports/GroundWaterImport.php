@@ -4,9 +4,14 @@ namespace App\Imports;
 
 use App\Models\Mastergw;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\Importable;
+use Maatwebsite\Excel\Concerns\SkipsErrors;
+use Maatwebsite\Excel\Concerns\SkipsFailures;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class GroundWaterImport implements ToModel
+class GroundWaterImport implements ToModel, WithHeadingRow
 {
+    use SkipsErrors, Importable, SkipsFailures;
     /**
     * @param array $row
     *
@@ -15,35 +20,32 @@ class GroundWaterImport implements ToModel
     public function model(array $row)
     {
         return new Mastergw([
-            'standard_id' => $row[1],
-            'user_id' => $row[2],
-            'gwcodesample_id' => $row[3],
-            'date' => $row[4],
-            'start_time' => $row[5],
-            'stop_time' => $row[6],
-            'well' => $row[7],
-            'well_water' => $row[8],
-            'h' => $row[9],
-            'd_pipe' => $row[10],
-            'tt' => $row[11],
-            'r' => $row[12],
-            'water_volume' => $row[13],
-            'temperatur' => $row[14],
-            'ph' => $row[15],
-            'conductivity' => $row[16],
-            'tds' => $row[17],
-            'redox' => $row[18],
-            'do' => $row[19],
-            'salinity' => $row[20],
-            'turbidity' => $row[21],
-            'water_color' => $row[22],
-            'odor' => $row[23],
-            'rain_before_sampling' => $row[24],
-            'rain_during_sampling' => $row[25],
-            'oil_layer' => $row[26],
-            'source_pollution' => $row[27],
-            'sampler' => $row[28],
-            'hard_copy' => $row[29]
+            'user_id' => $row['user_id'],
+            'gwcodesample_id' => $row['gwcodesample_id'],
+            'gwtablestandard_id' => $row['gwtablestandard_id'],
+            'date' => $row['date'],
+            'start_time' => $row['start_time'],
+            'stop_time' => $row['stop_time'],
+            'well' => $row['well'],
+            'well_water' => $row['well_water'],
+            'h' => $row['h'],
+            'water_volume' => $row['water_volume'],
+            'temperatur' => $row['temperatur'],
+            'ph' => $row['ph'],
+            'conductivity' => $row['conductivity'],
+            'tds' => $row['tds'],
+            'redox' => $row['redox'],
+            'do' => $row['do'],
+            'salinity' => $row['salinity'],
+            'turbidity' => $row['turbidity'],
+            'water_color' => $row['water_color'],
+            'odor' => $row['odor'],
+            'rain_before_sampling' => $row['rain_before_sampling'],
+            'rain_during_sampling' => $row['rain_during_sampling'],
+            'oil_layer' => $row['oil_layer'],
+            'source_pollution' => $row['source_pollution'],
+            'sampler' => $row['sampler'],
+            'remarks' => $row['remarks']
         ]);
     }
 }

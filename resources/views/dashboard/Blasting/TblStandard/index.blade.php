@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/dashboard/blasting">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/blasting">Home</a></li>
                             <li class="breadcrumb-item active">{{$tittle}}</li>
                         </ol>
                     </div>
@@ -42,7 +42,7 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="card-tools row">
-                                                    {{-- <form action="/dashboard/blasting/tablestandard" class="form-inline">
+                                                    {{-- <form action="/blasting/tablestandard" class="form-inline">
                                                         <label for="fromDate" class="mr-2">From</label>
                                                         <div class="input-group date" id="reservationdate1"
                                                             style="width: 85px;" data-target-input="nearest">
@@ -67,12 +67,12 @@
                                                                 class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/blasting/tablestandard">
+                                                    <form action="/blasting/tablestandard">
                                                         <button type="submit"
                                                             class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form> --}}
 
-                                                    <form action="/dashboard/blasting/tablestandard">
+                                                    <form action="/blasting/tablestandard">
                                                         <div class="input-group input-group-sm"
                                                             style="width: 150px;">
                                                             <input type="text" name="search"
@@ -87,10 +87,10 @@
                                                         </div>
                                                     </form>
                                                 </div>
-                                                <a href="/dashboard/blasting/tablestandard/create"
+                                                <a href="/blasting/tablestandard/create"
                                                 class="btn bg-gradient-secondary btn-xs mt-2"><i
                                                     class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                                    <a href="/exportcodesamplesw" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                                    <a href="/export/blasting/standart" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                                     <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal"data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                                         <i class="fas fa-upload mr-1"></i>Excel
                                                     </a>
@@ -119,20 +119,20 @@
                                                                     <td>{{ $no++ }}</td>
                                                                     <td>
 
-                                                                            {{-- <a href="/dashboard/blasting/tablestandard/{{ $table->failed_at }}"
+                                                                            {{-- <a href="/blasting/tablestandard/{{ $table->failed_at }}"
                                                                                 class="btn btn btn-outline-primary btn-xs btn-group"
                                                                                 data-toggle="tooltip"
                                                                                 data-placement="top" title="Detail">
                                                                                 <i class="far fa-eye"></i>
                                                                             </a> --}}
-                                                                            <a href="/dashboard/blasting/tablestandard/{{ $table->created_at }}/edit"
+                                                                            <a href="/blasting/tablestandard/{{ $table->id }}/edit"
                                                                                 class="btn btn-outline-warning btn-xs btn-group"
                                                                                 data-toggle="tooltip"
                                                                                 data-placement="top" title="Edit">
                                                                                 <i class="fas fa-pen"></i>
                                                                             </a>
                                                                             <form
-                                                                                action="/dashboard/blasting/tablestandard/{{ $table->created_at }}"
+                                                                                action="/blasting/tablestandard/{{ $table->id }}"
                                                                                 method="POST"
                                                                                 class="d-inline">
                                                                                 @method('delete')
@@ -190,11 +190,11 @@
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
-                                                        <form action="/importcodesamplesw" method="POST" enctype="multipart/form-data">
+                                                        <form action="/import/blasting/standart" method="POST" enctype="multipart/form-data">
                                                             @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file" name="file"required class="custom-file-input" id="exampleInputFile">
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                             </div>
                                                        

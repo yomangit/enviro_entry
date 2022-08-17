@@ -50,7 +50,7 @@ class LocationBiotaController extends Controller
         $file->move('EnviroDatabase',$nameFile);
         try {
         Excel::import(new LocationBiotaImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/monitoring/location')->with('success','New location biota has been Imported!');
+        return redirect('/monitoring/location')->with('success','New location biota has been Imported!');
     } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
         $e->failures();
          return back()->withFailures($e->failures());
@@ -71,7 +71,7 @@ class LocationBiotaController extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         LocationBiota::create($validatedData);
-        return redirect('/dashboard/monitoring/location/create')->with('success','New code Location biota has been added!');
+        return redirect('/monitoring/location/create')->with('success','New code Location biota has been added!');
     }
 
     /**
@@ -121,7 +121,7 @@ class LocationBiotaController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         LocationBiota::where('id', $location->id)
             ->update($validatedData);
-        return redirect('/dashboard/monitoring/location')->with('success', ' code Location biota has been updated!');
+        return redirect('/monitoring/location')->with('success', ' code Location biota has been updated!');
     }
 
     /**
@@ -133,6 +133,6 @@ class LocationBiotaController extends Controller
     public function destroy(LocationBiota $location)
     {
         LocationBiota::destroy($location->id);
-        return redirect('/dashboard/monitoring/location')->with('success',' code location biota has been deleted!');
+        return redirect('/monitoring/location')->with('success',' code location biota has been deleted!');
     }
 }

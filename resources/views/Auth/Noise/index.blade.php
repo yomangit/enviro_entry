@@ -63,10 +63,10 @@
                                                 </div>
 
                                                 <div class=" col-12 col-sm-6 d-flex justify-content-end form-inline ">
-                                                    <form action="/dashboard/dustgauge/noisemeter/noise" class="form-inline" autocomplete="off">
+                                                    <form action="/auth/airquality/noise" class="form-inline" autocomplete="off">
                                                         {{-- <label for="fromDate" class="mr-2">From</label> --}}
-                                                        <div class="input-group date mr-2" id="reservationdate9" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate9" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
 
                                                         <div style="width: 118px;" class="input-group mr-1">
@@ -99,7 +99,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/dustgauge/noisemeter/noise">
+                                                    <form action="/auth/airquality/noise">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -121,7 +121,7 @@
                                                     <table role="grid" class="table table-bordered table-sm table-head-fixed ">
                                                         <thead style=" color:#005245">
                                                             <tr>
-                                                                <th style="text-align: center" rowspan="2">Action</th>
+                                                               
                                                                 <th style="text-align: center" rowspan="2">Code</th>
                                                                 <th style="text-align: center" rowspan="2">Location</th>
                                                                 <th style="text-align: center" rowspan="2">Date</th>
@@ -163,7 +163,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>1</th>
@@ -192,7 +192,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>2</th>
@@ -221,7 +221,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>3</th>
@@ -250,7 +250,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>4</th>
@@ -268,24 +268,7 @@
                                                                 <td>{{$code->D12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>
-                                                                    {{-- <a href="/dashboard/dustgauge/noisemeter/noise/{{ $code->updated_at }}"
-                                                                    class="btn btn btn-outline-primary btn-xs btn-group"
-                                                                    data-toggle="tooltip"
-                                                                    data-placement="top" title="Detail">
-                                                                    <i class="far fa-eye"></i>
-                                                                    </a> --}}
-                                                                    <a href="/dashboard/dustgauge/noisemeter/noise/{{ $code->updated_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                        <i class="fas fa-pen"></i>
-                                                                    </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->updated_at }}" method="POST" class="d-inline">
-                                                                        @method('delete')
-                                                                        @csrf
-                                                                        <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                            <i class="fas fa-trash"></i>
-                                                                        </button>
-                                                                    </form>
-                                                                </td>
+                                                    
                                                                 <th>{{$code->CodesampleNM->nama}}</th>
                                                                 <th>{{$code->CodelocationNM->nama}}</th>
                                                                 <th>{{ date('d-m-Y', strtotime( $code->date)) }}</th>
@@ -316,7 +299,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>6</th>
@@ -345,7 +328,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                                
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>7</th>
@@ -374,7 +357,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>8</th>
@@ -403,7 +386,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>9</th>
@@ -435,7 +418,7 @@
                                                                         </button>
                                                                     </form>
                                                                 </td>
-                                                                <th></th>
+                                                               
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th>10</th>
@@ -818,7 +801,7 @@
 
                                                                         <div class="row">
                                                                             <div class="col-12">
-                                                                                <h4><i class="fa-solid fa-clock"></i></i> Noise Day and Night (Lm)</h4>
+                                                                                <h4><i class="fa-solid fa-clock"></i></i> Noise Day and Night (Lsm)</h4>
                                                                             </div>
 
                                                                         </div>

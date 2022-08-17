@@ -11,7 +11,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard/groundwater/mastergw">{{ $tittle }}</a></li>
+                        <li class="breadcrumb-item"><a href="/groundwater/mastergw">{{ $tittle }}</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/groundwater/mastergw" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/groundwater/mastergw" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -130,7 +130,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Well</label>
                                         <div class="col-sm-7">
-                                            <input name="well" type="number" step="0.0000001"
+                                            <input name="well" type="text" 
                                                 class="form-control form-control-sm @error('well') is-invalid @enderror"
                                                 value="{{ old('well') }}" />
                                             @error('well')
@@ -149,7 +149,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Well Water</label>
                                         <div class="col-sm-7">
-                                            <input name="well_water" type="number" step="0.0000001"
+                                            <input name="well_water" type="text" 
                                                 class="form-control form-control-sm @error('well_water') is-invalid @enderror"
                                                 value="{{ old('well_water') }}">
                                             @error('well_water')
@@ -167,7 +167,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">H</label>
                                         <div class="col-sm-7">
-                                            <input name="h" type="number" step="0.0000001"
+                                            <input name="h" type="text" 
                                                 value="{{ old('h') }}"
                                                 class="form-control form-control-sm @error('h') is-invalid @enderror">
                                             @error('h')
@@ -183,67 +183,9 @@
                                 <div class="form-group">
                                     <div class="form-group row">
                                         <label style="font-size: 12px"
-                                            class="col-sm-4 col-form-label">Diameter Pipe
-                                            (m)</label>
-                                        <div class="col-sm-7">
-                                            <input name="d_pipe" type="number" step="0.0000001"
-                                                class="form-control form-control-sm @error('d_pipe') is-invalid @enderror"
-                                                value="{{ old('d_pipe') }}" />
-                                            @error('d_pipe')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.form-group -->
-                            </div>
-                            {{-- end Conductivity --}}
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group row">
-                                        <label style="font-size: 12px"
-                                            class="col-sm-4 col-form-label">TT</label>
-                                        <div class="col-sm-7">
-                                            <input name="tt" type="number" step="0.0000001"
-                                                class="form-control form-control-sm @error('tt') is-invalid @enderror"
-                                                value="{{ old('tt') }}" />
-                                            @error('tt')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.form-group -->
-                            </div>
-                            {{-- end turbidity --}}
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group row">
-                                        <label style="font-size: 12px"
-                                            class="col-sm-4 col-form-label">r <sup>2</sup> </label>
-                                        <div class="col-sm-7">
-                                            <input name="r" type="number" step="0.0000001"
-                                                class="form-control form-control-sm @error('r') is-invalid @enderror"
-                                                value="{{ old('r') }}" />
-                                            @error('r')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.form-group -->
-                            </div>
-                            {{-- end do --}}
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group row">
-                                        <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Water Volumes (L)</label>
                                         <div class="col-sm-7">
-                                            <input name="water_volume" type="number" step="0.0000001"
+                                            <input name="water_volume" type="text" 
                                                 class="form-control form-control-sm  @error('water_volume') is-invalid @enderror"
                                                 value="{{ old('water_volume') }}" />
                                             @error('water_volume')
@@ -263,7 +205,7 @@
                                             class="col-sm-4 col-form-label">Temperatur
                                         <sup>0</sup>C</label>
                                         <div class="col-sm-7">
-                                            <input name="temperatur" type="number" step="0.0000001"
+                                            <input name="temperatur" type="text" 
                                                 class="form-control form-control-sm @error('temperatur') is-invalid @enderror"
                                                 value="{{ old('temperatur') }}" />
                                             @error('temperatur')
@@ -282,7 +224,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">pH</label>
                                         <div class="col-sm-7">
-                                            <input name="ph" type="number" step="0.0000001"
+                                            <input name="ph" type="text" 
                                                 value="{{ old('ph') }}"
                                                 class="form-control form-control-sm @error('ph') is-invalid @enderror">
                                             @error('ph')
@@ -299,7 +241,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Conductivity (Us/cm)</label>
                                         <div class="col-sm-7">
-                                            <input name="conductivity" type="number" step="0.0000001" class="form-control form-control-sm @error('conductivity') is-invalid @enderror" value="{{ old('conductivity') }}" />
+                                            <input name="conductivity" type="text"  class="form-control form-control-sm @error('conductivity') is-invalid @enderror" value="{{ old('conductivity') }}" />
                                             @error('conductivity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -315,7 +257,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">TDS</label>
                                         <div class="col-sm-7">
-                                            <input name="tds" type="number" step="0.0000001"
+                                            <input name="tds" type="text" 
                                                 class="form-control form-control-sm @error('tds') is-invalid @enderror"
                                                 value="{{ old('tds') }}" />
                                             @error('tds')
@@ -334,7 +276,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Redox</label>
                                         <div class="col-sm-7">
-                                            <input name="redox" type="number" step="0.0000001"
+                                            <input name="redox" type="text" 
                                                 class="form-control form-control-sm @error('redox') is-invalid @enderror"
                                                 value="{{ old('redox') }}" />
                                             @error('redox')
@@ -353,7 +295,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Dissolved Oxigen (DO)</label>
                                         <div class="col-sm-7">
-                                            <input name="do" type="number" step="0.0000001"
+                                            <input name="do" type="text" 
                                                 class="form-control form-control-sm @error('do') is-invalid @enderror"
                                                 value="{{ old('do') }}" />
                                             @error('do')
@@ -372,7 +314,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Salinity</label>
                                         <div class="col-sm-7">
-                                            <input name="salinity" type="number" step="0.0000001"
+                                            <input name="salinity" type="text" 
                                                 class="form-control form-control-sm @error('salinity') is-invalid @enderror"
                                                 value="{{ old('salinity') }}" />
                                             @error('salinity')
@@ -391,7 +333,7 @@
                                         <label style="font-size: 12px"
                                             class="col-sm-4 col-form-label">Turbidity</label>
                                         <div class="col-sm-7">
-                                            <input name="turbidity" type="number" step="0.0000001"
+                                            <input name="turbidity" type="text" 
                                                 class="form-control form-control-sm @error('turbidity') is-invalid @enderror"
                                                 value="{{ old('turbidity') }}" />
                                             @error('turbidity')
@@ -588,6 +530,24 @@
                                 <!-- /.form-group -->
                             </div>
                             {{-- end sampler --}}
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group row">
+                                        <label style="font-size: 12px"
+                                            class="col-sm-4 col-form-label">Remarks</label>
+                                        <div class="col-sm-7">
+                                            <input name="remarks" type="text"
+                                                class="form-control form-control-sm @error('remarks') is-invalid @enderror"
+                                                value="{{ old('remarks') }}" />
+                                            @error('remarks')
+                                                <span
+                                                    class=" invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- /.form-group -->
+                            </div>
               
                         </div>
                         <!-- /.row -->

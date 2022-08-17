@@ -6,12 +6,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Input {{ $tittle }} Data</h1>
+                        <h1>Edit {{ $tittle }} Data</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/dashboard/blasting">Home</a></li>
-                            <li class="breadcrumb-item active">Input Data</li>
+                            <li class="breadcrumb-item"><a href="/blasting">Home</a></li>
+                            <li class="breadcrumb-item active">Edit Data</li>
                         </ol>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/dashboard/blasting/{{ $Blasting->created_at }}" method="post"
+                        <form action="/blasting/{{ $Blasting->created_at }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf
@@ -97,6 +97,24 @@
                                     </div>
                                 </div>
                                 {{-- end tanggal --}}
+                                <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group row">
+                                        <label style="font-size: 12px"
+                                            class="col-sm-4 col-form-label">Peak Vektor Standard</label>
+                                        <div class="col-sm-7">
+                                            <input name="peak_vektor_std" type="number" step="0.0001"
+                                                class="form-control form-control-sm @error('peak_vektor_std') is-invalid @enderror"
+                                                value="{{ old('peak_vektor_std',$Blasting->peak_vektor_std) }}" />
+                                            @error('peak_vektor_std')
+                                                <span
+                                                    class=" invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.form-group -->
+                            </div>
                                 <div class="col-12 col-md-6">
                                     <!-- /.form-group -->
                                     <div class="form-group row">
@@ -306,6 +324,21 @@
                                     </div>
                                 </div>
                                 <!-- end weather-->
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <div class="form-group row">
+                                            <label style="font-size: 12px" class="col-sm-4 col-form-label">Remarks</label>
+                                            <div class="col-sm-7">
+                                                <input name="remarks" type="text"
+                                                    value="{{ old('remarks', $Blasting->remarks) }}"
+                                                    class="form-control form-control-sm @error('remarks') is-invalid @enderror">
+                                                @error('remarks')
+                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.row -->
                             <div class="card-footer d-flex justify-content-end">

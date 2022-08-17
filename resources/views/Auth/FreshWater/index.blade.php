@@ -62,7 +62,7 @@
                                             @endcan
                                             <div class="card-tools">
                                                 <div class="card-tools row">
-                                                    <form action="/dashboard/monitoring/freshwater/master" class="form-inline">
+                                                    <form action="/auth/biotasampling/freshwater" class="form-inline">
                                                         <!-- <label for="fromDate" class="mr-2">From</label> -->
                                                         <div class="input-group date mr-2" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                                             <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -101,7 +101,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/monitoring/freshwater/master">
+                                                    <form action="/auth/biotasampling/freshwater">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>

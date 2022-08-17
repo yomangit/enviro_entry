@@ -20,6 +20,7 @@ class CreateDataentriesTable extends Migration
             $table->foreignId('codesample_id');
             $table->date   ('date'                );
             $table->string   ('start_time'          );
+            $table->string   ('stop_time'          );
             $table->string('tss'                 );
             $table->string  ('ph'                  );
             $table->string  ('do'                  );
@@ -44,7 +45,7 @@ class CreateDataentriesTable extends Migration
             $table->string   ('lvl_lgr'    );
             $table->string   ('debit_s'    );
             $table->string   ('debit_d'    );
-            // $table->string ('hard_copy'           )->nullable();
+            $table->string ('remarks'           );
             $table->timestamps();
             $table->timestamp('failed_at')->useCurrent();
         });

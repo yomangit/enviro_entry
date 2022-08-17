@@ -3,7 +3,7 @@
 <!-- Main Sidebar Container -->
 <aside style="" class="main-sidebar elevation-4 sidebar-dark-primary">
     <!-- Brand Logo -->
-    <a href="assets/index3.html" class="brand-link navbar-dark ">
+    <a href="/" class="brand-link navbar-dark ">
         <img src="/assets/dist/img/archii.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
         <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:aliceblue" class="brand-text ">Archi Indonesia</span>
     </a>
@@ -112,6 +112,20 @@
                                 class="nav-link  {{ Request::is('auth/airquality/noise') ? 'active' : '' }}">
                                 <i style="font-size: 15px" class="nav-icon fa-solid fa-circle-dot"></i>
                                 <p>Noise Monitoring</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/auth/airquality/resumebulanan"
+                                class="nav-link  {{ Request::is('auth/airquality/resumebulanan') ? 'active' : '' }}">
+                                <i style="font-size: 15px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Monthly Resume</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/auth/airquality/resumetahunan"
+                                class="nav-link  {{ Request::is('auth/airquality/resumetahunan') ? 'active' : '' }}">
+                                <i style="font-size: 15px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Annual Resume</p>
                             </a>
                         </li>
                     </ul>

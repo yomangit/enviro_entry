@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise">Home</a></li>
                         <li class="breadcrumb-item active">Code Sample</li>
                     </ol>
                 </div>
@@ -80,7 +80,7 @@
                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                             </form> --}}
 
-                                            <form action="/dashboard/dustgauge/noisemeter/noise/codesamplenm">
+                                            <form action="/airquality/noisemeter/noise/codesamplenm">
                                                 <div class="input-group input-group-sm" style="width: 150px;">
                                                     <input type="text" name="search" class="form-control float-right" placeholder="Search" value="{{ request('search') }}">
                                                     <div class="input-group-append">
@@ -91,8 +91,8 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <a href="/dashboard/dustgauge/noisemeter/noise/codesamplenm/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                        <a href="/exportcodesampledg" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                        <a href="/airquality/noisemeter/noise/codesamplenm/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                        <a href="/export/codesamplenm" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                         <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                             <i class="fas fa-upload mr-1"></i>Excel
                                         </a>
@@ -119,10 +119,10 @@
                                                     <td>{{ $no++ }}</td>
                                                     <td>
                                                         <div style="">
-                                                            <a href="/dashboard/dustgauge/noisemeter/noise/codesamplenm/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <a href="/airquality/noisemeter/noise/codesamplenm/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="fas fa-pen"></i>
                                                             </a>
-                                                            <form action="/dashboard/dustgauge/noisemeter/noise/codesamplenm/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                            <form action="/airquality/noisemeter/noise/codesamplenm/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                 @method('delete')
                                                                 @csrf
                                                                 <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -171,11 +171,12 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form action="/importcodesampledg" method="POST" enctype="multipart/form-data">
+                                                <form action="/import/codesamplenm" method="POST" enctype="multipart/form-data">
+                                                        
                                                     @csrf
                                                     <div class="modal-body">
                                                         <div class="custom-file">
-                                                            <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                            <input type="file" name="file" class="custom-file-input" id="exampleInputFile"required>
                                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                         </div>
 

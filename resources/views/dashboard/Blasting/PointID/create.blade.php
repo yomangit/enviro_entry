@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/blasting">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard/blasting/pointid">{{ $tittle }}</a></li>
+                        <li class="breadcrumb-item"><a href="/blasting">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/blasting/pointid">{{ $tittle }}</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/blasting/pointid" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/blasting/pointid" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
 

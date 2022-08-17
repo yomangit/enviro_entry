@@ -80,7 +80,7 @@
                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                             </form> --}}
 
-                                            <form action="/dashborad/dustgauge/noisemeter/noise/location">
+                                            <form action="/airquality/noisemeter/noise/location">
                                                 <div class="input-group input-group-sm" style="width: 150px;">
                                                     <input type="text" name="search" class="form-control float-right" placeholder="Search" value="{{ request('search') }}">
                                                     <div class="input-group-append">
@@ -91,7 +91,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <a href="/dashborad/dustgauge/noisemeter/noise/location/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                        <a href="/airquality/noisemeter/noise/location/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                         <a href="/exportlocation" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                         <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                             <i class="fas fa-upload mr-1"></i>Excel
@@ -119,10 +119,10 @@
                                                     <td>{{ $no++ }}</td>
                                                     <td>
                                                         <div style="">
-                                                            <a href="/dashborad/dustgauge/noisemeter/noise/location/{{ $code->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <a href="/airquality/noisemeter/noise/location/{{ $code->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="fas fa-pen"></i>
                                                             </a>
-                                                            <form action="/dashborad/dustgauge/noisemeter/noise/location/{{ $code->created_at }}" method="POST" class="d-inline">
+                                                            <form action="/airquality/noisemeter/noise/location/{{ $code->created_at }}" method="POST" class="d-inline">
                                                                 @method('delete')
                                                                 @csrf
                                                                 <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -172,13 +172,18 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form action="/importlocation" method="POST" enctype="multipart/form-data">
+                                                <form action="/import/location/noise" method="POST" enctype="multipart/form-data">
+                                                    <!--  -->
                                                     @csrf
                                                     <div class="modal-body">
                                                         <div class="custom-file">
-                                                            <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
-                                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                                        </div>
+                                                        <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
+                                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                                @error('file')
+                                                                    <span
+                                                                        class=" invalid-feedback ">{{ $message }}</span>
+                                                                @enderror
+                                            </div>
 
                                                     </div>
                                                     <div class="modal-footer justify-content-between">

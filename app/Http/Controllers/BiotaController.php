@@ -48,7 +48,7 @@ class BiotaController extends Controller
         $file->move('EnviroDatabase',$nameFile);
         try {
             Excel::import(new BiotaImport, public_path('/EnviroDatabase/'.$nameFile));
-            return redirect('/dashboard/monitoring/freshwater/biota')->with('success','Biota has been Imported!');
+            return redirect('/monitoring/freshwater/biota')->with('success','Biota has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
             return back()->withFailures($e->failures());
@@ -69,7 +69,7 @@ class BiotaController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
         Biota::create($validatedData);
-        return redirect('/dashboard/monitoring/freshwater/biota/create')->with('success', 'New Biota has been added!');
+        return redirect('/monitoring/freshwater/biota/create')->with('success', 'New Biota has been added!');
     }
 
     /**
@@ -118,7 +118,7 @@ class BiotaController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Biota::where('id', $biotum->id)
             ->update($validatedData);
-        return redirect('/dashboard/monitoring/freshwater/biota')->with('success', 'Biota has been updated!');
+        return redirect('/monitoring/freshwater/biota')->with('success', 'Biota has been updated!');
     }
 
     /**
@@ -130,6 +130,6 @@ class BiotaController extends Controller
     public function destroy(Biota $biotum)
     {
         Biota::destroy($biotum->id);
-        return redirect('/dashboard/monitoring/freshwater/biota')->with('success',' Biota has been deleted!!');
+        return redirect('/monitoring/freshwater/biota')->with('success',' Biota has been deleted!!');
     }
 }

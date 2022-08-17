@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Codesampledg;
 use App\Models\Dust;
+use App\Exports\DustExport;
+use App\Imports\DustImport;
+use App\Models\Codesampledg;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
-
 class DustController extends Controller
 {
     /**
@@ -16,12 +18,58 @@ class DustController extends Controller
      */
     public function index()
     {
+        $grafik = Dust::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(30)->withQueryString();
+        $date=[];
+        $insoluble1=[];$soluble1=[];
+        $insoluble=[];$soluble=[];$total=[];
+        $i=0;$s=0;
+        foreach ($grafik as $grafiks) {
+           
+            $date[]= date('m-Y', strtotime($grafiks->date_out));
+            if ($grafiks->m4 ==='-' && $grafiks->m3 ==='-') {
+               $total[] = $insoluble1[]='';
+            }
+            elseif ($grafiks->m6 ==='-' && $grafiks->m5 ==='-') {
+                $soluble1[]='';
+            $total[]= $insoluble1[]=$insoluble[]= (round((doubleval($grafiks->m4) - doubleval($grafiks->m3))*1000000*4*30/(3.14*150*150*((strtotime($grafiks->date_out) - strtotime($grafiks->date_in))/86400)),2));
+
+            }
+            elseif ($grafiks->m4 !='-' && $grafiks->m3 !='-' && $grafiks->m6 !='-' && $grafiks->m5 !='-') {
+           $i=round((doubleval($grafiks->m4) - doubleval($grafiks->m3))/(3.14*0.005625*((strtotime($grafiks->date_out) - strtotime($grafiks->date_in))/86400)),2);
+           $s=round(((doubleval($grafiks->m6) - doubleval($grafiks->m5))* doubleval($grafiks->total_vlm_water) )/(3.14*0.005625*((strtotime($grafiks->date_out) - strtotime($grafiks->date_in))/86400)*$grafiks->volume_filtrat),2);   
+            $total[] = round(($i + $s),2);
+            }
+          
+            
+          
+            
+           
+           
+
+           
+
+            
+        }
         
         return view('dashboard.DustGauge.DustMaster.index',[
             "tittle"=>"Dust Gauge",
             'code_units'=>Codesampledg::all(),
             'breadcrumb'=>'Dust Gauge',
-            'Dust'=>Dust::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()]);
+            'tanggal'=>$date,
+            'value'=>$total,
+            'Dust'=>Dust::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(30)->withQueryString()]);
+    }
+    public function ExportDust()
+    {
+        return Excel::download(new DustExport,'dusts.csv');
+    }
+    public function ImportDust(Request $request)
+    { 
+        $file=$request->file('file');
+        $nameFile = $file->getClientOriginalName();
+        $file->move('EnviroDatabase',$nameFile);
+        Excel::import(new DustImport, public_path('/EnviroDatabase/'.$nameFile));
+        return redirect('/airquality/dustgauge/dust')->with('success','New data dust has been Imported!');
     }
 
     /**
@@ -72,7 +120,7 @@ class DustController extends Controller
         $validatedData['date_out']= date('Y-m-d',strtotime(request('date_out')));
         $validatedData['user_id']=auth()->user()->id;
         Dust::create($validatedData);
-        return redirect('/dashboard/dustgauge/dust/create')->with('success','New Data Dust Gauge has been added!');
+        return redirect('/airquality/dustgauge/dust/create')->with('success','New Data Dust Gauge has been added!');
     }
 
     /**
@@ -145,7 +193,7 @@ class DustController extends Controller
         $validatedData['user_id']=auth()->user()->id;
         Dust::where('id',$dust->id)
         ->update($validatedData);
-        return redirect('/dashboard/dustgauge/dust')->with('success',' Data Dust has been updated!');
+        return redirect('/airquality/dustgauge/dust')->with('success',' Data Dust has been updated!');
     }
 
     /**
@@ -157,6 +205,6 @@ class DustController extends Controller
     public function destroy(Dust $dust)
     {
         Dust::destroy($dust->id);
-        return redirect('/dashboard/dustgauge/dust')->with('success','Data Dust has been deleted!');
+        return redirect('/airquality/dustgauge/dust')->with('success','Data Dust has been deleted!');
     }
 }

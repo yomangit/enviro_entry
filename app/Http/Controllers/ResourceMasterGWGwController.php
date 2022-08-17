@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 use App\Imports\GroundWaterImport;
+use App\Models\GroundWaterStandard;
 
 class ResourceMasterGWGwController extends Controller
 {
@@ -20,11 +21,46 @@ class ResourceMasterGWGwController extends Controller
      */
     public function index()
     {
+
+        $grafiks = Mastergw::where('user_id',auth()->user()->id)
+            ->filter(request(['fromDate', 'search']))
+            ->paginate(30)
+            ->withQueryString();
+        $tanggal = [];
+        $suhu = [];
+        $ph = [];
+        $suhu1 = [];
+        $ph1 = [];
+        foreach ($grafiks as $grafik) 
+        {
+            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            if ($suhu1[] = $grafik->temperatur === '-') {
+                //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+                $suhu[] = '';
+            } elseif ($suhu1[] = $grafik->temperatur != '-') {
+                //  $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+                $suhu[] = $suhu1[] = doubleval($grafik->temperatur);
+            }
+            if ($ph1[] = $grafik->ph === '-') {
+                // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+                $ph[] = '';
+            } elseif ($ph1[] = $grafik->ph !='-') {
+               $ph[]=$ph1[] = doubleval($grafik->ph); # code...
+                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            }
+
+            // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+        }
+
         return view('dashboard.GroundWater.Mastergw.index',[
             'code_units'=>Codesamplegw::all(),
+            'table_standard'=>GroundWaterStandard::all(),
             "tittle"=>"Ground Water MSM",
             'breadcrumb'=>'Ground Water MSM',
-      'Master'=>Mastergw::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'date' => $tanggal,
+            'suhu' => $suhu,
+            'ph' => $ph,
+            'Master'=>Mastergw::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(30)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
     }
@@ -41,6 +77,7 @@ class ResourceMasterGWGwController extends Controller
         }
         return view('dashboard.GroundWater.Mastergw.create',[
             "tittle"=>"Ground Water MSM",
+            'table_standard'=>GroundWaterStandard::all(),
             'code_units'=>Codesamplegw::all(),
             'Codes'=>Mastergw::where('user_id',auth()->user()->id)->filter(request(['fromDate']))->get()//with diguanakan untuk mengatasi N+1 problem
          ]);
@@ -52,15 +89,16 @@ class ResourceMasterGWGwController extends Controller
     }
     public function MasterImportGWExcel( Mastergw $mastergw, Request $request)
     {
-        if ($request->nama != $mastergw->nama) {
-            $file=$request->file('file');
+        $file = $request->file('file');
         $nameFile = $file->getClientOriginalName();
-        $file->move('EnviroDatabase',$nameFile);
-        Excel::import(new GroundWaterImport, public_path('/EnviroDatabase/'.$nameFile));
-    
-        } else {
-        return redirect('/dashboard/groundwater/mastergw')->with('fail','New Data Ground Water MSM has been Imported!');
-        }
+        $file->move('EnviroDatabase', $nameFile);
+        try{
+            Excel::import(new GroundWaterImport(), public_path('/EnviroDatabase/' . $nameFile));
+            return redirect('/groundwater/mastergw')->with('fail','New Data Ground Water MSM has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+             return back()->withFailures($e->failures());
+         }
         
     }
 
@@ -79,9 +117,6 @@ class ResourceMasterGWGwController extends Controller
             'well'=>'required',
             'well_water'=>'required',
             'h'=>'required',
-            'd_pipe'=>'required',
-            'tt'=>'required',
-            'r'=>'required',
             'water_volume'=>'required',
             'temperatur'=>'required|max:255',
             'ph'=>'required|max:255',
@@ -97,14 +132,15 @@ class ResourceMasterGWGwController extends Controller
             'rain_during_sampling'=>'required',
             'oil_layer'=>'required',
             'source_pollution'=>'required',
-            'sampler'=>'required'
+            'sampler'=>'required',
+            'remarks'=>'required'
         ]);
    
         $validatedData['date']= date('Y-m-d',strtotime(request('date')));
         $validatedData['user_id']=auth()->user()->id;
-        $validatedData['standard_id']='1';
+        $validatedData['gwtablestandard_id']='1';
         Mastergw::create($validatedData);
-        return redirect('/dashboard/groundwater/mastergw/create')->with('success','New Data Ground Water MSM has been added!');
+        return redirect('/groundwater/mastergw/create')->with('success','New Data Ground Water MSM has been added!');
     }
 
     /**
@@ -137,6 +173,7 @@ class ResourceMasterGWGwController extends Controller
             abort(403);
         }
         return view('dashboard.GroundWater.Mastergw.edit',[
+            'table_standard'=>GroundWaterStandard::all(),
             'code_units'=>Codesamplegw::all(),
             "tittle"=>"GROUND WATER",
             'breadcrumb'=>'Ground Water MSM',
@@ -159,9 +196,6 @@ class ResourceMasterGWGwController extends Controller
             'well'=>'required',
             'well_water'=>'required',
             'h'=>'required',
-            'd_pipe'=>'required',
-            'tt'=>'required',
-            'r'=>'required',
             'water_volume'=>'required',
             'temperatur'=>'required|max:255',
             'ph'=>'required|max:255',
@@ -177,17 +211,19 @@ class ResourceMasterGWGwController extends Controller
             'rain_during_sampling'=>'required',
             'oil_layer'=>'required',
             'source_pollution'=>'required',
-            'sampler'=>'required'
+            'sampler'=>'required',
+            'remarks'=>'required'
+
     ];
 
  
     $validatedData['date']= date('Y-m-d',strtotime(request('date')));
     $validatedData=$request->validate($rules);
     $validatedData['user_id']=auth()->user()->id;
-    $validatedData['standard_id']='1';
+    $validatedData['gwtablestandard_id']='1';
     Mastergw::where('id',$mastergw->id)
     ->update($validatedData);
-    return redirect('/dashboard/groundwater/mastergw')->with('success',' Data Ground Water MSM has been updated!');
+    return redirect('/groundwater/mastergw')->with('success',' Data Ground Water MSM has been updated!');
     }
 
     /**
@@ -199,6 +235,6 @@ class ResourceMasterGWGwController extends Controller
     public function destroy(Mastergw $mastergw)
     {
         Mastergw::destroy($mastergw->id);
-        return redirect('/dashboard/groundwater/mastergw')->with('success','Data Ground Water MSM has been deleted!');
+        return redirect('/groundwater/mastergw')->with('success','Data Ground Water MSM has been deleted!');
     }
 }

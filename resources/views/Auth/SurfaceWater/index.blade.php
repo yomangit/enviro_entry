@@ -43,7 +43,7 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-header ">
-                        @can('admin')
+                                        @can('admin')
 
                                             <a href="/dashboard/index/dataentry/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                             <a href="/exportdata" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-download mr-1"></i>Excel</a>
@@ -53,15 +53,15 @@
                                             @endcan
                                             <div class="card-tools">
                                                 <div class="card-tools row">
-                                                    <form action="/dashboard/index/dataentry" class="form-inline" autocomplete="off">
+                                                    <form action="/auth/surfacewater" class="form-inline" autocomplete="off">
                                                         <label for="fromDate" class="mr-2">From</label>
-                                                        <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date" id="reservationdate7" style="width: 100px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
                                                         <label for="fromDate" class="mr-2 ml-2">To</label>
 
-                                                        <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate8" style="width: 100px;" data-target-input="nearest">
+                                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate8" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                         </div>
 
                                                         <div style="width: 118px;" class="input-group mr-1">
@@ -80,7 +80,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/index/dataentry">
+                                                    <form action="/auth/surfacewater">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -168,7 +168,7 @@
                                                         </td>
                                                         @endcan
                                                         <td>{{ $data->CodeSample->nama }}</td>
-                                                        <td>{{ date('d-m-Y', strtotime( $data->date)) }}</td>
+                                                        <td>{{ date('d-M-Y', strtotime( $data->date)) }}</td>
                                                         @If($data->start_time=='error')
                                                         <td style="color: red;">No Data</td>
                                                         @else
@@ -432,29 +432,35 @@
 <script>
         Highcharts.chart('line_chart', {
             chart: {
-                type: 'line'
+                type: 'spline'
             },
             title: {
-                text:'Graphic Master Surface Table'
+                text:' Surface Water Chart'
             },  
             xAxis: {
                 categories: {!! json_encode($date) !!}
-            },
+           },
             yAxis: {
                 title: {
                     text: 'Value'
                 }
             },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
             plotOptions: {
-                line: {
-                    dataLabels: {
-                        enabled: true
-                    },
-                    enableMouseTracking: true
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
                 }
             },
             series: [{
                         name: 'Temperatur',
+                        color:'#1F2833',
                         data: {!! json_encode($suhu) !!},
                         marker: {
                             symbol: 'square'
@@ -463,29 +469,33 @@
 
                     }, {
                         name: 'Conductivity (µS/cm)',
+                        color:'#DE7A22',
                         marker: {
                             symbol: 'diamond'
                         },
                         data: {!! json_encode($conductivity) !!}
                     }, {
                         name: 'TDS',
+                        color:'#F4CC70',
                         marker: {
                             symbol: 'triangle'
                         },
                         data: {!! json_encode($tds) !!}
                     }, {
                         name: 'TSS',
+                        color:'#20948B',
                         marker: {
                             symbol: 'circle'
                         },
                         data: {!! json_encode($tss) !!}
                     }, {
                         name: 'PH',
+                        color:'#6AB187',
                         marker: {
                             symbol: 'triangle-down'
                         },
                         data: {!! json_encode($ph) !!}
                     }]
         });
-    </script>
+</script>
 @endsection

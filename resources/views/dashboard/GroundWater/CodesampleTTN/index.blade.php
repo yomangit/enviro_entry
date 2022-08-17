@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/groundwater/masterttn">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/groundwater/masterttn">Home</a></li>
                     </ol>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-tools row">
-                                                {{-- <form action="/dashboard/codesample" class="form-inline">
+                                                {{-- <form action="/codesample" class="form-inline">
                                                     <label for="fromDate" class="mr-2">From</label>
                                                     <div class="input-group date" id="reservationdate1"
                                                         style="width: 85px;" data-target-input="nearest">
@@ -80,12 +80,12 @@
                                                             class="btn bg-gradient-dark btn-xs">filter</button>
                                                     </div>
                                                 </form>
-                                                <form action="/dashboard/codesample">
+                                                <form action="/codesample">
                                                     <button type="submit"
                                                         class="btn bg-gradient-dark btn-xs">refresh</button>
                                                 </form> --}}
 
-                                                <form action="/dashboard/groundwater/masterttn/codesamplettn">
+                                                <form action="/groundwater/masterttn/codesamplettn">
                                                     <div class="input-group input-group-sm" style="width: 150px;">
                                                         <input type="text" name="search"
                                                             class="form-control float-right" placeholder="Search"
@@ -98,7 +98,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <a href="/dashboard/groundwater/masterttn/codesamplettn/create"
+                                            <a href="/groundwater/masterttn/codesamplettn/create"
                                                 class="btn bg-gradient-secondary btn-xs mt-2"><i
                                                     class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                             <a href="/exportcodesamplettn" class="btn  bg-gradient-secondary btn-xs mt-2"
@@ -133,14 +133,14 @@
                                                         <td>{{ $no++ }}</td>
                                                         <td>
                                                             <div style="">
-                                                                <a href="/dashboard/groundwater/masterttn/codesamplettn/{{ $code->failed_at }}/edit"
+                                                                <a href="/groundwater/masterttn/codesamplettn/{{ $code->failed_at }}/edit"
                                                                     class="btn btn-outline-warning btn-xs btn-group"
                                                                     data-toggle="tooltip" data-placement="top"
                                                                     title="Edit">
                                                                     <i class="fas fa-pen"></i>
                                                                 </a>
                                                                 <form
-                                                                    action="/dashboard/groundwater/masterttn/codesamplettn/{{ $code->failed_at }}"
+                                                                    action="/groundwater/masterttn/codesamplettn/{{ $code->failed_at }}"
                                                                     method="POST" class="d-inline">
                                                                     @method('delete')
                                                                     @csrf
@@ -201,7 +201,7 @@
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input"
+                                                                <input type="file" name="file" class="custom-file-input"required
                                                                     id="exampleInputFile">
                                                                 <label class="custom-file-label"
                                                                     for="exampleInputFile">Choose file</label>

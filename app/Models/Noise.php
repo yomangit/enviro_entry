@@ -18,18 +18,16 @@ class Noise extends Model
         //     return $query->whereBetween('date', array(request('fromDate'), request('toDate')));
         // });
         $query->when($filters['fromDate'] ?? false, function ($query) {
-            return  $query->where('date',array(request('fromDate')) );
+            return  $query->where('date','like', '%'. date('Y-m', strtotime(request('fromDate'))) .'%' );
         });
         $query->when($filters['search']??false,function($query,$search){
             return $query->whereHas('CodeSampleNM',function($query)use($search){
-                $query->where('nama', 'like', '%' . $search . '%')
-                ->orWhere('lokasi', 'like', '%' . $search . '%');
+                $query->where('nama', 'like', '%' . $search . '%');
             });
         });
         $query->when($filters['location']??false,function($query,$location){
             return $query->whereHas('CodeLocationNM',function($query)use($location){
-                $query->where('nama', 'like', '%' . $location . '%')
-                ->orWhere('lokasi', 'like', '%' . $location . '%');
+                $query->where('nama', 'like', '%' . $location . '%');
             });
         });
     }

@@ -37,7 +37,7 @@ class ResourceCodeSampleGwController extends Controller
         $file->move('EnviroDatabase',$nameFile);
         try {
             Excel::import(new CodeSampleGWImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/groundwater/mastergw/codesamplegw')->with('success','New Data  has been Imported!');
+        return redirect('/groundwater/mastergw/codesamplegw')->with('success','New Data  has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
            $e->failures();
             return back()->withFailures($e->failures());
@@ -80,7 +80,7 @@ class ResourceCodeSampleGwController extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         Codesamplegw::create($validatedData);
-        return redirect('/dashboard/groundwater/mastergw/codesamplegw/create')->with('success','New Data  has been added!');
+        return redirect('/groundwater/mastergw/codesamplegw/create')->with('success','New Data  has been added!');
     }
 
     /**
@@ -136,7 +136,7 @@ class ResourceCodeSampleGwController extends Controller
         $validatedData['user_id']=auth()->user()->id;
         Codesamplegw::where('id',$codesamplegw->id)
         ->update($validatedData);
-        return redirect('/dashboard/groundwater/mastergw')->with('success',' Data Code Unit has been updated!');
+        return redirect('/groundwater/mastergw')->with('success',' Data Code Unit has been updated!');
     }
 
     /**
@@ -148,6 +148,6 @@ class ResourceCodeSampleGwController extends Controller
     public function destroy(Codesamplegw $codesamplegw)
     {
         Codesamplegw::destroy($codesamplegw->id);
-        return redirect('/dashboard/groundwater/mastergw/codesamplegw')->with('success','Data  has been deleted!');
+        return redirect('/groundwater/mastergw/codesamplegw')->with('success','Data  has been deleted!');
     }
 }

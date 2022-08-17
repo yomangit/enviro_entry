@@ -41,15 +41,15 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="card-tools row">
-                                                    <form action="/dashboard/groundwater/level" class="form-inline">
+                                                    <form action="/auth/groundwater/welllevel" class="form-inline">
                                                         <label for="fromDate" class="mr-2">From</label>
-                                                        <div class="input-group date" id="reservationdate1" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate1" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
                                                         <label for="fromDate" class="mr-2 ml-2">To</label>
 
-                                                        <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                         </div>
 
                                                         <div style="width: 118px;" class="input-group mr-1">
@@ -68,7 +68,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/groundwater/level">
+                                                    <form action="/auth/groundwater/welllevel">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -105,7 +105,8 @@
                                                                     <td>{{$code->GWCodeSample->gl}}</td>
                                                                     <td>{{$code->GWCodeSample->rl}}</td>
                                                                     <td>{{ $code->well }}</td>
-                                                                    <td>{{ $hasil =($code->GWCodeSample->rl-($code->well-$code->GWCodeSample->gl)) }}</td>
+                                                                    <td>{{ $hasil =(doubleval($code->GWCodeSample->rl)-(doubleval($code->well)-doubleval($code->GWCodeSample->gl))) }}</td>
+
                                                                    
                                                                 </tr>
                                                             @endforeach

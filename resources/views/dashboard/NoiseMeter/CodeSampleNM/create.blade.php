@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise/codesamplenm">{{ $tittle }}</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise/codesamplenm">{{ $tittle }}</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/dustgauge/noisemeter/noise/codesamplenm" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/airquality/noisemeter/noise/codesamplenm" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
 

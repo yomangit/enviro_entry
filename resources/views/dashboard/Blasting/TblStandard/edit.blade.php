@@ -10,9 +10,9 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/blasting">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard/blasting/tablestandard">{{ $tittle }}</a></li>
-                        <li class="breadcrumb-item active">Input Data</li>
+                        <li class="breadcrumb-item"><a href="/blasting">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/blasting/tablestandard">{{ $tittle }}</a></li>
+                        <li class="breadcrumb-item active">Edit Data</li>
                     </ol>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                <form action="/dashboard/blasting/tablestandard/{{ $TableStandard->created_at }}" method="post"
+                <form action="/blasting/tablestandard/{{ $TableStandard->id }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf

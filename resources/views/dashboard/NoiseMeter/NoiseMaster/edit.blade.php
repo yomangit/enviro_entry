@@ -11,7 +11,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="dashboard/dustgauge/noisemeter/noise">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise/codesamplenm">{{$tittle}}</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise/codesamplenm">{{$tittle}}</a></li>
                         <li class="breadcrumb-item active">Edit Data</li>
                     </ol>
                 </div>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/dustgauge/noisemeter/noise/{{$Master->updated_at}}" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/airquality/noisemeter/noise/{{$Master->updated_at}}" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @method('put')
                         @csrf
                         <div class="row">
@@ -97,7 +97,7 @@
                             <table role="grid" class="table table-bordered table-hover table-sm ">
                                 <thead style=" color:#005245">
                                     <tr>
-                                        <th rowspan="2">Time</th>
+                                        <th>Time</th>
                                         <th style="text-align: center" colspan="12">Noise Data every 5 Seconds</th>
                                     </tr>
                                     <tr>

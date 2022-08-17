@@ -21,13 +21,11 @@ class Dataentry extends Model
         });
         $query->when($filters['search']??false,function($query,$search){
             return $query->whereHas('CodeSample',function($query)use($search){
-                $query->where('nama', 'like', '%' . $search . '%')
-                ->orWhere('date', 'like', '%' . $search . '%')
-                ->orWhere('lokasi', 'like', '%' . $search . '%');
+                $query->where('nama', 'like',  $search );
             });
         });
-}
-     public function standard(){
+    }
+    public function standard(){
     return $this->belongsTo(TblStandard::class,'standard_id');
     }
     public function user(){

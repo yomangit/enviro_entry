@@ -9,9 +9,9 @@ class Codesample extends Model
 {
     public $table = "codesamples";
     use HasFactory;
-    protected $guarded=['id'];
+    // protected $guarded=['id'];
     // protected $with=['standard','user'];
-    
+    protected $fillable = ['nama','user_id','lokasi'];
 
     public function scopefilter($query,array $filters)
     {
@@ -25,10 +25,6 @@ class Codesample extends Model
             });
           
     }
-  
-     public function standard(){
-    return $this->belongsTo(TblStandard::class,'standard_id');
-    }
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
@@ -36,8 +32,12 @@ class Codesample extends Model
     {
         return $this->hasMany(Mastergw::class,'groundwater_id');
     }
+    public function groundwaterstandard()
+    {
+        return $this->hasMany(GroundWaterStandard::class,'gwtandard_id');
+    }
     public function getRouteKeyName()
 {
-    return 'failed_at';
+    return 'id';
 }
 }

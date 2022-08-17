@@ -6,7 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $tittle }}</title>
-
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <!-- Google Font: Source Sans Pro -->
     <link href="/assets/fontawsome/css/fontawesome.css" rel="stylesheet">
     <link href="/assets/fontawsome/css/brands.css" rel="stylesheet">
@@ -35,11 +42,8 @@
     <!-- dropzonejs -->
     <link rel="stylesheet" href="/assets/plugins/dropzone/min/dropzone.min.css">
     <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
-    <!-- <link rel="stylesheet" href="/assets/plugins/highcharts/theme.css"> -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <link rel="stylesheet" href="/assets/plugins/highcharts/darkunica.css">
+ 
     <link rel="stylesheet" href="/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
@@ -48,6 +52,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">  
 <script src="https://kit.fontawesome.com/42d701198b.js" crossorigin="anonymous"></script>
+@stack('styles')
 </head>
 
 <body class="sidebar-mini layout-fixed  accent-olive layout-navbar-fixed text-sm sidebar-mini-xs ">
@@ -64,7 +69,7 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-   
+   @stack('scripts')
     <script src="/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -111,6 +116,7 @@
     <script src="/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
     
     <script>
         $(function() {
@@ -168,8 +174,11 @@
                 $('#reservationdate5').datetimepicker({
                     format: 'DD-MM-YYYY'
                 });
-                $('#reservationdate3').datetimepicker({
-                    format: 'MM-YYYY'
+                $('#reservationdate6').datetimepicker({
+                    format: 'MMM-YYYY'
+                });
+                $('#reservationdate7').datetimepicker({
+                    format: 'DD-MMM-YYYY'
                 });
                 //Timepicker
                 $('#timepicker').datetimepicker({
@@ -240,6 +249,7 @@
             }
            
         </script>
+        
  @yield('footer')
 
     <!-- Page specific script -->

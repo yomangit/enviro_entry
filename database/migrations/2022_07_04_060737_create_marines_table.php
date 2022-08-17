@@ -19,11 +19,11 @@ class CreateMarinesTable extends Migration
             $table->foreignId('biota_id');
             $table->foreignId('location_id');
             $table->string('date');
-            $table->double('taxa_richness');
-            $table->double('species_density');
-            $table->double('diversity_index');
-            $table->double('evenness_value');
-            $table->double('dominance_index');
+            $table->string('taxa_richness');
+            $table->string('species_density');
+            $table->string('diversity_index');
+            $table->string('evenness_value');
+            $table->string('dominance_index');
             $table->timestamps();
         });
     }

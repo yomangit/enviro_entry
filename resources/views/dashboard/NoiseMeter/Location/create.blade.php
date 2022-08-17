@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashborad/dustgauge/noisemeter/noise/location">{{ $tittle }}</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/dustgauge/noisemeter/noise/location">{{ $tittle }}</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>

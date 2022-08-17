@@ -41,25 +41,25 @@
                                             <div class="card-header">
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
-                                                        <form action="/dashboard/dustgauge/dust" class="form-inline">
+                                                        <form action="/auth/airquality/dust" class="form-inline">
                                                             <label for="fromDate" class="mr-2">From</label>
-                                                            <div class="input-group date" id="reservationdate1" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate1" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                             </div>
                                                             <label for="fromDate" class="mr-2 ml-2">To</label>
     
-                                                            <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                                             </div>
     
                                                             <div style="width: 118px;" class="input-group mr-1">
                                                                 <select class="form-control form-control-sm " name="search">
                                                                   <option value="" selected>Code Sample</option>
                                                                   @foreach ($code_units as $code)
-                                                                    @if ( request('search')==$code->namespace)
-                                                                    <option value="{{($code->namespace)}}"  selected>{{$code->nama}}</option>
+                                                                    @if ( request('search')==$code->nama)
+                                                                    <option value="{{($code->nama)}}"  selected>{{$code->nama}}</option>
                                                                     @else
-                                                                    <option value="{{$code->namespace}}" >{{$code->nama}}</option>
+                                                                    <option value="{{$code->nama}}" >{{$code->nama}}</option>
                                                                     @endif
                                                                     @endforeach
                                                                 </select>
@@ -68,11 +68,12 @@
                                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                             </div>
                                                         </form>
-                                                        <form action="/dashboard/dustgauge/dust">
+                                                        <form action="/auth/airquality/dust">
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                         </form>
                                                     </div>
                                                 </div>
+                                                @can('admin')
                                                 <a href="/dashboard/dustgauge/dust/create"
                                                     class="btn bg-gradient-secondary btn-xs mt-2"><i
                                                         class="fas fa-plus mr-1 mt"></i>Add Data</a>
@@ -80,6 +81,7 @@
                                                         <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal"data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                                             <i class="fas fa-upload mr-1"></i>Excel
                                                         </a>
+                                                @endcan
                                             </div>
                                         @else
                                         <div class="alert alert-info alert-dismissible form-inline">
@@ -97,7 +99,7 @@
                                                         <thead style=" color:#005245">
                                                             <tr class="text-center" style="font-size: 12px">
                                                                 <th>No</th>
-                                                                <th>Action</th>
+                                                              @can('admin')  <th>Action</th>@endcan
                                                                 <th>Code Sample</th>
                                                                 <th>Month </th>
                                                                 <th>Date In</th>
@@ -131,6 +133,7 @@
                                                             @foreach ($Dust as  $code)
                                                                 <tr style="font-size: 12px">
                                                                     <td>{{ $no++ }}</td>
+                                                                    @can('admin')
                                                                     <td>
                                                                         
                                                                             <a href="/dashboard/dustgauge/dust/{{ $code->failed_at }}/edit"
@@ -155,6 +158,7 @@
                                                                                 </button>
                                                                             </form>
                                                                     </td>
+                                                                    @endcan
                                                                     <td>{{ $code->codedust->nama }}</td>
                                                                     <td>{{ date('m-Y', strtotime( $code->date_out)) }}</td>
 
@@ -167,13 +171,21 @@
                                                                     <td>{{ $code->m5 }}</td>
                                                                     <td>150</td>
                                                                     <td>30</td>
-                                                                    @if ($selisi!=0) 
-                                                                    <td>{{ $insoluble= (round((doubleval($code->m4) - doubleval($code->m3))/(3.14*0.005625*$selisi),4)) }}</td>
-                                                                    <td>{{ $soluble= (round(((doubleval($code->m6) - doubleval($code->m5))* doubleval($code->total_vlm_water) )/(3.14*0.005625*$selisi*$code->volume_filtrat),2)) }}</td>
-                                                                    <td>{{round(($soluble + $insoluble),2)}}</td>
-                                                                    @else
-                                                                    <td style="color: red">error</td>
+                                                                    @if ($code->m4 ==='-' && $code->m3==='-')
+                                                                    <td>-</td>
+                                                                    @elseif($code->m6 ==='-' && $code->m5==='-')
+                                                                    <td>{{ $insoluble= (round((doubleval($code->m4) - doubleval($code->m3))*1000000*4*30/(3.14*150*150*$selisi),2)) }}</td>
+                                                                    @elseif($code->m4 !='-' && $code->m3!='-' && $code->m6 !='-' && $code->m5!='-') 
+                                                                    <td>{{ $insoluble= (round((doubleval($code->m4) - doubleval($code->m3))/(3.14*0.005625*$selisi),2)) }}</td>
+                                                                   
                                                                     @endif
+                                                                    @if($code->m6 ==='-' && $code->m5==='-')
+                                                                    <td>-</td>
+                                                                    @else
+                                                                    <td>{{ $soluble= (round(((doubleval($code->m6) - doubleval($code->m5))* doubleval($code->total_vlm_water) )/(3.14*0.005625*$selisi*$code->volume_filtrat),2)) }}</td>
+                                                                    @endif
+                                                                    <td>{{$total=round(($insoluble+$soluble),3)}}</td>
+                                                                 
                                                                     <td>{{ $code->no_insect }}</td>
                                                                     <td>{{ $code->vb_dirt }}</td>
                                                                     <td>{{ $code->vb_algae }}</td>

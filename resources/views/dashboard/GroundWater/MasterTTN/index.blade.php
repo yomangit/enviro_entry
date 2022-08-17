@@ -34,7 +34,7 @@
                         
                             @endif
                             @can('admin')
-                            <a href="/dashboard/groundwater/masterttn/codesamplettn"
+                            <a href="/groundwater/masterttn/codesamplettn"
                             class="btn bg-gradient-info btn-xs ml-5 mt-3">Code Sample</a>@endcan
                         </div>
                         <div class="card-body">
@@ -45,14 +45,14 @@
                                             <div class="card-header ">
                                                 @if($code_units->count())
                                                 @can('admin')
-                                                <a href="/dashboard/groundwater/masterttn/create"class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
+                                                <a href="/groundwater/masterttn/create"class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
                                                 <a href="/exportmasterttn" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                                 <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal"data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                                     <i class="fas fa-upload mr-1"></i>Excel
                                                 </a>@endcan
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
-                                                        <form action="/dashboard/groundwater/masterttn" class="form-inline">
+                                                        <form action="/groundwater/masterttn" class="form-inline">
                                                             <label for="fromDate" class="mr-2">From</label>
                                                             <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                                                 <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -79,7 +79,7 @@
                                                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                             </div>
                                                         </form>
-                                                        <form action="/dashboard/groundwater/masterttn">
+                                                        <form action="/groundwater/masterttn">
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                         </form>
                                                     </div>
@@ -143,13 +143,13 @@
                                                            @can('admin') <td>
                                                                 <div style="width: 50px">
     
-                                                                    {{-- <a href="/dashboard/groundwater/mastergw/{{ $data->failed_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
+                                                                    {{-- <a href="/groundwater/mastergw/{{ $data->failed_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
                                                                         <i class="far fa-eye"></i>
                                                                     </a> --}}
-                                                                    <a href="/dashboard/groundwater/masterttn/{{ $data->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                    <a href="/groundwater/masterttn/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/groundwater/masterttn/{{ $data->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/groundwater/masterttn/{{ $data->id }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -166,9 +166,9 @@
                                                             <td>{{ $data->well }}</td>
                                                             <td>{{ $data->well_water }}</td>
                                                             <td>{{ $data->h }}</td>
-                                                            <td>{{ $data->d_pipe }}</td>
-                                                            <td>{{ $data->tt }}</td>
-                                                            <td>{{ $data->r }}</td>
+                                                            <td>{{ $data->tablestandard->d_pipe }}</td>
+                                                            <td>{{ $data->tablestandard->tt }}</td>
+                                                            <td>{{ $data->tablestandard->r }}</td>
                                                             <td>{{ $data->water_volume }}</td>
                                                             <td>{{ $data->temperatur }}</td>
                                                             <td>{{ $data->ph }}</td>
@@ -215,6 +215,13 @@
                                                 </div>
     
                                             </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <figure class="highcharts-figure">
+                                                        <div class="invoice p-3 mb-3" id="container"></div>
+                                                    </figure>
+                                                </div>
+                                            </div>
                                             @else
                                             <p class="text-center fs-4">Not Data Found</p>
                                             @endif
@@ -232,7 +239,7 @@
                                                             @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile" required>
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                             </div>
                                                     
@@ -334,5 +341,53 @@
         // DropzoneJS Demo Code End
     </script>
 @endsection
+<script>
+        Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+      
+        xAxis: {
+            categories: {!!json_encode($date)!!}
+        },
+        yAxis: {
+            title: {
+                text: 'Value'
+            },
+           
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#F4CC70',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Temperature',
+            marker: {
+                symbol: 'square'
+            },
+            color:'#1F2833',
+            data:{!!json_encode($suhu)!!}
 
+        }, {
+                name: 'PH',
+                color:'#6AB187',
+                marker: {
+                    symbol: 'triangle-down'
+                },
+                data: {!! json_encode($ph) !!}
+            }]
+        });
+</script>
 @endsection

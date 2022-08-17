@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="/dashboard/groundwater/level" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                        <form action="/groundwater/level" method="post" checked enctype="multipart/form-data" autocomplete="off">
                             @csrf
                             <div class="form-group">
                                 <label for="inputSpentBudget">Date</label>

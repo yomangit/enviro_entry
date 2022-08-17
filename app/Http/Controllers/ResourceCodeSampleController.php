@@ -39,7 +39,7 @@ class ResourceCodeSampleController extends Controller
 
         try {
             Excel::import($import, public_path('/EnviroDatabase/' . $nameFile));
-            return redirect('/dashboard/index/codesample')->with('success', 'New Code Sample Surface Water has been Imported!');
+            return redirect('/surfacewater/qualityperiode/codesample')->with('success', 'New Code Sample Surface Water has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
             return back()->withFailures($e->failures());
@@ -78,7 +78,7 @@ class ResourceCodeSampleController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
         Codesample::create($validatedData);
-        return redirect('dashboard/index/codesample/create')->with('success', 'New Code Sample Surface Water has been added!');
+        return redirect('/surfacewater/qualityperiode/codesample/create')->with('success', 'New Code Sample Surface Water has been added!');
     }
 
     /**
@@ -125,15 +125,11 @@ class ResourceCodeSampleController extends Controller
             'nama' => 'required|max:255',
             'lokasi' => 'required|max:255',
         ];
-
-
-
         $validatedData = $request->validate($rules);
-
         $validatedData['user_id'] = auth()->user()->id;
         Codesample::where('id', $codesample->id)
             ->update($validatedData);
-        return redirect('/dashboard/index/codesample')->with('success', 'Code Sample Surface Water has been updated!');
+        return redirect('/surfacewater/qualityperiode/codesample')->with('success', 'Code Sample Surface Water has been updated!');
     }
 
     /**
@@ -145,6 +141,6 @@ class ResourceCodeSampleController extends Controller
     public function destroy(Codesample $codesample)
     {
         Codesample::destroy($codesample->id);
-        return redirect('/dashboard/index/codesample')->with('success', 'Data Code Sample Surface Water has been deleted!');
+        return redirect('/surfacewater/qualityperiode/codesample')->with('success', 'Data Code Sample Surface Water has been deleted!');
     }
 }

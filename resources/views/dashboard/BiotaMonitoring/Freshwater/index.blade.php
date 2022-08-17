@@ -54,7 +54,7 @@
                                         <div class="card-header ">
                                         @if($LocationBiota->count() && $Biotum->count())
                                         @can('admin')
-                                            <a href="/dashboard/monitoring/freshwater/master/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
+                                            <a href="/monitoring/freshwater/master/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
                                             <a href="/exportfreshwater" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                             <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                                 <i class="fas fa-upload mr-1"></i>Excel
@@ -62,10 +62,10 @@
                                             @endcan
                                             <div class="card-tools">
                                                 <div class="card-tools row">
-                                                    <form action="/dashboard/monitoring/freshwater/master" class="form-inline">
+                                                    <form action="/monitoring/freshwater/master" class="form-inline">
                                                         <!-- <label for="fromDate" class="mr-2">From</label> -->
-                                                        <div class="input-group date mr-2" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate7" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
                                                         <!-- <label for="fromDate" class="mr-2 ml-2">To</label>
     
@@ -101,7 +101,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/monitoring/freshwater/master">
+                                                    <form action="/monitoring/freshwater/master">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -146,13 +146,13 @@
                                                         @can('admin')<td>
                                                             <div style="width: 50px">
 
-                                                                {{-- <a href="/dashboard/monitoring/freshwater/master/{{ $freshwater->created_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
+                                                                {{-- <a href="/monitoring/freshwater/master/{{ $freshwater->created_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
                                                                 <i class="far fa-eye"></i>
                                                                 </a> --}}
-                                                                <a href="/dashboard/monitoring/freshwater/master/{{ $freshwater->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <a href="/monitoring/freshwater/master/{{ $freshwater->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                     <i class="fas fa-pen"></i>
                                                                 </a>
-                                                                <form action="/dashboard/monitoring/freshwater/master/{{ $freshwater->created_at }}" method="POST" class="d-inline">
+                                                                <form action="/monitoring/freshwater/master/{{ $freshwater->created_at }}" method="POST" class="d-inline">
                                                                     @method('delete')
                                                                     @csrf
                                                                     <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -172,7 +172,7 @@
                                                         
                                                         <td>{{ $freshwater->locationBiota->nama }}</td>
                                                         <td>{{ $freshwater->Biota->nama }}</td>
-                                                        <td>{{ date('d-m-Y', strtotime( $freshwater->date)) }}</td>
+                                                        <td>{{ date('d-M-Y', strtotime( $freshwater->date)) }}</td>
                                                         <td>{{ $freshwater->taxa_richness }}</td>
                                                         <td>{{ $freshwater->species_density }}</td>
                                                         <td>{{ $freshwater->diversity_index }}</td>
@@ -224,7 +224,7 @@
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file" name="file" class="custom-file-input"required id="exampleInputFile">
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                             </div>
 
@@ -261,7 +261,7 @@
 </div>
 @if ($Freshwaters->count())
 <script>
-    Highcharts.chart('container', {
+   Highcharts.chart('container', {
     chart: {
         type: 'column'
     },
@@ -272,8 +272,7 @@
         text: 'Location :  {!!json_encode($freshwater->locationBiota->nama)!!} '
     },
     xAxis: {
-        categories: 
-           {!! json_encode($date) !!},
+        categories: {!! json_encode($date) !!},
         crosshair: true
     },
     yAxis: {
@@ -285,7 +284,7 @@
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -298,26 +297,31 @@
     },
     series: [{
         name: 'Taxa Richness',
+        color:'#003049',
         data: {!! json_encode($taxa_richness) !!}
 
     }, {
         name: 'Species Density',
+        color:'#D62828',
         data: {!! json_encode($species_density) !!}
 
     }, {
         name: 'Diversity Index',
+        color:'#F77F00',
         data: {!! json_encode($diversity_index) !!}
 
     }, {
         name: 'Evenness Value',
+        color:'#FCBF49',
         data: {!! json_encode($evenness_value) !!}
 
-    }, {
+    },{
         name: 'Dominance Index',
+        color:'#E07A5F',
         data: {!! json_encode($dominance_index) !!}
 
     }]
-    });
+});
 </script>
 @endif
 @section('footer')

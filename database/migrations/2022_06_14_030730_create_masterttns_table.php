@@ -15,18 +15,15 @@ class CreateMasterttnsTable extends Migration
     {
         Schema::create('masterttns', function (Blueprint $table) {
             $table->id ( );
-            $table->foreignId('standard_id');
             $table->foreignId('user_id');
             $table->foreignId('codesamplettn_id');
+            $table->foreignId('gwtablestandard_id');
             $table->date ('date' );
             $table->string ('start_time' );
             $table->string ('stop_time' );
             $table->string('well' );
             $table->string ('well_water' );
             $table->string ('h' );
-            $table->string('d_pipe' );
-            $table->string ('tt' );
-            $table->string ('r' );
             $table->string ('water_volume' );
             $table->string ('temperatur' );
             $table->string ('ph' );
@@ -43,7 +40,7 @@ class CreateMasterttnsTable extends Migration
             $table->string ('oil_layer' );
             $table->string ('source_pollution' );
             $table->string ('sampler' );
-            $table->string ('hard_copy' )->nullable();
+            $table->string ('remarks' );
             $table->timestamps();
             $table->timestamp('failed_at')->useCurrent();
         });

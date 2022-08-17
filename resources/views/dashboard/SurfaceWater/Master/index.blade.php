@@ -9,12 +9,7 @@
                 <div class="col-sm-6">
                     <h1>{{ $breadcrumb }}</h1>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Input Data</li>
-                    </ol>
-                </div>
+              
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -31,8 +26,26 @@
                             {{ session('success') }}
                         </div>
                         @endif
+                        @if (session()->has('failures'))
+                            <div class="alert alert-danger alert-dismissible form-inline">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <h5 class="mr-2"><i class="icon fas fa-ban"></i>Fail</h5>
+                                @foreach (session()->get('failures') as $validation)
+                                <tr>
+                                    <td>
+                                        {{ $validation->values()[$validation->attribute()] }}
+                                    </td>
+                                    <td>-</td>
+                                    @foreach ($validation->errors() as $e)
+                                    <td>{{ $e }}</td>
+                                    @endforeach
+                                </tr>
+                                @endforeach
+    
+                            </div>
+                            @endif
                         @can('admin')
-                        <a href="/dashboard/index/codesample" class="btn bg-gradient-info btn-xs ml-5 mt-3">Code
+                        <a href="/surfacewater/qualityperiode/codesample" class="btn bg-gradient-info btn-xs ml-5 mt-3">Code
                             Sample</a>
                             @endcan
                     </div>
@@ -45,15 +58,15 @@
                                         <div class="card-header ">
                         @can('admin')
 
-                                            <a href="/dashboard/index/dataentry/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                            <a href="/surfacewater/qualityperiode/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                             <a href="/exportdata" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-download mr-1"></i>Excel</a>
                                             <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-target="#modal-default">
                                                 <i class="fas fa-upload mr-1"></i>Exel
                                             </a>
                                             @endcan
-                                            <div class="card-tools">
+                                            <div class="card-tools ">
                                                 <div class="card-tools row">
-                                                    <form action="/dashboard/index/dataentry" class="form-inline" autocomplete="off">
+                                                    <form action="/surfacewater/qualityperiode" class="form-inline" autocomplete="off">
                                                         <label for="fromDate" class="mr-2">From</label>
                                                         <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                                             <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -80,7 +93,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/index/dataentry">
+                                                    <form action="/surfacewater/qualityperiode">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -90,8 +103,7 @@
                                         <!-- /.card-header -->
                                         @if ($Input->count())
                                         <div class="card-body table-responsive ">
-                                            <table role="grid" id="example2" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                
+                                            <table  role="grid" id="example2" class="table table-bordered  table-sm table-head-fixed  table-striped">
                                                 <thead style=" color:#005245">
                                                     <tr class="text-center" style="font-size: 12px">
                                                         <th>No</th>
@@ -103,6 +115,7 @@
                                                         <div style="width: 65px"> Date</div>
                                                        </th>
                                                         <th>Start Time</th>
+                                                        <th>Stop Time</th>
                                                         <th>TSS Standard</th>
                                                         <th>TSS (mg/L)</th>
                                                         <th>PH Standard Max.</th>
@@ -133,6 +146,7 @@
                                                         <th>Oil Layer</th>
                                                         <th><div style="width:90px"></div>Sorce of Pollution</div></th>
                                                         <th><div style="width: 100px"> Sampler</div></th>
+                                                        <th><div style="width: 100px"> Remarks</div></th>
                                                         <!-- <th>Hard Copy</th> -->
                                                     </tr>
                                                 </thead>
@@ -146,17 +160,10 @@
                                                         @can('admin')
                                                         <td>
                                                             <div style="width: 80px">
-
-                                                                <!-- <a href="/dashboard/index/dataentry/{{ $data->failed_at }}"
-                                                                                class="btn btn btn-outline-primary btn-xs btn-group"
-                                                                                data-toggle="tooltip" data-placement="top"
-                                                                                title="Detail">
-                                                                                <i class="far fa-eye"></i>
-                                                                            </a> -->
-                                                                <a href="/dashboard/index/dataentry/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <a href="/surfacewater/qualityperiode/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                     <i class="fas fa-pen"></i>
                                                                 </a>
-                                                                <form action="/dashboard/index/dataentry/{{ $data->id }}" method="POST" class="d-inline">
+                                                                <form action="/surfacewater/qualityperiode/{{ $data->id }}" method="POST" class="d-inline">
                                                                     @method('delete')
                                                                     @csrf
                                                                     <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -168,52 +175,57 @@
                                                         </td>
                                                         @endcan
                                                         <td>{{ $data->CodeSample->nama }}</td>
-                                                        <td>{{ date('d-m-Y', strtotime( $data->date)) }}</td>
-                                                        @If($data->start_time=='error')
+                                                        <td>{{ date('d-M-Y', strtotime( $data->date)) }}</td>
+                                                        @If($data->start_time=='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->start_time}}</td>
                                                         @endif
+                                                        @If($data->stop_time=='no data')
+                                                        <td style="color: red;">No Data</td>
+                                                        @else
+                                                        <td>{{$data->stop_time}}</td>
+                                                        @endif
                                                         <td>{{ $data->standard->tss }}</td>
                                                        
-                                                        @If($data->tss==='error')
+                                                        @If($data->tss==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->tss}}</td>
                                                         @endif
                                                         <td>{{ $data->standard->ph_max }}</td>
                                                         <td>{{ $data->standard->ph_min }}</td>
-                                                        @If($data->ph==='error')
+                                                        @If($data->ph==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->ph}}</td>
                                                         @endif
                                                         <td>{{ $data->standard->do }}</td>
-                                                        @If($data->do==='error')
+                                                        @If($data->do==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->do}}</td>
                                                         @endif
                                                         <td>{{ $data->standard->redox }}</td>
-                                                        @If($data->orp==='error')
+                                                        @If($data->orp==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->orp}}</td>
                                                         @endif
                                                         <td>{{ $data->standard->conductivity }}</td>
-                                                        @If($data->conductivity==='error')
+                                                        @If($data->conductivity==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->conductivity}}</td>
                                                         @endif
                                                         <td>{{ $data->standard->tds }}</td>
-                                                        @If($data->tds==='error')
+                                                        @If($data->tds==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{$data->tds}}</td>
                                                         @endif
                                                         <td>{{ $data->standard->temperatur }}</td>
-                                                        @If($data->temperatur==='error')
+                                                        @If($data->temperatur==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->temperatur }}<sup>0</sup>C
@@ -227,46 +239,47 @@
                                                         <td>{{ $data->lvl_lgr }}</td>
                                                         <td>{{ $data->debit_s }}</td>
                                                         <td>{{ $data->debit_d }}</td>
-                                                        @if($data->water_condition==='error')
+                                                        @if($data->water_condition==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->water_condition }}</td>
                                                         @endif
-                                                        @if($data->water_color==='error')
+                                                        @if($data->water_color==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->water_color }}</td>
                                                         @endif
-                                                        @if($data->odor==='error')
+                                                        @if($data->odor==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->odor }}</td>
                                                         @endif
-                                                        @if($data->rain==='error')
+                                                        @if($data->rain==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->rain }}</td>
                                                         @endif
-                                                        @if($data->rain_during_sampling==='error')
+                                                        @if($data->rain_during_sampling==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->rain_during_sampling }}</td>
                                                         @endif
-                                                        @if($data->oil_layer==='error')
+                                                        @if($data->oil_layer==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->oil_layer }}</td>
                                                         @endif
-                                                        @if($data->source_pollution==='error')
+                                                        @if($data->source_pollution==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                         <td>{{ $data->source_pollution }}</td>
                                                         @endif
-                                                        @if($data->sampler==='error')
+                                                        @if($data->sampler==='no data')
                                                         <td style="color: red;">No Data</td>
                                                         @else
                                                       
                                                         <td>{{ $data->sampler }}</td>
+                                                        <td>{{ $data->remarks }}</td>
                                                        
                                                        
                                                         @endif
@@ -311,7 +324,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <figure class="highcharts-figure">
-                                            <div class="invoice p-3 mb-3" id="line_chart"></div>
+                                            <div class="invoice p-3 mb-3" id="container"></div>
                                         </figure>
                                     </div>
                                 </div>
@@ -335,8 +348,12 @@
                                         @csrf
                                         <div class="modal-body">
                                             <div class="custom-file">
-                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
-                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                            <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
+                                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                                @error('file')
+                                                                    <span
+                                                                        class=" invalid-feedback ">{{ $message }}</span>
+                                                                @enderror
                                             </div>
 
                                         </div>
@@ -428,33 +445,41 @@
     document.querySelector("#actions .cancel").onclick = function() {
         myDropzone.removeAllFiles(true)
     }
+
+
 </script>
 <script>
-        Highcharts.chart('line_chart', {
+        Highcharts.chart('container', {
             chart: {
-                type: 'line'
+                type: 'spline'
             },
             title: {
-                text:'Graphic Master Surface Table'
+                text:' Surface Water Chart'
             },  
             xAxis: {
                 categories: {!! json_encode($date) !!}
-            },
+           },
             yAxis: {
                 title: {
                     text: 'Value'
                 }
             },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
             plotOptions: {
-                line: {
-                    dataLabels: {
-                        enabled: true
-                    },
-                    enableMouseTracking: true
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
                 }
             },
             series: [{
                         name: 'Temperatur',
+                        color:'#1F2833',
                         data: {!! json_encode($suhu) !!},
                         marker: {
                             symbol: 'square'
@@ -463,29 +488,33 @@
 
                     }, {
                         name: 'Conductivity (µS/cm)',
+                        color:'#DE7A22',
                         marker: {
                             symbol: 'diamond'
                         },
                         data: {!! json_encode($conductivity) !!}
                     }, {
                         name: 'TDS',
+                        color:'#F4CC70',
                         marker: {
                             symbol: 'triangle'
                         },
                         data: {!! json_encode($tds) !!}
                     }, {
                         name: 'TSS',
+                        color:'#20948B',
                         marker: {
                             symbol: 'circle'
                         },
                         data: {!! json_encode($tss) !!}
                     }, {
                         name: 'PH',
+                        color:'#6AB187',
                         marker: {
                             symbol: 'triangle-down'
                         },
                         data: {!! json_encode($ph) !!}
                     }]
         });
-    </script>
+</script>
 @endsection

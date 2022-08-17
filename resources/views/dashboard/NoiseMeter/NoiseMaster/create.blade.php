@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/dustgauge/noisemeter/noise">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise">Home</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/dustgauge/noisemeter/noise" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/airquality/noisemeter/noise" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
                         <div class="row">
                             <div class="col-12 col-md-3">
@@ -50,9 +50,7 @@
                                             @endif
                                             @endforeach
                                         </select>
-
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-12 col-md-3">
@@ -61,7 +59,7 @@
                                     <div class="col-sm-7">
                                         <select class="form-control form-control-sm " name="location_id">
                                             @foreach ($code_location as $code)
-                                            @if (old('codesample_id')==$code->id)
+                                            @if (old('location_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
                                             @else
                                             <option value="{{$code->id}}">{{$code->nama}}</option>

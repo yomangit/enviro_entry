@@ -18,8 +18,10 @@ class LoginController extends Controller
         ]);
  
         if (Auth::attempt($credentials)) {
-           $credentials= $request->session()->regenerate();//regenerete di lakukang untuk menghindari sebuah teknik hacking session
- 
+           $credentials= $request->session()->regenerate();//regenerete di lakukan untuk menghindari sebuah teknik hacking session
+           if (auth()->user()->is_admin) {
+            return redirect()->intended('/dashboard/master');
+        }
             return redirect()->intended('/');
         }
  
@@ -33,6 +35,6 @@ class LoginController extends Controller
      
         $request->session()->regenerateToken();//bikin baru supaya tidak di bajak
      
-        return redirect('/login');
+        return redirect('/');
     }
 }

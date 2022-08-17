@@ -27,6 +27,7 @@ class DataImport implements ToModel, WithHeadingRow
             'codesample_id'=>$row['codesample_id'],
             'date'           =>$row['date'],     
             'start_time'       =>$row['start_time'],   
+            'stop_time'       =>$row['stop_time'],   
             'tss'                =>$row['tss'], 
             'ph'                  =>$row['ph'],
             'do'                  =>$row['do'],
@@ -50,8 +51,48 @@ class DataImport implements ToModel, WithHeadingRow
             'level'    =>$row['level'],
             'lvl_lgr'    =>$row['lvl_lgr'],
             'debit_s'    =>$row['debit_s'],
-            'debit_d'    =>$row['debit_d']
+            'debit_d'    =>$row['debit_d'],
+            'remarks'    =>$row['remarks']
         ]);
+    }
+    public function rules(): array
+    {
+       return[
+          
+         
+           '*.standard_id'=>['required'],
+            '*.user_id'=>['required'],
+            '*.codesample_id'=>['required'],
+            '*.date'=>['required'],
+            '*.start_time'=>['required'],
+            '*.stop_time'=>['required'],
+            '*.tss'=>['required'],
+            '*.ph'=>['required'],
+            '*.do'=>['required'],
+            '*.orp'=>['required'],
+            '*.conductivity'=>['required'],
+            '*.tds'=>['required'],
+            '*.temperatur'=>['required'],
+            '*.salinity'=>['required'],
+            '*.turbidity'=>['required'],
+            '*.tl_wall'=>['required'],
+            '*.tl_tsf'=>['required'],
+            '*.water_condition'=>['required'],
+            '*.water_color'=>['required'],
+            '*.odor'=>['required'],
+            '*.rain'=>['required'],
+            '*.rain_during_sampling'=>['required'],
+            '*.oil_layer'=>['required'],
+            '*.source_pollution'=>['required'],
+            '*.sampler'=>['required'],
+            '*.cyanide'=>['required'],
+            '*.level'=>['required'],
+            '*.lvl_lgr'=>['required'],
+            '*.debit_s'=>['required'],
+            '*.debit_d'=>['required'],
+            '*.remarks'=>['required']
+
+       ];
     }
 
 

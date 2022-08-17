@@ -17,14 +17,11 @@ class Lokasi extends Model
                 return $query->whereBetween('date', array(request('fromDate'), request('toDate'))); 
             });
             $query->when($filters['search']??false,function($query,$search){
-                return  $query->where('nama', 'like', '%' . $search . '%')
-                            ->orWhere('lokasi', 'like', '%' . $search . '%');
+                return  $query->where('nama', 'like', '%' . $search . '%');
             });
     }
 
-    public function standard(){
-    return $this->belongsTo(TblStandard::class,'standard_id');
-    }
+
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }

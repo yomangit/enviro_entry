@@ -1,4 +1,10 @@
 @extends('dashboard.layouts.main')
+@push('styles')
+    @livewireStyles
+@endpush
+@push('scripts')
+    @livewireScripts
+@endpush
 @section('container')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -35,8 +41,8 @@
                                     <div class="card">
                                         <div class="card-header">
                                             @can('admin')
-                                            <a href="/dashboard/dustgauge/noisemeter/noise/codesamplenm" class="btn bg-gradient-info btn-xs ">Code Sample</a>
-                                            <a href="/dashborad/dustgauge/noisemeter/noise/location" class="btn bg-gradient-info btn-xs ">Code Location</a>@endcan
+                                            <a href="/airquality/noisemeter/noise/codesamplenm" class="btn bg-gradient-info btn-xs ">Code Sample</a>
+                                            <a href="/airquality/noisemeter/noise/locationnoise" class="btn bg-gradient-info btn-xs ">Code Location</a>@endcan
                                         </div>
                                         <!-- /.card-header -->
                                        
@@ -50,12 +56,15 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"> 24 Hour Noise Value Calculation</a>
                                                 </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="custom-content-above-grafik-tab" data-toggle="pill" href="#custom-content-above-grafik" role="tab" aria-controls="custom-content-above-grafik" aria-selected="false">Add to Monthly Resume</a>
+                                                </li>
 
                                             </ul>
                                             <div class="tab-custom-content row ">
                                                
                                                 <div class="col-12 col-sm-6">
-                                                    <a href="/dashboard/dustgauge/noisemeter/noise/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                                    <a href="/airquality/noisemeter/noise/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                                     <a href="/exportdatanoise" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                                     <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                                         <i class="fas fa-upload mr-1"></i>Excel
@@ -63,10 +72,10 @@
                                                 </div>
 
                                                 <div class=" col-12 col-sm-6 d-flex justify-content-end form-inline ">
-                                                    <form action="/dashboard/dustgauge/noisemeter/noise" class="form-inline" autocomplete="off">
+                                                    <form action="/airquality/noisemeter/noise" class="form-inline" autocomplete="off">
                                                         {{-- <label for="fromDate" class="mr-2">From</label> --}}
-                                                        <div class="input-group date mr-2" id="reservationdate9" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate9" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                                        <div class="input-group date mr-2" id="reservationdate6" style="width: 85px;" data-target-input="nearest">
+                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate6" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                                         </div>
 
                                                         <div style="width: 118px;" class="input-group mr-1">
@@ -99,7 +108,7 @@
                                                             <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                                         </div>
                                                     </form>
-                                                    <form action="/dashboard/dustgauge/noisemeter/noise">
+                                                    <form action="/airquality/noisemeter/noise">
                                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                                     </form>
                                                 </div>
@@ -152,10 +161,10 @@
                                                             @endphp
                                                             @foreach ($Codes as $code)
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -181,10 +190,10 @@
                                                                 <td>{{$code->A12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -210,10 +219,10 @@
                                                                 <td>{{$code->B12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -239,10 +248,10 @@
                                                                 <td>{{$code->C12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -269,16 +278,16 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    {{-- <a href="/dashboard/dustgauge/noisemeter/noise/{{ $code->updated_at }}"
+                                                                    {{-- <a href="/airquality/noisemeter/noise/{{ $code->updated_at }}"
                                                                     class="btn btn btn-outline-primary btn-xs btn-group"
                                                                     data-toggle="tooltip"
                                                                     data-placement="top" title="Detail">
                                                                     <i class="far fa-eye"></i>
                                                                     </a> --}}
-                                                                    <a href="/dashboard/dustgauge/noisemeter/noise/{{ $code->updated_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                    <a href="/airquality/noisemeter/noise/{{ $code->updated_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->updated_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->updated_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -288,7 +297,7 @@
                                                                 </td>
                                                                 <th>{{$code->CodesampleNM->nama}}</th>
                                                                 <th>{{$code->CodelocationNM->nama}}</th>
-                                                                <th>{{ date('d-m-Y', strtotime( $code->date)) }}</th>
+                                                                <th>{{ date('M-Y', strtotime( $code->date)) }}</th>
                                                                 {{-- <th>{{$code->date}}</th> --}}
                                                                 <th>5</th>
                                                                 <td>{{$code->E1}}</td>
@@ -305,10 +314,10 @@
                                                                 <td>{{$code->E12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -334,10 +343,10 @@
                                                                 <td>{{$code->F12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -363,10 +372,10 @@
                                                                 <td>{{$code->G12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -392,10 +401,10 @@
                                                                 <td>{{$code->H12}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <td><a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -424,10 +433,10 @@
 
                                                             <tr>
                                                                 <td>
-                                                                    <a hidden href="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                    <a hidden href="/airquality/noisemeter/noise/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                         <i class="fas fa-pen"></i>
                                                                     </a>
-                                                                    <form action="/dashboard/dustgauge/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                                                    <form action="/airquality/noisemeter/noise/{{ $code->failed_at }}" method="POST" class="d-inline">
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button hidden class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -458,134 +467,134 @@
                                                                 <td colspan="5"><span class="badge bg-info">
                                                                         <h6>Total =
                                                                             {{ $total=abs((round( 
-                                                                (1/600)*5*pow(10,(0.1*$code->A1)),6)))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A2)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A3)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A4)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A5)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A6)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A7)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A8)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A9)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A10)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A11)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->A12)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B1)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B2)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B3)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B4)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B5)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B6)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B7)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B8)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B9)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B10)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B11)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->B12)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C1)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C2)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C3)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C4)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C5)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C6)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C7)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C8)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C9)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C10)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C11)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->C12)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D1)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D2)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D3)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D4)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D5)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D6)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D7)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D8)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D9)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D10)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D11)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->D12)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E1)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E2)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E3)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E4)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E5)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E6)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E7)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E8)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E9)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E10)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E11)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->E12)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F1)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F2)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F3)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F4)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F5)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F6)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F7)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F8)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F9)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F10)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F11)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->F12)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G1)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G2)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G3)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G4)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G5)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G6)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G7)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G8)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G9)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G10)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G11)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->G12)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H1)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H2)),6))+abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H3)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H4)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H5)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H6)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H7)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H8)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H9)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H10)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H11)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->H12)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I1)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I2)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I3)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I4)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I5)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I6)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I7)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I8)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I9)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I10)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I11)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->I12)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J1)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J2)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J3)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J4)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J5)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J6)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J7)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J8)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J9)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J10)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J11)),6))+ abs(round(
-                                                                (1/600)*5*pow(10,(0.1*$code->J12)),6)) }}
+                                                                (1/600)*5*pow(10,(0.1*$code->A1)),4)))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A2)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A3)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A4)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A5)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A6)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A7)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A8)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A9)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A10)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A11)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->A12)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B1)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B2)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B3)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B4)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B5)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B6)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B7)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B8)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B9)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B10)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B11)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->B12)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C1)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C2)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C3)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C4)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C5)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C6)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C7)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C8)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C9)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C10)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C11)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->C12)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D1)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D2)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D3)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D4)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D5)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D6)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D7)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D8)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D9)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D10)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D11)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->D12)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E1)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E2)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E3)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E4)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E5)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E6)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E7)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E8)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E9)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E10)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E11)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->E12)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F1)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F2)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F3)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F4)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F5)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F6)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F7)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F8)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F9)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F10)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F11)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->F12)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G1)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G2)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G3)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G4)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G5)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G6)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G7)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G8)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G9)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G10)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G11)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->G12)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H1)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H2)),4))+abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H3)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H4)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H5)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H6)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H7)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H8)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H9)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H10)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H11)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->H12)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I1)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I2)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I3)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I4)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I5)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I6)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I7)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I8)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I9)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I10)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I11)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->I12)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J1)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J2)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J3)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J4)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J5)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J6)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J7)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J8)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J9)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J10)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J11)),4))+ abs(round(
+                                                                (1/600)*5*pow(10,(0.1*$code->J12)),4)) }}
                                                                     </span></h6>
                                                                 </td>
                                                                 <td colspan="6"><span class="badge bg-info">
-                                                                        <h6>log(Total) = {{$log=round((log10($total)),9)}}
+                                                                        <h6>log(Total) = {{$log=round((log10($total)),5)}}
                                                                     </span></h6>
                                                                 </td>
 
-                                                                @if ($code->CodesampleNM->nama=='L-01')
+                                                                @if ($code->CodesampleNM->nama==='L-01')
                                                                 <td colspan="6"> <span class="badge bg-info">
                                                                         <h6> 10*log(Total) = {{$a1= 10*$log}}
                                                                     </span></h6>
@@ -874,8 +883,68 @@
                                                         </div>
                                                   
                                                 </div>
+                                                <div class="tab-pane fade" id="custom-content-above-grafik" role="tabpanel" aria-labelledby="custom-content-above-grafik-tab">
+                                                   
+                                                <div class="card-body table-responsive ">
+                                               
+                                                <table role="grid" class="table table-bordered table-sm table-head-fixed ">
+                                                        <thead style=" color:#005245">
+                                                            <tr class="text-center" style="font-size: 12px">
+                                                                <th style="width: 15px" >No</th>
+
+                                                                <th style="width: 100px">Location</th>
+                                                                <th style="width: 100px">Date Sampling</th>
+                                                                <th style="width: 100px">L-01</th>
+                                                                <th style="width: 100px">L-02</th>
+                                                                <th style="width: 100px">L-03</th>
+                                                                <th style="width: 100px">L-04</th>
+                                                                <th style="width: 100px">L-05</th>
+                                                                <th style="width: 100px">L-06</th>
+                                                                <th style="width: 100px">L-07</th>
+                                                                <th style="width: 100px">L-Ls</th>
+                                                                <th style="width: 100px">L-Lm</th>
+                                                                <th style="width: 100px">L-24 Hour</th>
+                                                                <th style="width: 100px">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+
+
+
+                                                            <tr class="text-center " style="font-size: 12px">
+                                                                        
+                                                                <td>{{$no++}}</td>
+                                                                <td><input  style="width: 80px" name="locationResume" type="text" step="0.0001" class="form-control form-control-sm @error('locationResume') is-invalid @enderror" value="{{ $code->CodelocationNM->nama }}"  /></td>
+                                                                
+                                                                <form action="/airquality/noisemeter/resumebulanan" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                                                                 @csrf
+                                                                <td hidden><input  style="width: 80px" name="locationResume" type="text" step="0.0001" class="form-control form-control-sm @error('locationResume') is-invalid @enderror" value="{{ $code->CodelocationNM->id }}"  /></td>
+                                                                <td><input  style="width: 80px" name="date" type="text" class="form-control form-control-sm @error('date') is-invalid @enderror" value="{{ date('M-Y', strtotime( $code->date)) }}" /></td>
+                                                                <td><input  style="width: 80px" name="l1" type="number" step="0.0001" class="form-control form-control-sm @error('l1') is-invalid @enderror" value="{{$a1}}" /></td>
+                                                                <td><input  style="width: 80px" name="l2" type="number" step="0.0001" class="form-control form-control-sm @error('l2') is-invalid @enderror" value="{{$a2}}" /></td>
+                                                                <td><input  style="width: 80px" name="l3" type="number" step="0.0001" class="form-control form-control-sm @error('l3') is-invalid @enderror" value="{{$a3}}" /></td>
+                                                                <td><input  style="width: 80px" name="l4" type="number" step="0.0001" class="form-control form-control-sm @error('l4') is-invalid @enderror" value="{{$a4}}" /></td>
+                                                                <td><input  style="width: 80px" name="l5" type="number" step="0.0001" class="form-control form-control-sm @error('l5') is-invalid @enderror" value="{{$a5}}" /></td>
+                                                                <td><input  style="width: 80px" name="l6" type="number" step="0.0001" class="form-control form-control-sm @error('l6') is-invalid @enderror" value="{{$a6}}" /></td>
+                                                                <td><input  style="width: 80px" name="l7" type="number" step="0.0001" class="form-control form-control-sm @error('l7') is-invalid @enderror" value="{{$a7}}" /></td>
+                                                                <td><input  style="width: 80px" name="ls" type="number" step="0.0001" class="form-control form-control-sm @error('ls') is-invalid @enderror" value="{{$Ls}}" /></td>
+                                                                <td><input  style="width: 80px" name="lm" type="number" step="0.0001" class="form-control form-control-sm @error('lm') is-invalid @enderror" value="{{$Lm}}" /></td>
+                                                                <td><input  style="width: 100px" name="lsm" type="number" step="0.0001" class="form-control form-control-sm @error('lsm') is-invalid @enderror" value="{{round((10*$sm5),0)}}" /></td>
+                                                                <td><button type="submit" class="btn bg-gradient-primary btn-sm "data-toggle="tooltip" data-placement="top" title="Add to Resume"><i class="fa-solid fa-circle-plus"></i></button></td>
+                                                                </form>
+
+
+
+
+                                                        </tbody>
+                                                    </table>
+                                                
+                                                </div>      
+                                                                 
                                             </div>
                                         </div>
+                                       
                                         @else
                                         <p class="text-center fs-4">Not Data Found</p>
                                         @endif
@@ -892,7 +961,7 @@
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                                <input type="file" name="file" class="custom-file-input" id="exampleInputFile"required>
                                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                             </div>
 
@@ -922,7 +991,79 @@
         </div><!-- /.container-fluid -->
     </section>
 </div>
-@section('footer')
+<script>
+    Highcharts.chart('container', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Grafik Kualitas kebisingan di '
+    },
+    subtitle: {
+        text: 'Source: WorldClimate.com'
+    },
+    xAxis: {
+        categories: ['L-01', 'L-02', 'L-03', 'L-04', 'L-05', 'L-06',
+            'L-07', 'Ls', 'Lm', 'L24jam'],
+        accessibility: {
+            description: 'Months of the year'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Temperature'
+        },
+        labels: {
+            formatter: function () {
+                return this.value + '°';
+            }
+        }
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: 'Tokyo',
+        marker: {
+            symbol: 'square'
+        },
+        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+            y: 26.5,
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            accessibility: {
+                description: 'Sunny symbol, this is the warmest point in the chart.'
+            }
+        }, 23.3, 18.3]
+
+    }, {
+        name: 'London',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [{
+            y: 3.9,
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/snow.png)'
+            },
+            accessibility: {
+                description: 'Snowy symbol, this is the coldest point in the chart.'
+            }
+        }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3]
+        }]
+    });
+</script>
 <script>
     $(function() {
         $('#reservationdate9').datetimepicker({
@@ -993,6 +1134,6 @@
     // DropzoneJS Demo Code End
 
 </script>
-@endsection
+
 
 @endsection

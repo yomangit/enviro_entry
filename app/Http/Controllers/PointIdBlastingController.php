@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PointIdBlasting;
 use Illuminate\Http\Request;
+use App\Models\PointIdBlasting;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PointIDBlastingExport;
+use App\Imports\PointIDBlastingImport;
 
 class PointIdBlastingController extends Controller
 {
@@ -21,6 +24,27 @@ class PointIdBlastingController extends Controller
       'PointID'=>PointIdBlasting::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
+    }
+    public function ExportPointId()
+    {
+
+        return Excel::download(new PointIDBlastingExport, 'point_id_blastings.csv');
+    }
+    public function ImportPointId(Request $request)
+    {
+
+        $file = $request->file('file');
+        $nameFile = $file->getClientOriginalName();
+        $file->move('EnviroDatabase', $nameFile);
+        $import = new PointIDBlastingImport;
+
+        try {
+            Excel::import($import, public_path('/EnviroDatabase/' . $nameFile));
+            return redirect('/blasting/pointid')->with('success', 'New Code Sample Surface Water has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+            return back()->withFailures($e->failures());
+        }
     }
 
     /**
@@ -54,7 +78,7 @@ class PointIdBlastingController extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         PointIdBlasting::create($validatedData);
-        return redirect('/dashboard/blasting/pointid/create')->with('success','New Point ID Blasting has been added!');
+        return redirect('/blasting/pointid/create')->with('success','New Point ID Blasting has been added!');
     }
 
     /**
@@ -105,7 +129,7 @@ class PointIdBlastingController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         PointIdBlasting::where('id', $pointid->id)
             ->update($validatedData);
-        return redirect('/dashboard/blasting/pointid')->with('success', ' Point ID Blasting has been updated!');
+        return redirect('/blasting/pointid')->with('success', ' Point ID Blasting has been updated!');
     }
 
     /**
@@ -117,6 +141,6 @@ class PointIdBlastingController extends Controller
     public function destroy(PointIdBlasting $pointid)
     {
         PointIdBlasting::destroy($pointid->id);
-        return redirect('/dashboard/blasting/pointid')->with('success',' Point ID Blasting has been deleted!');
+        return redirect('/blasting/pointid')->with('success',' Point ID Blasting has been deleted!');
     }
 }

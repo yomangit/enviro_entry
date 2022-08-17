@@ -31,7 +31,7 @@
     <!-- dropzonejs -->
     <link rel="stylesheet" href="/assets/plugins/dropzone/min/dropzone.min.css">
     <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
-    <!-- <link rel="stylesheet" href="/assets/plugins/highcharts/theme.css"> -->
+    <link rel="stylesheet" href="/assets/plugins/highcharts/darkunica.css">
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -165,8 +165,14 @@
                 $('#reservationdate5').datetimepicker({
                     format: 'DD-MM-YYYY'
                 });
-                $('#reservationdate3').datetimepicker({
-                    format: 'MM-YYYY'
+                $('#reservationdate6').datetimepicker({
+                    format: 'MMM-YYYY'
+                });
+                $('#reservationdate7').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                }); 
+                $('#reservationdate8').datetimepicker({
+                    format: 'DD-MMM-YYYY'
                 });
                 //Timepicker
                 $('#timepicker').datetimepicker({

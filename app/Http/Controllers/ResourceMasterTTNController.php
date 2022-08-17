@@ -19,11 +19,43 @@ class ResourceMasterTTNController extends Controller
      */
     public function index()
     {
+        $grafiks = Masterttn::where('user_id',auth()->user()->id)
+            ->filter(request(['fromDate', 'search']))
+            ->paginate(30)
+            ->withQueryString();
+        $tanggal = [];
+        $suhu = [];
+        $ph = [];
+        $suhu1 = [];
+        $ph1 = [];
+        foreach ($grafiks as $grafik) 
+        {
+            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            if ($suhu1[] = $grafik->temperatur === '-') {
+                //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+                $suhu[] = '';
+            } elseif ($suhu1[] = $grafik->temperatur != '-') {
+                //  $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+                $suhu[] = $suhu1[] = doubleval($grafik->temperatur);
+            }
+            if ($ph1[] = $grafik->ph === '-') {
+                // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+                $ph[] = '';
+            } elseif ($ph1[] = $grafik->ph !='-') {
+               $ph[]=$ph1[] = doubleval($grafik->ph); # code...
+                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            }
+
+            // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+        }
      
         return view('dashboard.GroundWater.MasterTTN.index',[
             'code_units'=>Codesamplettn::all(),
-            "tittle"=>"Ground Water",
-            'breadcrumb'=>'Ground Water TTN',
+            "tittle"=>"Groundwell Community",
+            'breadcrumb'=>'Groundwell Community',
+            'date' => $tanggal,
+            'suhu' => $suhu,
+            'ph' => $ph,
             'Master'=>Masterttn::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
@@ -38,7 +70,7 @@ class ResourceMasterTTNController extends Controller
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase',$nameFile);
         Excel::import(new MasterTTNImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/groundwater/mastergw')->with('success','New Data Ground Water MSM has been Imported!');
+        return redirect('/groundwater/mastergw')->with('success','New Data Ground Water MSM has been Imported!');
     }
 
     /**
@@ -52,8 +84,8 @@ class ResourceMasterTTNController extends Controller
             abort(403);
         }
         return view('dashboard.GroundWater.MasterTTN.create',[
-            'breadcrumb'=>'Ground Water TTN',
-            "tittle"=>"GROUND WATER",
+            'breadcrumb'=>'Groundwell Community',
+            "tittle"=>"Groundwell Community",
             'code_units'=>Codesamplettn::all(),
             'Codes'=>Masterttn::where('user_id',auth()->user()->id)->filter(request(['fromDate']))->get()//with diguanakan untuk mengatasi N+1 problem
          ]);
@@ -76,9 +108,6 @@ class ResourceMasterTTNController extends Controller
             'well'=>'required',
             'well_water'=>'required',
             'h'=>'required',
-            'd_pipe'=>'required',
-            'tt'=>'required',
-            'r'=>'required',
             'water_volume'=>'required',
             'temperatur'=>'required|max:255',
             'ph'=>'required|max:255',
@@ -95,16 +124,17 @@ class ResourceMasterTTNController extends Controller
             'oil_layer'=>'required',
             'source_pollution'=>'required',
             'sampler'=>'required',
-            'hard_copy.*'=>'required|mimes:jpg,jpeg,png,bmp,gif,svg,webp,pdf,docx|max:1024'
+            'remarks'=>'required',
+
         ]);
         if ($request->file('hard_copy')) {
             $validatedData['hard_copy']=$request->file('hard_copy')->store('groundwaterttn-images');
         }
+        $validatedData['gwtablestandard_id']='1';
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id']=auth()->user()->id;
-        $validatedData['standard_id']='1';
         Masterttn::create($validatedData);
-        return redirect('/dashboard/groundwater/masterttn/create')->with('success','New Data Ground Water TTN has been added!');
+        return redirect('/groundwater/masterttn/create')->with('success','New Data Ground Water TTN has been added!');
     
     }
 
@@ -132,9 +162,9 @@ class ResourceMasterTTNController extends Controller
         }
         return view('dashboard.GroundWater.MasterTTN.edit',[
             'code_units'=>Codesamplettn::all(),
-            "tittle"=>"GROUND WATER",
+            "tittle"=>"Groundwell Community",
 
-            'breadcrumb'=>'Ground Water TTN',
+            'breadcrumb'=>'Groundwell Community',
 
             'Master'=>$masterttn
         ]);
@@ -156,9 +186,6 @@ class ResourceMasterTTNController extends Controller
                 'well'=>'required',
                 'well_water'=>'required',
                 'h'=>'required',
-                'd_pipe'=>'required',
-                'tt'=>'required',
-                'r'=>'required',
                 'water_volume'=>'required',
                 'temperatur'=>'required|max:255',
                 'ph'=>'required|max:255',
@@ -175,11 +202,9 @@ class ResourceMasterTTNController extends Controller
                 'oil_layer'=>'required',
                 'source_pollution'=>'required',
                 'sampler'=>'required',
-                'hard_copy.*'=>'required|mimes:jpg,jpeg,png,bmp,gif,svg,webp,pdf,docx|max:1024'
-        ];
-    
-     
-    
+                'remarks'=>'required',
+                
+        ];    
         $validatedData=$request->validate($rules);
         if ($request->file('hard_copy')) {
             if ($request->oldHard_copy) {
@@ -188,11 +213,11 @@ class ResourceMasterTTNController extends Controller
             $validatedData['hard_copy']=$request->file('hard_copy')->store('groundwaterttn-images');
         }
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
+        $validatedData['gwtablestandard_id']='1';
         $validatedData['user_id']=auth()->user()->id;
-        $validatedData['standard_id']='1';
         Masterttn::where('id',$masterttn->id)
         ->update($validatedData);
-        return redirect('/dashboard/groundwater/masterttn')->with('success',' Data Ground Water TTN has been updated!');
+        return redirect('/groundwater/masterttn')->with('success',' Data Ground Water TTN has been updated!');
     }
 
     /**
@@ -204,7 +229,7 @@ class ResourceMasterTTNController extends Controller
     public function destroy(Masterttn $masterttn)
     {
         Masterttn::destroy($masterttn->id);
-        return redirect('/dashboard/groundwater/masterttn')->with('success','Data Ground Water TTN has been deleted!');
+        return redirect('/groundwater/masterttn')->with('success','Data Ground Water TTN has been deleted!');
     }
     
 }
