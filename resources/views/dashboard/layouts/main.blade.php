@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/assets/plugins/daterangepicker/daterangepicker.css">
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Bootstrap Color Picker -->
     <link rel="stylesheet" href="/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -36,17 +37,18 @@
     <link rel="stylesheet" href="/assets/plugins/select2/css/select2.min.css">
     <link rel="stylesheet" href="/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- Bootstrap4 Duallistbox -->
-    <link rel="stylesheet" href="/assets/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
     <!-- BS Stepper -->
     <link rel="stylesheet" href="/assets/plugins/bs-stepper/css/bs-stepper.min.css">
     <!-- dropzonejs -->
     <link rel="stylesheet" href="/assets/plugins/dropzone/min/dropzone.min.css">
     <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="/assets/plugins/highcharts/darkunica.css">
- 
+
     <link rel="stylesheet" href="/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- <link rel="stylesheet" href="/assets/plugins/tabledata/table.min.css"> -->
+
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
@@ -120,23 +122,54 @@
     
     <script>
         $(function() {
-            $("#tableData").DataTable({
+            $("#example1").DataTable({
                 "responsive": true,
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
                 "autoWidth": false,
+                "searching": false
                 
-            }).buttons().container().appendTo('#tableData_wrapper .col-md-6:eq(0)');
+            });
             $('#example2').DataTable({
-                "paging": false,
+                "responsive": true,
                 "lengthChange": false,
-                "searching": false,
-                "ordering": true,
+                "paging": false,
                 "info": false,
                 "autoWidth": false,
+                "searching": false
+            });
+            $('#example3').DataTable({
                 "responsive": true,
-                "buttons": ["csv", "excel", "print", "colvis"]
+                "lengthChange": false,
+                "paging": false,
+                "info": false,
+                "autoWidth": false,
+                "searching": false
+            });
+            $('#example4').DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "paging": false,
+                "info": false,
+                "autoWidth": false,
+                "searching": false
+            });
+            $('#example5').DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "paging": false,
+                "info": false,
+                "autoWidth": false,
+                "searching": false
+            });
+            $('#example6').DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "paging": false,
+                "info": false,
+                "autoWidth": false,
+                "searching": false
             });
         });
     </script>

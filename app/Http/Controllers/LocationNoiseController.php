@@ -37,7 +37,7 @@ class LocationNoiseController extends Controller
        
         try {
             Excel::import(new LocationImport, public_path('/EnviroDatabase/'.$nameFile));
-            return redirect('/dashboard/dustgauge/noisemeter/noise/locationnoise')->with('success','New data noise has been Imported!');
+            return redirect('/airquality/noisemeter/noise/locationnoise')->with('success','New data noise has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
              return back()->withFailures($e->failures());
@@ -124,7 +124,7 @@ class LocationNoiseController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         Lokasi::where('id', $locationnoise->id)
             ->update($validatedData);
-        return redirect('/dashborad/dustgauge/noisemeter/noise/location')->with('success', ' code Location noise meter has been updated!');
+        return redirect('/airquality/noisemeter/noise/locationnoise')->with('success', ' code Location noise meter has been updated!');
     }
 
     /**
@@ -136,6 +136,6 @@ class LocationNoiseController extends Controller
     public function destroy(lokasi $locationnoise)
     {
         Lokasi::destroy($locationnoise->id);
-        return redirect('/dashborad/dustgauge/noisemeter/noise/location')->with('success',' code location noise meter has been deleted!');
+        return redirect('/airquality/noisemeter/noise/locationnoise')->with('success',' code location noise meter has been deleted!');
     }
 }

@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Input {{ $breadcrumb }}</h1>
+                    <h1> {{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,8 +22,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-default">
-                <div class="card-header p-0 pt-1">
+            <div class="card card-primary card-outline">
+                <div class="card-header pt-1">
 
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
@@ -32,6 +32,7 @@
                         {{ session('success') }}
                     </div>
                     @endif
+                    <div class="card-title ">Form input</div>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -166,7 +167,7 @@
                         </div>
                         <!-- /.row -->
                         <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
+                            <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
                         </div>
                     </form>
 

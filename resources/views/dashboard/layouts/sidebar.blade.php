@@ -29,7 +29,7 @@
                 @endcan
                 <li class="nav-item {{ Request::is('hydrometric*') ? 'menu-open' : '' }}    ">
                     <a href="#" class="nav-link  {{ Request::is('hydrometric*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fas fa-water"></i> -->
+                        <i class="nav-icon fas fa-gauge-high"></i>
 
                         <p>
                             Hydrometric
@@ -45,7 +45,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
+                            <a href="/hydrometric/dischargemanual" class="nav-link {{ Request::is('hydrometric/dischargemanual*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
 
                                 <p>Water discharge (Manual) </p>
@@ -62,7 +62,7 @@
                 </li>
                 <li class="nav-item {{ Request::is('surfacewater*') ? 'menu-open' : '' }}    ">
                     <a href="#" class="nav-link  {{ Request::is('surfacewater*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fas fa-water"></i> -->
+                        <i class="nav-icon fas fa-water"></i>
 
                         <p>
                             Surface Water
@@ -85,7 +85,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ Request::is('dashboard/marine*') ? 'active' : '' }}">
+                            <a href="/surfacewater/marinesurfacewater" class="nav-link {{ Request::is('surfacewater/marinesurfacewater*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
 
                                 <p>Marine Monitoring</p>
@@ -95,7 +95,7 @@
                 </li>
                 <li class="nav-item {{ Request::is('groundwater*') ? 'menu-open' : '' }}    ">
                     <a href="#" class="nav-link  {{ Request::is('groundwater*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fa-solid fa-arrow-up-from-ground-water"></i> -->
+                        <i class="nav-icon fa-solid fa-arrow-up-from-ground-water"></i>
 
                         <p>
                             Ground Water
@@ -129,15 +129,46 @@
 
                     </ul>
                 </li>
+                <li class="nav-item {{ Request::is('weather*') ? 'menu-open' : '' }}    ">
+                    <a href="#" class="nav-link  {{ Request::is('weather*') ? 'active' : '' }}">
+                      
+                        <i class="fa-solid fa-cloud-sun-rain nav-icon"></i>
+                        <p>
+                        Weather
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/weather/rainfall" class="nav-link  {{ Request::is('weather/rainfall*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Rainfall</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/weather/evaporation" class="nav-link  {{ Request::is('weather/evaporation*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Evaporation</p>
+                            </a>
+                        </li>                      
+                    </ul>
+                </li>
+                
                 <li class="nav-item">
-                    <a href="/Tailing" class="nav-link btn-sm btn-sm {{ Request::is('tailing*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fas fa-home"></i> -->
+                    <a href="/wastewater" class="nav-link btn-sm btn-sm {{ Request::is('wastewater*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-biohazard"></i>
+                        <p>Waste Water</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/tailing" class="nav-link btn-sm btn-sm {{ Request::is('tailing*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-mound"></i>
                         <p>Tailing</p>
                     </a>
                 </li>
                 <li class="nav-item {{ Request::is('airquality*') ? 'menu-open' : '' }}    ">
                     <a href="#" class="nav-link  {{ Request::is('airquality*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fa-solid fa-wind"></i> -->
+                        <i class="nav-icon fa-solid fa-wind"></i>
 
                         <p>
                             Air Quality
@@ -152,13 +183,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link  {{ Request::is('airquality/ambient*') ? 'active' : '' }}">
+                            <a href="/airquality/ambien" class="nav-link  {{ Request::is('airquality/ambien*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
-                                <p>Ambient Monitoring</p>
+                                <p>Ambien Monitoring</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link  {{ Request::is('airquality/emission*') ? 'active' : '' }}">
+                            <a href="/airquality/emission" class="nav-link  {{ Request::is('airquality/emission*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
                                 <p>Emission Monitoring</p>
                             </a>
@@ -194,7 +225,7 @@
                 </li>
                 <li class="nav-item {{ Request::is('monitoring*') ? 'menu-open' : '' }}    ">
                     <a href="#" class="nav-link  {{ Request::is('monitoring*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fa-solid fa-fish-fins"></i> -->
+                        <i class="nav-icon fa-solid fa-fish-fins"></i>
                         <p>
                             Biota Sampling
                             <i class="fas fa-angle-left right"></i>
@@ -232,8 +263,8 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link btn-sm btn-sm {{ Request::is('soilquality*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fa-solid fa-explosion"></i> -->
+                    <a href="/soilquality" class="nav-link btn-sm btn-sm {{ Request::is('soilquality*') ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-earth-asia"></i>
                         <p>
                             Soil Quality
 
@@ -243,7 +274,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/blasting" class="nav-link btn-sm btn-sm {{ Request::is('blasting*') ? 'active' : '' }}">
-                        <!-- <i class="nav-icon fa-solid fa-explosion"></i> -->
+                        <i class="nav-icon fa-solid fa-explosion"></i>
                         <p>
                             Blasting
 

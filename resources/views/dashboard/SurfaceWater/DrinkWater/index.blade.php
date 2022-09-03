@@ -16,8 +16,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-primary card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -51,522 +51,606 @@
                     </table>
 
                     @endif
-                    <a href="/surfacewater/drinkwater/pointid" class="btn bg-gradient-info btn-xs ">Code Sample</a>
-                    <a href="/surfacewater/drinkwater/quantity" class="btn bg-gradient-info btn-xs  ">Table Standard</a>
+                    <a href="/surfacewater/drinkwater/pointid" class="btn bg-gradient-info btn-xs ml-2 my-2">Code Sample</a>
+                    <a href="/surfacewater/drinkwater/quantity" class="btn bg-gradient-info btn-xs my-2 ">Table Standard</a>
                 </div>
                 <div class="card-body">
                     <div class="content">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="/surfacewater/drinkwater/create" class="btn bg-gradient-secondary btn-xs"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                    <a href="/export/drinkwater" class="btn  bg-gradient-secondary btn-xs" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                                    <a href="#" class="btn  bg-gradient-secondary btn-xs" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
-                                    <div class="card-tools row d-flex">
-                                        <form action="/surfacewater/drinkwater" class="form-inline" autocomplete="off">
-                                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                                            </div>
-                                            <span class="input-group-text form-control-sm ">To</span>
 
-                                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
-                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                            </div>
-                                            <div style="width: 118px;" class="input-group mr-1">
-                                                <select class="form-control form-control-sm " name="search">
-                                                    <option value="" selected>Code Sample</option>
-                                                    @foreach ($code_units as $code)
-                                                    @if ( request('search')==$code->nama)
-                                                    <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
-                                                    @else
-                                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                                    @endif
-                                                    @endforeach
-                                                </select>
-                                            </div>
-
-
-
-                                            <div class="mr-2">
-                                                <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                            </div>
-                                        </form>
-                                        <form action="/surfacewater/drinkwater">
-                                            <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                                        </form>
-
+                        <div class="row mb-2 p-0">
+                            <div class="col-6 col-md-4 form-inline">
+                                <a href="/surfacewater/drinkwater/create" class="btn bg-gradient-secondary btn-xs mr-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                <a href="/export/drinkwater" class="btn  bg-gradient-secondary btn-xs mr-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                <a href="#" class="btn  bg-gradient-secondary btn-xs mr-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
+                            </div>
+                            <div class="col-12 col-md-8 d-flex justify-content-end form-inline">
+                                <form action="/surfacewater/drinkwater" class="form-inline" autocomplete="off">
+                                    <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                        <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                     </div>
-                                </div>
-                                @if($DrinkWater->count())
+                                    <span class="input-group-text form-control-sm ">To</span>
 
-                                <ul class="nav nav-tabs mt-2" id="custom-content-above-tab" role="tablist">
-                                    <li class="nav-item">
-                                        <a style="color:#581845" class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a style="color:#581845" class="nav-link" id="custom-content-above-Anions-tab" data-toggle="pill" href="#custom-content-above-Anions" role="tab" aria-controls="custom-content-above-Anions" aria-selected="false">Anions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a style="color:#581845" class="nav-link" id="custom-content-above-Cyanide-tab" data-toggle="pill" href="#custom-content-above-Cyanide" role="tab" aria-controls="custom-content-above-Cyanide" aria-selected="false">Cyanide</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a style="color:#581845" class="nav-link" id="custom-content-above-nutrients-tab" data-toggle="pill" href="#custom-content-above-nutrients" role="tab" aria-controls="custom-content-above-nutrients" aria-selected="false">Nutrients</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a style="color:#581845" class="nav-link" id="custom-content-above-dissolved-tab" data-toggle="pill" href="#custom-content-above-dissolved" role="tab" aria-controls="custom-content-above-dissolved" aria-selected="false">Dissolved Metals</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a style="color:#581845" class="nav-link" id="custom-content-above-microbiology-tab" data-toggle="pill" href="#custom-content-above-microbiology" role="tab" aria-controls="custom-content-above-microbiology" aria-selected="false">Microbiology</a>
-                                    </li>
-
-                                </ul>
-
-                                <div class="tab-content" id="custom-content-above-tabContent">
-
-                                    <div class="tab-pane fade show active" id="custom-content-above-Physical" role="tabpanel" aria-labelledby="custom-content-above-Physical-tab">
-                                        <div class="card">
-
-                                            <div class="card-body table-responsive">
-                                                <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th colspan="2">Quality Standard</th>
-                                                            <th>Conductivity</th>
-                                                            <th>TDS</th>
-                                                            <th>TSS</th>
-                                                            <th>Turbidity</th>
-                                                            <th>Hardness</th>
-                                                            <th>Color</th>
-                                                            <th>Odor</th>
-                                                            <th>Taste</th>
-
-                                                        </tr>
-                                                        @php
-                                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStandard as $standard)
-                                                        <tr style="background-color: #eee8cd">
-                                                            <td>{{$no++}}</td>
-                                                            <th colspan="2">{{$standard->nama}}</th>
-                                                            <td>{{$standard->conductivity}}</td>
-                                                            <td>{{$standard->tds}}</td>
-                                                            <td>{{$standard->tss}}</td>
-                                                            <td>{{$standard->turbidity}}</td>
-                                                            <td>{{$standard->hardness}}</td>
-                                                            <td>{{$standard->color}}</td>
-                                                            <td>{{$standard->odor}}</td>
-                                                            <td>{{$standard->taste}}</td>
-
-                                                        </tr>
-                                                        @endforeach
-
-                                                    </thead>
-                                                    <tbody style="text-align:center">
-                                                        @php
-                                                        $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
-                                                        @endphp
-                                                        <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                            <th>*</th>
-                                                            <th>Name</th>
-                                                            <th>Date</th>
-                                                            <th colspan="8">Data Entry</th>
-                                                            <th>Action</th>
-
-                                                        </tr>
-                                                        @foreach($DrinkWater as $item)
-                                                        <tr style=" color:#581845;font-size: 10px">
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->PointId->nama}}</td>
-                                                            <td>{{date('d-M-Y',strtotime($item->date))}}</td>
-                                                            <td>{{$item->conductivity}}</td>
-                                                            <td>{{$item->tds}}</td>
-                                                            <td>{{$item->tss}}</td>
-                                                            <td>{{$item->turbidity}}</td>
-                                                            <td>{{$item->hardness}}</td>
-                                                            <td>{{$item->color}}</td>
-                                                            <td>{{$item->odor}}</td>
-                                                            <td>{{$item->taste}}</td>
-                                                            <td>
-                                                                <a href="/surfacewater/drinkwater/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                    <i class="fas fa-pen"></i>
-                                                                </a>
-                                                                <form action="/surfacewater/drinkwater/{{ $item->id }}" method="POST" class="d-inline">
-                                                                    @method('delete')
-                                                                    @csrf
-                                                                    <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                        <i class="fas fa-trash"></i>
-                                                                    </button>
-                                                                </form>
-                                                            </td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
+                                    <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                        <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                     </div>
-                                    <div class="tab-pane fade" id="custom-content-above-Anions" role="tabpanel" aria-labelledby="custom-content-above-Anions-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th colspan="2">Quality Standard</th>
-                                                            <th>pH</th>
-                                                            <th>Chloride (Cl)</th>
-                                                            <th>Fluoride (F)</th>
-                                                            <th>Residual Chlorine</th>
-                                                            <th>Sulphate (SO4)</th>
-                                                            <th>Sulphite (H2S)</th>
-                                                        </tr>
-                                                        @php
-                                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStandard as $standard)
-                                                        <tr style="background-color: #eee8cd">
-                                                            <td>{{$no++}}</td>
-                                                            <th colspan="2" colspan="2">{{$standard->nama}}</th>
-                                                            <th>{{$standard->ph}}</th>
-                                                            <td>{{$standard->chloride}}</td>
-                                                            <td>{{$standard->fluoride}}</td>
-                                                            <td>{{$standard->residual_chlorine}}</td>
-                                                            <td>{{$standard->sulphate}}</td>
-                                                            <td>{{$standard->sulphite}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </thead>
-                                                    <tbody style="text-align:center">
-                                                        @php
-                                                        $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
-                                                        @endphp
-                                                        <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                            <th>*</th>
-                                                            <th>Name</th>
-                                                            <th>Date</th>
-                                                            <th colspan="6">Data Entry</th>
-                                                        </tr>
-                                                        @foreach($DrinkWater as $item)
-                                                        <tr style=" color:#581845;font-size: 10px">
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->PointId->nama}}</td>
-                                                            <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                            <td>{{$item->ph}}</td>
-                                                            <td>{{$item->chloride}}</td>
-                                                            <td>{{$item->fluoride}}</td>
-                                                            <td>{{$item->residual_chlorine}}</td>
-                                                            <td>{{$item->sulphate}}</td>
-                                                            <td>{{$item->sulphite}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="custom-content-above-Cyanide" role="tabpanel" aria-labelledby="custom-content-above-Cyanide-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th colspan="2">Quality Standard</th>
-                                                            <th>Free Cyanide (FCN)</th>
-                                                            <th>Total Cyanide (CN Tot)</th>
-                                                            <th>WAD Cyanide (CN Wad)</th>
-                                                        </tr>
-                                                        @php
-                                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStandard as $standard)
-                                                        <tr style="background-color: #eee8cd">
-                                                            <td>{{$no++}}</td>
-                                                            <td colspan="2">{{$standard->nama}}</td>
-                                                            <th>{{$standard->free_cyanide}}</th>
-                                                            <td>{{$standard->total_cyanide}}</td>
-                                                            <td>{{$standard->wad_cyanide}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </thead>
-                                                    <tbody style="text-align:center">
-                                                        @php
-                                                        $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
-                                                        @endphp
-                                                        <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                            <th>*</th>
-                                                            <th>Name</th>
-                                                            <th>Date</th>
-                                                            <th colspan="3">Data Entry</th>
-                                                        </tr>
-                                                        @foreach($DrinkWater as $item)
-                                                        <tr style=" color:#581845;font-size: 10px">
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->PointId->nama}}</td>
-                                                            <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                            <td>{{$item->free_cyanide}}</td>
-                                                            <td>{{$item->total_cyanide}}</td>
-                                                            <td>{{$item->wad_cyanide}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="tab-pane fade" id="custom-content-above-nutrients" role="tabpanel" aria-labelledby="custom-content-above-nutrients-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th colspan="2">Quality Standard</th>
-                                                            <th>Ammonia (NH4)</th>
-                                                            <th>Ammonia (N-NH3)</th>
-                                                            <th>Nitrate (NO3)</th>
-                                                            <th>Nitrite (NO2)</th>
-                                                            <th>Phosphate (PO4)</th>
-                                                        </tr>
-                                                        @php
-                                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStandard as $standard)
-                                                        <tr style="background-color: #eee8cd">
-                                                            <td>{{$no++}}</td>
-                                                            <th colspan="2">{{$standard->nama}}</th>
-                                                            <td>{{$standard->ammonia_nh4}}</td>
-                                                            <td>{{$standard->ammonia_nnh3}}</td>
-                                                            <td>{{$standard->nitrate_no3}}</td>
-                                                            <td>{{$standard->nitrate_no2}}</td>
-                                                            <td>{{$standard->phosphate_po4}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </thead>
-                                                    <tbody style="text-align:center">
-                                                        @php
-                                                        $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
-                                                        @endphp
-                                                        <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                            <th>*</th>
-                                                            <th>Name</th>
-                                                            <th>Date</th>
-                                                            <th colspan="5">Data Entry</th>
-                                                        </tr>
-                                                        @foreach($DrinkWater as $item)
-                                                        <tr style=" color:#581845;font-size: 10px">
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->PointId->nama}}</td>
-                                                            <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                            <td>{{$item->ammonia_nh4}}</td>
-                                                            <td>{{$item->ammonia_nnh3}}</td>
-                                                            <td>{{$item->nitrate_no3}}</td>
-                                                            <td>{{$item->nitrate_no2}}</td>
-                                                            <td>{{$item->phosphate_po4 }}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade " id="custom-content-above-dissolved" role="tabpanel" aria-labelledby="custom-content-above-dissolved-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th colspan="2">Quality Standard</th>
-                                                            <th>Aluminium (Al)</th>
-                                                            <th>Arsenic (As)</th>
-                                                            <th>Barium (Ba)</th>
-                                                            <th>Cadmium (Cd)</th>
-                                                            <th>Chromium (Cr)</th>
-                                                            <th>Chromium Hexavalent (Cr6+)</th>
-                                                            <th>Cobalt (Co)</th>
-                                                            <th>Copper (Cu)</th>
-                                                            <th>Iron (Fe)</th>
-                                                            <th>Lead (Pb)</th>
-                                                            <th>Manganese (Mn)</th>
-                                                            <th>Mercury (Hg)</th>
-                                                            <th>Nickel (Ni)</th>
-                                                            <th>Selenium (Se)</th>
-                                                            <th>Silver (Ag)</th>
-                                                            <th>Zinc (Zn)</th>
-                                                        </tr>
-                                                        @php
-                                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStandard as $standard)
-                                                        <tr style="background-color: #eee8cd">
-                                                            <td>{{$no++}}</td>
-                                                            <th colspan="2">{{$standard->nama}}</th>
-                                                            <td>{{$standard->aluminium_al}}</td>
-                                                            <td>{{$standard->arsenic_as}}</td>
-                                                            <td>{{$standard->barium_ba}}</td>
-                                                            <td>{{$standard->cadmium_cd}}</td>
-                                                            <td>{{$standard->chromium_cr}}</td>
-                                                            <td>{{$standard->chromium_hexavalent}}</td>
-                                                            <td>{{$standard->cobalt_co}}</td>
-                                                            <td>{{$standard->copper_cu}}</td>
-                                                            <td>{{$standard->iron_fe}}</td>
-                                                            <td>{{$standard->lead_pb}}</td>
-                                                            <td>{{$standard->manganese_mn}}</td>
-                                                            <td>{{$standard->mercury_hg}}</td>
-                                                            <td>{{$standard->nickel_ni}}</td>
-                                                            <td>{{$standard->selenium_se}}</td>
-                                                            <td>{{$standard->silver_ag}}</td>
-                                                            <td>{{$standard->zinc_zn}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </thead>
-                                                    <tbody style="text-align:center">
-                                                        @php
-                                                        $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
-                                                        @endphp
-                                                        <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                            <th>*</th>
-                                                            <th>Name</th>
-                                                            <th>Date</th>
-                                                            <th colspan="16">Data Entry</th>
-                                                        </tr>
-                                                        @foreach($DrinkWater as $item)
-                                                        <tr style=" color:#581845;font-size: 10px">
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->PointId->nama}}</td>
-                                                            <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                            <td>{{$item->aluminium_al}}</td>
-                                                            <td>{{$item->arsenic_as}}</td>
-                                                            <td>{{$item->barium_ba}}</td>
-                                                            <td>{{$item->cadmium_cd}}</td>
-                                                            <td>{{$item->chromium_cr}}</td>
-                                                            <td>{{$item->chromium_hexavalent}}</td>
-                                                            <td>{{$item->cobalt_co}}</td>
-                                                            <td>{{$item->copper_cu}}</td>
-                                                            <td>{{$item->iron_fe}}</td>
-                                                            <td>{{$item->lead_pb}}</td>
-                                                            <td>{{$item->manganese_mn}}</td>
-                                                            <td>{{$item->mercury_hg}}</td>
-                                                            <td>{{$item->nickel_ni}}</td>
-                                                            <td>{{$item->selenium_se}}</td>
-                                                            <td>{{$item->silver_ag}}</td>
-                                                            <td>{{$item->zinc_zn}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="custom-content-above-microbiology" role="tabpanel" aria-labelledby="custom-content-above-microbiology-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th colspan="2">Quality Standard</th>
-                                                            <th>Fecal Coliform</th>
-                                                            <th>E- Coli</th>
-                                                            <th>Total Coliform Bacteria </th>
-                                                        </tr>
-                                                        @php
-                                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStandard as $standard)
-                                                        <tr style="background-color: #eee8cd">
-                                                            <td>{{$no++}}</td>
-                                                            <th colspan="2">{{$standard->nama}}</th>
-                                                            <td>{{$standard->fecal_coliform}}</td>
-                                                            <td>{{$standard->c_coli}}</td>
-                                                            <td>{{$standard->total_coliform_bacteria}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </thead>
-                                                    <tbody style="text-align:center">
-                                                        @php
-                                                        $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
-                                                        @endphp
-                                                        <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                            <th>*</th>
-                                                            <th>Name</th>
-                                                            <th>Date</th>
-                                                            <th colspan="3">Data Entry</th>
-                                                        </tr>
-                                                        @foreach($DrinkWater as $item)
-                                                        <tr style=" color:#581845;font-size: 10px">
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->PointId->nama}}</td>
-                                                            <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                            <td>{{$item->fecal_coliform}}</td>
-                                                            <td>{{$item->c_coli}}</td>
-                                                            <td>{{$item->total_coliform_bacteria}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-                                        </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search">
+                                            <option value="" selected>Code Sample</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
                                     </div>
 
-                                </div>
-                                <div class="card-footer">
-                                    <div class="card-tools row form-inline">
-                                        <div class="col-4">
-                                            <div class="d-flex justify-content-start">
-                                                <small>Showing {{ $DrinkWater->firstItem() }} to
-                                                    {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div style="font-size: 8" class="d-flex justify-content-end">
-                                                {{ $DrinkWater->links() }}
-                                            </div>
-                                        </div>
+
+
+                                    <div class="mr-2">
+                                        <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                     </div>
-                                </div>
-                                @else
-                                <p class="text-center fs-4">Not Data Found</p>
-                                @endif
-                                <div class="modal fade" id="modal-default">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Import Data</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <form action="/import/drinkwater" method="POST" enctype="multipart/form-data">
-                                                @csrf
-                                                <div class="modal-body">
-                                                    <div class="custom-file">
-                                                        <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
-                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                                        @error('file')
-                                                        <span class=" invalid-feedback ">{{ $message }}</span>
-                                                        @enderror
-                                                    </div>
-
-                                                </div>
-                                                <div class="modal-footer justify-content-between">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">Import</button>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                                </form>
+                                <form action="/surfacewater/drinkwater">
+                                    <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                                </form>
                             </div>
                         </div>
+
+                        <div class="col-12">
+
+
+
+                            <ul class="nav nav-tabs mt-2" id="custom-content-above-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a style="color:#581845" class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color:#581845" class="nav-link" id="custom-content-above-Anions-tab" data-toggle="pill" href="#custom-content-above-Anions" role="tab" aria-controls="custom-content-above-Anions" aria-selected="false">Anions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color:#581845" class="nav-link" id="custom-content-above-Cyanide-tab" data-toggle="pill" href="#custom-content-above-Cyanide" role="tab" aria-controls="custom-content-above-Cyanide" aria-selected="false">Cyanide</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color:#581845" class="nav-link" id="custom-content-above-nutrients-tab" data-toggle="pill" href="#custom-content-above-nutrients" role="tab" aria-controls="custom-content-above-nutrients" aria-selected="false">Nutrients</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color:#581845" class="nav-link" id="custom-content-above-dissolved-tab" data-toggle="pill" href="#custom-content-above-dissolved" role="tab" aria-controls="custom-content-above-dissolved" aria-selected="false">Dissolved Metals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color:#581845" class="nav-link" id="custom-content-above-microbiology-tab" data-toggle="pill" href="#custom-content-above-microbiology" role="tab" aria-controls="custom-content-above-microbiology" aria-selected="false">Microbiology</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" id="custom-content-above-tabContent">
+                                @if($DrinkWater->count() && $code_units->count())
+
+                                <div class="tab-pane fade show active" id="custom-content-above-Physical" role="tabpanel" aria-labelledby="custom-content-above-Physical-tab">
+                                    <div class=" mt-3 card">
+
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 11px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th colspan="2">Quality Standard</th>
+                                                        <th>Conductivity</th>
+                                                        <th>TDS</th>
+                                                        <th>TSS</th>
+                                                        <th>Turbidity</th>
+                                                        <th>Hardness</th>
+                                                        <th>Color</th>
+                                                        <th>Odor</th>
+                                                        <th>Taste</th>
+
+                                                    </tr>
+                                                    @php
+                                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStandard as $standard)
+                                                    <tr style="background-color: #1d7bb6;color:wheat">
+                                                        <td>{{$no++}}</td>
+                                                        <th colspan="2">{{$standard->nama}}</th>
+                                                        <td>{{$standard->conductivity}}</td>
+                                                        <td>{{$standard->tds}}</td>
+                                                        <td>{{$standard->tss}}</td>
+                                                        <td>{{$standard->turbidity}}</td>
+                                                        <td>{{$standard->hardness}}</td>
+                                                        <td>{{$standard->color}}</td>
+                                                        <td>{{$standard->odor}}</td>
+                                                        <td>{{$standard->taste}}</td>
+
+                                                    </tr>
+                                                    @endforeach
+
+                                                </thead>
+                                                <tbody style="text-align:center">
+                                                    @php
+                                                    $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
+                                                    @endphp
+                                                    <tr style="background-color: #b3dbf6;font-size: 11px">
+                                                        <th>*</th>
+                                                        <th>Name</th>
+                                                        <th>Date</th>
+                                                        <th colspan="8">Data Entry</th>
+                                                        <th>Action</th>
+
+                                                    </tr>
+                                                    @foreach($DrinkWater as $item)
+                                                    <tr style=" color:#581845;font-size: 11px">
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td>{{$item->conductivity}}</td>
+                                                        <td>{{$item->tds}}</td>
+                                                        <td>{{$item->tss}}</td>
+                                                        <td>{{$item->turbidity}}</td>
+                                                        <td>{{$item->hardness}}</td>
+                                                        <td>{{$item->color}}</td>
+                                                        <td>{{$item->odor}}</td>
+                                                        <td>{{$item->taste}}</td>
+                                                        <td>
+                                                            <a href="/surfacewater/drinkwater/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <i class="fas fa-pen"></i>
+                                                            </a>
+                                                            <form action="/surfacewater/drinkwater/{{ $item->id }}" method="POST" class="d-inline">
+                                                                @method('delete')
+                                                                @csrf
+                                                                <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-tools row form-inline">
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-start">
+                                                        <small>Showing {{ $DrinkWater->firstItem() }} to
+                                                            {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div style="font-size: 8" class="d-flex justify-content-end">
+                                                        {{ $DrinkWater->links() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-content-above-Anions" role="tabpanel" aria-labelledby="custom-content-above-Anions-tab">
+                                    <div class="card mt-2">
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 11px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th colspan="2">Quality Standard</th>
+                                                        <th>pH</th>
+                                                        <th>Chloride (Cl)</th>
+                                                        <th>Fluoride (F)</th>
+                                                        <th>Residual Chlorine</th>
+                                                        <th>Sulphate (SO4)</th>
+                                                        <th>Sulphite (H2S)</th>
+                                                    </tr>
+                                                    @php
+                                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStandard as $standard)
+                                                    <tr style="background-color: #1d7bb6;color:wheat">
+                                                        <td>{{$no++}}</td>
+                                                        <th colspan="2" colspan="2">{{$standard->nama}}</th>
+                                                        <th>{{$standard->ph}}</th>
+                                                        <td>{{$standard->chloride}}</td>
+                                                        <td>{{$standard->fluoride}}</td>
+                                                        <td>{{$standard->residual_chlorine}}</td>
+                                                        <td>{{$standard->sulphate}}</td>
+                                                        <td>{{$standard->sulphite}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </thead>
+                                                <tbody style="text-align:center">
+                                                    @php
+                                                    $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
+                                                    @endphp
+                                                    <tr style="background-color: #b3dbf6;font-size: 11px">
+                                                        <th>*</th>
+                                                        <th>Name</th>
+                                                        <th>Date</th>
+                                                        <th colspan="6">Data Entry</th>
+                                                    </tr>
+                                                    @foreach($DrinkWater as $item)
+                                                    <tr style=" color:#581845;font-size: 11px">
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td>{{$item->ph}}</td>
+                                                        <td>{{$item->chloride}}</td>
+                                                        <td>{{$item->fluoride}}</td>
+                                                        <td>{{$item->residual_chlorine}}</td>
+                                                        <td>{{$item->sulphate}}</td>
+                                                        <td>{{$item->sulphite}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-tools row form-inline">
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-start">
+                                                        <small>Showing {{ $DrinkWater->firstItem() }} to
+                                                            {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div style="font-size: 8" class="d-flex justify-content-end">
+                                                        {{ $DrinkWater->links() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-content-above-Cyanide" role="tabpanel" aria-labelledby="custom-content-above-Cyanide-tab">
+                                    <div class="card mt-2">
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 11px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th colspan="2">Quality Standard</th>
+                                                        <th>Free Cyanide (FCN)</th>
+                                                        <th>Total Cyanide (CN Tot)</th>
+                                                        <th>WAD Cyanide (CN Wad)</th>
+                                                    </tr>
+                                                    @php
+                                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStandard as $standard)
+                                                    <tr style="background-color: #1d7bb6;color:wheat">
+                                                        <th>{{$no++}}</th>
+                                                        <th colspan="2">{{$standard->nama}}</th>
+                                                        <th>{{$standard->free_cyanide}}</th>
+                                                        <th>{{$standard->total_cyanide}}</th>
+                                                        <th>{{$standard->wad_cyanide}}</th>
+                                                    </tr>
+                                                    @endforeach
+                                                </thead>
+                                                <tbody style="text-align:center">
+                                                    @php
+                                                    $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
+                                                    @endphp
+                                                    <tr style="background-color: #b3dbf6;font-size: 11px">
+                                                        <th>*</th>
+                                                        <th>Name</th>
+                                                        <th>Date</th>
+                                                        <th colspan="3">Data Entry</th>
+                                                    </tr>
+                                                    @foreach($DrinkWater as $item)
+                                                    <tr style=" color:#581845;font-size: 11px">
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td>{{$item->free_cyanide}}</td>
+                                                        <td>{{$item->total_cyanide}}</td>
+                                                        <td>{{$item->wad_cyanide}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-tools row form-inline">
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-start">
+                                                        <small>Showing {{ $DrinkWater->firstItem() }} to
+                                                            {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div style="font-size: 8" class="d-flex justify-content-end">
+                                                        {{ $DrinkWater->links() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="custom-content-above-nutrients" role="tabpanel" aria-labelledby="custom-content-above-nutrients-tab">
+                                    <div class="card mt-2">
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 11px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th colspan="2">Quality Standard</th>
+                                                        <th>Ammonia (NH4)</th>
+                                                        <th>Ammonia (N-NH3)</th>
+                                                        <th>Nitrate (NO3)</th>
+                                                        <th>Nitrite (NO2)</th>
+                                                        <th>Phosphate (PO4)</th>
+                                                    </tr>
+                                                    @php
+                                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStandard as $standard)
+                                                    <tr style="background-color: #1d7bb6;color:wheat">
+                                                        <td>{{$no++}}</td>
+                                                        <th colspan="2">{{$standard->nama}}</th>
+                                                        <td>{{$standard->ammonia_nh4}}</td>
+                                                        <td>{{$standard->ammonia_nnh3}}</td>
+                                                        <td>{{$standard->nitrate_no3}}</td>
+                                                        <td>{{$standard->nitrate_no2}}</td>
+                                                        <td>{{$standard->phosphate_po4}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </thead>
+                                                <tbody style="text-align:center">
+                                                    @php
+                                                    $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
+                                                    @endphp
+                                                    <tr style="background-color: #b3dbf6;font-size: 11px">
+                                                        <th>*</th>
+                                                        <th>Name</th>
+                                                        <th>Date</th>
+                                                        <th colspan="5">Data Entry</th>
+                                                    </tr>
+                                                    @foreach($DrinkWater as $item)
+                                                    <tr style=" color:#581845;font-size: 11px">
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td>{{$item->ammonia_nh4}}</td>
+                                                        <td>{{$item->ammonia_nnh3}}</td>
+                                                        <td>{{$item->nitrate_no3}}</td>
+                                                        <td>{{$item->nitrate_no2}}</td>
+                                                        <td>{{$item->phosphate_po4 }}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-tools row form-inline">
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-start">
+                                                        <small>Showing {{ $DrinkWater->firstItem() }} to
+                                                            {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div style="font-size: 8" class="d-flex justify-content-end">
+                                                        {{ $DrinkWater->links() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade " id="custom-content-above-dissolved" role="tabpanel" aria-labelledby="custom-content-above-dissolved-tab">
+                                    <div class="card mt-2">
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 11px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th colspan="2">Quality Standard</th>
+                                                        <th>Aluminium (Al)</th>
+                                                        <th>Arsenic (As)</th>
+                                                        <th>Barium (Ba)</th>
+                                                        <th>Cadmium (Cd)</th>
+                                                        <th>Chromium (Cr)</th>
+                                                        <th>Chromium Hexavalent (Cr6+)</th>
+                                                        <th>Cobalt (Co)</th>
+                                                        <th>Copper (Cu)</th>
+                                                        <th>Iron (Fe)</th>
+                                                        <th>Lead (Pb)</th>
+                                                        <th>Manganese (Mn)</th>
+                                                        <th>Mercury (Hg)</th>
+                                                        <th>Nickel (Ni)</th>
+                                                        <th>Selenium (Se)</th>
+                                                        <th>Silver (Ag)</th>
+                                                        <th>Zinc (Zn)</th>
+                                                    </tr>
+                                                    @php
+                                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStandard as $standard)
+                                                    <tr style="background-color: #1d7bb6;color:wheat">
+                                                        <td>{{$no++}}</td>
+                                                        <th colspan="2">{{$standard->nama}}</th>
+                                                        <td>{{$standard->aluminium_al}}</td>
+                                                        <td>{{$standard->arsenic_as}}</td>
+                                                        <td>{{$standard->barium_ba}}</td>
+                                                        <td>{{$standard->cadmium_cd}}</td>
+                                                        <td>{{$standard->chromium_cr}}</td>
+                                                        <td>{{$standard->chromium_hexavalent}}</td>
+                                                        <td>{{$standard->cobalt_co}}</td>
+                                                        <td>{{$standard->copper_cu}}</td>
+                                                        <td>{{$standard->iron_fe}}</td>
+                                                        <td>{{$standard->lead_pb}}</td>
+                                                        <td>{{$standard->manganese_mn}}</td>
+                                                        <td>{{$standard->mercury_hg}}</td>
+                                                        <td>{{$standard->nickel_ni}}</td>
+                                                        <td>{{$standard->selenium_se}}</td>
+                                                        <td>{{$standard->silver_ag}}</td>
+                                                        <td>{{$standard->zinc_zn}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </thead>
+                                                <tbody style="text-align:center">
+                                                    @php
+                                                    $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
+                                                    @endphp
+                                                    <tr style="background-color: #b3dbf6;font-size: 11px">
+                                                        <th>*</th>
+                                                        <th>Name</th>
+                                                        <th>Date</th>
+                                                        <th colspan="16">Data Entry</th>
+                                                    </tr>
+                                                    @foreach($DrinkWater as $item)
+                                                    <tr style=" color:#581845;font-size: 11px">
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td>{{$item->aluminium_al}}</td>
+                                                        <td>{{$item->arsenic_as}}</td>
+                                                        <td>{{$item->barium_ba}}</td>
+                                                        <td>{{$item->cadmium_cd}}</td>
+                                                        <td>{{$item->chromium_cr}}</td>
+                                                        <td>{{$item->chromium_hexavalent}}</td>
+                                                        <td>{{$item->cobalt_co}}</td>
+                                                        <td>{{$item->copper_cu}}</td>
+                                                        <td>{{$item->iron_fe}}</td>
+                                                        <td>{{$item->lead_pb}}</td>
+                                                        <td>{{$item->manganese_mn}}</td>
+                                                        <td>{{$item->mercury_hg}}</td>
+                                                        <td>{{$item->nickel_ni}}</td>
+                                                        <td>{{$item->selenium_se}}</td>
+                                                        <td>{{$item->silver_ag}}</td>
+                                                        <td>{{$item->zinc_zn}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-tools row form-inline">
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-start">
+                                                        <small>Showing {{ $DrinkWater->firstItem() }} to
+                                                            {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div style="font-size: 8" class="d-flex justify-content-end">
+                                                        {{ $DrinkWater->links() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-content-above-microbiology" role="tabpanel" aria-labelledby="custom-content-above-microbiology-tab">
+                                    <div class="card mt-2">
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 11px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th colspan="2">Quality Standard</th>
+                                                        <th>Fecal Coliform</th>
+                                                        <th>E- Coli</th>
+                                                        <th>Total Coliform Bacteria </th>
+                                                    </tr>
+                                                    @php
+                                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStandard as $standard)
+                                                    <tr style="background-color: #1d7bb6;color:wheat">
+                                                        <td>{{$no++}}</td>
+                                                        <th colspan="2">{{$standard->nama}}</th>
+                                                        <td>{{$standard->fecal_coliform}}</td>
+                                                        <td>{{$standard->c_coli}}</td>
+                                                        <td>{{$standard->total_coliform_bacteria}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </thead>
+                                                <tbody style="text-align:center">
+                                                    @php
+                                                    $no = 1 + ($DrinkWater->currentPage() - 1) * $DrinkWater->perPage();
+                                                    @endphp
+                                                    <tr style="background-color: #b3dbf6;font-size: 11px">
+                                                        <th>*</th>
+                                                        <th>Name</th>
+                                                        <th>Date</th>
+                                                        <th colspan="3">Data Entry</th>
+                                                    </tr>
+                                                    @foreach($DrinkWater as $item)
+                                                    <tr style=" color:#581845;font-size: 11px">
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td>{{$item->fecal_coliform}}</td>
+                                                        <td>{{$item->c_coli}}</td>
+                                                        <td>{{$item->total_coliform_bacteria}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-tools row form-inline">
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-start">
+                                                        <small>Showing {{ $DrinkWater->firstItem() }} to
+                                                            {{ $DrinkWater->lastItem() }} of {{ $DrinkWater->total() }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div style="font-size: 8" class="d-flex justify-content-end">
+                                                        {{ $DrinkWater->links() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            @else
+                            <p class="text-center fs-4">Not Data Found</p>
+                            @endif
+
+                        </div>
                     </div>
+                </div>
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/import/drinkwater" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        @error('file')
+                                        <span class=" invalid-feedback ">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>

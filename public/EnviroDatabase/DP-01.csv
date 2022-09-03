@@ -1,9 +1,9 @@
-standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conductivity,tds,temperatur,salinity,turbidity,tl_wall,tl_tsf,water_condition,water_color,odor,rain,rain_during_sampling,oil_layer,source_pollution,sampler,cyanide,level,lvl_lgr,debit_s,debit_d,remarks
+standard_id,user_id,point_id,date,start_time,stop_time,tss,ph,do,orp,conductivity,tds,temperatur,salinity,turbidity,tl_wall,tl_tsf,water_condition,water_color,odor,rain,rain_during_sampling,oil_layer,source_pollution,sampler,cyanide,level,lvl_lgr,debit_s,debit_d,remarks
 1,1,2,2016-01-01,9:55 AM,10:00 AM,9,7.79,7.1,100,910,592,29.2,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/MU,<0.03,0.5,0,0.026,2246.4,-
 1,1,2,2016-01-02,9:10 AM,9:12 AM,10,7.9,7.2,159,921,584,29.7,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/CR,<0.03,0.5,0,0.019,1641.6,-
 1,1,2,2016-01-03,10:01 AM,10:03 AM,8,7.66,7.08,148,925,597,28.5,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/BK,<0.03,0.49,0,0.008,691.2,-
 1,1,2,2016-01-04,10:20 AM,10:23 AM,5,7.07,7.01,101,874,569,29.7,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,DA/RT/BK,<0.03,0.48,0,0.01,864,-
-1,1,2,2016-01-05,3:40 PM,3:50 PM,5,6.8,6.93,155,894,555,29.6,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/RT/CR,<0.03,0.5,0,0.026,2246.4,Monthly sampling
+1,1,2,2016-01-05,3:40 PM,3:50 PM,5,6.8,6.93,155,894,555,29.6,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/RT/CR,<0.03,0.5,0,0.026,2246.4,-
 1,1,2,2016-01-06,7:49 AM,7:51 AM,7,7.29,6.97,160,939,615,26.8,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,RT,<0.03,0.52,0,0.036,3110.4,-
 1,1,2,2016-01-07,9:35 AM,9:37 AM,4,7,6.98,109,867,563,30.4,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/BK,<0.03,0.52,0,0.036,3110.4,-
 1,1,2,2016-01-08,11:04 AM,11:06 AM,7,7.08,7.21,124,918,592,30.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/CR,<0.03,0.48,0,0.022,1900.8,-
@@ -32,12 +32,10 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-01-31,10:25 AM,10:27 AM,11,7.28,7.14,137,581,390,30.9,0,0,0,0,Pasang,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/RT,<0.03,0.55,0,0.098,8467.2,-
 1,1,2,2016-02-01,9:45 AM,9:47 AM,10,7.3,7.16,140,586,397,30.3,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/RT,<0.03,0.54,0,0.054,4665.6,-
 1,1,2,2016-02-02,8:05 AM,8:07 AM,9,6.93,7.43,295,562,365,27.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/RT,<0.03,0.52,0,0.027,2332.8,-
-1,1,2,2016-02-03,9:47 AM,9:54 AM,10,6.91,7.72,153,709,460,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT/CR,<0.03,0.49,0,0.014,1209.6,Monthly sampling
+1,1,2,2016-02-03,9:47 AM,9:54 AM,10,6.91,7.72,153,709,460,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT/CR,<0.03,0.49,0,0.014,1209.6,-
 1,1,2,2016-02-04,10:14 AM,10:16 AM,10,7.1,7.16,166,716,465,39.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT/CR,<0.03,0.47,0,0.006,518.4,-
 1,1,2,2016-02-05,9:34 AM,9:36 AM,11,7.38,7.2,149,585,380,30.6,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,CR,<0.03,0.48,0,0.003,259.2,-
 1,1,2,2016-02-06,9:43 AM,9:45 AM,7,7.3,7.22,144,586,381,30.1,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,CR,<0.03,0.48,0,0.002,172.8,-
-1,1,2,2016-02-07,9:05 AM,9:07 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT,0,0,0,0,0,-
-1,1,2,2016-02-08,2:29 PM,2:30 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,DA/RT,0,0,0,0,0,-
 1,1,2,2016-02-09,10:09 AM,10:11 AM,5,7.42,6.85,153,683,443,29.9,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.48,0,0.002,172.8,-
 1,1,2,2016-02-10,10:53 AM,10:55 AM,5,7.43,7.36,141,704,457,29.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,RT,<0.03,0.87,0,0.221,19094.4,-
 1,1,2,2016-02-11,8:46 AM,8:48 AM,10,6.81,7.34,276,580,376,28.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,DA/RT,<0.03,0.79,0,0.69,59616,-
@@ -46,12 +44,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-02-14,10:03 AM,10:05 AM,9,6.85,7.3,271,583,378,28,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/RH/RT/BK,<0.03,0.56,0,0.08,6912,-
 1,1,2,2016-02-15,11:37 AM,11:39 AM,8,6.87,7.12,265,581,377,30.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/RT/RH/BK,<0.03,0.49,0,0.072,6220.8,-
 1,1,2,2016-02-16,10:19 AM,10:21 AM,6,7.31,7.18,211,587,381,31.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,CR/BK,<0.03,0.48,0,0.004,345.6,-
-1,1,2,2016-02-17,8:06 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-02-18,8:14 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-02-19,9:44 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-02-20,10:04 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-02-21,8:36 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-02-22,9:43 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2016-02-23,9:57 AM,9:59 AM,8,7.16,6.81,178,564,362,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/CR/RH,<0.03,0.8,0,0.38,32832,-
 1,1,2,2016-02-24,9:47 AM,9:49 AM,12,7.4,7.18,199,586,377,29.9,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,CR/AL,<0.03,0.65,0,0.377,32572.8,-
 1,1,2,2016-02-25,8:52 AM,8:54 AM,9,7.43,7.12,197,582,378,27.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,CR/RH/BK,<0.03,0.59,0,0.168,14515.2,-
@@ -60,47 +52,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-02-28,10:14 AM,10:16 AM,9,7.42,7.19,164,641,413,31.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/AL/CR,<0.03,0.48,0,0.014,1209.6,-
 1,1,2,2016-02-29,10:09 AM,10:11 AM,11,7.3,7.12,166,632,407,31.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/CR,<0.03,0.48,0,0.009,777.6,-
 1,1,2,2016-03-01,10:03 AM,10:05 AM,10,7.34,7.11,165,630,409,30.9,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/CR/RH/BK,<0.03,0.47,0,0.003,259.2,-
-1,1,2,2016-03-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-20,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-03-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
-1,1,2,2016-04-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,toka sediment pond,No Data,0,0,0,0,0,NF
 1,1,2,2016-04-12,10:01 AM,10:03 AM,12,7.18,7.28,216,724,471,31.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/CR,0,0.94,0,0.48,41472,-
 1,1,2,2016-04-13,8:09 AM,8:11 AM,9,6.93,7.28,227,640,412,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/CR/RT,0,0.73,0,0.596,51494.4,-
 1,1,2,2016-04-14,10:33 AM,10:35 AM,10,7.05,7.25,216,623,398,30.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH,0,0.63,0,0.269,23241.6,-
@@ -121,14 +72,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-04-29,8:06 AM,8:09 AM,12,7.11,7.24,266,532,348,30.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,0,0.51,0,0.077,6652.8,-
 1,1,2,2016-04-30,11:43 AM,11:45 AM,9,7.16,7.22,207,519,334,31.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/AL,0,0.47,0,0.009,777.6,-
 1,1,2,2016-05-01,1:57 PM,1:59 PM,9,7.32,7.26,253,518,336,31.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/BK,0,0.47,0,0.002,172.8,-
-1,1,2,2016-05-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-09,10:18 AM,10:20 AM,11,7.16,7.21,321,590,385,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,AP/RT/BK,0,1.09,0,0.765,66096,Monthly sampling
+1,1,2,2016-05-09,10:18 AM,10:20 AM,11,7.16,7.21,321,590,385,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,AP/RT/BK,0,1.09,0,0.765,66096,-
 1,1,2,2016-05-10,8:21 AM,8:23 AM,23,7.4,7.23,263,560,369,28.3,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/BK,0,0.8,0,0.915,79056,-
 1,1,2,2016-05-11,8:19 AM,8:21 AM,8,7.24,6.94,276,510,333,28.9,0,0,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,0,0.67,0,0.32,27648,-
 1,1,2,2016-05-12,8:19 AM,8:21 AM,6,7.27,7.16,244,510,338,29.9,0,0,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,0,0.62,0,0.213,18403.2,-
@@ -142,31 +86,13 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-05-20,10:15 AM,10:17 AM,8,7.22,7.26,218,451,290,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/CR,0,0.53,0,0.092,7948.8,-
 1,1,2,2016-05-21,10:03 AM,10:05 AM,7,7.08,7.18,192,446,289,31.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/AL,0,0.49,0,0.025,2160,-
 1,1,2,2016-05-22,9:42 AM,9:44 AM,9,7.13,6.98,187,452,291,30.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT,0,0.47,0,0.004,345.6,-
-1,1,2,2016-05-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2016-05-24,10:20 AM,10:22 AM,8,7.13,7.11,231,550,357,32,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/BK,0,1.04,0,0.754,65145.6,-
 1,1,2,2016-05-25,10:25 AM,10:27 AM,9,6.7,6.98,230,412,269,30.7,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK,0,0.77,0,0.812,70156.8,-
 1,1,2,2016-05-26,10:29 AM,10:31 AM,11,7.14,7.26,220,611,394,31.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/AP,0,0.6,0,0.277,23932.8,-
 1,1,2,2016-05-27,10:18 AM,10:20 AM,9,7,7.28,207,630,406,30.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,0,0.52,0,0.086,7430.4,-
 1,1,2,2016-05-28,8:26 AM,8:28 AM,9,7.06,7.06,203,627,400,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,ap,0,0.47,0,0.016,1382.4,-
-1,1,2,2016-05-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-05-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2016-06-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2016-06-15,3:00 PM,3:05 PM,7,7.11,7.01,183,683,421,30.2,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/RT,<0.03,0.47,0,0.004,345.6,-
-1,1,2,2016-06-16,1:38 PM,1:40 PM,9,7.39,7.03,174,593,378,32.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/BK/CR,<0.03,0.5,0,0.027,2332.8,Sampling monthly DA/AL
+1,1,2,2016-06-16,1:38 PM,1:40 PM,9,7.39,7.03,174,593,378,32.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/BK/CR,<0.03,0.5,0,0.027,2332.8,-
 1,1,2,2016-06-17,8:57 AM,8:59 AM,10,7.42,7.16,177,590,373,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.5,0,0.035,3024,-
 1,1,2,2016-06-18,3:20 PM,3:21 PM,9,7.44,7.31,185,587,358,30.8,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/DA,<0.03,0.5,0,0.035,3024,-
 1,1,2,2016-06-19,9:01 AM,9:03 AM,8,7.47,7.18,189,716,463,31.6,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,RT,<0.03,0.52,0,0.031,2678.4,-
@@ -182,7 +108,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-06-29,8:28 AM,8:30 AM,9,7.39,7.22,188,709,457,29.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.57,0,0.058,5011.2,-
 1,1,2,2016-06-30,9:07 AM,9:09 AM,8,7.06,7.13,286,594,305,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.52,0,0.093,8035.2,-
 1,1,2,2016-07-01,7:45 AM,7:47 AM,7,7.34,7.06,134,680,440,29.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.49,0,0.019,1641.737,-
-1,1,2,2016-07-02,10:28 AM,10:36 AM,8,7.23,7.14,156,616,402,30.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.56,0,0.044,3809.685,Monthly sampling
+1,1,2,2016-07-02,10:28 AM,10:36 AM,8,7.23,7.14,156,616,402,30.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.56,0,0.044,3809.685,-
 1,1,2,2016-07-03,9:12 AM,9:14 AM,11,7.42,7.16,183,719,460,29,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/CR,<0.03,0.62,0,0.115,9906.009,-
 1,1,2,2016-07-04,9:13 AM,9:15 AM,12,7.4,7.16,184,721,459,29,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/CR,<0.03,0.82,0,0.285,24590.455,-
 1,1,2,2016-07-05,10:10 AM,10:12 AM,11,7.3,7.1,180,714,464,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/CR,<0.03,0.74,0,0.536,46343.46,-
@@ -214,7 +140,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-07-31,9:49 AM,9:51 AM,10,7.26,7.18,166,536,345,30.4,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/CR,<0.03,0.57,0,0.093,8072.119,-
 1,1,2,2016-08-01,10:21 AM,10:23 AM,9,7.3,7.21,174,503,322,29.9,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.56,0,0.08,6877.544,-
 1,1,2,2016-08-02,6:45 AM,6:47 AM,6,7.18,7.1,156,568,345,27.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/CR,<0.03,0.57,0,0.078,6742.711,-
-1,1,2,2016-08-03,10:09 AM,10:12 AM,8,7.62,7.23,110,448,291,30.1,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/RT/BK,<0.03,0.7,0,0.124,10713.258,Monthly sampling
+1,1,2,2016-08-03,10:09 AM,10:12 AM,8,7.62,7.23,110,448,291,30.1,0,0,0,0,Surut,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/RT/BK,<0.03,0.7,0,0.124,10713.258,-
 1,1,2,2016-08-04,10:17 AM,10:19 AM,8,7.54,7.18,112,450,292,30.1,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/DA,<0.03,0.87,0,0.656,56688.148,-
 1,1,2,2016-08-05,8:49 AM,8:51 AM,7,7.42,7.12,118,449,291,29.2,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,DA/RH/RT/BK,<0.03,0.89,0,0.659,56894.527,-
 1,1,2,2016-08-06,11:05 AM,11:07 AM,8,7.38,7.15,120,447,290,29.4,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RH/RT/BK,<0.03,0.76,0,0.603,52114.467,-
@@ -241,12 +167,8 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-08-27,10:10 AM,10:12 AM,7,6.73,7.09,203,490,318,31.5,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/BK,<0.03,0.48,0,0.01,885.993,-
 1,1,2,2016-08-28,10:46 AM,10:47 AM,6,6.83,7.11,207,485,278,28.7,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,DA/BK,<0.03,0.48,0,0.011,954.365,-
 1,1,2,2016-08-29,10:30 AM,10:32 AM,6,7.21,7.04,163,630,409,30.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT/CR,<0.03,0.48,0,0.007,569.73,-
-1,1,2,2016-08-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0.47,0,0,0,NF
-1,1,2,2016-08-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0.48,0,0,0,NF
-1,1,2,2016-09-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0.47,0,0,0,NF
-1,1,2,2016-09-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0.47,0,0,0,NF
 1,1,2,2016-09-03,10:09 AM,10:12 AM,6,7.62,7.23,110,448,291,30.1,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RT/BK,<0.03,0.48,0,0.004,360.142,-
-1,1,2,2016-09-04,9:14 AM,9:16 AM,7,7.34,7.13,174,650,422,29.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.52,0,0.022,1908.443,Monthly sampling
+1,1,2,2016-09-04,9:14 AM,9:16 AM,7,7.34,7.13,174,650,422,29.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.52,0,0.022,1908.443,-
 1,1,2,2016-09-05,8:59 AM,9:01 AM,6,7.48,7.1,168,639,415,29.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.52,0,0.036,3085.902,-
 1,1,2,2016-09-06,7:32 AM,7:34 AM,8,7.34,7.16,150,748,486.2,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/CR,<0.03,0.51,0,0.026,2219.463,-
 1,1,2,2016-09-07,7:02 AM,7:04 AM,6,7.01,7.12,195,580,382,28.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AK/RT,<0.03,0.52,0,0.026,2241.648,-
@@ -276,7 +198,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-10-01,9:10 AM,9:12 AM,10,7.09,7.16,166,642,412,29.8,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/DA,<0.03,0.53,0,0.057,4885.745,-
 1,1,2,2016-10-02,10:08 AM,10:10 AM,9,7.21,7.21,146,643,417,30.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.54,0,0.049,4212.657,-
 1,1,2,2016-10-03,9:30 AM,9:32 AM,11,7.24,7.09,157,659,428,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK,<0.03,0.64,0,0.086,7440.181,-
-1,1,2,2016-10-04,10:18 AM,10:22 AM,11,7.31,7.2,120,650,415,30.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/RT/RH,<0.03,0.67,0,0.219,18900.494,Monthly sampling
+1,1,2,2016-10-04,10:18 AM,10:22 AM,11,7.31,7.2,120,650,415,30.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/RT/RH,<0.03,0.67,0,0.219,18900.494,-
 1,1,2,2016-10-05,7:51 AM,7:53 AM,7,6.95,7.12,220,682,443,28.1,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,BK/RT,<0.03,0.67,0,0.263,22698.623,-
 1,1,2,2016-10-06,9:28 AM,9:30 AM,8,7.18,7.1,156,679,441,30.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/CR,<0.03,0.62,0,0.204,17615.651,-
 1,1,2,2016-10-07,10:23 AM,10:25 AM,8,7.19,7.28,213,611,394,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,DA/AL,<0.03,0.59,0,0.147,12698.177,-
@@ -305,7 +227,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-10-30,11:22 AM,11:24 AM,9,7.28,7.28,180,644,415,36.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/CR,<0.03,0.68,0,0.176,15221.2,-
 1,1,2,2016-10-31,9:00 AM,9:02 AM,10,7.29,7.26,181,630,409,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,CR,<0.03,0.67,0,0.257,22166.348,-
 1,1,2,2016-11-01,7:51 AM,7:53 AM,7,7.25,7.17,181,636,413,29.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH/RT/CR,<0.03,0.72,0,0.253,21844.198,-
-1,1,2,2016-11-02,9:28 AM,9:30 AM,11,6.59,7.2,101,695,451,29.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/RT/RH/CR,<0.03,0.73,0,0.349,30164.488,Monthly sampling
+1,1,2,2016-11-02,9:28 AM,9:30 AM,11,6.59,7.2,101,695,451,29.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/RT/RH/CR,<0.03,0.73,0,0.349,30164.488,-
 1,1,2,2016-11-03,9:26 AM,9:28 AM,9,7.3,7.19,169,716,465,30.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/CR,<0.03,0.68,0,0.333,28797.529,-
 1,1,2,2016-11-04,7:20 AM,7:22 AM,7,7.2,7.04,126,830,589,28.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK/RH,<0.03,0.65,0,0.257,22174.879,-
 1,1,2,2016-11-05,9:35 AM,9:37 AM,7,7.12,7.24,120,890,581,29.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/RH/BK,<0.03,0.64,0,0.225,19434.273,-
@@ -334,7 +256,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-11-28,8:59 AM,9:01 AM,8,7.69,7.21,102,825,532,30.9,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,<0.03,0.62,0,0.19,16392.228,-
 1,1,2,2016-11-29,10:28 AM,10:30 AM,7,7.63,7.3,114,824,535,31,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RT/RH,<0.03,0.61,0,0.166,14322.834,-
 1,1,2,2016-11-30,10:24 AM,10:26 AM,7,7.21,7.28,151,890,578,31.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,No Data,<0.03,0.64,0,0.18,15583.98,-
-1,1,2,2016-12-01,10:13 AM,10:19 AM,7,7.21,6.82,91,875,568,31.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RH/BK/CR,<0.03,0.63,0,0.188,16255.297,Monthly sampling
+1,1,2,2016-12-01,10:13 AM,10:19 AM,7,7.21,6.82,91,875,568,31.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RH/BK/CR,<0.03,0.63,0,0.188,16255.297,-
 1,1,2,2016-12-02,7:27 AM,7:29 AM,10,7.16,6.93,95,869,564,28.5,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT,<0.03,0.63,0,0.192,16622.858,-
 1,1,2,2016-12-03,11:06 AM,11:08 AM,10,7.22,6.86,93,877,570,31.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RT,<0.03,0.63,0,0.182,15767.152,-
 1,1,2,2016-12-04,9:05 AM,9:07 AM,8,7.33,7.12,178,816,526,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/CR,<0.03,0.62,0,0.177,15290.47,-
@@ -366,7 +288,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2016-12-30,10:22 AM,10:24 AM,13,7.86,7.4,230,940,521,29.9,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP,<0.03,1.19,0,1.155,99804.377,-
 1,1,2,2016-12-31,9:49 AM,9:51 AM,17,7.66,7.3,207,694,447,30.3,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,<0.03,0.94,0,1.282,110792.208,-
 1,1,2,2017-01-01,11:50 AM,11:52 AM,20,7.7,7.38,174,952,563,29.5,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,AP/DA,<0.03,0.92,0,0.791,68377.062,-
-1,1,2,2017-01-02,7:00 AM,7:07 AM,14,7.2,7.28,218,528,286,29.2,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/DA/BK,<0.03,0.84,0,0.726,62687.749,Monthly sampling
+1,1,2,2017-01-02,7:00 AM,7:07 AM,14,7.2,7.28,218,528,286,29.2,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/DA/BK,<0.03,0.84,0,0.726,62687.749,-
 1,1,2,2017-01-03,10:59 AM,11:01 AM,13,7.03,7.01,202,484,314,27.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/RT,<0.03,0.72,0,0.483,41694.389,-
 1,1,2,2017-01-04,9:26 AM,9:28 AM,12,7.5,7.34,161,514,277,29.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,RH/RT/BK,<0.03,0.91,0,0.511,44170.563,-
 1,1,2,2017-01-05,7:22 AM,7:24 AM,14,7.49,7.21,163,516,336,28.3,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT,<0.03,0.86,0,0.824,71157.905,-
@@ -390,7 +312,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-01-23,8:07 AM,8:09 AM,9,7.06,7.31,198,857,476,30,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,"<0,03",0.67,0,0.293,25321,-
 1,1,2,2017-01-24,10:24 AM,10:26 AM,6,7.8,7.6,164,763,495,30.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/AL,<0.03,0.68,0,0.248,21429.498,-
 1,1,2,2017-01-25,10:34 AM,10:36 AM,7,7.63,7.24,138,733,476,30.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,1.14,0,0.371,32031.738,-
-1,1,2,2017-01-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,1.26,0,0,0,Hard Rain unsafe Condition
 1,1,2,2017-01-27,10:44 AM,10:46 AM,31,7.47,7.27,178,618,398,29.3,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/CR/AL,<0.03,1.27,0,1.72,148575.511,-
 1,1,2,2017-01-28,10:19 AM,10:21 AM,42,7.81,7.24,166,466,240,30.6,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,1.27,0,1.648,142401.116,-
 1,1,2,2017-01-29,10:33 AM,10:35 AM,47,7.63,7.35,110,420,218,30.2,0,0,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/BK,<0.03,1.28,0,0.989,85449.714,-
@@ -398,7 +319,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-01-31,10:50 AM,10:52 AM,21,7.75,7.3,152,465,248,29.8,0,0,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,1.29,0,0.415,35849.144,-
 1,1,2,2017-02-01,2:16 PM,2:18 PM,16,7.93,7.31,140,491,309,30.7,0,0,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.64,0,0.29,25080.154,-
 1,1,2,2017-02-02,2:17 PM,2:19 PM,20,7.47,7.24,135,447,290,31.2,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.69,0,0.232,20044.615,-
-1,1,2,2017-02-03,9:47 AM,9:49 AM,21,7.53,7.24,148,488,244,30.8,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.87,0,0.575,49662.794,Monthly sampling
+1,1,2,2017-02-03,9:47 AM,9:49 AM,21,7.53,7.24,148,488,244,30.8,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.87,0,0.575,49662.794,-
 1,1,2,2017-02-04,8:40 AM,8:42 AM,21,7.58,7.18,151,480,239,30.2,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP,<0.03,0.8,0,0.619,53454.521,-
 1,1,2,2017-02-05,10:12 AM,10:14 AM,17,7.78,7.25,163,482,241,30.4,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/RH,<0.03,0.78,0,0.489,42231.156,-
 1,1,2,2017-02-06,10:19 AM,10:21 AM,9,7.5,7.34,160,476,309,30.3,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.73,0,0.412,35591.158,-
@@ -458,7 +379,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-04-01,10:35 AM,10:37 AM,16,7.45,7.21,130,591,370,29.8,0,0,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.7,0,0.308,26632.503,-
 1,1,2,2017-04-02,10:30 AM,10:32 AM,23,7.94,7.31,154,577,313,30.4,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,<0.03,0.84,0,0.534,46132.115,-
 1,1,2,2017-04-03,11:03 AM,11:05 AM,15,8.18,7.2,162,670,366,30.7,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,<0.03,0.79,0,0.609,52620.266,-
-1,1,2,2017-04-04,2:50 PM,2:54 PM,12,7.92,7.19,128,546,296,32.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/RH/RT,<0.03,0.75,0,0.46,39721.476,Monthly sampling
+1,1,2,2017-04-04,2:50 PM,2:54 PM,12,7.92,7.19,128,546,296,32.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL/RH/RT,<0.03,0.75,0,0.46,39721.476,-
 1,1,2,2017-04-05,7:13 AM,7:15 AM,12,7.8,7.04,140,508,330,29.5,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT,<0.03,0.9,0,0.819,70721.403,-
 1,1,2,2017-04-06,10:12 AM,10:14 AM,10,7.59,7.35,157,483,266,29.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK,<0.03,0.98,0,0.859,74174.569,-
 1,1,2,2017-04-07,9:28 AM,9:30 AM,24,7.36,7.34,136,501,271,30.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,1.02,0,0.942,81380.864,-
@@ -487,7 +408,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-04-30,11:00 AM,11:02 AM,12,8.13,7.26,185,513,301,30.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.63,0,0.3,25920,-
 1,1,2,2017-05-01,11:24 AM,11:26 AM,13,8.16,7.3,144,631,410,30.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.57,0,0.095,8229.655,-
 1,1,2,2017-05-02,9:34 AM,9:36 AM,13,8.19,7.26,147,638,376,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.56,0,0.085,7315.802,-
-1,1,2,2017-05-03,9:34 AM,9:38 AM,12,8.12,7.22,118,734,400,31.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RT,<0.03,0.56,0,0.076,6546.134,Monthly sampling
+1,1,2,2017-05-03,9:34 AM,9:38 AM,12,8.12,7.22,118,734,400,31.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RT,<0.03,0.56,0,0.076,6546.134,-
 1,1,2,2017-05-04,6:18 AM,6:20 AM,13,8.16,7.19,119,738,435,27.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH/RT,<0.03,0.6,0,0.132,11436.252,-
 1,1,2,2017-05-05,8:58 AM,9:00 AM,12,8.27,7.2,133,754,452,30,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,<0.03,0.58,0,0.109,9421.278,-
 1,1,2,2017-05-06,10:22 AM,10:24 AM,10,8.18,7.27,141,769,469,30.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.59,0,0.118,10161.611,-
@@ -516,7 +437,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-05-29,11:11 AM,11:13 AM,9,8.03,7.16,159,570,305,31.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.49,0,0.012,1057.958,-
 1,1,2,2017-05-30,10:27 AM,10:29 AM,8,7.53,7.26,140,689,447,30.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT,<0.03,0.48,0,0.006,482.617,-
 1,1,2,2017-05-31,11:23 AM,11:25 AM,12,7.58,7.22,152,692,415,30.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.49,0,0.009,778.138,-
-1,1,2,2017-06-01,9:55 AM,9:59 AM,11,8.06,7.08,146,410,216,30.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.48,0,0.009,747.517,Monthly sampling
+1,1,2,2017-06-01,9:55 AM,9:59 AM,11,8.06,7.08,146,410,216,30.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.48,0,0.009,747.517,-
 1,1,2,2017-06-02,11:15 AM,11:17 AM,9,8.21,7.3,138,456,240,31.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP/BK,<0.03,0.77,0,0.104,8997.795,-
 1,1,2,2017-06-03,9:31 AM,9:33 AM,8,8.07,7.27,150,418,250,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AP,<0.03,0.76,0,0.442,38175.574,-
 1,1,2,2017-06-04,11:06 AM,11:08 AM,13,8.09,7.24,153,453,248,30.8,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.67,0,0.357,30865.493,-
@@ -549,7 +470,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-07-01,11:39 AM,11:41 AM,20,7.48,7.29,166,894,581,30.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.95,0,0.632,54573.034,-
 1,1,2,2017-07-02,10:59 AM,11:01 AM,23,7.62,7.27,186,665,362,29.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,toka sediment pond,AL/BK,<0.03,0.83,0,0.717,61942.74,-
 1,1,2,2017-07-03,11:41 AM,11:43 AM,19,7.52,7.21,173,614,362,30.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,<0.03,0.74,0,0.491,42453.565,-
-1,1,2,2017-07-04,10:55 AM,11:00 AM,17,7.54,7.08,181,639,345,31,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RH/RT/BK,<0.03,0.67,0,0.303,26161.544,Monthly sampling
+1,1,2,2017-07-04,10:55 AM,11:00 AM,17,7.54,7.08,181,639,345,31,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RH/RT/BK,<0.03,0.67,0,0.303,26161.544,-
 1,1,2,2017-07-05,3:05 PM,3:07 PM,16,7.59,7.04,176,622,335,31.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/RH,<0.03,0.66,0,0.238,20530.771,-
 1,1,2,2017-07-06,11:16 AM,11:18 AM,14,8.07,7.29,184,746,410,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/BK,<0.03,0.62,0,0.192,16559.526,-
 1,1,2,2017-07-07,9:04 AM,9:06 AM,13,7.63,7.21,150,890,440,30,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.62,0,0.157,13586.014,-
@@ -577,100 +498,26 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-07-29,10:59 AM,11:01 AM,11,7.59,7.18,178,909,599,30.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT,<0.03,0.49,0,0.013,1084.512,-
 1,1,2,2017-07-30,10:30 AM,10:32 AM,12,8.08,7.12,184,925,514,31.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,<0.03,0.49,0,0.011,908.059,-
 1,1,2,2017-07-31,10:52 AM,10:54 AM,9,8.2,7.2,129,755,411,31.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/BK,<0.03,0.49,0,0.008,732.246,-
-1,1,2,2017-08-01,10:44 AM,10:46 AM,9,7.61,7.08,160,658,363,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.49,0,0.01,888.718,Monthly sampling
+1,1,2,2017-08-01,10:44 AM,10:46 AM,9,7.61,7.08,160,658,363,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.49,0,0.01,888.718,-
 1,1,2,2017-08-02,8:30 AM,8:35 AM,11,7.68,7,163,669,372,29.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/AL,<0.03,0.48,0,0.01,843.558,-
 1,1,2,2017-08-03,11:45 AM,11:47 AM,9,7.69,7.08,170,684,453,30.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT,<0.03,0.5,0,0.01,864.227,-
 1,1,2,2017-08-04,11:18 AM,11:20 AM,9,7.73,7.08,176,678,447,30.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.49,0,0.011,915.858,-
 1,1,2,2017-08-05,11:18 AM,11:20 AM,10,7.59,7.21,153,680,475,30.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.49,0,0.008,667.137,-
-1,1,2,2017-08-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2017-08-16,11:33 AM,11:35 AM,9,8.14,7.2,149,806,466,31.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,AL,<0.03,0.5,0,0.012,1008.364,-
 1,1,2,2017-08-17,10:59 AM,11:01 AM,10,8.2,7.13,142,862,476,31.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,<0.03,0.49,0,0.012,1053.096,-
 1,1,2,2017-08-18,10:30 AM,10:32 AM,8,8.17,7.2,155,829,489,31,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,<0.03,0.49,0,0.009,749.092,-
 1,1,2,2017-08-19,11:03 AM,11:05 AM,8,8.15,7.06,133,844,454,30.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,<0.03,0.49,0,0.008,684.696,-
 1,1,2,2017-08-20,11:06 AM,11:08 AM,8,8,7.16,142,808,533,30.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT,<0.03,0.48,0,0.01,866.606,-
 1,1,2,2017-08-21,11:36 AM,11:38 AM,9,8.05,7.18,152,816,538,30.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.49,0,0.008,694.986,-
-1,1,2,2017-08-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2017-08-25,8:30 AM,8:32 AM,10,8.35,7.1,269,729,400,29.6,0,0,0,0,Pasang,Normal,Normal,Ada,Tidak,Tidak,toka sediment pond,AP,<0.03,0.52,0,0.034,2947.363,-
 1,1,2,2017-08-26,11:06 AM,11:08 AM,8,7.38,7.19,176,848,459,31.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL/BK,<0.03,0.5,0,0.028,2387.851,-
 1,1,2,2017-08-27,11:03 AM,11:05 AM,11,7.24,7.16,161,856,564,31.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.49,0,0.016,1368.168,-
-1,1,2,2017-08-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-08-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-20,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-09-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2017-10-18,11:14 AM,11:16 AM,12,8.1,7.1,248,931,516,30.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,bk/rh/RT,<0.03,0.54,0,0.056,4872.228,-
 1,1,2,2017-10-19,2:26 PM,2:28 PM,9,8.14,7.12,244,928,556,31.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/BK,<0.03,0.51,0,0.044,3777.409,-
 1,1,2,2017-10-20,10:57 AM,10:59 AM,12,8.2,7.19,217,951,570,31.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AL,<0.03,0.5,0,0.023,1968.457,-
 1,1,2,2017-10-21,8:26 AM,8:28 AM,11,8.05,7.18,219,836,440,29.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/AL,<0.03,0.48,0,0.012,1054.946,-
 1,1,2,2017-10-22,1:56 PM,1:58 PM,10,8.04,7.18,220,839,442,29.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,AP/RH,<0.03,0.48,0,0.007,629.322,-
-1,1,2,2017-10-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-10-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-11-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-11-02,11:04 AM,11:06 AM,27,6.96,7.17,251,782,438,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.48,0,0.001,85.89,Monthly sampling
+1,1,2,2017-11-02,11:04 AM,11:06 AM,27,6.96,7.17,251,782,438,30.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,RT/RH/BK,<0.03,0.48,0,0.001,85.89,-
 1,1,2,2017-11-03,2:38 PM,2:40 PM,13,7.14,7.16,230,810,532,30.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.46,0,0.001,70.364,-
 1,1,2,2017-11-04,11:45 AM,11:47 AM,12,8.14,7.26,229,793,523,30.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.47,0,0.001,73.452,-
 1,1,2,2017-11-05,11:27 AM,11:29 AM,12,7.91,7.09,235,703,421,32,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK,<0.03,0.48,0,0.001,87.694,-
@@ -687,7 +534,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-11-16,9:37 AM,9:39 AM,13,7.83,7.11,281,659,354,30.8,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/DS,<0.03,0.46,0,0.001,87.325,-
 1,1,2,2017-11-17,8:08 AM,8:10 AM,12,8.07,7.29,240,867,470,29.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/MW,<0.03,0.47,0,0.001,95.389,-
 1,1,2,2017-11-18,8:47 AM,8:49 AM,14,8.12,7.1,244,871,522,30,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH,<0.03,0.47,0,0.001,55.546,-
-1,1,2,2017-11-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2017-11-20,9:05 AM,9:07 AM,20,8.15,7.1,281,640,384,29.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/HM,<0.03,0.46,0,0.001,79.949,-
 1,1,2,2017-11-21,9:18 AM,9:20 AM,12,7.7,7.11,264,643,385,29.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/HM,<0.03,0.47,0,0.001,94.378,-
 1,1,2,2017-11-22,8:57 AM,8:59 AM,13,7.84,7.1,271,630,378,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/HM,<0.03,0.46,0,0.001,97.675,-
@@ -704,33 +550,11 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2017-12-03,11:20 AM,11:22 AM,11,7.89,7.02,234,590,354,30.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK,<0.03,0.6,0,0.143,12341.162,-
 1,1,2,2017-12-04,10:03 AM,10:05 AM,13,7.4,7.18,273,622,340,30,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/AL,<0.03,0.61,0,0.143,12394.234,-
 1,1,2,2017-12-05,7:48 AM,7:50 AM,12,7.5,7.11,205,641,384,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK,<0.03,0.61,0,0.144,12443.228,-
-1,1,2,2017-12-06,9:44 AM,9:49 AM,12,7.55,7.06,263,627,339,28.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH/RT,<0.03,0.61,0,0.144,12412.842,Monthly sampling
+1,1,2,2017-12-06,9:44 AM,9:49 AM,12,7.55,7.06,263,627,339,28.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH/RT,<0.03,0.61,0,0.144,12412.842,-
 1,1,2,2017-12-07,11:12 AM,11:14 AM,13,7.6,6.94,269,640,384,31.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH,<0.03,0.61,0,0.144,12412.036,-
 1,1,2,2017-12-08,11:16 AM,11:18 AM,11,7.52,7.04,251,632,417,30.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/RH,<0.03,0.61,0,0.142,12260.449,-
 1,1,2,2017-12-09,11:28 AM,11:30 AM,12,7.61,7.04,252,668,435,35.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT,<0.03,0.6,0,0.141,12186.801,-
 1,1,2,2017-12-10,10:59 AM,11:01 AM,11,7.7,7.11,229,694,416,30.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,toka sediment pond,BK/AL,<0.03,0.6,0,0.139,12029.491,-
-1,1,2,2017-12-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-20,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2017-12-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-01-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2018-01-02,11:06 AM,11:08 AM,12,7.67,6.99,265,627,376,31.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RT,<0.03,0.57,0,0.047,4021.975,-
 1,1,2,2018-01-03,8:11 AM,8:15 AM,12,8,7.18,284,716,394,28.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RT/BK,<0.03,0.58,0,0.097,8406.739,-
 1,1,2,2018-01-04,10:22 AM,10:26 AM,11,7.53,7.02,244,704,387,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,BK/RH/RT,<0.03,0.55,0,0.084,7266.562,-
@@ -761,13 +585,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-01-29,8:47 AM,8:49 AM,13,7.85,7.24,231,529,310,27.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,toka sediment pond,RH/RT,<0.03,0.64,0,0.206,17770.021,-
 1,1,2,2018-01-30,8:49 AM,8:57 AM,10,7.17,7.2,322,534,286,28.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,KS,BK,<0.03,0.48,0,0.089,7694.568,-
 1,1,2,2018-01-31,8:57 AM,8:59 AM,10,7.71,7.06,212,532,303,28.6,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,TS,BK/AL/RT,<0.03,0.48,0,0.007,567.006,-
-1,1,2,2018-02-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2018-02-08,9:57 AM,9:59 AM,24,8.14,7.29,193,572,301,28.8,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,spillway on,RH/RT,0,0.96,0,1.183,102200.62,-
 1,1,2,2018-02-09,8:52 AM,8:54 AM,24,7.25,7.12,234,569,309,28.3,0,0,0,0,Pasang,Keruh,Normal,Ada,Tidak,Tidak,TS,BK/AP,0,0.95,0,0.919,79401.557,-
 1,1,2,2018-02-10,8:54 AM,8:56 AM,15,7.67,7.11,239,400,202,27.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK,0,0.91,0,0.78,67402.45,-
@@ -779,9 +596,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-02-16,9:02 AM,9:04 AM,12,7.83,7.08,206,550,297,28.7,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,TS,BK,0,0.77,0,0.37,32002.969,-
 1,1,2,2018-02-17,9:04 AM,9:06 AM,12,7.58,7.11,210,558,304,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK,0,0.7,0,0.394,34010.344,-
 1,1,2,2018-02-18,11:28 AM,11:30 AM,12,7.38,7.18,216,561,370,30.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/RH,0,0.72,0,0.247,21349.488,-
-1,1,2,2018-02-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-20,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-02-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2018-02-22,9:17 AM,9:19 AM,20,7.78,7.15,226,556,302,29,0,0,0,0,Pasang,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/RH/AL,0,0.56,0,0.098,8490.838,-
 1,1,2,2018-02-23,8:46 AM,8:04 AM,15,7.84,7.2,208,554,301,28.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/AL,0,0.55,0,0.074,6429.526,-
 1,1,2,2018-02-24,10:47 AM,10:49 AM,12,8.01,7.24,235,560,301,29.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RH/RT,0,0.66,0,0.142,12281.517,-
@@ -789,7 +603,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-02-26,9:18 AM,9:20 AM,11,7,7.14,218,701,385,29.6,0,0,0,0,Pasang,Keruh,Normal,Ada,Tidak,Tidak,TS,AL/BK/RH/RT,0,0.72,0,0.218,18858.152,-
 1,1,2,2018-02-27,8:43 AM,8:45 AM,8,7.84,7.12,230,689,397,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RH/BK,0,0.68,0,0.327,28254.823,-
 1,1,2,2018-02-28,9:15 AM,9:17 AM,14,7.41,7.1,170,741,405,27.8,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK/AL,0,0.62,0,0.221,19116.452,-
-1,1,2,2018-03-01,11:15 AM,11:20 AM,8,6.98,7.1,234,738,405,28.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/RH/RP,0,0.58,0,0.142,12302.704,Monthly sampling
+1,1,2,2018-03-01,11:15 AM,11:20 AM,8,6.98,7.1,234,738,405,28.1,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/RH/RP,0,0.58,0,0.142,12302.704,-
 1,1,2,2018-03-02,7:18 AM,7:20 AM,12,7.37,7.11,254,600,330,28,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK,0,1.03,0,0.556,48029.211,-
 1,1,2,2018-03-03,10:43 AM,10:45 AM,30,7.73,7.34,215,640,380,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RH,0,0.93,0,1.014,87592.309,-
 1,1,2,2018-03-04,9:44 AM,9:46 AM,24,7.16,7.24,204,711,426,29.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AL,0,0.8,0,0.662,57231.956,-
@@ -802,12 +616,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-03-11,9:10 AM,9:12 AM,9,7.13,7.1,200,663,364,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK,0,0.62,0,0.174,15014.153,-
 1,1,2,2018-03-12,9:04 AM,9:06 AM,9,7.31,6.96,164,681,374,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/RT,0,0.62,0,0.168,14523.387,-
 1,1,2,2018-03-13,9:38 AM,9:40 AM,9,7.84,7.07,159,810,445,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK,0,0.62,0,0.167,14392.64,-
-1,1,2,2018-03-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2018-03-20,8:08 AM,8:10 AM,14,7.29,7.31,207,785,435,29.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/RP,0,0.87,0,0.477,41198.037,-
 1,1,2,2018-03-21,8:44 AM,8:46 AM,11,7.45,7.24,209,701,380,29.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RH/RT,0,0.73,0,0.512,44206.687,-
 1,1,2,2018-03-22,8:39 AM,8:40 AM,15,7.43,7.06,214,786,442,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT,0,0.68,0,0.319,27570.152,-
@@ -817,12 +625,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-03-26,8:51 AM,8:53 AM,8,7.09,7.6,169,840,530,28.2,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK/AL,0,0.62,0,0.175,15087.288,-
 1,1,2,2018-03-27,8:38 AM,8:40 AM,9,6.99,7.24,214,984,670,28.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/BK,0,0.63,0,0.168,14533.197,-
 1,1,2,2018-03-28,8:18 AM,8:20 AM,6,7.94,7.68,176,994,634,27.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/BK,0,0.62,0,0.169,14639.47,-
-1,1,2,2018-03-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-03-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-04-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-04-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-04-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2018-04-04,10:11 AM,10:16 AM,9,7.46,7.23,136,1140,728,28.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/RT/RP,0,0.6,0,0.123,10595.486,-
 1,1,2,2018-04-05,8:47 AM,8:49 AM,9,8.4,7.5,91,1142,731,29,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/RT,0,0.59,0,0.121,10453.894,-
 1,1,2,2018-04-06,11:15 AM,11:17 AM,10,8.02,8.6,121,1270,811,28.9,0,0,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,TS,AP/RP,0,0.59,0,0.12,10339.052,-
@@ -831,7 +633,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-04-09,8:49 AM,8:51 AM,10,8.6,7.3,140,1330,853,28.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,spillway on,AL/BK,0,0.59,0,0.12,10372.496,-
 1,1,2,2018-04-10,8:44 AM,8:46 AM,14,7.46,7.69,118,1330,849,27.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AL/RT/BK,0,0.6,0,0.12,10346.815,-
 1,1,2,2018-04-11,8:18 AM,6:20 PM,12,7.4,7.62,128,1332,839,27.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,No Data,0,0.46,0,0.072,6220.8,-
-1,1,2,2018-04-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
 1,1,2,2018-04-13,12:11 PM,12:12 PM,22,7.5,7.54,200,1345,855,30.5,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/RH,0,0.47,0,0.002,167.392,-
 1,1,2,2018-04-14,10:46 AM,10:48 AM,17,7.73,7.91,201,1280,773,30.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RH/RT,0,0.63,0,0.064,5561.778,-
 1,1,2,2018-04-15,10:57 AM,10:59 AM,16,7.62,7.82,211,1244,783,30,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,AP/AL,0,0.64,0,0.23,19847.738,-
@@ -870,22 +671,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-05-18,10:05 AM,10:07 AM,22,7.81,7.3,193,605,381,30.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK,0,0.61,0,0.146,12586.678,-
 1,1,2,2018-05-19,11:05 AM,11:07 AM,14,7.85,7.33,189,622,391,31.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK,0,0.61,0,0.145,12525.396,-
 1,1,2,2018-05-20,11:04 AM,11:06 AM,20,7.68,7.4,163,635,402,30.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,No Data,RH,0,0.61,0,0.142,12253.117,-
-1,1,2,2018-05-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-05-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
 1,1,2,2018-06-06,9:56 AM,9:58 AM,10,8.17,7.21,211,816,520,29.5,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AL/HM/BK,0,0.5,0,0.006,496.089,-
 1,1,2,2018-06-07,11:43 AM,11:45 AM,14,8.1,7.28,206,807,520,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AL/HB,0,0.51,0,0.026,2215.519,-
 1,1,2,2018-06-08,11:31 AM,11:33 AM,6,7.64,7.58,177,746,477,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/FP,0,0.48,0,0.013,1158.336,-
@@ -897,150 +682,15 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-06-14,9:02 AM,9:04 AM,9,8.1,7.2,215,693,436,27.6,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,spillway on,RH/FP,0,0.47,0,0.005,424.67,-
 1,1,2,2018-06-15,10:40 AM,10:42 AM,10,7.96,7.14,219,879,553,31.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/RH,0,0.46,0,0.001,100.029,-
 1,1,2,2018-06-16,8:55 AM,9:00 AM,9,7.49,7.16,235,606,388,27.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/FP,0,0.45,0,0,21.247,-
-1,1,2,2018-06-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-20,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-06-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-20,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-21,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-22,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-07-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/RH/RP,0,0,0,0,0,NF
-1,1,2,2018-08-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/RP,0,0,0,0,0,NF
-1,1,2,2018-08-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-06,11:15 AM,11:17 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RP/FP,0,0,0,0,0,NF
-1,1,2,2018-08-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-08,10:40 AM,10:40 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RH/BK,0,0,0,0,0,NF
-1,1,2,2018-08-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FP,0,0,0,0,0,NF
-1,1,2,2018-08-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-19,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-20,11:19 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-08-21,1:44 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RH/FP,0,0,0,0,0,NF
-1,1,2,2018-08-22,1:28 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RH/FP,0,0,0,0,0,NF
-1,1,2,2018-08-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-25,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-26,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-27,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-28,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-29,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-08-31,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-01,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-03,9:45 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AP/HM,0,0,0,0,0,NF
-1,1,2,2018-09-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-07,10:29 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,FP/BK,0,0,0,0,0,NF
-1,1,2,2018-09-08,10:38 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,FP/BK,0,0,0,0,0,NF
-1,1,2,2018-09-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-10,11:39 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RH/RT,0,0,0,0,0,NF
-1,1,2,2018-09-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-13,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-14,10:36 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-09-15,10:59 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/AL,0,0,0,0,0,NF
-1,1,2,2018-09-16,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-18,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-19,11:05 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP/HM,0,0,0,0,0,NF
-1,1,2,2018-09-20,8:34 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-09-21,2:18 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-09-22,9:27 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-09-23,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-24,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-09-25,8:56 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-09-26,8:16 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/HM,0,0,0,0,0,NF
-1,1,2,2018-09-27,9:50 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/RH,0,0,0,0,0,NF
-1,1,2,2018-09-28,8:48 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-09-29,10:13 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/AL,0,0,0,0,0,NF
-1,1,2,2018-09-30,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,NF
-1,1,2,2018-10-01,10:10 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AP/RP,0,0,0,0,0,NF
-1,1,2,2018-10-02,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-03,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-04,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-05,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-06,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-07,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-09,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-10,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-11,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-12,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-13,8:29 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/AL,0,0,0,0,0,NF
-1,1,2,2018-10-14,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-15,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-16,11:57 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FP,0,0,0,0,0,NF
-1,1,2,2018-10-17,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,0,-
-1,1,2,2018-10-18,2:01 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/AL/FP,0,0,0,0,0,NF
-1,1,2,2018-10-19,9:10 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-10-20,11:38 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/AL,0,0,0,0,0,NF
 1,1,2,2018-10-21,10:29 AM,10:31 AM,15,7.69,7.24,185,1210,762,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,spillway on,RT/RH,0,0.49,0,0.01,838.115,-
 1,1,2,2018-10-22,9:06 AM,9:09 AM,6,7.11,7.51,184,1270,811,28.4,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/FP,0,0.47,0,0.005,424.67,-
 1,1,2,2018-10-23,8:52 AM,8:54 AM,8,8.21,7.25,125,1190,825,26.9,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/RT/FP,0,0.46,0,0.001,100.029,-
 1,1,2,2018-10-24,8:53 AM,8:55 AM,4,7.61,7.2,189,1420,894,28,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/FP,0,0.45,0,0,21.247,-
-1,1,2,2018-10-25,9:05 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/RT/FP,0,0,0,0,0,NF
-1,1,2,2018-10-26,10:17 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FP,0,0,0,0,0,NF
-1,1,2,2018-10-27,10:43 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FRP,0,0,0,0,0,-
-1,1,2,2018-10-28,1:00 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FP,0,0,0,0,0,-
-1,1,2,2018-10-29,9:52 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FP,0,0,0,0,0,-
 1,1,2,2018-10-30,8:48 AM,8:50 AM,14,7.46,7.29,217,1360,898,29.2,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,AL/FP,0,0.5,0,0.006,496.089,-
 1,1,2,2018-10-31,9:15 AM,9:18 AM,8,7.5,7.21,163,1120,675,29.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TKP,AL/FP/BK,0,0.45,0,0.002,144.128,-
 1,1,2,2018-11-01,10:10 AM,10:15 AM,8,6.8,7.19,160,1390,891,29.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AL/RT/RH,0,0.49,0,0.01,864,-
 1,1,2,2018-11-02,11:40 AM,11:44 AM,9,6.9,7.78,198,1250,798,29.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,FP/FP,0,0.48,0,0.004,345.6,-
 1,1,2,2018-11-03,9:00 AM,9:02 AM,12,7.58,7.27,141,1520,957,29.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK/RT/FP,0,0.47,0,0.002,172.8,-
-1,1,2,2018-11-04,8:34 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/AL,0,0,0,0,0,NF
-1,1,2,2018-11-05,8:37 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AL/BK,0,0,0,0,0,NF
-1,1,2,2018-11-06,9:27 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-11-07,2:05 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/AL,0,0,0,0,0,NF
 1,1,2,2018-11-08,2:02 PM,2:04 PM,15,6.91,7.2,198,1410,905,29.7,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,TS,AL/FP,0,0.84,0,0.631,54518.4,-
 1,1,2,2018-11-09,8:39 AM,8:40 AM,12,6.98,6.26,135,1320,847,28.7,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS ,AP/FP,0,0.7,0,0.304,26265.6,-
 1,1,2,2018-11-10,8:55 AM,8:57 AM,11,7.11,7.28,124,1200,756,28,0,0,0,0,Surut,Agak keruh,Normal,Ada,Ada,Tidak,TS,RH/BK,0,0.81,0,0.55,47520,-
@@ -1064,14 +714,6 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-11-28,10:17 AM,10:19 AM,10,7.13,7.04,147,986,631,30.2,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,BK/FP,0,0.59,0,0.116,10022.4,-
 1,1,2,2018-11-29,9:28 AM,9:30 AM,16,6.91,7.23,168,962,616,28.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RH/BK/FP,0,0.58,0,0.113,9763.2,-
 1,1,2,2018-11-30,9:34 AM,9:36 AM,7,7.29,7.18,182,998,638,28.6,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/RH,0,0.57,0,0.095,8208,-
-1,1,2,2018-12-01,9:00 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/RH,0,0,0,0,0,NF
-1,1,2,2018-12-02,9:31 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AL/BK,0,0,0,0,0,NF
-1,1,2,2018-12-03,3:17 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AL/HM/FP,0,0,0,0,0,NF
-1,1,2,2018-12-04,8:59 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,BK/FP,0,0,0,0,0,NF
-1,1,2,2018-12-05,9:24 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AL/RT,0,0,0,0,0,NF
-1,1,2,2018-12-06,9:19 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RT/FP,0,0,0,0,0,NF
-1,1,2,2018-12-07,1:19 PM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RP/FP,0,0,0,0,0,NF
-1,1,2,2018-12-08,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,RH/MW,0,0,0,0,0,NF
 1,1,2,2018-12-09,9:44 AM,9:46 AM,15,7.15,7.12,172,714,457,28.8,0,0,0,0,Surut,Keruh,Normal,Ada,Tidak,Tidak,TS,AL/BK,0,0.69,0,0.475,41072.588,-
 1,1,2,2018-12-10,8:59 AM,9:02 AM,12,6.98,6.94,208,698,447,27.3,0,0,0,0,Pasang,Agak keruh,Normal,Ada,Ada,Tidak,TS,BK/FP,0,0.64,0,0.231,19976.83,-
 1,1,2,2018-12-11,9:27 AM,9:29 AM,8,7.57,7.24,228,693,405,27.4,0,0,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK/FP/RH,0,0.71,0,0.22,19025.246,-
@@ -1096,7 +738,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2018-12-30,11:12 AM,11:14 AM,16,7.24,7.13,240,557,350,29.1,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AP/RT,0,0.62,0,0.244,21106.965,-
 1,1,2,2018-12-31,8:39 AM,8:42 AM,12,7.17,7.57,222,562,368,27.8,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AP/FP,0,0.59,0,0.138,11902.283,-
 1,1,2,2019-01-01,2:13 PM,2:17 PM,12,7.4,7.7,196,536,352,28.3,0,0,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,AP/FP,0,0.58,0,0.117,10138.838,-
-1,1,2,2019-01-02,9:10 AM,9:14 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AP/NF,0,0,0,0,0,NF
+1,1,2,2019-01-02,9:10 AM,9:14 AM,No Data,No Data,No Data,No Data,No Data,No Data,No Data,0,0,0,0,No Data,No Data,No Data,No Data,No Data,No Data,No Data,AP/NF,0,0,0,0,0,-
 1,1,2,2019-01-03,9:06 AM,9:08 AM,10,7.58,7.31,153,601,378,28.6,0.4,13.2,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,spillway on,RH/OS/FP,0,0.6,0,0.133,11527.213,-
 1,1,2,2019-01-04,9:18 AM,9:21 AM,6,7.3,7.16,206,612,391,28.2,0.3,8.2,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK/FP,0,0.65,0,0.139,12045.385,-
 1,1,2,2019-01-05,11:34 AM,11:39 AM,9,6.78,7.1,221,624,416,28.5,0.3,10.6,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/BK,0,0.61,0,0.181,15614.116,-
@@ -1269,87 +911,87 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2019-06-21,2:30 PM,2:32 PM,11,8.18,7.16,211,1130,711,30.6,0.5,15.8,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT,0,0.46,0.5,0.007,586.931,-
 1,1,2,2019-06-22,10:11 AM,10;13,8,7.42,6.87,253,925,592,28.1,0.4,1.9,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,TS,RT/BK,0,0.46,0.48,0.001,96.924,-
 1,1,2,2019-06-23,12:15 PM,12:17 PM,9,7.68,7.18,251,993,635,28.1,0.4,2.1,0,0,Surut,Normal,Normal,Tidak,Tidak,Tidak,TS,RT/FP,0,0.46,0.48,0.001,70.876,-
-1,1,2,2019-06-24,9:27 AM,9:30 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP,0,0.47,0.473,0.001,50.917,NF
-1,1,2,2019-06-25,9:29 AM,9:31 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,0.46,0.46,0.001,51.158,NF
-1,1,2,2019-06-26,9:17 AM,9:20 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,0.47,0.468,0.001,70.849,NF
-1,1,2,2019-06-27,1:59 PM,2:00 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/RT,0,0.46,0.462,0.001,54.75,NF
-1,1,2,2019-06-28,10:46 AM,10:47 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/JK,0,0.46,0.46,0,41.675,NF
-1,1,2,2019-06-29,10:05 AM,10:07 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,0.46,0.462,0,39.181,NF
-1,1,2,2019-06-30,9:24 AM,9:26 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RKM,0,0.47,0.465,0.001,61.704,NF
-1,1,2,2019-07-01,10:23 AM,10:23 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.457,0.001,50.32,NF
-1,1,2,2019-07-02,2:05 PM,2:07 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP,0,NF,0.469,0.001,46.411,NF
-1,1,2,2019-07-03,11:00 AM,11:00 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK/FP,0,NF,0.459,0,33.316,NF
-1,1,2,2019-07-04,11:07 AM,11:09 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RKM/OS,0,NF,0.454,0,32.069,NF
-1,1,2,2019-07-05,9:38 AM,9:41 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/OS,0,NF,0.46,0,33.951,NF
-1,1,2,2019-07-06,2:03 PM,2:03 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.459,0,32.42,NF
-1,1,2,2019-07-07,10:38 AM,10:38 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.472,0,38.288,NF
-1,1,2,2019-07-08,10:56 AM,10:56 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.463,0,33.759,NF
-1,1,2,2019-07-09,2:07 PM,2:07 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.459,0,33.016,NF
-1,1,2,2019-07-10,2:16 PM,2:18 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.461,0,32.385,NF
-1,1,2,2019-07-11,10:29 AM,10:32 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.464,0,25.877,NF
-1,1,2,2019-07-12,9:51 AM,9:53 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.468,0,42.836,NF
-1,1,2,2019-07-13,10:50 AM,10:53 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP,0,NF,0.468,0,32.506,NF
-1,1,2,2019-07-14,10:05 AM,10:07 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AP/RKM,0,NF,0.454,0,33.711,NF
-1,1,2,2019-07-15,11:29 AM,11:23 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RKM/JK,0,NF,0.454,0,28.114,NF
-1,1,2,2019-07-16,10:09 AM,10:11 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.466,0,42.563,NF
-1,1,2,2019-07-17,2:05 PM,2:08 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP/BK,0,NF,0.463,0,36.891,NF
-1,1,2,2019-07-18,1:44 PM,1:44 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/BK,0,NF,0.462,0.001,46.031,NF
-1,1,2,2019-07-19,10:35 AM,10:37 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.469,0,23.502,NF
-1,1,2,2019-07-20,10:02 AM,10:04 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.462,0,32.543,NF
-1,1,2,2019-07-21,12:30 PM,1:32 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/BK,0,NF,0.454,0,31.467,NF
-1,1,2,2019-07-22,2:06 PM,2:06 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.46,0.001,48.26,NF
-1,1,2,2019-07-23,2:10 PM,2:12 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.463,0.001,48.853,NF
-1,1,2,2019-07-24,2:10 PM,2:14 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.473,0.001,56.621,NF
-1,1,2,2019-07-25,2:10 PM,2:13 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.468,0.001,55.412,NF
-1,1,2,2019-07-26,9:51 AM,9:53 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.458,0.001,51.429,NF
-1,1,2,2019-07-27,11:54 AM,11:54 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.456,0,38.383,NF
-1,1,2,2019-07-28,10:30 AM,10:30 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/BK,0,NF,0.461,0,35.893,NF
-1,1,2,2019-07-29,1:47 PM,1:48 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/AL,0,NF,0.472,0.001,45.655,NF
-1,1,2,2019-07-30,2:13 PM,2:13 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.462,0.001,43.275,NF
-1,1,2,2019-07-31,1:35 PM,1:35 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.465,0,42.264,NF
-1,1,2,2019-08-01,2:15 PM,2:17 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.455,0,34.025,NF
-1,1,2,2019-08-02,1:49 PM,1:51 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.464,0.001,45.765,NF
-1,1,2,2019-08-03,9:43 AM,9:45 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.457,0,30.653,NF
-1,1,2,2019-08-04,1:34 PM,1:35 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/RT,0,NF,0.462,0,35.832,NF
-1,1,2,2019-08-05,4:30 PM,4:30 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AP/AL/HM,0,NF,0.47,0,24.509,NF
-1,1,2,2019-08-06,2:11 PM,2:14 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/HM,0,NF,0.469,0,38.899,NF
-1,1,2,2019-08-07,1:43 PM,1:45 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.469,0,41.04,NF
-1,1,2,2019-08-08,8:27 AM,8:27 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/AL,0,NF,0.464,0,39.559,NF
-1,1,2,2019-08-09,10:00 AM,10:02 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.463,0,42.508,NF
-1,1,2,2019-08-10,9:47 AM,9:49 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.456,0,40.193,NF
-1,1,2,2019-08-11,10:04 AM,10:04 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FP,0,NF,0.456,0,36.367,NF
-1,1,2,2019-08-12,2:03 PM,2:03 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.466,0,31.381,NF
-1,1,2,2019-08-13,10:02 AM,10:05 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.465,0,35.104,NF
-1,1,2,2019-08-14,10:09 AM,10:11 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.469,0.001,47.504,NF
-1,1,2,2019-08-15,3:06 PM,3:09 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.462,0,38.074,NF
-1,1,2,2019-08-16,10:18 AM,10:20 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.468,0.001,60.627,NF
-1,1,2,2019-08-17,10:39 AM,10:41 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.463,0.001,44.65,NF
-1,1,2,2019-08-18,11:27 AM,11:29 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/JK,0,NF,0.464,0.001,45.346,NF
-1,1,2,2019-08-19,3:04 PM,3:05 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.47,0.001,52.492,NF
-1,1,2,2019-08-20,2:15 PM,2:17 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.473,0.001,60.13,NF
-1,1,2,2019-08-21,9:40 AM,9:42 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AP/JK,0,NF,0.46,0.001,68.877,NF
-1,1,2,2019-08-22,10:21 AM,10:23 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.462,0.001,47.27,NF
-1,1,2,2019-08-23,10:03 AM,10:05 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.468,0.001,48.833,NF
-1,1,2,2019-08-24,1:41 PM,1:41 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/JK,0,NF,0.45,0,43.177,NF
-1,1,2,2019-08-25,9:43 AM,9:43 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.463,0,28.847,NF
-1,1,2,2019-08-26,1:35 PM,1:35 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/JK,0,NF,0.461,0,37.835,NF
-1,1,2,2019-08-27,1:55 PM,1:55 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/JK,0,NF,0.461,0,33.507,NF
-1,1,2,2019-08-28,10:22 AM,10:24 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.47,0,33.981,NF
-1,1,2,2019-08-29,1:59 PM,1:59 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.466,0,24.125,NF
-1,1,2,2019-08-30,1:43 PM,1:43 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,JK/HB,0,NF,0.463,0,36.8,NF
-1,1,2,2019-08-31,1:53 PM,1:53 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.455,0,36.667,NF
-1,1,2,2019-09-01,               13:45,1:47 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.463,0,26.133,NF
-1,1,2,2019-09-02,1:46 PM,1:48 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/JK,0,NF,0.462,0,28.46,NF
-1,1,2,2019-09-03,               14:15,2:17 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FR,0,NF,0.463,0,42.977,NF
-1,1,2,2019-09-04,               10:17,10:20 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FR,0,NF,0.464,0,36.273,NF
-1,1,2,2019-09-05,10:12 AM,10:13 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,JK/FP,0,NF,0.466,0,26.361,NF
-1,1,2,2019-09-06,               09:57,9:58 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.466,0.001,45.763,NF
-1,1,2,2019-09-07,              10:09,10:10 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.466,0.001,49.56,NF
-1,1,2,2019-09-08,              11:53,11:54 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/AL,0,NF,0.465,0,37.521,NF
-1,1,2,2019-09-09,              13:39,1:40 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FR,0,NF,0.464,0,35.445,NF
-1,1,2,2019-09-10,1:57 PM,1:58 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.457,0,35.958,NF
-1,1,2,2019-09-11,9:42 AM,9:43 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.462,0,21.218,NF
-1,1,2,2019-09-12,10:03 AM,10:04 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.453,0,37.484,NF
+1,1,2,2019-06-24,9:27 AM,9:30 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP,0,0.47,0.473,0.001,50.917,-
+1,1,2,2019-06-25,9:29 AM,9:31 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,0.46,0.46,0.001,51.158,-
+1,1,2,2019-06-26,9:17 AM,9:20 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,0.47,0.468,0.001,70.849,-
+1,1,2,2019-06-27,1:59 PM,2:00 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/RT,0,0.46,0.462,0.001,54.75,-
+1,1,2,2019-06-28,10:46 AM,10:47 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/JK,0,0.46,0.46,0,41.675,-
+1,1,2,2019-06-29,10:05 AM,10:07 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,0.46,0.462,0,39.181,-
+1,1,2,2019-06-30,9:24 AM,9:26 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RKM,0,0.47,0.465,0.001,61.704,-
+1,1,2,2019-07-01,10:23 AM,10:23 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.457,0.001,50.32,-
+1,1,2,2019-07-02,2:05 PM,2:07 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP,0,NF,0.469,0.001,46.411,-
+1,1,2,2019-07-03,11:00 AM,11:00 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK/FP,0,NF,0.459,0,33.316,-
+1,1,2,2019-07-04,11:07 AM,11:09 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RKM/OS,0,NF,0.454,0,32.069,-
+1,1,2,2019-07-05,9:38 AM,9:41 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/OS,0,NF,0.46,0,33.951,-
+1,1,2,2019-07-06,2:03 PM,2:03 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.459,0,32.42,-
+1,1,2,2019-07-07,10:38 AM,10:38 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.472,0,38.288,-
+1,1,2,2019-07-08,10:56 AM,10:56 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.463,0,33.759,-
+1,1,2,2019-07-09,2:07 PM,2:07 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.459,0,33.016,-
+1,1,2,2019-07-10,2:16 PM,2:18 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.461,0,32.385,-
+1,1,2,2019-07-11,10:29 AM,10:32 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.464,0,25.877,-
+1,1,2,2019-07-12,9:51 AM,9:53 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.468,0,42.836,-
+1,1,2,2019-07-13,10:50 AM,10:53 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP,0,NF,0.468,0,32.506,-
+1,1,2,2019-07-14,10:05 AM,10:07 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AP/RKM,0,NF,0.454,0,33.711,-
+1,1,2,2019-07-15,11:29 AM,11:23 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RKM/JK,0,NF,0.454,0,28.114,-
+1,1,2,2019-07-16,10:09 AM,10:11 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.466,0,42.563,-
+1,1,2,2019-07-17,2:05 PM,2:08 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP/BK,0,NF,0.463,0,36.891,-
+1,1,2,2019-07-18,1:44 PM,1:44 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/BK,0,NF,0.462,0.001,46.031,-
+1,1,2,2019-07-19,10:35 AM,10:37 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.469,0,23.502,-
+1,1,2,2019-07-20,10:02 AM,10:04 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.462,0,32.543,-
+1,1,2,2019-07-21,12:30 PM,1:32 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/BK,0,NF,0.454,0,31.467,-
+1,1,2,2019-07-22,2:06 PM,2:06 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.46,0.001,48.26,-
+1,1,2,2019-07-23,2:10 PM,2:12 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.463,0.001,48.853,-
+1,1,2,2019-07-24,2:10 PM,2:14 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.473,0.001,56.621,-
+1,1,2,2019-07-25,2:10 PM,2:13 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.468,0.001,55.412,-
+1,1,2,2019-07-26,9:51 AM,9:53 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.458,0.001,51.429,-
+1,1,2,2019-07-27,11:54 AM,11:54 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.456,0,38.383,-
+1,1,2,2019-07-28,10:30 AM,10:30 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/BK,0,NF,0.461,0,35.893,-
+1,1,2,2019-07-29,1:47 PM,1:48 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/AL,0,NF,0.472,0.001,45.655,-
+1,1,2,2019-07-30,2:13 PM,2:13 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.462,0.001,43.275,-
+1,1,2,2019-07-31,1:35 PM,1:35 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.465,0,42.264,-
+1,1,2,2019-08-01,2:15 PM,2:17 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/BK,0,NF,0.455,0,34.025,-
+1,1,2,2019-08-02,1:49 PM,1:51 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.464,0.001,45.765,-
+1,1,2,2019-08-03,9:43 AM,9:45 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.457,0,30.653,-
+1,1,2,2019-08-04,1:34 PM,1:35 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/RT,0,NF,0.462,0,35.832,-
+1,1,2,2019-08-05,4:30 PM,4:30 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AP/AL/HM,0,NF,0.47,0,24.509,-
+1,1,2,2019-08-06,2:11 PM,2:14 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/HM,0,NF,0.469,0,38.899,-
+1,1,2,2019-08-07,1:43 PM,1:45 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.469,0,41.04,-
+1,1,2,2019-08-08,8:27 AM,8:27 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/AL,0,NF,0.464,0,39.559,-
+1,1,2,2019-08-09,10:00 AM,10:02 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.463,0,42.508,-
+1,1,2,2019-08-10,9:47 AM,9:49 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.456,0,40.193,-
+1,1,2,2019-08-11,10:04 AM,10:04 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FP,0,NF,0.456,0,36.367,-
+1,1,2,2019-08-12,2:03 PM,2:03 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.466,0,31.381,-
+1,1,2,2019-08-13,10:02 AM,10:05 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.465,0,35.104,-
+1,1,2,2019-08-14,10:09 AM,10:11 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.469,0.001,47.504,-
+1,1,2,2019-08-15,3:06 PM,3:09 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.462,0,38.074,-
+1,1,2,2019-08-16,10:18 AM,10:20 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.468,0.001,60.627,-
+1,1,2,2019-08-17,10:39 AM,10:41 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.463,0.001,44.65,-
+1,1,2,2019-08-18,11:27 AM,11:29 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/JK,0,NF,0.464,0.001,45.346,-
+1,1,2,2019-08-19,3:04 PM,3:05 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.47,0.001,52.492,-
+1,1,2,2019-08-20,2:15 PM,2:17 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.473,0.001,60.13,-
+1,1,2,2019-08-21,9:40 AM,9:42 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AP/JK,0,NF,0.46,0.001,68.877,-
+1,1,2,2019-08-22,10:21 AM,10:23 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.462,0.001,47.27,-
+1,1,2,2019-08-23,10:03 AM,10:05 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.468,0.001,48.833,-
+1,1,2,2019-08-24,1:41 PM,1:41 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/JK,0,NF,0.45,0,43.177,-
+1,1,2,2019-08-25,9:43 AM,9:43 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.463,0,28.847,-
+1,1,2,2019-08-26,1:35 PM,1:35 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/JK,0,NF,0.461,0,37.835,-
+1,1,2,2019-08-27,1:55 PM,1:55 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/JK,0,NF,0.461,0,33.507,-
+1,1,2,2019-08-28,10:22 AM,10:24 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.47,0,33.981,-
+1,1,2,2019-08-29,1:59 PM,1:59 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.466,0,24.125,-
+1,1,2,2019-08-30,1:43 PM,1:43 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,JK/HB,0,NF,0.463,0,36.8,-
+1,1,2,2019-08-31,1:53 PM,1:53 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.455,0,36.667,-
+1,1,2,2019-09-01,               13:45,1:47 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK,0,NF,0.463,0,26.133,-
+1,1,2,2019-09-02,1:46 PM,1:48 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/JK,0,NF,0.462,0,28.46,-
+1,1,2,2019-09-03,               14:15,2:17 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FR,0,NF,0.463,0,42.977,-
+1,1,2,2019-09-04,               10:17,10:20 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FR,0,NF,0.464,0,36.273,-
+1,1,2,2019-09-05,10:12 AM,10:13 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,JK/FP,0,NF,0.466,0,26.361,-
+1,1,2,2019-09-06,               09:57,9:58 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/JK,0,NF,0.466,0.001,45.763,-
+1,1,2,2019-09-07,              10:09,10:10 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FP/RT,0,NF,0.466,0.001,49.56,-
+1,1,2,2019-09-08,              11:53,11:54 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/AL,0,NF,0.465,0,37.521,-
+1,1,2,2019-09-09,              13:39,1:40 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,BK/FR,0,NF,0.464,0,35.445,-
+1,1,2,2019-09-10,1:57 PM,1:58 PM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.457,0,35.958,-
+1,1,2,2019-09-11,9:42 AM,9:43 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.462,0,21.218,-
+1,1,2,2019-09-12,10:03 AM,10:04 AM,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.453,0,37.484,-
 1,1,2,2019-09-13,2:19 PM,No Data,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,FR/FP,0,NF,0.468,0,33.704,-
 1,1,2,2019-09-14,No Data,No Data,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,RT/FP,0,NF,0.463,0,30.854,-
 1,1,2,2019-09-15,No Data,No Data,NF,NF,NF,NF,NF,NF,NF,NF,NF,0,0,NF,NF,NF,NF,NF,NF,TS,AL/BK,0,NF,0.468,0.001,43.714,-
@@ -1557,7 +1199,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2020-04-04,11:05 AM,11:07 AM,15,7.3,7.36,208,569,365,29.1,0.2,43.8,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,BK/JK,0,0.63,0.706,0.294,25368.889,-
 1,1,2,2020-04-05,1:08 PM,1:10 PM,28,7.78,7.26,189,709,454,29.8,0.34,33.9,0,0,Surut,Agak keruh,Normal,Ada,Tidak,Tidak,TS,NB/FP,0,0.69,0.642,0.265,22908.831,-
 1,1,2,2020-04-06,2:06 PM,2:08 PM,29,7.41,7.05,220,675,432,30.7,0.3,31.1,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,NB/FP,0,0.65,0.635,0.2,17243.745,-
-1,1,2,2020-04-07,9:31 AM,9:33 AM,15,6.3,6.54,247,670,435,29.2,0.3,31,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,NB/RT/JK,0,0.65,0.606,0.166,14383.695,Monthly sampling
+1,1,2,2020-04-07,9:31 AM,9:33 AM,15,6.3,6.54,247,670,435,29.2,0.3,31,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,NB/RT/JK,0,0.65,0.606,0.166,14383.695,-
 1,1,2,2020-04-08,11:55 AM,11:57 AM,20,7.6,7.24,167,972,619,29.2,0.4,30.4,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/FP,0,0.62,0.592,0.136,11727.089,-
 1,1,2,2020-04-09,10:06 AM,10:08 AM,25,7.31,7.15,228,726,465,29.5,0.3,30.9,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT/AL,0,0.62,0.594,0.132,11432.843,-
 1,1,2,2020-04-10,7:33 AM,7:35 AM,26,7.24,7.13,226,732,455,29.6,0.3,29.6,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT,0,0,0.47,0.017,1501.127,-
@@ -1584,7 +1226,7 @@ standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conduc
 1,1,2,2020-05-01,9:29 AM,9:31 AM,34,7.36,6.79,233,596,381,29,0.2,43.7,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT?NB,0,0.67,0.602,0.17,14720.801,-
 1,1,2,2020-05-02,10:03 AM,10:05 AM,30,7.4,6.73,217,679,434,29.5,0.3,40.9,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,RT,0,0.64,0.592,0.149,12832.21,-
 1,1,2,2020-05-03,9:40 AM,9:42 AM,31,7.4,7.03,220,642,401,29.4,0.3,29.8,0,0,Surut,Agak keruh,Normal,Tidak,Tidak,Tidak,TS,NB/AL,0,0.62,0.749,0.352,30413.953,-
-1,1,2,2020-05-04,10:59 AM,11:11 AM,50,6.89,6.99,260,620,403,29.6,0.3,48,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/NB,0,0.74,0.995,0.795,68672.211,Monthly sampling
+1,1,2,2020-05-04,10:59 AM,11:11 AM,50,6.89,6.99,260,620,403,29.6,0.3,48,0,0,Pasang,Agak keruh,Normal,Ada,Tidak,Tidak,TS,RT/NB,0,0.74,0.995,0.795,68672.211,-
 1,1,2,2020-05-05,9:57 AM,10:00 AM,48,7.24,7.02,232,551,358,29,0.25,58,0,0,Pasang,Keruh,Normal,Ada,Tidak,Tidak,TS,NB,0,0.78,0.852,0.591,51056.622,-
 1,1,2,2020-05-06,11:15 AM,11:17 AM,34,7.01,7.77,267,549,352,30,0.26,39.8,0,0,Pasang,Keruh,Normal,Ada,Tidak,Tidak,TS,NB,0,0.73,0.685,0.302,26067.236,-
 1,1,2,2020-05-07,11:48 AM,11:50 AM,21,7.34,7.09,226,616,394,32,0.3,35.3,0,0,Surut,Keruh,Normal,Tidak,Tidak,Tidak,TS,NB/FR,0,0.72,0.637,0.19,16445.668,-

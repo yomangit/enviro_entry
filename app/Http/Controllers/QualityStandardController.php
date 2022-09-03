@@ -14,10 +14,11 @@ class QualityStandardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.Hydrometric.WaterLevel.QualityStandard.index',[
-            'tittle'=>'Quality Standard',
-            'breadcrumb'=>'Quality Standard',
-            'QualityStandard'=>QualityStandard::with('user')->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+        return view('dashboard.Hydrometric.WaterLevel.QualityStandard.index', [
+            'tittle' => 'Quality Standard',
+            'breadcrumb' => 'Quality Standard',
+            'QualityStandard' => QualityStandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+
         ]);
     }
 
@@ -28,10 +29,11 @@ class QualityStandardController extends Controller
      */
     public function create()
     {
-        return view('dashboard.Hydrometric.WaterLevel.QualityStandard.create',[
-            'tittle'=>'Quality Standard',
-            'breadcrumb'=>'Quality Standard',
-            'QualityStandard'=>QualityStandard::with('user')->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+        return view('dashboard.Hydrometric.WaterLevel.QualityStandard.create', [
+            'tittle' => 'Quality Standard',
+            'breadcrumb' => 'Quality Standard',
+            'QualityStandard' => QualityStandard::all()
+
         ]);
     }
 
@@ -78,10 +80,10 @@ class QualityStandardController extends Controller
      */
     public function edit(QualityStandard $qualitystandard)
     {
-        return view('dashboard.Hydrometric.WaterLevel.QualityStandard.edit',[
-            'tittle'=>'Quality Standard',
-            'breadcrumb'=>'Quality Standard',
-            'QualityStandard'=>$qualitystandard
+        return view('dashboard.Hydrometric.WaterLevel.QualityStandard.edit', [
+            'tittle' => 'Quality Standard',
+            'breadcrumb' => 'Quality Standard',
+            'QualityStandard' => $qualitystandard
         ]);
     }
 
@@ -124,6 +126,6 @@ class QualityStandardController extends Controller
     public function destroy(QualityStandard $qualitystandard)
     {
         QualityStandard::destroy($qualitystandard->id);
-        return redirect('/hydrometric/wlvp')->with('success', ' Data has been updated!');
+        return redirect('/hydrometric/wlvp/qualitystandard')->with('success', ' Data has been updated!');
     }
 }

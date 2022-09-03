@@ -31,50 +31,39 @@ class ResourceDataEntryController extends Controller
         $lokasi = [];
         $tss = [];
         $ph = [];
-        $suhu1 = [];
-        $conductivity1 = [];
-        $tds1 = [];
-        $tss1 = [];
-        $ph1 = [];
+
         foreach ($grafiks as $grafik) {
             $nama[] = $grafik->CodeSample->nama;
             $lokasi[] = $grafik->CodeSample->lokasi;
             $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-            if ($suhu1[] = $grafik->temperatur === '-') {
-                //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+            if (is_numeric($grafik->temperatur)) {
+                $suhu[] = doubleval($grafik->temperatur);
+            } else {
+
                 $suhu[] = '';
-            } elseif ($suhu1[] = $grafik->temperatur != '-') {
-                //  $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-                $suhu[] = $suhu1[] = doubleval($grafik->temperatur);
             }
-            if ($conductivity1[] = $grafik->conductivity === '-') {
-                // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+            if (is_numeric($grafik->conductivity)) {
+                $conductivity[] =  doubleval($grafik->conductivity);
+            } else {
+
                 $conductivity[] = '';
-            } elseif ($conductivity1[] = $grafik->conductivity != '-') {
-                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-                $conductivity[] = $conductivity1[] = doubleval($grafik->conductivity);
             }
-            if ($tds1[] = $grafik->tds === '-') {
+            if (is_numeric($grafik->tds)) {
+
+                $tds[] =  doubleval($grafik->tds);
+            } else {
                 $tds[] = '';
-                // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
-            } elseif ($tds1[] = $grafik->tds !='-') {
-                $tds[] = $tds1[] = doubleval($grafik->tds);
-                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
             }
-            if ($tss1[] = $grafik->tss === '-' ) {
-                //  $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+            if (is_numeric($grafik->tss)) {
+                $tss[] =  doubleval($grafik->tss);
+            } else {
                 $tss[] = '';
-            } elseif ($tss1[] = $grafik->tss !='-') {
-                $tss[] = $tss1[] = doubleval($grafik->tss);
-                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-                # code...
             }
-            if ($ph1[] = $grafik->ph === '-') {
-                // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+            if (is_numeric($grafik->ph)) {
+                $ph[] =  doubleval($grafik->ph); # code...
+
+            } else {
                 $ph[] = '';
-            } elseif ($ph1[] = $grafik->ph !='-') {
-                $ph[] = $ph1[] = doubleval($grafik->ph); # code...
-                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
             }
 
             // $tanggal[] = date('d-m-Y', strtotime($grafik->date));

@@ -20,7 +20,7 @@ class HydrometricController extends Controller
      */
     public function index()
     {
-        $grafiks = Hydrometric::with('user','standard')
+        $grafiks = Hydrometric::with('user', 'standard')
             ->filter(request(['fromDate', 'search']))->get();
         $tanggal = [];
         $suhu = [];
@@ -41,93 +41,75 @@ class HydrometricController extends Controller
             $nama[] = $grafik->CodeSample->nama;
             $lokasi[] = $grafik->CodeSample->lokasi;
             // $doStandard[]=$grafik->standard->do;
-            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-            if ($grafik->standard->ph_max === '-') {
-                
-                $phMax[] = '';
-            } elseif ($grafik->standard->ph_max != '-') {
-                
+            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
+            if (is_numeric($grafik->standard->ph_max)) {
                 $phMax[] = doubleval($grafik->standard->ph_max);
+            } else {
+                $phMax[] = '';
             }
-            if ($grafik->standard->ph_min === '-') {
-                
-                $phMin[] = '';
-            } elseif ($grafik->standard->ph_min != '-') {
-                
+            if (is_numeric($grafik->standard->ph_min)) {
                 $phMin[] = doubleval($grafik->standard->ph_min);
+            } else {
+                $phMin[] = '';
             }
-            if ($grafik->standard->conductivity === '-') {
-                
-                $conductivityStandard[] = '';
-            } elseif ($grafik->standard->conductivity != '-') {
-                
+            if (is_numeric($grafik->standard->conductivity)) {
                 $conductivityStandard[] = doubleval($grafik->standard->conductivity);
+            } else {
+                $conductivityStandard[] = '';
             }
-            if ($grafik->standard->tss === '-') {
-                
-                $tssStandard[] = '';
-            } elseif ($grafik->standard->tss != '-') {
-                
+            if ($grafik->standard->tss) {
                 $tssStandard[] = doubleval($grafik->standard->tss);
+            } else {
+                $tssStandard[] = '';
             }
-            if ($grafik->standard->do === '-') {
-                
-                $doStandard[] = '';
-            } elseif ($grafik->standard->do != '-') {
-                
+            if (is_numeric($grafik->standard->do)) {
                 $doStandard[] = doubleval($grafik->standard->do);
-            }
-            if ($grafik->temperatur === '-') {
-                
-                $suhu[] = '';
-            } elseif ($grafik->temperatur != '-') {
-                
-                $suhu[] = doubleval($grafik->temperatur);
-            }
-            if ( $grafik->conductivity === '-') {
-                
-                $conductivity[] = '';
-            } elseif ( $grafik->conductivity != '-') {
-               
-                $conductivity[] =  doubleval($grafik->conductivity);
-            }
-            if ( $grafik->tds === '-') {
-                $tds[] = '';
-                
-            } elseif ( $grafik->tds !='-') {
-                $tds[] =  doubleval($grafik->tds);
-               
-            }
-            if ( $grafik->tss === '-' ) {
-                
-                $tss[] = '';
-            } elseif ( $grafik->tss !='-') {
-                $tss[] =  doubleval($grafik->tss);
-               
-                # code...
-            }
-            if ( $grafik->ph === '-') {
-                
-                $ph[] = '';
-            } elseif ( $grafik->ph !='-') {
-                $ph[] =  doubleval($grafik->ph); # code...
-               
-            }
-            if ( $grafik->do === '-') {
-                
-                $do[] = '';
-            } elseif ( $grafik->do !='-') {
-                $do[] =  doubleval($grafik->do); # code...
-               
+            } else {
+                $doStandard[] = '';
             }
 
-           
+
+            if (is_numeric($grafik->temperatur)) {
+                $suhu[] = doubleval($grafik->temperatur);
+            } else {
+
+                $suhu[] = '';
+            }
+            if (is_numeric($grafik->conductivity)) {
+                $conductivity[] =  doubleval($grafik->conductivity);
+            } else {
+
+                $conductivity[] = '';
+            }
+            if (is_numeric($grafik->tds)) {
+
+                $tds[] =  doubleval($grafik->tds);
+            } else {
+                $tds[] = '';
+            }
+            if (is_numeric($grafik->tss)) {
+                $tss[] =  doubleval($grafik->tss);
+            } else {
+                $tss[] = '';
+            }
+            if (is_numeric($grafik->ph)) {
+                $ph[] =  doubleval($grafik->ph); # code...
+
+            } else {
+                $ph[] = '';
+            }
+            if (is_numeric($grafik->do)) {
+                $do[] =  doubleval($grafik->do); # code...
+
+            } else {
+                $do[] = '';
+            }
         }
 
-        return view('dashboard.Hydrometric.WaterLevel.Master.index',[
+        return view('dashboard.Hydrometric.WaterLevel.Master.index', [
             'code_units' => CodeHydrometric::all(),
             'standard' => QualityStandard::all(),
-            'tittle'=>'Hydrometric',
+            'tittle' => 'Water Level & Volume Pond',
             'breadcrumb' => 'Water Level & Volume Pond',
             'date' => $tanggal,
             'suhu' => $suhu,
@@ -135,13 +117,13 @@ class HydrometricController extends Controller
             'tds' => $tds,
             'tss' => $tss,
             'ph' => $ph,
-            'do' =>$do,
-            'doStandard'=>$doStandard,
-            'tssStandard'=>$tssStandard,
-            'cdvStd'=>$conductivityStandard,
-            'phMin'=>$phMin,
-            'phMax'=>$phMax,
-            'Hydrometric' => Hydrometric::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
+            'do' => $do,
+            'doStandard' => $doStandard,
+            'tssStandard' => $tssStandard,
+            'cdvStd' => $conductivityStandard,
+            'phMin' => $phMin,
+            'phMax' => $phMax,
+            'Hydrometric' => Hydrometric::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
         ]);
     }
     public function ExportHydro()
@@ -153,14 +135,13 @@ class HydrometricController extends Controller
         $file = $request->file('file');
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase', $nameFile);
-        try{
+        try {
             Excel::import(new HydroImport(), public_path('/EnviroDatabase/' . $nameFile));
             return redirect('/hydrometric/wlvp')->with('success', 'New Data has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
-             return back()->withFailures($e->failures());
-         }
-       
+            return back()->withFailures($e->failures());
+        }
     }
 
     /**
@@ -175,7 +156,7 @@ class HydrometricController extends Controller
         }
         return view('dashboard.Hydrometric.WaterLevel.Master.create', [
             'code_units' => CodeHydrometric::all(),
-            'tittle' => 'Hydrometric',
+            'tittle' => 'Water Level & Volume Pond',
             'breadcrumb' => 'Water Level & Volume Pond',
             'Hydrometric' => Hydrometric::where('user_id', auth()->user()->id)
                 ->latest()
@@ -196,7 +177,7 @@ class HydrometricController extends Controller
             'stop_time' => 'required|max:255',
             'cyanide' => 'required',
             'level' => 'required',
-            'codeHydrometric_id' => 'required',
+            'point_id' => 'required',
             'lvl_lgr' => 'required',
             'tl_wall' => 'required',
             'tl_tsf' => 'required',
@@ -236,7 +217,6 @@ class HydrometricController extends Controller
      */
     public function show(Hydrometric $wlvp)
     {
-      
     }
 
     /**
@@ -252,7 +232,7 @@ class HydrometricController extends Controller
         }
         return view('dashboard.Hydrometric.WaterLevel.Master.edit', [
             'code_units' => CodeHydrometric::all(),
-            'tittle' => 'Hydrometric',
+            'tittle' => 'Water Level & Volume Pond',
             'breadcrumb' => 'Water Level & Volume Pond',
             'Hydrometric' => $wlvp //with diguanakan untuk mengatasi N+1 problem
         ]);
@@ -268,7 +248,7 @@ class HydrometricController extends Controller
     public function update(Request $request, Hydrometric $wlvp)
     {
         $rules = [
-            'codeHydrometric_id' => 'required',
+            'point_id' => 'required',
             'stop_time' => 'required|max:255',
             'start_time' => 'required|max:255',
             'level' => 'required',
@@ -299,7 +279,7 @@ class HydrometricController extends Controller
         ];
 
         $validatedData = $request->validate($rules);
-       
+
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['standard_id'] = '1';

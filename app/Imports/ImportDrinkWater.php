@@ -21,9 +21,9 @@ class ImportDrinkWater implements ToModel, WithValidation, WithHeadingRow
     public function model(array $row)
     {
         return new DrinkWater([
-            'standard_id'=>$row['standard_id'],
+            'point_id' => $row['point_id'],
             'user_id'=>$row['user_id'],
-            'date'=>$row['date '],
+            'date'=>$row['date'],
             'conductivity'=>$row['conductivity'],
             'tds' =>$row['tds'],
             'tss'=>$row['tss'],
@@ -70,7 +70,9 @@ class ImportDrinkWater implements ToModel, WithValidation, WithHeadingRow
  public function rules(): array
  {
      return [
-
+        'point_id'=>['required'],
+        'user_id'=>['required'],
+        'date'=>['required'],
         'conductivity'=>['required'],
         'tds'=>['required'],
         'tss'=>['required'],
@@ -115,3 +117,4 @@ class ImportDrinkWater implements ToModel, WithValidation, WithHeadingRow
      ];
  }
 }
+

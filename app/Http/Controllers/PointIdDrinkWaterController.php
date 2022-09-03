@@ -120,7 +120,7 @@ class PointIdDrinkWaterController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         PointIdDrinkwater::where('id', $pointid->id)
             ->update($validatedData);
-        return redirect('/surfacewater/drinkwater/pointid')->with('success', 'Code Sample Surface Water has been updated!');
+        return redirect('/surfacewater/drinkwater/pointid')->with('success', 'Data has been updated!');
     }
 
     /**

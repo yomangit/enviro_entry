@@ -115,14 +115,9 @@ class HydroCodeController extends Controller
     {
         $rules = [
             'nama' => 'required|max:255',
-
             'lokasi' => 'required|max:255',
         ];
-
-
-
         $validatedData = $request->validate($rules);
-
         $validatedData['user_id'] = auth()->user()->id;
         CodeHydrometric::where('id', $point->id)
             ->update($validatedData);

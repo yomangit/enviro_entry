@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit {{ $breadcrumb }}</h1>
+                    <h1>{{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -21,8 +21,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-success card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -30,7 +30,11 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+                    <div class="card-title m-1">Form Edit</div>
+                </div>
+
+                <div class="card-body p-0 m-2">
+                <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
                         </li>
@@ -51,10 +55,6 @@
                         </li>
 
                     </ul>
-                </div>
-
-                <div class="card-body">
-
                     <form action="/surfacewater/drinkwater/{{ $DrinkWater->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @method('put')
                         @csrf
@@ -723,9 +723,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- /.form-group -->
                                             </div>
-
                                             <div class="col-12 col-sm-4">
                                                 <div class="form-group">
                                                     <div class="form-group row">
@@ -743,11 +741,10 @@
                                         </div><!-- end row -->
                                     </div>
                                     <div class="card-footer d-flex justify-content-end">
-                                        <button style="width: 110px" type="submit" class="btn bg-gradient-success btn-sm ">Save</button>
+                                    <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </form>
                 </div>

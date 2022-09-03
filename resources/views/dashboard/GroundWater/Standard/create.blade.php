@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/dashboard/groundwater/standard">{{ $tittle }}</a></li>
+                        <li class="breadcrumb-item"><a href="/groundwater/standard">{{ $tittle }}</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/dashboard/groundwater/standard" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    <form action="/groundwater/standard" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
                         <div class="row">
                             

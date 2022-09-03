@@ -22,7 +22,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-default">
+            <div class="card card-primary card-outline">
                 <div class="card-header p-0 pt-1">
 
                     @if (session()->has('success'))
@@ -32,6 +32,7 @@
                         {{ session('success') }}
                     </div>
                     @endif
+                    <div class="card-title ml-2">Form Input</div>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -74,11 +75,12 @@
 
                         </div>
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
-                        </div>
+
                     </form>
 
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+                    <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
                 </div>
                 <!-- /.card-body -->
 

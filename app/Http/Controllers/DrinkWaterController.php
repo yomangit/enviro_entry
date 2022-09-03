@@ -163,6 +163,7 @@ class DrinkWaterController extends Controller
     public function update(Request $request, DrinkWater $drinkwater)
     {
         $rules = [
+            'point_id'=>'required',
             'conductivity'=>'required',
             'tds'=>'required',
             'tss'=>'required',

@@ -16,7 +16,7 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="">
-                    <div class="card card-secondrary card-tabs">
+                <div class="card card-primary card-outline">
                         <div class="card-header p-0 pt-1">
                           
                             @if (session()->has('success'))
@@ -29,7 +29,7 @@
                             @endif
                            @can('admin')
                             <a href="/airquality/dustgauge/dust/codesampledg"
-                            class="btn bg-gradient-info btn-xs ml-5 mt-3">Code Sample</a>@endcan
+                            class="btn bg-gradient-info btn-xs ml-2 mb-1 ">Code Sample</a>@endcan
                         </div>
                         <div class="card-body">
                             <section class="content mt-2">
@@ -37,8 +37,9 @@
                                 <div>
                                     <div class="col-12">
                                         <div class="card">
-                                        @if($code_units->count())
+                                       
                                             <div class="card-header">
+                                            @if($code_units->count())
                                                 <div class="card-tools">
                                                     <div class="card-tools row">
                                                         <form action="/airquality/dustgauge/dust" class="form-inline">

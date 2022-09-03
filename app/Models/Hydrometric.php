@@ -9,8 +9,7 @@ class Hydrometric extends Model
 {
     public $table = 'hydrometrics';
     use HasFactory;
-    protected $fillable = ['start_time','stop_time','cyanide','level','codeHydrometric_id','lvl_lgr','tl_wall','tl_tsf','debit_s','debit_d','orp','tss','ph','do','conductivity',
-    'tds','temperatur','salinity','turbidity','water_condition','water_color','odor','rain','rain_during_sampling','oil_layer','source_pollution','remarks','sampler','standard_id','user_id','date'];
+    protected $guarded=['id'];
     public function scopefilter($query, array $filters)
     {
 
@@ -33,7 +32,7 @@ class Hydrometric extends Model
     }
     public function CodeSample()
     {
-        return $this->belongsTo(CodeHydrometric::class, 'codeHydrometric_id');
+        return $this->belongsTo(CodeHydrometric::class, 'point_id');
     }
     public function getRouteKeyName()
     {

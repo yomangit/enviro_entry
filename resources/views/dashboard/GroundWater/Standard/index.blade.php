@@ -84,7 +84,7 @@
                                                         class="btn bg-gradient-dark btn-xs">refresh</button>
                                                 </form> --}}
 
-                                                <form action="/dashboard/groundwater/standard">
+                                                <form action="/groundwater/standard">
                                                     <div class="input-group input-group-sm" style="width: 150px;">
                                                         <input type="text" name="search"
                                                             class="form-control float-right" placeholder="Search"
@@ -97,7 +97,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <a href="/dashboard/groundwater/standard/create"
+                                            <a href="/groundwater/standard/create"
                                                 class="btn bg-gradient-secondary btn-xs mt-2"><i
                                                     class="fas fa-plus mr-1 mt"></i>Add Data</a>
                                             <a href="/export/groundwater/standart" class="btn  bg-gradient-secondary btn-xs mt-2"
@@ -131,14 +131,14 @@
                                                         <td>{{ $no++ }}</td>
                                                         <td>
                                                             <div style="">
-                                                                <a href="/dashboard/groundwater/standard/{{ $code->id }}/edit"
+                                                                <a href="/groundwater/standard/{{ $code->id }}/edit"
                                                                     class="btn btn-outline-warning btn-xs btn-group"
                                                                     data-toggle="tooltip" data-placement="top"
                                                                     title="Edit">
                                                                     <i class="fas fa-pen"></i>
                                                                 </a>
                                                                 <form
-                                                                    action="/dashboard/groundwater/standard/{{ $code->id }}"
+                                                                    action="/groundwater/standard/{{ $code->id }}"
                                                                     method="POST" class="d-inline">
                                                                     @method('delete')
                                                                     @csrf

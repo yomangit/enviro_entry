@@ -21,8 +21,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-primary card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -30,7 +30,12 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+                   <div class="card-title m-1">Form Input</div>
+                </div>
+
+                <div class="card-body">
+
+                <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
                         </li>
@@ -51,48 +56,44 @@
                         </li>
 
                     </ul>
-                </div>
-
-                <div class="card-body">
 
                     <form action="/surfacewater/drinkwater" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
                         <div class="row">
-                        <div class="col-12 col-md-4">
-                            <div class="form-group row">
-                                <label style="font-size: 12px"
-                                    class="col-sm-4 col-form-label">Code Sample</label>
-                                <div class="col-sm-6">
-                                    <select class="form-control form-control-sm " name="point_id">
-                                        @foreach ($code_units as $code)
-                                        @if (old('point_id')==$code->id)
-                                        <option value="{{$code->id}}" selected>{{$code->nama}}</option>
-                                        @else
-                                        <option value="{{$code->id}}" >{{$code->nama}}</option>
-                                        @endif
-                                        @endforeach
-                                    </select>
+                            <div class="col-12 col-md-4">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control form-control-sm " name="point_id">
+                                            @foreach ($code_units as $code)
+                                            @if (old('point_id')==$code->id)
+                                            <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->id}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
 
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-4">
-                            <div class="form-group row">
-                                <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
-                                <div class="col-sm-4">
-                                    <div class="input-group date" id="reservationdate4" data-target-input="nearest">
-                                        <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date') }}" />
-                                        @error('date')
-                                        <span class=" invalid-feedback">{{ $message }}</span>
-                                        @enderror
                                     </div>
 
                                 </div>
-
                             </div>
-                        </div>
+
+                            <div class="col-12 col-md-4">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
+                                    <div class="col-sm-4">
+                                        <div class="input-group date" id="reservationdate4" data-target-input="nearest">
+                                            <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date') }}" />
+                                            @error('date')
+                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
 
                         </div>
 
@@ -744,7 +745,7 @@
                                         </div><!-- end row -->
                                     </div>
                                     <div class="card-footer d-flex justify-content-end">
-                                        <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
+                                    <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
                                     </div>
                                 </div>
                             </div>

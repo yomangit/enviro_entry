@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class QualityStandard extends Model
 {
     use HasFactory;
-    protected $fillable = ['tss','ph_max','ph_min','do','redox','conductivity','tds','temperatur','user_id'];
+    protected $guarded=['id'];
     public function scopefilter($query,array $filters)
     {
         $query->when($filters['fromDate']?? false, function($query){

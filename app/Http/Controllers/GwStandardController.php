@@ -36,7 +36,7 @@ class GwStandardController extends Controller
         $file->move('EnviroDatabase',$nameFile);
         try {
         Excel::import(new GwStandardImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/dashboard/groundwater/standard')->with('success','New table Standard has been Imported!');
+        return redirect('/groundwater/standard')->with('success','New table Standard has been Imported!');
     } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
         $e->failures();
          return back()->withFailures($e->failures());
@@ -75,7 +75,7 @@ class GwStandardController extends Controller
         ]);
         $validatedData['user_id']=auth()->user()->id;
         GroundWaterStandard::create($validatedData);
-        return redirect('/dashboard/groundwater/standard/create')->with('success','New Data Table Standard has been added!');
+        return redirect('/groundwater/standard/create')->with('success','New Data Table Standard has been added!');
     }
 
     /**
@@ -124,7 +124,7 @@ class GwStandardController extends Controller
     $validatedData['user_id']=auth()->user()->id;
     GroundWaterStandard::where('id',$standard->id)
     ->update($validatedData);
-    return redirect('/dashboard/groundwater/standard')->with('success',' Data Table Standard has been updated!');
+    return redirect('/groundwater/standard')->with('success',' Data Table Standard has been updated!');
     }
 
     /**
@@ -136,6 +136,6 @@ class GwStandardController extends Controller
     public function destroy(GroundWaterStandard $standard)
     {
         GroundWaterStandard::destroy($standard->id);
-        return redirect('/dashboard/groundwater/standard')->with('success','Data Table Standard has been deleted!');
+        return redirect('/groundwater/standard')->with('success','Data Table Standard has been deleted!');
     }
 }

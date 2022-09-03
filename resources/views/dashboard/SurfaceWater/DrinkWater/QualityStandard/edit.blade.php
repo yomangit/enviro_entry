@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit {{ $breadcrumb }}</h1>
+                    <h1> {{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -14,7 +14,7 @@
                         <li class="breadcrumb-item"><a href="/surfacewater/drinkwater/quantity">{{$tittle}}</a></li>
                         <li class="breadcrumb-item active">Edit Data</li>
                     </ol>
-            </div>
+                </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -22,8 +22,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-success card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -31,35 +31,34 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-content-above-Anions-tab" data-toggle="pill" href="#custom-content-above-Anions" role="tab" aria-controls="custom-content-above-Anions" aria-selected="false">Anions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-content-above-Cyanide-tab" data-toggle="pill" href="#custom-content-above-Cyanide" role="tab" aria-controls="custom-content-above-Cyanide" aria-selected="false">Cyanide</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-content-above-nutrients-tab" data-toggle="pill" href="#custom-content-above-nutrients" role="tab" aria-controls="custom-content-above-nutrients" aria-selected="false">Nutrients</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-content-above-dissolved-tab" data-toggle="pill" href="#custom-content-above-dissolved" role="tab" aria-controls="custom-content-above-dissolved" aria-selected="false">Dissolved Metals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-content-above-microbiology-tab" data-toggle="pill" href="#custom-content-above-microbiology" role="tab" aria-controls="custom-content-above-microbiology" aria-selected="false">Microbiology</a>
-                        </li>
-
-                    </ul>
+                    <div class="card-titel ml-2">Form Edit</div>
                 </div>
+                <form action="/surfacewater/drinkwater/quantity/{{ $QualityStd->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                    @method('put')
+                    @csrf
+                    <div class="card-body">
+                        <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-above-Anions-tab" data-toggle="pill" href="#custom-content-above-Anions" role="tab" aria-controls="custom-content-above-Anions" aria-selected="false">Anions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-above-Cyanide-tab" data-toggle="pill" href="#custom-content-above-Cyanide" role="tab" aria-controls="custom-content-above-Cyanide" aria-selected="false">Cyanide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-above-nutrients-tab" data-toggle="pill" href="#custom-content-above-nutrients" role="tab" aria-controls="custom-content-above-nutrients" aria-selected="false">Nutrients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-above-dissolved-tab" data-toggle="pill" href="#custom-content-above-dissolved" role="tab" aria-controls="custom-content-above-dissolved" aria-selected="false">Dissolved Metals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-above-microbiology-tab" data-toggle="pill" href="#custom-content-above-microbiology" role="tab" aria-controls="custom-content-above-microbiology" aria-selected="false">Microbiology</a>
+                            </li>
 
-                <div class="card-body">
+                        </ul>
 
-                    <form action="/surfacewater/drinkwater/quantity/{{ $QualityStd->id }}" method="post"
-                        enctype="multipart/form-data" autocomplete="off">
-                        @method('put')
-                        @csrf
                         <div class=" ml-2 col-12 col-sm-6">
                             <div class="form-group">
                                 <div class="form-group row">
@@ -381,7 +380,7 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Ammonia (N-NH3)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="ammonia_nnh3" type="text" class="form-control form-control-sm @error('ammonia_nnh3') is-invalid @enderror" value="{{ old('ammonia_nnh3',$QualityStd->ammonia_nnh3) }}"/>
+                                                            <input name="ammonia_nnh3" type="text" class="form-control form-control-sm @error('ammonia_nnh3') is-invalid @enderror" value="{{ old('ammonia_nnh3',$QualityStd->ammonia_nnh3) }}" />
                                                             @error('ammonia_nnh3')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
@@ -724,16 +723,17 @@
                                         </div><!-- end row -->
                                     </div>
                                     <div class="card-footer d-flex justify-content-end">
-                                        <button style="width: 110px" type="submit" class="btn bg-gradient-success btn-sm ">Save</button>
+                                        <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </form>
-                </div>
+
+                </form>
             </div>
         </div>
+
     </section>
 </div>
 

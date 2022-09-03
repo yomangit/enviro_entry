@@ -16,8 +16,8 @@ class CreateHydrometricsTable extends Migration
         Schema::create('hydrometrics', function (Blueprint $table) {
             $table->id     (                      );
             $table->foreignId('standard_id');
+            $table->foreignId('point_id');
             $table->foreignId('user_id');
-            $table->foreignId('codeHydrometric_id');
             $table->date   ('date'                );
             $table->string   ('start_time'          );
             $table->string   ('stop_time'          );
