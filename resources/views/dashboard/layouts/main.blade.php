@@ -14,6 +14,20 @@
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/cylinder.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
+
+    <!-- Highchart
+	<script src="assets/plugins/highcharts/js/highcharts.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-more.js"></script>
+	<script src="assets/plugins/highcharts/js/variable-pie.js"></script>
+	<script src="assets/plugins/highcharts/js/solid-gauge.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-3d.js"></script>
+	<script src="assets/plugins/highcharts/js/cylinder.js"></script>
+	<script src="assets/plugins/highcharts/js/funnel3d.js"></script>
+	<script src="assets/plugins/highcharts/js/exporting.js"></script>
+	<script src="assets/plugins/highcharts/js/export-data.js"></script>
+	<script src="assets/plugins/highcharts/js/accessibility.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-custom.script.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts.js"></script> -->
     <!-- Google Font: Source Sans Pro -->
     <link href="/assets/fontawsome/css/fontawesome.css" rel="stylesheet">
     <link href="/assets/fontawsome/css/brands.css" rel="stylesheet">
@@ -43,7 +57,7 @@
     <link rel="stylesheet" href="/assets/plugins/dropzone/min/dropzone.min.css">
     <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="/assets/plugins/highcharts/darkunica.css">
-
+	<link href="assets/plugins/highcharts/css/highcharts.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
@@ -164,6 +178,22 @@
                 "searching": false
             });
             $('#example6').DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "paging": false,
+                "info": false,
+                "autoWidth": false,
+                "searching": false
+            });
+            $('#example7').DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "paging": false,
+                "info": false,
+                "autoWidth": false,
+                "searching": false
+            });
+            $('#example8').DataTable({
                 "responsive": true,
                 "lengthChange": false,
                 "paging": false,

@@ -22,8 +22,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-primary card-outline">
-                <div class="card-header p-0 p-2">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -58,7 +58,7 @@
                     @endif
 
 
-                    <div class="card-title">Form Input</div>
+                    <div class="card-title ml-2">Form Input</div>
 
 
 
@@ -115,6 +115,22 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group row">
+                                            <label style="font-size: 12px" class="col-sm-3 col-form-label">Quality Standard Chart</label>
+                                            <div class="col-sm-7">
+                                                <select class="form-control form-control-sm " name="standard_id">
+                                                    @foreach ($QualityStd as $code)
+                                                    @if (old('standard_id',$Wastewater->standard_id)==$code->id)
+                                                    <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                                    @else
+                                                    <option value="{{$code->id}}">{{$code->nama}}</option>
+                                                    @endif
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-12 col-sm-3">
                                         <div class="form-group row">
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
@@ -131,7 +147,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="border-bottom"></p>
+                                
                                 <div class="tab-content" id="custom-content-above-tab">
                                     <div class="tab-pane fade show active card-body table-responsive " id="custom-content-above-Physical" role="tabpanel" aria-labelledby="custom-content-above-Physical-tab">
                                         <div class="row">
@@ -153,8 +169,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">TDS</label>
                                                         <div class="col-sm-5">
-                                                            <input name="tds" type="text" class="form-control form-control-sm @error('tds') is-invalid @enderror" value="{{ old('tds',$Wastewater->tds) }}" />
-                                                            @error('tds')
+                                                            <input name="totaldissolvedsolids_tds" type="text" class="form-control form-control-sm @error('totaldissolvedsolids_tds') is-invalid @enderror" value="{{ old('totaldissolvedsolids_tds',$Wastewater->totaldissolvedsolids_tds) }}" />
+                                                            @error('totaldissolvedsolids_tds')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -166,8 +182,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">TSS</label>
                                                         <div class="col-sm-5">
-                                                            <input name="tss" type="text" class="form-control form-control-sm @error('tss') is-invalid @enderror" value="{{ old('tss',$Wastewater->tss) }}" />
-                                                            @error('tss')
+                                                            <input name="totalsuspendedsolids_tss" type="text" class="form-control form-control-sm @error('totalsuspendedsolids_tss') is-invalid @enderror" value="{{ old('totalsuspendedsolids_tss',$Wastewater->totalsuspendedsolids_tss) }}" />
+                                                            @error('totalsuspendedsolids_tss')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -205,8 +221,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Alkalinity (as CaCo3)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="alkalinity_as_caco3" type="text" class="form-control form-control-sm @error('alkalinity_as_caco3') is-invalid @enderror" value="{{ old('alkalinity_as_caco3',$Wastewater->alkalinity_as_caco3) }}" />
-                                                            @error('alkalinity_as_caco3')
+                                                            <input name="alkalinity_ascaco3" type="text" class="form-control form-control-sm @error('alkalinity_ascaco3') is-invalid @enderror" value="{{ old('alkalinity_ascaco3',$Wastewater->alkalinity_ascaco3) }}" />
+                                                            @error('alkalinity_ascaco3')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -218,8 +234,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Alkalinity-Carbonate)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="alkalinity_carbonate" type="text" class="form-control form-control-sm @error('alkalinity_carbonate') is-invalid @enderror" value="{{ old('alkalinity_carbonate',$Wastewater->alkalinity_carbonate) }}" />
-                                                            @error('alkalinity_carbonate')
+                                                            <input name="alkalinitycarbonate" type="text" class="form-control form-control-sm @error('alkalinitycarbonate') is-invalid @enderror" value="{{ old('alkalinitycarbonate',$Wastewater->alkalinitycarbonate) }}" />
+                                                            @error('alkalinitycarbonate')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -231,8 +247,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Alkalinity-Bicarbonate)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="alkalinity_bicarbonate" type="text" class="form-control form-control-sm @error('alkalinity_bicarbonate') is-invalid @enderror" value="{{ old('alkalinity_bicarbonate',$Wastewater->alkalinity_bicarbonate) }}" />
-                                                            @error('alkalinity_bicarbonate')
+                                                            <input name="alkalinitybicarbonate" type="text" class="form-control form-control-sm @error('alkalinitybicarbonate') is-invalid @enderror" value="{{ old('alkalinitybicarbonate',$Wastewater->alkalinitybicarbonate) }}" />
+                                                            @error('alkalinitybicarbonate')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -270,8 +286,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Dissolved Oxygen (DO)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="do" type="text" class="form-control form-control-sm @error('do') is-invalid @enderror" value="{{ old('do',$Wastewater->do) }}" />
-                                                            @error('do')
+                                                            <input name="dissolvedoxygen_do" type="text" class="form-control form-control-sm @error('dissolvedoxygen_do') is-invalid @enderror" value="{{ old('dissolvedoxygen_do',$Wastewater->dissolvedoxygen_do) }}" />
+                                                            @error('dissolvedoxygen_do')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -300,8 +316,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Alkalinity - Total</label>
                                                         <div class="col-sm-5">
-                                                            <input name="alkalinity_total" type="text" class="form-control form-control-sm @error('alkalinity_total') is-invalid @enderror" value="{{ old('alkalinity_total',$Wastewater->alkalinity_total) }}" />
-                                                            @error('alkalinity_total')
+                                                            <input name="alkalinitytotal" type="text" class="form-control form-control-sm @error('alkalinitytotal') is-invalid @enderror" value="{{ old('alkalinitytotal',$Wastewater->alkalinitytotal) }}" />
+                                                            @error('alkalinitytotal')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -313,8 +329,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Chloride (Cl)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="cl" type="text" class="form-control form-control-sm @error('cl') is-invalid @enderror" value="{{ old('cl',$Wastewater->cl) }}" />
-                                                            @error('cl')
+                                                            <input name="chloride_cl" type="text" class="form-control form-control-sm @error('chloride_cl') is-invalid @enderror" value="{{ old('chloride_cl',$Wastewater->chloride_cl) }}" />
+                                                            @error('chloride_cl')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -326,8 +342,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Fluoride (F)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="fluoride" type="text" class="form-control form-control-sm @error('fluoride') is-invalid @enderror" value="{{ old('fluoride',$Wastewater->fluoride) }}" />
-                                                            @error('fluoride')
+                                                            <input name="fluoride_f" type="text" class="form-control form-control-sm @error('fluoride_f') is-invalid @enderror" value="{{ old('fluoride_f',$Wastewater->fluoride_f) }}" />
+                                                            @error('fluoride_f')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -339,8 +355,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Sulphate (SO4)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="sulphate" type="text" class="form-control form-control-sm @error('sulphate') is-invalid @enderror" value="{{ old('sulphate',$Wastewater->sulphate) }}" />
-                                                            @error('sulphate')
+                                                            <input name="sulphate_so4" type="text" class="form-control form-control-sm @error('sulphate_so4') is-invalid @enderror" value="{{ old('sulphate_so4',$Wastewater->sulphate_so4) }}" />
+                                                            @error('sulphate_so4')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -352,8 +368,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Sulphite (H2S)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="sulphite" type="text" class="form-control form-control-sm @error('sulphite') is-invalid @enderror" value="{{ old('sulphite',$Wastewater->sulphite) }}" />
-                                                            @error('sulphite')
+                                                            <input name="sulphite_h2s" type="text" class="form-control form-control-sm @error('sulphite_h2s') is-invalid @enderror" value="{{ old('sulphite_h2s',$Wastewater->sulphite_h2s) }}" />
+                                                            @error('sulphite_h2s')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -365,8 +381,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Free Chlorine (Cl2)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="free_chlorine" type="text" class="form-control form-control-sm @error('free_chlorine') is-invalid @enderror" value="{{ old('free_chlorine',$Wastewater->free_chlorine) }}" />
-                                                            @error('free_chlorine')
+                                                            <input name="freechlorine_cl2" type="text" class="form-control form-control-sm @error('freechlorine_cl2') is-invalid @enderror" value="{{ old('freechlorine_cl2',$Wastewater->freechlorine_cl2) }}" />
+                                                            @error('freechlorine_cl2')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -382,8 +398,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Free Cyanide (FCN)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="fcn" type="text" class="form-control form-control-sm @error('fcn') is-invalid @enderror" value="{{ old('fcn',$Wastewater->fcn) }}" />
-                                                            @error('fcn')
+                                                            <input name="freecyanide_fcn" type="text" class="form-control form-control-sm @error('freecyanide_fcn') is-invalid @enderror" value="{{ old('freecyanide_fcn',$Wastewater->freecyanide_fcn) }}" />
+                                                            @error('freecyanide_fcn')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -395,8 +411,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Total Cyanide (CN Tot)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="total_cyanide" type="text" class="form-control form-control-sm @error('total_cyanide') is-invalid @enderror" value="{{ old('total_cyanide',$Wastewater->total_cyanide) }}" />
-                                                            @error('total_cyanide')
+                                                            <input name="totalcyanide_cntot" type="text" class="form-control form-control-sm @error('totalcyanide_cntot') is-invalid @enderror" value="{{ old('totalcyanide_cntot',$Wastewater->totalcyanide_cntot) }}" />
+                                                            @error('totalcyanide_cntot')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -408,8 +424,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">WAD Cyanide (CN Wad))</label>
                                                         <div class="col-sm-5">
-                                                            <input name="wad_cyanide" type="text" class="form-control form-control-sm @error('wad_cyanide') is-invalid @enderror" value="{{ old('wad_cyanide',$Wastewater->wad_cyanide) }}" />
-                                                            @error('wad_cyanide')
+                                                            <input name="wadcyanide_cnwad" type="text" class="form-control form-control-sm @error('wadcyanide_cnwad') is-invalid @enderror" value="{{ old('wadcyanide_cnwad',$Wastewater->wadcyanide_cnwad) }}" />
+                                                            @error('wadcyanide_cnwad')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -423,10 +439,23 @@
                                             <div class="col-12 col-sm-3">
                                                 <div class="form-group">
                                                     <div class="form-group row">
-                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Ammonia (N-NH3) </label>
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Ammonia (N-NH4) </label>
                                                         <div class="col-sm-5">
-                                                            <input name="ammonia" type="text" class="form-control form-control-sm @error('ammonia') is-invalid @enderror" value="{{ old('ammonia',$Wastewater->ammonia) }}" />
-                                                            @error('ammonia')
+                                                            <input name="ammonia_nh4" type="text" class="form-control form-control-sm @error('ammonia_nh4') is-invalid @enderror" value="{{ old('ammonia_nh4',$Wastewater->ammonia_nh4) }}" />
+                                                            @error('ammonia_nh4')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-3">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Ammonium (N_NH3) </label>
+                                                        <div class="col-sm-5">
+                                                            <input name="ammonium_n_nh3" type="text" class="form-control form-control-sm @error('ammonium_n_nh3') is-invalid @enderror" value="{{ old('ammonium_n_nh3',$Wastewater->ammonium_n_nh3) }}" />
+                                                            @error('ammonium_n_nh3')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -438,8 +467,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Nitrate (NO3)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="nitrate" type="text" class="form-control form-control-sm @error('nitrate') is-invalid @enderror" value="{{ old('nitrate',$Wastewater->nitrate) }}" />
-                                                            @error('nitrate')
+                                                            <input name="nitrate_no3" type="text" class="form-control form-control-sm @error('nitrate_no3') is-invalid @enderror" value="{{ old('nitrate_no3',$Wastewater->nitrate_no3) }}" />
+                                                            @error('nitrate_no3')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -451,8 +480,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Nitrite (NO2)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="nitrite" type="text" class="form-control form-control-sm @error('nitrite') is-invalid @enderror" value="{{ old('nitrite',$Wastewater->nitrite) }}" />
-                                                            @error('nitrite')
+                                                            <input name="nitrite_no2" type="text" class="form-control form-control-sm @error('nitrite_no2') is-invalid @enderror" value="{{ old('nitrite_no2',$Wastewater->nitrite_no2) }}" />
+                                                            @error('nitrite_no2')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -464,8 +493,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Phosphate (PO4)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="phosphate" type="text" class="form-control form-control-sm @error('phosphate') is-invalid @enderror" value="{{ old('phosphate',$Wastewater->phosphate) }}" />
-                                                            @error('phosphate')
+                                                            <input name="phosphate_po4" type="text" class="form-control form-control-sm @error('phosphate_po4') is-invalid @enderror" value="{{ old('phosphate_po4',$Wastewater->phosphate_po4) }}" />
+                                                            @error('phosphate_po4')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -477,8 +506,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Total-Phosphate (P-PO4)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="total_phosphate" type="text" class="form-control form-control-sm @error('total_phosphate') is-invalid @enderror" value="{{ old('total_phosphate',$Wastewater->total_phosphate) }}" />
-                                                            @error('total_phosphate')
+                                                            <input name="totalphosphate_ppo4" type="text" class="form-control form-control-sm @error('totalphosphate_ppo4') is-invalid @enderror" value="{{ old('totalphosphate_ppo4',$Wastewater->totalphosphate_ppo4) }}" />
+                                                            @error('totalphosphate_ppo4')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -494,8 +523,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Aluminium (Al)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="aluminium" type="text" class="form-control form-control-sm @error('aluminium') is-invalid @enderror" value="{{ old('aluminium',$Wastewater->aluminium) }}" />
-                                                            @error('aluminium')
+                                                            <input name="aluminium_al" type="text" class="form-control form-control-sm @error('aluminium_al') is-invalid @enderror" value="{{ old('aluminium_al',$Wastewater->aluminium_al) }}" />
+                                                            @error('aluminium_al')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -507,8 +536,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Antimony (Sb)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="antimony" type="text" class="form-control form-control-sm @error('antimony') is-invalid @enderror" value="{{ old('antimony',$Wastewater->antimony) }}" />
-                                                            @error('antimony')
+                                                            <input name="antimony_sb" type="text" class="form-control form-control-sm @error('antimony_sb') is-invalid @enderror" value="{{ old('antimony_sb',$Wastewater->antimony_sb) }}" />
+                                                            @error('antimony_sb')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -520,8 +549,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Arsenic (As)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="arsenic" type="text" class="form-control form-control-sm @error('arsenic') is-invalid @enderror" value="{{ old('arsenic',$Wastewater->arsenic) }}" />
-                                                            @error('arsenic')
+                                                            <input name="arsenic_as" type="text" class="form-control form-control-sm @error('arsenic_as') is-invalid @enderror" value="{{ old('arsenic_as',$Wastewater->arsenic_as) }}" />
+                                                            @error('arsenic_as')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -533,8 +562,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Barium (Ba)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="barium" type="text" class="form-control form-control-sm @error('barium') is-invalid @enderror" value="{{ old('barium',$Wastewater->barium) }}" />
-                                                            @error('barium')
+                                                            <input name="barium_ba" type="text" class="form-control form-control-sm @error('barium_ba') is-invalid @enderror" value="{{ old('barium_ba',$Wastewater->barium_ba) }}" />
+                                                            @error('barium_ba')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -546,8 +575,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Cadmium (Cd)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="cadmium" type="text" class="form-control form-control-sm @error('cadmium') is-invalid @enderror" value="{{ old('cadmium',$Wastewater->cadmium) }}" />
-                                                            @error('cadmium')
+                                                            <input name="cadmium_cd" type="text" class="form-control form-control-sm @error('cadmium_cd') is-invalid @enderror" value="{{ old('cadmium_cd',$Wastewater->barium_ba) }}" />
+                                                            @error('cadmium_cd')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -559,8 +588,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Calcium (Ca)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="calcium" type="text" class="form-control form-control-sm @error('calcium') is-invalid @enderror" value="{{ old('calcium',$Wastewater->calcium) }}" />
-                                                            @error('calcium')
+                                                            <input name="calcium_ca" type="text" class="form-control form-control-sm @error('calcium_ca') is-invalid @enderror" value="{{ old('calcium_ca',$Wastewater->calcium_ca) }}" />
+                                                            @error('calcium_ca')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -572,8 +601,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Chromium (Cr)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="chromium" type="text" class="form-control form-control-sm @error('chromium') is-invalid @enderror" value="{{ old('chromium',$Wastewater->chromium) }}" />
-                                                            @error('chromium')
+                                                            <input name="chromium_cr" type="text" class="form-control form-control-sm @error('chromium_cr') is-invalid @enderror" value="{{ old('chromium_cr',$Wastewater->chromium_cr) }}" />
+                                                            @error('chromium_cr')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -585,8 +614,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Chromium Hexavalent (Cr6+)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="chromium_hexavalent" type="text" class="form-control form-control-sm @error('chromium_hexavalent') is-invalid @enderror" value="{{ old('chromium_hexavalent',$Wastewater->chromium_hexavalent) }}" />
-                                                            @error('chromium_hexavalent')
+                                                            <input name="chromiumhexavalent_cr6" type="text" class="form-control form-control-sm @error('chromiumhexavalent_cr6') is-invalid @enderror" value="{{ old('chromiumhexavalent_cr6',$Wastewater->chromiumhexavalent_cr6) }}" />
+                                                            @error('chromiumhexavalent_cr6')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -598,8 +627,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Cobalt (Co)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="cobalt" type="text" class="form-control form-control-sm @error('cobalt') is-invalid @enderror" value="{{ old('cobalt',$Wastewater->cobalt) }}" />
-                                                            @error('cobalt')
+                                                            <input name="cobalt_co" type="text" class="form-control form-control-sm @error('cobalt_co') is-invalid @enderror" value="{{ old('cobalt_co',$Wastewater->cobalt_co) }}" />
+                                                            @error('cobalt_co')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -611,8 +640,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Copper (Cu)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="copper" type="text" class="form-control form-control-sm @error('copper') is-invalid @enderror" value="{{ old('copper',$Wastewater->copper) }}" />
-                                                            @error('copper')
+                                                            <input name="copper_cu" type="text" class="form-control form-control-sm @error('copper_cu') is-invalid @enderror" value="{{ old('copper_cu',$Wastewater->copper_cu) }}" />
+                                                            @error('copper_cu')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -624,8 +653,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Iron (Fe)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="iron" type="text" class="form-control form-control-sm @error('iron') is-invalid @enderror" value="{{ old('iron',$Wastewater->iron) }}" />
-                                                            @error('iron')
+                                                            <input name="iron_fe" type="text" class="form-control form-control-sm @error('iron_fe') is-invalid @enderror" value="{{ old('iron_fe',$Wastewater->iron_fe) }}" />
+                                                            @error('iron_fe')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -637,8 +666,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Lead (Pb)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="lead" type="text" class="form-control form-control-sm @error('lead') is-invalid @enderror" value="{{ old('lead',$Wastewater->lead) }}" />
-                                                            @error('lead')
+                                                            <input name="lead_pb" type="text" class="form-control form-control-sm @error('lead_pb') is-invalid @enderror" value="{{ old('lead_pb',$Wastewater->lead_pb) }}" />
+                                                            @error('lead_pb')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -650,8 +679,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Magnesium (Mg)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="magnesium" type="text" class="form-control form-control-sm @error('magnesium') is-invalid @enderror" value="{{ old('magnesium',$Wastewater->magnesium) }}" />
-                                                            @error('magnesium')
+                                                            <input name="magnesium_mg" type="text" class="form-control form-control-sm @error('magnesium_mg') is-invalid @enderror" value="{{ old('magnesium_mg',$Wastewater->magnesium_mg) }}" />
+                                                            @error('magnesium_mg')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -663,8 +692,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Manganese (Mn)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="manganese" type="text" class="form-control form-control-sm @error('manganese') is-invalid @enderror" value="{{ old('manganese',$Wastewater->manganese) }}" />
-                                                            @error('manganese')
+                                                            <input name="manganese_mn" type="text" class="form-control form-control-sm @error('manganese_mn') is-invalid @enderror" value="{{ old('manganese_mn',$Wastewater->manganese_mn) }}" />
+                                                            @error('manganese_mn')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -676,8 +705,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Mercury (Hg)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="mercury" type="text" class="form-control form-control-sm @error('mercury') is-invalid @enderror" value="{{ old('mercury',$Wastewater->mercury) }}" />
-                                                            @error('mercury')
+                                                            <input name="mercury_hg" type="text" class="form-control form-control-sm @error('mercury_hg') is-invalid @enderror" value="{{ old('mercury_hg',$Wastewater->mercury_hg) }}" />
+                                                            @error('mercury_hg')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -689,8 +718,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Nickel (Ni)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="nickel" type="text" class="form-control form-control-sm @error('nickel') is-invalid @enderror" value="{{ old('nickel',$Wastewater->nickel) }}" />
-                                                            @error('nickel')
+                                                            <input name="nickel_ni" type="text" class="form-control form-control-sm @error('nickel_ni') is-invalid @enderror" value="{{ old('nickel_ni',$Wastewater->nickel_ni) }}" />
+                                                            @error('nickel_ni')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -702,8 +731,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Selenium (Se)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="selenium" type="text" class="form-control form-control-sm @error('selenium') is-invalid @enderror" value="{{ old('selenium',$Wastewater->selenium) }}" />
-                                                            @error('selenium')
+                                                            <input name="selenium_se" type="text" class="form-control form-control-sm @error('selenium_se') is-invalid @enderror" value="{{ old('selenium_se',$Wastewater->selenium_se) }}" />
+                                                            @error('selenium_se')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -715,8 +744,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Silver (Ag)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="silver" type="text" class="form-control form-control-sm @error('silver') is-invalid @enderror" value="{{ old('silver',$Wastewater->silver) }}" />
-                                                            @error('silver')
+                                                            <input name="silver_ag" type="text" class="form-control form-control-sm @error('silver_ag') is-invalid @enderror" value="{{ old('silver_ag',$Wastewater->silver_ag) }}" />
+                                                            @error('silver_ag')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -728,8 +757,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Sodium (Na)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="sodium" type="text" class="form-control form-control-sm @error('sodium') is-invalid @enderror" value="{{ old('sodium',$Wastewater->sodium) }}" />
-                                                            @error('sodium')
+                                                            <input name="sodium_na" type="text" class="form-control form-control-sm @error('sodium_na') is-invalid @enderror" value="{{ old('sodium_na',$Wastewater->sodium_na) }}" />
+                                                            @error('sodium_na')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -741,8 +770,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Tin (Sn)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="tin" type="text" class="form-control form-control-sm @error('tin') is-invalid @enderror" value="{{ old('tin',$Wastewater->tin) }}" />
-                                                            @error('tin')
+                                                            <input name="tin_sn" type="text" class="form-control form-control-sm @error('tin_sn') is-invalid @enderror" value="{{ old('tin_sn',$Wastewater->tin_sn) }}" />
+                                                            @error('tin_sn')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -754,8 +783,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Zinc (Zn)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="zinc" type="text" class="form-control form-control-sm @error('zinc') is-invalid @enderror" value="{{ old('zinc',$Wastewater->zinc) }}" />
-                                                            @error('zinc')
+                                                            <input name="zinc_zn" type="text" class="form-control form-control-sm @error('zinc_zn') is-invalid @enderror" value="{{ old('zinc_zn',$Wastewater->zinc_zn) }}" />
+                                                            @error('zinc_zn')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -771,8 +800,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Aluminium (T_Al)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="aluminium_t_ai" type="text" class="form-control form-control-sm @error('aluminium_t_ai') is-invalid @enderror" value="{{ old('aluminium_t_ai',$Wastewater->aluminium_t_ai) }}" />
-                                                            @error('aluminium_t_ai')
+                                                            <input name="aluminium_tal" type="text" class="form-control form-control-sm @error('aluminium_tal') is-invalid @enderror" value="{{ old('aluminium_tal',$Wastewater->aluminium_tal) }}" />
+                                                            @error('aluminium_tal')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -784,8 +813,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Arsenic (T_As)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="arsenic_t_as" type="text" class="form-control form-control-sm @error('arsenic_t_as') is-invalid @enderror" value="{{ old('arsenic_t_as',$Wastewater->arsenic_t_as) }}" />
-                                                            @error('arsenic_t_as')
+                                                            <input name="arsenic_tas" type="text" class="form-control form-control-sm @error('arsenic_tas') is-invalid @enderror" value="{{ old('arsenic_tas',$Wastewater->arsenic_tas) }}" />
+                                                            @error('arsenic_tas')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -797,8 +826,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Cadmium (T_Cd)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="cadmium_t_cd" type="text" class="form-control form-control-sm @error('cadmium_t_cd') is-invalid @enderror" value="{{ old('cadmium_t_cd',$Wastewater->cadmium_t_cd) }}" />
-                                                            @error('cadmium_t_cd')
+                                                            <input name="cadmium_tcd" type="text" class="form-control form-control-sm @error('cadmium_tcd') is-invalid @enderror" value="{{ old('cadmium_tcd',$Wastewater->cadmium_tcd) }}" />
+                                                            @error('cadmium_tcd')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -810,8 +839,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Chromium (T_Cr)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="chromium_t" type="text" class="form-control form-control-sm @error('chromium_t') is-invalid @enderror" value="{{ old('chromium_t',$Wastewater->chromium_t) }}" />
-                                                            @error('chromium_t')
+                                                            <input name="chromium_tcr" type="text" class="form-control form-control-sm @error('chromium_tcr') is-invalid @enderror" value="{{ old('chromium_tcr',$Wastewater->chromium_tcr) }}" />
+                                                            @error('chromium_tcr')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -823,8 +852,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Chromium Hexavalent (T_Cr6+)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="chromium_hexavalent_t" type="text" class="form-control form-control-sm @error('chromium_hexavalent_t') is-invalid @enderror" value="{{ old('chromium_hexavalent_t',$Wastewater->chromium_hexavalent_t) }}" />
-                                                            @error('chromium_hexavalent_t')
+                                                            <input name="chromiumhexavalent_tcr6" type="text" class="form-control form-control-sm @error('chromiumhexavalent_tcr6') is-invalid @enderror" value="{{ old('chromiumhexavalent_tcr6',$Wastewater->chromiumhexavalent_tcr6) }}" />
+                                                            @error('chromiumhexavalent_tcr6')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -836,8 +865,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Cobalt (T_Co)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="cobalt_t" type="text" class="form-control form-control-sm @error('cobalt_t') is-invalid @enderror" value="{{ old('cobalt_t',$Wastewater->cobalt_t) }}" />
-                                                            @error('cobalt_t')
+                                                            <input name="cobalt_tco" type="text" class="form-control form-control-sm @error('cobalt_tco') is-invalid @enderror" value="{{ old('cobalt_tco',$Wastewater->cobalt_tco) }}" />
+                                                            @error('cobalt_tco')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -849,8 +878,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Copper (T_Cu)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="cooper" type="text" class="form-control form-control-sm @error('cooper') is-invalid @enderror" value="{{ old('cooper',$Wastewater->cooper) }}" />
-                                                            @error('cooper')
+                                                            <input name="copper_tco" type="text" class="form-control form-control-sm @error('copper_tco') is-invalid @enderror" value="{{ old('copper_tco',$Wastewater->copper_tco) }}" />
+                                                            @error('copper_tco')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -862,8 +891,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Lead (T_Pb)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="lead_t" type="text" class="form-control form-control-sm @error('lead_t') is-invalid @enderror" value="{{ old('lead_t',$Wastewater->lead_t) }}" />
-                                                            @error('lead_t')
+                                                            <input name="lead_tpb" type="text" class="form-control form-control-sm @error('lead_tpb') is-invalid @enderror" value="{{ old('lead_tpb',$Wastewater->lead_tpb) }}" />
+                                                            @error('lead_tpb')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -875,8 +904,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Selenium (T_Se)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="selenium_t" type="text" class="form-control form-control-sm @error('selenium_t') is-invalid @enderror" value="{{ old('selenium_t',$Wastewater->selenium_t) }}" />
-                                                            @error('selenium_t')
+                                                            <input name="selenium_tse" type="text" class="form-control form-control-sm @error('selenium_tse') is-invalid @enderror" value="{{ old('selenium_tse',$Wastewater->selenium_tse) }}" />
+                                                            @error('selenium_tse')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -888,8 +917,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Mercury (T_Hg)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="mercury_t" type="text" class="form-control form-control-sm @error('mercury_t') is-invalid @enderror" value="{{ old('mercury_t',$Wastewater->mercury_t) }}" />
-                                                            @error('mercury_t')
+                                                            <input name="mercury_thg" type="text" class="form-control form-control-sm @error('mercury_thg') is-invalid @enderror" value="{{ old('mercury_thg',$Wastewater->mercury_thg) }}" />
+                                                            @error('mercury_thg')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -901,8 +930,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Nickel (T_Ni)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="nickel_t" type="text" class="form-control form-control-sm @error('nickel_t') is-invalid @enderror" value="{{ old('nickel_t',$Wastewater->nickel_t) }}" />
-                                                            @error('nickel_t')
+                                                            <input name="nickel_tni" type="text" class="form-control form-control-sm @error('nickel_tni') is-invalid @enderror" value="{{ old('nickel_tni',$Wastewater->nickel_tni) }}" />
+                                                            @error('nickel_tni')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -914,8 +943,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Zinc (T_Zn)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="zinc_t" type="text" class="form-control form-control-sm @error('zinc_t') is-invalid @enderror" value="{{ old('zinc_t',$Wastewater->zinc_t) }}" />
-                                                            @error('zinc_t')
+                                                            <input name="zinc_tzn" type="text" class="form-control form-control-sm @error('zinc_tzn') is-invalid @enderror" value="{{ old('zinc_tzn',$Wastewater->zinc_tzn) }}" />
+                                                            @error('zinc_tzn')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -957,8 +986,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Oil and Grease</label>
                                                         <div class="col-sm-5">
-                                                            <input name="oil_and_grease" type="text" class="form-control form-control-sm @error('oil_and_grease') is-invalid @enderror" value="{{ old('oil_and_grease',$Wastewater->oil_and_grease) }}" />
-                                                            @error('oil_and_grease')
+                                                            <input name="oilandgrease" type="text" class="form-control form-control-sm @error('oilandgrease') is-invalid @enderror" value="{{ old('oilandgrease',$Wastewater->oilandgrease) }}" />
+                                                            @error('oilandgrease')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -968,10 +997,10 @@
                                             <div class="col-12 col-sm-3">
                                                 <div class="form-group">
                                                     <div class="form-group row">
-                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Phenols</label>
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Total Phenols</label>
                                                         <div class="col-sm-5">
-                                                            <input name="phenols" type="text" class="form-control form-control-sm @error('phenols') is-invalid @enderror" value="{{ old('phenols',$Wastewater->phenols) }}" />
-                                                            @error('phenols')
+                                                            <input name="totalphenols" type="text" class="form-control form-control-sm @error('totalphenols') is-invalid @enderror" value="{{ old('totalphenols',$Wastewater->totalphenols) }}" />
+                                                            @error('totalphenols')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -983,8 +1012,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Surfactant (MBAS)</label>
                                                         <div class="col-sm-5">
-                                                            <input name="surfactant" type="text" class="form-control form-control-sm @error('surfactant') is-invalid @enderror" value="{{ old('surfactant',$Wastewater->surfactant) }}" />
-                                                            @error('surfactant')
+                                                            <input name="surfactant_mbas" type="text" class="form-control form-control-sm @error('surfactant_mbas') is-invalid @enderror" value="{{ old('surfactant_mbas',$Wastewater->surfactant_mbas) }}" />
+                                                            @error('surfactant_mbas')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -996,8 +1025,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Total PCB</label>
                                                         <div class="col-sm-5">
-                                                            <input name="total_pcb" type="text" class="form-control form-control-sm @error('total_pcb') is-invalid @enderror" value="{{ old('total_pcb',$Wastewater->total_pcb) }}" />
-                                                            @error('total_pcb')
+                                                            <input name="totalpcb" type="text" class="form-control form-control-sm @error('totalpcb') is-invalid @enderror" value="{{ old('totalpcb',$Wastewater->totalpcb) }}" />
+                                                            @error('totalpcb')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -1010,8 +1039,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">A.O.X</label>
                                                         <div class="col-sm-5">
-                                                            <input name="a_o_x" type="text" class="form-control form-control-sm @error('a_o_x') is-invalid @enderror" value="{{ old('a_o_x',$Wastewater->a_o_x) }}" />
-                                                            @error('a_o_x')
+                                                            <input name="aox" type="text" class="form-control form-control-sm @error('aox') is-invalid @enderror" value="{{ old('aox',$Wastewater->aox) }}" />
+                                                            @error('aox')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -1047,51 +1076,59 @@
                                         </div>
                                     </div>
                                     <div class="tab-pane fade card-body table-responsive" id="custom-content-above-microbiology" role="tabpanel" aria-labelledby="custom-content-above-microbiology-tab">
-                                        <div class="row">
-                                            <div class="col-12 col-sm-3">
-                                                <div class="form-group">
-                                                    <div class="form-group row">
-                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Fecal Coliformi</label>
-                                                        <div class="col-sm-5">
-                                                            <input name="fecal_coliform" type="text" class="form-control form-control-sm @error('fecal_coliform') is-invalid @enderror" value="{{ old('fecal_coliform',$Wastewater->fecal_coliform) }}" />
-                                                            @error('fecal_coliform')
-                                                            <span class=" invalid-feedback">{{ $message }}</span>
-                                                            @enderror
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="form-group row">
+                                                                <label style="font-size: 10px" class="col-sm-5 col-form-label">Fecal Coliform</label>
+                                                                <div class="col-sm-5">
+                                                                    <input name="fecalcoliform" type="text" class="form-control form-control-sm @error('fecalcoliform') is-invalid @enderror" value="{{ old('fecalcoliform',$Wastewater->fecalcoliform) }}" />
+                                                                    @error('fecalcoliform')
+                                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="form-group row">
+                                                                <label style="font-size: 10px" class="col-sm-5 col-form-label">E- Coli</label>
+                                                                <div class="col-sm-5">
+                                                                    <input name="ecoli" type="text" class="form-control form-control-sm @error('ecoli') is-invalid @enderror" value="{{ old('ecoli',$Wastewater->ecoli) }}" />
+                                                                    @error('ecoli')
+                                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="form-group row">
+                                                                <label style="font-size: 10px" class="col-sm-5 col-form-label">Total Coliform Bacteria</label>
+                                                                <div class="col-sm-5">
+                                                                    <input name="totalcoliformbacteria" type="text" class="form-control form-control-sm @error('totalcoliformbacteria') is-invalid @enderror" value="{{ old('totalcoliformbacteria',$Wastewater->totalcoliformbacteria) }}" />
+                                                                    @error('totalcoliformbacteria')
+                                                                    <span class=" invalid-feedback">{{ $message }}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
-                                            <div class="col-12 col-sm-3">
-                                                <div class="form-group">
-                                                    <div class="form-group row">
-                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">E- Coli</label>
-                                                        <div class="col-sm-5">
-                                                            <input name="e_coli" type="text" class="form-control form-control-sm @error('e_coli') is-invalid @enderror" value="{{ old('e_coli',$Wastewater->e_coli) }}" />
-                                                            @error('e_coli')
-                                                            <span class=" invalid-feedback">{{ $message }}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-3">
-                                                <div class="form-group">
-                                                    <div class="form-group row">
-                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Total Coliform Bacteria</label>
-                                                        <div class="col-sm-5">
-                                                            <input name="total_coliform_bacteria" type="text" class="form-control form-control-sm @error('total_coliform_bacteria') is-invalid @enderror" value="{{ old('total_coliform_bacteria',$Wastewater->total_coliform_bacteria) }}" />
-                                                            @error('total_coliform_bacteria')
-                                                            <span class=" invalid-feedback">{{ $message }}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <div class="card-footer d-flex justify-content-end">
+                                            <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
+
                                         </div>
-                                        <div class="card-footer d-flex justify-content-end">
-                                            <button type="submit" class="btn bg-gradient-success btn-sm " style="width: 100px">Save</button>
                                         </div>
                                     </div>
+
+
 
                                 </div>
                             </form>

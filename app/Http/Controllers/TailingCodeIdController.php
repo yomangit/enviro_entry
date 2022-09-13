@@ -67,7 +67,7 @@ class TailingCodeIdController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nama' => 'required|max:255|unique:point_id_drinkwaters',
+            'nama' => 'required|max:255|unique:tailing_code_ids',
             'lokasi' => 'required|max:255'
         ]);
         $validatedData['user_id'] = auth()->user()->id;

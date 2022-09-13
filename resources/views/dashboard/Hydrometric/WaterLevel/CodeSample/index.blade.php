@@ -25,7 +25,7 @@
                     <div class="card-header p-0 p-2">
 
                         @if (session()->has('success'))
-                        <div class="alert alert-success alert-dismissible form-inline">
+                        <div class="alert alert-success alert-dismissible form-inline m-4">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                             {{ session('success') }}
@@ -128,22 +128,19 @@
                         </section>
                     </div>
                     <div class="card-footer">
-                        <div class="card-tools row form-inline">
-                            <div class="col-4">
-                                <div class="d-flex justify-content-start">
-                                    <small>Showing {{ $Codes->firstItem() }} to {{
-                                                                    $Codes->lastItem() }} of {{ $Codes->total() }}
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="d-flex justify-content-end">
-                                    {{ $Codes->links() }}
-                                </div>
+                    <div class="card-tools  form-inline">
+                        <div class="col-4">
+                            <div class="d-flex justify-content-start">
+                                <p>Showing {{ $Codes->firstItem() }} to {{$Codes->lastItem() }} of {{ $Codes->total() }}</p>
                             </div>
                         </div>
-
+                        <div class="col-8 d-flex justify-content-end">
+                            <div class=" pagination pagination-sm">
+                                {{ $Codes->links() }}
+                            </div>
+                        </div>
                     </div>
+                </div>
                     @else
                     <p class="text-center fs-4">Not Data Found</p>
                     @endif

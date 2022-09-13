@@ -50,7 +50,7 @@
                     </div>
                     @endif
                     <a href="/hydrometric/wlvp/qualitystandard/create" class="btn bg-gradient-secondary btn-xs "><i class="fas fa-plus mr-1 "></i>Add Data</a>
-                    <a href="/export/qualitystandard" class="btn  bg-gradient-secondary btn-xs " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                    <a href="/export/standardhydro" class="btn  bg-gradient-secondary btn-xs " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                     <a href="#" class="btn  bg-gradient-secondary btn-xs " data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                         <i class="fas fa-upload mr-1"></i>Excel
                     </a>
@@ -149,7 +149,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form action="/import/qualitystandard" method="POST" enctype="multipart/form-data">
+                            <form action="/import/standardhydro" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="modal-body">
                                     <div class="custom-file">

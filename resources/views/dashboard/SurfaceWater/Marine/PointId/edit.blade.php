@@ -21,7 +21,7 @@
     </section>
     <section class="content">
         <div class="container-fluid">
-            <div class="card card-success card-outline">
+            <div class="card card-olive card-outline">
                 <div class="card-header p-0 ">
                     <div class="card-title m-1">Form Edit</div>
                 </div>
@@ -60,7 +60,7 @@
 
                 </div>
                 <div class="card-footer d-flex justify-content-end">
-                <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
+                    <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
                 </div>
                 </form>
 

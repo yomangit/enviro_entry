@@ -32,7 +32,7 @@ class DischargeManual extends Model
     }
     public function standard()
     {
-        return $this->belongsTo(DischargeManualQualitystandard::class,'standard_id');
+        return $this->belongsTo(Wastewaterstandard::class,'standard_id');
     }
     public function user()
     {

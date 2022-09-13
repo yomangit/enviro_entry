@@ -26,7 +26,7 @@
                 <div class="card-header p-0 pt-1">
 
                     @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible form-inline">
+                    <div class="alert alert-success alert-dismissible form-inline m-1">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                         {{ session('success') }}
@@ -35,12 +35,9 @@
                     <div class="card-title ml-2">Form Input</div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                    <form action="/hydrometric/wlvp/point" method="post" checked enctype="multipart/form-data" autocomplete="off">
-                        @csrf
-
-
-
+                <form action="/hydrometric/wlvp/point" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    @csrf
+                    <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
@@ -76,12 +73,13 @@
                         </div>
                         <!-- /.row -->
 
-                    </form>
 
-                </div>
-                <div class="card-footer d-flex justify-content-end">
-                    <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
-                </div>
+
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
+                    </div>
+                </form>
                 <!-- /.card-body -->
 
             </div>

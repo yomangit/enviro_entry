@@ -56,6 +56,24 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control form-control-sm " name="standard_id">
+                                            @foreach ($QualityStandard as $code)
+                                            @if (old('standard_id',$Input->standard_id)===$code->id)
+                                            <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->id}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group row">
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                     <div class="col-sm-7">
                                         <div class="input-group date" id="reservationdate4" data-target-input="nearest">
@@ -107,7 +125,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Temperatur
                                             (<sup>0</sup>C)</label>
                                         <div class="col-sm-7">
-                                            <input name="temperatur" type="number" step="0.01" class="form-control form-control-sm @error('temperatur') is-invalid @enderror" value="{{ old('temperatur', $Input->temperatur) }}" />
+                                            <input name="temperatur" type="text" class="form-control form-control-sm @error('temperatur') is-invalid @enderror" value="{{ old('temperatur', $Input->temperatur) }}" />
                                             @error('temperatur')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -124,7 +142,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">pH</label>
                                         <div class="col-sm-7">
-                                            <input name="ph" type="number" step="0.01" class="form-control form-control-sm @error('ph') is-invalid @enderror" value="{{ old('ph', $Input->ph) }}">
+                                            <input name="ph" type="text" class="form-control form-control-sm @error('ph') is-invalid @enderror" value="{{ old('ph', $Input->ph) }}">
                                             @error('ph')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -138,7 +156,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">ORP(mV)</label>
                                         <div class="col-sm-7">
-                                            <input name="orp" type="number" step="0.01" value="{{ old('orp', $Input->orp) }}" class="form-control form-control-sm @error('orp') is-invalid @enderror">
+                                            <input name="orp" type="text" value="{{ old('orp', $Input->orp) }}" class="form-control form-control-sm @error('orp') is-invalid @enderror">
                                             @error('orp')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -153,7 +171,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Conductivity
                                             (uS/cm)</label>
                                         <div class="col-sm-7">
-                                            <input name="conductivity" type="number" step="0.01" class="form-control form-control-sm @error('conductivity') is-invalid @enderror" value="{{ old('conductivity', $Input->conductivity) }}" />
+                                            <input name="conductivity" type="text" class="form-control form-control-sm @error('conductivity') is-invalid @enderror" value="{{ old('conductivity', $Input->conductivity) }}" />
                                             @error('conductivity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -169,7 +187,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Turbidity
                                             (NTU)</label>
                                         <div class="col-sm-7">
-                                            <input name="turbidity" type="number" step="0.01" class="form-control form-control-sm @error('turbidity') is-invalid @enderror" value="{{ old('turbidity', $Input->turbidity) }}" />
+                                            <input name="turbidity" type="text" class="form-control form-control-sm @error('turbidity') is-invalid @enderror" value="{{ old('turbidity', $Input->turbidity) }}" />
                                             @error('turbidity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -184,7 +202,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">DO</label>
                                         <div class="col-sm-7">
-                                            <input name="do" type="number" step="0.01" class="form-control form-control-sm @error('do') is-invalid @enderror" value="{{ old('do', $Input->do) }}" />
+                                            <input name="do" type="text" class="form-control form-control-sm @error('do') is-invalid @enderror" value="{{ old('do', $Input->do) }}" />
                                             @error('do')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -200,7 +218,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">TDS
                                             (mg/L)</label>
                                         <div class="col-sm-7">
-                                            <input name="tds" type="number" step="0.01" class="form-control form-control-sm  @error('tds') is-invalid @enderror" value="{{ old('tds', $Input->tds) }}" />
+                                            <input name="tds" type="text" class="form-control form-control-sm  @error('tds') is-invalid @enderror" value="{{ old('tds', $Input->tds) }}" />
                                             @error('tds')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -216,7 +234,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Salinity
                                             (ppt)</label>
                                         <div class="col-sm-7">
-                                            <input name="salinity" type="number" step="0.01" class="form-control form-control-sm @error('salinity') is-invalid @enderror" value="{{ old('salinity', $Input->salinity) }}" />
+                                            <input name="salinity" type="text" class="form-control form-control-sm @error('salinity') is-invalid @enderror" value="{{ old('salinity', $Input->salinity) }}" />
                                             @error('salinity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -231,7 +249,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">TSS(mg/L)</label>
                                         <div class="col-sm-7">
-                                            <input name="tss" type="number" step="0.01" value="{{ old('tss', $Input->tss) }}" class="form-control form-control-sm @error('tss') is-invalid @enderror">
+                                            <input name="tss" type="text" value="{{ old('tss', $Input->tss) }}" class="form-control form-control-sm @error('tss') is-invalid @enderror">
                                             @error('tss')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -245,7 +263,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Cyanide (mg/L)</label>
                                         <div class="col-sm-7">
-                                            <input name="cyanide" type="number" step="0.01" class="form-control form-control-sm @error('cyanide') is-invalid @enderror" value="{{ old('cyanide', $Input->cyanide) }}" />
+                                            <input name="cyanide" type="text" class="form-control form-control-sm @error('cyanide') is-invalid @enderror" value="{{ old('cyanide', $Input->cyanide) }}" />
                                             @error('cyanide')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -260,7 +278,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Level GB (m)</label>
                                         <div class="col-sm-7">
-                                            <input name="level" type="number" step="0.01" class="form-control form-control-sm @error('level') is-invalid @enderror" value="{{ old('level', $Input->level) }}">
+                                            <input name="level" type="text" class="form-control form-control-sm @error('level') is-invalid @enderror" value="{{ old('level', $Input->level) }}">
                                             @error('level')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -274,7 +292,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Level Loger (m)</label>
                                         <div class="col-sm-7">
-                                            <input name="lvl_lgr" type="number" step="0.01" class="form-control form-control-sm @error('lvl_lgr') is-invalid @enderror" value="{{ old('lvl_lgr', $Input->lvl_lgr) }}">
+                                            <input name="lvl_lgr" type="text" class="form-control form-control-sm @error('lvl_lgr') is-invalid @enderror" value="{{ old('lvl_lgr', $Input->lvl_lgr) }}">
                                             @error('lvl_lgr')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -288,7 +306,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Debit (m<sup>3</sup>/<sub>s</sub> )</label>
                                         <div class="col-sm-7">
-                                            <input name="debit_s" type="number" step="0.01" class="form-control form-control-sm @error('debit_s') is-invalid @enderror" value="{{ old('debit_s', $Input->debit_s) }}">
+                                            <input name="debit_s" type="text" class="form-control form-control-sm @error('debit_s') is-invalid @enderror" value="{{ old('debit_s', $Input->debit_s) }}">
                                             @error('debit_s')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -302,7 +320,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Debit (m<sup>3</sup>/<sub>day</sub> )</label>
                                         <div class="col-sm-7">
-                                            <input name="debit_d" type="number" step="0.01" class="form-control form-control-sm @error('debit_d') is-invalid @enderror" value="{{ old('debit_d', $Input->debit_d) }}">
+                                            <input name="debit_d" type="text" class="form-control form-control-sm @error('debit_d') is-invalid @enderror" value="{{ old('debit_d', $Input->debit_d) }}">
                                             @error('debit_d')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -316,7 +334,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Tailing TSF</label>
                                         <div class="col-sm-7">
-                                            <input name="tl_tsf" type="number" step="0.01" class="form-control form-control-sm @error('tl_tsf') is-invalid @enderror" value="{{ old('tl_tsf', $Input->tl_tsf) }}" />
+                                            <input name="tl_tsf" type="text" class="form-control form-control-sm @error('tl_tsf') is-invalid @enderror" value="{{ old('tl_tsf', $Input->tl_tsf) }}" />
                                             @error('tl_tsf')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -331,7 +349,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Tailing TSF Wall</label>
                                         <div class="col-sm-7">
-                                            <input name="tl_wall" type="number" step="0.01" class="form-control form-control-sm @error('tl_wall') is-invalid @enderror" value="{{ old('tl_wall', $Input->tl_wall) }}" />
+                                            <input name="tl_wall" type="text" class="form-control form-control-sm @error('tl_wall') is-invalid @enderror" value="{{ old('tl_wall', $Input->tl_wall) }}" />
                                             @error('tl_wall')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -354,7 +372,7 @@
                                                 </label>
                                             </div>
                                             <div class="icheck-success d-inline">
-                                                <input type="radio" name="water_condition" value="Surut" {{ $Input->water_condition === 'Surut' ? 'checked' : '' }} id="waterCondition2">
+                                                <input type="radio" name="water_condition" value="Surut" {{ $Input->water_condition === 'Surut'||'surut' ? 'checked' : '' }} id="waterCondition2">
                                                 <label style="font-size: 12px" for="waterCondition2"> Surut
                                                 </label>
                                             </div>
@@ -446,7 +464,7 @@
                                         <div class="col-sm-7">
                                             <div class="icheck-success d-inline col-sm-7">
 
-                                                <input type="radio" name="rain_during_sampling" value="Ya" {{ $Input->rain_during_sampling === 'Ya' ? 'checked' : '' }} id="rainSampling1">
+                                                <input type="radio" name="rain_during_sampling" value="Ya" {{ $Input->rain_during_sampling === 'Ya'||'ada'||'ADA' ? 'checked' : '' }} id="rainSampling1">
 
                                                 <label style="font-size: 12px" for="rainSampling1">Ya
                                                 </label>
@@ -470,7 +488,7 @@
                                             Minyak</label>
                                         <div class="col-sm-7">
                                             <div class="icheck-success d-inline col-sm-7">
-                                                <input type="radio" name="oil_layer" value="Ya" {{ $Input->oil_layer === 'Ya'||'Ada' ? 'checked' : '' }} id="oilLayer1">
+                                                <input type="radio" name="oil_layer" value="Ya" {{ $Input->oil_layer === 'Ya'||'Ada'||'ADA' ? 'checked' : '' }} id="oilLayer1">
                                                 <label style="font-size: 12px" for="oilLayer1">Ya
                                                 </label>
                                             </div>

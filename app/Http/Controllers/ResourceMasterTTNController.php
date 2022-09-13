@@ -19,9 +19,16 @@ class ResourceMasterTTNController extends Controller
      */
     public function index()
     {
-        $grafiks = Masterttn::where('user_id',auth()->user()->id)
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafiks = Masterttn::with('user')
             ->filter(request(['fromDate', 'search']))
-            ->paginate(30)
+            ->paginate($table)
             ->withQueryString();
         $tanggal = [];
         $suhu = [];
@@ -56,7 +63,7 @@ class ResourceMasterTTNController extends Controller
             'date' => $tanggal,
             'suhu' => $suhu,
             'ph' => $ph,
-            'Master'=>Masterttn::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Master'=>Masterttn::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
     }
@@ -70,7 +77,7 @@ class ResourceMasterTTNController extends Controller
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase',$nameFile);
         Excel::import(new MasterTTNImport, public_path('/EnviroDatabase/'.$nameFile));
-        return redirect('/groundwater/mastergw')->with('success','New Data Ground Water MSM has been Imported!');
+        return redirect('/groundwater/masterttn')->with('success','New Data Ground Water MSM has been Imported!');
     }
 
     /**

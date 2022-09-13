@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/surfacewater/drinkwater">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/surfacewater/marinesurfacewater">Home</a></li>
                         <li class="breadcrumb-item active">{{$tittle}}</li>
                     </ol>
                 </div>
@@ -22,8 +22,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-primary card-outline">
+                    <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -58,12 +58,12 @@
                     @endif
 
                     @if(empty($QualityStd->count()))
-                    <a href="/surfacewater/marinesurfacewater/quality/create" class="btn bg-gradient-secondary btn-xs"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                    <a href="/export/marinesurfacewater/quality" class="btn  bg-gradient-secondary btn-xs" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                    <a href="#" class="btn  bg-gradient-secondary btn-xs" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
+                    <a href="/surfacewater/marinesurfacewater/quality/create" class="btn bg-gradient-secondary btn-xs ml-2 my-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                    <a href="/export/marinesurfacewater/quality" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                    <a href="#" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
                     @endif
 
-                    <div class="card-tools row">
+                    <div class=" card-tools p-1 my-1 mr-2 form-inline">
                         <form action="/surfacewater/marinesurfacewater/quality">
                             <div class="input-group input-group-sm" style="width: 150px;">
                                 <input type="text" name="search" class="form-control float-right" placeholder="Search" value="{{ request('search') }}">

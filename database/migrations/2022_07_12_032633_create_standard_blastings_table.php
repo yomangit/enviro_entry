@@ -16,8 +16,10 @@ class CreateStandardBlastingsTable extends Migration
         Schema::create('standard_blastings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
+            $table->string('ci');
             $table->string('frequency');
             $table->string('ppv');
+            $table->string('kualitas_bangunan');
             $table->string('noise_level');
             $table->timestamps();
         });

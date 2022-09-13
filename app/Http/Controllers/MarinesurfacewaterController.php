@@ -17,21 +17,26 @@ class MarinesurfacewaterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
-    {
-        return view('dashboard.SurfaceWater.Marine.index',[
-            'tittle'=>'Marine',
-            'code_units'=>PointIdMarine::all(),
-            'breadcrumb'=>'Marine',
-            'MarineSurfacewater'=>MarineSurfacewater::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
-            'QualityStandard'=>QualityStandardMarine::where('user_id',auth()->user()->id)->paginate(10)->withQueryString()
-        ]);
-    }
+    {    
 
+        return view('dashboard.SurfaceWater.Marine.index',[
+           
+            'tittle'=>'Marine',
+            'breadcrumb'=>'Marine',
+            'code_units'=>PointIdMarine::all(),
+            'MarineSurfacewater'=>MarineSurfacewater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString(),
+            'QualityStandard'=>QualityStandardMarine::all()
+        ]);
+       
+       
+    }
+  
     public function ExportMarineSurfacewater()
     {
 
-        return Excel::download(new ExportMarineSurfacewater, 'Marine Surfacewater.csv');
+         return Excel::download(new ExportMarineSurfacewater, 'Marine Surfacewater.csv');
     }
     public function ImportMarineSurfacewater(Request $request)
     {
@@ -55,7 +60,10 @@ class MarinesurfacewaterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    { 
+        if (!auth()->check() || !auth()->user()->is_admin) {
+        abort(403);
+    }
         return view('dashboard.SurfaceWater.Marine.create',[
             'tittle'=>'Marine',
             'code_units'=>PointIdMarine::all(),
@@ -143,6 +151,9 @@ class MarinesurfacewaterController extends Controller
      */
     public function edit(MarineSurfacewater $marinesurfacewater)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.SurfaceWater.Marine.edit',[
             'tittle'=>'Marine',
             'breadcrumb'=>'Marine',

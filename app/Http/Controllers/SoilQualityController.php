@@ -23,8 +23,8 @@ class SoilQualityController extends Controller
             'tittle'=>'Soil Quality',
             'code_units'=>Soilqualitypointid::all(),
             'breadcrumb'=>'Soil Quality',
-            'Soil'=>Soilquality::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
-            'QualityStandard'=>Soilqualitystandard::where('user_id',auth()->user()->id)->paginate(10)->withQueryString()
+            'Soil'=>Soilquality::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
+            'QualityStandard'=>Soilqualitystandard::all()
         ]);
     }
     public function ExportSoil()
@@ -53,6 +53,9 @@ class SoilQualityController extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.SoilQuality.Master.create', [
             'tittle' => 'Soil Quality',
             'breadcrumb' => 'Soil Quality',
@@ -72,6 +75,7 @@ class SoilQualityController extends Controller
         $validatedData = $request->validate([
             
             'point_id' => 'required',
+            'date'=>'required',
             "ph" => "required",
             "ph_h2o" => "required",
             "total_organic_carbon" => "required",
@@ -134,6 +138,9 @@ class SoilQualityController extends Controller
      */
     public function edit(Soilquality $soilquality)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.SoilQuality.Master.edit', [
             'tittle' => 'Soil Quality',
             'breadcrumb' => 'Soil Quality',
@@ -153,6 +160,7 @@ class SoilQualityController extends Controller
     {
         $rules = [
             'point_id' => 'required',
+            'date'=>'required',
             "ph" => "required",
             "ph_h2o" => "required",
             "total_organic_carbon" => "required",

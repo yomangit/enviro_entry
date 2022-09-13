@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Input {{ $breadcrumb }}</h1>
+                    <h1> {{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,8 +22,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -31,24 +31,22 @@
                         {{ session('success',$QualityStd->nama) }}
                     </div>
                     @endif
-                    <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
-                        <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="custom-content-above-Metals-tab" data-toggle="pill" href="#custom-content-above-Metals" role="tab" aria-controls="custom-content-above-Metals" aria-selected="true">TCLP Metals</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="custom-content-above-Inorganic-tab" data-toggle="pill" href="#custom-content-above-Inorganic" role="tab" aria-controls="custom-content-above-Inorganic" aria-selected="false">TCLP Inorganic</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="custom-content-above-Organic-tab" data-toggle="pill" href="#custom-content-above-Organic" role="tab" aria-controls="custom-content-above-Organic" aria-selected="false">TCLP Organic**</a>
-                            </li>
-
-                        </ul>
-
-                    </ul>
+                    <div class="card-title p-2 font-weight-bold">Edit Input</div>
                 </div>
 
                 <div class="card-body">
+                    <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="custom-content-above-Metals-tab" data-toggle="pill" href="#custom-content-above-Metals" role="tab" aria-controls="custom-content-above-Metals" aria-selected="true">TCLP Metals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-content-above-Inorganic-tab" data-toggle="pill" href="#custom-content-above-Inorganic" role="tab" aria-controls="custom-content-above-Inorganic" aria-selected="false">TCLP Inorganic</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-content-above-Organic-tab" data-toggle="pill" href="#custom-content-above-Organic" role="tab" aria-controls="custom-content-above-Organic" aria-selected="false">TCLP Organic**</a>
+                        </li>
+
+                    </ul>
 
                     <form action="/tailing/qualitystandard" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
@@ -370,7 +368,7 @@
                                                 </div>
                                                 <!-- /.form-group -->
                                             </div>
-                                           
+
                                             <div class="col-12 col-sm-6">
                                                 <div class="form-group">
                                                     <div class="form-group row">
@@ -1320,10 +1318,26 @@
                                                 </div>
                                                 <!-- /.form-group -->
                                             </div>
+                                            <div class="col-12 col-sm-4">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Total Organic Matter (TOM)</label>
+                                                        <div class="col-sm-5">
+                                                            <input name="tom" type="text" class="form-control form-control-sm @error('tom') is-invalid @enderror" value="{{ old('tom',$QualityStd->tom) }}" />
+                                                            @error('tom')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
                                         </div><!-- end row -->
-                                        <div class="card-footer d-flex justify-content-end">
-                                            <button type="submit" class="btn bg-gradient-success btn-sm ">Save</button>
-                                        </div>
+
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end">
+                                    <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
+
                                     </div>
                                 </div>
                             </div>

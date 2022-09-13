@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Exports\MarineExport;
 use App\Imports\MarineImport;
 use App\Models\LocationBiota;
+use Hamcrest\Type\IsNumeric;
 use Maatwebsite\Excel\Facades\Excel;
 
 class MarineController extends Controller
@@ -19,8 +20,14 @@ class MarineController extends Controller
      */
     public function index()
     {
-       
-        $grafiks= Marine::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->latest()->filter(request(['fromDate', 'search','location']))->paginate(10)->withQueryString();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafiks= Marine::with('user')->filter(request(['fromDate','search']))->latest()->filter(request(['fromDate', 'search','location']))->paginate($table)->withQueryString();
         $taxa_richness=[];
         $species_density=[];
         $diversity_index=[];
@@ -28,39 +35,40 @@ class MarineController extends Controller
         $dominance_index=[];
         $date=[];
        foreach ($grafiks as $grafik ) {
-        if ($grafik->taxa_richness==='-') {
-            $taxa_richness[]='';
-        }
-        elseif ($grafik->taxa_richness!='-') {
+        $date[]=date('d-M-Y',strtotime($grafik->date));
+        if (is_numeric($grafik->taxa_richness)) {
             $taxa_richness[]=doubleval($grafik->taxa_richness);
         }
-        if ($grafik->species_density==='-') {
+        else{
+            $taxa_richness[]='';
+
+        }
+        if (is_numeric($grafik->species_density)) {
+            $species_density[]= doubleval($grafik->species_density);  
+           
+        }
+        else{
             $species_density[]='';    
         }
-        elseif ($grafik->species_density!='-') {
-            $species_density[]= doubleval($grafik->species_density);  
-
+        if (is_numeric($grafik->diversity_index)) {
+            $diversity_index[]=doubleval($grafik->diversity_index);
         }
-        if ($grafik->diversity_index==='-') {
+        else{
             $diversity_index[]='';
         }
-        elseif ($grafik->diversity_index!='-') {
-            $diversity_index[]=doubleval($grafik->diversity_index);
-
+        if (is_numeric($grafik->evenness_value)) {
+            $evenness_value[]= doubleval($grafik->evenness_value);
+            
         }
-        if ($grafik->evenness_value==='-') {
+        else{
             $evenness_value[]='';
         }
-        elseif ($grafik->evenness_value!='-') {
-            $evenness_value[]= doubleval($grafik->evenness_value);
-
-        }
-        if ($grafik->dominance_index==='-') {
-            $dominance_index[]='';
-        }
-        elseif ($grafik->dominance_index!='-') {
+        if (is_numeric($grafik->dominance_index)) {
             $dominance_index[]=doubleval($grafik->dominance_index);
-
+            
+        }
+        else{
+            $dominance_index[]='';
         }
        }
         return view('dashboard.BiotaMonitoring.Marine.index', [
@@ -74,7 +82,7 @@ class MarineController extends Controller
             'diversity_index'=>$diversity_index,
             'evenness_value'=>$evenness_value,
             'dominance_index'=>$dominance_index,
-            'Marine' => Marine::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search','location']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Marine' => Marine::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
     public function ExportMarine()
@@ -109,7 +117,7 @@ class MarineController extends Controller
             "tittle" => "Marine",
             'LocationBiota'=>LocationBiota::all(),
             'Biotum'=>Biota::all(),
-            'breadcrumb' => 'Add Marine Monitoring',
+            'breadcrumb' => 'Marine Monitoring',
             'Marine' => Marine::where('user_id', auth()->user()->id)->get() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
@@ -165,7 +173,7 @@ class MarineController extends Controller
             "tittle" => "Marine",
             'LocationBiota'=>LocationBiota::all(),
             'Biotum'=>Biota::all(),
-            'breadcrumb' => 'Edit Marine Monitoring',
+            'breadcrumb' => 'Marine Monitoring',
             'Marine' => $marine
         ]);
     }

@@ -38,6 +38,6 @@ class Blasting extends Model
 
     public function getRouteKeyName()
     {
-        return 'created_at';
+        return 'id';
     }
 }

@@ -105,6 +105,7 @@ class CreateTailingQualityStandardsTable extends Migration
             $table->text('xylenes_total');
             $table->text('ddt_ddd_dde');
             $table->text('dichlorophenoxyacetic');
+            $table->text('tom');
             $table->timestamps();
         });
     }

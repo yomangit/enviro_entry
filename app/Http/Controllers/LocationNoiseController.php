@@ -18,8 +18,8 @@ class LocationNoiseController extends Controller
     public function index()
     {
         return view('dashboard.NoiseMeter.Location.index',[
-            "tittle"=>"Code Location: Noise Meter",
-            'breadcrumb'=>'Code Location : Noise Meter ',
+            "tittle"=>"Code Location",
+            'breadcrumb'=>'Code Location  ',
             'Codes'=>Lokasi::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
@@ -52,8 +52,8 @@ class LocationNoiseController extends Controller
     public function create()
     {
         return view('dashboard.NoiseMeter.Location.create',[
-            "tittle"=>"Code Location: Noise Meter",
-            'breadcrumb'=>'Code Location : Noise Meter ',
+            "tittle"=>"Code Location",
+            'breadcrumb'=>'Code Location  ',
             'Codes'=>Lokasi::where('user_id',auth()->user()->id)->get()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
@@ -74,7 +74,7 @@ class LocationNoiseController extends Controller
      
         $validatedData['user_id']=auth()->user()->id;
         Lokasi::create($validatedData);
-        return redirect('/dashborad/dustgauge/noisemeter/noise/location/create')->with('success','New code Location noise meter has been added!');
+        return redirect('/airquality/noisemeter/noise/locationnoise/create')->with('success','New code Location noise meter has been added!');
     }
 
     /**
@@ -97,8 +97,8 @@ class LocationNoiseController extends Controller
     public function edit(lokasi $locationnoise)
     {
         return view('dashboard.NoiseMeter.Location.edit',[
-            "tittle" => "Code Sample: Noise Meter",
-            'breadcrumb' => 'Code Sample Noise Meter',
+            "tittle" => "Code Location",
+            'breadcrumb' => 'Code Location ',
             'Codes' => $locationnoise
         ]);
     }
@@ -114,7 +114,6 @@ class LocationNoiseController extends Controller
     {
         $rules = [
             'nama' => 'required|max:255',
-            'lokasi'=>'required'
         ];
 
 

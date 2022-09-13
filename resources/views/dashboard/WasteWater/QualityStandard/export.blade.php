@@ -91,7 +91,7 @@
             <td>{{$item->temperature}}</td>
             <td>{{$item->salinity}}</td>
             <td>{{$item->do}}</td>
-            <td>{{$item->ph}}</td>
+            <td>{{$item->ph_min}}-{{$item->ph_max}}</td>
             <td>{{$item->alkalinity_total}}</td>
             <td>{{$item->cl}}</td>
             <td>{{$item->fluoride}}</td>

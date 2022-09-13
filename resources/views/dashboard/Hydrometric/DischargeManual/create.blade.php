@@ -24,9 +24,14 @@
             <!-- SELECT2 EXAMPLE -->
             <div class="card card-primary card-outline">
                 <div class="card-header p-0 ">
-                    <p class="card-title ml-1">Form Input</p>
-
-
+                    @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
+                        {{ session('success') }}
+                    </div>
+                    @endif
+                    <div class="card-titel m-2 font-weight-bold">Form Input</div>
                 </div>
                 <!-- /.card-header -->
                 <form action="/hydrometric/dischargemanual" method="post" checked enctype="multipart/form-data" autocomplete="off">
@@ -40,11 +45,31 @@
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
                                     <div class="col-sm-7">
                                         <select class="form-control form-control-sm " name="point_id">
+                                        <option class="text-muted" disabled selected>-- SELECT --</option>
                                             @foreach ($code_units as $code)
                                             @if (old('point_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
                                             @else
                                             <option value="{{$code->id}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control form-control-sm " name="standard_id">
+                                        <option class="text-muted" disabled selected>-- SELECT --</option>
+                                            @foreach ($QualityStandard as $standard)
+                                            @if (old('standard_id')==$standard->id)
+                                            <option value="{{$standard->id}}" selected>{{$standard->nama}}</option>
+                                            @else
+                                            <option value="{{$standard->id}}">{{$standard->nama}}</option>
                                             @endif
                                             @endforeach
                                         </select>
@@ -106,7 +131,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Temperatur
                                             (<sup>0</sup>C)</label>
                                         <div class="col-sm-7">
-                                            <input name="temperatur" type="number" step="0.01" class="form-control form-control-sm @error('temperatur') is-invalid @enderror" value="{{ old('temperatur') }}" />
+                                            <input name="temperatur" type="text"  class="form-control form-control-sm @error('temperatur') is-invalid @enderror" value="{{ old('temperatur') }}" />
                                             @error('temperatur')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -121,7 +146,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">pH</label>
                                         <div class="col-sm-7">
-                                            <input name="ph" type="number" step="0.01" class="form-control form-control-sm @error('ph') is-invalid @enderror" value="{{ old('ph') }}">
+                                            <input name="ph" type="text"  class="form-control form-control-sm @error('ph') is-invalid @enderror" value="{{ old('ph') }}">
                                             @error('ph')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -135,7 +160,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">ORP(mV)</label>
                                         <div class="col-sm-7">
-                                            <input name="orp" type="number" step="0.01" value="{{ old('orp') }}" class="form-control form-control-sm @error('orp') is-invalid @enderror">
+                                            <input name="orp" type="text"  value="{{ old('orp') }}" class="form-control form-control-sm @error('orp') is-invalid @enderror">
                                             @error('orp')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -150,7 +175,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Conductivity
                                             (µS/cm)</label>
                                         <div class="col-sm-7">
-                                            <input name="conductivity" type="number" step="0.01" class="form-control form-control-sm @error('conductivity') is-invalid @enderror" value="{{ old('conductivity') }}" />
+                                            <input name="conductivity" type="text"  class="form-control form-control-sm @error('conductivity') is-invalid @enderror" value="{{ old('conductivity') }}" />
                                             @error('conductivity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -166,7 +191,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Turbidity
                                             (NTU)</label>
                                         <div class="col-sm-7">
-                                            <input name="turbidity" type="number" step="0.01" class="form-control form-control-sm @error('turbidity') is-invalid @enderror" value="{{ old('turbidity') }}" />
+                                            <input name="turbidity" type="text"  class="form-control form-control-sm @error('turbidity') is-invalid @enderror" value="{{ old('turbidity') }}" />
                                             @error('turbidity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -181,7 +206,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">DO</label>
                                         <div class="col-sm-7">
-                                            <input name="do" type="number" step="0.01" class="form-control form-control-sm @error('do') is-invalid @enderror" value="{{ old('do') }}" />
+                                            <input name="do" type="text"  class="form-control form-control-sm @error('do') is-invalid @enderror" value="{{ old('do') }}" />
                                             @error('do')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -196,7 +221,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">TDS (mg/L)</label>
                                         <div class="col-sm-7">
-                                            <input name="tds" type="number" step="0.01" class="form-control form-control-sm  @error('tds') is-invalid @enderror" value="{{ old('tds') }}" />
+                                            <input name="tds" type="text"  class="form-control form-control-sm  @error('tds') is-invalid @enderror" value="{{ old('tds') }}" />
                                             @error('tds')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -212,7 +237,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Salinity
                                             (ppt)</label>
                                         <div class="col-sm-7">
-                                            <input name="salinity" type="number" step="0.01" class="form-control form-control-sm @error('salinity') is-invalid @enderror" value="{{ old('salinity') }}" />
+                                            <input name="salinity" type="text"  class="form-control form-control-sm @error('salinity') is-invalid @enderror" value="{{ old('salinity') }}" />
                                             @error('salinity')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -227,7 +252,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">TSS(mg/L)</label>
                                         <div class="col-sm-7">
-                                            <input name="tss" type="number" step="0.01" value="{{ old('tss') }}" class="form-control form-control-sm @error('tss') is-invalid @enderror">
+                                            <input name="tss" type="text"  value="{{ old('tss') }}" class="form-control form-control-sm @error('tss') is-invalid @enderror">
                                             @error('tss')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -241,7 +266,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Cyanide (mg/L)</label>
                                         <div class="col-sm-7">
-                                            <input name="cyanide" type="number" step="0.01" class="form-control form-control-sm @error('cyanide') is-invalid @enderror" value="{{ old('cyanide') }}" />
+                                            <input name="cyanide" type="text"  class="form-control form-control-sm @error('cyanide') is-invalid @enderror" value="{{ old('cyanide') }}" />
                                             @error('cyanide')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -256,7 +281,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Level GB(m)</label>
                                         <div class="col-sm-7">
-                                            <input name="level" type="number" step="0.01" class="form-control form-control-sm @error('level') is-invalid @enderror" value="{{ old('level') }}" />
+                                            <input name="level" type="text"  class="form-control form-control-sm @error('level') is-invalid @enderror" value="{{ old('level') }}" />
                                             @error('level')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -271,7 +296,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Level Loger (m)</label>
                                         <div class="col-sm-7">
-                                            <input name="lvl_lgr" type="number" step="0.01" class="form-control form-control-sm @error('lvl_lgr') is-invalid @enderror" value="{{ old('lvl_lgr') }}" />
+                                            <input name="lvl_lgr" type="text"  class="form-control form-control-sm @error('lvl_lgr') is-invalid @enderror" value="{{ old('lvl_lgr') }}" />
                                             @error('lvl_lgr')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -287,7 +312,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Debit
                                             (m<sup>3</sup>/<sub>s</sub>)</label>
                                         <div class="col-sm-7">
-                                            <input name="debit_s" type="number" step="0.01" class="form-control form-control-sm @error('debit_s') is-invalid @enderror" value="{{ old('debit_s') }}" />
+                                            <input name="debit_s" type="text"  class="form-control form-control-sm @error('debit_s') is-invalid @enderror" value="{{ old('debit_s') }}" />
                                             @error('debit_s')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -303,7 +328,7 @@
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Debit
                                             (m<sup>3</sup>/<sub>day</sub> )</label>
                                         <div class="col-sm-7">
-                                            <input name="debit_d" type="number" step="0.01" class="form-control form-control-sm @error('debit_d') is-invalid @enderror" value="{{ old('debit_d') }}" />
+                                            <input name="debit_d" type="text"  class="form-control form-control-sm @error('debit_d') is-invalid @enderror" value="{{ old('debit_d') }}" />
                                             @error('debit_d')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -318,7 +343,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Tailing TSF</label>
                                         <div class="col-sm-7">
-                                            <input name="tl_tsf" type="number" step="0.01" class="form-control form-control-sm @error('tl_tsf') is-invalid @enderror" value="{{ old('tl_tsf') }}" />
+                                            <input name="tl_tsf" type="text"  class="form-control form-control-sm @error('tl_tsf') is-invalid @enderror" value="{{ old('tl_tsf') }}" />
                                             @error('tl_tsf')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -333,7 +358,7 @@
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Tailing TSF Wall</label>
                                         <div class="col-sm-7">
-                                            <input name="tl_wall" type="number" step="0.01" class="form-control form-control-sm @error('tl_wall') is-invalid @enderror" value="{{ old('tl_wall') }}" />
+                                            <input name="tl_wall" type="text"  class="form-control form-control-sm @error('tl_wall') is-invalid @enderror" value="{{ old('tl_wall') }}" />
                                             @error('tl_wall')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror

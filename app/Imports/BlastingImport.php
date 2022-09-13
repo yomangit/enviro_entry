@@ -32,7 +32,6 @@ class BlastingImport implements ToModel,WithHeadingRow
            'vertical_ppv'=>$row['vertical_ppv'],
            'longitudinal_ppv'=>$row['longitudinal_ppv'],
            'peak_vektor'=>$row['peak_vektor'],
-           'peak_vektor_std'=>$row['peak_vektor_std'],
            'noise_level'=>$row['noise_level'],
            'blast_location'=>$row['blast_location'],
            'weather'=>$row['weather'],

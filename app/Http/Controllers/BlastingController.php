@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\PointIdBlasting;
 use App\Models\StandardBlasting;
 use Maatwebsite\Excel\Facades\Excel;
+use PhpParser\PrettyPrinter\Standard;
 
 class BlastingController extends Controller
 {
@@ -18,54 +19,77 @@ class BlastingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     
+
 
 
     public function index()
     {
-
-        $grafiks = Blasting::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(20)->withQueryString();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafiks = Blasting::with('user')->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
         $tanggal = [];
-        $peak_std=[];
-        $freq = [];
+        $peak_std = [];
+        $noise_std = [];
+        $noise = [];
         $peak = [];
-        $freq1 = [];
-        $peak1 = [];
         foreach ($grafiks as $grafik) {
 
-            
-             $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
-             $peak_std[]= doubleval($grafik->peak_vektor_std);
-            if ($freq1[] = $grafik->StandardID->ppv === 'error') {
-                //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
-                $freq[] = '';
-            } elseif ($freq1[] =$grafik->StandardID->ppv != 'error') {
-                //  $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-                $freq[] = $freq1[] = doubleval($grafik->StandardID->ppv);
+
+            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
+
+            if (!is_numeric($grafik->peak_vektor)) {
+                $peak_std[] = '';
             }
-            if ($peak1[] = $grafik->peak_vektor === 'error') {
-                // $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
+            elseif (is_numeric($grafik->StandardID->ppv)) {
+                $peak_std[] = doubleval($grafik->StandardID->ppv);
+            } else {
+
+                $peak_std[] = '';
+            }
+            if (is_numeric($grafik->peak_vektor)) {
+                $peak[] = doubleval($grafik->peak_vektor);
+            } else {
                 $peak[] = '';
-            } elseif ($peak1[] =$grafik->peak_vektor != 'error') {
-                // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
-                $peak[] = $peak1[] = doubleval($grafik->peak_vektor);
             }
-           
+
+
+
+            if (is_numeric($grafik->noise_level)) {
+                $noise[] = doubleval($grafik->noise_level);
+            } else {
+                $noise[] = '';
+            }
+            if (!is_numeric($grafik->noise_level)) {
+                $noise_std[] = '';
+            }
+            elseif (is_numeric($grafik->StandardID->noise_level)) {
+                $noise_std[] = doubleval($grafik->StandardID->noise_level);
+            } else {
+                $noise_std[] = '';
+            }
+            
+          
         }
-  
 
-        return view('dashboard.Blasting.Master.index',[
-            "tittle"=>" Blasting",
-            'breadcrumb'=>' Blasting',
-            'Point_ID'=>PointIdBlasting::all(),
-            'freq'=>$freq,
-            'peak'=>$peak,
-            'peak_std'=>$peak_std,
-            'date'=>$tanggal,
-            'Standard_id'=>StandardBlasting::all(),
-            'Blasting'=>Blasting::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
-         ]);
+        return view('dashboard.Blasting.Master.index', [
+            "tittle" => " Blasting",
+            'breadcrumb' => ' Blasting',
+            'Point_ID' => PointIdBlasting::all(),
+            'noise'=>$noise,
+            'noise_std'=>$noise_std,
+            'peak' => $peak,
+            'peak_std' => $peak_std,
+            'date' => $tanggal,
+            'Standard_id' => StandardBlasting::all(),
+            'Blasting' => Blasting::with('user')->filter(request(['fromDate', 'search']))->orderBy('date','desc')->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+
+        ]);
     }
     public function ExportBlasting()
     {
@@ -91,15 +115,15 @@ class BlastingController extends Controller
         if (!auth()->check() || !auth()->user()->is_admin) {
             abort(403);
         }
-        return view('dashboard.Blasting.Master.create',[
-            "tittle"=>" Blasting", 
-            'breadcrumb'=>' Blasting',
-            'Point_ID'=>PointIdBlasting::all(),
-            'TableStandard'=>StandardBlasting::all(),
-            'breadcrumb'=>' Blasting',
-            'Blasting'=>Blasting::where('user_id',auth()->user()->id)->get()//with diguanakan untuk mengatasi N+1 problem
+        return view('dashboard.Blasting.Master.create', [
+            "tittle" => " Blasting",
+            'breadcrumb' => ' Blasting',
+            'Point_ID' => PointIdBlasting::all(),
+            'TableStandard' => StandardBlasting::all(),
+            'breadcrumb' => ' Blasting',
+            'Blasting' => Blasting::where('user_id', auth()->user()->id)->get() //with diguanakan untuk mengatasi N+1 problem
 
-         ]);
+        ]);
     }
 
     /**
@@ -111,14 +135,13 @@ class BlastingController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-           
+
             'time' => 'required',
-            'point_id'=>'required',
-            'standard_id'=>'required',
+            'point_id' => 'required',
+            'standard_id' => 'required',
             'transversal_freq' => 'required',
             'vertical_freq' => 'required',
             'longitudinal_freq' => 'required',
-            'peak_vektor_std'=>'required',
             'transversal_ppv' => 'required',
             'vertical_ppv' => 'required',
             'longitudinal_ppv' => 'required',
@@ -131,7 +154,7 @@ class BlastingController extends Controller
             'remarks' => 'required',
         ]);
 
-        $validatedData['date']= date('Y-m-d',strtotime(request('date')));
+        $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
         Blasting::create($validatedData);
         return redirect('/blasting/create')->with('success', 'New Data Blasting has been added!');
@@ -159,15 +182,15 @@ class BlastingController extends Controller
         if (!auth()->check() || !auth()->user()->is_admin) {
             abort(403);
         }
-        return view('dashboard.Blasting.Master.edit',[
-            "tittle"=>" Blasting", 
-            'breadcrumb'=>' Blasting',
-            'Point_ID'=>PointIdBlasting::all(),
-            'TableStandard'=>StandardBlasting::all(),
-            'breadcrumb'=>' Blasting',
-            'Blasting'=>$blasting
+        return view('dashboard.Blasting.Master.edit', [
+            "tittle" => " Blasting",
+            'breadcrumb' => ' Blasting',
+            'Point_ID' => PointIdBlasting::all(),
+            'TableStandard' => StandardBlasting::all(),
+            'breadcrumb' => ' Blasting',
+            'Blasting' => $blasting
 
-         ]);
+        ]);
     }
 
     /**
@@ -180,19 +203,16 @@ class BlastingController extends Controller
     public function update(Request $request, Blasting $blasting)
     {
         $rules = [
-          
+
             'time' => 'required',
-            'point_id'=>'required',
-            'standard_id'=>'required',
+            'point_id' => 'required',
+            'standard_id' => 'required',
             'transversal_freq' => 'required',
             'vertical_freq' => 'required',
             'longitudinal_freq' => 'required',
-            'peak_vektor_std'=>'required',
-
             'transversal_ppv' => 'required',
             'vertical_ppv' => 'required',
             'longitudinal_ppv' => 'required',
-
             'peak_vektor' => 'required|max:255',
             'noise_level' => 'required|max:255',
             'blast_location' => 'required',
@@ -204,8 +224,8 @@ class BlastingController extends Controller
 
 
         $validatedData = $request->validate($rules);
-       
-        $validatedData['date']= date('Y-m-d',strtotime(request('date')));
+
+        $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
         Blasting::where('id', $blasting->id)
             ->update($validatedData);
@@ -221,6 +241,6 @@ class BlastingController extends Controller
     public function destroy(Blasting $blasting)
     {
         Blasting::destroy($blasting->id);
-        return redirect('/blasting')->with('success','Data Blasting has been deleted!');
+        return redirect('/blasting')->with('success', 'Data Blasting has been deleted!');
     }
 }

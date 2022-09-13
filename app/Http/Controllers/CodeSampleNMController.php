@@ -18,7 +18,7 @@ class CodeSampleNMController extends Controller
     public function index()
     {
         return view('dashboard.NoiseMeter.CodeSampleNM.index',[
-            "tittle"=>"Code Sample: Noise Meter",
+            "tittle"=>"Code Sample",
             'breadcrumb'=>'Code Sample Noise Meter ',
       'Codes'=>Codesamplenm::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
@@ -54,8 +54,8 @@ class CodeSampleNMController extends Controller
     public function create()
     {
         return view('dashboard.NoiseMeter.CodeSampleNM.create',[
-            "tittle"=>"Code Sample: Noise Meter",
-            'breadcrumb'=>'Code Sample: Noise Meter ',
+            "tittle"=>"Code Sample",
+            'breadcrumb'=>'Code Sample ',
             'Codes'=>Codesamplenm::where('user_id',auth()->user()->id)->filter(request(['fromDate']))->get()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
@@ -99,8 +99,8 @@ class CodeSampleNMController extends Controller
     public function edit(Codesamplenm $codesamplenm)
     {
         return view('dashboard.NoiseMeter.CodeSampleNM.edit', [
-            "tittle" => "Code Sample: Noise Meter",
-            'breadcrumb' => 'Code Sample Noise Meter',
+            "tittle" => "Code Sample",
+            'breadcrumb' => 'Code Sample ',
             'Codes' => $codesamplenm
         ]);
     }

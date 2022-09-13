@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/soilquality">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/weather/evaporation">Home</a></li>
                         <li class="breadcrumb-item active">Code Sample</li>
                     </ol>
                 </div>
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             
                 <div class="card card-primary card-outline">
-                    <div class="card-header p-0 p-2">
+                    <div class="card-header p-0 ">
 
                         @if (session()->has('success'))
                         <div class="alert alert-success alert-dismissible form-inline">
@@ -49,9 +49,15 @@
 
                         </div>
                         @endif
-                        <div class="card-tools p-1 mr-2">
+                        
+                        <a href="/weather/evaporation/evaporationpointid/create" class="btn bg-gradient-secondary btn-xs ml-2  my-1"><i class="fas fa-plus mr-1 "></i>Add Data</a>
+                        <a href="/export/evaporationpointid" class="btn  bg-gradient-secondary btn-xs  my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                        <a href="#" class="btn  bg-gradient-secondary btn-xs  my-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                            <i class="fas fa-upload mr-1"></i>Excel
+                        </a>
+                        <div class=" card-tools mt-1 mr-2 mb-1 form-inline">
 
-                            <form action="/weather/evaporation/evaporationpointid">
+                            <form action="/weather/evaporation/evaporationpointid" class="mt-1 mb-1">
                                 <div class="input-group input-group-sm" style="width: 180px;">
                                     <input type="text" name="search" class="form-control float-right" placeholder="Search" value="{{ request('search') }}">
                                     <div class="input-group-append">
@@ -63,11 +69,6 @@
                             </form>
 
                         </div>
-                        <a href="/weather/evaporation/evaporationpointid/create" class="btn bg-gradient-secondary btn-xs  ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
-                        <a href="/export/evaporationpointid" class="btn  bg-gradient-secondary btn-xs  ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                        <a href="#" class="btn  bg-gradient-secondary btn-xs  ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
-                            <i class="fas fa-upload mr-1"></i>Excel
-                        </a>
                     </div>
                    
                     <div class="card-body">
@@ -77,10 +78,9 @@
                                 <thead style=" color:#005245">
                                     <tr class="text-center" style="font-size: 12px">
                                         <th>No</th>
-                                        <th>Action</th>
                                         <th>Name</th>
                                         <th>Lokasi</th>
-
+                                        <th>Action</th>
 
                                     </tr>
                                 </thead>
@@ -92,25 +92,23 @@
                                     @foreach ($Codes as $code)
                                     <tr style="font-size: 12px">
                                         <td>{{ $no++ }}</td>
-                                        <td>
-                                            <div style="">
-                                                <a href="/weather/evaporation/evaporationpointid/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <i class="fas fa-pen"></i>
-                                                </a>
-                                                <form action="/weather/evaporation/evaporationpointid/{{ $code->id }}" method="POST" class="d-inline">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-                                                </form>
-
-                                            </div>
-                                        </td>
+                                       
 
                                         <td>{{ $code->nama }}</td>
                                         <td>{{ $code->lokasi }}</td>
-
+                                        <td>
+                                           
+                                           <a href="/weather/evaporation/evaporationpointid/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                               <i class="fas fa-pen"></i>
+                                           </a>
+                                           <form action="/weather/evaporation/evaporationpointid/{{ $code->id }}" method="POST" class="d-inline">
+                                               @method('delete')
+                                               @csrf
+                                               <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                   <i class="fas fa-trash"></i>
+                                               </button>
+                                           </form>
+                                   </td>
                                     </tr>
                                     @endforeach
 

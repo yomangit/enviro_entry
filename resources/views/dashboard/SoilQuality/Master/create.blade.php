@@ -25,18 +25,20 @@
                 <div class="card-header p-0 px-1">
 
                     @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible form-inline">
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                         {{ session('success') }}
                     </div>
                     @endif
-                    <p class="card-title">Form Input</p>
+                    <div class="card-titel m-2 font-weight-bold">Form Input</div>
+
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                    <form action="/soilquality" method="post" checked enctype="multipart/form-data" autocomplete="off">
-                        @csrf
+                <form action="/soilquality" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    @csrf
+                    <div class="card-body">
+
                         <div class="row">
                             <div class="col-12 col-sm-6">
                                 <div class="form-group row">
@@ -71,7 +73,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            
+
                             {{-- end tss --}}
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
@@ -536,14 +538,14 @@
 
                         </div>
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
-                        </div>
-                    </form>
 
-                </div>
-                <!-- /.card-body -->
 
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer d-flex justify-content-end">
+                    <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
+                    </div>
+                </form>
             </div>
             <!-- /.card -->
 

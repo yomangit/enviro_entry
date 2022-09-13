@@ -110,7 +110,8 @@ class ImportQualityStandardTailing implements ToModel, WithValidation, WithHeadi
             "vinyl_chloride" => $row["vinyl_chloride"],
             "xylenes_total" => $row["xylenes_total"],
             "ddt_ddd_dde" => $row["ddt_ddd_dde"],
-            "dichlorophenoxyacetic" => $row["dichlorophenoxyacetic"]
+            "dichlorophenoxyacetic" => $row["dichlorophenoxyacetic"],
+            "tom" => $row["tom"]
 
         ]);
     }
@@ -207,6 +208,7 @@ class ImportQualityStandardTailing implements ToModel, WithValidation, WithHeadi
             'xylenes_total' => 'required',
             'ddt_ddd_dde' => 'required',
             'dichlorophenoxyacetic' => 'required',
+            'tom' => 'required',
         ];
     }
 }

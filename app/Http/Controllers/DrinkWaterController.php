@@ -23,8 +23,8 @@ class DrinkWaterController extends Controller
             'tittle'=>'Drink Water',
             'code_units'=>PointIdDrinkwater::all(),
             'breadcrumb'=>'Drink Water',
-            'DrinkWater'=>DrinkWater::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
-            'QualityStandard'=>QualityStdDrinkWater::where('user_id',auth()->user()->id)->paginate(10)->withQueryString()
+            'DrinkWater'=>DrinkWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString(),
+            'QualityStandard'=>QualityStdDrinkWater::all()
         ]);
     }
     public function Exportdrinkwater()
@@ -55,6 +55,9 @@ class DrinkWaterController extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.SurfaceWater.DrinkWater.create',[
             'tittle'=>'Drink Water',
             'breadcrumb'=>'Drink Water',
@@ -76,6 +79,7 @@ class DrinkWaterController extends Controller
         $validatedData = $request->validate([
             'conductivity'=>'required',
             'point_id'=>'required',
+            'date'=>'required',
             'tds'=>'required',
             'tss'=>'required',
             'turbidity'=>'required',
@@ -143,6 +147,9 @@ class DrinkWaterController extends Controller
      */
     public function edit(DrinkWater $drinkwater)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.SurfaceWater.DrinkWater.edit',[
             'tittle'=>'Drink Water',
             'breadcrumb'=>'Drink Water',
@@ -163,6 +170,7 @@ class DrinkWaterController extends Controller
     public function update(Request $request, DrinkWater $drinkwater)
     {
         $rules = [
+            'point_id'=>'required',
             'point_id'=>'required',
             'conductivity'=>'required',
             'tds'=>'required',

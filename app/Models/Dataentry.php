@@ -26,12 +26,12 @@ class Dataentry extends Model
         });
     }
     public function standard(){
-    return $this->belongsTo(TblStandard::class,'standard_id');
+    return $this->belongsTo(Wastewaterstandard::class,'standard_id');
     }
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
-    public function CodeSample(){
+    public function PointId(){
         return $this->belongsTo(Codesample::class,'codesample_id');
     }
     public function getRouteKeyName()

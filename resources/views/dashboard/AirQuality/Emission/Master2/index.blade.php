@@ -20,9 +20,9 @@
     <section class="content">
         <div class="container-fluid">
             <div class="card card-primary card-outline">
-                <div class="card-header">
+                <div class="card-header p-0">
                     @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible form-inline">
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                         {{ session('success') }}
@@ -54,96 +54,85 @@
                         @endforeach
                     </table>
                     @endif
-                    <p class="card-title"><a href="/airquality/emission/pointid"
-                            class="btn bg-gradient-info btn-xs mr-1 ">Point ID</a></p>
-                    <p class="card-title"><a href="/airquality/emission/standard2"
-                            class="btn bg-gradient-info btn-xs ">Quality Standard</a></p>
+                  @can('admin')
+                  <p class="card-title"><a href="/airquality/emission/pointid" class="btn bg-gradient-info btn-xs ml-1 my-1 ">Point ID</a></p>
+                    <p class="card-title"><a href="/airquality/emission/standard2" class="btn bg-gradient-info btn-xs my-1 ml-1 ">Quality Standard</a></p>
+                  @endcan
 
 
                 </div>
-                <div class="card-body">
+                <div class="card-body table-responsive">
 
                     <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link" href="/airquality/emission">Table Emission 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  show active" id="custom-content-below-standard1-tab" data-toggle="pill"
-                                href="#custom-content-below-standard1" role="tab"
-                                aria-controls="custom-content-below-standard1" aria-selected="true">Table Standard 2</a>
+                            <a class="nav-link  show active" id="custom-content-below-standard1-tab" data-toggle="pill" href="#custom-content-below-standard1" role="tab" aria-controls="custom-content-below-standard1" aria-selected="true">Table Emission 2</a>
                         </li>
 
 
                     </ul>
-
-                    <div class="card-header">
-                        <div class="card-tools mt-1 row d-flex">
-                            <form action="/airquality/emission2 mt-1" class="form-inline" autocomplete="off">
-                                <div class="input-group date" id="reservationdate4" style="width: 85px;"
-                                    data-target-input="nearest">
-                                    <input type="text" name="fromDate" placeholder="Date"
-                                        class="form-control datetimepicker-input form-control-sm "
-                                        data-target="#reservationdate4" data-toggle="datetimepicker"
-                                        value="{{ request('fromDate') }}" />
-                                </div>
-                                <span class="input-group-text form-control-sm ">To</span>
-
-                                <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;"
-                                    data-target-input="nearest">
-                                    <input type="text" name="toDate" placeholder="Date"
-                                        class="form-control datetimepicker-input form-control-sm"
-                                        data-target="#reservationdate5" data-toggle="datetimepicker"
-                                        value="{{ request('toDate') }}" />
-                                </div>
-
-                                <div style="width: 118px;" class="input-group mr-1">
-                                    <select class="form-control form-control-sm " name="search">
-                                        <option value="" selected>Code Sample</option>
-                                        @foreach ($code_units as $code)
-                                        @if ( request('search')==$code->nama)
-                                        <option value="{{($code->nama)}}" selected>
-                                            {{$code->nama}}
-                                        </option>
-                                        @else
-                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                        @endif
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="mr-2">
-                                    <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                </div>
-                            </form>
-                            <form action="/airquality/emission2">
-                                <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                            </form>
+                    <div class="row m-2">
+                        <div class="col-6"> 
+                            @can('admin')
+                            <a href="/airquality/emission2/create" class="btn bg-gradient-secondary btn-xs "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                            <a href="/export/emission2" class="btn  bg-gradient-secondary btn-xs " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                            <a href="#" class="btn  bg-gradient-secondary btn-xs " data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                                <i class="fas fa-upload mr-1"></i>Excel
+                            </a>
+                            @endcan
                         </div>
-                        <a href="/airquality/emission2/create" class="btn bg-gradient-secondary btn-xs "><i
-                                class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                        <a href="/export/emission2" class="btn  bg-gradient-secondary btn-xs " data-toggle="tooltip"
-                            data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                        <a href="#" class="btn  bg-gradient-secondary btn-xs " data-toggle="modal" data-toggle="tooltip"
-                            data-placement="top" title="Upload" data-target="#modal-default">
-                            <i class="fas fa-upload mr-1"></i>Excel
-                        </a>
-                    </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class=" row form-inline">
+                                <form action="/airquality/emission2 mt-1" class="form-inline" autocomplete="off">
+                                    <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                        <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                    </div>
+                                    <span class="input-group-text form-control-sm ">To</span>
 
+                                    <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                        <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                    </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search">
+                                            <option value="" selected>Point ID</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>
+                                                {{$code->nama}}
+                                            </option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="mr-2">
+                                        <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                                    </div>
+                                </form>
+                                <form action="/airquality/emission2">
+                                    <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                  
                     @if($Emission->count())
                     <div class="tab-content" id="custom-content-below-tabContent">
-                        <div class="tab-pane fade show active" id="custom-content-below-standard1" role="tabpanel"
-                            aria-labelledby="custom-content-below-standard1-tab">
+                        <div class="tab-pane fade show active" id="custom-content-below-standard1" role="tabpanel" aria-labelledby="custom-content-below-standard1-tab">
                             <div class="card-body table-responsive">
-                                <table style="font-size: 11px"
-                                    class="table table-head-fixed table-sm table-striped table-bordered">
-                                    <thead style="background-color: #067eaa ;color:#ded8d8" class="text-center ">
-                                        <tr style="background-color: #067eaa">
-                                            <th class="align-middle" style="background-color: #067eaa" rowspan="2">No
+                                <table style="font-size: 11px" class="table  table-sm table-striped table-bordered">
+                                    <thead class="text-center table-info">
+                                        <tr>
+                                            <th class="align-middle" rowspan="2">No
                                             </th>
-                                            <th class="align-middle" style="background-color: #067eaa" rowspan="2"
-                                                colspan="6">Quality Standard</th>
-                                            <th style="background-color: #067eaa" colspan="14">Isokinetic Sampling Stack
+                                            <th class="align-middle" rowspan="2" @if(!auth()->user()->is_admin)colspan="4"@else colspan="6"@endif>Quality Standard</th>
+                                            <th colspan="14">Isokinetic Sampling Stack
                                                 Condition</th>
-                                            <th style="background-color: #067eaa" colspan="15">Emission Air (Actual)
+                                            <th colspan="15">Emission Air (Actual)
                                             </th>
 
                                         </tr>
@@ -187,8 +176,8 @@
                                         <tr class="text-center" style="font-size: 11px">
                                             <td>{{ $no++ }}</td>
 
-                                            <td colspan="6">{{$standard->nama}}</td>
-                                            <td>{{$standard->engine}}</td>
+                                            <td @if(!auth()->user()->is_admin)colspan="4"@else colspan="6"@endif>{{$standard->nama}}</td>
+                                            <td>{{$standard->equipment}}</td>
                                             <td>{{$standard->fuel_type}}</td>
                                             <td>{{$standard->capacity}}</td>
                                             <td>{{$standard->ambient_temperature}}</td>
@@ -202,29 +191,33 @@
                                             <td>{{$standard->dry_molecular_weight}}</td>
                                             <td>{{$standard->actual_stack_flowrate}}</td>
                                             <td>{{$standard->percent_of_isokinetic}}</td>
-                                            <td>{{$standard->total_particulate_isokinetic_actual}}</td>
-                                            <td>{{$standard->sulfur_dioxide_so2_actual}}</td>
-                                            <td>{{$standard->nitrogen_oxide_nox_as_nitrogen_dioxide_no2_actual}}</td>
-                                            <td>{{$standard->nitrogen_oxide_nox_actual}}</td>
-                                            <td>{{$standard->carbon_monoxide_co_actual}}</td>
-                                            <td>{{$standard->carbon_dioxide_co}}</td>
+                                            <td>{{$standard->ammonia_nh3}}</td>
+                                            <td>{{$standard->chlorine_cl2}}</td>
+                                            <td>{{$standard->hydrogen_chloride_hcl}}</td>
+                                            <td>{{$standard->hydrogen_fluoride_hf}}</td>
+                                            <td>{{$standard->nitrogen_oxide_nox_as_nitrogen_dioxide_no2}}</td>
                                             <td>{{$standard->opacity}}</td>
                                             <td>{{$standard->total_particulate_isokinetic}}</td>
                                             <td>{{$standard->sulfur_dioxide_so2}}</td>
-                                            <td>{{$standard->nitrogen_oxide_nox_as_nitrogen_dioxide_no2}}</td>
-                                            <td>{{$standard->nitrogen_oxide_nox}}</td>
-                                            <td>{{$standard->carbon_monoxide_co}}</td>
-
+                                            <td>{{$standard->hydrogen_sulphide_h2s}}</td>
+                                            <td>{{$standard->mercury_hg}}</td>
+                                            <td>{{$standard->arsenic_as}}</td>
+                                            <td>{{$standard->antimony_sb}}</td>
+                                            <td>{{$standard->cadmium_cd}}</td>
+                                            <td>{{$standard->zinc_zn}}</td>
+                                            <td>{{$standard->lead_pb}}</td>
 
 
                                         </tr>
                                         @endforeach
-                                        <tr class="text-center" style="color:white">
-                                            <th style="background-color: #067eaa" class="align-middle">*</th>
-                                            <th style="background-color: #067eaa" colspan="2">Action</th>
-                                            <th style="background-color: #067eaa" colspan="2">Date</th>
-                                            <th style="background-color: #067eaa" colspan="2">Point ID</th>
-                                            <th style="background-color: #067eaa" colspan="29">Data Entry</th>
+                                        <tr class="text-center table-info">
+                                            <th class="align-middle">*</th>
+                                           @can('admin')
+                                           <th colspan="2">Action</th>
+                                           @endcan
+                                            <th colspan="2">Date</th>
+                                            <th colspan="2">Point ID</th>
+                                            <th colspan="29">Data Entry</th>
                                         </tr>
                                         @php
                                         $no2 = 1 + ($Emission->currentPage() - 1) * $Emission->perPage();
@@ -233,28 +226,25 @@
                                         @foreach($Emission as $item)
                                         <tr class="text-center">
                                             <td>{{$no2++}}</td>
+                                            @can('admin')
                                             <td colspan="2">
 
-                                                <div style="width: 50px">
-                                                    <a href="/airquality/emission2/{{ $item->id }}/edit"
-                                                        class="btn btn-outline-warning btn-xs btn-group"
-                                                        data-toggle="tooltip" data-placement="top" title="Edit">
-                                                        <i class="fas fa-pen"></i>
-                                                    </a>
-                                                    <form action="/airquality/emission2/{{ $item->id }}" method="POST"
-                                                        class="d-inline">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <button class="btn btn btn-outline-danger btn-xs btn-group"
-                                                            onclick="return confirm('are you sure?')"
-                                                            data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="fas fa-trash"></i>
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            </td>
+<div style="width: 50px">
+    <a href="/airquality/emission2/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+        <i class="fas fa-pen"></i>
+    </a>
+    <form action="/airquality/emission2/{{ $item->id }}" method="POST" class="d-inline">
+        @method('delete')
+        @csrf
+        <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+            <i class="fas fa-trash"></i>
+        </button>
+    </form>
+</div>
+</td>
+                                            @endcan
                                             <td colspan="2">
-                                                <div style="width: 60px">{{date('d-m-Y',strtotime($item->date))}}</div>
+                                                <div style="width: 60px">{{date('d-M-Y',strtotime($item->date))}}</div>
                                             </td>
                                             <td colspan="2">
                                                 <div style="width: 60px">{{$item->PointId->nama}}</div>
@@ -330,15 +320,13 @@
                                     @csrf
                                     <div class="modal-body">
                                         <div class="custom-file">
-                                            <input type="file" name="file" required class="custom-file-input"
-                                                id="exampleInputFile">
+                                            <input type="file" name="file" required class="custom-file-input" id="exampleInputFile">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
 
                                     </div>
                                     <div class="modal-footer justify-content-between">
-                                        <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Import</button>
                                     </div>
                                 </form>

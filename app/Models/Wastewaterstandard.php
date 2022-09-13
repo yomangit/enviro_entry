@@ -12,9 +12,7 @@ class Wastewaterstandard extends Model
     use HasFactory;
     public function scopefilter($query,array $filters)
     {
-           $query->when($filters['fromDate']?? false, function($query){
-                return $query->whereBetween('date', array(request('fromDate'), request('toDate'))); 
-               });
+         
         
                $query->when($filters['search']??false,function($query,$search){
                 return  $query->where('nama', 'like', '%' . $search . '%');

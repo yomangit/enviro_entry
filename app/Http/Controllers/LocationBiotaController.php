@@ -111,7 +111,7 @@ class LocationBiotaController extends Controller
     public function update(Request $request, LocationBiota $location)
     {
         $rules = [
-            'nama' => 'required|max:255|unique:location_biotas'
+            'nama' => 'required|max:255'
         ];
 
 

@@ -27,7 +27,7 @@
                         </div>
                         @endif
                         @if (session()->has('failures'))
-                        <div class="alert alert-danger alert-dismissible form-inline">
+                        <div class="alert alert-danger alert-dismissible form-inline m-2">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             <h5 class="mr-2"><i class="icon fas fa-ban"></i>Fail</h5>
                             @foreach (session()->get('failures') as $validation)
@@ -44,59 +44,79 @@
 
                         </div>
                         @endif
+
                         @can('admin')
-                        <a href="/surfacewater/qualityperiode/codesample" class="btn bg-gradient-info btn-xs ml-1 my-1">Code
+                        <a href="/surfacewater/qualityperiode/codesample"
+                            class="btn bg-gradient-info btn-xs ml-1 my-1">Code
                             Sample</a>
+                        <a href="/wastewater/wastewaterstandard" class="btn bg-gradient-info btn-xs  ml-1 my-1">Table
+                            Standard</a>
                         @endcan
+                        <div class=" card-tools p-1 mr-2 form-inline">
+                            <form action="/surfacewater/qualityperiode" class="form-inline" autocomplete="off">
+
+                                <div class="input-group date" id="reservationdate4" style="width: 85px;"
+                                    data-target-input="nearest">
+                                    <input type="text" name="fromDate" placeholder="Date"
+                                        class="form-control datetimepicker-input form-control-sm "
+                                        data-target="#reservationdate4" data-toggle="datetimepicker"
+                                        value="{{ request('fromDate') }}" />
+                                </div>
+                                <span class="input-group-text form-control-sm ">To</span>
+
+                                <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;"
+                                    data-target-input="nearest">
+                                    <input type="text" name="toDate" placeholder="Date"
+                                        class="form-control datetimepicker-input form-control-sm"
+                                        data-target="#reservationdate5" data-toggle="datetimepicker"
+                                        value="{{ request('toDate') }}" />
+                                </div>
+
+                                <div style="width: 118px;" class="input-group mr-1">
+                                    <select class="form-control form-control-sm " name="search">
+                                        <option value="" selected>Point ID</option>
+                                        @foreach ($code_units as $code)
+                                        @if ( request('search')==$code->nama)
+                                        <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                        @else
+                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="mr-2">
+                                    <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                                </div>
+                            </form>
+                            <form action="/surfacewater/qualityperiode">
+                                <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                            </form>
+                        </div>
                     </div>
-                   
+
                     <div class="card-body table-responsive ">
                         <section class="content ">
-                            <div class="row  p-0 mb-3">
+                          @can('admin')
+                          <div class="row  p-0 mb-3">
                                 <div class="col-6 col-md-4 form-inline ">
-                                    <a href="/surfacewater/qualityperiode/create" class="btn bg-gradient-secondary btn-xs ml-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                    <a href="/exportdata" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-download mr-1"></i>Excel</a>
-                                    <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="modal" data-target="#modal-default">
+                                    <a href="/surfacewater/qualityperiode/create"
+                                        class="btn bg-gradient-secondary btn-xs ml-1"><i
+                                            class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                    <a href="/exportdata" class="btn  bg-gradient-secondary btn-xs ml-1"
+                                        data-toggle="tooltip" data-placement="top" title="Edit"><i
+                                            class="fas fa-download mr-1"></i>Excel</a>
+                                    <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="modal"
+                                        data-target="#modal-default">
                                         <i class="fas fa-upload mr-1"></i>Exel
                                     </a>
                                 </div>
-                                <div class="col-12 col-md-8  d-flex justify-content-end form-inline">
-                                    <form action="/surfacewater/qualityperiode" class="form-inline" autocomplete="off">
-                                        <label for="fromDate" class="mr-2">From</label>
-                                        <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                                        </div>
-                                        <span class="input-group-text form-control-sm ">To</span>
 
-                                        <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                        </div>
-
-                                        <div style="width: 118px;" class="input-group mr-1">
-                                            <select class="form-control form-control-sm " name="search">
-                                                <option value="" selected>Code Sample</option>
-                                                @foreach ($code_units as $code)
-                                                @if ( request('search')==$code->nama)
-                                                <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
-                                                @else
-                                                <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                                @endif
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="mr-2">
-                                            <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                        </div>
-                                    </form>
-                                    <form action="/surfacewater/qualityperiode">
-                                        <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                                    </form>
-                                </div>
                             </div>
-                            @if ($Input->count())
-                            <table role="grid" id="example2" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                          @endcan
+
+                            <table role="grid" id="example2" class="table table-bordered table-sm  table-striped">
                                 <thead style=" color:#005245">
-                                    <tr class="text-center" style="font-size: 12px">
+                                    <tr class="text-center" style="font-size: 11px">
                                         <th>No</th>
                                         @can('admin')
                                         <th>Action</th>
@@ -109,8 +129,7 @@
                                         <th>Stop Time</th>
                                         <th>TSS Standard</th>
                                         <th>TSS (mg/L)</th>
-                                        <th>PH Standard Max.</th>
-                                        <th>PH Standard Min.</th>
+                                        <th>PH Standard Min-Max</th>
                                         <th>PH</th>
                                         <th>DO Standard</th>
                                         <th>DO</th>
@@ -130,27 +149,16 @@
                                         <th>Debit (m<sup>3</sup>/<sub>s</sub>)</th>
                                         <th>Debit (m<sup>3</sup>/<sub>day</sub>)</th>
                                         <th>Water Condition</th>
-                                        <th>
-                                            <div style="width: 65px">water Color</div>
-                                        </th>
+                                        <th>water Color</th>
                                         <th>Odor</th>
                                         <th>Rain Before Sampling</th>
                                         <th>Rain During Sampling</th>
                                         <th>Oil Layer</th>
-                                        <th>
-                                            <div style="width:90px"></div>Sorce of Pollution
-
-                                        </th>
-                                        <th>
-                                            <div style="width: 100px"> Sampler</div>
-                                        </th>
-                                        <th>
-                                            <div style="width: 100px"> Remarks</div>
-                                        </th>
-                                        <!-- <th>Hard Copy</th> -->
+                                        <th>Sorce of Pollution</th>
+                                        <th>Sampler</th>
+                                        <th> Remarks</th>
                                     </tr>
                                 </thead>
-                                
                                 <tbody style="text-align: center">
                                     @php
                                     $no = 1 + ($Input->currentPage() - 1) * $Input->perPage();
@@ -161,13 +169,25 @@
                                         @can('admin')
                                         <td>
                                             <div style="width: 80px">
-                                                <a href="/surfacewater/qualityperiode/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+
+                                                <!-- <a href="/surfacewater/qualityperiode/{{ $data->failed_at }}"
+                                                                                class="btn btn btn-outline-primary btn-xs btn-group"
+                                                                                data-toggle="tooltip" data-placement="top"
+                                                                                title="Detail">
+                                                                                <i class="far fa-eye"></i>
+                                                                            </a> -->
+                                                <a href="/surfacewater/qualityperiode/{{ $data->id }}/edit"
+                                                    class="btn btn-outline-warning btn-xs btn-group"
+                                                    data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fas fa-pen"></i>
                                                 </a>
-                                                <form action="/surfacewater/qualityperiode/{{ $data->id }}" method="POST" class="d-inline">
+                                                <form action="/surfacewater/qualityperiode/{{ $data->id }}"
+                                                    method="POST" class="d-inline">
                                                     @method('delete')
                                                     @csrf
-                                                    <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <button class="btn btn btn-outline-danger btn-xs btn-group"
+                                                        onclick="return confirm('are you sure?')" data-toggle="tooltip"
+                                                        data-placement="top" title="Delete">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </form>
@@ -175,7 +195,7 @@
                                             </div>
                                         </td>
                                         @endcan
-                                        <td>{{ $data->CodeSample->nama }}</td>
+                                        <td>{{ $data->PointId->nama }}</td>
                                         <td>{{ date('d-M-Y', strtotime( $data->date)) }}</td>
                                         @If($data->start_time=='no data')
                                         <td style="color: red;">No Data</td>
@@ -187,21 +207,20 @@
                                         @else
                                         <td>{{$data->stop_time}}</td>
                                         @endif
-                                        <td>{{ $data->standard->tss }}</td>
+                                        <td>{{ $data->standard->totalsuspendedsolids_tss }}</td>
 
                                         @If($data->tss==='no data')
                                         <td style="color: red;">No Data</td>
                                         @else
                                         <td>{{$data->tss}}</td>
                                         @endif
-                                        <td>{{ $data->standard->ph_max }}</td>
-                                        <td>{{ $data->standard->ph_min }}</td>
+                                        <td>{{ $data->standard->ph_min }}-{{$data->standard->ph_max}}</td>
                                         @If($data->ph==='no data')
                                         <td style="color: red;">No Data</td>
                                         @else
                                         <td>{{$data->ph}}</td>
                                         @endif
-                                        <td>{{ $data->standard->do }}</td>
+                                        <td>{{ $data->standard->dissolvedoxygen_do }}</td>
                                         @If($data->do==='no data')
                                         <td style="color: red;">No Data</td>
                                         @else
@@ -219,13 +238,13 @@
                                         @else
                                         <td>{{$data->conductivity}}</td>
                                         @endif
-                                        <td>{{ $data->standard->tds }}</td>
+                                        <td>{{ $data->standard->totaldissolvedsolids_tds }}</td>
                                         @If($data->tds==='no data')
                                         <td style="color: red;">No Data</td>
                                         @else
                                         <td>{{$data->tds}}</td>
                                         @endif
-                                        <td>{{ $data->standard->temperatur }}</td>
+                                        <td>{{ $data->standard->temperature }}</td>
                                         @If($data->temperatur==='no data')
                                         <td style="color: red;">No Data</td>
                                         @else
@@ -296,68 +315,70 @@
 
                                 </tbody>
                             </table>
+
                         </section>
 
                     </div>
-                    <div class="card-footer p-0 ">
-                        <div class="row ">
-                            <div class="col-6 col-md-4 form-inline ">
-
-                                <h6 class="ml-2 p-0">Showing {{ $Input->firstItem() }} to
-                                    {{ $Input->lastItem() }} of {{ $Input->total() }}
-                                </h6>
-
+                    <div class="card-footer">
+                        <div class="card-tools  form-inline">
+                            <div class="col-4">
+                                <div class="d-flex justify-content-start">
+                                    <h6>Showing {{ $Input->firstItem() }} to {{$Input->lastItem() }} of
+                                        {{ $Input->total() }}</h6>
+                                </div>
                             </div>
-                            <div class="col-8  form-inline d-flex justify-content-end pagination pagination-sm">
-                                <div class="mt-3 mr-2 p-0"> {{ $Input->links() }}</div>
-
+                            <div class="col-8 d-flex justify-content-end">
+                                <div class=" pagination pagination-sm">
+                                    {{ $Input->links() }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                   
-                    
+
+
 
                 </div>
+                @if ($Input->count())
                 <div class="card">
-                        <div class="card-header">
-                            <div class="card-title text center">{{$tittle}} </div>
-                        </div>
-                        <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+                    <div class="card-header">
+                        <div class="card-title text center">{{$tittle}} </div>
                     </div>
-                    @else
-                    <p class="text-center fs-4">Not Data Found</p>
-                    @endif
-                    <div class="modal fade" id="modal-default">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Import Data</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <form action="/importdata" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="modal-body">
-                                        <div class="custom-file">
-                                            <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                            @error('file')
-                                            <span class=" invalid-feedback ">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer justify-content-between">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Import</button>
-                                    </div>
-                                </form>
+                    <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+                </div>
+                @endif
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
+                            <form action="/importdata" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file"
+                                            class="custom-file-input  @error('file') is-invalid @enderror"
+                                            id="exampleInputFile" required>
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        @error('file')
+                                        <span class=" invalid-feedback ">{{ $message }}</span>
+                                        @enderror
+                                    </div>
 
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
                         </div>
 
                     </div>
+
+                </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -365,7 +386,10 @@
 <script>
         Highcharts.chart('container', {
             chart: {
-                type: 'spline'
+                type: 'spline',
+                zoomType: 'x',
+                panning: true,
+                panKey: 'shift'
             },
             title: {
                 text:''
@@ -378,6 +402,15 @@
                     text: 'Value'
                 }
             },
+            legend: {
+            layout: 'horizontal',
+            align: 'left',
+            verticalAlign: 'bottom',
+            floating: false,
+            backgroundColor: 'rgba(255,255,255,0.3)',
+            borderWidth: 0,
+            enabled: true
+          },
             tooltip: {
                 crosshairs: true,
                 shared: true
@@ -392,44 +425,112 @@
                 }
             },
             series: [{
-                        name: 'Temperatur',
-                        color:'#1F2833',
-                        data: {!! json_encode($suhu) !!},
-                        marker: {
-                            symbol: 'square'
-                        },
-                        
+        name: 'Temperatur',
+            color: '#1F2833',
+            visible: false,
+            data: {!!json_encode($suhu) !!},
+            marker: {
+                symbol: 'square'
+            },
 
-                    }, {
-                        name: 'Conductivity (µS/cm)',
-                        color:'#DE7A22',
-                        marker: {
-                            symbol: 'diamond'
-                        },
-                        data: {!! json_encode($conductivity) !!}
-                    }, {
-                        name: 'TDS',
-                        color:'#F4CC70',
-                        marker: {
-                            symbol: 'triangle'
-                        },
-                        data: {!! json_encode($tds) !!}
-                    }, {
-                        name: 'TSS',
-                        color:'#20948B',
-                        marker: {
-                            symbol: 'circle'
-                        },
-                        data: {!! json_encode($tss) !!}
-                    }, {
-                        name: 'PH',
-                        color:'#6AB187',
-                        marker: {
-                            symbol: 'triangle-down'
-                        },
-                        data: {!! json_encode($ph) !!}
-                    }]
+    },{
+            name: 'Conductivity (µS/cm)',
+            color: '#DE7A22',
+            visible: false,
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($conductivity) !!}
+        }, {
+            name: 'Conductivity Std',
+            visible: false,
+            color: '#BDB76B',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($cdvStd) !!}
+        },{
+            name: 'TDS',
+            visible: false,
+            color: '#F4CC70',
+            marker: {
+                symbol: 'triangle'
+            },
+            data: {!!json_encode($tds) !!}
+        },  {
+            name: 'TDS Std',
+            visible: false,
+            color: '#4d7902',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tdsStandard) !!}
+        }, {
+            name: 'TSS',
+            visible: false,
+            color: '#20948B',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tss) !!}
+        },{
+            name: 'TSS Std',
+            visible: false,
+            color: '#ffce30',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tssStandard) !!}
+        }, {
+            name: 'DO',
+            visible: false,
+            color: '#288ba8',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($do) !!}
+        }, {
+            name: 'DO Std',
+            visible: false,
+            color: '#e389b9',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($doStandard) !!}
+        }, {
+            name: 'PH',
+            visible: false,
+            color: '#6AB187',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($ph) !!}
+        }, {
+            name: 'PH Min',
+            visible: true,
+            color: '#32CD32',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMin) !!}
+        }, {
+            name: 'PH Max',
+            visible: false,
+            color: '#FF00FF',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMax) !!}
+        }]
         });
+
+
 </script>
 
 @endsection

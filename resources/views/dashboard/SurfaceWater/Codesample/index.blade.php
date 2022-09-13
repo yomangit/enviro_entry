@@ -69,14 +69,14 @@
                 </div>
                 <div class="card-body table-responsive">
                     <section class="content mt-2">
-                    
+
                         <table role="grid" id="example2" class="table table-bordered table-hover ">
                             <thead style=" color:#005245">
                                 <tr class="text-center" style="font-size: 12px">
                                     <th>No</th>
-                                    <th>Action</th>
                                     <th>Name</th>
                                     <th>Lokasi</th>
+                                    <th>Action</th>
 
                                 </tr>
                             </thead>
@@ -87,6 +87,10 @@
                                 @foreach ($Codes as $code)
                                 <tr style="font-size: 12px">
                                     <td>{{ $no++ }}</td>
+
+
+                                    <td>{{ $code->nama }}</td>
+                                    <td>{{ $code->lokasi }}</td>
                                     <td>
 
                                         {{-- <a href="/surfacewater/qualityperiode/codesample/{{ $code->failed_at }}"
@@ -108,10 +112,6 @@
 
 
                                     </td>
-
-                                    <td>{{ $code->nama }}</td>
-                                    <td>{{ $code->lokasi }}</td>
-
                                 </tr>
                                 @endforeach
 
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                 </div>
-              
+
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog">
                         <div class="modal-content">

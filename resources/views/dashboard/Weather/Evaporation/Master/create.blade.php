@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
             <div class="card card-primary card-outline">
-                <div class="card-header p-0 pt-1">
+                <div class="card-header p-0 ">
 
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
@@ -31,12 +31,13 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <div class="card-title p-2 font-weight-bold">Form Input</div>
+                    <div class="card-title ml-1 font-weight-bold">Form Input</div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                    <form action="/weather/evaporation" method="post" checked enctype="multipart/form-data" autocomplete="off">
-                        @csrf
+                <form action="/weather/evaporation" method="post" checked enctype="multipart/form-data" autocomplete="off">
+                    @csrf
+                    <div class="card-body">
+
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="form-group row">
@@ -54,7 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                           <div class="col-12 col-sm-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="form-group row">
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                     <div class="col-sm-7">
@@ -69,26 +70,19 @@
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group row">
-                                    <label style="font-size: 12px"
-                                        class="col-sm-4 col-form-label">Time Observation</label>
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Time Observation</label>
                                     <div class="col-sm-7">
-                                        <div class="input-group date" id="timepicker"
-                                            data-target-input="nearest">
-                                            <input name="time_observation" type="text"
-                                                value="{{ old('time_observation') }}"
-                                                class="form-control datetimepicker-input form-control-sm @error('time_observation') is-invalid @enderror"
-                                                data-target="#timepicker"
-                                                data-toggle="datetimepicker" />
+                                        <div class="input-group date" id="timepicker" data-target-input="nearest">
+                                            <input name="time_observation" type="text" value="{{ old('time_observation') }}" class="form-control datetimepicker-input form-control-sm @error('time_observation') is-invalid @enderror" data-target="#timepicker" data-toggle="datetimepicker" />
                                             @error('time_observation')
-                                                <span
-                                                    class=" invalid-feedback">{{ $message }}</span>
+                                            <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </div>
-                           <div class="col-12 col-sm-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="form-group">
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Day Rainfall</label>
@@ -101,7 +95,7 @@
                                     </div>
                                 </div>
                             </div>
-                           <div class="col-12 col-sm-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="form-group">
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Initial Water Elevation</label>
@@ -114,7 +108,7 @@
                                     </div>
                                 </div>
                             </div>
-                           <div class="col-12 col-sm-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="form-group">
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Final Water Elevation</label>
@@ -131,14 +125,14 @@
 
                         </div>
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
-                        </div>
-                    </form>
 
-                </div>
-                <!-- /.card-body -->
 
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
+                    </div>
+                </form>
             </div>
             <!-- /.card -->
 

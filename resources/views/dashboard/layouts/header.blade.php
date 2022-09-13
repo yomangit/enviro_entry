@@ -2,7 +2,7 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a  class="nav-link" id="auto" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            <a hidden class="nav-link" id="auto" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         
     </ul>
@@ -27,12 +27,9 @@
                     <li class="user-footer">
                         <form action="/logout" method="POST">
                             @csrf
-                            <a style="color: #143d59" href="/dashboard/master"
-                                class="btn btn-block btn-outline-success btn-xs">My Dashboard</a>
-                                <a style="color: #143d59" href="/"
-                                class="btn btn-block btn-outline-success btn-xs">Main Dashboard</a>
+                           
                             <button style="color: #143d59" type="submit"
-                                class="btn btn-block btn-outline-success btn-xs">Sign out</button>
+                                class="btn btn-block btn-outline-success btn-xs">Sign out<i class="fa-solid fa-right-from-bracket ml-5"></i></button>
                         </form>
 
                     </li>

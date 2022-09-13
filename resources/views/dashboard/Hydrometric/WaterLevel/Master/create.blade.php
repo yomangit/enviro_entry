@@ -22,11 +22,16 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-default d-flex justify-content-center">
-                <div class="card-header">
-                    <p class="card-title text-center">Form Input</p>
-
-
+            <div class="card card-primary card-outline">
+                <div class="card-header p-0 ">
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
+                        {{ session('success') }}
+                    </div>
+                    @endif
+                    <div class="card-titel m-2 font-weight-bold">Form Input</div>
                 </div>
                 <!-- /.card-header -->
                 <form action="/hydrometric/wlvp" method="post" checked enctype="multipart/form-data" autocomplete="off">
@@ -38,11 +43,31 @@
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
                                     <div class="col-sm-7">
                                         <select class="form-control form-control-sm " name="point_id">
+                                        <option class="text-muted" disabled selected>-- select --</option>
                                             @foreach ($code_units as $code)
                                             @if (old('point_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
                                             @else
                                             <option value="{{$code->id}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control form-control-sm " name="standard_id">
+                                        <option class="text-muted" disabled selected>-- select --</option>
+                                            @foreach ($QualityStandard as $standard)
+                                            @if (old('standard_id')==$standard->id)
+                                            <option value="{{$standard->id}}" selected>{{$standard->nama}}</option>
+                                            @else
+                                            <option value="{{$standard->id}}">{{$standard->nama}}</option>
                                             @endif
                                             @endforeach
                                         </select>

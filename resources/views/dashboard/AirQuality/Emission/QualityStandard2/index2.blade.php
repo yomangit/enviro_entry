@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/airquality/emission">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/emission2">Home</a></li>
                         <li class="breadcrumb-item active">{{ $tittle }}</a></li>
                     </ol>
                 </div>
@@ -118,7 +118,7 @@
                                             <th class="align-middle"> Chlorine (Cl2) </th>
                                             <th class="align-middle"> Hydrogen Chloride (HCl) </th>
                                             <th class="align-middle"> Hydrogen Fluoride (HF) </th>
-                                            <th class="align-middle"> Nitrogen Dioxide (NO2) </th>
+                                            <th class="align-middle"> Nitrogen Oxide (NOX) </th>
                                             <th class="align-middle"> Opacity </th>
                                             <th class="align-middle"> Total Particulate (isokinetic) </th>
                                             <th class="align-middle"> Sulfur Dioxide (SO2) </th>

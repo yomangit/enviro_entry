@@ -3,15 +3,18 @@
 namespace App\Exports;
 
 use App\Models\Mastergw;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
 
-class GroundWaterExport implements FromCollection
+class GroundWaterExport implements FromView
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function view(): View
     {
-        return Mastergw::all();
+        return view('dashboard.GroundWater.Mastergw.export', [
+            'Groundwater' => Mastergw::with('user')->filter(request(['fromDate', 'search']))->get()
+        ]);
     }
 }

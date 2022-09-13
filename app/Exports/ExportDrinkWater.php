@@ -3,15 +3,18 @@
 namespace App\Exports;
 
 use App\Models\DrinkWater;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
 
-class ExportDrinkWater implements FromCollection
+class ExportDrinkWater implements FromView
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function view(): View
     {
-        return DrinkWater::all();
+        return view('dashboard.SurfaceWater.DrinkWater.export',[
+            'Drink' => DrinkWater::with('user')->filter(request(['fromDate', 'search']))->get()
+        ]);
     }
 }

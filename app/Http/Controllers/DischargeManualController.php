@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;     
 use App\Models\DischargeManual;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ExportDischargeManual;
 use App\Imports\ImportDischargeManual;
 use App\Models\DischargeManualPointid;
-use App\Models\DischargeManualQualitystandard;
+use App\Models\Wastewaterstandard;
 
 class DischargeManualController extends Controller
 {
@@ -19,7 +19,15 @@ class DischargeManualController extends Controller
      */
     public function index()
     {
-        $grafiks = DischargeManual::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->get();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafiks = DischargeManual::with('user')
+            ->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
         $tanggal = [];
         $suhu = [];
         $conductivity = [];
@@ -30,6 +38,7 @@ class DischargeManualController extends Controller
         $ph = [];
         $do = [];
         $tssStandard = [];
+        $tdsStandard = [];
         $conductivityStandard = [];
         $phMin = [];
         $phMax = [];
@@ -40,33 +49,35 @@ class DischargeManualController extends Controller
             $lokasi[] = $grafik->PointId->lokasi;
             // $doStandard[]=$grafik->standard->do;
             $tanggal[] = date('d-M-Y', strtotime($grafik->date));
-            if (is_numeric($grafik->standard->ph_max)) {
-                $phMax[] = doubleval($grafik->standard->ph_max);
-            } else {
+            if (!is_numeric($grafik->ph)) {
                 $phMax[] = '';
-            }
-            if (is_numeric($grafik->standard->ph_min)) {
-                $phMin[] = doubleval($grafik->standard->ph_min);
-            } else {
                 $phMin[] = '';
-            }
+            } 
+            elseif (is_numeric($grafik->standard->ph_max) && $grafik->standard->ph_min) 
+            {
+                $phMax[] = doubleval($grafik->standard->ph_max);
+                $phMin[] = doubleval($grafik->standard->ph_min);
+            } 
             if (is_numeric($grafik->standard->conductivity)) {
                 $conductivityStandard[] = doubleval($grafik->standard->conductivity);
             } else {
                 $conductivityStandard[] = '';
             }
-            if ($grafik->standard->tss) {
-                $tssStandard[] = doubleval($grafik->standard->tss);
+            if ($grafik->standard->totalsuspendedsolids_tss) {
+                $tssStandard[] = doubleval($grafik->standard->totalsuspendedsolids_tss);
+            } else {
+                $tdsStandard[] = '';
+            }
+            if ($grafik->standard->totaldissolvedsolids_tds) {
+                $tdsStandard[] = doubleval($grafik->standard->totaldissolvedsolids_tds);
             } else {
                 $tssStandard[] = '';
             }
-            if (is_numeric($grafik->standard->do)) {
-                $doStandard[] = doubleval($grafik->standard->do);
+            if (is_numeric($grafik->standard->dissolvedoxygen_do)) {
+                $doStandard[] = doubleval($grafik->standard->dissolvedoxygen_do);
             } else {
                 $doStandard[] = '';
             }
-
-
             if (is_numeric($grafik->temperatur)) {
                 $suhu[] = doubleval($grafik->temperatur);
             } else {
@@ -106,7 +117,7 @@ class DischargeManualController extends Controller
 
         return view('dashboard.Hydrometric.DischargeManual.index',[
             'code_units' => DischargeManualPointid::all(),
-            'standard' => DischargeManualQualitystandard::all(),
+            'QualityStandard' => Wastewaterstandard::all(),
             'tittle'=>'Discharge Manual',
             'breadcrumb' => 'Discharge Manual',
             'date' => $tanggal,
@@ -118,10 +129,11 @@ class DischargeManualController extends Controller
             'do' =>$do,
             'doStandard'=>$doStandard,
             'tssStandard'=>$tssStandard,
+            'tdsStandard'=>$tdsStandard,
             'cdvStd'=>$conductivityStandard,
-            'phMin'=>$phMin,
-            'phMax'=>$phMax,
-            'Hydrometric' => DischargeManual::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
+            'phMin'=>'6',
+            'phMax'=>'9',
+            'Hydrometric' => DischargeManual::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
         ]);
     }
     public function ExportDischargeManual()
@@ -155,6 +167,7 @@ class DischargeManualController extends Controller
         }
         return view('dashboard.Hydrometric.DischargeManual.create',[
             'code_units' => DischargeManualPointid::all(),
+            'QualityStandard' => Wastewaterstandard::all(),
             'tittle'=>'Discharge Manual',
             'breadcrumb' => 'Discharge Manual',
             'Hydrometric' => DischargeManual::where('user_id', auth()->user()->id)
@@ -227,9 +240,13 @@ class DischargeManualController extends Controller
      */
     public function edit(DischargeManual $dischargemanual)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.Hydrometric.DischargeManual.edit',[
             'tittle'=>'Discharge Manual',
             'breadcrumb' => 'Discharge Manual',
+            'QualityStandard' => Wastewaterstandard::all(),
             'code_units' => DischargeManualPointid::all(),
             'Hydrometric' => $dischargemanual
         ]);

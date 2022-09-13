@@ -18,11 +18,20 @@ class EvaporationController extends Controller
      */
     public function index()
     {
+        $value=0;
+        $max_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->get()->max('evaporation');
+        $min_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->get()->min('evaporation');
+        $avg_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->get()->avg('evaporation');
+
+      
         return view('dashboard.Weather.Evaporation.Master.index', [
             "tittle" => "Evaporation",
             'breadcrumb' => 'Evaporation',
+            'max_evaporation'=>$max_evaporation,
+            'min_evaporation'=>$min_evaporation,
+            'avg_evaporation'=>$avg_evaporation,
             'code_units' => Evaporationpointid::all(),
-            'Evaporation' => Evaporation::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'Evaporation' => Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
         ]);
     }
 
@@ -33,6 +42,9 @@ class EvaporationController extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.Weather.Evaporation.Master.create', [
             "tittle" => "Evaporation",
             'breadcrumb' => 'Evaporation',
@@ -80,8 +92,18 @@ class EvaporationController extends Controller
             "final_water_elevation" => 'required',
 
         ]);
+            $value=request('initial_water_elevation')-request('final_water_elevation')+request('day_rainfall');
+        if ($value<0) {
+               $validatedData['evaporation'] = 0;
+        }
+        elseif ($value>0) {
+            $validatedData['evaporation'] = $value;
+        }
+
         $validatedData['user_id'] = auth()->user()->id;
+        // $validatedData['evaporation'] = request('initial_water_elevation')-request('final_water_elevation')+request('day_rainfall');
         $validatedData['date']=date('Y-m-d',strtotime(request('date')));
+        // dd($validatedData);
         Evaporation::create($validatedData);
         return redirect('/weather/evaporation/create')->with('success', 'New Point ID has been added!');
     }
@@ -106,6 +128,9 @@ class EvaporationController extends Controller
      */
     public function edit(Evaporation $evaporation)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.Weather.Evaporation.Master.edit', [
             "tittle" => "Evaporation",
             'breadcrumb' => 'Evaporation',

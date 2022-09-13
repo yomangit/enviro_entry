@@ -6,12 +6,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit {{ $breadcrumb }}</h1>
+                    <h1> {{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="dashboard/dustgauge/noisemeter/noise">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise/codesamplenm">{{$tittle}}</a></li>
+                        <li class="breadcrumb-item"><a href="/airquality/noisemeter/noise">Home</a></li>
                         <li class="breadcrumb-item active">Edit Data</li>
                     </ol>
                 </div>
@@ -22,8 +21,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-default">
-                <div class="card-header p-0 pt-1">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0 ">
 
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
@@ -32,6 +31,7 @@
                         {{ session('success') }}
                     </div>
                     @endif
+                    <div class="card-titel m-2 font-weight-bold">Form Edit</div>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -94,10 +94,10 @@
                             </div>
                         </div>
                         <div class="card-body table-responsive ">
-                            <table role="grid" class="table table-bordered table-hover table-sm ">
-                                <thead style=" color:#005245">
+                            <table class="table table-bordered  table-hover table-sm ">
+                                <thead class="table-info" >
                                     <tr>
-                                        <th>Time</th>
+                                        <th class="align-middle" rowspan="2" >Time</th>
                                         <th style="text-align: center" colspan="12">Noise Data every 5 Seconds</th>
                                     </tr>
                                     <tr>
@@ -391,14 +391,16 @@
 
                         </div>
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn bg-gradient-success btn-sm ">Save</button>
-                        </div>
-                    </form>
+                    
 
                 </div>
                 <!-- /.card-body -->
+                <div class="card-footer d-flex justify-content-end">
+                        <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
 
+                    </div>
+                </form>
+                    
             </div>
             <!-- /.card -->
 
@@ -410,114 +412,5 @@
     </section>
     <!-- /.content -->
 </div>
-@section('footer')
-<script>
-    $(function() {
-        //Initialize Select2 Elements
-        $('.select2').select2()
 
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
-        })
-
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', {
-            'placeholder': 'dd/mm/yyyy'
-        })
-        //Datemask2 mm/dd/yyyy
-        $('#datemask2').inputmask('mm/dd/yyyy', {
-            'placeholder': 'mm/dd/yyyy'
-        })
-        //Money Euro
-        $('[data-mask]').inputmask()
-
-        //Date picker
-        $('#reservationdate').datetimepicker({
-            format: 'YYYY-MM-DD'
-        });
-        //Timepicker
-        $('#timepicker').datetimepicker({
-            format: 'LT'
-        })
-        $('#timepicker2').datetimepicker({
-            format: 'LT'
-        })
-
-    })
-    // BS-Stepper Init
-    document.addEventListener('DOMContentLoaded', function() {
-        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-    })
-
-    // DropzoneJS Demo Code Start
-    Dropzone.autoDiscover = false
-
-    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-    var previewNode = document.querySelector("#template")
-    previewNode.id = ""
-    var previewTemplate = previewNode.parentNode.innerHTML
-    previewNode.parentNode.removeChild(previewNode)
-
-    var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-        url: "/target-url", // Set the url
-        thumbnailWidth: 80
-        , thumbnailHeight: 80
-        , parallelUploads: 20
-        , previewTemplate: previewTemplate
-        , autoQueue: false, // Make sure the files aren't queued until manually added
-        previewsContainer: "#previews", // Define the container to display the previews
-        clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-    })
-
-    myDropzone.on("addedfile", function(file) {
-        // Hookup the start button
-        file.previewElement.querySelector(".start").onclick = function() {
-            myDropzone.enqueueFile(file)
-        }
-    })
-
-    // Update the total progress bar
-    myDropzone.on("totaluploadprogress", function(progress) {
-        document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
-    })
-
-    myDropzone.on("sending", function(file) {
-        // Show the total progress bar when upload starts
-        document.querySelector("#total-progress").style.opacity = "1"
-        // And disable the start button
-        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
-    })
-
-    // Hide the total progress bar when nothing's uploading anymore
-    myDropzone.on("queuecomplete", function(progress) {
-        document.querySelector("#total-progress").style.opacity = "0"
-    })
-
-    // Setup the buttons for all transfers
-    // The "add files" button doesn't need to be setup because the config
-    // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function() {
-        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
-    }
-    document.querySelector("#actions .cancel").onclick = function() {
-        myDropzone.removeAllFiles(true)
-    }
-
-</script>
-@endsection
-<script>
-    function previewImage() {
-        const image = document.querySelector('#hard_copy');
-        const imgPreview = document.querySelector('.img-preview');
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-        oFReader.readAsDataURL(image.files[0]);
-        oFReader.onload = function(oFREvent) {
-            imgPreview.src = oFREvent.target.result;
-        }
-    }
-
-</script>
 @endsection

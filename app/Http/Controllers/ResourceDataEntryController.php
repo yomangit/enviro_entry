@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Dataentry;
 use App\Models\Codesample;
-use Illuminate\Http\Request;
-use App\Imports\DataImport;
 use App\Exports\DataExport;
+use App\Imports\DataImport;
+use Illuminate\Http\Request;
+use App\Models\Wastewaterstandard;
 use App\Http\Controllers\Controller;
-use Maatwebsite\Excel\Facades\Excel;
 
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 
 class ResourceDataEntryController extends Controller
@@ -21,8 +22,14 @@ class ResourceDataEntryController extends Controller
      */
     public function index()
     {
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if (empty($firstDayofPreviousMonth)) {
+            $table = 30;
+        } else
+            $table = ($lastDayofPreviousMonth - $firstDayofPreviousMonth) / 86400;
         $grafiks = Dataentry::with('user')
-            ->filter(request(['fromDate', 'search']))->get();
+            ->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
         $tanggal = [];
         $suhu = [];
         $conductivity = [];
@@ -31,17 +38,28 @@ class ResourceDataEntryController extends Controller
         $lokasi = [];
         $tss = [];
         $ph = [];
+        $do = [];
+        $tssStandard = [];
+        $tdsStandard = [];
+        $conductivityStandard = [];
+        $phMin = [];
+        $phMax = [];
+        $doStandard = [];
 
         foreach ($grafiks as $grafik) {
-            $nama[] = $grafik->CodeSample->nama;
-            $lokasi[] = $grafik->CodeSample->lokasi;
-            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            $nama[] = $grafik->PointId->nama;
+            $lokasi[] = $grafik->PointId->lokasi;
+            // $doStandard[]=$grafik->standard->do;
+            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
+
             if (is_numeric($grafik->temperatur)) {
                 $suhu[] = doubleval($grafik->temperatur);
             } else {
 
                 $suhu[] = '';
             }
+
+
             if (is_numeric($grafik->conductivity)) {
                 $conductivity[] =  doubleval($grafik->conductivity);
             } else {
@@ -65,12 +83,59 @@ class ResourceDataEntryController extends Controller
             } else {
                 $ph[] = '';
             }
+            if (is_numeric($grafik->do)) {
+                $do[] =  doubleval($grafik->do); # code...
 
-            // $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            } else {
+                $do[] = '';
+            }
+
+
+
+
+            if (!is_numeric($grafik->ph)) {
+                $phMax[] = '';
+                $phMin[] = '';
+            } 
+            elseif (is_numeric($grafik->standard->ph_max) && $grafik->standard->ph_min) 
+            {
+                $phMax[] = doubleval($grafik->standard->ph_max);
+                $phMin[] = doubleval($grafik->standard->ph_min);
+            } 
+
+
+            if (!is_numeric($grafik->conductivity)) {
+                $conductivityStandard[] = '';
+            } elseif (is_numeric($grafik->standard->conductivity)) {
+                $conductivityStandard[] = doubleval($grafik->standard->conductivity);
+            } else {
+                $conductivityStandard[] = '';
+            }
+            if (!is_numeric($grafik->tss)) {
+                $tssStandard[] = '';
+            } elseif ($grafik->standard->totalsuspendedsolids_tss) {
+                $tssStandard[] = doubleval($grafik->standard->totalsuspendedsolids_tss);
+            } else {
+                $tssStandard[] = '';
+            }
+            if (!is_numeric($grafik->tds)) {
+
+                $tdsStandard[] = '';
+            } elseif ($grafik->standard->totaldissolvedsolids_tds) {
+                $tdsStandard[] = doubleval($grafik->standard->totaldissolvedsolids_tds);
+            } else {
+                $tdsStandard[] = '';
+            }
+            if (is_numeric($grafik->standard->dissolvedoxygen_do)) {
+                $doStandard[] = doubleval($grafik->standard->dissolvedoxygen_do);
+            } else {
+                $doStandard[] = '';
+            }
         }
 
         return view('dashboard.SurfaceWater.Master.index', [
             'code_units' => Codesample::all(),
+            'QualityStandard' => Wastewaterstandard::all(),
             'tittle' => 'Surface Water',
             'breadcrumb' => 'Surface Water',
             'date' => $tanggal,
@@ -79,7 +144,14 @@ class ResourceDataEntryController extends Controller
             'tds' => $tds,
             'tss' => $tss,
             'ph' => $ph,
-            'Input' => Dataentry::where('user_id',auth()->user()->id)
+            'do' => $do,
+            'doStandard' => $doStandard,
+            'tssStandard' => $tssStandard,
+            'tdsStandard' => $tdsStandard,
+            'cdvStd' => $conductivityStandard,
+            'phMin' => $phMin,
+            'phMax' => $phMax,
+            'Input' => Dataentry::with('user')->orderBy('date', 'desc')
                 ->filter(request(['fromDate', 'search']))
                 ->paginate(30)
                 ->withQueryString(), //with diguanakan untuk mengatasi N+1 problem
@@ -98,6 +170,7 @@ class ResourceDataEntryController extends Controller
         }
         return view('dashboard.SurfaceWater.Master.create', [
             'code_units' => Codesample::all(),
+            'QualityStandard' => Wastewaterstandard::all(),
             'tittle' => 'Surface Water',
             'breadcrumb' => 'Surface Water',
             'Input' => Dataentry::where('user_id', auth()->user()->id)
@@ -115,14 +188,13 @@ class ResourceDataEntryController extends Controller
         $file = $request->file('file');
         $nameFile = $file->getClientOriginalName();
         $file->move('EnviroDatabase', $nameFile);
-        try{
+        try {
             Excel::import(new DataImport(), public_path('/EnviroDatabase/' . $nameFile));
             return redirect('/surfacewater/qualityperiode')->with('success', 'New Data Entry has been Imported!');
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $e->failures();
-             return back()->withFailures($e->failures());
-         }
-       
+            return back()->withFailures($e->failures());
+        }
     }
 
     /**
@@ -139,6 +211,7 @@ class ResourceDataEntryController extends Controller
             'cyanide' => 'required',
             'level' => 'required',
             'codesample_id' => 'required',
+            'standard_id' => 'required',
             'lvl_lgr' => 'required',
             'tl_wall' => 'required',
             'tl_tsf' => 'required',
@@ -168,7 +241,6 @@ class ResourceDataEntryController extends Controller
         }
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['standard_id'] = '1';
         Dataentry::create($validatedData);
         return redirect('/surfacewater/qualityperiode')->with('success', 'New Data Entry has been added!');
     }
@@ -201,6 +273,7 @@ class ResourceDataEntryController extends Controller
         }
         return view('dashboard.SurfaceWater.Master.edit', [
             'code_units' => Codesample::all(),
+            'QualityStandard' => Wastewaterstandard::all(),
             'tittle' => 'Surface Water',
             'breadcrumb' => 'Surface Water',
             'Input' => $qualityperiode,
@@ -218,6 +291,7 @@ class ResourceDataEntryController extends Controller
     {
         $rules = [
             'codesample_id' => 'required',
+            'standard_id' => 'required',
             'stop_time' => 'required|max:255',
             'start_time' => 'required|max:255',
             'level' => 'required',
@@ -256,7 +330,6 @@ class ResourceDataEntryController extends Controller
         }
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['standard_id'] = '1';
         Dataentry::where('id', $qualityperiode->id)->update($validatedData);
         return redirect('/surfacewater/qualityperiode')->with('success', ' Data Entry has been updated!');
     }
@@ -269,7 +342,7 @@ class ResourceDataEntryController extends Controller
      */
     public function destroy(Dataentry $qualityperiode)
     {
-      
+
         Dataentry::destroy($qualityperiode->id);
         return redirect('/surfacewater/qualityperiode')->with('success', ' Data Entry has been deleted!');
     }

@@ -21,8 +21,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-primary card-outline">
-                <div class="card-header p-0 pt-1">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0 ">
 
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
@@ -31,13 +31,14 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <div class="card-title p-2 font-weight-bold">Form Edit</div>
+                    <div class="card-title p-1 font-weight-bold">Form Edit</div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                    <form action="/weather/evaporation/{{ $Evaporation->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                <form action="/weather/evaporation/{{ $Evaporation->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @method('put')
                         @csrf
+                <div class="card-body">
+                   
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="form-group row">
@@ -132,12 +133,13 @@
 
                         </div>
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
+                      
+
+                </div>
+                <div class="card-footer d-flex justify-content-end">
                             <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
                         </div>
                     </form>
-
-                </div>
                 <!-- /.card-body -->
 
             </div>

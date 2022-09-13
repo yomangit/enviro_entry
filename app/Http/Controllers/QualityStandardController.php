@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\QualityStandard;
+use App\Exports\ExportWL;
+use App\Imports\ImportWL;
 use Illuminate\Http\Request;
+use App\Models\QualityStandard;
+use Maatwebsite\Excel\Facades\Excel;
 
 class QualityStandardController extends Controller
 {
@@ -21,7 +24,26 @@ class QualityStandardController extends Controller
 
         ]);
     }
+    public function ExportWL()
+    {
 
+        return Excel::download(new ExportWL, 'Water Level Quality Standard.csv');
+    }
+    public function ImportWL(Request $request)
+    {
+
+        $file = $request->file('file');
+        $nameFile = $file->getClientOriginalName();
+        $file->move('EnviroDatabase', $nameFile);
+        $import = new ImportWL;
+        try {
+            Excel::import($import, public_path('/EnviroDatabase/' . $nameFile));
+            return redirect('/hydrometric/dischargemanual/standard')->with('success', 'Data has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+            return back()->withFailures($e->failures());
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *

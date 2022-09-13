@@ -28,6 +28,7 @@ class ImportEvaporation implements ToModel,WithValidation, WithHeadingRow
             "day_rainfall" => $row["day_rainfall"],
             "initial_water_elevation" => $row["initial_water_elevation"],
             "final_water_elevation" => $row["final_water_elevation"],
+            "evaporation" => $row["evaporation"],
 
         ]);
     }
@@ -41,6 +42,7 @@ class ImportEvaporation implements ToModel,WithValidation, WithHeadingRow
             "day_rainfall" => 'required',
             "initial_water_elevation" => 'required',
             "final_water_elevation" => 'required',
+            "evaporation" => 'required',
         ];
     }
 }

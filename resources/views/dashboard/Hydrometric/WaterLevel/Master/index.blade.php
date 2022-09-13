@@ -19,14 +19,14 @@
                 <div class="card-header p-0">
 
                     @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible form-inline">
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                         {{ session('success') }}
                     </div>
                     @endif
                     @if (session()->has('failures'))
-                    <div class="alert alert-danger alert-dismissible form-inline">
+                    <div class="alert alert-danger alert-dismissible form-inline m-2">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-ban"></i>Fail</h5>
                         @foreach (session()->get('failures') as $validation)
@@ -43,27 +43,13 @@
 
                     </div>
                     @endif
-                    @can('admin')
-                    <a href="/hydrometric/wlvp/point/" class="btn bg-gradient-info btn-xs ml-2 my-1">Point ID</a>
-                    <a href="/hydrometric/wlvp/qualitystandard/" class="btn bg-gradient-info btn-xs  my-1">Quality
+                   @can('admin')
+                   <a href="/hydrometric/wlvp/point/" class="btn bg-gradient-info btn-xs ml-2 my-1">Point ID</a>
+                    <a href="/wastewater/wastewaterstandard" class="btn bg-gradient-info btn-xs  my-1">Quality
                         Standard </a>
-                    @endcan
-                </div>
-                <div class="card-body table-responsive">
-                    <section class="content ">
-
-                        @if($code_units->count())
-
-                        <div class="row mb-2 p-0">
-                            <div class="col-6 col-md-4 form-inline">
-                                <a href="/hydrometric/wlvp/create" class="btn bg-gradient-secondary btn-xs  form-inline   ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
-                                <a href="/export/hydrometric" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                                <a href="#" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
-                                    <i class="fas fa-upload mr-1"></i>Excel
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-8 ">
-                                <div class=" card-tools p-1 mr-2 d-flex justify-content-end form-inline">
+                   @endcan
+                  
+                        <div class=" card-tools p-1 mr-2 form-inline">
                                     <form action="/hydrometric/wlvp" class="form-inline" autocomplete="off">
                                         <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                             <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -74,7 +60,7 @@
                                             <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                         </div>
 
-                                        <div class="input-group mr-1" style="width: 90px;">
+                                        <div class="input-group mr-1" style="width: 100px;">
                                             <select class="form-control form-control-sm " name="search">
                                                 <option value="" selected disabled>Point ID</option>
                                                 @foreach ($code_units as $code)
@@ -96,8 +82,23 @@
                                         <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                     </form>
                                 </div>
+                </div>
+                <div class="card-body table-responsive">
+                    <section class="content ">
+
+                        @if($code_units->count())
+                            @can('admin')
+                        <div class="row mb-2 p-0">
+                            <div class="col-6 col-md-4 form-inline">
+                                <a href="/hydrometric/wlvp/create" class="btn bg-gradient-secondary btn-xs  form-inline   ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
+                                <a href="/export/hydrometric" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                <a href="#" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                                    <i class="fas fa-upload mr-1"></i>Excel
+                                </a>
                             </div>
+                           
                         </div>
+                        @endcan
                         @else
                         <div class="alert alert-info alert-dismissible form-inline">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -108,7 +109,7 @@
 
 
                         <!-- /.card-header -->
-                        @if ($Hydrometric->count() && $standard->count())
+                     
                         <table role="grid" id="example2" class="table table-bordered table-sm  table-striped">
                             <thead style=" color:#005245">
                                 <tr class="text-center" style="font-size: 11px">
@@ -124,8 +125,7 @@
                                     <th>Stop Time</th>
                                     <th>TSS Standard</th>
                                     <th>TSS (mg/L)</th>
-                                    <th>PH Standard Max.</th>
-                                    <th>PH Standard Min.</th>
+                                    <th>PH Standard Min-Max</th>
                                     <th>PH</th>
                                     <th>DO Standard</th>
                                     <th>DO</th>
@@ -198,21 +198,20 @@
                                     @else
                                     <td>{{$data->stop_time}}</td>
                                     @endif
-                                    <td>{{ $data->standard->tss }}</td>
+                                    <td>{{ $data->standard->totalsuspendedsolids_tss }}</td>
 
                                     @If($data->tss==='no data')
                                     <td style="color: red;">No Data</td>
                                     @else
                                     <td>{{$data->tss}}</td>
                                     @endif
-                                    <td>{{ $data->standard->ph_max }}</td>
-                                    <td>{{ $data->standard->ph_min }}</td>
+                                    <td>{{ $data->standard->ph_min }}-{{$data->standard->ph_max}}</td>
                                     @If($data->ph==='no data')
                                     <td style="color: red;">No Data</td>
                                     @else
                                     <td>{{$data->ph}}</td>
                                     @endif
-                                    <td>{{ $data->standard->do }}</td>
+                                    <td>{{ $data->standard->dissolvedoxygen_do }}</td>
                                     @If($data->do==='no data')
                                     <td style="color: red;">No Data</td>
                                     @else
@@ -230,13 +229,13 @@
                                     @else
                                     <td>{{$data->conductivity}}</td>
                                     @endif
-                                    <td>{{ $data->standard->tds }}</td>
+                                    <td>{{ $data->standard->totaldissolvedsolids_tds }}</td>
                                     @If($data->tds==='no data')
                                     <td style="color: red;">No Data</td>
                                     @else
                                     <td>{{$data->tds}}</td>
                                     @endif
-                                    <td>{{ $data->standard->temperatur }}</td>
+                                    <td>{{ $data->standard->temperature }}</td>
                                     @If($data->temperatur==='no data')
                                     <td style="color: red;">No Data</td>
                                     @else
@@ -310,31 +309,29 @@
 
                 </div>
                 <div class="card-footer p-0">
-
-                    <div class="card-tools row form-inline px-1">
+                    <div class="card-tools mt-2 form-inline">
                         <div class="col-4">
                             <div class="d-flex justify-content-start">
-                                <small>Showing {{ $Hydrometric->firstItem() }} to
-                                    {{ $Hydrometric->lastItem() }} of {{ $Hydrometric->total() }}
-                                </small>
+                                <p>Showing {{ $Hydrometric->firstItem() }} to {{$Hydrometric->lastItem() }} of {{ $Hydrometric->total() }}</p>
                             </div>
                         </div>
-                        <div class="col-8 mt-3 ">
-                            <div style="font-size: 8" class="d-flex justify-content-end pagination pagination-sm">
+                        <div class="col-8 d-flex justify-content-end">
+                            <div class=" pagination pagination-sm">
                                 {{ $Hydrometric->links() }}
                             </div>
                         </div>
                     </div>
                 </div>
+                   
+               
             </div>
+            @if( $Hydrometric->count())
            <div class="card">
             <div class="card-header">
                 <div class="card-title text center">Water Level & Volume Pond </div>
             </div>
             <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
            </div>
-            @else
-            <p class="text-center fs-4">Not Data Found</p>
             @endif
             <div class="modal fade" id="modal-default">
                 <div class="modal-dialog">
@@ -425,6 +422,15 @@
                 symbol: 'diamond'
             },
             data: {!!json_encode($conductivity) !!}
+        }, {
+            name: 'Conductivity Std',
+            visible: false,
+            color: '#BDB76B',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($cdvStd) !!}
         },{
             name: 'TDS',
             visible: false,
@@ -433,6 +439,15 @@
                 symbol: 'triangle'
             },
             data: {!!json_encode($tds) !!}
+        },  {
+            name: 'TDS Std',
+            visible: false,
+            color: '#4d7902',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tdsStandard) !!}
         }, {
             name: 'TSS',
             visible: false,
@@ -441,14 +456,15 @@
                 symbol: 'circle'
             },
             data: {!!json_encode($tss) !!}
-        }, {
-            name: 'PH',
-
-            color: '#6AB187',
+        },{
+            name: 'TSS Std',
+            visible: false,
+            color: '#ffce30',
+            dashStyle: 'longdash',
             marker: {
-                symbol: 'triangle-down'
+                symbol: 'circle'
             },
-            data: {!!json_encode($ph) !!}
+            data: {!!json_encode($tssStandard) !!}
         }, {
             name: 'DO',
 
@@ -467,23 +483,13 @@
             },
             data: {!!json_encode($doStandard) !!}
         }, {
-            name: 'TSS Std',
-            visible: false,
-            color: '#ffce30',
-            dashStyle: 'longdash',
+            name: 'PH',
+
+            color: '#6AB187',
             marker: {
-                symbol: 'circle'
+                symbol: 'triangle-down'
             },
-            data: {!!json_encode($tssStandard) !!}
-        }, {
-            name: 'Conductivity Std',
-            visible: false,
-            color: '#BDB76B',
-            dashStyle: 'longdash',
-            marker: {
-                symbol: 'diamond'
-            },
-            data: {!!json_encode($cdvStd) !!}
+            data: {!!json_encode($ph) !!}
         }, {
             name: 'PH Min',
             visible: false,

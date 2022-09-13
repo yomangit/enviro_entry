@@ -19,10 +19,10 @@ class LoginController extends Controller
  
         if (Auth::attempt($credentials)) {
            $credentials= $request->session()->regenerate();//regenerete di lakukan untuk menghindari sebuah teknik hacking session
-           if (auth()->user()->is_admin) {
-            return redirect()->intended('/dashboard/master');
-        }
+         
             return redirect()->intended('/');
+      
+            // return redirect()->intended('/');
         }
  
         return back()->with('loginError','login failed');

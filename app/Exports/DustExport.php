@@ -3,15 +3,18 @@
 namespace App\Exports;
 
 use App\Models\Dust;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
 
-class DustExport implements FromCollection
+class DustExport implements FromView
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function view(): View
     {
-        return Dust::all();
+        return view('dashboard.DustGauge.DustMaster.export',[
+            'Dust' => Dust::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->get()
+        ]);
     }
 }

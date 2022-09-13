@@ -16,17 +16,24 @@ class ResumeTahunanNoiseController extends Controller
      */
     public function index()
     {
-        $avg_l1= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l1');
-        $avg_l2= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l2');
-        $avg_l3= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l3');
-        $avg_l4= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l4');
-        $avg_l5= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l5');
-        $avg_l6= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l6');
-        $avg_l7= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('l7');
-        $avg_ls= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('ls');
-        $avg_lm= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('lm');
-        $avg_lsm= ResumeBulananNoise::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString()->avg('lsm');
-        $Resume=ResumeTahunan::where('user_id', auth()->user()->id)->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $avg_l1= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l1');
+        $avg_l2= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l2');
+        $avg_l3= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l3');
+        $avg_l4= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l4');
+        $avg_l5= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l5');
+        $avg_l6= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l6');
+        $avg_l7= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l7');
+        $avg_ls= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('ls');
+        $avg_lm= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('lm');
+        $avg_lsm= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('lsm');
+        $Resume=ResumeTahunan::with('user')->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString();
         $l1=[];
         $l2=[];
         $l3=[];
@@ -86,7 +93,7 @@ class ResumeTahunanNoiseController extends Controller
             'code_location'=>Lokasi::all(),
             'pemukiman'=>$std_pemukiman,
             'industri'=>$std_industri,
-            'ResumeTahunan' => ResumeTahunan::where('user_id', auth()->user()->id)->filter(request(['fromDate','search','location']))->paginate(12)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'ResumeTahunan' => ResumeTahunan::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
        
     }
@@ -125,7 +132,7 @@ class ResumeTahunanNoiseController extends Controller
         $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         $validatedData['user_id']=auth()->user()->id;
         ResumeTahunan::create($validatedData);
-        return redirect('/dashboard/dustgauge/resumetahunan')->with('success','New data has been added!');
+        return redirect('/airquality/noisemeter/resumetahunan')->with('success','New data has been added!');
     }
 
     /**
@@ -171,6 +178,6 @@ class ResumeTahunanNoiseController extends Controller
     public function destroy(ResumeTahunan $resumetahunan)
     {
         ResumeTahunan::destroy($resumetahunan->id);
-        return redirect('/dashboard/dustgauge/resumetahunan')->with('success','Noise Monthly Resume has been deleted!');
+        return redirect('/airquality/noisemeter/resumetahunan')->with('success','Noise Monthly Resume has been deleted!');
     }
 }

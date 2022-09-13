@@ -18,37 +18,35 @@ class DustController extends Controller
      */
     public function index()
     {
-        $grafik = Dust::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(30)->withQueryString();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafik = Dust::with('user')->filter(request(['fromDate','search']))->paginate($table)->withQueryString();
         $date=[];
         $insoluble1=[];$soluble1=[];
         $insoluble=[];$soluble=[];$total=[];
         $i=0;$s=0;
         foreach ($grafik as $grafiks) {
            
-            $date[]= date('m-Y', strtotime($grafiks->date_out));
-            if ($grafiks->m4 ==='-' && $grafiks->m3 ==='-') {
+            $date[]= date('M-Y', strtotime($grafiks->date_out));
+            if (!is_numeric($grafiks->m4) && !is_numeric($grafiks->m3)) {
                $total[] = $insoluble1[]='';
             }
-            elseif ($grafiks->m6 ==='-' && $grafiks->m5 ==='-') {
+            elseif (!is_numeric($grafiks->m6) && !is_numeric($grafiks->m5)) {
                 $soluble1[]='';
             $total[]= $insoluble1[]=$insoluble[]= (round((doubleval($grafiks->m4) - doubleval($grafiks->m3))*1000000*4*30/(3.14*150*150*((strtotime($grafiks->date_out) - strtotime($grafiks->date_in))/86400)),2));
 
             }
-            elseif ($grafiks->m4 !='-' && $grafiks->m3 !='-' && $grafiks->m6 !='-' && $grafiks->m5 !='-') {
+            elseif (is_numeric($grafiks->m4) &&  is_numeric($grafiks->m3) &&  is_numeric($grafiks->m6) && is_numeric($grafiks->m5)) {
            $i=round((doubleval($grafiks->m4) - doubleval($grafiks->m3))/(3.14*0.005625*((strtotime($grafiks->date_out) - strtotime($grafiks->date_in))/86400)),2);
            $s=round(((doubleval($grafiks->m6) - doubleval($grafiks->m5))* doubleval($grafiks->total_vlm_water) )/(3.14*0.005625*((strtotime($grafiks->date_out) - strtotime($grafiks->date_in))/86400)*$grafiks->volume_filtrat),2);   
             $total[] = round(($i + $s),2);
             }
           
-            
-          
-            
-           
-           
-
-           
-
-            
         }
         
         return view('dashboard.DustGauge.DustMaster.index',[
@@ -57,7 +55,8 @@ class DustController extends Controller
             'breadcrumb'=>'Dust Gauge',
             'tanggal'=>$date,
             'value'=>$total,
-            'Dust'=>Dust::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(30)->withQueryString()]);
+            'Dust'=>Dust::with('user')->orderBy('date_out','desc')->filter(request(['fromDate','search']))->paginate(30)->withQueryString()
+        ]);
     }
     public function ExportDust()
     {

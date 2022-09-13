@@ -19,16 +19,17 @@
     </section>
     <section class="content">
         <div class="container-fluid">
-            <div class="card card-primary card-outline">
-                <div class="card-header">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0">
 
-                    <div class="cart-title font-weight-bold">Form Edit</div>
+                    <div class="cart-title font-weight-bold m-2">Form Edit</div>
                 </div>
-                <div class="card-body">
+                <form action="/airquality/emission/{{ $Emission->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                    @method('put')
+                    @csrf
+                    <div class="card-body">
 
-                    <form action="/airquality/emission/{{ $Emission->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
-                        @method('put')
-                        @csrf
+
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="form-group row">
@@ -52,7 +53,7 @@
                                 <div class="form-group row">
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                     <div class="col-sm-4">
-                                      
+
                                         <div class="input-group date" id="reservationdate4" data-target-input="nearest">
                                             <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date',date('d-m-Y',strtotime($Emission->date))) }}" />
                                             @error('date')
@@ -440,12 +441,13 @@
 
 
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
-                            <button style="width: 110px" type="submit" class="btn bg-gradient-success btn-sm">Save</button>
-                        </div>
-                    </form>
 
-                </div>
+
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

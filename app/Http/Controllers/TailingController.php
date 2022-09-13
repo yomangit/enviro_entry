@@ -21,10 +21,10 @@ class TailingController extends Controller
     {
         return view('dashboard.Tailing.index',[
             'tittle'=>'Tailing',
-            'breadcrumb'=>'Quality Standard',
+            'breadcrumb'=>'Tailing',
             'code_units'=>TailingCodeId::all(),
-            'QualityStd' => TailingQualityStandard::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString(),
-            'Tailing'=>Tailing::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'QualityStd' => TailingQualityStandard::all(),
+            'Tailing'=>Tailing::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
         ]);
     }
     public function ExportTailing()
@@ -55,9 +55,12 @@ class TailingController extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.Tailing.create',[
             'tittle'=>'Tailing',
-            'breadcrumb'=>'Quality Standard',
+            'breadcrumb'=>'Tailing',
             'code_units'=>TailingCodeId::all(),
             'QualityStd' => TailingQualityStandard::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString(),
             'Tailing'=>Tailing::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
@@ -163,6 +166,7 @@ class TailingController extends Controller
             'xylenes_total' => 'required',
             'ddt_ddd_dde' => 'required',
             'dichlorophenoxyacetic' => 'required',
+            'tom' => 'required',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -190,9 +194,12 @@ class TailingController extends Controller
      */
     public function edit(Tailing $tailing)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.Tailing.edit',[
             'tittle'=>'Tailing',
-            'breadcrumb'=>'Quality Standard',
+            'breadcrumb'=>'Tailing',
             'code_units'=>TailingCodeId::all(),
             'Tailing'=>$tailing
         ]);
@@ -298,6 +305,7 @@ class TailingController extends Controller
             'xylenes_total' => 'required',
             'ddt_ddd_dde' => 'required',
             'dichlorophenoxyacetic' => 'required',
+            'tom' => 'required',
         ];
         $validatedData = $request->validate($rules);
         $validatedData['user_id'] = auth()->user()->id;

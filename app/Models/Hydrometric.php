@@ -24,7 +24,7 @@ class Hydrometric extends Model
     }
     public function standard()
     {
-        return $this->belongsTo(QualityStandard::class, 'standard_id');
+        return $this->belongsTo(Wastewaterstandard::class, 'standard_id');
     }
     public function user()
     {

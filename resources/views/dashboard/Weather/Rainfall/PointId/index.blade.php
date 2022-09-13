@@ -22,7 +22,7 @@
         <div class="container-fluid">
             
                 <div class="card card-primary card-outline">
-                    <div class="card-header p-0 p-2">
+                    <div class="card-header p-0 ">
 
                         @if (session()->has('success'))
                         <div class="alert alert-success alert-dismissible form-inline">
@@ -63,9 +63,9 @@
                             </form>
 
                         </div>
-                        <a href="/weather/rainfall/rainfallpointid/create" class="btn bg-gradient-secondary btn-xs  ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
-                        <a href="/export/rainfallpointid" class="btn  bg-gradient-secondary btn-xs  ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                        <a href="#" class="btn  bg-gradient-secondary btn-xs  ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                        <a href="/weather/rainfall/rainfallpointid/create" class="btn bg-gradient-secondary btn-xs my-1 ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
+                        <a href="/export/rainfallpointid" class="btn  bg-gradient-secondary btn-xs  my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                        <a href="#" class="btn  bg-gradient-secondary btn-xs  my-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                             <i class="fas fa-upload mr-1"></i>Excel
                         </a>
                     </div>
@@ -76,10 +76,9 @@
                                 <thead style=" color:#005245">
                                     <tr class="text-center" style="font-size: 12px">
                                         <th>No</th>
-                                        <th>Action</th>
                                         <th>Name</th>
                                         <th>Lokasi</th>
-
+                                        <th>Action</th>
 
                                     </tr>
                                 </thead>
@@ -90,8 +89,10 @@
                                     @foreach ($Codes as $code)
                                     <tr style="font-size: 12px">
                                         <td>{{ $no++ }}</td>
+                                        <td>{{ $code->nama }}</td>
+                                        <td>{{ $code->lokasi }}</td>
                                         <td>
-                                            <div style="">
+                                        
                                                 <a href="/weather/rainfall/rainfallpointid/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fas fa-pen"></i>
                                                 </a>
@@ -103,11 +104,8 @@
                                                     </button>
                                                 </form>
 
-                                            </div>
+                                           
                                         </td>
-
-                                        <td>{{ $code->nama }}</td>
-                                        <td>{{ $code->lokasi }}</td>
 
                                     </tr>
                                     @endforeach

@@ -66,7 +66,7 @@ class TailingStandardController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'user_id' => 'required',
+            
             'nama' => 'required',
             'antimony' => 'required',
             'arsenic' => 'required',
@@ -156,10 +156,11 @@ class TailingStandardController extends Controller
             'xylenes_total' => 'required',
             'ddt_ddd_dde' => 'required',
             'dichlorophenoxyacetic' => 'required',
+            'tom' => 'required',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
-
+       
         TailingQualityStandard::create($validatedData);
         return redirect('/tailing/qualitystandard/create')->with('success', 'New Data has been added!');
     }
@@ -291,6 +292,8 @@ class TailingStandardController extends Controller
             'xylenes_total' => 'required',
             'ddt_ddd_dde' => 'required',
             'dichlorophenoxyacetic' => 'required',
+            'tom' => 'required',
+
         ];
 
 

@@ -1,3 +1,0 @@
-id,standard_id,user_id,point_id,date,start_time,stop_time,tss,ph,do,orp,conductivity,tds,temperatur,salinity,turbidity,tl_wall,tl_tsf,water_condition,water_color,odor,rain,rain_during_sampling,oil_layer,source_pollution,sampler,cyanide,level,lvl_lgr,debit_s,debit_d,remarks
-1,1,1,1,2022-08-22,7:18 PM,7:18 PM,8,8,8,8,8,8,8,8,8,8,8,Pasang,Normal,Ya,Ya,Ya,Tidak,ui,uiuu,8,8,8,8,8,iiuuui
-2,1,1,2,2022-08-22,7:18 PM,7:18 PM,8,8,8,8,8,8,8,8,8,8,8,Pasang,Normal,Ya,Ya,Ya,Tidak,ui,uiuu,8,8,8,8,8,iiuuui

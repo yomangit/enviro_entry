@@ -56,6 +56,25 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control form-control-sm " name="standard_id">
+                                            <option class="text-muted" disabled selected>-- select --</option>
+                                            @foreach ($QualityStandard as $standard)
+                                            @if (old('standard_id',$Hydrometric->standard_id)==$standard->id)
+                                            <option value="{{$standard->id}}" selected>{{$standard->nama}}</option>
+                                            @else
+                                            <option value="{{$standard->id}}">{{$standard->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                                <div class="col-12 col-md-6">
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                         <div class="col-sm-7">
@@ -125,7 +144,7 @@
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">Temperatur
                                                 (<sup>0</sup>C)</label>
                                             <div class="col-sm-7">
-                                                <input name="temperatur" type="number" step="0.01"
+                                                <input name="temperatur" type="text"
                                                     class="form-control form-control-sm @error('temperatur') is-invalid @enderror"
                                                     value="{{ old('temperatur', $Hydrometric->temperatur) }}" />
                                                 @error('temperatur')
@@ -145,7 +164,7 @@
                                         <div class="form-group row">
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">pH</label>
                                             <div class="col-sm-7">
-                                                <input name="ph" type="number" step="0.01"
+                                                <input name="ph" type="text"
                                                     class="form-control form-control-sm @error('ph') is-invalid @enderror"
                                                     value="{{ old('ph', $Hydrometric->ph) }}">
                                                 @error('ph')
@@ -161,7 +180,7 @@
                                         <div class="form-group row">
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">ORP(mV)</label>
                                             <div class="col-sm-7">
-                                                <input name="orp" type="number" step="0.01"
+                                                <input name="orp" type="text"
                                                     value="{{ old('orp', $Hydrometric->orp) }}"
                                                     class="form-control form-control-sm @error('orp') is-invalid @enderror">
                                                 @error('orp')
@@ -178,7 +197,7 @@
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">Conductivity
                                                 (uS/cm)</label>
                                             <div class="col-sm-7">
-                                                <input name="conductivity" type="number" step="0.01"
+                                                <input name="conductivity" type="text"
                                                     class="form-control form-control-sm @error('conductivity') is-invalid @enderror"
                                                     value="{{ old('conductivity', $Hydrometric->conductivity) }}" />
                                                 @error('conductivity')
@@ -196,7 +215,7 @@
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">Turbidity
                                                 (NTU)</label>
                                             <div class="col-sm-7">
-                                                <input name="turbidity" type="number" step="0.01"
+                                                <input name="turbidity" type="text"
                                                     class="form-control form-control-sm @error('turbidity') is-invalid @enderror"
                                                     value="{{ old('turbidity', $Hydrometric->turbidity) }}" />
                                                 @error('turbidity')
@@ -213,7 +232,7 @@
                                         <div class="form-group row">
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">DO</label>
                                             <div class="col-sm-7">
-                                                <input name="do" type="number" step="0.01"
+                                                <input name="do" type="text"
                                                     class="form-control form-control-sm @error('do') is-invalid @enderror"
                                                     value="{{ old('do', $Hydrometric->do) }}" />
                                                 @error('do')
@@ -231,7 +250,7 @@
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">TDS
                                                 (mg/L)</label>
                                             <div class="col-sm-7">
-                                                <input name="tds" type="number" step="0.01"
+                                                <input name="tds" type="text"
                                                     class="form-control form-control-sm  @error('tds') is-invalid @enderror"
                                                     value="{{ old('tds', $Hydrometric->tds) }}" />
                                                 @error('tds')
@@ -249,7 +268,7 @@
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">Salinity
                                                 (ppt)</label>
                                             <div class="col-sm-7">
-                                                <input name="salinity" type="number" step="0.01"
+                                                <input name="salinity" type="text"
                                                     class="form-control form-control-sm @error('salinity') is-invalid @enderror"
                                                     value="{{ old('salinity', $Hydrometric->salinity) }}" />
                                                 @error('salinity')
@@ -267,7 +286,7 @@
                                             <label style="font-size: 12px"
                                                 class="col-sm-4 col-form-label">TSS(mg/L)</label>
                                             <div class="col-sm-7">
-                                                <input name="tss" type="number" step="0.01"
+                                                <input name="tss" type="text"
                                                     value="{{ old('tss', $Hydrometric->tss) }}"
                                                     class="form-control form-control-sm @error('tss') is-invalid @enderror">
                                                 @error('tss')
@@ -283,7 +302,7 @@
                                         <div class="form-group row">
                                             <label style="font-size: 12px" class="col-sm-4 col-form-label">Cyanide (mg/L)</label>
                                             <div class="col-sm-7">
-                                                <input name="cyanide" type="number" step="0.01"
+                                                <input name="cyanide" type="text"
                                                     class="form-control form-control-sm @error('cyanide') is-invalid @enderror"
                                                     value="{{ old('cyanide', $Hydrometric->cyanide) }}" />
                                                 @error('cyanide')
@@ -300,7 +319,7 @@
                                             <div class="form-group row">
                                                 <label style="font-size: 12px" class="col-sm-4 col-form-label">Level GB (m)</label>
                                                 <div class="col-sm-7">
-                                                    <input name="level" type="number" step="0.01"
+                                                    <input name="level" type="text"
                                                         class="form-control form-control-sm @error('level') is-invalid @enderror"
                                                         value="{{ old('level', $Hydrometric->level) }}">
                                                     @error('level')
@@ -316,7 +335,7 @@
                                             <div class="form-group row">
                                                 <label style="font-size: 12px" class="col-sm-4 col-form-label">Level Loger (m)</label>
                                                 <div class="col-sm-7">
-                                                    <input name="lvl_lgr" type="number" step="0.01"
+                                                    <input name="lvl_lgr" type="text"
                                                         class="form-control form-control-sm @error('lvl_lgr') is-invalid @enderror"
                                                         value="{{ old('lvl_lgr', $Hydrometric->lvl_lgr) }}">
                                                     @error('lvl_lgr')
@@ -332,7 +351,7 @@
                                             <div class="form-group row">
                                                 <label style="font-size: 12px" class="col-sm-4 col-form-label">Debit (m<sup>3</sup>/<sub>s</sub> )</label>
                                                 <div class="col-sm-7">
-                                                    <input name="debit_s" type="number" step="0.01"
+                                                    <input name="debit_s" type="text"
                                                         class="form-control form-control-sm @error('debit_s') is-invalid @enderror"
                                                         value="{{ old('debit_s', $Hydrometric->debit_s) }}">
                                                     @error('debit_s')
@@ -348,7 +367,7 @@
                                             <div class="form-group row">
                                                 <label style="font-size: 12px" class="col-sm-4 col-form-label">Debit (m<sup>3</sup>/<sub>day</sub> )</label>
                                                 <div class="col-sm-7">
-                                                    <input name="debit_d" type="number" step="0.01"
+                                                    <input name="debit_d" type="text"
                                                         class="form-control form-control-sm @error('debit_d') is-invalid @enderror"
                                                         value="{{ old('debit_d', $Hydrometric->debit_d) }}">
                                                     @error('debit_d')
@@ -364,7 +383,7 @@
                                             <div class="form-group row">
                                                 <label style="font-size: 12px" class="col-sm-4 col-form-label">Tailing TSF</label>
                                                 <div class="col-sm-7">
-                                                    <input name="tl_tsf" type="number" step="0.01"
+                                                    <input name="tl_tsf" type="text"
                                                         class="form-control form-control-sm @error('tl_tsf') is-invalid @enderror"
                                                         value="{{ old('tl_tsf', $Hydrometric->tl_tsf) }}" />
                                                     @error('tl_tsf')
@@ -381,7 +400,7 @@
                                             <div class="form-group row">
                                                 <label style="font-size: 12px" class="col-sm-4 col-form-label">Tailing TSF Wall</label>
                                                 <div class="col-sm-7">
-                                                    <input name="tl_wall" type="number" step="0.01"
+                                                    <input name="tl_wall" type="text"
                                                         class="form-control form-control-sm @error('tl_wall') is-invalid @enderror"
                                                         value="{{ old('tl_wall', $Hydrometric->tl_wall) }}" />
                                                     @error('tl_wall')

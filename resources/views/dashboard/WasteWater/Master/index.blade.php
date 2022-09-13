@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
             <div class="card card-primary card-outline">
-                <div class="card-header p-0 p-2">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -35,10 +35,10 @@
 
                     <table class="table table-danger">
                         <tr>
-                            <th class="bg-gradient-info text-white">Row</th>
-                            <th class="bg-gradient-info text-white">Attribute</th>
-                            <th class="bg-gradient-info text-white">Errors</th>
-                            <th class="bg-gradient-info text-white">Value</th>
+                            <th>Row</th>
+                            <th>Attribute</th>
+                            <th>Errors</th>
+                            <th>Value</th>
                         </tr>
                         @foreach (session()->get('failures') as $validation)
                         <tr>
@@ -56,7 +56,7 @@
                         @endforeach
                     </table>
                     @endif
-                    <div class="card-tools  row  mr-1 d-flex">
+                    <div class=" card-tools p-1 mr-2 form-inline">
                         <form action="/wastewater" class="form-inline" autocomplete="off">
                             <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                 <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -67,9 +67,9 @@
                                 <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                             </div>
 
-                            <div  class="input-group mr-1">
-                                <select class="form-control form-control-sm " name="search" >
-                                    <option value="" selected disabled>Code Sample</option>
+                            <div class="input-group mr-1">
+                                <select class="form-control form-control-sm " name="search">
+                                    <option value="" selected disabled>Point ID</option>
                                     @foreach ($code_units as $code)
                                     @if ( request('search')==$code->nama)
                                     <option value="{{($code->nama)}}" selected>
@@ -90,17 +90,21 @@
                         </form>
                     </div>
 
-                    <a href="/wastewater/wastewaterpointid" class="btn bg-gradient-info btn-xs ml-2  mb-1">Code Sample</a>
-                    <a href="/wastewater/wastewaterstandard" class="btn bg-gradient-info btn-xs  ml-1 mb-1 ">Table Standard</a>
+                    @can('admin')
+                    <a href="/wastewater/wastewaterpointid" class="btn bg-gradient-info btn-xs ml-2 my-1 ">Code Sample</a>
+                    <a href="/wastewater/wastewaterstandard" class="btn bg-gradient-info btn-xs  ml-1 my-1">Table Standard</a>
+                    @endcan
                 </div>
                 <div class="card-body">
                     <div class="content">
                         <div class="col-12">
+                            @can('admin')
                             <div class=" py-1 d-flex justify-content-start">
                                 <a href="/wastewater/create" class="btn bg-gradient-secondary btn-xs ml-1"><i class="fas fa-plus ml-1 mt"></i>Add Data</a>
-                                <a href="/export" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download ml-1"></i>Excel</a>
+                                <a href="/export/wastewater" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download ml-1"></i>Excel</a>
                                 <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload ml-1"></i>Excel</a>
                             </div>
+                            @endcan
 
                             <ul class="nav nav-tabs mt-2" id="custom-content-above-tab" role="tablist">
                                 <li class="nav-item">
@@ -132,22 +136,22 @@
                             @if($Wastewater->count() )
                             <div class="tab-content" id="custom-content-above-tabContent">
                                 <div class="tab-pane fade show active card-body table-responsive " id="custom-content-above-Physical" role="tabpanel" aria-labelledby="custom-content-above-Physical-tab">
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center ">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="text-center table-info ">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="3" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">Conductivity</th>
-                                                <th class="bg-gradient-info text-white">TDS</th>
-                                                <th class="bg-gradient-info text-white">TSS</th>
-                                                <th class="bg-gradient-info text-white">Turbidity</th>
-                                                <th class="bg-gradient-info text-white">Hardness</th>
-                                                <th class="bg-gradient-info text-white">Alkalinity (as CaCo3)</th>
-                                                <th class="bg-gradient-info text-white">Alkalinity-Carbonate</th>
-                                                <th class="bg-gradient-info text-white">Alkalinity-Bicarbonate</th>
-                                                <th class="bg-gradient-info text-white">Temperature </th>
-                                                <th class="bg-gradient-info text-white">Salinity </th>
-                                                <th class="bg-gradient-info text-white">Dissolved Oxygen (DO) </th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" @if(!auth()->user()->is_admin)colspan="2" @else colspan="3" @endif>Quality Standard</th>
+                                                <th class="align-middle">Conductivity</th>
+                                                <th class="align-middle">TDS</th>
+                                                <th class="align-middle">TSS</th>
+                                                <th class="align-middle">Turbidity</th>
+                                                <th class="align-middle">Hardness</th>
+                                                <th class="align-middle">Alkalinity (as CaCo3)</th>
+                                                <th class="align-middle">Alkalinity-Carbonate</th>
+                                                <th class="align-middle">Alkalinity-Bicarbonate</th>
+                                                <th class="align-middle">Temperature </th>
+                                                <th class="align-middle">Salinity </th>
+                                                <th class="align-middle">Dissolved Oxygen (DO) </th>
 
                                             </tr>
 
@@ -155,38 +159,43 @@
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
-                                                <td colspan="3">{{$standard->nama}}</td>
-                                                <td>{{$standard->conductivity}}</td>
-                                                <td>{{$standard->tds}}</td>
-                                                <td>{{$standard->tss}}</td>
-                                                <td>{{$standard->turbidity}}</td>
-                                                <td>{{$standard->hardness}}</td>
-                                                <td>{{$standard->alkalinity_as_caco3}}</td>
-                                                <td>{{$standard->alkalinity_carbonate}}</td>
-                                                <td>{{$standard->alkalinity_bicarbonate}}</td>
-                                                <td>{{$standard->temperature}}</td>
-                                                <td>{{$standard->salinity}}</td>
-                                                <td>{{$standard->do}}</td>
+                                                <td @if(!auth()->user()->is_admin)colspan="2" @else colspan="3" @endif>{{$standard->nama}}</td>
+                                                <td>{{$standard-> conductivity}}</td>
+                                                <td>{{$standard-> totaldissolvedsolids_tds}}</td>
+                                                <td>{{$standard-> totalsuspendedsolids_tss}}</td>
+                                                <td>{{$standard-> turbidity}}</td>
+                                                <td>{{$standard-> hardness}}</td>
+                                                <td>{{$standard-> alkalinity_ascaco3}}</td>
+                                                <td>{{$standard-> alkalinitycarbonate}}</td>
+                                                <td>{{$standard-> alkalinitybicarbonate}}</td>
+                                                <td>{{$standard-> temperature}}</td>
+                                                <td>{{$standard-> salinity}}</td>
+                                                <td>{{$standard-> dissolvedoxygen_do}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
+                                                @can('admin')
                                                 <th>Action</th>
+                                                @endcan
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
                                                 <th colspan="11">Data Entry</th>
                                             </tr>
+                                       
+                                    
                                             @php
                                             $no2 = 1 + ($Wastewater->currentPage() - 1) * $Wastewater->perPage();
                                             @endphp
                                             @foreach($Wastewater as $item)
                                             <tr>
                                                 <td>{{$no2++}}</td>
+                                                @can('admin')
                                                 <td>
                                                     <div style="width: 50px">
                                                         <a href="/wastewater/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
@@ -201,82 +210,86 @@
                                                         </form>
                                                     </div>
                                                 </td>
+                                                @endcan
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->conductivity}}</td>
-                                                <td>{{$item->tds}}</td>
-                                                <td>{{$item->tss}}</td>
-                                                <td>{{$item->turbidity}}</td>
-                                                <td>{{$item->hardness}}</td>
-                                                <td>{{$item->alkalinity_as_caco3}}</td>
-                                                <td>{{$item->alkalinity_carbonate}}</td>
-                                                <td>{{$item->alkalinity_bicarbonate}}</td>
-                                                <td>{{$item->temperature}}</td>
-                                                <td>{{$item->salinity}}</td>
-                                                <td>{{$item->do}}</td>
+                                                <td>{{$item-> conductivity}}</td>
+                                                <td>{{$item-> totaldissolvedsolids_tds}}</td>
+                                                <td>{{$item-> totalsuspendedsolids_tss}}</td>
+                                                <td>{{$item-> turbidity}}</td>
+                                                <td>{{$item-> hardness}}</td>
+                                                <td>{{$item-> alkalinity_ascaco3}}</td>
+                                                <td>{{$item-> alkalinitycarbonate}}</td>
+                                                <td>{{$item-> alkalinitybicarbonate}}</td>
+                                                <td>{{$item-> temperature}}</td>
+                                                <td>{{$item-> salinity}}</td>
+                                                <td>{{$item-> dissolvedoxygen_do}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
+                                           
+                                   
 
 
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-Anions" role="tabpanel" aria-labelledby="custom-content-above-Anions-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">pH</th>
-                                                <th class="bg-gradient-info text-white">Alkalinity - Total</th>
-                                                <th class="bg-gradient-info text-white">Chloride (Cl)</th>
-                                                <th class="bg-gradient-info text-white">Fluoride (F)</th>
-                                                <th class="bg-gradient-info text-white">Sulphate (SO4)</th>
-                                                <th class="bg-gradient-info text-white">Sulphite (H2S)</th>
-                                                <th class="bg-gradient-info text-white">Free Chlorine (Cl2)</th>
+                                            <th>No</th>
+                                                <th colspan="2">Quality Standard</th>
+                                                <th>pH</th>
+                                                <th>Alkalinity - Total</th>
+                                                <th>Chloride (Cl)</th>
+                                                <th>Fluoride (F)</th>
+                                                <th>Sulphate (SO4)</th>
+                                                <th>Sulphite (H2S)</th>
+                                                <th>Free Chlorine (Cl2)</th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
 
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->ph}}</td>
-                                                <td>{{$standard->alkalinity_total}}</td>
-                                                <td>{{$standard->cl}}</td>
-                                                <td>{{$standard->fluoride}}</td>
-                                                <td>{{$standard->sulphate}}</td>
-                                                <td>{{$standard->sulphite}}</td>
-                                                <td>{{$standard->free_chlorine}}</td>
+                                                <td>{{$standard-> ph	}}</td>
+                                                <td>{{$standard-> alkalinitytotal	}}</td>
+                                                <td>{{$standard-> chloride_cl	}}</td>
+                                                <td>{{$standard-> fluoride_f	}}</td>
+                                                <td>{{$standard-> sulphate_so4	}}</td>
+                                                <td>{{$standard-> sulphite_h2s	}}</td>
+                                                <td>{{$standard-> freechlorine_cl2	}}</td>
                                             </tr>
                                             @endforeach
                                             @php
                                             $no2 = 1 + ($Wastewater->currentPage() - 1) * $Wastewater->perPage();
                                             @endphp
-                                            @foreach($Wastewater as $item)
-                                            <tr>
+                                           
+                                           <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
                                                 <th colspan="7">Data Entry</th>
                                             </tr>
+                                            @foreach($Wastewater as $item)
                                             <tr>
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->ph}}</td>
-                                                <td>{{$item->alkalinity_total}}</td>
-                                                <td>{{$item->cl}}</td>
-                                                <td>{{$item->fluoride}}</td>
-                                                <td>{{$item->sulphate}}</td>
-                                                <td>{{$item->sulphite}}</td>
-                                                <td>{{$item->free_chlorine}}</td>
+                                                <td>{{$item-> ph	}}</td>
+                                                <td>{{$item-> alkalinitytotal	}}</td>
+                                                <td>{{$item-> chloride_cl	}}</td>
+                                                <td>{{$item-> fluoride_f	}}</td>
+                                                <td>{{$item-> sulphate_so4	}}</td>
+                                                <td>{{$item-> sulphite_h2s	}}</td>
+                                                <td>{{$item-> freechlorine_cl2	}}</td>
                                             </tr>
                                             @endforeach
 
@@ -285,48 +298,49 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-Cyanide" role="tabpanel" aria-labelledby="custom-content-above-Cyanide-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">Free Cyanide (FCN)</th>
-                                                <th class="bg-gradient-info text-white">Total Cyanide (CN Tot)</th>
-                                                <th class="bg-gradient-info text-white">WAD Cyanide (CN Wad)</th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" colspan="2">Quality Standard</th>
+                                                <th class="align-middle">Free Cyanide (FCN)</th>
+                                                <th class="align-middle">Total Cyanide (CN Tot)</th>
+                                                <th class="align-middle">WAD Cyanide (CN Wad)</th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
 
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->fcn}}</td>
-                                                <td>{{$standard->total_cyanide}}</td>
-                                                <td>{{$standard->wad_cyanide}}</td>
+                                                <td>{{$standard-> freecyanide_fcn	}}</td>
+                                                <td>{{$standard-> totalcyanide_cntot	}}</td>
+                                                <td>{{$standard-> wadcyanide_cnwad	}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
                                                 <th colspan="3">Data Entry</th>
                                             </tr>
-                                            @foreach($Wastewater as $item)
                                             @php
                                             $no2 = 1 + ($Wastewater->currentPage() - 1) * $Wastewater->perPage();
                                             @endphp
+                                            @foreach($Wastewater as $item)
+                                          
                                             <tr>
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->fcn}}</td>
-                                                <td>{{$item->total_cyanide}}</td>
-                                                <td>{{$item->wad_cyanide}}</td>
+                                                <td>{{$item-> freecyanide_fcn	}}</td>
+                                                <td>{{$item-> totalcyanide_cntot	}}</td>
+                                                <td>{{$item-> wadcyanide_cnwad	}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -335,53 +349,57 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-nutrients" role="tabpanel" aria-labelledby="custom-content-above-nutrients-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">Ammonia (N-NH3)</th>
-                                                <th class="bg-gradient-info text-white">Nitrate (NO3)</th>
-                                                <th class="bg-gradient-info text-white">Nitrite (NO2)</th>
-                                                <th class="bg-gradient-info text-white">Phosphate (PO4)</th>
-                                                <th class="bg-gradient-info text-white">Total-Phosphate (P-PO4)</th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" colspan="2">Quality Standard</th>
+                                                <th  class="align-middle">Ammonia (NH4)</th>
+                                                <th  class="align-middle">Ammonium (N-NH3)</th>
+                                                <th  class="align-middle">Nitrate (NO3)</th>
+                                                <th  class="align-middle">Nitrite (NO2)</th>
+                                                <th  class="align-middle">Phosphate (PO4)</th>
+                                                <th  class="align-middle">Total-Phosphate (P-PO4)</th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->ammonia}}</td>
-                                                <td>{{$standard->nitrate}}</td>
-                                                <td>{{$standard->nitrite}}</td>
-                                                <td>{{$standard->phosphate }}</td>
-                                                <td>{{$standard->total_phosphate }}</td>
+                                                <td>{{$standard-> ammonia_nh4	}}</td>
+                                                <td>{{$standard-> ammonium_n_nh3	}}</td>
+                                                <td>{{$standard-> nitrate_no3	}}</td>
+                                                <td>{{$standard-> nitrite_no2	}}</td>
+                                                <td>{{$standard-> phosphate_po4	}}</td>
+                                                <td>{{$standard-> totalphosphate_ppo4	}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
-                                                <th colspan="5">Data Entry</th>
+                                                <th colspan="6">Data Entry</th>
                                             </tr>
-                                            @foreach($Wastewater as $item)
                                             @php
                                             $no2 = 1 + ($Wastewater->currentPage() - 1) * $Wastewater->perPage();
                                             @endphp
+                                            @foreach($Wastewater as $item)
+                                         
                                             <tr>
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->ammonia}}</td>
-                                                <td>{{$item->nitrate}}</td>
-                                                <td>{{$item->nitrite}}</td>
-                                                <td>{{$item->phosphate }}</td>
-                                                <td>{{$item->total_phosphate }}</td>
+                                                <td>{{$item-> ammonia_nh4	}}</td>
+                                                <td>{{$item-> ammonium_n_nh3	}}</td>
+                                                <td>{{$item-> nitrate_no3	}}</td>
+                                                <td>{{$item-> nitrite_no2	}}</td>
+                                                <td>{{$item-> phosphate_po4	}}</td>
+                                                <td>{{$item-> totalphosphate_ppo4	}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -389,102 +407,103 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-dissolved" role="tabpanel" aria-labelledby="custom-content-above-dissolved-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">Aluminium (Al)</th>
-                                                <th class="bg-gradient-info text-white">Antimony (Sb)</th>
-                                                <th class="bg-gradient-info text-white">Arsenic (As)</th>
-                                                <th class="bg-gradient-info text-white">Barium (Ba)</th>
-                                                <th class="bg-gradient-info text-white">Cadmium (Cd)</th>
-                                                <th class="bg-gradient-info text-white">Calcium (Ca)</th>
-                                                <th class="bg-gradient-info text-white">Chromium (Cr)</th>
-                                                <th class="bg-gradient-info text-white">Chromium Hexavalent (Cr6+)</th>
-                                                <th class="bg-gradient-info text-white">Cobalt (Co)</th>
-                                                <th class="bg-gradient-info text-white">Copper (Cu)</th>
-                                                <th class="bg-gradient-info text-white">Iron (Fe)</th>
-                                                <th class="bg-gradient-info text-white">Lead (Pb)</th>
-                                                <th class="bg-gradient-info text-white">Magnesium (Mg)</th>
-                                                <th class="bg-gradient-info text-white">Manganese (Mn)</th>
-                                                <th class="bg-gradient-info text-white">Mercury (Hg)</th>
-                                                <th class="bg-gradient-info text-white">Nickel (Ni)</th>
-                                                <th class="bg-gradient-info text-white">Selenium (Se)</th>
-                                                <th class="bg-gradient-info text-white">Silver (Ag)</th>
-                                                <th class="bg-gradient-info text-white">Sodium (Na)</th>
-                                                <th class="bg-gradient-info text-white">Tin (Sn)</th>
-                                                <th class="bg-gradient-info text-white">Zinc (Zn)</th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" colspan="2">Quality Standard</th>
+                                                <th class="align-middle">Aluminium (Al)</th>
+                                                <th class="align-middle">Antimony (Sb)</th>
+                                                <th class="align-middle">Arsenic (As)</th>
+                                                <th class="align-middle">Barium (Ba)</th>
+                                                <th class="align-middle">Cadmium (Cd)</th>
+                                                <th class="align-middle">Calcium (Ca)</th>
+                                                <th class="align-middle">Chromium (Cr)</th>
+                                                <th class="align-middle">Chromium Hexavalent (Cr6+)</th>
+                                                <th class="align-middle">Cobalt (Co)</th>
+                                                <th class="align-middle">Copper (Cu)</th>
+                                                <th class="align-middle">Iron (Fe)</th>
+                                                <th class="align-middle">Lead (Pb)</th>
+                                                <th class="align-middle">Magnesium (Mg)</th>
+                                                <th class="align-middle">Manganese (Mn)</th>
+                                                <th class="align-middle">Mercury (Hg)</th>
+                                                <th class="align-middle">Nickel (Ni)</th>
+                                                <th class="align-middle">Selenium (Se)</th>
+                                                <th class="align-middle">Silver (Ag)</th>
+                                                <th class="align-middle">Sodium (Na)</th>
+                                                <th class="align-middle">Tin (Sn)</th>
+                                                <th class="align-middle">Zinc (Zn)</th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
 
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->aluminium}}</td>
-                                                <td>{{$standard->antimony}}</td>
-                                                <td>{{$standard->arsenic}}</td>
-                                                <td>{{$standard->barium}}</td>
-                                                <td>{{$standard->cadmium}}</td>
-                                                <td>{{$standard->calcium}}</td>
-                                                <td>{{$standard->chromium}}</td>
-                                                <td>{{$standard->chromium_hexavalent}}</td>
-                                                <td>{{$standard->cobalt}}</td>
-                                                <td>{{$standard->copper}}</td>
-                                                <td>{{$standard->iron}}</td>
-                                                <td>{{$standard->lead}}</td>
-                                                <td>{{$standard->magnesium}}</td>
-                                                <td>{{$standard->manganese}}</td>
-                                                <td>{{$standard->mercury}}</td>
-                                                <td>{{$standard->nickel}}</td>
-                                                <td>{{$standard->selenium}}</td>
-                                                <td>{{$standard->silver}}</td>
-                                                <td>{{$standard->sodium}}</td>
-                                                <td>{{$standard->tin}}</td>
-                                                <td>{{$standard->zinc}}</td>
+                                                <td>{{$standard-> aluminium_al	}}</td>
+                                                <td>{{$standard-> antimony_sb	}}</td>
+                                                <td>{{$standard-> arsenic_as	}}</td>
+                                                <td>{{$standard-> barium_ba	}}</td>
+                                                <td>{{$standard-> cadmium_cd	}}</td>
+                                                <td>{{$standard-> calcium_ca	}}</td>
+                                                <td>{{$standard-> chromium_cr	}}</td>
+                                                <td>{{$standard-> chromiumhexavalent_cr6	}}</td>
+                                                <td>{{$standard-> cobalt_co	}}</td>
+                                                <td>{{$standard-> copper_cu	}}</td>
+                                                <td>{{$standard-> iron_fe	}}</td>
+                                                <td>{{$standard-> lead_pb	}}</td>
+                                                <td>{{$standard-> magnesium_mg	}}</td>
+                                                <td>{{$standard-> manganese_mn	}}</td>
+                                                <td>{{$standard-> mercury_hg	}}</td>
+                                                <td>{{$standard-> nickel_ni	}}</td>
+                                                <td>{{$standard-> selenium_se	}}</td>
+                                                <td>{{$standard-> silver_ag	}}</td>
+                                                <td>{{$standard-> sodium_na	}}</td>
+                                                <td>{{$standard-> tin_sn	}}</td>
+                                                <td>{{$standard-> zinc_zn	}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
                                                 <th colspan="21">Data Entry</th>
                                             </tr>
-                                            @foreach($Wastewater as $item)
                                             @php
                                             $no2 = 1 + ($Wastewater->currentPage() - 1) * $Wastewater->perPage();
                                             @endphp
+                                            @foreach($Wastewater as $item)
+                                           
                                             <tr>
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->aluminium}}</td>
-                                                <td>{{$item->antimony}}</td>
-                                                <td>{{$item->arsenic}}</td>
-                                                <td>{{$item->barium}}</td>
-                                                <td>{{$item->cadmium}}</td>
-                                                <td>{{$item->calcium}}</td>
-                                                <td>{{$item->chromium}}</td>
-                                                <td>{{$item->chromium_hexavalent}}</td>
-                                                <td>{{$item->cobalt}}</td>
-                                                <td>{{$item->copper}}</td>
-                                                <td>{{$item->iron}}</td>
-                                                <td>{{$item->lead}}</td>
-                                                <td>{{$item->magnesium}}</td>
-                                                <td>{{$item->manganese}}</td>
-                                                <td>{{$item->mercury}}</td>
-                                                <td>{{$item->nickel}}</td>
-                                                <td>{{$item->selenium}}</td>
-                                                <td>{{$item->silver}}</td>
-                                                <td>{{$item->sodium}}</td>
-                                                <td>{{$item->tin}}</td>
-                                                <td>{{$item->zinc}}</td>
+                                                <td>{{$item-> aluminium_al	}}</td>
+                                                <td>{{$item-> antimony_sb	}}</td>
+                                                <td>{{$item-> arsenic_as	}}</td>
+                                                <td>{{$item-> barium_ba	}}</td>
+                                                <td>{{$item-> cadmium_cd	}}</td>
+                                                <td>{{$item-> calcium_ca	}}</td>
+                                                <td>{{$item-> chromium_cr	}}</td>
+                                                <td>{{$item-> chromiumhexavalent_cr6	}}</td>
+                                                <td>{{$item-> cobalt_co	}}</td>
+                                                <td>{{$item-> copper_cu	}}</td>
+                                                <td>{{$item-> iron_fe	}}</td>
+                                                <td>{{$item-> lead_pb	}}</td>
+                                                <td>{{$item-> magnesium_mg	}}</td>
+                                                <td>{{$item-> manganese_mn	}}</td>
+                                                <td>{{$item-> mercury_hg	}}</td>
+                                                <td>{{$item-> nickel_ni	}}</td>
+                                                <td>{{$item-> selenium_se	}}</td>
+                                                <td>{{$item-> silver_ag	}}</td>
+                                                <td>{{$item-> sodium_na	}}</td>
+                                                <td>{{$item-> tin_sn	}}</td>
+                                                <td>{{$item-> zinc_zn	}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -492,50 +511,50 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-total" role="tabpanel" aria-labelledby="custom-content-above-total-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">Aluminium (T_Al)</th>
-                                                <th class="bg-gradient-info text-white">Arsenic (T_As)</th>
-                                                <th class="bg-gradient-info text-white">Cadmium (T_Cd)</th>
-                                                <th class="bg-gradient-info text-white">Chromium (T_Cr)</th>
-                                                <th class="bg-gradient-info text-white">Chromium Hexavalent (T_Cr6+)</th>
-                                                <th class="bg-gradient-info text-white">Cobalt (T_Co)</th>
-                                                <th class="bg-gradient-info text-white">Copper (T_Cu)</th>
-                                                <th class="bg-gradient-info text-white">Lead (T_Pb)</th>
-                                                <th class="bg-gradient-info text-white">Selenium (T_Se)</th>
-                                                <th class="bg-gradient-info text-white">Mercury (T_hg)</th>
-                                                <th class="bg-gradient-info text-white">Nickel (T_Ni)</th>
-                                                <th class="bg-gradient-info text-white">Zinc (T_Zn)</th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" colspan="2">Quality Standard</th>
+                                                <th class="align-middle">Aluminium (T_Al)</th>
+                                                <th class="align-middle">Arsenic (T_As)</th>
+                                                <th class="align-middle">Cadmium (T_Cd)</th>
+                                                <th class="align-middle">Chromium (T_Cr)</th>
+                                                <th class="align-middle">Chromium Hexavalent (T_Cr6+)</th>
+                                                <th class="align-middle">Cobalt (T_Co)</th>
+                                                <th class="align-middle">Copper (T_Cu)</th>
+                                                <th class="align-middle">Lead (T_Pb)</th>
+                                                <th class="align-middle">Selenium (T_Se)</th>
+                                                <th class="align-middle">Mercury (T_hg)</th>
+                                                <th class="align-middle">Nickel (T_Ni)</th>
+                                                <th class="align-middle">Zinc (T_Zn)</th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
 
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->aluminium_t_ai}}</td>
-                                                <td>{{$standard->arsenic_t_as}}</td>
-                                                <td>{{$standard->cadmium_t_cd}}</td>
-                                                <td>{{$standard->chromium_t}}</td>
-                                                <td>{{$standard->chromium_hexavalent_t}}</td>
-                                                <td>{{$standard->cobalt_t}}</td>
-                                                <td>{{$standard->cooper}}</td>
-                                                <td>{{$standard->lead_t}}</td>
-                                                <td>{{$standard->selenium_t}}</td>
-                                                <td>{{$standard->mercury_t}}</td>
-                                                <td>{{$standard->nickel_t}}</td>
-                                                <td>{{$standard->zinc_t}}</td>
+                                                <td>{{$standard-> aluminium_tal	}}</td>
+                                                <td>{{$standard-> arsenic_tas	}}</td>
+                                                <td>{{$standard-> cadmium_tcd	}}</td>
+                                                <td>{{$standard-> chromiumhexavalent_tcr6	}}</td>
+                                                <td>{{$standard-> chromium_tcr	}}</td>
+                                                <td>{{$standard-> cobalt_tco	}}</td>
+                                                <td>{{$standard-> copper_tco	}}</td>
+                                                <td>{{$standard-> lead_tpb	}}</td>
+                                                <td>{{$standard-> selenium_tse	}}</td>
+                                                <td>{{$standard-> mercury_thg	}}</td>
+                                                <td>{{$standard-> nickel_tni	}}</td>
+                                                <td>{{$standard-> zinc_tzn	}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
@@ -549,18 +568,18 @@
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->aluminium_t_ai}}</td>
-                                                <td>{{$item->arsenic_t_as}}</td>
-                                                <td>{{$item->cadmium_t_cd}}</td>
-                                                <td>{{$item->chromium_t}}</td>
-                                                <td>{{$item->chromium_hexavalent_t}}</td>
-                                                <td>{{$item->cobalt_t}}</td>
-                                                <td>{{$item->cooper}}</td>
-                                                <td>{{$item->lead_t}}</td>
-                                                <td>{{$item->selenium_t}}</td>
-                                                <td>{{$item->mercury_t}}</td>
-                                                <td>{{$item->nickel_t}}</td>
-                                                <td>{{$item->zinc_t}}</td>
+                                                <td>{{$item-> aluminium_tal	}}</td>
+                                                <td>{{$item-> arsenic_tas	}}</td>
+                                                <td>{{$item-> cadmium_tcd	}}</td>
+                                                <td>{{$item-> chromiumhexavalent_tcr6	}}</td>
+                                                <td>{{$item-> chromium_tcr	}}</td>
+                                                <td>{{$item-> cobalt_tco	}}</td>
+                                                <td>{{$item-> copper_tco	}}</td>
+                                                <td>{{$item-> lead_tpb	}}</td>
+                                                <td>{{$item-> selenium_tse	}}</td>
+                                                <td>{{$item-> mercury_thg	}}</td>
+                                                <td>{{$item-> nickel_tni	}}</td>
+                                                <td>{{$item-> zinc_tzn	}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -568,44 +587,44 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-Organic" role="tabpanel" aria-labelledby="custom-content-above-Organic-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">BOD</th>
-                                                <th class="bg-gradient-info text-white">COD</th>
-                                                <th class="bg-gradient-info text-white">Oil and Grease</th>
-                                                <th class="bg-gradient-info text-white">Phenols</th>
-                                                <th class="bg-gradient-info text-white">Surfactant (MBAS)</th>
-                                                <th class="bg-gradient-info text-white">Total PCB</th>
-                                                <th class="bg-gradient-info text-white">A.O.X</th>
-                                                <th class="bg-gradient-info text-white">PCDFs</th>
-                                                <th class="bg-gradient-info text-white">PCDDs</th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" colspan="2">Quality Standard</th>
+                                                <th class="align-middle">BOD</th>
+                                                <th class="align-middle">COD</th>
+                                                <th class="align-middle">Oil and Grease</th>
+                                                <th class="align-middle">Phenols</th>
+                                                <th class="align-middle">Surfactant (MBAS)</th>
+                                                <th class="align-middle">Total PCB</th>
+                                                <th class="align-middle">A.O.X</th>
+                                                <th class="align-middle">PCDFs</th>
+                                                <th class="align-middle">PCDDs</th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
 
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->bod}}</td>
-                                                <td>{{$standard->cod}}</td>
-                                                <td>{{$standard->oil_and_grease}}</td>
-                                                <td>{{$standard->phenols}}</td>
-                                                <td>{{$standard->surfactant}}</td>
-                                                <td>{{$standard->total_pcb}}</td>
-                                                <td>{{$standard->a_o_x}}</td>
-                                                <td>{{$standard->pcdfs}}</td>
-                                                <td>{{$standard->pcdds}}</td>
+                                                <td>{{$standard-> bod	}}</td>
+                                                <td>{{$standard-> cod	}}</td>
+                                                <td>{{$standard-> oilandgrease	}}</td>
+                                                <td>{{$standard-> totalphenols	}}</td>
+                                                <td>{{$standard-> surfactant_mbas	}}</td>
+                                                <td>{{$standard-> totalpcb	}}</td>
+                                                <td>{{$standard-> aox	}}</td>
+                                                <td>{{$standard-> pcdfs	}}</td>
+                                                <td>{{$standard-> pcdds	}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
@@ -619,15 +638,15 @@
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->bod}}</td>
-                                                <td>{{$item->cod}}</td>
-                                                <td>{{$item->oil_and_grease}}</td>
-                                                <td>{{$item->phenols}}</td>
-                                                <td>{{$item->surfactant}}</td>
-                                                <td>{{$item->total_pcb}}</td>
-                                                <td>{{$item->a_o_x}}</td>
-                                                <td>{{$item->pcdfs}}</td>
-                                                <td>{{$item->pcdds}}</td>
+                                                <td>{{$item-> bod	}}</td>
+                                                <td>{{$item-> cod	}}</td>
+                                                <td>{{$item-> oilandgrease	}}</td>
+                                                <td>{{$item-> totalphenols	}}</td>
+                                                <td>{{$item-> surfactant_mbas	}}</td>
+                                                <td>{{$item-> totalpcb	}}</td>
+                                                <td>{{$item-> aox	}}</td>
+                                                <td>{{$item-> pcdfs	}}</td>
+                                                <td>{{$item-> pcdds	}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -635,32 +654,32 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-microbiology" role="tabpanel" aria-labelledby="custom-content-above-microbiology-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" class="table table-bordered  table-sm   table-striped">
+                                        <thead class="table-info">
                                             <tr>
-                                                <th class="bg-gradient-info text-white">No</th>
-                                                <th colspan="2" class="bg-gradient-info text-white">Quality Standard</th>
-                                                <th class="bg-gradient-info text-white">Fecal Coliformi</th>
-                                                <th class="bg-gradient-info text-white">E- Coli</th>
-                                                <th class="bg-gradient-info text-white">Total Coliform Bacteria </th>
+                                                <th class="align-middle">No</th>
+                                                <th class="align-middle" colspan="2">Quality Standard</th>
+                                                <th class="align-middle">Fecal Coliformi</th>
+                                                <th class="align-middle">E- Coli</th>
+                                                <th class="align-middle">Total Coliform Bacteria </th>
                                             </tr>
 
                                         </thead>
                                         <tbody style="text-align:center" class=" border-1">
                                             @php
-                                            $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                            $no = 1 ;
                                             @endphp
 
                                             @foreach($QualityStd as $standard)
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td colspan="2">{{$standard->nama}}</td>
-                                                <td>{{$standard->fecal_coliform}}</td>
-                                                <td>{{$standard->c_coli}}</td>
-                                                <td>{{$standard->total_coliform_bacteria}}</td>
+                                                <td>{{$standard-> fecalcoliform	}}</td>
+                                                <td>{{$standard-> ecoli	}}</td>
+                                                <td>{{$standard-> totalcoliformbacteria	}}</td>
                                             </tr>
                                             @endforeach
-                                            <tr>
+                                            <tr class="table-primary">
                                                 <th>*</th>
                                                 <th>Poin ID</th>
                                                 <th>Date</th>
@@ -674,74 +693,203 @@
                                                 <td>{{$no2++}}</td>
                                                 <td>{{$item->PointId->nama}}</td>
                                                 <td>{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                <td>{{$item->fecal_coliform}}</td>
-                                                <td>{{$item->c_coli}}</td>
-                                                <td>{{$item->total_coliform_bacteria}}</td>
+                                                <td>{{$item-> fecalcoliform	}}</td>
+                                                <td>{{$item-> ecoli	}}</td>
+                                                <td>{{$item-> totalcoliformbacteria	}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="card-tools row form-inline">
-                                    <div class="col-4">
-                                        <div class="d-flex justify-content-start">
-                                            <small>Showing {{ $Wastewater->firstItem() }} to
-                                                {{ $Wastewater->lastItem() }} of {{ $Wastewater->total() }}
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <div style="font-size: 8" class="d-flex justify-content-end pagination pagination-sm">
-                                            {{ $Wastewater->links() }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @else
-                            <p class="text-center fs-4 p-2 font-weight-bold">Not Data Found</p>
-                            @endif
-                            <div class="modal fade" id="modal-default">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Import Data</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <form action="/import" method="POST" enctype="multipart/form-data">
-                                            @csrf
-                                            <div class="modal-body">
-                                                <div class="custom-file">
-                                                    <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
-                                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                                    @error('file')
-                                                    <span class=" invalid-feedback ">{{ $message }}</span>
-                                                    @enderror
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer justify-content-between">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Import</button>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
                         </div>
                     </div>
                 </div>
+                <div class="card-footer">
+                    <div class=" form-inline">
+                        <div class="col-4">
+                            <div class="d-flex   justify-content-start">
+                                <h6>Showing {{ $Wastewater->firstItem() }} to {{$Wastewater->lastItem() }} of {{ $Wastewater->total() }}</h6>
+                            </div>
+                        </div>
+                        <div class="col-8 d-flex justify-content-end">
+                            <div class=" pagination pagination-sm">
+                                {{ $Wastewater->links() }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                @else
+                <p class="text-center fs-4 p-2 font-weight-bold">Not Data Found</p>
+                @endif
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/import/wastewater" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        @error('file')
+                                        <span class=" invalid-feedback ">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
+            @if($Wastewater->count())
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title text center">{{$tittle}}</div>
+                    <div class="card-tools">
+                        
+                    </div>
+                </div>
+                <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title text center">{{$tittle}}</div>
+                    <div class="card-tools">
+                        
+                    </div>
+                </div>
+                <div class="card-body table-responsive p-0" id="ph" style=" width: auto"></div>
+            </div>
+            @endif
         </div>
 
     </section>
     <!-- /.content -->
 </div>
+<script>
+   Highcharts.chart('container', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: ''
 
+    },
+   
+    xAxis: {
+        categories: {!!json_encode($tanggal) !!},
+        accessibility: {
+            description: 'Months of the year'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'value'
+        },
+      
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#ff6f69',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: 'TSS Quality Standard',
+            color: '#96ceb4',
+            dashStyle: 'longdash',
+            data: {!!json_encode($tss_std) !!},
+            marker: {
+                symbol: 'square'
+            },
+
+    },{
+            name: 'TSS',
+            color: '#ffcc5c',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($tss) !!}
+        }]
+});
+</script>
+
+
+<script>
+   Highcharts.chart('ph', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: ''
+
+    },
+   
+    xAxis: {
+        categories: {!!json_encode($tanggal) !!},
+        accessibility: {
+            description: 'Months of the year'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'value'
+        },
+      
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: 'pH Quality Standard',
+            color: '#1F2833',
+            dashStyle: 'longdash',
+            data: {!!json_encode($ph_std) !!},
+            marker: {
+                symbol: 'square'
+            },
+
+    },{
+            name: 'pH',
+            color: '#6497b1',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($ph) !!}
+        }]
+});
+</script>
 @endsection

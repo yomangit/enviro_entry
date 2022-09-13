@@ -27,7 +27,7 @@ class NoiseController extends Controller
             'breadcrumb' => 'Noise Meter',
             'lokasiResume'=>$lokasiResume,
             'ResumeBulanan' => ResumeBulananNoise::where('user_id', auth()->user()->id)->get(),
-            'Codes'=>Noise::where('user_id',auth()->user()->id)->filter(request(['fromDate','search','location']))->paginate(7)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Codes'=>Noise::with('user')->filter(request(['fromDate','search','location']))->paginate(7)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
 
         ]);

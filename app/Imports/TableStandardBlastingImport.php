@@ -22,8 +22,10 @@ class TableStandardBlastingImport implements ToModel,WithHeadingRow
     {
         return new StandardBlasting([
             'user_id' => $row['user_id'],
+            'ci' => $row['ci'],
             'frequency' => $row['frequency'],
             'ppv' => $row['ppv'],
+            'kualitas_bangunan' => $row['kualitas_bangunan'],
             'noise_level' => $row['noise_level']
         ]);
     }

@@ -15,9 +15,9 @@ class Mastergw extends Model
 
     public function scopefilter($query,array $filters)
     {
-           $query->when($filters['fromDate']?? false, function($query){
-                return $query->whereBetween('date', array(date('Y-m-d',strtotime(request('fromDate'))), date('Y-m-d',strtotime(request('toDate'))))); 
-               });
+        $query->when($filters['fromDate'] ?? false, function ($query) {
+            return $query->whereBetween('date', array(date('Y-m-d', strtotime(request('fromDate'))), date('Y-m-d', strtotime(request('toDate')))));
+        });
         
             //    $query->when($filters['search']??false,function($query,$search){
             //     return  $query->where('nama', 'like', '%' . $search . '%')

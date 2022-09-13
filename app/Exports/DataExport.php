@@ -3,16 +3,19 @@
 namespace App\Exports;
 
 use App\Models\Dataentry;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromView;
+use Illuminate\Contracts\View\View;
 
-class DataExport implements FromCollection
+class DataExport implements FromView
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function view(): View
     {
-        return Dataentry::all();
+        return view('dashboard.SurfaceWater.Master.export', [
+            'Input' => Dataentry::all()
+        ]);
     }
 }
 

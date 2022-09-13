@@ -28,7 +28,7 @@ class ResumeBulananNoise extends Model
     }
     public function CodeLocationNM()
     {
-        return $this->belongsTo(Lokasi::class,'locationResume');
+        return $this->belongsTo(Lokasi::class,'locationresume');
     }
     public function user()
     {

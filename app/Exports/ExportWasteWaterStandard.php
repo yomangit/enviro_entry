@@ -5,7 +5,7 @@ namespace App\Exports;
 use App\Models\Wastewaterstandard;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
-use Maatwebsite\Excel\Concerns\FromCollection;
+
 
 class ExportWasteWaterStandard implements FromView
 {
@@ -15,7 +15,7 @@ class ExportWasteWaterStandard implements FromView
     public function view(): View
     {
         return view('dashboard.WasteWater.QualityStandard.export', [
-            'QualityStd' => Wastewaterstandard::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->get()
+            'QualityStd' => Wastewaterstandard::with('user')->filter(request(['fromDate', 'search']))->get()
         ]);
     }
 }

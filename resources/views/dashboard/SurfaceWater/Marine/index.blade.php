@@ -51,20 +51,12 @@
                         @endforeach
                     </table>
                     @endif
+                    @can('admin')
                     <a href="/surfacewater/marinesurfacewater/pointid" class="btn bg-gradient-info btn-xs ml-2 my-1 ">Code Sample</a>
                     <a href="/surfacewater/marinesurfacewater/quality" class="btn bg-gradient-info btn-xs my-1 ">Table Standard</a>
-
-                </div>
-                <div class="card-body">
-                    <div class="content">
-                        <div class="row mb-2 p-0">
-                            <div class="col-6 col-md-4 form-inline">
-                                <a href="/surfacewater/marinesurfacewater/create" class="btn bg-gradient-secondary btn-xs ml-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                <a href="/export/marinesurfacewater" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                                <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
-                            </div>
-                            <div class="col-12 col-md-8 d-flex justify-content-end form-inline">
-                                <form action="/surfacewater/marinesurfacewater" class="form-inline" autocomplete="off">
+                    @endcan
+                    <div class=" card-tools p-1 mr-2 form-inline">
+                    <form action="/surfacewater/marinesurfacewater" class="form-inline" autocomplete="off">
                                     <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                         <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                     </div>
@@ -75,7 +67,7 @@
                                     </div>
                                     <div style="width: 118px;" class="input-group mr-1">
                                         <select class="form-control form-control-sm " name="search">
-                                            <option value="" selected>Code Sample</option>
+                                            <option value="" selected>Point ID</option>
                                             @foreach ($code_units as $code)
                                             @if ( request('search')==$code->nama)
                                             <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
@@ -95,14 +87,20 @@
                                 <form action="/surfacewater/marinesurfacewater">
                                     <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                 </form>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="content">
+                       @can('admin')
+                       <div class="row mb-2 p-0">
+                            <div class="col-6 col-md-4 form-inline">
+                                <a href="/surfacewater/marinesurfacewater/create" class="btn bg-gradient-secondary btn-xs ml-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                <a href="/export/marinesurfacewater" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
                             </div>
+                         
                         </div>
-
-
-
-
-
-
+                       @endcan
                         <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
@@ -130,11 +128,11 @@
                                 <div class="card">
 
                                     <div class="card-body table-responsive">
-                                        <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <table class="table table-bordered  table-sm   table-striped">
                                             <thead class="text-center" style=" color:#581845;font-size: 12px">
-                                                <tr>
+                                                <tr class="table-info">
                                                     <th class="align-middle">No</th>
-                                                    <th class="align-middle" colspan="2">Quality Standard</th>
+                                                    <th class="align-middle" @if(!auth()->user()->is_admin) colspan="2" @else colspan="3" @endif >Quality Standard</th>
                                                     <th class="align-middle">Clarity</th>
                                                     <th class="align-middle">Temperature (Water)</th>
                                                     <th class="align-middle">Garbage</th>
@@ -149,12 +147,12 @@
 
                                                 </tr>
                                                 @php
-                                                $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                $no1 = 1;
                                                 @endphp
                                                 @foreach($QualityStandard as $standard)
-                                                <tr style="background-color: #eee8cd">
-                                                    <td>{{$no++}}</td>
-                                                    <th class="align-middle" colspan="2">{{$standard->nama}}</th>
+                                                <tr >
+                                                    <td>{{$no1++}}</td>
+                                                    <th class="align-middle" @if(!auth()->user()->is_admin) colspan="2" @else colspan="3" @endif >{{$standard->nama}}</th>
                                                     <td>{{$standard->clarity}}</td>
                                                     <td>{{$standard->temperature_water}}</td>
                                                     <td>{{$standard->garbage}}</td>
@@ -175,30 +173,20 @@
                                                 @php
                                                 $no = 1 + ($MarineSurfacewater->currentPage() - 1) * $MarineSurfacewater->perPage();
                                                 @endphp
-                                                <tr style="background-color: #b3dbf6;font-size: 10px">
+                                                <tr class="table-primary">
                                                     <th class="align-middle">*</th>
+                                                    @can('admin')
+                                                    <th class="align-middle"> Action</th>
+                                                    @endcan
                                                     <th class="align-middle">Name</th>
                                                     <th class="align-middle">Date</th>
-                                                    <th colspan="10">Data Entry</th>
-                                                    <th class="align-middle"> Action</th>
-
+                                                    <th colspan="11">Data Entry</th>
+                                                    
                                                 </tr>
                                                 @foreach($MarineSurfacewater as $item)
                                                 <tr style=" color:#581845;font-size: 12px">
                                                     <td>{{$no++}}</td>
-                                                    <td>{{$item->PointId->nama}}</td>
-                                                    <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
-                                                    <td>{{$item->clarity}}</td>
-                                                    <td>{{$item->temperature_water}}</td>
-                                                    <td>{{$item->garbage}}</td>
-                                                    <td>{{$item->oil_ayer}}</td>
-                                                    <td>{{$item->odour}}</td>
-                                                    <td>{{$item->colour}}</td>
-                                                    <td>{{$item->turbidity}}</td>
-                                                    <td>{{$item->total_suspended_solids}}</td>
-                                                    <td>{{$item->salinity_in_situ}}</td>
-                                                    <td>{{$item->total_dissolved_solids}}</td>
-                                                    <td>{{$item->conductivity_insitu}}</td>
+                                                    @can('admin')
                                                     <td>
                                                         <div style="width: 50px">
                                                             <a href="/surfacewater/marinesurfacewater/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
@@ -214,6 +202,21 @@
                                                         </div>
 
                                                     </td>
+                                                    @endcan
+                                                    <td>{{$item->PointId->nama}}</td>
+                                                    <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                    <td>{{$item->clarity}}</td>
+                                                    <td>{{$item->temperature_water}}</td>
+                                                    <td>{{$item->garbage}}</td>
+                                                    <td>{{$item->oil_ayer}}</td>
+                                                    <td>{{$item->odour}}</td>
+                                                    <td>{{$item->colour}}</td>
+                                                    <td>{{$item->turbidity}}</td>
+                                                    <td>{{$item->total_suspended_solids}}</td>
+                                                    <td>{{$item->salinity_in_situ}}</td>
+                                                    <td>{{$item->total_dissolved_solids}}</td>
+                                                    <td>{{$item->conductivity_insitu}}</td>
+                                                    
                                                 </tr>
                                                 @endforeach
                                             </tbody>
@@ -240,20 +243,20 @@
                             <div class="tab-pane fade" id="custom-content-above-Anions" role="tabpanel" aria-labelledby="custom-content-above-Anions-tab">
                                 <div class="card">
                                     <div class="card-body table-responsive">
-                                        <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <table class="table table-bordered  table-sm   table-striped">
                                             <thead class="text-center" style=" color:#581845;font-size: 12px">
-                                                <tr>
+                                                <tr class="table-info">
                                                     <th class="align-middle">No</th>
                                                     <th class="align-middle" colspan="2">Quality Standard</th>
                                                     <th class="align-middle">pH</th>
                                                     <th class="align-middle">Sulphide</th>
                                                 </tr>
                                                 @php
-                                                $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                $no1 = 1;
                                                 @endphp
                                                 @foreach($QualityStandard as $standard)
-                                                <tr style="background-color: #eee8cd">
-                                                    <td>{{$no++}}</td>
+                                                <tr >
+                                                    <td>{{$no1++}}</td>
                                                     <th class="align-middle" colspan="2" colspan="2">{{$standard->nama}}</th>
                                                     <th class="align-middle">{{$standard->ph}}</th>
                                                     <td>{{$standard->sulphide}}</td>
@@ -265,7 +268,7 @@
                                                 @php
                                                 $no = 1 + ($MarineSurfacewater->currentPage() - 1) * $MarineSurfacewater->perPage();
                                                 @endphp
-                                                <tr style="background-color: #b3dbf6;font-size: 10px">
+                                                <tr class="table-primary">
                                                     <th class="align-middle">*</th>
                                                     <th class="align-middle">Name</th>
                                                     <th class="align-middle">Date</th>
@@ -305,9 +308,9 @@
                             <div class="tab-pane fade" id="custom-content-above-Nutrient" role="tabpanel" aria-labelledby="custom-content-above-Nutrient-tab">
                                 <div class="card">
                                     <div class="card-body table-responsive">
-                                        <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <table class="table table-bordered  table-sm   table-striped">
                                             <thead class="text-center" style=" color:#581845;font-size: 12px">
-                                                <tr>
+                                                <tr class="table-info">
                                                     <th class="align-middle">No</th>
                                                     <th class="align-middle" colspan="2">Quality Standard</th>
                                                     <th class="align-middle">Ammonia (N-NH3)</th>
@@ -315,11 +318,11 @@
                                                     <th class="align-middle">Total-Phosphate (P-PO4)</th>
                                                 </tr>
                                                 @php
-                                                $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                $no1 = 1;
                                                 @endphp
                                                 @foreach($QualityStandard as $standard)
-                                                <tr style="background-color: #eee8cd">
-                                                    <td>{{$no++}}</td>
+                                                <tr >
+                                                    <td>{{$no1++}}</td>
                                                     <td colspan="2">{{$standard->nama}}</td>
                                                     <td>{{$standard->ammonia_n_nh3}}</td>
                                                     <td>{{$standard->nitrate_n_no3}}</td>
@@ -331,7 +334,7 @@
                                                 @php
                                                 $no = 1 + ($MarineSurfacewater->currentPage() - 1) * $MarineSurfacewater->perPage();
                                                 @endphp
-                                                <tr style="background-color: #b3dbf6;font-size: 10px">
+                                                <tr class="table-primary">
                                                     <th class="align-middle">*</th>
                                                     <th class="align-middle">Name</th>
                                                     <th class="align-middle">Date</th>
@@ -372,20 +375,20 @@
                             <div class="tab-pane fade" id="custom-content-above-Cyanide" role="tabpanel" aria-labelledby="custom-content-above-Cyanide-tab">
                                 <div class="card">
                                     <div class="card-body table-responsive">
-                                        <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <table class="table table-bordered  table-sm   table-striped">
                                             <thead class="text-center" style=" color:#581845;font-size: 12px">
-                                                <tr>
+                                                <tr class="table-info">
                                                     <th class="align-middle">No</th>
                                                     <th class="align-middle" colspan="2">Quality Standard</th>
                                                     <th class="align-middle">Cyanide (Total)</th>
                                                     <th class="align-middle">Total Coliform</th>
                                                 </tr>
                                                 @php
-                                                $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                $no1 = 1;
                                                 @endphp
                                                 @foreach($QualityStandard as $standard)
-                                                <tr style="background-color: #eee8cd">
-                                                    <td>{{$no++}}</td>
+                                                <tr >
+                                                    <td>{{$no1++}}</td>
                                                     <th class="align-middle" colspan="2">{{$standard->nama}}</th>
                                                     <td>{{$standard->cyanide_total}}</td>
                                                     <td>{{$standard->total_coliform}}</td>
@@ -396,7 +399,7 @@
                                                 @php
                                                 $no = 1 + ($MarineSurfacewater->currentPage() - 1) * $MarineSurfacewater->perPage();
                                                 @endphp
-                                                <tr style="background-color: #b3dbf6;font-size: 10px">
+                                                <tr class="table-primary">
                                                     <th class="align-middle">*</th>
                                                     <th class="align-middle">Name</th>
                                                     <th class="align-middle">Date</th>
@@ -435,9 +438,9 @@
                             <div class="tab-pane fade " id="custom-content-above-Metal" role="tabpanel" aria-labelledby="custom-content-above-Metal-tab">
                                 <div class="card">
                                     <div class="card-body table-responsive">
-                                        <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <table class="table table-bordered  table-sm   table-striped">
                                             <thead class="text-center" style=" color:#581845;font-size: 12px">
-                                                <tr>
+                                                <tr class="table-info">
                                                     <th class="align-middle">No</th>
                                                     <th class="align-middle" colspan="2">Quality Standard</th>
                                                     <th class="align-middle">Chromium Hexavalent-Total(Cr-VI)</th>
@@ -451,11 +454,11 @@
                                                     <th class="align-middle">Mercury-Dissolved (Hg)</th>
                                                 </tr>
                                                 @php
-                                                $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                $no1 = 1;
                                                 @endphp
                                                 @foreach($QualityStandard as $standard)
-                                                <tr style="background-color: #eee8cd">
-                                                    <td>{{$no++}}</td>
+                                                <tr >
+                                                    <td>{{$no1++}}</td>
                                                     <th class="align-middle" colspan="2">{{$standard->nama}}</th>
                                                     <td>{{$standard->chromium_hexavalent_total_cr_vi}}</td>
                                                     <td>{{$standard->arsenic_hydrid_dissolved_as}}</td>
@@ -473,7 +476,7 @@
                                                 @php
                                                 $no = 1 + ($MarineSurfacewater->currentPage() - 1) * $MarineSurfacewater->perPage();
                                                 @endphp
-                                                <tr style="background-color: #b3dbf6;font-size: 10px">
+                                                <tr class="table-primary">
                                                     <th class="align-middle">*</th>
                                                     <th class="align-middle">Name</th>
                                                     <th class="align-middle">Date</th>
@@ -519,9 +522,9 @@
                             <div class="tab-pane fade" id="custom-content-above-Organics" role="tabpanel" aria-labelledby="custom-content-above-Organics-tab">
                                 <div class="card">
                                     <div class="card-body table-responsive">
-                                        <table class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <table class="table table-bordered  table-sm   table-striped">
                                             <thead class="text-center" style=" color:#581845;font-size: 12px">
-                                                <tr>
+                                                <tr class="table-info">
                                                     <th class="align-middle">No</th>
                                                     <th class="align-middle" colspan="2">Quality Standard</th>
                                                     <th class="align-middle">Biologycal Oxygen Demand</th>
@@ -540,11 +543,11 @@
                                                     <th class="align-middle">Total Petroleum Hydrocarbons</th>
                                                 </tr>
                                                 @php
-                                                $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                                $no1 = 1;
                                                 @endphp
                                                 @foreach($QualityStandard as $standard)
-                                                <tr style="background-color: #eee8cd">
-                                                    <td>{{$no++}}</td>
+                                                <tr >
+                                                    <td>{{$no1++}}</td>
                                                     <th class="align-middle" colspan="2">{{$standard->nama}}</th>
                                                     <td>{{$standard->biologycal_oxygen_demand}}</td>
                                                     <td>{{$standard->dissolved_oxygen}}</td>
@@ -567,7 +570,7 @@
                                                 @php
                                                 $no = 1 + ($MarineSurfacewater->currentPage() - 1) * $MarineSurfacewater->perPage();
                                                 @endphp
-                                                <tr style="background-color: #b3dbf6;font-size: 10px">
+                                                <tr class="table-primary">
                                                     <th class="align-middle">*</th>
                                                     <th class="align-middle">Name</th>
                                                     <th class="align-middle">Date</th>

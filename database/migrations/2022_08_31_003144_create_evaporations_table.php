@@ -22,6 +22,7 @@ class CreateEvaporationsTable extends Migration
             $table->string("day_rainfall");
             $table->string("initial_water_elevation");
             $table->string("final_water_elevation");
+            $table->string("evaporation");
 
             $table->timestamps();
         });

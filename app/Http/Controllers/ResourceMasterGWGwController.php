@@ -21,11 +21,15 @@ class ResourceMasterGWGwController extends Controller
      */
     public function index()
     {
-
-        $grafiks = Mastergw::where('user_id',auth()->user()->id)
-            ->filter(request(['fromDate', 'search']))
-            ->paginate(30)
-            ->withQueryString();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafiks = Mastergw::with('user')
+            ->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
         $tanggal = [];
         $suhu = [];
         $ph = [];
@@ -33,7 +37,7 @@ class ResourceMasterGWGwController extends Controller
         $ph1 = [];
         foreach ($grafiks as $grafik) 
         {
-            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
             if ($suhu1[] = $grafik->temperatur === '-') {
                 //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
                 $suhu[] = '';
@@ -60,7 +64,7 @@ class ResourceMasterGWGwController extends Controller
             'date' => $tanggal,
             'suhu' => $suhu,
             'ph' => $ph,
-            'Master'=>Mastergw::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(30)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Master'=>Mastergw::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->paginate(30)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
     }
@@ -151,13 +155,7 @@ class ResourceMasterGWGwController extends Controller
      */
     public function show(Mastergw $mastergw)
     {
-        return view('dashboard.GroundWater.Mastergw.show',[
-          
-            'code_units'=>Codesamplegw::all(),
-            "tittle"=>"WQ-01",
-            'breadcrumb'=>'Daily Report',
-            'Master'=>$mastergw
-        ]);
+      
     }
 
 

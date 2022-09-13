@@ -6,12 +6,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Input {{ $breadcrumb }}</h1>
+                    <h1> {{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/surfacewater/marinesurfacewater">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/surfacewater/marinesurfacewater/quality">{{$tittle}}</a></li>
                         <li class="breadcrumb-item active">Create Data</li>
                     </ol>
                 </div>
@@ -22,8 +21,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -31,24 +30,23 @@
                         {{ session('success',$Tailing->nama) }}
                     </div>
                     @endif
-                    <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
-                        <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="custom-content-above-Metals-tab" data-toggle="pill" href="#custom-content-above-Metals" role="tab" aria-controls="custom-content-above-Metals" aria-selected="true">TCLP Metals</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="custom-content-above-Inorganic-tab" data-toggle="pill" href="#custom-content-above-Inorganic" role="tab" aria-controls="custom-content-above-Inorganic" aria-selected="false">TCLP Inorganic</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="custom-content-above-Organic-tab" data-toggle="pill" href="#custom-content-above-Organic" role="tab" aria-controls="custom-content-above-Organic" aria-selected="false">TCLP Organic**</a>
-                            </li>
+                    <div class="card-titel m-2 font-weight-bold">Form Edit</div>
 
-                        </ul>
-
-                    </ul>
                 </div>
 
                 <div class="card-body">
+                    <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="custom-content-above-Metals-tab" data-toggle="pill" href="#custom-content-above-Metals" role="tab" aria-controls="custom-content-above-Metals" aria-selected="true">TCLP Metals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-content-above-Inorganic-tab" data-toggle="pill" href="#custom-content-above-Inorganic" role="tab" aria-controls="custom-content-above-Inorganic" aria-selected="false">TCLP Inorganic</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-content-above-Organic-tab" data-toggle="pill" href="#custom-content-above-Organic" role="tab" aria-controls="custom-content-above-Organic" aria-selected="false">TCLP Organic**</a>
+                        </li>
+
+                    </ul>
 
                     <form action="/tailing/{{ $Tailing->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @method('put')
@@ -78,7 +76,7 @@
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                     <div class="col-sm-4">
                                         <div class="input-group date" id="reservationdate4" data-target-input="nearest">
-                                            <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date',$Tailing->date) }}" />
+                                            <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date',date('d-m-Y',strtotime($Tailing->date))) }}" />
                                             @error('date')
                                             <span class=" invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -1343,11 +1341,26 @@
                                                 </div>
                                                 <!-- /.form-group -->
                                             </div>
+                                            <div class="col-12 col-sm-4">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Total Organic Matter (TOM)</label>
+                                                        <div class="col-sm-5">
+                                                            <input name="tom" type="text" class="form-control form-control-sm @error('tom') is-invalid @enderror" value="{{ old('tom',$Tailing->tom) }}" />
+                                                            @error('tom')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
                                         </div><!-- end row -->
-                                        <div class="card-footer d-flex justify-content-end">
-                                            <button type="submit" class="btn bg-gradient-success btn-sm ">Save</button>
-                                        </div>
+                                        
                                     </div>
+                                    <div class="card-footer d-flex justify-content-end">
+                                    <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -1357,112 +1370,5 @@
         </div>
     </section>
 </div>
-@section('footer')
-<script>
-    $(function() {
-        //Initialize Select2 Elements
-        $('.select2').select2()
 
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
-        })
-
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', {
-            'placeholder': 'dd/mm/yyyy'
-        })
-        //Datemask2 mm/dd/yyyy
-        $('#datemask2').inputmask('mm/dd/yyyy', {
-            'placeholder': 'mm/dd/yyyy'
-        })
-        //Money Euro
-        $('[data-mask]').inputmask()
-
-        //Date picker
-        $('#reservationdate').datetimepicker({
-            format: 'YYYY-MM-DD'
-        });
-        //Timepicker
-        $('#timepicker').datetimepicker({
-            format: 'LT'
-        })
-        $('#timepicker2').datetimepicker({
-            format: 'LT'
-        })
-
-    })
-    // BS-Stepper Init
-    document.addEventListener('DOMContentLoaded', function() {
-        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-    })
-
-    // DropzoneJS Demo Code Start
-    Dropzone.autoDiscover = false
-
-    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-    var previewNode = document.querySelector("#template")
-    previewNode.id = ""
-    var previewTemplate = previewNode.parentNode.innerHTML
-    previewNode.parentNode.removeChild(previewNode)
-
-    var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-        url: "/target-url", // Set the url
-        thumbnailWidth: 80,
-        thumbnailHeight: 80,
-        parallelUploads: 20,
-        previewTemplate: previewTemplate,
-        autoQueue: false, // Make sure the files aren't queued until manually added
-        previewsContainer: "#previews", // Define the container to display the previews
-        clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-    })
-
-    myDropzone.on("addedfile", function(file) {
-        // Hookup the start button
-        file.previewElement.querySelector(".start").onclick = function() {
-            myDropzone.enqueueFile(file)
-        }
-    })
-
-    // Update the total progress bar
-    myDropzone.on("totaluploadprogress", function(progress) {
-        document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
-    })
-
-    myDropzone.on("sending", function(file) {
-        // Show the total progress bar when upload starts
-        document.querySelector("#total-progress").style.opacity = "1"
-        // And disable the start button
-        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
-    })
-
-    // Hide the total progress bar when nothing's uploading anymore
-    myDropzone.on("queuecomplete", function(progress) {
-        document.querySelector("#total-progress").style.opacity = "0"
-    })
-
-    // Setup the buttons for all transfers
-    // The "add files" button doesn't need to be setup because the config
-    // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function() {
-        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
-    }
-    document.querySelector("#actions .cancel").onclick = function() {
-        myDropzone.removeAllFiles(true)
-    }
-</script>
-@endsection
-<script>
-    function previewImage() {
-        const image = document.querySelector('#hard_copy');
-        const imgPreview = document.querySelector('.img-preview');
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-        oFReader.readAsDataURL(image.files[0]);
-        oFReader.onload = function(oFREvent) {
-            imgPreview.src = oFREvent.target.result;
-        }
-    }
-</script>
 @endsection

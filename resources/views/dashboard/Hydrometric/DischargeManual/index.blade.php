@@ -20,7 +20,7 @@
                     <div class="card-header p-0">
 
                         @if (session()->has('success'))
-                        <div class="alert alert-success alert-dismissible form-inline">
+                        <div class="alert alert-success alert-dismissible form-inline m-2">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                             {{ session('success') }}
@@ -43,25 +43,13 @@
                             @endforeach
                         </div>
                         @endif
+                     
                         @can('admin')
                         <a href="/hydrometric/dischargemanual/pointid" class="btn bg-gradient-info btn-xs ml-1 my-2">Point ID</a>
-                        <a href="/hydrometric/dischargemanual/standard" class="btn bg-gradient-info btn-xs  my-2">Quality
-                            Standard </a>
+                        <a href="/wastewater/wastewaterstandard" class="btn bg-gradient-info btn-xs  ml-1 my-1">Table Standard</a>
                         @endcan
-                    </div>
-                    <div class="card-body table-responsive">
-                        <section class="content ">
-
-                            <div class="row  p-0 mb-3">
-                                <div class="col-6 col-md-4 form-inline ">
-                                    <a href="/hydrometric/dischargemanual/create" class="btn bg-gradient-secondary btn-xs ml-1 "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                    <a href="/export/dischargemanual" class="btn  bg-gradient-secondary btn-xs ml-1 " data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-download mr-1"></i>Excel</a>
-                                    <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1 " data-toggle="modal" data-target="#modal-default">
-                                        <i class="fas fa-upload mr-1"></i>Exel
-                                    </a>
-                                </div>
-                                <div class="col-12 col-md-8  d-flex justify-content-end form-inline">
-                                    <div class="row form-inline">
+                       
+                        <div class=" card-tools p-1 mr-2 form-inline">
                                         <form action="/hydrometric/dischargemanual" class="form-inline" autocomplete="off">
                                             <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                                 <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -74,7 +62,7 @@
 
                                             <div style="width: 118px;" class="input-group mr-1">
                                                 <select class="form-control form-control-sm " name="search">
-                                                    <option value="" selected>Code Sample</option>
+                                                    <option value="" selected>Point ID</option>
                                                     @foreach ($code_units as $code)
                                                     @if ( request('search')==$code->nama)
                                                     <option value="{{($code->nama)}}" selected>
@@ -93,208 +81,219 @@
                                         <form action="/hydrometric/dischargemanual">
                                             <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
                                         </form>
-                                    </div>
+                                </div>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <section class="content ">
+
+                           @can('admin')
+                           <div class="row  p-0 mb-3">
+                                <div class="col-6 col-md-4 form-inline ">
+                                    <a href="/hydrometric/dischargemanual/create" class="btn bg-gradient-secondary btn-xs ml-1 "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                    <a href="/export/dischargemanual" class="btn  bg-gradient-secondary btn-xs ml-1 " data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-download mr-1"></i>Excel</a>
+                                    <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1 " data-toggle="modal" data-target="#modal-default">
+                                        <i class="fas fa-upload mr-1"></i>Exel
+                                    </a>
                                 </div>
                             </div>
-                            @if ($Hydrometric->count() && $standard->count())
-                            <table role="grid" id="example2" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                <thead style=" color:#005245">
-                                    <tr class="text-center" style="font-size: 12px">
-                                        <th>No</th>
-                                        @can('admin')
-                                        <th>Action</th>
-                                        @endcan
-                                        <th>Code Sample</th>
-                                        <th>
-                                            <div style="width: 65px"> Date</div>
-                                        </th>
-                                        <th>Start Time</th>
-                                        <th>Stop Time</th>
-                                        <th>TSS Standard</th>
-                                        <th>TSS (mg/L)</th>
-                                        <th>PH Standard Max.</th>
-                                        <th>PH Standard Min.</th>
-                                        <th>PH</th>
-                                        <th>DO Standard</th>
-                                        <th>DO</th>
-                                        <th>Redox Standard</th>
-                                        <th>Redox(mEV)</th>
-                                        <th>Conductivity Standard</th>
-                                        <th>Conductivity (uS/cm)</th>
-                                        <th>TDS Standard</th>
-                                        <th>TDS (mg/L)</th>
-                                        <th>Temperatur Standard</th>
-                                        <th>Temperatur </th>
-                                        <th>Salinity (ppt)</th>
-                                        <th>Turbidity (NTU)</th>
-                                        <th>Cyanide</th>
-                                        <th>Level GB(m)</th>
-                                        <th>Level Loger (m)</th>
-                                        <th>Debit (m<sup>3</sup>/<sub>s</sub>)</th>
-                                        <th>Debit (m<sup>3</sup>/<sub>day</sub>)</th>
-                                        <th>Water Condition</th>
-                                        <th>water Color</th>
-                                        <th>Odor</th>
-                                        <th>Rain Before Sampling</th>
-                                        <th>Rain During Sampling</th>
-                                        <th>Oil Layer</th>
-                                        <th>Sorce of Pollution</th>
-                                        <th>Sampler</th>
-                                        <th> Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody style="text-align: center">
-                                    @php
-                                    $no = 1 + ($Hydrometric->currentPage() - 1) * $Hydrometric->perPage();
-                                    @endphp
-                                    @foreach ($Hydrometric as $data)
-                                    <tr style="font-size: 12px">
-                                        <td>{{ $no++ }}</td>
-                                        @can('admin')
-                                        <td>
-                                            <div style="width: 80px">
+                           @endcan
+                            @if ($Hydrometric->count())
+                            <table role="grid" id="example2" class="table table-bordered table-sm  table-striped">
+                            <thead style=" color:#005245">
+                                <tr class="text-center" style="font-size: 11px">
+                                    <th>No</th>
+                                    @can('admin')
+                                    <th>Action</th>
+                                    @endcan
+                                    <th>Code Sample</th>
+                                    <th>
+                                        <div style="width: 65px"> Date</div>
+                                    </th>
+                                    <th>Start Time</th>
+                                    <th>Stop Time</th>
+                                    <th>TSS Standard</th>
+                                    <th>TSS (mg/L)</th>
+                                    <th>PH Standard Min-Max</th>
+                                    <th>PH</th>
+                                    <th>DO Standard</th>
+                                    <th>DO</th>
+                                    <th>Redox Standard</th>
+                                    <th>Redox(mEV)</th>
+                                    <th>Conductivity Standard</th>
+                                    <th>Conductivity (uS/cm)</th>
+                                    <th>TDS Standard</th>
+                                    <th>TDS (mg/L)</th>
+                                    <th>Temperatur Standard</th>
+                                    <th>Temperatur </th>
+                                    <th>Salinity (ppt)</th>
+                                    <th>Turbidity (NTU)</th>
+                                    <th>Cyanide</th>
+                                    <th>Level GB(m)</th>
+                                    <th>Level Loger (m)</th>
+                                    <th>Debit (m<sup>3</sup>/<sub>s</sub>)</th>
+                                    <th>Debit (m<sup>3</sup>/<sub>day</sub>)</th>
+                                    <th>Water Condition</th>
+                                    <th>water Color</th>
+                                    <th>Odor</th>
+                                    <th>Rain Before Sampling</th>
+                                    <th>Rain During Sampling</th>
+                                    <th>Oil Layer</th>
+                                    <th>Sorce of Pollution</th>
+                                    <th>Sampler</th>
+                                    <th> Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align: center">
+                                @php
+                                $no = 1 + ($Hydrometric->currentPage() - 1) * $Hydrometric->perPage();
+                                @endphp
+                                @foreach ($Hydrometric as $data)
+                                <tr style="font-size: 12px">
+                                    <td>{{ $no++ }}</td>
+                                    @can('admin')
+                                    <td>
+                                        <div style="width: 80px">
 
-                                                <!-- <a href="/hydrometric/dischargemanual/{{ $data->failed_at }}"
+                                            <!-- <a href="/hydrometric/dischargemanual/{{ $data->failed_at }}"
                                                                                 class="btn btn btn-outline-primary btn-xs btn-group"
                                                                                 data-toggle="tooltip" data-placement="top"
                                                                                 title="Detail">
                                                                                 <i class="far fa-eye"></i>
                                                                             </a> -->
-                                                <a href="/hydrometric/dischargemanual/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <i class="fas fa-pen"></i>
-                                                </a>
-                                                <form action="/hydrometric/dischargemanual/{{ $data->id }}" method="POST" class="d-inline">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-                                                </form>
+                                            <a href="/hydrometric/dischargemanual/{{ $data->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                            <form action="/hydrometric/dischargemanual/{{ $data->id }}" method="POST" class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
 
-                                            </div>
-                                        </td>
-                                        @endcan
-                                        <td>{{ $data->PointId->nama }}</td>
-                                        <td>{{ date('d-M-Y', strtotime( $data->date)) }}</td>
-                                        @If($data->start_time=='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->start_time}}</td>
-                                        @endif
-                                        @If($data->stop_time=='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->stop_time}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->tss }}</td>
+                                        </div>
+                                    </td>
+                                    @endcan
+                                    <td>{{ $data->PointId->nama }}</td>
+                                    <td>{{ date('d-M-Y', strtotime( $data->date)) }}</td>
+                                    @If($data->start_time=='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->start_time}}</td>
+                                    @endif
+                                    @If($data->stop_time=='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->stop_time}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->totalsuspendedsolids_tss }}</td>
 
-                                        @If($data->tss==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->tss}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->ph_max }}</td>
-                                        <td>{{ $data->standard->ph_min }}</td>
-                                        @If($data->ph==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->ph}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->do }}</td>
-                                        @If($data->do==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->do}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->redox }}</td>
-                                        @If($data->orp==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->orp}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->conductivity }}</td>
-                                        @If($data->conductivity==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->conductivity}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->tds }}</td>
-                                        @If($data->tds==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{$data->tds}}</td>
-                                        @endif
-                                        <td>{{ $data->standard->temperatur }}</td>
-                                        @If($data->temperatur==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->temperatur }}<sup>0</sup>C
-                                        </td>
-                                        @endif
+                                    @If($data->tss==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->tss}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->ph_min }}-{{$data->standard->ph_max}}</td>
+                                    @If($data->ph==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->ph}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->dissolvedoxygen_do }}</td>
+                                    @If($data->do==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->do}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->redox }}</td>
+                                    @If($data->orp==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->orp}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->conductivity }}</td>
+                                    @If($data->conductivity==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->conductivity}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->totaldissolvedsolids_tds }}</td>
+                                    @If($data->tds==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{$data->tds}}</td>
+                                    @endif
+                                    <td>{{ $data->standard->temperature }}</td>
+                                    @If($data->temperatur==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->temperatur }}<sup>0</sup>C
+                                    </td>
+                                    @endif
 
-                                        <td>{{ $data->salinity }}</td>
-                                        <td>{{ $data->turbidity }}</td>
-                                        <td>{{ $data->cyanide }}</td>
-                                        <td>{{ $data->level }}</td>
-                                        <td>{{ $data->lvl_lgr }}</td>
-                                        <td>{{ $data->debit_s }}</td>
-                                        <td>{{ $data->debit_d }}</td>
-                                        @if($data->water_condition==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->water_condition }}</td>
-                                        @endif
-                                        @if($data->water_color==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->water_color }}</td>
-                                        @endif
-                                        @if($data->odor==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->odor }}</td>
-                                        @endif
-                                        @if($data->rain==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->rain }}</td>
-                                        @endif
-                                        @if($data->rain_during_sampling==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->rain_during_sampling }}</td>
-                                        @endif
-                                        @if($data->oil_layer==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->oil_layer }}</td>
-                                        @endif
-                                        @if($data->source_pollution==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
-                                        <td>{{ $data->source_pollution }}</td>
-                                        @endif
-                                        @if($data->sampler==='no data')
-                                        <td style="color: red;">No Data</td>
-                                        @else
+                                    <td>{{ $data->salinity }}</td>
+                                    <td>{{ $data->turbidity }}</td>
+                                    <td>{{ $data->cyanide }}</td>
+                                    <td>{{ $data->level }}</td>
+                                    <td>{{ $data->lvl_lgr }}</td>
+                                    <td>{{ $data->debit_s }}</td>
+                                    <td>{{ $data->debit_d }}</td>
+                                    @if($data->water_condition==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->water_condition }}</td>
+                                    @endif
+                                    @if($data->water_color==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->water_color }}</td>
+                                    @endif
+                                    @if($data->odor==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->odor }}</td>
+                                    @endif
+                                    @if($data->rain==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->rain }}</td>
+                                    @endif
+                                    @if($data->rain_during_sampling==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->rain_during_sampling }}</td>
+                                    @endif
+                                    @if($data->oil_layer==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->oil_layer }}</td>
+                                    @endif
+                                    @if($data->source_pollution==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
+                                    <td>{{ $data->source_pollution }}</td>
+                                    @endif
+                                    @if($data->sampler==='no data')
+                                    <td style="color: red;">No Data</td>
+                                    @else
 
-                                        <td>{{ $data->sampler }}</td>
-                                        <td>{{ $data->remarks }}</td>
+                                    <td>{{ $data->sampler }}</td>
+                                    <td>{{ $data->remarks }}</td>
 
 
-                                        @endif
-                                        <!-- <td> <a href="/{{ $data->hard_copy }}">
+                                    @endif
+                                    <!-- <td> <a href="/{{ $data->hard_copy }}">
                                                                 @if ($data->hard_copy)
                                                                 <img class="img-fluid" src="{{ asset('storage/' . $data->hard_copy) }}" style="width: 40px; height: 24px;">
                                                                 @endif
 
                                                             </a>
                                                         </td> -->
-                                    </tr>
-                                    @endforeach
+                                </tr>
+                                @endforeach
 
-                                </tbody>
-                            </table>
+                            </tbody>
+                        </table>
 
                             @else
                             <p class="text-center fs-4">Not Data Found</p>
@@ -354,12 +353,15 @@
                     </div>
                    
                 </div>
+                @if($Hydrometric->count())
                 <div class="card">
                         <div class="card-header">
                             <div class="card-title text center">Water Level & Volume Pond </div>
                         </div>
                         <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
                     </div>
+                @endif
+                
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -406,99 +408,109 @@
                 }
             },
             series: [{
-                        name: 'Temperatur',
-                        color:'#1F2833',
-                        visible: false,
-                        data: {!! json_encode($suhu) !!},
-                        marker: {
-                            symbol: 'square'
-                        },
-                    }, {
-                        name: 'Conductivity (µS/cm)',
-                        color:'#DE7A22',
-                        visible: false,
-                        marker: {
-                            symbol: 'diamond'
-                        },
-                        data: {!! json_encode($conductivity) !!}
-                    },{
-                        name: 'TDS',
-                        visible: false,
-                        color:'#F4CC70',
-                        marker: {
-                            symbol: 'triangle'
-                        },
-                        data: {!! json_encode($tds) !!}
-                    }, {
-                        name: 'TSS',
-                        visible: false,
-                        color:'#20948B',
-                        marker: {
-                            symbol: 'circle'
-                        },
-                        data: {!! json_encode($tss) !!}
-                    }, {
-                        name: 'PH',
-                        
-                        color:'#6AB187',
-                        marker: {
-                            symbol: 'triangle-down'
-                        },
-                        data: {!! json_encode($ph) !!}
-                    },{
-                        name: 'DO',
-                        
-                        color:'#288ba8',
-                        marker: {
-                            symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-                        },
-                        data: {!! json_encode($do) !!}
-                    },{
-                        name: 'DO Std',
-                        visible: false,
-                        color:'#e389b9',
-                        dashStyle: 'longdash',
-                        marker: {
-                            symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-                        },
-                        data: {!! json_encode($doStandard) !!}
-                    },{
-                        name: 'TSS Std',
-                        visible: false,
-                        color:'#ffce30',
-                        dashStyle: 'longdash',
-                        marker: {
-                            symbol: 'circle'
-                        },
-                        data: {!! json_encode($tssStandard)!!}
-                    },{
-                        name: 'Conductivity Std',
-                        visible: false,
-                        color:'#BDB76B',
-                        dashStyle: 'longdash',
-                        marker: {
-                            symbol: 'diamond'
-                        },
-                        data: {!! json_encode($cdvStd)!!}
-                    },{
-                        name: 'PH Min',
-                        visible: false,
-                        color:'#32CD32',
-                        dashStyle: 'longdash',
-                        marker: {
-                            symbol: 'triangle-down'
-                        },
-                        data: {!! json_encode($phMin)!!}
-                    },{
-                        name: 'PH Max',
-                        visible: false,
-                        color:'#FF00FF',
-                        dashStyle: 'longdash',
-                        marker: {
-                            symbol: 'triangle-down'
-                        },
-                        data: {!! json_encode($phMax)!!}
-                    }]
+        name: 'Temperatur',
+            color: '#1F2833',
+            visible: false,
+            data: {!!json_encode($suhu) !!},
+            marker: {
+                symbol: 'square'
+            },
+
+    },{
+            name: 'Conductivity (µS/cm)',
+            color: '#DE7A22',
+            visible: false,
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($conductivity) !!}
+        }, {
+            name: 'Conductivity Std',
+            visible: false,
+            color: '#BDB76B',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($cdvStd) !!}
+        },{
+            name: 'TDS',
+            visible: false,
+            color: '#F4CC70',
+            marker: {
+                symbol: 'triangle'
+            },
+            data: {!!json_encode($tds) !!}
+        },  {
+            name: 'TDS Std',
+            visible: false,
+            color: '#4d7902',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tdsStandard) !!}
+        }, {
+            name: 'TSS',
+            visible: false,
+            color: '#20948B',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tss) !!}
+        },{
+            name: 'TSS Std',
+            visible: false,
+            color: '#ffce30',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tssStandard) !!}
+        }, {
+            name: 'DO',
+
+            color: '#288ba8',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($do) !!}
+        }, {
+            name: 'DO Std',
+            visible: false,
+            color: '#e389b9',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($doStandard) !!}
+        }, {
+            name: 'PH',
+
+            color: '#6AB187',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($ph) !!}
+        }, {
+            name: 'PH Min',
+            visible: false,
+            color: '#32CD32',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMin) !!}
+        }, {
+            name: 'PH Max',
+            visible: false,
+            color: '#FF00FF',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMax) !!}
+        }]
         });
 
 

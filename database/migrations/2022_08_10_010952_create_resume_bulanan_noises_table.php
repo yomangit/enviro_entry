@@ -16,7 +16,7 @@ class CreateResumeBulananNoisesTable extends Migration
         Schema::create('resume_bulanan_noises', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('locationResume');
+            $table->foreignId('locationresume');
             $table->date('date');
             $table->string('l1');
             $table->string('l2');

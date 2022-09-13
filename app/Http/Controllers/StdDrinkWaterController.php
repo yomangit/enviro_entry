@@ -68,8 +68,8 @@ class StdDrinkWaterController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'conductivity'=>'required',
             'nama'=>'required',
+            'conductivity'=>'required',
             'tds'=>'required',
             'tss'=>'required',
             'turbidity'=>'required',

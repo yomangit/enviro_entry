@@ -32,6 +32,10 @@ class Wastewater extends Model
     {
         return $this->belongsTo(Wastewaterpointid::class, 'point_id');
     }
+    public function StandardId()
+    {
+        return $this->belongsTo(Wastewaterstandard::class, 'standard_id');
+    }
     public function user()
     {
         return $this->belongsTo(User::class,'user_id');

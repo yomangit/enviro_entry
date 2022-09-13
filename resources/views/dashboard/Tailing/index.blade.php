@@ -16,10 +16,10 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-primary card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible form-inline">
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
                         {{ session('success') }}
@@ -29,74 +29,79 @@
 
                     <table class="table table-danger">
                         <tr>
-                            <th>Row</th>
-                            <th>Attribute</th>
-                            <th>Errors</th>
-                            <th>Value</th>
+                            <th class="align-middle">Row</th>
+                            <th class="align-middle">Attribute</th>
+                            <th class="align-middle">Errors</th>
+                            <th class="align-middle">Value</th>
                         </tr>
                         @foreach (session()->get('failures') as $validation)
                         <tr>
-                            <td>{{$validation->row()}}</td>
-                            <td>{{$validation->attribute()}}</td>
-                            <td>
+                            <td class="align-middle">{{$validation->row()}}</td>
+                            <td class="align-middle">{{$validation->attribute()}}</td>
+                            <td class="align-middle">
                                 <ul>
                                     @foreach ($validation->errors() as $e)
                                     <li>{{ $e }}</li>
                                     @endforeach
                                 </ul>
                             </td>
-                            <td>{{$validation->values()[$validation->attribute()]}}</td>
+                            <td class="align-middle">{{$validation->values()[$validation->attribute()]}}</td>
                         </tr>
                         @endforeach
                     </table>
 
                     @endif
-                    <a href="/tailing/codeid" class="btn bg-gradient-info btn-xs ">Code Sample</a>
-                    <a href="/tailing/qualitystandard" class="btn bg-gradient-info btn-xs  ">Table Standard</a>
+                    @can('admin')
+                    <a href="/tailing/codeid" class="btn bg-gradient-info btn-xs my-1 ml-2 ">Code Sample</a>
+                    <a href="/tailing/qualitystandard" class="btn bg-gradient-info btn-xs my-1  ">Table Standard</a>
+                    @endcan
+                    <div class=" card-tools p-1 mr-2 form-inline">
+                        <form action="/tailing" class="form-inline" autocomplete="off">
+                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                            </div>
+                            <span class="input-group-text form-control-sm ">To</span>
+
+                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                            </div>
+                            <div style="width: 118px;" class="input-group mr-1">
+                                <select class="form-control form-control-sm " name="search">
+                                    <option value="" selected>Point ID</option>
+                                    @foreach ($code_units as $code)
+                                    @if ( request('search')==$code->nama)
+                                    <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                    @else
+                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+
+
+
+                            <div class="mr-2">
+                                <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                            </div>
+                        </form>
+                        <form action="/tailing">
+                            <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                        </form>
+
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="content">
                         <div class="col-12">
 
-                            <div class="card-header">
-                                <a href="/tailing/create" class="btn bg-gradient-secondary btn-xs"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                                <a href="/export/tailing" class="btn  bg-gradient-secondary btn-xs" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                                <a href="#" class="btn  bg-gradient-secondary btn-xs" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
-                                <div class="card-tools row d-flex">
-                                    <form action="/tailing" class="form-inline" autocomplete="off">
-                                        <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                                        </div>
-                                        <span class="input-group-text form-control-sm ">To</span>
+                            @can('admin')
+                            <div class="d-flex justify-content-start my-2">
+                                <a href="/tailing/create" class="btn bg-gradient-secondary btn-xs ml-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                                <a href="/export/tailing" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                                <a href="#" class="btn  bg-gradient-secondary btn-xs ml-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
 
-                                        <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                        </div>
-                                        <div style="width: 118px;" class="input-group mr-1">
-                                            <select class="form-control form-control-sm " name="search">
-                                                <option value="" selected>Code Sample</option>
-                                                @foreach ($code_units as $code)
-                                                @if ( request('search')==$code->nama)
-                                                <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
-                                                @else
-                                                <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                                @endif
-                                                @endforeach
-                                            </select>
-                                        </div>
-
-
-
-                                        <div class="mr-2">
-                                            <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                        </div>
-                                    </form>
-                                    <form action="/tailing">
-                                        <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                                    </form>
-
-                                </div>
                             </div>
+                            @endcan
 
                             @if($Tailing->count() && $code_units->count())
                             <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
@@ -117,56 +122,56 @@
                                     <div class="card">
 
                                         <div class="card-body table-responsive">
-                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                    <tr>
-                                                        <th>No</th>
-                                                        <th colspan="2">Quality Standard</th>
-                                                        <th style="width: 100px"> Antimony, Sb </th>
-                                                        <th> Arsenic (As) </th>
-                                                        <th> Barium (Ba) </th>
-                                                        <th> Beryllium, Be </th>
-                                                        <th> Boron (B) </th>
-                                                        <th> Cadmium (Cd) </th>
-                                                        <th> Chromium Hexavalent (Cr-VI) </th>
-                                                        <th> Chromium (Cr) </th>
-                                                        <th> Copper (Cu) </th>
-                                                        <th> Iodide, I- </th>
-                                                        <th> Lead (Pb) </th>
-                                                        <th> Mercury (Hg) </th>
-                                                        <th> Molybdenum, Mo </th>
-                                                        <th> Nickel, Ni </th>
-                                                        <th> Selenium (Se) </th>
-                                                        <th> Silver (Ag) </th>
-                                                        <th> Tributyl Tin Oxide (as Organotins) ** </th>
-                                                        <th> Zinc (Zn) </th>
+                                            <table class="table table-bordered  table-sm  table-striped">
+                                                <thead  style=" font-size: 11px">
+                                                    <tr class="text-center table-info">
+                                                        <th class="align-middle">No</th>
+                                                        <th @if(!auth()->user()->is_admin)  colspan="2" @else  colspan="3" @endif>Quality Standard</th>
+                                                        <th > Antimony, Sb </th>
+                                                        <th class="align-middle"> Arsenic (As) </th>
+                                                        <th class="align-middle"> Barium (Ba) </th>
+                                                        <th class="align-middle"> Beryllium, Be </th>
+                                                        <th class="align-middle"> Boron (B) </th>
+                                                        <th class="align-middle"> Cadmium (Cd) </th>
+                                                        <th class="align-middle"> Chromium Hexavalent (Cr-VI) </th>
+                                                        <th class="align-middle"> Chromium (Cr) </th>
+                                                        <th class="align-middle"> Copper (Cu) </th>
+                                                        <th class="align-middle"> Iodide, I- </th>
+                                                        <th class="align-middle"> Lead (Pb) </th>
+                                                        <th class="align-middle"> Mercury (Hg) </th>
+                                                        <th class="align-middle"> Molybdenum, Mo </th>
+                                                        <th class="align-middle"> Nickel, Ni </th>
+                                                        <th class="align-middle"> Selenium (Se) </th>
+                                                        <th class="align-middle"> Silver (Ag) </th>
+                                                        <th class="align-middle"> Tributyl Tin Oxide (as Organotins) ** </th>
+                                                        <th class="align-middle"> Zinc (Zn) </th>
 
                                                     </tr>
                                                     @php
-                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    $no = 1 ;
                                                     @endphp
                                                     @foreach($QualityStd as $standard)
-                                                    <tr style="background-color: #eee8cd">
-                                                        <td>{{$no++}}</td>
-                                                        <th colspan="2">{{$standard->nama}}</th>
-                                                        <td style="width: 80px">{{$standard->antimony}}</td>
-                                                        <td style="width: 80px">{{$standard->arsenic}}</td>
-                                                        <td style="width: 80px">{{$standard->barium}}</td>
-                                                        <td style="width: 80px">{{$standard->beryllium}}</td>
-                                                        <td style="width: 80px">{{$standard->boron}}</td>
-                                                        <td style="width: 80px">{{$standard->cadmium}}</td>
-                                                        <td style="width: 80px">{{$standard->hexavalent}}</td>
-                                                        <td style="width: 80px">{{$standard->chromium_cr}}</td>
-                                                        <td style="width: 80px">{{$standard->copper}}</td>
-                                                        <td style="width: 80px">{{$standard->iodide}}</td>
-                                                        <td style="width: 80px">{{$standard->lead}}</td>
-                                                        <td style="width: 80px">{{$standard->mercury}}</td>
-                                                        <td style="width: 80px">{{$standard->molybdenum}}</td>
-                                                        <td style="width: 80px">{{$standard->nickel}}</td>
-                                                        <td style="width: 80px">{{$standard->selenium}}</td>
-                                                        <td style="width: 80px">{{$standard->silver}}</td>
-                                                        <td style="width: 80px">{{$standard->tributyl}}</td>
-                                                        <td style="width: 80px">{{$standard->zinc_zn}}</td>
+                                                    <tr >
+                                                        <td class="align-middle">{{$no++}}</td>
+                                                        <th @if(!auth()->user()->is_admin)  colspan="2" @else  colspan="3" @endif>{{$standard->nama}}</th>
+                                                        <td class="align-middle">{{$standard->antimony}}</td>
+                                                        <td class="align-middle">{{$standard->arsenic}}</td>
+                                                        <td class="align-middle">{{$standard->barium}}</td>
+                                                        <td class="align-middle">{{$standard->beryllium}}</td>
+                                                        <td class="align-middle">{{$standard->boron}}</td>
+                                                        <td class="align-middle">{{$standard->cadmium}}</td>
+                                                        <td class="align-middle">{{$standard->hexavalent}}</td>
+                                                        <td class="align-middle">{{$standard->chromium_cr}}</td>
+                                                        <td class="align-middle">{{$standard->copper}}</td>
+                                                        <td class="align-middle">{{$standard->iodide}}</td>
+                                                        <td class="align-middle">{{$standard->lead}}</td>
+                                                        <td class="align-middle">{{$standard->mercury}}</td>
+                                                        <td class="align-middle">{{$standard->molybdenum}}</td>
+                                                        <td class="align-middle">{{$standard->nickel}}</td>
+                                                        <td class="align-middle">{{$standard->selenium}}</td>
+                                                        <td class="align-middle">{{$standard->silver}}</td>
+                                                        <td class="align-middle">{{$standard->tributyl}}</td>
+                                                        <td class="align-middle">{{$standard->zinc_zn}}</td>
 
                                                     </tr>
                                                     @endforeach
@@ -176,38 +181,22 @@
                                                     @php
                                                     $no = 1 + ($Tailing->currentPage() - 1) * $Tailing->perPage();
                                                     @endphp
-                                                    <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                        <th>*</th>
-                                                        <th>Name</th>
-                                                        <th>Date</th>
+                                                    <tr class="table-primary">
+                                                        <th class="align-middle">*</th>
+                                                        @can('admin')
+                                                        <th class="align-middle"> Action</th>
+                                                        @endcan
+                                                        <th class="align-middle">Name</th>
+                                                        <th class="align-middle">Date</th>
                                                         <th colspan="18">Data Entry</th>
-                                                        <th> Action</th>
+                                                        
 
                                                     </tr>
                                                     @foreach($Tailing as $item)
-                                                    <tr style=" color:#581845;font-size: 10px">
-                                                        <td>{{$no++}}</td>
-                                                        <td>{{$item->PointId->nama}}</td>
-                                                        <td style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</td>
-                                                        <td>{{$item->antimony}}</td>
-                                                        <td>{{$item->arsenic}}</td>
-                                                        <td>{{$item->barium}}</td>
-                                                        <td>{{$item->beryllium}}</td>
-                                                        <td>{{$item->boron}}</td>
-                                                        <td>{{$item->cadmium}}</td>
-                                                        <td>{{$item->hexavalent}}</td>
-                                                        <td>{{$item->chromium_cr}}</td>
-                                                        <td>{{$item->copper}}</td>
-                                                        <td>{{$item->iodide}}</td>
-                                                        <td>{{$item->lead}}</td>
-                                                        <td>{{$item->mercury}}</td>
-                                                        <td>{{$item->molybdenum}}</td>
-                                                        <td>{{$item->nickel}}</td>
-                                                        <td>{{$item->selenium}}</td>
-                                                        <td>{{$item->silver}}</td>
-                                                        <td>{{$item->tributyl}}</td>
-                                                        <td>{{$item->zinc_zn}}</td>
-                                                        <td>
+                                                    <tr style=" font-size: 11px">
+                                                        <td class="align-middle">{{$no++}}</td>
+                                                        @can('admin')
+                                                        <td class="align-middle">
                                                             <div style="width: 50px">
                                                                 <a href="/tailing/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                     <i class="fas fa-pen"></i>
@@ -222,6 +211,28 @@
                                                             </div>
 
                                                         </td>
+                                                        @endcan
+                                                        <td class="align-middle">{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px" class="align-middle">{{date('d-M-Y',strtotime($item->date))}}</td>
+                                                        <td class="align-middle">{{$item->antimony}}</td>
+                                                        <td class="align-middle">{{$item->arsenic}}</td>
+                                                        <td class="align-middle">{{$item->barium}}</td>
+                                                        <td class="align-middle">{{$item->beryllium}}</td>
+                                                        <td class="align-middle">{{$item->boron}}</td>
+                                                        <td class="align-middle">{{$item->cadmium}}</td>
+                                                        <td class="align-middle">{{$item->hexavalent}}</td>
+                                                        <td class="align-middle">{{$item->chromium_cr}}</td>
+                                                        <td class="align-middle">{{$item->copper}}</td>
+                                                        <td class="align-middle">{{$item->iodide}}</td>
+                                                        <td class="align-middle">{{$item->lead}}</td>
+                                                        <td class="align-middle">{{$item->mercury}}</td>
+                                                        <td class="align-middle">{{$item->molybdenum}}</td>
+                                                        <td class="align-middle">{{$item->nickel}}</td>
+                                                        <td class="align-middle">{{$item->selenium}}</td>
+                                                        <td class="align-middle">{{$item->silver}}</td>
+                                                        <td class="align-middle">{{$item->tributyl}}</td>
+                                                        <td class="align-middle">{{$item->zinc_zn}}</td>
+                                                        
                                                     </tr>
                                                     @endforeach
                                                 </tbody>
@@ -248,32 +259,32 @@
                                 <div class="tab-pane fade" id="custom-content-above-Inorganic" role="tabpanel" aria-labelledby="custom-content-above-Inorganic-tab">
                                     <div class="card">
                                         <div class="card-body table-responsive">
-                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                    <tr>
-                                                        <th>No</th>
+                                            <table class="table table-bordered  table-sm  table-striped">
+                                                <thead class="text-center" style=" font-size: 11px">
+                                                    <tr class="table-info">
+                                                        <th class="align-middle">No</th>
                                                         <th colspan="2">Quality Standard</th>
-                                                        <th> Chloride, Cl- </th>
-                                                        <th> Free Cyanide </th>
-                                                        <th> Total Cyanide </th>
-                                                        <th> Fluoride </th>
-                                                        <th> Nitrite (NO2) </th>
-                                                        <th> Nitrate/Nitrite </th>
+                                                        <th class="align-middle"> Chloride, Cl- </th>
+                                                        <th class="align-middle"> Free Cyanide </th>
+                                                        <th class="align-middle"> Total Cyanide </th>
+                                                        <th class="align-middle"> Fluoride </th>
+                                                        <th class="align-middle"> Nitrite (NO2) </th>
+                                                        <th class="align-middle"> Nitrate/Nitrite </th>
 
                                                     </tr>
                                                     @php
-                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    $no = 1 ;
                                                     @endphp
                                                     @foreach($QualityStd as $standard)
-                                                    <tr style="background-color: #eee8cd">
-                                                        <td>{{$no++}}</td>
+                                                    <tr >
+                                                        <td class="align-middle">{{$no++}}</td>
                                                         <th colspan="2" colspan="2">{{$standard->nama}}</th>
-                                                        <td style="width: 80px">{{$standard->chloride_cl}}</td>
-                                                        <td style="width: 80px">{{$standard->free_cyanide}}</td>
-                                                        <td style="width: 80px">{{$standard->total_cyanide}}</td>
-                                                        <td style="width: 80px">{{$standard->fluoride}}</td>
-                                                        <td style="width: 80px">{{$standard->nitrite_no2}}</td>
-                                                        <td style="width: 80px">{{$standard->nitrate}}</td>
+                                                        <td class="align-middle">{{$standard->chloride_cl}}</td>
+                                                        <td class="align-middle">{{$standard->free_cyanide}}</td>
+                                                        <td class="align-middle">{{$standard->total_cyanide}}</td>
+                                                        <td class="align-middle">{{$standard->fluoride}}</td>
+                                                        <td class="align-middle">{{$standard->nitrite_no2}}</td>
+                                                        <td class="align-middle">{{$standard->nitrate}}</td>
 
                                                     </tr>
                                                     @endforeach
@@ -282,23 +293,24 @@
                                                     @php
                                                     $no = 1 + ($Tailing->currentPage() - 1) * $Tailing->perPage();
                                                     @endphp
-                                                    <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                        <th>*</th>
-                                                        <th>Name</th>
-                                                        <th>Date</th>
+                                                    <tr class="table-primary">
+                                                        <th class="align-middle">*</th>
+                                                        <th class="align-middle">Name</th>
+                                                        <th class="align-middle">Date</th>
                                                         <th colspan="6">Data Entry</th>
                                                     </tr>
                                                     @foreach($Tailing as $item)
-                                                    <tr style=" color:#581845;font-size: 10px">
-                                                        <td>{{$no++}}</td>
-                                                        <td>{{$item->PointId->nama}}</td>
-                                                        <td style="width: 80px">{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                        <td style="width: 80px">{{$item->chloride_cl}}</td>
-                                                        <td style="width: 80px">{{$item->free_cyanide}}</td>
-                                                        <td style="width: 80px">{{$item->total_cyanide}}</td>
-                                                        <td style="width: 80px">{{$item->fluoride}}</td>
-                                                        <td style="width: 80px">{{$item->nitrite_no2}}</td>
-                                                        <td style="width: 80px">{{$item->nitrate}}</td>
+                                                    <tr style=" font-size: 11px">
+                                                        <td class="align-middle">{{$no++}}</td>
+                                                        <td class="align-middle">{{$item->PointId->nama}}</td>
+                                                        <td style="width: 80px" class="align-middle">{{date('d-M-Y',strtotime($item->date))}}</td>
+
+                                                        <td class="align-middle">{{$item->chloride_cl}}</td>
+                                                        <td class="align-middle">{{$item->free_cyanide}}</td>
+                                                        <td class="align-middle">{{$item->total_cyanide}}</td>
+                                                        <td class="align-middle">{{$item->fluoride}}</td>
+                                                        <td class="align-middle">{{$item->nitrite_no2}}</td>
+                                                        <td class="align-middle">{{$item->nitrate}}</td>
 
                                                     </tr>
                                                     @endforeach
@@ -326,147 +338,149 @@
                                 <div class="tab-pane fade" id="custom-content-above-Organic" role="tabpanel" aria-labelledby="custom-content-above-Organic-tab">
                                     <div class="card">
                                         <div class="card-body table-responsive">
-                                            <table class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                    <tr>
-                                                        <th>No</th>
+                                            <table class="table table-bordered  table-sm  table-striped">
+                                                <thead class="text-center" style=" font-size: 11px">
+                                                <tr class="table-info">
+                                                        <th class="align-middle">No</th>
                                                         <th colspan="2">Quality Standard</th>
-                                                        <th> Aldrin + Dieldrin </th>
-                                                        <th> Dieldrin </th>
-                                                        <th> Benzene </th>
-                                                        <th> Benzo (a) pyrene </th>
-                                                        <th> Carbon tetrachloride </th>
-                                                        <th> Chlordane </th>
-                                                        <th> Chlorobenzene </th>
-                                                        <th> 2-Chlorophenol </th>
-                                                        <th> Chloroform </th>
-                                                        <th> o-Cresol </th>
-                                                        <th> m-Cresol </th>
-                                                        <th> p-Cresol </th>
-                                                        <th> Total-cresol </th>
-                                                        <th> Di(2-Ethylhexyl)Phthalate** </th>
-                                                        <th> 2,4-D </th>
-                                                        <th> 1,2-Dichlorobenzene </th>
-                                                        <th> 1,4-Dichlorobenzene </th>
-                                                        <th> 1,2-Dichloroethane </th>
-                                                        <th> 1,1-Dichloroethylene </th>
-                                                        <th> 1,1-Dichloroethene </th>
-                                                        <th> 1,2-Dichloroethene </th>
-                                                        <th> Dichloromethane </th>
-                                                        <th> 2,4-Dichlorophenol </th>
-                                                        <th> 2,4-Dinitrotoluene </th>
-                                                        <th> Ethyl Benzene </th>
-                                                        <th> "thylenediaminetetraacetic acid (EDTA)**" </th>
-                                                        <th> Formaldehyde </th>
-                                                        <th> Hexachloro-1,3 butadiene </th>
-                                                        <th> Endrin </th>
-                                                        <th> Heptachlor + Heptachlor epoxide </th>
-                                                        <th> Hexachlorobenzene </th>
-                                                        <th> Hexachlorobutadiene </th>
-                                                        <th> Hexachloroethane </th>
-                                                        <th> Total Phenols </th>
-                                                        <th> Lindane </th>
-                                                        <th> Methoxychlor </th>
-                                                        <th> Methyl ethyl ketone </th>
-                                                        <th> Methyl Parathion </th>
-                                                        <th> Nitrobenzene </th>
-                                                        <th> Styrene </th>
-                                                        <th> 1,1,1,2-Tetrachloroethane </th>
-                                                        <th> 1,1,2,2-Tetrachloroethane </th>
-                                                        <th> Nitriloacetic acid </th>
-                                                        <th> Pentachlorophenol </th>
-                                                        <th> Pyridine </th>
-                                                        <th> Toxaphene </th>
-                                                        <th> Parathion </th>
-                                                        <th> Total Poly Chlor Biphenyl (PCB) </th>
-                                                        <th> Tetrachloroethene (PCE) </th>
-                                                        <th> Toluene </th>
-                                                        <th> Trichlorobenzene </th>
-                                                        <th> 1,1,1-Trichloroethane (Methoxychlor) </th>
-                                                        <th> 1,1,2-Trichloroethane </th>
-                                                        <th> Trichloroethene* </th>
-                                                        <th> Toxaphene </th>
-                                                        <th> Trichloroethylene (TCE) </th>
-                                                        <th> Trihalomethanes </th>
-                                                        <th> 2,4,5-Trichlorophenol </th>
-                                                        <th> 2,4,6-Trichlorophenol </th>
-                                                        <th> 2,4,5-TP (Silvex) </th>
-                                                        <th> Vinyl Chloride </th>
-                                                        <th> Xylenes Total </th>
-                                                        <th> DDT + DDD + DDE* </th>
-                                                        <th> 2.4-D (2.4-dichlorophenoxyacetic acid)* </th>
+                                                        <th class="align-middle"> Aldrin + Dieldrin </th>
+                                                        <th class="align-middle"> Dieldrin </th>
+                                                        <th class="align-middle"> Benzene </th>
+                                                        <th class="align-middle"> Benzo (a) pyrene </th>
+                                                        <th class="align-middle"> Carbon tetrachloride </th>
+                                                        <th class="align-middle"> Chlordane </th>
+                                                        <th class="align-middle"> Chlorobenzene </th>
+                                                        <th class="align-middle"> 2-Chlorophenol </th>
+                                                        <th class="align-middle"> Chloroform </th>
+                                                        <th class="align-middle"> o-Cresol </th>
+                                                        <th class="align-middle"> m-Cresol </th>
+                                                        <th class="align-middle"> p-Cresol </th>
+                                                        <th class="align-middle"> Total-cresol </th>
+                                                        <th class="align-middle"> Di(2-Ethylhexyl)Phthalate** </th>
+                                                        <th class="align-middle"> 2,4-D </th>
+                                                        <th class="align-middle"> 1,2-Dichlorobenzene </th>
+                                                        <th class="align-middle"> 1,4-Dichlorobenzene </th>
+                                                        <th class="align-middle"> 1,2-Dichloroethane </th>
+                                                        <th class="align-middle"> 1,1-Dichloroethylene </th>
+                                                        <th class="align-middle"> 1,1-Dichloroethene </th>
+                                                        <th class="align-middle"> 1,2-Dichloroethene </th>
+                                                        <th class="align-middle"> Dichloromethane </th>
+                                                        <th class="align-middle"> 2,4-Dichlorophenol </th>
+                                                        <th class="align-middle"> 2,4-Dinitrotoluene </th>
+                                                        <th class="align-middle"> Ethyl Benzene </th>
+                                                        <th class="align-middle"> "thylenediaminetetraacetic acid (EDTA)**" </th>
+                                                        <th class="align-middle"> Formaldehyde </th>
+                                                        <th class="align-middle"> Hexachloro-1,3 butadiene </th>
+                                                        <th class="align-middle"> Endrin </th>
+                                                        <th class="align-middle"> Heptachlor + Heptachlor epoxide </th>
+                                                        <th class="align-middle"> Hexachlorobenzene </th>
+                                                        <th class="align-middle"> Hexachlorobutadiene </th>
+                                                        <th class="align-middle"> Hexachloroethane </th>
+                                                        <th class="align-middle"> Total Phenols </th>
+                                                        <th class="align-middle"> Lindane </th>
+                                                        <th class="align-middle"> Methoxychlor </th>
+                                                        <th class="align-middle"> Methyl ethyl ketone </th>
+                                                        <th class="align-middle"> Methyl Parathion </th>
+                                                        <th class="align-middle"> Nitrobenzene </th>
+                                                        <th class="align-middle"> Styrene </th>
+                                                        <th class="align-middle"> 1,1,1,2-Tetrachloroethane </th>
+                                                        <th class="align-middle"> 1,1,2,2-Tetrachloroethane </th>
+                                                        <th class="align-middle"> Nitriloacetic acid </th>
+                                                        <th class="align-middle"> Pentachlorophenol </th>
+                                                        <th class="align-middle"> Pyridine </th>
+                                                        <th class="align-middle"> Toxaphene </th>
+                                                        <th class="align-middle"> Parathion </th>
+                                                        <th class="align-middle"> Total Poly Chlor Biphenyl (PCB) </th>
+                                                        <th class="align-middle"> Tetrachloroethene (PCE) </th>
+                                                        <th class="align-middle"> Toluene </th>
+                                                        <th class="align-middle"> Trichlorobenzene </th>
+                                                        <th class="align-middle"> 1,1,1-Trichloroethane (Methoxychlor) </th>
+                                                        <th class="align-middle"> 1,1,2-Trichloroethane </th>
+                                                        <th class="align-middle"> Trichloroethene* </th>
+                                                        <th class="align-middle"> Toxaphene </th>
+                                                        <th class="align-middle"> Trichloroethylene (TCE) </th>
+                                                        <th class="align-middle"> Trihalomethanes </th>
+                                                        <th class="align-middle"> 2,4,5-Trichlorophenol </th>
+                                                        <th class="align-middle"> 2,4,6-Trichlorophenol </th>
+                                                        <th class="align-middle"> 2,4,5-TP (Silvex) </th>
+                                                        <th class="align-middle"> Vinyl Chloride </th>
+                                                        <th class="align-middle"> Xylenes Total </th>
+                                                        <th class="align-middle"> DDT + DDD + DDE* </th>
+                                                        <th class="align-middle"> 2.4-D (2.4-dichlorophenoxyacetic acid)* </th>
+                                                        <th class="align-middle">LD50 </th>
                                                     </tr>
                                                     @php
-                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    $no = 1 ;
                                                     @endphp
                                                     @foreach($QualityStd as $standard)
-                                                    <tr style="background-color: #eee8cd">
-                                                        <td>{{$no++}}</td>
+                                                    <tr >
+                                                        <td class="align-middle">{{$no++}}</td>
                                                         <td colspan="2">{{$standard->nama}}</td>
-                                                        <td style="width: 150px">{{$standard->aldrin}}</td>
-                                                        <td style="width: 150px">{{$standard->dieldrin}}</td>
-                                                        <td style="width: 150px">{{$standard->benzene}}</td>
-                                                        <td style="width: 150px">{{$standard->benzo_a_pyrene}}</td>
-                                                        <td style="width: 150px">{{$standard->tetrachloride}}</td>
-                                                        <td style="width: 150px">{{$standard->chlordane}}</td>
-                                                        <td style="width: 150px">{{$standard->chlorobenzene}}</td>
-                                                        <td style="width: 150px">{{$standard->chlorophenol2}}</td>
-                                                        <td style="width: 150px">{{$standard->chloroform}}</td>
-                                                        <td style="width: 150px">{{$standard->o_cresol}}</td>
-                                                        <td style="width: 150px">{{$standard->m_cresol}}</td>
-                                                        <td style="width: 150px">{{$standard->p_cresol}}</td>
-                                                        <td style="width: 150px">{{$standard->total_cresol}}</td>
-                                                        <td style="width: 150px">{{$standard->ethylhexylphthalate}}</td>
-                                                        <td style="width: 150px">{{$standard->d}}</td>
-                                                        <td style="width: 150px">{{$standard->dichlorobenzene2}}</td>
-                                                        <td style="width: 150px">{{$standard->dichlorobenzene4}}</td>
-                                                        <td style="width: 150px">{{$standard->dichloroethane1}}</td>
-                                                        <td style="width: 150px">{{$standard->dichloroethylene}}</td>
-                                                        <td style="width: 150px">{{$standard->dichloroethene2}}</td>
-                                                        <td style="width: 150px">{{$standard->dichloroethene3}}</td>
-                                                        <td style="width: 150px">{{$standard->dichloromethane}}</td>
-                                                        <td style="width: 150px">{{$standard->dichlorophenol}}</td>
-                                                        <td style="width: 150px">{{$standard->dinitrotoluene}}</td>
-                                                        <td style="width: 150px">{{$standard->ethyl_benzene}}</td>
-                                                        <td style="width: 150px">{{$standard->thylenediaminetetraacetic}}</td>
-                                                        <td style="width: 150px">{{$standard->formaldehyde}}</td>
-                                                        <td style="width: 150px">{{$standard->hexachloro}}</td>
-                                                        <td style="width: 150px">{{$standard->endrin}}</td>
-                                                        <td style="width: 150px">{{$standard->heptachlor}}</td>
-                                                        <td style="width: 150px">{{$standard->hexachlorobenzene}}</td>
-                                                        <td style="width: 150px">{{$standard->hexachlorobutadiene}}</td>
-                                                        <td style="width: 150px">{{$standard->hexachloroethane}}</td>
-                                                        <td style="width: 150px">{{$standard->total_phenols}}</td>
-                                                        <td style="width: 150px">{{$standard->lindane}}</td>
-                                                        <td style="width: 150px">{{$standard->methoxychlor1}}</td>
-                                                        <td style="width: 150px">{{$standard->ketone}}</td>
-                                                        <td style="width: 150px">{{$standard->parathion1}}</td>
-                                                        <td style="width: 150px">{{$standard->nitrobenzene}}</td>
-                                                        <td style="width: 150px">{{$standard->styrene}}</td>
-                                                        <td style="width: 150px">{{$standard->tetrachloroethane1}}</td>
-                                                        <td style="width: 150px">{{$standard->tetrachloroethane2}}</td>
-                                                        <td style="width: 150px">{{$standard->nitriloacetic}}</td>
-                                                        <td style="width: 150px">{{$standard->pentachlorophenol}}</td>
-                                                        <td style="width: 150px">{{$standard->pyridine}}</td>
-                                                        <td style="width: 150px">{{$standard->toxaphene1}}</td>
-                                                        <td style="width: 150px">{{$standard->parathion}}</td>
-                                                        <td style="width: 150px">{{$standard->total_chlor}}</td>
-                                                        <td style="width: 150px">{{$standard->tetrachloroethene}}</td>
-                                                        <td style="width: 150px">{{$standard->toluene}}</td>
-                                                        <td style="width: 150px">{{$standard->trichlorobenzene}}</td>
-                                                        <td style="width: 150px">{{$standard->methoxychlor2}}</td>
-                                                        <td style="width: 150px">{{$standard->trichloroethane}}</td>
-                                                        <td style="width: 150px">{{$standard->trichloroethene}}</td>
-                                                        <td style="width: 150px">{{$standard->toxaphene2}}</td>
-                                                        <td style="width: 150px">{{$standard->trichloroethylene}}</td>
-                                                        <td style="width: 150px">{{$standard->trihalomethanes}}</td>
-                                                        <td style="width: 150px">{{$standard->trichlorophenol5}}</td>
-                                                        <td style="width: 150px">{{$standard->trichlorophenol6}}</td>
-                                                        <td style="width: 150px">{{$standard->tp_silvex}}</td>
-                                                        <td style="width: 150px">{{$standard->vinyl_chloride}}</td>
-                                                        <td style="width: 150px">{{$standard->xylenes_total}}</td>
-                                                        <td style="width: 150px">{{$standard->ddt_ddd_dde}}</td>
-                                                        <td style="width: 150px">{{$standard->dichlorophenoxyacetic}}</td>
+                                                        <td class="align-middle" >{{$standard->aldrin}}</td>
+                                                        <td class="align-middle" >{{$standard->dieldrin}}</td>
+                                                        <td class="align-middle" >{{$standard->benzene}}</td>
+                                                        <td class="align-middle" >{{$standard->benzo_a_pyrene}}</td>
+                                                        <td class="align-middle" >{{$standard->tetrachloride}}</td>
+                                                        <td class="align-middle" >{{$standard->chlordane}}</td>
+                                                        <td class="align-middle" >{{$standard->chlorobenzene}}</td>
+                                                        <td class="align-middle" >{{$standard->chlorophenol2}}</td>
+                                                        <td class="align-middle" >{{$standard->chloroform}}</td>
+                                                        <td class="align-middle" >{{$standard->o_cresol}}</td>
+                                                        <td class="align-middle" >{{$standard->m_cresol}}</td>
+                                                        <td class="align-middle" >{{$standard->p_cresol}}</td>
+                                                        <td class="align-middle" >{{$standard->total_cresol}}</td>
+                                                        <td class="align-middle" >{{$standard->ethylhexylphthalate}}</td>
+                                                        <td class="align-middle" >{{$standard->d}}</td>
+                                                        <td class="align-middle" >{{$standard->dichlorobenzene2}}</td>
+                                                        <td class="align-middle" >{{$standard->dichlorobenzene4}}</td>
+                                                        <td class="align-middle" >{{$standard->dichloroethane1}}</td>
+                                                        <td class="align-middle" >{{$standard->dichloroethylene}}</td>
+                                                        <td class="align-middle" >{{$standard->dichloroethene2}}</td>
+                                                        <td class="align-middle" >{{$standard->dichloroethene3}}</td>
+                                                        <td class="align-middle" >{{$standard->dichloromethane}}</td>
+                                                        <td class="align-middle" >{{$standard->dichlorophenol}}</td>
+                                                        <td class="align-middle" >{{$standard->dinitrotoluene}}</td>
+                                                        <td class="align-middle" >{{$standard->ethyl_benzene}}</td>
+                                                        <td class="align-middle" >{{$standard->thylenediaminetetraacetic}}</td>
+                                                        <td class="align-middle" >{{$standard->formaldehyde}}</td>
+                                                        <td class="align-middle" >{{$standard->hexachloro}}</td>
+                                                        <td class="align-middle" >{{$standard->endrin}}</td>
+                                                        <td class="align-middle" >{{$standard->heptachlor}}</td>
+                                                        <td class="align-middle" >{{$standard->hexachlorobenzene}}</td>
+                                                        <td class="align-middle" >{{$standard->hexachlorobutadiene}}</td>
+                                                        <td class="align-middle" >{{$standard->hexachloroethane}}</td>
+                                                        <td class="align-middle" >{{$standard->total_phenols}}</td>
+                                                        <td class="align-middle" >{{$standard->lindane}}</td>
+                                                        <td class="align-middle" >{{$standard->methoxychlor1}}</td>
+                                                        <td class="align-middle" >{{$standard->ketone}}</td>
+                                                        <td class="align-middle" >{{$standard->parathion1}}</td>
+                                                        <td class="align-middle" >{{$standard->nitrobenzene}}</td>
+                                                        <td class="align-middle" >{{$standard->styrene}}</td>
+                                                        <td class="align-middle" >{{$standard->tetrachloroethane1}}</td>
+                                                        <td class="align-middle" >{{$standard->tetrachloroethane2}}</td>
+                                                        <td class="align-middle" >{{$standard->nitriloacetic}}</td>
+                                                        <td class="align-middle" >{{$standard->pentachlorophenol}}</td>
+                                                        <td class="align-middle" >{{$standard->pyridine}}</td>
+                                                        <td class="align-middle" >{{$standard->toxaphene1}}</td>
+                                                        <td class="align-middle" >{{$standard->parathion}}</td>
+                                                        <td class="align-middle" >{{$standard->total_chlor}}</td>
+                                                        <td class="align-middle" >{{$standard->tetrachloroethene}}</td>
+                                                        <td class="align-middle" >{{$standard->toluene}}</td>
+                                                        <td class="align-middle" >{{$standard->trichlorobenzene}}</td>
+                                                        <td class="align-middle" >{{$standard->methoxychlor2}}</td>
+                                                        <td class="align-middle" >{{$standard->trichloroethane1}}</td>
+                                                        <td class="align-middle" >{{$standard->trichloroethene2}}</td>
+                                                        <td class="align-middle" >{{$standard->toxaphene2}}</td>
+                                                        <td class="align-middle" >{{$standard->trichloroethylene}}</td>
+                                                        <td class="align-middle" >{{$standard->trihalomethanes}}</td>
+                                                        <td class="align-middle" >{{$standard->trichlorophenol5}}</td>
+                                                        <td class="align-middle" >{{$standard->trichlorophenol6}}</td>
+                                                        <td class="align-middle" >{{$standard->tp_silvex}}</td>
+                                                        <td class="align-middle" >{{$standard->vinyl_chloride}}</td>
+                                                        <td class="align-middle" >{{$standard->xylenes_total}}</td>
+                                                        <td class="align-middle" >{{$standard->ddt_ddd_dde}}</td>
+                                                        <td class="align-middle" >{{$standard->dichlorophenoxyacetic}}</td>
+                                                        <td class="align-middle" >{{$standard->tom}}</td>
                                                     </tr>
                                                     @endforeach
                                                 </thead>
@@ -474,102 +488,102 @@
                                                     @php
                                                     $no = 1 + ($Tailing->currentPage() - 1) * $Tailing->perPage();
                                                     @endphp
-                                                    <tr style="background-color: #b3dbf6;font-size: 10px">
-                                                        <th>*</th>
-                                                        <th>Name</th>
-                                                        <th>Date</th>
-                                                        <th colspan="64">Data Entry</th>
+                                                    <tr class="table-primary">
+                                                        <th class="align-middle">*</th>
+                                                        <th class="align-middle">Name</th>
+                                                        <th class="align-middle">Date</th>
+                                                        <th colspan="65">Data Entry</th>
                                                     </tr>
                                                     @foreach($Tailing as $item)
-                                                    <tr style=" color:#581845;font-size: 10px">
-                                                        <td>{{$no++}}</td>
-                                                        <td>{{$item->PointId->nama}}</td>
-                                                        <td style="width: 80px">{{date('d-m-Y',strtotime($item->date))}}</td>
-                                                        <td style="width: 150px">{{$item->aldrin}}</td>
-                                                        <td style="width: 150px">{{$item->dieldrin}}</td>
-                                                        <td style="width: 150px">{{$item->benzene}}</td>
-                                                        <td style="width: 150px">{{$item->benzo_a_pyrene}}</td>
-                                                        <td style="width: 150px">{{$item->tetrachloride}}</td>
-                                                        <td style="width: 150px">{{$item->chlordane}}</td>
-                                                        <td style="width: 150px">{{$item->chlorobenzene}}</td>
-                                                        <td style="width: 150px">{{$item->chlorophenol2}}</td>
-                                                        <td style="width: 150px">{{$item->chloroform}}</td>
-                                                        <td style="width: 150px">{{$item->o_cresol}}</td>
-                                                        <td style="width: 150px">{{$item->m_cresol}}</td>
-                                                        <td style="width: 150px">{{$item->p_cresol}}</td>
-                                                        <td style="width: 150px">{{$item->total_cresol}}</td>
-                                                        <td style="width: 150px">{{$item->ethylhexylphthalate}}</td>
-                                                        <td style="width: 150px">{{$item->d}}</td>
-                                                        <td style="width: 150px">{{$item->dichlorobenzene2}}</td>
-                                                        <td style="width: 150px">{{$item->dichlorobenzene4}}</td>
-                                                        <td style="width: 150px">{{$item->dichloroethane1}}</td>
-                                                        <td style="width: 150px">{{$item->dichloroethylene}}</td>
-                                                        <td style="width: 150px">{{$item->dichloroethene2}}</td>
-                                                        <td style="width: 150px">{{$item->dichloroethene3}}</td>
-                                                        <td style="width: 150px">{{$item->dichloromethane}}</td>
-                                                        <td style="width: 150px">{{$item->dichlorophenol}}</td>
-                                                        <td style="width: 150px">{{$item->dinitrotoluene}}</td>
-                                                        <td style="width: 150px">{{$item->ethyl_benzene}}</td>
-                                                        <td style="width: 150px">{{$item->thylenediaminetetraacetic}}</td>
-                                                        <td style="width: 150px">{{$item->formaldehyde}}</td>
-                                                        <td style="width: 150px">{{$item->hexachloro}}</td>
-                                                        <td style="width: 150px">{{$item->endrin}}</td>
-                                                        <td style="width: 150px">{{$item->heptachlor}}</td>
-                                                        <td style="width: 150px">{{$item->hexachlorobenzene}}</td>
-                                                        <td style="width: 150px">{{$item->hexachlorobutadiene}}</td>
-                                                        <td style="width: 150px">{{$item->hexachloroethane}}</td>
-                                                        <td style="width: 150px">{{$item->total_phenols}}</td>
-                                                        <td style="width: 150px">{{$item->lindane}}</td>
-                                                        <td style="width: 150px">{{$item->methoxychlor1}}</td>
-                                                        <td style="width: 150px">{{$item->ketone}}</td>
-                                                        <td style="width: 150px">{{$item->parathion1}}</td>
-                                                        <td style="width: 150px">{{$item->nitrobenzene}}</td>
-                                                        <td style="width: 150px">{{$item->styrene}}</td>
-                                                        <td style="width: 150px">{{$item->tetrachloroethane1}}</td>
-                                                        <td style="width: 150px">{{$item->tetrachloroethane2}}</td>
-                                                        <td style="width: 150px">{{$item->nitriloacetic}}</td>
-                                                        <td style="width: 150px">{{$item->pentachlorophenol}}</td>
-                                                        <td style="width: 150px">{{$item->pyridine}}</td>
-                                                        <td style="width: 150px">{{$item->toxaphene1}}</td>
-                                                        <td style="width: 150px">{{$item->parathion}}</td>
-                                                        <td style="width: 150px">{{$item->total_chlor}}</td>
-                                                        <td style="width: 150px">{{$item->tetrachloroethene}}</td>
-                                                        <td style="width: 150px">{{$item->toluene}}</td>
-                                                        <td style="width: 150px">{{$item->trichlorobenzene}}</td>
-                                                        <td style="width: 150px">{{$item->methoxychlor2}}</td>
-                                                        <td style="width: 150px">{{$item->trichloroethane}}</td>
-                                                        <td style="width: 150px">{{$item->trichloroethene}}</td>
-                                                        <td style="width: 150px">{{$item->toxaphene2}}</td>
-                                                        <td style="width: 150px">{{$item->trichloroethylene}}</td>
-                                                        <td style="width: 150px">{{$item->trihalomethanes}}</td>
-                                                        <td style="width: 150px">{{$item->trichlorophenol5}}</td>
-                                                        <td style="width: 150px">{{$item->trichlorophenol6}}</td>
-                                                        <td style="width: 150px">{{$item->tp_silvex}}</td>
-                                                        <td style="width: 150px">{{$item->vinyl_chloride}}</td>
-                                                        <td style="width: 150px">{{$item->xylenes_total}}</td>
-                                                        <td style="width: 150px">{{$item->ddt_ddd_dde}}</td>
-                                                        <td style="width: 150px">{{$item->dichlorophenoxyacetic}}</td>
+                                                    <tr style=" font-size: 11px">
+                                                        <td class="align-middle">{{$no++}}</td>
+                                                        <td class="align-middle">{{$item->PointId->nama}}</td>
+                                                        <td  class="align-middle"><div style="width: 80px">{{date('d-M-Y',strtotime($item->date))}}</div></td>
+
+                                                        <td class="align-middle" >{{$item->aldrin}}</td>
+                                                        <td class="align-middle" >{{$item->dieldrin}}</td>
+                                                        <td class="align-middle" >{{$item->benzene}}</td>
+                                                        <td class="align-middle" >{{$item->benzo_a_pyrene}}</td>
+                                                        <td class="align-middle" >{{$item->tetrachloride}}</td>
+                                                        <td class="align-middle" >{{$item->chlordane}}</td>
+                                                        <td class="align-middle" >{{$item->chlorobenzene}}</td>
+                                                        <td class="align-middle" >{{$item->chlorophenol2}}</td>
+                                                        <td class="align-middle" >{{$item->chloroform}}</td>
+                                                        <td class="align-middle" >{{$item->o_cresol}}</td>
+                                                        <td class="align-middle" >{{$item->m_cresol}}</td>
+                                                        <td class="align-middle" >{{$item->p_cresol}}</td>
+                                                        <td class="align-middle" >{{$item->total_cresol}}</td>
+                                                        <td class="align-middle" >{{$item->ethylhexylphthalate}}</td>
+                                                        <td class="align-middle" >{{$item->d}}</td>
+                                                        <td class="align-middle" >{{$item->dichlorobenzene2}}</td>
+                                                        <td class="align-middle" >{{$item->dichlorobenzene4}}</td>
+                                                        <td class="align-middle" >{{$item->dichloroethane1}}</td>
+                                                        <td class="align-middle" >{{$item->dichloroethylene}}</td>
+                                                        <td class="align-middle" >{{$item->dichloroethene2}}</td>
+                                                        <td class="align-middle" >{{$item->dichloroethene3}}</td>
+                                                        <td class="align-middle" >{{$item->dichloromethane}}</td>
+                                                        <td class="align-middle" >{{$item->dichlorophenol}}</td>
+                                                        <td class="align-middle" >{{$item->dinitrotoluene}}</td>
+                                                        <td class="align-middle" >{{$item->ethyl_benzene}}</td>
+                                                        <td class="align-middle" >{{$item->thylenediaminetetraacetic}}</td>
+                                                        <td class="align-middle" >{{$item->formaldehyde}}</td>
+                                                        <td class="align-middle" >{{$item->hexachloro}}</td>
+                                                        <td class="align-middle" >{{$item->endrin}}</td>
+                                                        <td class="align-middle" >{{$item->heptachlor}}</td>
+                                                        <td class="align-middle" >{{$item->hexachlorobenzene}}</td>
+                                                        <td class="align-middle" >{{$item->hexachlorobutadiene}}</td>
+                                                        <td class="align-middle" >{{$item->hexachloroethane}}</td>
+                                                        <td class="align-middle" >{{$item->total_phenols}}</td>
+                                                        <td class="align-middle" >{{$item->lindane}}</td>
+                                                        <td class="align-middle" >{{$item->methoxychlor1}}</td>
+                                                        <td class="align-middle" >{{$item->ketone}}</td>
+                                                        <td class="align-middle" >{{$item->parathion1}}</td>
+                                                        <td class="align-middle" >{{$item->nitrobenzene}}</td>
+                                                        <td class="align-middle" >{{$item->styrene}}</td>
+                                                        <td class="align-middle" >{{$item->tetrachloroethane1}}</td>
+                                                        <td class="align-middle" >{{$item->tetrachloroethane2}}</td>
+                                                        <td class="align-middle" >{{$item->nitriloacetic}}</td>
+                                                        <td class="align-middle" >{{$item->pentachlorophenol}}</td>
+                                                        <td class="align-middle" >{{$item->pyridine}}</td>
+                                                        <td class="align-middle" >{{$item->toxaphene1}}</td>
+                                                        <td class="align-middle" >{{$item->parathion}}</td>
+                                                        <td class="align-middle" >{{$item->total_chlor}}</td>
+                                                        <td class="align-middle" >{{$item->tetrachloroethene}}</td>
+                                                        <td class="align-middle" >{{$item->toluene}}</td>
+                                                        <td class="align-middle" >{{$item->trichlorobenzene}}</td>
+                                                        <td class="align-middle" >{{$item->methoxychlor2}}</td>
+                                                        <td class="align-middle" >{{$item->trichloroethane1}}</td>
+                                                        <td class="align-middle" >{{$item->trichloroethene2}}</td>
+                                                        <td class="align-middle" >{{$item->toxaphene2}}</td>
+                                                        <td class="align-middle" >{{$item->trichloroethylene}}</td>
+                                                        <td class="align-middle" >{{$item->trihalomethanes}}</td>
+                                                        <td class="align-middle" >{{$item->trichlorophenol5}}</td>
+                                                        <td class="align-middle" >{{$item->trichlorophenol6}}</td>
+                                                        <td class="align-middle" >{{$item->tp_silvex}}</td>
+                                                        <td class="align-middle" >{{$item->vinyl_chloride}}</td>
+                                                        <td class="align-middle" >{{$item->xylenes_total}}</td>
+                                                        <td class="align-middle" >{{$item->ddt_ddd_dde}}</td>
+                                                        <td class="align-middle" >{{$item->dichlorophenoxyacetic}}</td>
+                                                        <td class="align-middle" >{{$item->tom}}</td>
                                                     </tr>
                                                     @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="card-tools row form-inline">
-                                                <div class="col-4">
-                                                    <div class="d-flex justify-content-start">
-                                                        <small>Showing {{ $Tailing->firstItem() }} to
-                                                            {{ $Tailing->lastItem() }} of {{ $Tailing->total() }}
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                                <div class="col-8">
-                                                    <div style="font-size: 8" class="d-flex justify-content-end">
-                                                        {{ $Tailing->links() }}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="card-footer p-0">
+                    <div class="card-tools mt-2 form-inline">
+                        <div class="col-4">
+                            <div class="d-flex justify-content-start">
+                                <h6>Showing {{ $Tailing->firstItem() }} to {{$Tailing->lastItem() }} of {{ $Tailing->total() }}</h6>
+                            </div>
+                        </div>
+                        <div class="col-8 d-flex justify-content-end">
+                            <div class=" pagination pagination-sm">
+                                {{ $Tailing->links() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
                                     </div>
 
                                 </div>
@@ -618,9 +632,9 @@
             </div>
         </div>
 
-<!-- /.container-fluid -->
-</section>
-<!-- /.content -->
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
 </div>
 
 @endsection

@@ -66,8 +66,10 @@ class StdBlastingTable extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'ci'=>'required',
             'frequency'=>'required',
             'ppv'=>'required',
+            'kualitas_bangunan'=>'required',
             'noise_level'=>'required'
          
         ]);
@@ -114,8 +116,10 @@ class StdBlastingTable extends Controller
     public function update(Request $request, StandardBlasting $tablestandard)
     {
         $rules = [
+            'ci'=>'required',
             'frequency'=>'required',
             'ppv'=>'required',
+            'kualitas_bangunan'=>'required',
             'noise_level'=>'required'
         ];
 

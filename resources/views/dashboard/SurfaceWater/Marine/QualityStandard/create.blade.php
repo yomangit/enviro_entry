@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Input {{ $breadcrumb }}</h1>
+                    <h1> {{ $breadcrumb }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,8 +22,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-primary card-outline">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -31,7 +31,11 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+                   <div class="card-title ml-2">Form Input</div>
+                </div>
+
+                <div class="card-body">
+                <ul class="nav nav-tabs mb-2" id="custom-content-above-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
                         </li>
@@ -52,10 +56,6 @@
                         </li>
 
                     </ul>
-                </div>
-
-                <div class="card-body">
-
                     <form action="/surfacewater/marinesurfacewater/quality" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
                         <div class=" ml-2 col-12 col-sm-6">
@@ -720,7 +720,8 @@
                                         </div><!-- end row -->
                                     </div>
                                     <div class="card-footer d-flex justify-content-end">
-                                        <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
+                                    <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
+
                                     </div>
                                 </div>
                             </div>
@@ -732,112 +733,5 @@
         </div>
     </section>
 </div>
-@section('footer')
-<script>
-    $(function() {
-        //Initialize Select2 Elements
-        $('.select2').select2()
 
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
-        })
-
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', {
-            'placeholder': 'dd/mm/yyyy'
-        })
-        //Datemask2 mm/dd/yyyy
-        $('#datemask2').inputmask('mm/dd/yyyy', {
-            'placeholder': 'mm/dd/yyyy'
-        })
-        //Money Euro
-        $('[data-mask]').inputmask()
-
-        //Date picker
-        $('#reservationdate').datetimepicker({
-            format: 'YYYY-MM-DD'
-        });
-        //Timepicker
-        $('#timepicker').datetimepicker({
-            format: 'LT'
-        })
-        $('#timepicker2').datetimepicker({
-            format: 'LT'
-        })
-
-    })
-    // BS-Stepper Init
-    document.addEventListener('DOMContentLoaded', function() {
-        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-    })
-
-    // DropzoneJS Demo Code Start
-    Dropzone.autoDiscover = false
-
-    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-    var previewNode = document.querySelector("#template")
-    previewNode.id = ""
-    var previewTemplate = previewNode.parentNode.innerHTML
-    previewNode.parentNode.removeChild(previewNode)
-
-    var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-        url: "/target-url", // Set the url
-        thumbnailWidth: 80,
-        thumbnailHeight: 80,
-        parallelUploads: 20,
-        previewTemplate: previewTemplate,
-        autoQueue: false, // Make sure the files aren't queued until manually added
-        previewsContainer: "#previews", // Define the container to display the previews
-        clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-    })
-
-    myDropzone.on("addedfile", function(file) {
-        // Hookup the start button
-        file.previewElement.querySelector(".start").onclick = function() {
-            myDropzone.enqueueFile(file)
-        }
-    })
-
-    // Update the total progress bar
-    myDropzone.on("totaluploadprogress", function(progress) {
-        document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
-    })
-
-    myDropzone.on("sending", function(file) {
-        // Show the total progress bar when upload starts
-        document.querySelector("#total-progress").style.opacity = "1"
-        // And disable the start button
-        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
-    })
-
-    // Hide the total progress bar when nothing's uploading anymore
-    myDropzone.on("queuecomplete", function(progress) {
-        document.querySelector("#total-progress").style.opacity = "0"
-    })
-
-    // Setup the buttons for all transfers
-    // The "add files" button doesn't need to be setup because the config
-    // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function() {
-        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
-    }
-    document.querySelector("#actions .cancel").onclick = function() {
-        myDropzone.removeAllFiles(true)
-    }
-</script>
-@endsection
-<script>
-    function previewImage() {
-        const image = document.querySelector('#hard_copy');
-        const imgPreview = document.querySelector('.img-preview');
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-        oFReader.readAsDataURL(image.files[0]);
-        oFReader.onload = function(oFREvent) {
-            imgPreview.src = oFREvent.target.result;
-        }
-    }
-</script>
 @endsection

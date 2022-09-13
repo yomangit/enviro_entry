@@ -4,8 +4,8 @@
 <aside style="" class="main-sidebar elevation-4 sidebar-dark-primary">
     <!-- Brand Logo -->
     <a href="/" class="brand-link navbar-dark ">
-        <img src="/assets/dist/img/archii.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
-        <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:aliceblue" class="brand-text ">Archi Indonesia</span>
+        <img src="/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image " style="opacity: .8">
+        <!-- <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:aliceblue" class="brand-text ">Archi Indonesia</span> -->
     </a>
 
     <!-- Sidebar -->
@@ -19,7 +19,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="/dashboard/master" class="nav-link btn-sm btn-sm {{ Request::is('dashboard/master*') ? 'active' : '' }}">
+                    <a href="/" class="nav-link btn-sm btn-sm {{ Request::is('/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
@@ -51,13 +51,7 @@
                                 <p>Water discharge (Manual) </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
-                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
-
-                                <p>Water discharge (automatic) </p>
-                            </a>
-                        </li>
+                      
                     </ul>
                 </li>
                 <li class="nav-item {{ Request::is('surfacewater*') ? 'menu-open' : '' }}    ">

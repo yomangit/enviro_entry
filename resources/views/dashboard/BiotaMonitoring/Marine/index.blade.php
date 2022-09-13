@@ -14,347 +14,213 @@
     </section>
     <section class="content-header">
         <div class="container-fluid">
-            <div class="">
-                <div class="card card-secondrary card-tabs">
-                    <div class="card-header p-0 pt-1">
 
-                        @if (session()->has('success'))
-                        <div class="alert alert-success alert-dismissible form-inline">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
-                            {{ session('success') }}
-                        </div>
-                        @endif
-                        @if (session()->has('failures'))
-                        <div class="alert alert-danger alert-dismissible form-inline">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h5 class="mr-2"><i class="icon fas fa-ban"></i>Fail</h5>
-                            @foreach (session()->get('failures') as $validation)
-                            <tr>
-                                <td>
-                                    {{ $validation->values()[$validation->attribute()] }}
-                                </td>
-                                <td>-</td>
-                                @foreach ($validation->errors() as $e)
-                                <td>{{ $e }}</td>
-                                @endforeach
-                            </tr>
+            <div class="card card-primary card-outline">
+                <div class="card-header p-0 ">
+
+
+                    @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible form-inline m-2">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
+                        {{ session('success') }}
+                    </div>
+                    @endif
+                    @if (session()->has('failures'))
+                    <div class="alert alert-danger alert-dismissible form-inline">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5 class="mr-2"><i class="icon fas fa-ban"></i>Fail</h5>
+                        @foreach (session()->get('failures') as $validation)
+                        <tr>
+                            <td>
+                                {{ $validation->values()[$validation->attribute()] }}
+                            </td>
+                            <td>-</td>
+                            @foreach ($validation->errors() as $e)
+                            <td>{{ $e }}</td>
                             @endforeach
-
-                        </div>p
-                        @endif
-                       
+                        </tr>
+                        @endforeach
 
                     </div>
-                    <div class="card-body">
-                        <section class="content ">
+                    @endif
+                  @can('admin')
+                  <a href="/monitoring/marine/create" class="btn bg-gradient-secondary btn-xs ml-2 my-1"><i class="fas fa-plus mr-1"></i>Add Data</a>
+                    <a href="/exportfreshwater" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                    <a href="#" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                        <i class="fas fa-upload mr-1"></i>Excel
+                    </a>
+                  @endcan
+                    <div class=" card-tools p-1 mr-2 form-inline">
+                        <form action="/monitoring/marine" class="form-inline">
+                            <div class="input-group date mr-2" id="reservationdate7" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                            </div>
+                         
+                            <div style="width: 118px;" class="input-group mr-1">
+                                <select class="form-control form-control-sm " name="search">
+                                    <option value="" selected>Biota</option>
+                                    @foreach ($Biotum as $biota)
+                                    @if ( request('search')==$biota->nama)
+                                    <option value="{{($biota->nama)}}" selected>{{$biota->nama}}</option>
+                                    @else
+                                    <option value="{{$biota->nama}}">{{$biota->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div style="width: 118px;" class="input-group mr-1">
+                                <select class="form-control form-control-sm " name="location">
+                                    <option value="" selected>Location</option>
+                                    @foreach ($LocationBiota as $location)
+                                    @if ( request('location')==$location->nama)
+                                    <option value="{{($location->nama)}}" selected>{{$location->nama}}</option>
+                                    @else
+                                    <option value="{{$location->nama}}">{{$location->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mr-2">
+                                <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                            </div>
+                        </form>
+                        <form action="/monitoring/marine">
+                            <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                        </form>
+                    </div>
+                </div>
 
-                            <div>
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-header ">
-                                            @if($LocationBiota->count() && $Biotum->count())
-                                            @can('admin')
-                                            <a href="/dashboard/monitoring/marine/create" class="btn bg-gradient-secondary btn-xs mt-2"><i class="fas fa-plus mr-1"></i>Add Data</a>
-                                            <a href="/exportmarine"  class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                                            <a href="#" class="btn  bg-gradient-secondary btn-xs mt-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
-                                                <i class="fas fa-upload mr-1"></i>Excel
-                                            </a>@endcan
-                                           
-                                       
-                                            <div class="card-tools">
-                                                <div class="card-tools row">
-                                                    <form action="/dashboard/monitoring/marine" class="form-inline">
-                                                        <!-- <label for="fromDate" class="mr-2">From</label> -->
-                                                        <div class="input-group date mr-2" id="reservationdate7" style="width: 85px;" data-target-input="nearest">
-                                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                                                        </div>
-                                                        <!-- <label for="fromDate" class="mr-2 ml-2">To</label>
-    
-                                                            <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                                            </div> -->
 
-                                                        <div style="width: 118px;" class="input-group mr-1">
-                                                            <select class="form-control form-control-sm " name="search">
-                                                                <option value="" selected>Biota</option>
-                                                                @foreach ($Biotum as $biota)
-                                                                @if ( request('search')==$biota->nama)
-                                                                <option value="{{($biota->nama)}}" selected>{{$biota->nama}}</option>
-                                                                @else
-                                                                <option value="{{$biota->nama}}">{{$biota->nama}}</option>
-                                                                @endif
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                        <div style="width: 118px;" class="input-group mr-1">
-                                                            <select class="form-control form-control-sm " name="location">
-                                                                <option value="" selected>Location</option>
-                                                                @foreach ($LocationBiota as $location)
-                                                                @if ( request('location')==$location->nama)
-                                                                <option value="{{($location->nama)}}" selected>{{$location->nama}}</option>
-                                                                @else
-                                                                <option value="{{$location->nama}}">{{$location->nama}}</option>
-                                                                @endif
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                        <div class="mr-2">
-                                                            <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                                        </div>
-                                                    </form>
-                                                    <form action="/dashboard/monitoring/marine">
-                                                        <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            @else
-                                            <div class="alert alert-info alert-dismissible form-inline">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                <h5 class="mr-2"><i class="icon fas fa-info"></i>Info</h5>
-                                               <b> You must enter  location of biota and biota first </b>
-                                            </div>
-                                            @endif
+                <div class="card-body">
+                    <section class="content ">
+                        @if($LocationBiota->count() && $Biotum->count())
+                        <table role="grid" id="example1" class="table table-bordered table-sm table-head-fixed ">
+                            <thead style=" color:#005245">
+                                <tr class="text-center" style="font-size: 12px">
+                                    <th>No</th>
+                                    <th>Location</th>
+                                    <th>Biota</th>
+                                    <th>Date</th>
+                                    <th>Taxa Richness</th>
+                                    <th>Species Density (cell/m3)</th>
+                                    <th>Diversity Index</th>
+                                    <th>Evenness Value</th>
+                                    <th>Dominance Index</th>
+                                    @can('admin')
+                                    <th>Action</th>
+                                    @endcan
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php
+                                $no = 1 + ($Marine->currentPage() - 1) * $Marine->perPage();
+                                @endphp
+                                @foreach ($Marine as $freshwater)
+                                <tr class="text-center" style="font-size: 12px">
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $freshwater->locationBiota->nama }}</td>
+                                    <td>{{ $freshwater->Biota->nama }}</td>
+                                    <td>{{ date('d-M-Y', strtotime( $freshwater->date)) }}</td>
+                                    <td>{{ $freshwater->taxa_richness }}</td>
+                                    <td>{{ $freshwater->species_density }}</td>
+                                    <td>{{ $freshwater->diversity_index }}</td>
+                                    <td>{{ $freshwater->evenness_value }}</td>
+                                    <td>{{ $freshwater->dominance_index }}</td>  
+                                    @can('admin')
+                                    <td>
+                                        <div style="width: 50px">
+                                            <a href="/monitoring/marine/{{ $freshwater->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                            <form action="/monitoring/marine/{{ $freshwater->created_at }}" method="POST" class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
                                         </div>
-                                        <!-- /.card-header -->
-                                        @if ($Marine->count())
-                                     
-                                            <div class="card-body table-responsive ">
-                                                <table role="grid" class="table table-bordered table-sm table-head-fixed ">
-                                                    <thead style=" color:#005245">
-                                                        <tr class="text-center" style="font-size: 12px">
-                                                            <th>No</th>
-                                                            <th>Action</th>
-                                                            <th>Location</th>
-                                                            <th>Biota</th>
-                                                            <th>Date</th>
-                                                            <th>Taxa Richness</th>
-                                                            <th>Species Density (cell/m3)</th>
+                                    </td>
+                                    @endcan
+                                  
 
-                                                            <th>Diversity Index</th>
-                                                            <th>Evenness Value</th>
-                                                            <th>Dominance Index</th>
+                                </tr>
+                                @endforeach
+
+                            </tbody>
+                        </table>
+                        @else
+                        <div class="alert alert-info alert-dismissible form-inline">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5 class="mr-2"><i class="icon fas fa-info"></i>Info</h5>
+                            <b> You must enter location of biota and biota first </b>
+                        </div>
+                        @endif
 
 
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        @php
-                                                        $no = 1 + ($Marine->currentPage() - 1) * $Marine->perPage();
-                                                        @endphp
-                                                        @foreach ($Marine as $marine)
-                                                        
-                                                        <tr class="text-center" style="font-size: 12px">
-
-                                                            <td>{{ $no++ }}</td>
-                                                            <td>
-                                                                <div style="width: 50px">
-
-                                                                    {{-- <a href="/dashboard/monitoring/marine/{{ $marine->created_at }}" class="btn btn btn-outline-primary btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Detail">
-                                                                    <i class="far fa-eye"></i>
-                                                                    </a> --}}
-                                                                    <a href="/dashboard/monitoring/marine/{{ $marine->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                        <i class="fas fa-pen"></i>
-                                                                    </a>
-                                                                    <form action="/dashboard/monitoring/marine/{{ $marine->created_at }}" method="POST" class="d-inline">
-                                                                        @method('delete')
-                                                                        @csrf
-                                                                        <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                            <i class="fas fa-trash"></i>
-                                                                        </button>
-                                                                    </form>
-
-                                                                </div>
-                                                            </td>
-                                                            
-                                                            <td>{{ $marine->locationBiota->nama }}</td>
-                                                            <td>{{ $marine->Biota->nama }}</td>
-                                                            <td>{{ date('d-M-Y', strtotime( $marine->date))}}</td>
-                                                            <td>{{ $marine->taxa_richness }}</td>
-                                                            <td>{{ $marine->species_density }}</td>
-                                                            <td>{{ $marine->diversity_index }}</td>
-                                                            <td>{{ $marine->evenness_value }}</td>
-                                                            <td>{{ $marine->dominance_index }}</td>
-                                                        
-                                                        </tr>
-                                                        @endforeach
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                      
-                                        <div class="card-footer">
-                                            <div class="card-tools row form-inline">
-                                                <div class="col-4">
-                                                    <div class="d-flex justify-content-start">
-                                                        <small>Showing {{ $Marine->firstItem() }} to
-                                                            {{ $Marine->lastItem() }} of {{ $Marine->total() }}
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                                <div class="col-8">
-                                                    <div class="d-flex justify-content-end">
-                                                        {{ $Marine->links() }}
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-
-                                        </div>
-                                        @else
-                                        <p class="text-center fs-4">Not Data Found</p>
-                                        @endif
-
-                                        <div class="modal fade" id="modal-default">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title">Import Data</h4>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <form action="/importmarine" method="POST" enctype="multipart/form-data">
-                                                        @csrf
-                                                        <div class="modal-body">
-                                                            <div class="custom-file">
-                                                                <input type="file"required name="file" class="custom-file-input" id="exampleInputFile">
-                                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="modal-footer justify-content-between">
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Import</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                        <!-- /.card-body -->
+                    </section>
+       
+                </div>
+                <div class="card-footer p-0">
+                    <div class="card-tools mt-2 form-inline">
+                        <div class="col-4">
+                            <div class="d-flex justify-content-start">
+                                <h6>Showing {{ $Marine->firstItem() }} to {{$Marine->lastItem() }} of {{ $Marine->total() }}</h6>
+                            </div>
+                        </div>
+                        <div class="col-8 d-flex justify-content-end">
+                            <div class=" pagination pagination-sm">
+                                {{ $Marine->links() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/importfreshwater" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file" class="custom-file-input" required id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
 
-                                    <!-- /.card -->
                                 </div>
-                            </div>
-                            <!-- /.container-fluid -->
-                        </section>
-                        <figure class="highcharts-figure">
-                            <div class="invoice p-3 mb-3" id="container"></div>
-                        </figure>
-                       
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
 
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
+            @if($Marine->count())
+
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title text center">{{$tittle}}</div>
+                </div>
+                <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+            </div>
+            @endif
+        </div>
+</div><!-- /.container-fluid -->
+</section>
 </div>
-  <script>
-            $(function() {
-                //Initialize Select2 Elements
-                $('.select2').select2()
-    
-                //Initialize Select2 Elements
-                $('.select2bs4').select2({
-                    theme: 'bootstrap4'
-                })
-    
-                //Datemask dd/mm/yyyy
-                $('#datemask').inputmask('dd/mm/yyyy', {
-                    'placeholder': 'dd/mm/yyyy'
-                })
-                //Datemask2 mm/dd/yyyy
-                $('#datemask2').inputmask('mm/dd/yyyy', {
-                    'placeholder': 'mm/dd/yyyy'
-                })
-                //Money Euro
-                $('[data-mask]').inputmask()
-    
-                //Date picker
-                $('#reservationdate').datetimepicker({
-                    format: 'YYYY/MM/DD'
-                });
-                $('#reservationdate1').datetimepicker({
-                    format: 'YYYY/MM/DD'
-                }); 
-                $('#reservationdate3').datetimepicker({
-                    format: 'YYYY/MM/DD'
-                });
-                //Timepicker
-                $('#timepicker').datetimepicker({
-                    format: 'LT'
-                })
-                $('#timepicker1').datetimepicker({
-                    format: 'LT'
-                })
-    
-            })
-            // BS-Stepper Init
-            document.addEventListener('DOMContentLoaded', function() {
-                window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-            })
-    
-            // DropzoneJS Demo Code Start
-            Dropzone.autoDiscover = false
-    
-            // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-            var previewNode = document.querySelector("#template")
-            previewNode.id = ""
-            var previewTemplate = previewNode.parentNode.innerHTML
-            previewNode.parentNode.removeChild(previewNode)
-    
-            var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-                url: "/target-url", // Set the url
-                thumbnailWidth: 80,
-                thumbnailHeight: 80,
-                parallelUploads: 20,
-                previewTemplate: previewTemplate,
-                autoQueue: false, // Make sure the files aren't queued until manually added
-                previewsContainer: "#previews", // Define the container to display the previews
-                clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-            })
-    
-            myDropzone.on("addedfile", function(file) {
-                // Hookup the start button
-                file.previewElement.querySelector(".start").onclick = function() {
-                    myDropzone.enqueueFile(file)
-                }
-            })
-    
-            // Update the total progress bar
-            myDropzone.on("totaluploadprogress", function(progress) {
-                document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
-            })
-    
-            myDropzone.on("sending", function(file) {
-                // Show the total progress bar when upload starts
-                document.querySelector("#total-progress").style.opacity = "1"
-                // And disable the start button
-                file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
-            })
-    
-            // Hide the total progress bar when nothing's uploading anymore
-            myDropzone.on("queuecomplete", function(progress) {
-                document.querySelector("#total-progress").style.opacity = "0"
-            })
-    
-            // Setup the buttons for all transfers
-            // The "add files" button doesn't need to be setup because the config
-            // `clickable` has already been specified.
-            document.querySelector("#actions .start").onclick = function() {
-                myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
-            }
-            document.querySelector("#actions .cancel").onclick = function() {
-                myDropzone.removeAllFiles(true)
-            }
-           
-        </script> 
 @if ($Marine->count())
 <script>
    Highcharts.chart('container', {
@@ -362,13 +228,10 @@
         type: 'column'
     },
     title: {
-        text:{!! json_encode($marine->Biota->nama) !!}
-    },
-    subtitle: {
-        text: 'Location :  {!!json_encode($marine->locationBiota->nama)!!} '
+        text:  {!! json_encode( $freshwater->Biota->nama) !!}
     },
     xAxis: {
-        categories:{!! json_encode($date) !!},  
+        categories: {!! json_encode($date) !!},
         crosshair: true
     },
     yAxis: {
@@ -380,7 +243,7 @@
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -393,29 +256,32 @@
     },
     series: [{
         name: 'Taxa Richness',
+        color:'#003049',
         data: {!! json_encode($taxa_richness) !!}
 
     }, {
         name: 'Species Density',
+        color:'#D62828',
         data: {!! json_encode($species_density) !!}
 
     }, {
         name: 'Diversity Index',
+        color:'#F77F00',
         data: {!! json_encode($diversity_index) !!}
 
     }, {
         name: 'Evenness Value',
+        color:'#FCBF49',
         data: {!! json_encode($evenness_value) !!}
 
-    }, {
+    },{
         name: 'Dominance Index',
+        color:'#E07A5F',
         data: {!! json_encode($dominance_index) !!}
 
     }]
 });
-
 </script>
 @endif
-
 
 @endsection

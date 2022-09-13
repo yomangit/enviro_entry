@@ -112,6 +112,7 @@ class ImportTailing implements ToModel, WithValidation, WithHeadingRow
             "xylenes_total" => $row["xylenes_total"],
             "ddt_ddd_dde" => $row["ddt_ddd_dde"],
             "dichlorophenoxyacetic" => $row["dichlorophenoxyacetic"],
+            "tom" => $row["tom"],
 
         ]);
     }
@@ -209,6 +210,7 @@ class ImportTailing implements ToModel, WithValidation, WithHeadingRow
             'xylenes_total' => 'required',
             'ddt_ddd_dde' => 'required',
             'dichlorophenoxyacetic' => 'required',
+            'tom' => 'required',
         ];
     }
 }

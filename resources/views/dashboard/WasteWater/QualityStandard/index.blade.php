@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/surfacewater/drinkwater">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/wastewater">Home</a></li>
                         <li class="breadcrumb-item active">{{$tittle}}</li>
                     </ol>
                 </div>
@@ -108,10 +108,9 @@
                             @if($QualityStd->count())
                             <div class="tab-content" id="custom-content-above-tabContent">
                                 <div class="tab-pane fade show active card-body table-responsive " id="custom-content-above-Physical" role="tabpanel" aria-labelledby="custom-content-above-Physical-tab">
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example1" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
-                                                <th>Action</th>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
                                                 <th>Conductivity</th>
@@ -125,6 +124,7 @@
                                                 <th>Temperature </th>
                                                 <th>Salinity </th>
                                                 <th>Dissolved Oxygen (DO) </th>
+                                                <th>Action</th>
 
                                             </tr>
 
@@ -136,7 +136,21 @@
                                             @endphp
                                             @foreach($QualityStd as $item)
                                             <tr>
-                                                <td>
+                                               
+                                                <td>{{$no++}}</td>
+                                                <td>{{$item->nama}}</td>
+                                                <td>{{$item-> conductivity}}</td>
+                                                <td>{{$item-> totaldissolvedsolids_tds}}</td>
+                                                <td>{{$item-> totalsuspendedsolids_tss}}</td>
+                                                <td>{{$item-> turbidity}}</td>
+                                                <td>{{$item-> hardness}}</td>
+                                                <td>{{$item-> alkalinity_ascaco3}}</td>
+                                                <td>{{$item-> alkalinitycarbonate}}</td>
+                                                <td>{{$item-> alkalinitybicarbonate}}</td>
+                                                <td>{{$item-> temperature}}</td>
+                                                <td>{{$item-> salinity}}</td>
+                                                <td>{{$item-> dissolvedoxygen_do}}</td>
+                                                <td style="width: 80px">
                                                     <a href="/wastewater/wastewaterstandard/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                         <i class="fas fa-pen"></i>
                                                     </a>
@@ -148,19 +162,6 @@
                                                         </button>
                                                     </form>
                                                 </td>
-                                                <td>{{$no++}}</td>
-                                                <td>{{$item->nama}}</td>
-                                                <td>{{$item->conductivity}}</td>
-                                                <td>{{$item->tds}}</td>
-                                                <td>{{$item->tss}}</td>
-                                                <td>{{$item->turbidity}}</td>
-                                                <td>{{$item->hardness}}</td>
-                                                <td>{{$item->alkalinity_as_caco3}}</td>
-                                                <td>{{$item->alkalinity_carbonate}}</td>
-                                                <td>{{$item->alkalinity_bicarbonate}}</td>
-                                                <td>{{$item->temperature}}</td>
-                                                <td>{{$item->salinity}}</td>
-                                                <td>{{$item->do}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -170,8 +171,8 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-Anions" role="tabpanel" aria-labelledby="custom-content-above-Anions-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example2" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
@@ -193,14 +194,15 @@
                                             @foreach($QualityStd as $item)
                                             <tr>
                                                 <td>{{$no++}}</td>
-                                                <td>{{$item->nama}}</td>
-                                                <td>{{$item->ph}}</td>
-                                                <td>{{$item->alkalinity_total}}</td>
-                                                <td>{{$item->cl}}</td>
-                                                <td>{{$item->fluoride}}</td>
-                                                <td>{{$item->sulphate}}</td>
-                                                <td>{{$item->sulphite}}</td>
-                                                <td>{{$item->free_chlorine}}</td>
+                                                <td >{{$item->nama}}</td>
+                                                <td>{{$item-> ph_min}}-{{$item->ph_max}}</td>
+                                                <td>{{$item-> alkalinitytotal	}}</td>
+                                                <td>{{$item-> chloride_cl	}}</td>
+                                                <td>{{$item-> fluoride_f	}}</td>
+                                                <td>{{$item-> sulphate_so4	}}</td>
+                                                <td>{{$item-> sulphite_h2s	}}</td>
+                                                <td>{{$item-> freechlorine_cl2	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -208,8 +210,8 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-Cyanide" role="tabpanel" aria-labelledby="custom-content-above-Cyanide-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example3" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
@@ -228,9 +230,10 @@
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->nama}}</td>
-                                                <td>{{$item->fcn}}</td>
-                                                <td>{{$item->total_cyanide}}</td>
-                                                <td>{{$item->wad_cyanide}}</td>
+                                                <td>{{$item-> freecyanide_fcn	}}</td>
+                                                <td>{{$item-> totalcyanide_cntot	}}</td>
+                                                <td>{{$item-> wadcyanide_cnwad	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -239,12 +242,13 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-nutrients" role="tabpanel" aria-labelledby="custom-content-above-nutrients-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example4" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
-                                                <th>Ammonia (N-NH3)</th>
+                                                <th>Ammonia (NH4)</th>
+                                                <th>Ammonium (N-NH3)</th>
                                                 <th>Nitrate (NO3)</th>
                                                 <th>Nitrite (NO2)</th>
                                                 <th>Phosphate (PO4)</th>
@@ -260,11 +264,13 @@
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->nama}}</td>
-                                                <td>{{$item->ammonia}}</td>
-                                                <td>{{$item->nitrate}}</td>
-                                                <td>{{$item->nitrite}}</td>
-                                                <td>{{$item->phosphate }}</td>
-                                                <td>{{$item->total_phosphate }}</td>
+                                                <td>{{$item-> ammonia_nh4	}}</td>
+                                                <td>{{$item-> ammonium_n_nh3	}}</td>
+                                                <td>{{$item-> nitrate_no3	}}</td>
+                                                <td>{{$item-> nitrite_no2	}}</td>
+                                                <td>{{$item-> phosphate_po4	}}</td>
+                                                <td>{{$item-> totalphosphate_ppo4	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -272,8 +278,8 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-dissolved" role="tabpanel" aria-labelledby="custom-content-above-dissolved-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example5" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
@@ -310,27 +316,28 @@
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->nama}}</td>
-                                                <td>{{$item->aluminium}}</td>
-                                                <td>{{$item->antimony}}</td>
-                                                <td>{{$item->arsenic}}</td>
-                                                <td>{{$item->barium}}</td>
-                                                <td>{{$item->cadmium}}</td>
-                                                <td>{{$item->calcium}}</td>
-                                                <td>{{$item->chromium}}</td>
-                                                <td>{{$item->chromium_hexavalent}}</td>
-                                                <td>{{$item->cobalt}}</td>
-                                                <td>{{$item->copper}}</td>
-                                                <td>{{$item->iron}}</td>
-                                                <td>{{$item->lead}}</td>
-                                                <td>{{$item->magnesium}}</td>
-                                                <td>{{$item->manganese}}</td>
-                                                <td>{{$item->mercury}}</td>
-                                                <td>{{$item->nickel}}</td>
-                                                <td>{{$item->selenium}}</td>
-                                                <td>{{$item->silver}}</td>
-                                                <td>{{$item->sodium}}</td>
-                                                <td>{{$item->tin}}</td>
-                                                <td>{{$item->zinc}}</td>
+                                                <td>{{$item-> aluminium_al	}}</td>
+                                                <td>{{$item-> antimony_sb	}}</td>
+                                                <td>{{$item-> arsenic_as	}}</td>
+                                                <td>{{$item-> barium_ba	}}</td>
+                                                <td>{{$item-> cadmium_cd	}}</td>
+                                                <td>{{$item-> calcium_ca	}}</td>
+                                                <td>{{$item-> chromium_cr	}}</td>
+                                                <td>{{$item-> chromiumhexavalent_cr6	}}</td>
+                                                <td>{{$item-> cobalt_co	}}</td>
+                                                <td>{{$item-> copper_cu	}}</td>
+                                                <td>{{$item-> iron_fe	}}</td>
+                                                <td>{{$item-> lead_pb	}}</td>
+                                                <td>{{$item-> magnesium_mg	}}</td>
+                                                <td>{{$item-> manganese_mn	}}</td>
+                                                <td>{{$item-> mercury_hg	}}</td>
+                                                <td>{{$item-> nickel_ni	}}</td>
+                                                <td>{{$item-> selenium_se	}}</td>
+                                                <td>{{$item-> silver_ag	}}</td>
+                                                <td>{{$item-> sodium_na	}}</td>
+                                                <td>{{$item-> tin_sn	}}</td>
+                                                <td>{{$item-> zinc_zn	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -338,8 +345,8 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-total" role="tabpanel" aria-labelledby="custom-content-above-total-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example6" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
@@ -367,18 +374,19 @@
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->nama}}</td>
-                                                <td>{{$item->aluminium_t_ai}}</td>
-                                                <td>{{$item->arsenic_t_as}}</td>
-                                                <td>{{$item->cadmium_t_cd}}</td>
-                                                <td>{{$item->chromium_t}}</td>
-                                                <td>{{$item->chromium_hexavalent_t}}</td>
-                                                <td>{{$item->cobalt_t}}</td>
-                                                <td>{{$item->cooper}}</td>
-                                                <td>{{$item->lead_t}}</td>
-                                                <td>{{$item->selenium_t}}</td>
-                                                <td>{{$item->mercury_t}}</td>
-                                                <td>{{$item->nickel_t}}</td>
-                                                <td>{{$item->zinc_t}}</td>
+                                                <td>{{$item-> aluminium_tal	}}</td>
+                                                <td>{{$item-> arsenic_tas	}}</td>
+                                                <td>{{$item-> cadmium_tcd	}}</td>
+                                                <td>{{$item-> chromiumhexavalent_tcr6	}}</td>
+                                                <td>{{$item-> chromium_tcr	}}</td>
+                                                <td>{{$item-> cobalt_tco	}}</td>
+                                                <td>{{$item-> copper_tco	}}</td>
+                                                <td>{{$item-> lead_tpb	}}</td>
+                                                <td>{{$item-> selenium_tse	}}</td>
+                                                <td>{{$item-> mercury_thg	}}</td>
+                                                <td>{{$item-> nickel_tni	}}</td>
+                                                <td>{{$item-> zinc_tzn	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -386,8 +394,8 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-Organic" role="tabpanel" aria-labelledby="custom-content-above-Organic-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example7" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
@@ -412,15 +420,16 @@
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->nama}}</td>
-                                                <td>{{$item->bod}}</td>
-                                                <td>{{$item->cod}}</td>
-                                                <td>{{$item->oil_and_grease}}</td>
-                                                <td>{{$item->phenols}}</td>
-                                                <td>{{$item->surfactant}}</td>
-                                                <td>{{$item->total_pcb}}</td>
-                                                <td>{{$item->a_o_x}}</td>
-                                                <td>{{$item->pcdfs}}</td>
-                                                <td>{{$item->pcdds}}</td>
+                                                <td>{{$item-> bod	}}</td>
+                                                <td>{{$item-> cod	}}</td>
+                                                <td>{{$item-> oilandgrease	}}</td>
+                                                <td>{{$item-> totalphenols	}}</td>
+                                                <td>{{$item-> surfactant_mbas	}}</td>
+                                                <td>{{$item-> totalpcb	}}</td>
+                                                <td>{{$item-> aox	}}</td>
+                                                <td>{{$item-> pcdfs	}}</td>
+                                                <td>{{$item-> pcdds	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -428,8 +437,8 @@
                                 </div>
                                 <div class="tab-pane fade card-body table-responsive" id="custom-content-above-microbiology" role="tabpanel" aria-labelledby="custom-content-above-microbiology-tab">
 
-                                    <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                        <thead class="text-center" style=" color:#581845;font-size: 10px">
+                                    <table role="grid" id="example8" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                        <thead class="text-center" style=" color:#581845;font-size: 12px">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Quality Standard</th>
@@ -448,71 +457,75 @@
                                             <tr>
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->nama}}</td>
-                                                <td>{{$item->fecal_coliform}}</td>
-                                                <td>{{$item->c_coli}}</td>
-                                                <td>{{$item->total_coliform_bacteria}}</td>
+                                                <td>{{$item-> fecalcoliform	}}</td>
+                                                <td>{{$item-> ecoli	}}</td>
+                                                <td>{{$item-> totalcoliformbacteria	}}</td>
+
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
                                 </div>
-                                @else
-                                <p class="text-center fs-4">Not Data Found</p>
-                                @endif
+
 
                             </div>
-                            <div class="card-footer">
-                                <div class="card-tools row form-inline">
-                                    <div class="col-4">
-                                        <div class="d-flex justify-content-start">
-                                            <small>Showing {{ $QualityStd->firstItem() }} to
-                                                {{ $QualityStd->lastItem() }} of {{ $QualityStd->total() }}
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <div style="font-size: 8" class="d-flex justify-content-end pagination pagination-sm">
-                                            {{ $QualityStd->links() }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="modal fade" id="modal-default">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Import Data</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <form action="/import/wastewaterstandard" method="POST" enctype="multipart/form-data">
-                                            @csrf
-                                            <div class="modal-body">
-                                                <div class="custom-file">
-                                                    <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
-                                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                                    @error('file')
-                                                    <span class=" invalid-feedback ">{{ $message }}</span>
-                                                    @enderror
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer justify-content-between">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Import</button>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
                         </div>
                     </div>
                 </div>
+                @else
+                <p class="text-center fs-4">Not Data Found</p>
+                @endif
+                <div class="card-footer">
+                    <div class="card-tools row form-inline">
+                        <div class="col-4">
+                            <div class="d-flex justify-content-start">
+                                <small>Showing {{ $QualityStd->firstItem() }} to
+                                    {{ $QualityStd->lastItem() }} of {{ $QualityStd->total() }}
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div style="font-size: 8" class="d-flex justify-content-end pagination pagination-sm">
+                                {{ $QualityStd->links() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/import/wastewaterstandard" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file" class="custom-file-input  @error('file') is-invalid @enderror" id="exampleInputFile" required>
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        @error('file')
+                                        <span class=" invalid-feedback ">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
 

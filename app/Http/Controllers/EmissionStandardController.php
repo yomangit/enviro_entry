@@ -17,7 +17,7 @@ class EmissionStandardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.AirQuality.Emission.QualityStandard.index2', [
+        return view('dashboard.AirQuality.Emission.QualityStandard2.index2', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
             'QualityStandard' => EmissionStandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
@@ -52,7 +52,7 @@ class EmissionStandardController extends Controller
      */
     public function create()
     {
-        return view('dashboard.AirQuality.Emission.QualityStandard.create2', [
+        return view('dashboard.AirQuality.Emission.QualityStandard2.create2', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
             'QualityStandard' => EmissionStandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
@@ -126,7 +126,7 @@ class EmissionStandardController extends Controller
      */
     public function edit(EmissionStandard $standard2)
     {
-        return view('dashboard.AirQuality.Emission.QualityStandard.edit2', [
+        return view('dashboard.AirQuality.Emission.QualityStandard2.edit2', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
             'QualityStandard' => $standard2

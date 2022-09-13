@@ -38,4 +38,25 @@ class DustImport implements ToModel,WithHeadingRow
             'remarks'=>$row['remarks'],
         ]);
     }
+    public function rules(): array
+    {
+        return [
+            'user_id'=>'required',
+            'codedust_id'=>'required',
+            'date_in'=> 'required',
+            'date_out'=>'required',
+            'm4'=>'required',
+            'm3'=>'required',
+            'm6'=>'required',
+            'm5'=>'required',
+            'no_insect'=>'required',
+            'vb_dirt'=>'required',
+            'vb_algae'=>'required',
+            'area_observation'=>'required',
+            'observer'=>'required|max:255',
+            'volume_filtrat'=>'required',
+            'total_vlm_water'=>'required',
+            'remarks'=>'required'
+        ];
+    }
 }

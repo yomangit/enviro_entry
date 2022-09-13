@@ -17,7 +17,7 @@
         <div class="container-fluid">
 
             <div class="card card-primary card-outline">
-                <div class="card-header p-0 p-2">
+                <div class="card-header p-0">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -43,57 +43,60 @@
 
                     </div>
                     @endif
-                    <a href="/weather/evaporation/evaporationpointid" class="btn bg-gradient-info btn-xs ">Point ID</a>
+                    @can('admin')
+                    <a href="/weather/evaporation/evaporationpointid" class="btn bg-gradient-info btn-xs my-1 ml-2 ">Point ID</a>
+                    @endcan
+                    <div class=" card-tools p-1 mr-2 form-inline">
+                        <form action="/weather/evaporation" class="form-inline" autocomplete="off">
+                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                            </div>
+                            <span class="input-group-text form-control-sm ">To</span>
+
+                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                            </div>
+
+                            <div class="input-group mr-1" style="width: 90px;">
+                                <select class="form-control form-control-sm " name="search">
+                                    <option value="" selected disabled>Point ID</option>
+                                    @foreach ($code_units as $code)
+                                    @if ( request('search')==$code->nama)
+                                    <option value="{{($code->nama)}}" selected>
+                                        {{$code->nama}}
+                                    </option>
+                                    @else
+                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mr-2">
+                                <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                            </div>
+                        </form>
+                        <form class="form-inline" action="/weather/evaporation">
+                            <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <section class="content ">
-                        <div class="row mb-2 p-0">
-                            <div class="col-6 col-md-4 form-inline">
+                      
+                           @can('admin')
+                           <div class="col-6 col-md-4 mb-2 form-inline">
                                 <a href="/weather/evaporation/create" class="btn bg-gradient-secondary btn-xs  form-inline   ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
                                 <a href="/export/evaporation" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                                 <a href="#" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                     <i class="fas fa-upload mr-1"></i>Excel
                                 </a>
                             </div>
-                            <div class="col-12 col-md-8 ">
-                                <div class=" card-tools p-1 mr-2 d-flex justify-content-end form-inline">
-                                    <form action="/weather/evaporation" class="form-inline" autocomplete="off">
-                                        <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                                        </div>
-                                        <span class="input-group-text form-control-sm ">To</span>
-
-                                        <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                        </div>
-
-                                        <div class="input-group mr-1" style="width: 90px;">
-                                            <select class="form-control form-control-sm " name="search">
-                                                <option value="" selected disabled>Point ID</option>
-                                                @foreach ($code_units as $code)
-                                                @if ( request('search')==$code->nama)
-                                                <option value="{{($code->nama)}}" selected>
-                                                    {{$code->nama}}
-                                                </option>
-                                                @else
-                                                <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                                @endif
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="mr-2">
-                                            <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                        </div>
-                                    </form>
-                                    <form class="form-inline" action="/weather/evaporation">
-                                        <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <table role="grid" id="example2" class="table table-bordered table-hover ">
-                            <thead style=" color:#005245">
+                           @endcan
+                           
+                        
+                        <table role="grid" class="table table-bordered table-hover ">
+                            <thead class="table-info" >
                                 <tr class="text-center" style="font-size: 12px">
                                     <th>No</th>
                                     <th>Date</th>
@@ -108,7 +111,9 @@
                                     <th>Initial Volume (V1)</th>
                                     <th>Final Volume (V2)</th>
                                     <th>V1-V2</th>
+                                    @can('admin')
                                     <th>Action</th>
+                                    @endcan
                                 </tr>
                             </thead>
                             <tbody style="text-align: center">
@@ -119,9 +124,9 @@
                                 @endphp
                                 @foreach ($Evaporation as $code)
 
-                                <tr style="font-size: 12px">
+                                <tr class="text-center " style="font-size: 12px">
                                     <td>{{ $no++ }}</td>
-                                    <td style="width: 60px">{{ date('d-m-Y', strtotime( $code->date)) }}</td>
+                                    <td style="width: 100px">{{ date('d-M-Y', strtotime( $code->date)) }}</td>
                                     <td>{{ $code->PointId->nama }}</td>
                                     <td>{{ $code->time_observation }}</td>
                                     <td>{{ $code->day_rainfall }}</td>
@@ -129,16 +134,16 @@
                                     <td>{{ $code->final_water_elevation }}</td>
                                     <td>{{$evaporation= $code->initial_water_elevation - $code->final_water_elevation + $code->day_rainfall}}</td>
                                     @php
-                                    if ($evaporation>0) {
-                                    $evaporation;
-                                    }
-                                    elseif ($evaporation<0) { $evaporation=0; } @endphp <td>{{$evaporation}}</td>
+                                    $null=0;
+                                    if ($evaporation>0) {$evaporation;}
+                                    elseif ($evaporation<0) {$evaporation=0; } @endphp <td>{{$evaporation}}</td>
                                         <td>{{ $code->initial_water_elevation - $code->final_water_elevation }}</td>
                                         <td>{{ number_format($initial_v1= 3.14*60*60* doubleval($code->initial_water_elevation)) }}</td>
                                         <td>{{number_format($final_v2= 3.14*60*60* doubleval($code->final_water_elevation)) }}</td>
                                         <td>{{ number_format(abs($final_v2 -$initial_v1))}}</td>
+                                        @can('admin')
                                         <td>
-                                            <div style="">
+                                            <div style="width: 60px">
                                                 <a href="/weather/evaporation/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fas fa-pen"></i>
                                                 </a>
@@ -152,11 +157,26 @@
 
                                             </div>
                                         </td>
+                                        @endcan
                                 </tr>
-                                @endforeach
 
-                            </tbody>
+                                @endforeach
+                                <tr>
+                                    <th class="text-center " colspan="7">Maximum Evaporation</th>
+                                    <th class="text-center " colspan="7">{{$max_evaporation}}</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center " colspan="7">Minimum Evaporation</th>
+
+                                    <th class="text-center " colspan="7">{{$min_evaporation}}</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center " colspan="7">Average Evaporation</th>
+                                    <th class="text-center " colspan="7">{{$avg_evaporation}}</th>
+                                </tr>
                         </table>
+
+
 
                     </section>
                 </div>

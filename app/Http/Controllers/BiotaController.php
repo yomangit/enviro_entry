@@ -108,7 +108,7 @@ class BiotaController extends Controller
     public function update(Request $request, Biota $biotum)
     {
         $rules = [
-            'nama' => 'required|max:255|unique:biotas'
+            'nama' => 'required|max:255'
         ];
 
 

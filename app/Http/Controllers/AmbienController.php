@@ -19,12 +19,13 @@ class AmbienController extends Controller
      */
     public function index()
     {
+        
         return view('dashboard.AirQuality.Ambien.index', [
             'tittle'=>'Ambien',
             'code_units'=>AmbienPointid::all(),
             'breadcrumb'=>'Ambien',
-            'Ambien'=>Ambien::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
-            'QualityStandard'=>AmbienQualityStd::where('user_id',auth()->user()->id)->paginate(10)->withQueryString()
+            'Ambien'=>Ambien::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
+            'QualityStandard'=>AmbienQualityStd::all()
         ]);
     }
     public function ExportAmbien()
@@ -53,6 +54,9 @@ class AmbienController extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.AirQuality.Ambien.create', [
             'tittle'=>'Ambien',
             'code_units'=>AmbienPointid::all(),
@@ -115,6 +119,9 @@ class AmbienController extends Controller
      */
     public function edit(Ambien $ambien)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.AirQuality.Ambien.edit', [
             'tittle'=>'Ambien',
             'code_units'=>AmbienPointid::all(),

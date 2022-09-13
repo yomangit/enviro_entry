@@ -17,12 +17,48 @@
         <div class="container-fluid">
 
             <div class="card card-primary card-outline">
-                <div class="card-header p-0 p-2">
-                <a href="/weather/rainfall/rainfallpointid" class="btn bg-gradient-info btn-xs ">Point ID</a>
+                <div class="card-header p-0 ">
+                    @can('admin')
+                    <a href="/weather/rainfall/rainfallpointid" class="btn bg-gradient-info btn-xs ml-2 my-1 ">Point ID</a>
+                    @endcan
+                    <div class=" card-tools p-1 mr-2 form-inline">
+                        <form action="/weather/rainfall" class="form-inline" autocomplete="off">
+                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                            </div>
+                            <span class="input-group-text form-control-sm ">To</span>
+
+                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                            </div>
+
+                            <div class="input-group mr-1" style="width: 90px;">
+                                <select class="form-control form-control-sm " name="search">
+                                    <option value="" selected disabled>Point ID</option>
+                                    @foreach ($code_units as $code)
+                                    @if ( request('search')==$code->nama)
+                                    <option value="{{($code->nama)}}" selected>
+                                        {{$code->nama}}
+                                    </option>
+                                    @else
+                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mr-2">
+                                <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                            </div>
+                        </form>
+                        <form class="form-inline" action="/weather/rainfall">
+                            <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="card-body">
                     <section class="content ">
-                    <div class="row mb-3 p-0 ">
+                        @can('admin')
+                        <div class="row mb-3 p-0 ">
                             <div class="col-6 col-md-4 form-inline">
                                 <a href="/weather/rainfall/create" class="btn bg-gradient-secondary btn-xs  form-inline   ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
                                 <a href="/export/rainfall" class="btn  bg-gradient-secondary btn-xs  form-inline   ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
@@ -31,98 +67,71 @@
                                 </a>
                             </div>
                             <div class="col-12 col-md-8 ">
-                                <div class=" card-tools p-1 mr-2 d-flex justify-content-end form-inline">
-                                    <form action="/weather/rainfall" class="form-inline" autocomplete="off">
-                                        <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                                        </div>
-                                        <span class="input-group-text form-control-sm ">To</span>
 
-                                        <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
-                                            <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                        </div>
-
-                                        <div class="input-group mr-1" style="width: 90px;">
-                                            <select class="form-control form-control-sm " name="search">
-                                                <option value="" selected disabled>Point ID</option>
-                                                @foreach ($code_units as $code)
-                                                @if ( request('search')==$code->nama)
-                                                <option value="{{($code->nama)}}" selected>
-                                                    {{$code->nama}}
-                                                </option>
-                                                @else
-                                                <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                                @endif
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="mr-2">
-                                            <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
-                                        </div>
-                                    </form>
-                                    <form class="form-inline" action="/weather/rainfall">
-                                        <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
-                                    </form>
-                                </div>
                             </div>
                         </div>
+                        @endcan
                         @if ($Rainfall->count())
                         <table role="grid" id="example2" class="table table-bordered table-hover ">
-                            <thead style=" color:#005245">
+                            <thead class="table-info">
                                 <tr class="text-center" style="font-size: 12px">
                                     <th>No</th>
-                                    <th>Action</th>
+                                   
                                     <th>Date</th>
                                     <th>Point Id</th>
                                     <th>Rainfall</th>
+                                    @can('admin')
+                                    <th>Action</th>
+                                    @endcan
                                 </tr>
                             </thead>
-                            <tbody style="text-align: center">
+                            <tbody >
                                 @php
                                 $no = 1 + ($Rainfall->currentPage() - 1) * $Rainfall->perPage();
                                 @endphp
                                 @foreach ($Rainfall as $code)
 
-                                <tr style="font-size: 12px">
+                                <tr class="text-center" style="font-size: 12px">
                                     <td>{{ $no++ }}</td>
-                                    <td>
-                                        <div style="">
-                                            <a href="/weather/rainfall/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                <i class="fas fa-pen"></i>
-                                            </a>
-                                            <form action="/weather/rainfall/{{ $code->id }}" method="POST" class="d-inline">
-                                                @method('delete')
-                                                @csrf
-                                                <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </form>
-
-                                        </div>
-                                    </td>
-                                    <td>{{ date('d-m-Y', strtotime( $code->date)) }}</td>
+                                    <td>{{ date('d-M-Y', strtotime( $code->date)) }}</td>
                                     <td>{{ $code->PointId->nama }}</td>
                                     <td>{{ $code->rainfall }}</td>
+                                    @can('admin')
+                                    <td>
+                                       
+                                       <a href="/weather/rainfall/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                           <i class="fas fa-pen"></i>
+                                       </a>
+                                       <form action="/weather/rainfall/{{ $code->id }}" method="POST" class="d-inline">
+                                           @method('delete')
+                                           @csrf
+                                           <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                               <i class="fas fa-trash"></i>
+                                           </button>
+                                       </form>
+                                    </td>
+                                    @endcan
+                                  
                                 </tr>
                                 @endforeach
-                                <tr>
-                                    <th colspan="4">Total Rain Fall /Month</th>
+                                <tr class="text-center">
+                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Rain Fall /Month</th>
                                     <th>{{$avg_rainfall}}</th>
                                 </tr>
-                                <tr>
-                                    <th colspan="4">Year to Date</th>
+                                <tr class="text-center">
+                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Year to Date</th>
                                     <th>{{$avg_year}}</th>
                                 </tr>
-                                <tr>
-                                    <th colspan="4">Max. Daily Rainfall</th>
+                                <tr class="text-center">
+                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Max. Daily Rainfall</th>
                                     <th>{{$max_rainfall}}</th>
                                 </tr>
-                                <tr>
-                                    <th colspan="4">Total Rain days</th>
+                                <tr class="text-center">
+                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Rain days</th>
                                     <th>{{$rainday}}</th>
                                 </tr>
-                                <tr>
-                                    <th colspan="4">Total Wet days</th>
+                                <tr class="text-center">
+                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Wet days</th>
                                     <th>{{$wetday}}</th>
                                 </tr>
                             </tbody>
@@ -143,14 +152,11 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                            <figure class="highcharts-figure p-2">
-                                <div class="invoice mb-3 card-body" id="container"></div>
-                            </figure>
                 @else
                 <p class="text-center fs-4">Not Data Found</p>
                 @endif
+
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -181,7 +187,16 @@
                 </div>
 
             </div>
+            @if($Rainfall->count())
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title text center">{{$tittle}}</div>
+                </div>
+                <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+            </div>
+            @else
 
+            @endif
         </div><!-- /.container-fluid -->
     </section>
 </div>
@@ -192,12 +207,7 @@
             type: 'column'
         },
         title: {
-            text: 'Emissions to air in Norway'
-        },
-        subtitle: {
-            text: 'Source: ' +
-                '<a href="https://www.ssb.no/en/statbank/table/08940/" ' +
-                'target="_blank">SSB</a>'
+            text: ''
         },
         xAxis: {
             categories: {!! json_encode($tgl) !!},

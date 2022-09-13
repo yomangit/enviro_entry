@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/weather/rainfal">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/weather/rainfall">Home</a></li>
                         <li class="breadcrumb-item active">Input Data</li>
                     </ol>
                 </div>
@@ -21,8 +21,8 @@
     <section class="content">
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
-            <div class="card card-primary card-outline">
-                <div class="card-header p-0 pt-1">
+            <div class="card card-olive card-outline">
+                <div class="card-header p-0">
 
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
@@ -34,11 +34,11 @@
                     <div class="card-title p-2 font-weight-bold">Form Edit</div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                    <form action="/weather/rainfall/{{ $Rainfall->id }}" method="post"
-                            enctype="multipart/form-data" autocomplete="off">
-                            @method('put')
-                            @csrf
+                <form action="/weather/rainfall/{{ $Rainfall->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                    @method('put')
+                    @csrf
+                    <div class="card-body">
+
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="form-group row">
@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                             </div>
-                           <div class="col-12 col-sm-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="form-group row">
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                     <div class="col-sm-7">
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             {{-- end nama --}}
-                           <div class="col-12 col-sm-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="form-group">
                                     <div class="form-group row">
                                         <label style="font-size: 12px" class="col-sm-4 col-form-label">Rainfall</label>
@@ -90,14 +90,14 @@
 
                         </div>
                         <!-- /.row -->
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn bg-gradient-primary btn-sm ">Create</button>
-                        </div>
-                    </form>
 
-                </div>
-                <!-- /.card-body -->
 
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer d-flex justify-content-end">
+                    <button type="submit" class="btn bg-gradient-success btn-sm ">Save<i class="fa-regular fa-floppy-disk ml-3"></i></button>
+                    </div>
+                </form>
             </div>
             <!-- /.card -->
 

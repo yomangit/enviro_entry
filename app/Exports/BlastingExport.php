@@ -3,15 +3,18 @@
 namespace App\Exports;
 
 use App\Models\Blasting;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
 
-class BlastingExport implements FromCollection
+class BlastingExport implements FromView
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function view(): View
     {
-        return Blasting::all();
+        return view('dashboard.Blasting.Master.export', [
+            'Blasting' => Blasting::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->get()
+        ]);
     }
 }

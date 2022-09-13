@@ -19,8 +19,14 @@ class FreshWaterController extends Controller
      */
     public function index()
     {
-        
-        $grafiks= FreshWater::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->get();
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+        $grafiks= FreshWater::with('user')->filter(request(['fromDate','search']))->paginate($table)->withQueryString();
         $taxa_richness=[];
         $species_density=[];
         $diversity_index=[];
@@ -80,7 +86,7 @@ class FreshWaterController extends Controller
             'evenness_value'=>$evenness_value,
             'dominance_index'=>$dominance_index,
             'biotas'=>$biotas,
-            'Freshwaters' => FreshWater::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search','location']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Freshwaters' => FreshWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
 

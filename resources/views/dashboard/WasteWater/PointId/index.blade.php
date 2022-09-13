@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/soilquality">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/wastewater">Home</a></li>
                         <li class="breadcrumb-item active">Code Sample</li>
                     </ol>
                 </div>
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             
                 <div class="card card-primary card-outline">
-                    <div class="card-header p-0 p-2">
+                    <div class="card-header p-0">
 
                         @if (session()->has('success'))
                         <div class="alert alert-success alert-dismissible form-inline">
@@ -49,9 +49,9 @@
 
                         </div>
                         @endif
-                        <div class="card-tools p-2 mr-2">
+                        <div class=" card-tools p-1 mt-1 mb-1 mr-2 form-inline">
 
-                            <form action="/wastewater/wastewaterpointid">
+                            <form action="/wastewater/wastewaterpointid ">
                                 <div class="input-group input-group-sm" style="width: 180px;">
                                     <input type="text" name="search" class="form-control float-right" placeholder="Search" value="{{ request('search') }}">
                                     <div class="input-group-append">
@@ -63,23 +63,23 @@
                             </form>
 
                         </div>
-                        <a href="/wastewater/wastewaterpointid/create" class="btn bg-gradient-secondary btn-xs  ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
-                        <a href="/export/wastewaterpointid" class="btn  bg-gradient-secondary btn-xs  ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
-                        <a href="#" class="btn  bg-gradient-secondary btn-xs  ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
+                        <a href="/wastewater/wastewaterpointid/create" class="btn bg-gradient-secondary btn-xs my-1 ml-2"><i class="fas fa-plus mr-1 "></i>Add Data</a>
+                        <a href="/export/wastewaterpointid" class="btn  bg-gradient-secondary btn-xs my-1  ml-2" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                        <a href="#" class="btn  bg-gradient-secondary btn-xs my-1 ml-2" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                             <i class="fas fa-upload mr-1"></i>Excel
                         </a>
                     </div>
-                    @if ($Codes->count())
+                   
                     <div class="card-body">
                         <section class="content ">
                             <table role="grid" id="example2" class="table table-bordered table-hover ">
                                 <thead style=" color:#005245">
                                     <tr class="text-center" style="font-size: 12px">
                                         <th>No</th>
-                                        <th>Action</th>
+                                        
                                         <th>Name</th>
                                         <th>Lokasi</th>
-
+                                        <th>Action</th>
 
                                     </tr>
                                 </thead>
@@ -90,8 +90,10 @@
                                     @foreach ($Codes as $code)
                                     <tr style="font-size: 12px">
                                         <td>{{ $no++ }}</td>
+                                        <td>{{ $code->nama }}</td>
+                                        <td>{{ $code->lokasi }}</td>
                                         <td>
-                                            <div style="">
+                                        
                                                 <a href="/wastewater/wastewaterpointid/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fas fa-pen"></i>
                                                 </a>
@@ -103,11 +105,8 @@
                                                     </button>
                                                 </form>
 
-                                            </div>
+                                       
                                         </td>
-
-                                        <td>{{ $code->nama }}</td>
-                                        <td>{{ $code->lokasi }}</td>
 
                                     </tr>
                                     @endforeach
@@ -118,24 +117,21 @@
                         </section>
                     </div>
                     <div class="card-footer">
-                        <div class="card-tools  form-inline">
-                            <div class="col-4">
-                                <div class="d-flex justify-content-start">
-                                    <p>Showing {{ $Codes->firstItem() }} to {{$Codes->lastItem() }} of {{ $Codes->total() }}</p>
+                                <div class="card-tools row form-inline">
+                                    <div class="col-4">
+                                        <div class="d-flex justify-content-start">
+                                            <small>Showing {{ $Codes->firstItem() }} to
+                                                {{ $Codes->lastItem() }} of {{ $Codes->total() }}
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div style="font-size: 8" class="d-flex justify-content-end pagination pagination-sm">
+                                            {{ $Codes->links() }}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-8 d-flex justify-content-end">
-                                <div class=" pagination pagination-sm">
-                                    {{ $Codes->links() }}
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                 
-                    @else
-                    <p class="text-center fs-4">Not Data Found</p>
-                    @endif
                     <div class="modal fade" id="modal-default">
                         <div class="modal-dialog">
                             <div class="modal-content">

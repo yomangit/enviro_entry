@@ -20,7 +20,7 @@ class HydroCodeController extends Controller
         return view('dashboard.Hydrometric.WaterLevel.CodeSample.index',[
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => CodeHydrometric::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() 
+            'Codes' => CodeHydrometric::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() 
         ]);
     }
     public function ExportCodeHydro()

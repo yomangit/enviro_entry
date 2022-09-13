@@ -23,8 +23,8 @@ class Emission2Controller extends Controller
             'tittle' => 'Emission',
             'breadcrumb' => 'Emission',
             'code_units'=>EmissionPointId::all(),
-            'QualityStandard'=>EmissionStandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
-            'Emission' => Emission2::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'QualityStandard'=>EmissionStandard::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
+            'Emission' => Emission2::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
         ]);
     }
 
@@ -57,6 +57,9 @@ class Emission2Controller extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.AirQuality.Emission.Master2.create', [
             'tittle' => 'Emission',
             'breadcrumb' => 'Emission',
@@ -133,6 +136,9 @@ class Emission2Controller extends Controller
      */
     public function edit(Emission2 $emission2)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.AirQuality.Emission.Master2.edit', [
             'tittle' => 'Emission',
             'breadcrumb' => 'Emission',

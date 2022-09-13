@@ -20,7 +20,7 @@ class ResourceCodeSampleGwController extends Controller
     {
         return view('dashboard.GroundWater.Codesamplegw.index',[
             "tittle"=>"Code Sample MSM",
-            'breadcrumb'=>'Code Sample Ground Water MSM ',
+            'breadcrumb'=>'Code Sample MSM ',
       'Codes'=>Codesamplegw::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
@@ -54,7 +54,7 @@ class ResourceCodeSampleGwController extends Controller
     public function create()
     {
         return view('dashboard.GroundWater.Codesamplegw.create',[
-            'breadcrumb'=>'Code Sample Ground Water MSM ',
+            'breadcrumb'=>'Code Sample MSM ',
             "tittle"=>"Code Sample MSM",
             'Codes'=>Codesamplegw::where('user_id',auth()->user()->id)->filter(request(['fromDate']))->get()//with diguanakan untuk mengatasi N+1 problem
 
@@ -105,7 +105,7 @@ class ResourceCodeSampleGwController extends Controller
         return view('dashboard.GroundWater.Codesamplegw.edit',[
             "tittle"=>"Code Sample MSM",
 
-            'breadcrumb'=>'Code Sample Ground Water MSM ',
+            'breadcrumb'=>'Code Sample MSM ',
 
             'Codes'=>$codesamplegw
         ]);

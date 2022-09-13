@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Wastewater;
-use App\Models\Wastewaterpointid;
 use Illuminate\Http\Request;
+use App\Exports\ExportWastewater;
+use App\Imports\ImportWastewater;
+use App\Models\Wastewaterpointid;
 use App\Models\Wastewaterstandard;
+use Maatwebsite\Excel\Facades\Excel;
 
 class WastewaterController extends Controller
 {
@@ -14,15 +17,104 @@ class WastewaterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function index()
     {
+
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if ( empty($firstDayofPreviousMonth) ) {
+            $table=30;
+        }
+        else
+        $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
+
+    $Wastewater = Wastewater::with('user')->filter(request(['fromDate','search']))->paginate($table)->withQueryString();
+    $tanggal=[];
+    $tss=[];
+    $tss_std=[];
+    $ph=[];
+    $ph_std=[];
+
+    foreach ($Wastewater as $item) 
+    {
+        $tanggal[] = date('d-M-Y', strtotime($item->date));
+        
+        if ( is_numeric($item->totalsuspendedsolids_tss) ) {
+            $tss[]=doubleval($item->totalsuspendedsolids_tss);
+        }
+        else
+        {
+            $tss[]='';
+        }
+        if ( !is_numeric($item->totalsuspendedsolids_tss) ) {
+            $tss_std[]='';
+        }
+        elseif ( is_numeric($item->StandardId->totalsuspendedsolids_tss) ) {
+            $tss_std[]=doubleval($item->StandardId->totalsuspendedsolids_tss);
+        }
+        else
+        {
+            $tss_std[]='';
+        }
+
+
+        if ( is_numeric($item->ph) ) {
+            $ph[]=doubleval($item->ph);
+        }
+        else
+        {
+            $ph[]='';
+        }
+        if ( !is_numeric($item->ph) ) {
+            $ph_std[]='';
+        }
+        elseif ( is_numeric($item->StandardId->ph) ) {
+            $ph_std[]=doubleval($item->StandardId->ph);
+        }
+        else
+        {
+            $ph_std[]='';
+        }
+    }
+ 
         return view('dashboard.WasteWater.Master.index', [
             'tittle' => 'Waste Water',
             'breadcrumb' => 'Waste Water',
+            'tanggal'=>$tanggal,
+            'tss'=>$tss,
+            'tss_std'=>$tss_std,
+            'ph'=>$ph,
+            'ph_std'=>$ph_std,
             'code_units'=>Wastewaterpointid::all(),
-            'QualityStd' => Wastewaterstandard::where('user_id', auth()->user()->id)->paginate(10)->withQueryString(),
-            'Wastewater' => Wastewater::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+            'QualityStd' => Wastewaterstandard::all(),
+            'Wastewater' => Wastewater::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->paginate(30)->withQueryString()
         ]);
+    }
+
+
+    public function ExportWastewater()
+    {
+
+        return Excel::download(new ExportWastewater, ' Waste Water.csv');
+    }
+    public function ImportWastewater(Request $request)
+    {
+
+        $file = $request->file('file');
+        $nameFile = $file->getClientOriginalName();
+        $file->move('EnviroDatabase', $nameFile);
+        $import = new ImportWastewater;
+
+        try {
+            Excel::import($import, public_path('/EnviroDatabase/' . $nameFile));
+            return redirect('/wastewater')->with('success', 'Data has been Imported!');
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $e->failures();
+            return back()->withFailures($e->failures());
+        }
     }
 
     /**
@@ -32,11 +124,16 @@ class WastewaterController extends Controller
      */
     public function create()
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.WasteWater.Master.create', [
             'tittle' => 'Waste Water',
             'breadcrumb' => 'Waste Water',
+            'Wastewater' => Wastewater::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(30)->withQueryString(),
+
+            'QualityStd' => Wastewaterstandard::where('user_id', auth()->user()->id)->paginate(10)->withQueryString(),
             'code_units'=>Wastewaterpointid::all(),
-            'Wastewater' => Wastewater::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
         ]);
     }
 
@@ -50,78 +147,80 @@ class WastewaterController extends Controller
     {
         $validatedData = $request->validate([
             'point_id' => 'required',
+            'standard_id' => 'required',
             'date' => 'required',
-            'conductivity' => 'required',
-            'tds' => 'required',
-            'tss' => 'required',
-            'turbidity' => 'required',
-            'hardness' => 'required',
-            'alkalinity_as_caco3' => 'required',
-            'alkalinity_carbonate' => 'required',
-            'alkalinity_bicarbonate' => 'required',
-            'temperature' => 'required',
-            'salinity' => 'required',
-            'do' => 'required',
-            'ph' => 'required',
-            'alkalinity_total' => 'required',
-            'cl' => 'required',
-            'fluoride' => 'required',
-            'sulphate' => 'required',
-            'sulphite' => 'required',
-            'free_chlorine' => 'required',
-            'fcn' => 'required',
-            'total_cyanide' => 'required',
-            'wad_cyanide' => 'required',
-            'ammonia' => 'required',
-            'nitrate' => 'required',
-            'nitrite' => 'required',
-            'phosphate' => 'required',
-            'total_phosphate' => 'required',
-            'aluminium' => 'required',
-            'antimony' => 'required',
-            'arsenic' => 'required',
-            'barium' => 'required',
-            'cadmium' => 'required',
-            'calcium' => 'required',
-            'chromium' => 'required',
-            'chromium_hexavalent' => 'required',
-            'cobalt' => 'required',
-            'copper' => 'required',
-            'iron' => 'required',
-            'lead' => 'required',
-            'magnesium' => 'required',
-            'manganese' => 'required',
-            'mercury' => 'required',
-            'nickel' => 'required',
-            'selenium' => 'required',
-            'silver' => 'required',
-            'sodium' => 'required',
-            'tin' => 'required',
-            'zinc' => 'required',
-            'aluminium_t_ai' => 'required',
-            'arsenic_t_as' => 'required',
-            'cadmium_t_cd' => 'required',
-            'chromium_t' => 'required',
-            'chromium_hexavalent_t' => 'required',
-            'cobalt_t' => 'required',
-            'cooper' => 'required',
-            'lead_t' => 'required',
-            'selenium_t' => 'required',
-            'mercury_t' => 'required',
-            'nickel_t' => 'required',
-            'zinc_t' => 'required',
-            'bod' => 'required',
-            'cod' => 'required',
-            'oil_and_grease' => 'required',
-            'phenols' => 'required',
-            'surfactant' => 'required',
-            'total_pcb' => 'required',
-            'a_o_x' => 'required',
-            'pcdfs' => 'required',
-            'pcdds' => 'required',
-            'fecal_coliform' => 'required',
-            'e_coli' => 'required',
-            'total_coliform_bacteria' => 'required',
+            "conductivity"  => 'required',
+            "totaldissolvedsolids_tds"  => 'required',
+            "totalsuspendedsolids_tss"  => 'required',
+            "turbidity"  => 'required',
+            "hardness"  => 'required',
+            "alkalinity_ascaco3"  => 'required',
+            "alkalinitycarbonate"  => 'required',
+            "alkalinitybicarbonate"  => 'required',
+            "temperature"  => 'required',
+            "salinity"  => 'required',
+            "dissolvedoxygen_do"  => 'required',
+            "ph"  => 'required',
+            "alkalinitytotal"  => 'required',
+            "chloride_cl"  => 'required',
+            "fluoride_f"  => 'required',
+            "sulphate_so4"  => 'required',
+            "sulphite_h2s"  => 'required',
+            "freechlorine_cl2"  => 'required',
+            "freecyanide_fcn"  => 'required',
+            "totalcyanide_cntot"  => 'required',
+            "wadcyanide_cnwad"  => 'required',
+            "ammonia_nh4"  => 'required',
+            "ammonium_n_nh3"  => 'required',
+            "nitrate_no3"  => 'required',
+            "nitrite_no2"  => 'required',
+            "phosphate_po4"  => 'required',
+            "totalphosphate_ppo4"  => 'required',
+            "aluminium_al"  => 'required',
+            "antimony_sb"  => 'required',
+            "arsenic_as"  => 'required',
+            "barium_ba"  => 'required',
+            "cadmium_cd"  => 'required',
+            "calcium_ca"  => 'required',
+            "chromium_cr"  => 'required',
+            "chromiumhexavalent_cr6"  => 'required',
+            "cobalt_co"  => 'required',
+            "copper_cu"  => 'required',
+            "iron_fe"  => 'required',
+            "lead_pb"  => 'required',
+            "magnesium_mg"  => 'required',
+            "manganese_mn"  => 'required',
+            "mercury_hg"  => 'required',
+            "nickel_ni"  => 'required',
+            "selenium_se"  => 'required',
+            "silver_ag"  => 'required',
+            "sodium_na"  => 'required',
+            "tin_sn"  => 'required',
+            "zinc_zn"  => 'required',
+            "aluminium_tal"  => 'required',
+            "arsenic_tas"  => 'required',
+            "cadmium_tcd"  => 'required',
+            "chromiumhexavalent_tcr6"  => 'required',
+            "chromium_tcr"  => 'required',
+            "cobalt_tco"  => 'required',
+            "copper_tco"  => 'required',
+            "lead_tpb"  => 'required',
+            "selenium_tse"  => 'required',
+            "mercury_thg"  => 'required',
+            "nickel_tni"  => 'required',
+            "zinc_tzn"  => 'required',
+            "bod"  => 'required',
+            "cod"  => 'required',
+            "oilandgrease"  => 'required',
+            "totalphenols"  => 'required',
+            "surfactant_mbas"  => 'required',
+            "totalpcb"  => 'required',
+            "aox"  => 'required',
+            "pcdfs"  => 'required',
+            "pcdds"  => 'required',
+            "fecalcoliform"  => 'required',
+            "ecoli"  => 'required',
+            "totalcoliformbacteria"  => 'required',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -150,9 +249,14 @@ class WastewaterController extends Controller
      */
     public function edit(Wastewater $wastewater)
     {
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        }
         return view('dashboard.WasteWater.Master.edit', [
             'tittle' => 'Waste Water',
             'breadcrumb' => 'Waste Water',
+            'QualityStd' => Wastewaterstandard::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString(),
+
             'code_units'=>Wastewaterpointid::all(),
             'Wastewater' => $wastewater
         ]);
@@ -169,78 +273,80 @@ class WastewaterController extends Controller
     {
         $rules = [
             'point_id' => 'required',
+            'standard_id' => 'required',
             'date' => 'required',
-            'conductivity' => 'required',
-            'tds' => 'required',
-            'tss' => 'required',
-            'turbidity' => 'required',
-            'hardness' => 'required',
-            'alkalinity_as_caco3' => 'required',
-            'alkalinity_carbonate' => 'required',
-            'alkalinity_bicarbonate' => 'required',
-            'temperature' => 'required',
-            'salinity' => 'required',
-            'do' => 'required',
-            'ph' => 'required',
-            'alkalinity_total' => 'required',
-            'cl' => 'required',
-            'fluoride' => 'required',
-            'sulphate' => 'required',
-            'sulphite' => 'required',
-            'free_chlorine' => 'required',
-            'fcn' => 'required',
-            'total_cyanide' => 'required',
-            'wad_cyanide' => 'required',
-            'ammonia' => 'required',
-            'nitrate' => 'required',
-            'nitrite' => 'required',
-            'phosphate' => 'required',
-            'total_phosphate' => 'required',
-            'aluminium' => 'required',
-            'antimony' => 'required',
-            'arsenic' => 'required',
-            'barium' => 'required',
-            'cadmium' => 'required',
-            'calcium' => 'required',
-            'chromium' => 'required',
-            'chromium_hexavalent' => 'required',
-            'cobalt' => 'required',
-            'copper' => 'required',
-            'iron' => 'required',
-            'lead' => 'required',
-            'magnesium' => 'required',
-            'manganese' => 'required',
-            'mercury' => 'required',
-            'nickel' => 'required',
-            'selenium' => 'required',
-            'silver' => 'required',
-            'sodium' => 'required',
-            'tin' => 'required',
-            'zinc' => 'required',
-            'aluminium_t_ai' => 'required',
-            'arsenic_t_as' => 'required',
-            'cadmium_t_cd' => 'required',
-            'chromium_t' => 'required',
-            'chromium_hexavalent_t' => 'required',
-            'cobalt_t' => 'required',
-            'cooper' => 'required',
-            'lead_t' => 'required',
-            'selenium_t' => 'required',
-            'mercury_t' => 'required',
-            'nickel_t' => 'required',
-            'zinc_t' => 'required',
-            'bod' => 'required',
-            'cod' => 'required',
-            'oil_and_grease' => 'required',
-            'phenols' => 'required',
-            'surfactant' => 'required',
-            'total_pcb' => 'required',
-            'a_o_x' => 'required',
-            'pcdfs' => 'required',
-            'pcdds' => 'required',
-            'fecal_coliform' => 'required',
-            'e_coli' => 'required',
-            'total_coliform_bacteria' => 'required',
+            "conductivity"  => 'required',
+            "totaldissolvedsolids_tds"  => 'required',
+            "totalsuspendedsolids_tss"  => 'required',
+            "turbidity"  => 'required',
+            "hardness"  => 'required',
+            "alkalinity_ascaco3"  => 'required',
+            "alkalinitycarbonate"  => 'required',
+            "alkalinitybicarbonate"  => 'required',
+            "temperature"  => 'required',
+            "salinity"  => 'required',
+            "dissolvedoxygen_do"  => 'required',
+            "ph"  => 'required',
+            "alkalinitytotal"  => 'required',
+            "chloride_cl"  => 'required',
+            "fluoride_f"  => 'required',
+            "sulphate_so4"  => 'required',
+            "sulphite_h2s"  => 'required',
+            "freechlorine_cl2"  => 'required',
+            "freecyanide_fcn"  => 'required',
+            "totalcyanide_cntot"  => 'required',
+            "wadcyanide_cnwad"  => 'required',
+            "ammonia_nh4"  => 'required',
+            "ammonium_n_nh3"  => 'required',
+            "nitrate_no3"  => 'required',
+            "nitrite_no2"  => 'required',
+            "phosphate_po4"  => 'required',
+            "totalphosphate_ppo4"  => 'required',
+            "aluminium_al"  => 'required',
+            "antimony_sb"  => 'required',
+            "arsenic_as"  => 'required',
+            "barium_ba"  => 'required',
+            "cadmium_cd"  => 'required',
+            "calcium_ca"  => 'required',
+            "chromium_cr"  => 'required',
+            "chromiumhexavalent_cr6"  => 'required',
+            "cobalt_co"  => 'required',
+            "copper_cu"  => 'required',
+            "iron_fe"  => 'required',
+            "lead_pb"  => 'required',
+            "magnesium_mg"  => 'required',
+            "manganese_mn"  => 'required',
+            "mercury_hg"  => 'required',
+            "nickel_ni"  => 'required',
+            "selenium_se"  => 'required',
+            "silver_ag"  => 'required',
+            "sodium_na"  => 'required',
+            "tin_sn"  => 'required',
+            "zinc_zn"  => 'required',
+            "aluminium_tal"  => 'required',
+            "arsenic_tas"  => 'required',
+            "cadmium_tcd"  => 'required',
+            "chromiumhexavalent_tcr6"  => 'required',
+            "chromium_tcr"  => 'required',
+            "cobalt_tco"  => 'required',
+            "copper_tco"  => 'required',
+            "lead_tpb"  => 'required',
+            "selenium_tse"  => 'required',
+            "mercury_thg"  => 'required',
+            "nickel_tni"  => 'required',
+            "zinc_tzn"  => 'required',
+            "bod"  => 'required',
+            "cod"  => 'required',
+            "oilandgrease"  => 'required',
+            "totalphenols"  => 'required',
+            "surfactant_mbas"  => 'required',
+            "totalpcb"  => 'required',
+            "aox"  => 'required',
+            "pcdfs"  => 'required',
+            "pcdds"  => 'required',
+            "fecalcoliform"  => 'required',
+            "ecoli"  => 'required',
+            "totalcoliformbacteria"  => 'required',
         ];
         $validatedData = $request->validate($rules);
         $validatedData['user_id'] = auth()->user()->id;
@@ -258,6 +364,7 @@ class WastewaterController extends Controller
      */
     public function destroy(Wastewater $wastewater)
     {
-        //
+        Wastewater::destroy($wastewater->id);
+        return redirect('/wastewater')->with('success', 'Data has been deleted!');
     }
 }
