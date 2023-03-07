@@ -19,9 +19,13 @@ class EvaporationController extends Controller
     public function index()
     {
         $value=0;
-        $max_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->get()->max('evaporation');
-        $min_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->get()->min('evaporation');
-        $avg_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->get()->avg('evaporation');
+        $max_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search','bulan']))->get()->max('evaporation');
+
+        $min_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search','bulan']))->get()->min('evaporation');
+        if($min_evaporation<0){
+            $min_evaporation=0;
+        }
+        $avg_evaporation= Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate','search','bulan']))->get()->avg('evaporation');
 
       
         return view('dashboard.Weather.Evaporation.Master.index', [
@@ -29,9 +33,9 @@ class EvaporationController extends Controller
             'breadcrumb' => 'Evaporation',
             'max_evaporation'=>$max_evaporation,
             'min_evaporation'=>$min_evaporation,
-            'avg_evaporation'=>$avg_evaporation,
+            'avg_evaporation'=>number_format((float)$avg_evaporation,2,'.',''),
             'code_units' => Evaporationpointid::all(),
-            'Evaporation' => Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
+            'Evaporation' => Evaporation::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','bulan']))->paginate(31)->withQueryString()
         ]);
     }
 

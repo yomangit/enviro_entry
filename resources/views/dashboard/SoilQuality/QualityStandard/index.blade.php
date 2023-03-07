@@ -74,123 +74,125 @@
                     @if($QualityStandard->count())
                     <div class="card-body table-responsive">
                         <section class="content ">
-                            <table style="font-size: 11px" class="table table-head-fixed table-sm table-striped table-bordered">
-                                <thead style="background-color: #067eaa ;color:#ded8d8" class="text-center ">
+                            <div class="table-responsive card card-primary card-outline">
+                                <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm ">
+                                    <thead class="text-center table-info">
 
-                                    <tr>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">No</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">Action</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">Quality Standard</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> pH</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">pH (H2O)</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">Total Organic Carbon</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">Total Nitrogen</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle">C/N*</th>
-                                        <th colspan="5" style="background-color: #067eaa" class="align-middle">Cation</th>
-                                        <th colspan="5" style="background-color: #067eaa" class="align-middle">Caracteristic</th>
-                                        <th colspan="2" style="background-color: #067eaa" class="align-middle">Alkalinity</th>
-                                        <th colspan="3" style="background-color: #067eaa" class="align-middle">Tekstur</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> Moisture Content </th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> Bulk Density </th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> Ruang Pori Total </th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> PD </th>
-                                        <th colspan="3" style="background-color: #067eaa" class="align-middle"> Pori Drainase</th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> Air Tersedia </th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> Permeabilitas </th>
-                                        <th colspan="4" style="background-color: #067eaa" class="align-middle"> Kadar Air </th>
-                                        <th rowspan="2" style="background-color: #067eaa" class="align-middle"> Laboratory</th>
+                                        <tr>
+                                            <th rowspan="2"  class="align-middle">No</th>
+                                            <th rowspan="2"  class="align-middle">Action</th>
+                                            <th rowspan="2"  class="align-middle">Quality Standard</th>
+                                            <th rowspan="2"  class="align-middle"> pH</th>
+                                            <th rowspan="2"  class="align-middle">pH (H2O)</th>
+                                            <th rowspan="2"  class="align-middle">Total Organic Carbon</th>
+                                            <th rowspan="2"  class="align-middle">Total Nitrogen</th>
+                                            <th rowspan="2"  class="align-middle">C/N*</th>
+                                            <th colspan="5"  class="align-middle">Cation</th>
+                                            <th colspan="5"  class="align-middle">Caracteristic</th>
+                                            <th colspan="2"  class="align-middle">Alkalinity</th>
+                                            <th colspan="3"  class="align-middle">Tekstur</th>
+                                            <th rowspan="2"  class="align-middle"> Moisture Content </th>
+                                            <th rowspan="2"  class="align-middle"> Bulk Density </th>
+                                            <th rowspan="2"  class="align-middle"> Ruang Pori Total </th>
+                                            <th rowspan="2"  class="align-middle"> PD </th>
+                                            <th colspan="3"  class="align-middle"> Pori Drainase</th>
+                                            <th rowspan="2"  class="align-middle"> Air Tersedia </th>
+                                            <th rowspan="2"  class="align-middle"> Permeabilitas </th>
+                                            <th colspan="4"  class="align-middle"> Kadar Air </th>
+                                            <th rowspan="2"  class="align-middle"> Laboratory</th>
 
 
-                                    </tr>
-                                    <tr>
+                                        </tr>
+                                        <tr>
 
-                                        <th style="background-color: #067eaa" class="align-middle">Calsium</th>
-                                        <th style="background-color: #067eaa" class="align-middle">Magnesium</th>
-                                        <th style="background-color: #067eaa" class="align-middle">Pottasium</th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Sodium </th>
-                                        <th style="background-color: #067eaa" class="align-middle">Jumlah</th>
-                                        <th style="background-color: #067eaa" class="align-middle">P<sub>2</sub>O<sub>5</sub>(HCl 25%)</th>
-                                        <th style="background-color: #067eaa" class="align-middle"> K<sub>2</sub>(HCl 25%) </th>
-                                        <th style="background-color: #067eaa" class="align-middle">P<sub>2</sub>O<sub>5</sub> (Olsen)</th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Kapasitas Tukar Kation</th>
-                                        <th style="background-color: #067eaa" class="align-middle"> KB (Kejenuhan Basa) </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Al - Tukar </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> H - Tukar </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Pasir </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Debu </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Lempung </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Sangat Cepat </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Cepat </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> Lambat</th>
-                                        <th style="background-color: #067eaa" class="align-middle"> pF 1 </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> pF 2 </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> pF 2.54 </th>
-                                        <th style="background-color: #067eaa" class="align-middle"> pF 4.2</th>
+                                            <th  class="align-middle">Calsium</th>
+                                            <th  class="align-middle">Magnesium</th>
+                                            <th  class="align-middle">Pottasium</th>
+                                            <th  class="align-middle"> Sodium </th>
+                                            <th  class="align-middle">Jumlah</th>
+                                            <th  class="align-middle">P<sub>2</sub>O<sub>5</sub>(HCl 25%)</th>
+                                            <th  class="align-middle"> K<sub>2</sub>(HCl 25%) </th>
+                                            <th  class="align-middle">P<sub>2</sub>O<sub>5</sub> (Olsen)</th>
+                                            <th  class="align-middle"> Kapasitas Tukar Kation</th>
+                                            <th  class="align-middle"> KB (Kejenuhan Basa) </th>
+                                            <th  class="align-middle"> Al - Tukar </th>
+                                            <th  class="align-middle"> H - Tukar </th>
+                                            <th  class="align-middle"> Pasir </th>
+                                            <th  class="align-middle"> Debu </th>
+                                            <th  class="align-middle"> Lempung </th>
+                                            <th  class="align-middle"> Sangat Cepat </th>
+                                            <th  class="align-middle"> Cepat </th>
+                                            <th  class="align-middle"> Lambat</th>
+                                            <th  class="align-middle"> pF 1 </th>
+                                            <th  class="align-middle"> pF 2 </th>
+                                            <th  class="align-middle"> pF 2.54 </th>
+                                            <th  class="align-middle"> pF 4.2</th>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php
-                                    $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
-                                    @endphp
-                                    @foreach ($QualityStandard as $standard)
-                                    <tr style="font-size: 12px;">
-                                        <td class="align-middle">{{ $no++ }}</td>
-                                        <td class="align-middle">
-                                            <div style="width: 50px">
-                                                <a href="/soilquality/soilqualitystandard/{{ $standard->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <i class="fas fa-pen"></i>
-                                                </a>
-                                                <form action="/soilquality/soilqualitystandard/{{ $standard->id }}" method="POST" class="d-inline">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-                                                </form>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @php
+                                        $no = 1 + ($QualityStandard->currentPage() - 1) * $QualityStandard->perPage();
+                                        @endphp
+                                        @foreach ($QualityStandard as $standard)
+                                        <tr style="font-size: 12px;">
+                                            <td class="align-middle">{{ $no++ }}</td>
+                                            <td class="align-middle">
+                                                <div style="width: 50px">
+                                                    <a href="/soilquality/soilqualitystandard/{{ $standard->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                    <form action="/soilquality/soilqualitystandard/{{ $standard->id }}" method="POST" class="d-inline">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </form>
 
-                                            </div>
-                                        </td>
-                                        <td class="align-middle">{{ $standard->  nama    }}</td>
-                                        <td class="align-middle">{{ $standard->  ph }}</td>
-                                        <td class="align-middle">{{ $standard->  ph_h2o    }}</td>
-                                        <td class="align-middle">{{ $standard->  total_organic_carbon }}</td>
-                                        <td class="align-middle">{{ $standard->  total_nitrogen   }}</td>
-                                        <td class="align-middle">{{ $standard->  cn    }}</td>
-                                        <td class="align-middle">{{ $standard->  calsium   }}</td>
-                                        <td class="align-middle">{{ $standard->  magnesium  }}</td>
-                                        <td class="align-middle">{{ $standard->  pottasium }}</td>
-                                        <td class="align-middle">{{ $standard->  sodium    }}</td>
-                                        <td class="align-middle">{{ $standard->  jumlah  }}</td>
-                                        <td class="align-middle">{{ $standard->  p2o5_hcl_25  }}</td>
-                                        <td class="align-middle">{{ $standard->  k2o_hcl_25 }}</td>
-                                        <td class="align-middle">{{ $standard->  p2o5_olsen }}</td>
-                                        <td class="align-middle">{{ $standard->  kapasitas_tukar_kation }}</td>
-                                        <td class="align-middle">{{ $standard->  kb_kejenuhan_basa }}</td>
-                                        <td class="align-middle">{{ $standard->  al_tukar }}</td>
-                                        <td class="align-middle">{{ $standard->  h_tukar }}</td>
-                                        <td class="align-middle">{{ $standard->  pasir }}</td>
-                                        <td class="align-middle">{{ $standard->  debu }}</td>
-                                        <td class="align-middle">{{ $standard->  lempung }}</td>
-                                        <td class="align-middle">{{ $standard->  moisture_content }}</td>
-                                        <td class="align-middle">{{ $standard->  bulk_density }}</td>
-                                        <td class="align-middle">{{ $standard->  ruang_pori_total }}</td>
-                                        <td class="align-middle">{{ $standard->  pd }}</td>
-                                        <td class="align-middle">{{ $standard->  sangat_cepat }}</td>
-                                        <td class="align-middle">{{ $standard->  cepat }}</td>
-                                        <td class="align-middle">{{ $standard->  lambat }}</td>
-                                        <td class="align-middle">{{ $standard->  air_tersedia }}</td>
-                                        <td class="align-middle">{{ $standard->  permeabilitas }}</td>
-                                        <td class="align-middle">{{ $standard->  pf_1 }}</td>
-                                        <td class="align-middle">{{ $standard->  pf_2 }}</td>
-                                        <td class="align-middle">{{ $standard->  pf_2_54 }}</td>
-                                        <td class="align-middle">{{ $standard->  pf_4_2 }}</td>
-                                        <td class="align-middle">{{ $standard->  laboratorium }}</td>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">{{ $standard->  nama    }}</td>
+                                            <td class="align-middle">{{ $standard->  ph }}</td>
+                                            <td class="align-middle">{{ $standard->  ph_h2o    }}</td>
+                                            <td class="align-middle">{{ $standard->  total_organic_carbon }}</td>
+                                            <td class="align-middle">{{ $standard->  total_nitrogen   }}</td>
+                                            <td class="align-middle">{{ $standard->  cn    }}</td>
+                                            <td class="align-middle">{{ $standard->  calsium   }}</td>
+                                            <td class="align-middle">{{ $standard->  magnesium  }}</td>
+                                            <td class="align-middle">{{ $standard->  pottasium }}</td>
+                                            <td class="align-middle">{{ $standard->  sodium    }}</td>
+                                            <td class="align-middle">{{ $standard->  jumlah  }}</td>
+                                            <td class="align-middle">{{ $standard->  p2o5_hcl_25  }}</td>
+                                            <td class="align-middle">{{ $standard->  k2o_hcl_25 }}</td>
+                                            <td class="align-middle">{{ $standard->  p2o5_olsen }}</td>
+                                            <td class="align-middle">{{ $standard->  kapasitas_tukar_kation }}</td>
+                                            <td class="align-middle">{{ $standard->  kb_kejenuhan_basa }}</td>
+                                            <td class="align-middle">{{ $standard->  al_tukar }}</td>
+                                            <td class="align-middle">{{ $standard->  h_tukar }}</td>
+                                            <td class="align-middle">{{ $standard->  pasir }}</td>
+                                            <td class="align-middle">{{ $standard->  debu }}</td>
+                                            <td class="align-middle">{{ $standard->  lempung }}</td>
+                                            <td class="align-middle">{{ $standard->  moisture_content }}</td>
+                                            <td class="align-middle">{{ $standard->  bulk_density }}</td>
+                                            <td class="align-middle">{{ $standard->  ruang_pori_total }}</td>
+                                            <td class="align-middle">{{ $standard->  pd }}</td>
+                                            <td class="align-middle">{{ $standard->  sangat_cepat }}</td>
+                                            <td class="align-middle">{{ $standard->  cepat }}</td>
+                                            <td class="align-middle">{{ $standard->  lambat }}</td>
+                                            <td class="align-middle">{{ $standard->  air_tersedia }}</td>
+                                            <td class="align-middle">{{ $standard->  permeabilitas }}</td>
+                                            <td class="align-middle">{{ $standard->  pf_1 }}</td>
+                                            <td class="align-middle">{{ $standard->  pf_2 }}</td>
+                                            <td class="align-middle">{{ $standard->  pf_2_54 }}</td>
+                                            <td class="align-middle">{{ $standard->  pf_4_2 }}</td>
+                                            <td class="align-middle">{{ $standard->  laboratorium }}</td>
 
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
                     </div>
 

@@ -9,7 +9,7 @@ use App\Imports\DataImport;
 use Illuminate\Http\Request;
 use App\Models\Wastewaterstandard;
 use App\Http\Controllers\Controller;
-
+use Hamcrest\Type\IsNumeric;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 
@@ -20,7 +20,7 @@ class ResourceDataEntryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
         $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
@@ -28,8 +28,11 @@ class ResourceDataEntryController extends Controller
             $table = 30;
         } else
             $table = ($lastDayofPreviousMonth - $firstDayofPreviousMonth) / 86400;
-        $grafiks = Dataentry::with('user')
-            ->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
+
+     
+            $grafiks =Dataentry::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
+
+   
         $tanggal = [];
         $suhu = [];
         $conductivity = [];
@@ -104,35 +107,33 @@ class ResourceDataEntryController extends Controller
             } 
 
 
-            if (!is_numeric($grafik->conductivity)) {
-                $conductivityStandard[] = '';
-            } elseif (is_numeric($grafik->standard->conductivity)) {
+ 
+            if (is_numeric($grafik->standard->conductivity)) {
                 $conductivityStandard[] = doubleval($grafik->standard->conductivity);
             } else {
                 $conductivityStandard[] = '';
             }
-            if (!is_numeric($grafik->tss)) {
-                $tssStandard[] = '';
-            } elseif ($grafik->standard->totalsuspendedsolids_tss) {
+
+            if (is_numeric($grafik->standard->totalsuspendedsolids_tss)) {
                 $tssStandard[] = doubleval($grafik->standard->totalsuspendedsolids_tss);
             } else {
                 $tssStandard[] = '';
             }
-            if (!is_numeric($grafik->tds)) {
 
-                $tdsStandard[] = '';
-            } elseif ($grafik->standard->totaldissolvedsolids_tds) {
+            if (is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
                 $tdsStandard[] = doubleval($grafik->standard->totaldissolvedsolids_tds);
-            } else {
+            } elseif (!is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
                 $tdsStandard[] = '';
             }
-            if (is_numeric($grafik->standard->dissolvedoxygen_do)) {
+            if (is_numeric($grafik->do)) {
                 $doStandard[] = doubleval($grafik->standard->dissolvedoxygen_do);
             } else {
                 $doStandard[] = '';
             }
         }
-
+  
+        $main =Dataentry::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
+ 
         return view('dashboard.SurfaceWater.Master.index', [
             'code_units' => Codesample::all(),
             'QualityStandard' => Wastewaterstandard::all(),
@@ -145,16 +146,14 @@ class ResourceDataEntryController extends Controller
             'tss' => $tss,
             'ph' => $ph,
             'do' => $do,
+            'point' => $nama,
             'doStandard' => $doStandard,
             'tssStandard' => $tssStandard,
             'tdsStandard' => $tdsStandard,
             'cdvStd' => $conductivityStandard,
             'phMin' => $phMin,
             'phMax' => $phMax,
-            'Input' => Dataentry::with('user')->orderBy('date', 'desc')
-                ->filter(request(['fromDate', 'search']))
-                ->paginate(30)
-                ->withQueryString(), //with diguanakan untuk mengatasi N+1 problem
+            'Input' => $main //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
 

@@ -1,0 +1,174 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,1,2008-07-25,2008-08-25,0.3668,0.355,-,-,0.6,7,No,No,Perbaikan Jalan,Chalik & Roddy,-,-,-
+1,1,2008-08-25,2008-09-24,0.2932,0.2848,-,-,0.5,-,-,-,-,-,-,-,-
+1,1,2008-09-24,2008-10-25,0.3994,0.3839,-,-,0.8,0,No,No,-,Onlie&Rodie,-,-,-
+1,1,2008-10-25,2008-11-25,0.4464,0.4341,-,-,0.7,2,No,No,"No activity, grass around was high, ",Onlie&Rodie,-,-,-
+1,1,2008-11-25,2008-12-24,0.3064,0.3016,-,-,0.3,12,No,No,"No activity, grass around was high, ",Onlie&Rodie,-,-,-
+1,1,2008-12-24,2009-01-24,0.4502,0.4398,-,-,0.6,4,No,No,Grass cutting a week before sampling,Harjoko,-,-,-
+1,1,2009-01-24,2009-02-25,0.254,0.2481,-,-,0.3,5,No,No,"No activity, grass around was high, ",Jelly & Fanno,-,-,-
+1,1,2009-02-25,2009-03-25,0.2513,0.2467,-,-,0.3,4,No,No,-,Jelly & Royke,-,-,-
+1,1,2009-03-25,2009-04-24,0.1682,0.1605,-,-,0.4,10,No,No,-,Jelly & Fanno,-,-,-
+1,1,2009-04-24,2009-05-20,0.0861,0.0835,-,-,0.2,7,No,No,"No activity, grass around was high, ",Jelly & Fanno,-,-,-
+1,1,2009-05-20,2009-06-22,0.3341,0.3223,-,-,0.6,3,No,No,Grass cutting a week before sampling,Harjoko,-,5000,-
+1,1,2009-06-22,2009-07-23,0.2485,0.2433,-,-,0.3,1,No,No,"No activity, grass around was high, ",Jelly & Roddy,-,3700,-
+1,1,2009-07-23,2009-08-21,0.0877,0.0796,-,-,0.5,2,No,No,Burning Area,Jelly & Roddy,-,-,-
+1,1,2009-08-21,2009-09-22,0.5928,0.5775,-,-,0.8,0,Yes,No,Burning Area,Jelly & Roddy,-,-,-
+1,1,2009-09-22,2009-10-21,0.8985,0.8358,-,-,3.7,23,Yes,No,"Security Post Activity, near the road",Jelly & Royke,-,-,-
+1,1,2009-10-21,2009-11-22,1.0167,1.0055,-,-,0.6,13,No,No,Farmer Activity,JM,-,7400,-
+1,1,2009-11-22,2009-12-20,0.6051,0.5983,-,-,0.4,15,No,No,"Security Post Activity, near the road",Rolke,-,5700,-
+1,1,2009-12-20,2010-01-20,0.6665,0.6624,-,-,0.2,10,No,No,Security Post Activity,JM & Rolke,-,4300,-
+1,1,2010-01-20,2010-02-20,0.5708,0.5665,-,-,0.2,1,No,No,Security Post Activity,Fanno & Mahmud,-,5700,-
+1,1,2010-02-20,2010-03-22,0.3324,0.3301,-,-,0.1,2,No,No,"Security Post Activity, farmer activity",Onlie,-,610,-
+1,1,2010-03-22,2010-04-20,0.6519,0.6436,-,-,0.5,5,Yes,No,Alang-alang area,JM & Rolke,-,5230,-
+1,1,2010-04-20,2010-05-20,0.8445,0.8354,-,-,0.5,13,Yes,No,Security Post Activity,Onlie & Rolke,-,4250,-
+1,1,2010-05-20,2010-06-20,0.8007,0.7882,-,-,0.7,5,Yes,No,Security Post Activity,Onlie & Nus,-,2350,-
+1,1,2010-06-20,2010-07-20,0.7978,0.7946,-,-,0.2,8,Yes,No,Gardening/close the road,JM/OS,-,2800,-
+1,1,2010-07-20,2010-08-20,0.7988,0.7885,-,-,0.6,28,Yes,No,Gardening/close the road,RDC/Robby.N,-,4800,-
+1,1,2010-08-20,2010-09-20,0.7436,0.7328,-,-,0.6,5,Yes,No,Close the road security post,OS/MW,-,3100,-
+1,1,2010-09-20,2010-10-20,0.8173,0.8075,-,-,0.6,4,Yes,No,Gardening/close the road,OS/MW,-,2170,-
+1,1,2010-10-20,2010-11-23,0.8095,0.799,-,-,0.5,11,Yes,No,"Gardening/close the road, security post",RDC/AL,-,5950,-
+1,1,2010-11-23,2010-12-20,0.805,0.7961,-,-,0.6,6,Yes,No,"Security Post Activity/Close the road, grass cutting 6 days before sampling",OS/AL,-,4400,-
+1,1,2010-12-20,2011-01-20,0.8214,0.8093,-,-,0.7,5,Yes,No,"Security Post Activity, near the road",OS,-,3900,-
+1,1,2011-01-20,2011-02-20,0.7532,0.7415,-,-,0.6,2,No,No,"Security Post Activity, Farmer activity,near the road",OS/MW,-,7200,-
+1,1,2011-02-20,2011-03-20,0.796,0.7892,-,-,0.4,3,No,No,"Security Post Activity, gardening,near the road",OS/MW,-,6200,-
+1,1,2011-03-20,2011-04-21,0.8117,0.8063,-,-,0.3,3,No,No,"Security Post Activity, near the road",OS,-,6015,-
+1,1,2011-04-21,2011-05-21,0.8157,0.8067,-,-,0.5,1,No,No,"Security Post Activity, gardening,near the road",OS/MW,-,5800,-
+1,1,2011-05-21,2011-06-21,0.8015,0.7915,-,-,0.5,5,No,No,"Security Post Activity, near the road",OS,-,5400,-
+1,1,2011-06-21,2011-07-20,0.8545,0.7938,-,-,3.3,3,Yes,No,"Security Post Activity, gardening,near the road",OS,-,350,-
+1,1,2011-07-20,2011-08-20,0.8115,0.7936,-,-,1.0,2,Yes,No,"Security Post Activity, farmer activity, near the road",OS/MW,-,3200,Many carcass ants
+1,1,2011-08-20,2011-09-20,0.9203,0.8807,-,-,2.2,5,Yes,No,"Security Post Activity, farmer activity, Grass cutting activity, near the road.",OL,-,1200,-
+1,1,2011-09-20,2011-10-21,0.7809,0.7662,-,-,0.8,1,Yes,No,"Security Post Activity, farmer activity,  near the road.",Novry/Anita,-,2750,-
+1,1,2011-10-21,2011-11-21,0.8421,0.8363,-,-,0.3,8,Yes,No,"Security Post Activity, farmer activity,  near the road.",Andrias/Anita,-,3600,-
+1,1,2011-11-21,2011-12-22,0.8083,0.8021,-,-,0.3,0,Yes,No,"Security post Activity, farmer  coconut",Mahmud/ Arter,-,5175,-
+1,1,2011-12-22,2012-01-20,0.8518,0.8421,-,-,0.6,3,No,No,"Security post activity, gardening.",OS/OA,-,5000,-
+1,1,2012-01-20,2012-02-20,0.8349,0.8305,-,-,0.2,2,No,No,Security post & farmer activity.,Onlie,-,5000,-
+1,1,2012-02-20,2012-03-20,0.8389,0.8359,-,-,0.2,6,No,No,Security post & farmer activity.,Andrias.l,-,9850,-
+1,1,2012-03-20,2012-04-20,0.7985,0.7915,-,-,0.4,2,No,No,"Vehicle act, Security post & farmer act",FB/NR,-,4200,-
+1,1,2012-04-20,2012-05-20,0.8601,0.8131,-,-,2.7,3,Yes,No,"Vehicle act, Security post & farmer act",RH,-,6500,-
+1,1,2012-05-20,2012-06-20,0.8977,0.7774,-,-,6.8,0,Yes,No,"grass cutting act,security post act,road act",AL/RH,-,3750,-
+1,1,2012-06-20,2012-07-20,0.794,0.7846,-,-,0.5,6,No,No,"Pos security act, road traffic act, grass cutter, ",RH/AP,-,1850,There was a spider dead in the botle
+1,1,2012-07-20,2012-08-22,0.8698,0.8243,-,-,2.4,3,Yes,No,"Grass cuting act, Road activity",AL/TL,-,550,-
+1,1,2012-08-22,2012-09-20,0.8612,0.817,-,-,2.4,7,No,No,"Traffic act, grass cutter act",DA/TL,-,1200,-
+1,1,2012-09-20,2012-10-20,0.8311,0.8225,-,-,0.5,3,No,No,Grass cutting,CA/AL,-,1000,-
+1,1,2012-10-20,2012-11-20,0.855,0.7967,-,-,3.3,13,No,No,"Grass cutting, post security act,road",RH/SM,-,7400,-
+1,1,2012-11-20,2012-12-20,0.8179,0.8011,-,-,1.0,5,No,No,"Grass cutting, post security act,road",AL/JK,-,4000,-
+1,1,2012-12-20,2013-01-21,0.8247,0.8165,-,-,0.4,5,No,No,"Security post act, road traffic act",RH,-,12560,-
+1,1,2013-01-21,2013-02-20,0.8349,0.8279,-,-,0.4,5,No,No,"grass cutting act,security post act, traffic act",AL/SM,-,10250,-
+1,1,2013-02-20,2013-03-20,0.8447,0.8316,-,-,0.8,3,No,No,"grass cutting act,security post act, traffic act",AL/CR,-,2750,-
+1,1,2013-03-20,2013-04-20,0.8306,0.829,-,-,0.1,5,No,No,"grass cutting act,security post act, traffic act, rehabilitation activity",AP/CR,-,7200,-
+1,1,2013-04-20,2013-05-20,0.8042,0.8037,-,-,0.0,7,No,No,"grass cutting act,security post act, traffic act",DA/RH,-,4000,-
+1,1,2013-05-20,2013-06-21,0.7591,0.7589,-,-,0.0,4,No,No,"Security post act, traffic act, Plantation area.",AP/CR,-,2050,-
+1,1,2013-06-21,2013-07-20,0.7706,0.7702,-,-,0.0,3,No,No,"Security post act, traffic act, soccer field activity.",AP/CR,-,7200,-
+1,1,2013-07-20,2013-08-20,0.8128,0.812,-,-,0.0,10,No,No,"Security post act, traffic act, soccer field activity.",DA/AL,-,3500,-
+1,1,2013-08-20,2013-09-20,0.794,0.7886,-,-,0.3,1,No,No,"Security post act, traffic act, soccer field activity.",DA/RH,-,750,-
+1,1,2013-09-20,2013-10-20,0.7995,0.7984,-,-,0.1,2,No,No,"Security post act, traffic act, soccer field activity, grass cutting act.",RH/CR,-,2800,-
+1,1,2013-10-20,2013-11-21,0.798,0.7966,-,-,0.1,5,No,No,"Security post act, road traffic act",CR/RH,-,8000,-
+1,1,2013-11-21,2013-12-20,0.7821,0.7818,-,-,0.0,7,No,No,"Grass cutter activity, traffic activity",AL,-,3000,-
+1,1,2013-12-20,2014-01-19,0.7896,0.789,-,-,0.0,11,No,No,"Farmer act., grass cutter activity, traffic activity",AL/RT,-,800,-
+1,1,2014-01-19,2014-02-20,0.7729,0.7726,-,-,0.0,5,No,No,Traffic activity,AP/RH,-,4200,-
+1,1,2014-02-20,2014-03-21,0.7988,0.7985,-,-,0.0,1,No,No,"Traffic activity, Grass cutting activity",DA/CR,-,1300,-
+1,1,2014-03-21,2014-04-20,0.7518,0.7513,-,-,0.0,3,No,No,Traffic Act.,AL/DA,-,3000,-
+1,1,2014-04-20,2014-05-20,0.7666,0.7653,-,-,0.1,2,No,No,"Grass cutter activity, traffic activity",AL/RT,-,2750,-
+1,1,2014-05-20,2014-06-21,0.7845,0.7842,-,-,0.0,4,No,No,Traffic Activity,RH,-,2500,-
+1,1,2014-06-21,2014-07-22,0.7995,0.7993,-,-,0.0,11,No,No,"Grass cutter activity, traffic activity",RH/RT,-,2200,-
+1,1,2014-07-22,2014-08-21,0.7819,0.7815,-,-,0.0,4,Yes,No,"Grass cutter activity, traffic activity, fires",DA/AL,-,250,Added aquades 500 ml
+1,1,2014-08-21,2014-09-20,0.81,0.8011,-,-,0.5,0,No,No,"Grass cutter activity, traffic activity",RH,-,975,-
+1,1,2014-09-20,2014-10-22,0.8546,0.8244,-,-,1.6,3,No,No,"Grass cutter activity, traffic activity",RH,-,350,Added aquades 1000 ml
+1,1,2014-10-22,2014-11-20,0.841,0.8376,-,-,0.2,2,No,No,Traffic activity,DA/AL,-,3500,-
+1,1,2014-11-20,2014-12-20,0.8287,0.8248,-,-,0.2,5,No,No,Traffic activity,AP/CR/RT,-,4000,-
+1,1,2014-12-20,2015-01-20,0.8369,0.8365,-,-,0.0,4,No,No,"Grass cutter act, farmer act, traffic act",AL/BK/CR/RT,-,7000,-
+1,1,2015-01-20,2015-02-20,-,-,-,-,<1,2,No,No,Traffic activity,RH/BK,-,-,Botle send to WLN
+1,1,2015-02-20,2015-03-20,0.8342,0.8337,-,-,0.0,2,No,No,"Farmer act, traffic act",AP/RT,-,1500,-
+1,1,2015-03-20,2015-04-20,0.8383,0.8372,-,-,0.1,2,No,No,"Farmer act, traffic act",AP/RT,-,1800,-
+1,1,2015-04-20,2015-05-18,-,-,-,-,6.0,2,No,No,"Farmer act, traffic act",RH,-,-,Botle send to WLN
+1,1,2015-05-19,2015-06-21,0.8347,0.8131,-,-,1.1,5,No,No,"Farmer act, traffic act",AP/RT,-,1800,-
+1,1,2015-06-21,2015-07-21,0.8246,0.8244,-,-,0.0,1,No,No,Grass Cutter act,AL/CR,-,125,Add aquades 1000 ml
+1,1,2015-07-21,2015-08-19,-,-,-,-,6.0,5,No,No,Farmer Activity,AL/RT/BK,-,0,"Botle send to WLN, Add aquades 1000 ml"
+1,1,2015-08-19,2015-09-20,0.7908,0.7906,-,-,0.0,1,No,No,Traffic and fire,RT/BK,-,0,Add aquades 1000 ml
+1,1,2015-09-20,2015-10-20,0.8263,0.784,-,-,2.4,0,No,No,Traffic and fire,CR/RH,-,0,Add aquades 1000 ml
+1,1,2015-10-20,2015-11-19,-,-,-,-,12.0,15,No,No,Traffic and fire,AP/AL,-,1350,Botle send to WLN
+1,1,2015-11-19,2015-12-16,0.8209,0.8169,-,-,0.3,6,No,No,"Grass cutter, farmer activity, traffic",AL/CR,-,1800,-
+1,1,2015-12-16,2016-01-18,0.8133,0.8115,-,-,0.1,8,No,No,Traffic activity,RT/BK,-,4000,-
+1,1,2016-01-18,2016-02-21,0.825,0.8084,-,-,0.8,2,No,No,"Grass cutter, farmer activity, traffic",RH/RT,-,6700,-
+1,1,2016-02-21,2016-03-22,-,-,-,-,4.0,2,No,No,"farmer activity, traffic",CR/RT,-,1850,Botle send to WLN
+1,1,2016-03-22,2016-04-19,0.7986,0.7984,-,-,0.0,4,No,No,"farmer activity, traffic",BK/CR,-,2750,-
+1,1,2016-04-19,2016-05-23,-,-,-,-,0.0,3,No,No,"farmer activity, traffic",RH/RT,-,4350,Botle send to WLN
+1,1,2016-05-23,2016-06-22,0.8217,0.8213,-,-,0.0,4,No,No,"farmer activity, traffic",AP/RT,-,3700,-
+1,1,2016-06-22,2016-07-21,0.8209,0.8101,-,-,0.6,6,No,No, traffic pos alpha & Maesa,BK/RH,-,4300,-
+1,1,2016-07-21,2016-08-22,0.8088,0.807,-,-,0.1,0,No,No, traffic pos alpha & Maesa,AL/RT,-,3800,-
+1,1,2016-08-22,2016-09-20,-,-,-,-,9.0,5,No,No, traffic pos alpha & Maesa,RT/CR/BK,-,3650,Bottle send to WLN
+1,1,2016-09-20,2016-10-20,0.8073,0.8009,-,-,0.4,6,No,No, traffic pos alpha & Maesa,RT/BK,-,3500,-
+1,1,2016-10-20,2016-11-22,0.8039,0.8028,-,-,0.1,3,No,No, traffic pos alpha & Maesa,RH/RT/BK,-,5400,-
+1,1,2016-11-22,2016-12-20,0.8233,0.8228,-,-,0.0,4,No,No, traffic pos alpha & Maesa,RH/RT,-,2900,-
+1,1,2016-12-20,2017-01-19,0.8038,0.8022,-,-,0.1,1,No,No, traffic pos alpha & Maesa,BK/CR,-,6080,-
+1,1,2017-01-19,2017-02-20,0.8275,0.8264,-,-,0.1,3,No,No, traffic pos alpha & Maesa,DA/SP,-,13750,-
+1,1,2017-02-20,2017-03-21,0.8121,0.8118,-,-,0.0,10,No,No, traffic pos alpha & Maesa,AP,-,4500,-
+1,1,2017-03-21,2017-04-20,0.8129,0.8124,-,-,0.0,11,No,No, traffic pos alpha & Maesa,AP/BK,-,4500,-
+1,1,2017-04-20,2017-05-21,0.8116,0.8079,-,-,0.2,4,No,No, traffic pos alpha & Maesa,RT/RH,-,2950,-
+1,1,2017-05-21,2017-06-20,0.8129,0.8114,5.4861,5.4852,0.0,5,No,No, traffic pos alpha & Maesa,RT/RH,50,1000,-
+1,1,2017-06-20,2017-07-23,0.9533,0.8174,5.4734,5.4713,0.6,6,No,No, traffic pos alpha & Maesa,AP/BK,25,2650,-
+1,1,2017-07-23,2017-08-20,-,-,-,-,<1,6,No,No, traffic pos alpha & Maesa,RH/RT,-,1030,Bottle send to WLN
+1,1,2017-08-20,2017-09-21,0.9,0.8214,5.5182,5.5161,0.6,2,No,No, traffic pos alpha & Maesa,RH/RT,25,2850,-
+1,1,2017-09-21,2017-10-21,-,-,-,-,<1,2,No,No, traffic pos alpha & Maesa,RH/RT,-,-,Bottle send to WLN
+1,1,2017-10-21,2017-11-21,0.8038,0.801,5.5528,5.526,4.2,2,No,No, traffic pos alpha & Maesa,RH/RT,25,2150,-
+1,1,2017-11-21,2017-12-21,0.8089,0.806,5.5791,5.53,3.7,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2017-12-21,2018-01-21,0.8172,0.817,5.5162,5.4767,2.9,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-01-21,2018-02-21,0.8317,0.8314,5.5498,5.4762,6.0,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-02-21,2018-03-20,-,-,-,-,0.0,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-03-20,2018-04-20,0.8247,0.8244,5.4875,5.4773,0.7,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-04-20,2018-05-20,0.843,0.8426,5.402,5.362,3.2,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-05-20,2018-06-20,-,-,-,-,< 1,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-06-21,2018-07-24,0.8152,0.8147,5.4979,5.4977,0.0,2,No,No, traffic pos alpha & Maesa,AL/FP,25,1000,-
+1,1,2018-07-24,2018-08-24,0.843,0.8426,5.402,5.362,2.9,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-08-25,2018-09-24,-,-,-,-,<1,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2018-09-25,2018-10-29,0.8038,0.801,5.5528,5.526,3.8,2,No,No, traffic pos alpha & Maesa,RH/RT,25,2150,-
+1,1,2018-10-30,2018-11-27,-,-,-,-,< 1,2,No,No, traffic pos alpha & Maesa,RH/RT,-,-,Botol Send to WLN
+1,1,2018-11-28,2018-12-24,0.8402,0.8328,5.534,5.5337,0.1,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1400,-
+1,1,2018-12-25,2019-01-22,0.809,0.8087,5.5602,5.5454,1.2,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2019-01-23,2019-02-22,-,-,-,-,< 1,2,No,No, traffic pos alpha & Maesa,RH/RT,-,-,Botol Send to WLN
+1,1,2019-02-23,2019-03-25,0.847,0.846,2.8041,2.8009,0.2,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1000,-
+1,1,2019-03-23,2019-04-25,0.8455,0.8305,2.9501,2.945,0.5,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1400,-
+1,1,2019-04-25,2019-05-27,-,-,-,-,12.0,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1400,Botol Send to WLN
+1,1,2019-05-27,2019-06-20,0.8152,0.8147,5.4979,5.4977,0.0,2,No,No, traffic pos alpha & Maesa,AL/FP,25,1000,-
+1,1,2019-06-20,2019-07-20,0.809,0.8065,5.58,5.534,4.2,2,No,No, traffic pos alpha & Maesa,BK,25,1200,-
+1,1,2019-07-20,2019-08-20,-,-,-,-,5.0,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1400,Botol Send to ITS
+1,1,2019-08-20,2019-09-23,0.8295,0.8176,2.8125,2.806,0.7,2,No,No, traffic pos alpha & Maesa,OS/FR,25,1500,-
+1,1,2019-09-23,2019-10-23,0.8566,0.8447,2.8278,2.8098,0.3,2,No,No, traffic pos alpha & Maesa,RT,25,200,-
+1,1,2019-10-23,2019-11-20,-,-,-,-,2.7,2,No,No, traffic pos alpha & Maesa,RH/RT,25,1400,Botol Send to ITS
+1,1,2019-11-20,2019-12-20,0.8205,0.8155,2.8426,2.8288,0.5,2,No,No, traffic pos alpha & Maesa,RT,25,500,-
+1,1,2019-12-20,2020-01-20,0.8099,0.8096,5.6591,5.657,0.0,3,No,No, traffic pos alpha & Maesa,BK/FR,25,200,-
+1,1,2020-01-20,2020-02-25,-,-,-,-,0.0,-,No,No, traffic pos alpha & Maesa,RT,25,-,Botol Send to ITS
+1,1,2020-02-25,2020-03-24,0.8283,0.8084,5.5199,5.4975,0.9,6,No,No, traffic pos alpha & Maesa,RT,25,500,-
+1,1,2020-03-24,2020-04-22,0.8221,0.821,5.5249,5.524,0.0,0,No,No, traffic pos alpha & Maesa,RT,25,500,-
+1,1,2020-04-22,2020-05-20,0.808,0.8069,5.5035,5.5015,0.2,2,No,No, traffic pos alpha & Maesa,RT,25,1000,-
+1,1,2020-05-20,2020-06-23,0.8274,0.8269,5.536,5.5351,0.0,0,No,No, traffic pos alpha & Maesa,RT,25,500,-
+1,1,2020-06-23,2020-07-23,-,-,-,-,0.0,0,No,No, traffic pos alpha & Maesa,RT,25,-,-
+1,1,2020-07-23,2020-08-20,-,-,-,-,9.0,0,No,No, traffic pos alpha & Maesa,RT,25,-,Botol Send to WLN
+1,1,2020-08-20,2020-09-20,0.7999,0.7988,5.5066,5.501,0.2,0,No,No, traffic pos alpha & Maesa,FP/JK,25,500,-
+1,1,2020-09-20,2020-10-21,-,-,-,-,#DIV/0!,0,No,No, traffic pos alpha & Maesa,FP/JK,-,-,Botol Send to WLN
+1,1,2020-10-21,2020-11-21,0.8149,0.8129,2.8264,2.8222,0.2,1,No,No, traffic pos alpha & Maesa,FP/JK,25,500,-
+1,1,2020-11-21,2020-12-21,0.8394,0.8354,5.5192,5.5144,0.2,1,No,No, traffic pos alpha & Maesa,FP/JK,25,500,-
+1,1,2020-12-21,2021-01-24,0.8394,0.8354,5.5192,5.5144,0.1,5,No,No, traffic pos alpha & Maesa,FP/JK,25,300,-
+1,1,2021-01-24,2021-02-25,-,-,-,-,13.0,3,No,No, traffic pos alpha & Maesa,FP/JK,-,-,Botol Send to WLN
+1,1,2021-02-25,2021-03-23,0.824,0.8234,2.8381,2.833,0.6,2,No,No, traffic pos alpha & Maesa,BK/JK,25,1400,-
+1,1,2021-03-23,2021-04-22,0.8386,0.8371,5.517,5.5158,1.0,7,No,No, traffic pos alpha & Maesa,BK/FR/RT,25,100,-
+1,1,2021-04-22,2021-05-25,-,-,-,-,1.0,3,No,No, traffic pos alpha & Maesa,BK/FP,-,-,Botol Send to WLN
+1,1,2021-05-25,2021-06-25,0.8315,0.8224,2.8646,2.8635,0.0,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK,20,100,-
+1,1,2021-06-25,2021-07-25,0.8137,0.8122,2.8645,2.864,0.1,2,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK,20,1000,-
+1,1,2021-07-25,2021-08-19,-,-,-,-,14.0,2,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/FP,-,-,Botol Send to WLN
+1,1,2021-08-19,2021-09-24,0.817,0.8129,2.8745,2.8628,0.3,4,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",NB/FK,25,460,-
+1,1,2021-09-24,2021-10-21,0.8573,0.8359,5.5381,5.5213,1.7,1,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/FR/HM,25,1200,-
+1,1,2021-10-21,2021-11-23,-,-,-,-,#NA,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/JK,-,-,Botol Send to WLN
+1,1,2021-11-23,2021-12-20,0.8378,0.8357,2.8536,0.8513,#NA,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",FR/PP,25,500,-
+1,1,2021-12-20,2022-01-21,-,-,-,-,<   1,6,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/FK,-,-,Botol Send to WLN
+1,1,2022-01-21,2022-02-23,0.8298,0.8259,2.8617,2.8589,0.1,5,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/FP,25,700,-
+1,1,2022-02-23,2022-03-27,0.8269,0.8224,2.8771,2.8764,0.0,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/JK,25,100,-
+1,1,2022-03-27,2022-04-20,-,-,-,-,7.0,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/FR,-,-,Botol Send to WLN
+1,1,2022-04-20,2022-05-23,0.8428,0.8377,2.8455,2.8435,0.2,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/JK,25,1230,-
+1,1,2022-05-23,2022-06-22,0.8183,0.8146,5.5099,5.5084,0.2,0,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",FP/HM/NB,25,1600,-
+1,1,2022-06-22,2022-07-24,-,-,-,-,<   1,7,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/NB,-,-,Botol Send to WLN
+1,1,2022-07-24,2022-08-25,0.8365,0.8328,5.0351,5.0348,0.0,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",FR/JK,25,800,-
+1,1,2022-08-25,2022-09-26,0.827,0.8034,2.8448,2.8432,0.2,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/HM,25,1200,-
+1,1,2022-09-26,2022-10-27,-,-,-,-,<   1,3,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/NB,-,-,Botol Send to WLN
+1,1,2022-10-27,2022-11-28,0.8672,0.8665,5.4268,5.425,0.3,7,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/JK,25,2500,-
+1,1,2022-11-28,2022-12-22,0.8215,0.8199,3.026,3.0251,0.1,4,no,no,"Toka Pit, Traffic Pos Alpha & Maesa",BK/FR/JK,25,1000,-

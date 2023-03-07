@@ -1,0 +1,6 @@
+user_id,point_id,date,equipment,fuel_type,capacity,ambient_temperature,stack_temperature,meter_temperature,moisture_content,actual_volume_sample,standard_volume_sample,actual_oxygen_o2,velocity_linear,dry_molecular_weight,actual_stack_flowrate,percent_of_isokinetic,ammonia_nh3,chlorine_cl2,hydrogen_chloride_hcl,hydrogen_fluoride_hf,nitrogen_dioxide_no2,nitrogen_oxide_nox_,opacity,total_particulate_isokinetic,sulfur_dioxide_so2,hydrogen_sulphide_h2s,mercury_hg,arsenic_as,antimony_sb,cadmium_cd,zinc_zn,lead_pb
+1,15,2020-03-23,Heater,Diesel,400,31.8,256,31.8,4.8,1.13,1.09,16.3,11.3,29.2,0.799,107,0.1,0.5,3,0.2,-,10,10,7,1,0.1,0.01,0.1,0.1,0.01,1,0.1
+1,15,2020-09-18,Heater,Diesel,400,34,210,34,7.6,1.18,1.15,10.9,6.2,29.6,0.8,98.9,0.1,0.5,3,0.2,-,20,10,53,1,0.1,0.03,0.6,0.2,0.11,1,1.2
+1,15,2021-03-24,Kiln,Diesel,400,30,181,30,9.12,1.15,1.14,11,6,29.6,0.8,96,0.1,0.5,3,0.2,-,10,10,18,1,0.1,0.02,0.1,0.1,0.01,1,0.1
+1,15,2021-09-12,Kiln,Diesel,400,30,234,30,10.56,1.19,1.16,13.3,6.4,29.4,0.8,105,0.1,0.5,3,0.2,-,10,10,5,1,0.1,0.01,0.1,0.1,0.01,1,0.1
+1,15,2022-02-26,Kiln,Diesel,400,34,216,34,9.46,1.21,1.17,13.9,6.2,29.4,0.8,104,0.1,0.5,3,0.2,-,10,10,196,114,0.1,0.01,0.1,0.1,0.01,1,0.1

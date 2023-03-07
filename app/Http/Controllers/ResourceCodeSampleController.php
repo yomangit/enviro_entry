@@ -20,7 +20,7 @@ class ResourceCodeSampleController extends Controller
         return view('dashboard.SurfaceWater.Codesample.index', [
             "tittle" => "Code Sample",
             'breadcrumb' => 'Code Sample Surface Water',
-            'Codes' => Codesample::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Codes' => Codesample::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
 
         ]);
     }

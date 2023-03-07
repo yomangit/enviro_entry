@@ -1,0 +1,158 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,3,2009-07-23,2009-08-21,0.0844,0.0783,-,-,0.36,1,No,No,Burning Area,Jelly & Roddy,-,-,-
+1,3,2009-08-21,2009-09-22,0.7115,0.6274,-,-,4.46,0,Yes,No,Burning Area,Jelly & Roddy,-,-,-
+1,3,2009-09-22,2009-10-21,0.8539,0.8274,-,-,1.55,7,Yes,No,Burning Area,Jelly.M/Royke.D,-,-,-
+1,3,2009-10-21,2009-11-22,0.9439,0.9191,-,-,1.32,5,No,No,Farmer Activity,JM,-,5210,-
+1,3,2009-11-22,2009-12-20,0.6316,0.5994,-,-,1.95,31,No,No,Vehicle access road,Rolke,-,5600,-
+1,3,2009-12-20,2010-01-20,0.7654,0.7591,-,-,0.35,23,No,No,Farmer Activity,JM/RDC,-,4600,-
+1,3,2010-01-20,2010-02-20,0.8488,0.8202,-,-,1.57,4,Yes,No,Near access admin road,Fanno & Mahmud,-,5000,-
+1,3,2010-02-20,2010-03-22,1.0918,1.0703,-,-,1.22,33,Yes,No,"Small insect, farmer activity",Onlie,-,570,-
+1,3,2010-03-22,2010-04-20,2.5692,2.5145,-,-,3.2,14,Yes,No,Alang-alang area,JM & Rolke,-,8850,-
+1,3,2010-04-20,2010-05-20,0.9721,0.943,-,-,1.65,20,Yes,No,Farmer Activity,Onlie & Rolke,-,5550,-
+1,3,2010-05-20,2010-06-20,0.8012,0.78,-,-,1.16,30,Yes,No,Farmer Activity,Onlie & Nus,-,2700,Have small insect
+1,3,2010-06-20,2010-07-20,0.819,0.803,-,-,0.91,18,Yes,No,Construction activity,JM/OS,-,3270,-
+1,3,2010-07-20,2010-08-20,0.804,0.7845,-,-,1.07,4,Yes,No,Construction activity,RDC/Robby.N,-,5520,-
+1,3,2010-08-20,2010-09-20,0.7565,0.736,-,-,1.12,2,Yes,No,Construction activity,OS/MW,-,3300,-
+1,3,2010-09-20,2010-10-20,0.8115,0.7886,-,-,1.3,8,Yes,No,Construction activity,OS/MW,-,2210,-
+1,3,2010-10-20,2010-11-23,0.8407,0.8068,-,-,1.69,16,Yes,No,"Farmer Activity, Contruction activity",RDC/AL,-,7620,-
+1,3,2010-11-23,2010-12-20,0.8446,0.8243,-,-,1.28,2,Yes,No,"Farmer Activity, Contruction activity",OS/AL,-,3250,-
+1,3,2010-12-20,2011-01-20,0.8487,0.7779,-,-,3.88,6,Yes,No,"Farmer Activity, Contruction activity",OS,-,3350,-
+1,3,2011-01-20,2011-02-20,0.7668,0.7426,-,-,1.33,3,No,No,Construction activity,OS/MW,-,7600,-
+1,3,2011-02-20,2011-03-20,0.7962,0.7835,-,-,0.77,3,Yes,No,"LV parking, near access admin road, intertek lab, construction activity",OS/MW,-,4800,-
+1,3,2011-03-20,2011-04-21,0.8651,0.7999,-,-,3.46,5,Yes,No,"LV parking, near access admin road, intertek lab, gardening.",OS,-,6650,Have a Lizard in the bottle
+1,3,2011-04-21,2011-05-21,0.8678,0.8005,-,-,3.81,2,Yes,No,"Grass cutting 2 days ago, gardening",OS/MW,-,5150,-
+1,3,2011-05-21,2011-06-21,0.8446,0.805,-,-,2.17,3,Yes,No,"LV parking, near access admin road, intertek lab, Proses plant activity.",OS,-,6200,-
+1,3,2011-06-21,2011-07-20,0.8275,0.7815,-,-,2.52,0,Yes,No,"Vehicle activity, near access admin road, intertek lab, Proses plant activity, gardening",OS,-,200,-
+1,3,2011-07-20,2011-08-20,0.8351,0.8172,-,-,0.98,3,Yes,No,"Process plant activity, near access admin road",OS/MW,-,2700,Many carcass ants
+1,3,2011-08-20,2011-09-20,0.8358,0.7806,-,-,3.02,1,Yes,No,"Process plant activity, grass cutting activity, near access admin road",FB/OL,-,2350,-
+1,3,2011-09-20,2011-10-21,0.8357,0.7862,-,-,2.71,1,Yes,No,"Process plant activity, grass cutting activity, near access admin road",Novry/Anita,-,2900,-
+1,3,2011-10-21,2011-11-21,0.8932,0.8429,-,-,2.76,12,Yes,No,"Process plant activity, grass cutting activity, near access admin road",Andrias/Anita,-,3950,-
+1,3,2011-11-21,2011-12-22,0.8942,0.8366,-,-,3.06,5,Yes,No,"Process plant activity, near access admin road",Mahmud/Artert,-,5300,-
+1,3,2011-12-22,2012-01-20,0.8973,0.8407,-,-,3.32,5,No,No,Plant.pabrik activity & crew gardening environment,OS/OA,-,4250,-
+1,3,2012-01-20,2012-02-20,0.8662,0.8310,-,-,1.93,0,Yes,No,Lab intertek & process palny activity.,Onlie,-,5500,-
+1,3,2012-02-20,2012-03-20,0.8549,0.8340,-,-,1.18,6,No,Yes,"Pabrik,Lab intertek, power station",Andrias.L,-,10000,-
+1,3,2012-03-20,2012-04-20,0.8429,0.7827,-,-,3.41,18,No,No,"Process plant activity, grass cutting activity, near access admin road",FB/NR,-,3910,-
+1,3,2012-04-20,2012-05-20,0.8664,0.8207,-,-,2.59,5,Yes,No,"Process plant activity, grass cutting activity, near access admin road",RH,-,8150,-
+1,3,2012-05-20,2012-06-20,0.8893,0.7934,-,-,5.43,7,Yes,No,"Plant site act, road act,grass cutting act",AL/RH,-,2700,-
+1,3,2012-06-20,2012-07-20,0.8318,0.8082,-,-,1.34,2,No,No,"Plant site act, road act",AP/RH,-,1750,-
+1,3,2012-07-20,2012-08-22,0.8483,0.8156,-,-,1.74,3,Yes,No,"Grass cuting act, plant site act, road act, canoes  on fire.",AL/TL,-,400,-
+1,3,2012-08-22,2012-09-20,0.8993,0.8212,-,-,4.57,1,Yes,No,Community act (carbon of waste combustion),DA/TL,-,1650,-
+1,3,2012-09-20,2012-10-20,-,-,-,-,-,-,No,No,Plant activity,CA/AL,-,-,Terbakar
+1,3,2012-10-20,2012-11-20,0.8396,0.7886,-,-,2.89,5,No,Yes,"Procces plant act, traffic act",RH/SM,-,7300,-
+1,3,2012-11-20,2012-12-20,0.8195,0.7811,-,-,2.17,8,No,No,"Procces plant act, traffic act",AL/JK,-,4500,-
+1,3,2012-12-20,2013-01-21,0.8659,0.8301,-,-,1.9,7,Yes,No,"Procces plant act, traffic act",RH,-,11500,-
+1,3,2013-01-21,2013-02-20,0.8333,0.8012,-,-,1.82,9,No,No,"Procces plant act, traffic act",AL/SM,-,10000,-
+1,3,2013-02-20,2013-03-20,0.8239,0.8028,-,-,1.28,9,No,No,"Procces plant act, vehicle activity, grass cutter actvity",AL/CR,-,2000,-
+1,3,2013-03-20,2013-04-20,0.8224,0.8023,-,-,1.1,2,No,No,"Procces plant act, vehicle activity",AP/CR,-,4500,-
+1,3,2013-04-20,2013-05-20,0.8044,0.7933,-,-,0.61,7,No,No,"Procces plant act, vehicle activity",DA/RH,-,4100,-
+1,3,2013-05-20,2013-06-21,0.801,0.7642,-,-,1.95,8,No,No,"Procces plant act, vehicle activity",AP/CR,-,3250,-
+1,3,2013-06-21,2013-07-20,0.819,0.809,-,-,0.59,2,No,No,"Procces plant act, vehicle activity",AP/CR,-,6800,-
+1,3,2013-07-20,2013-08-20,0.9071,0.7857,-,-,6.65,8,Yes,No,"Office Road activity, Proccessing activity",DA/AL,-,2300,-
+1,3,2013-08-20,2013-09-20,0.9798,0.7951,-,-,10.12,3,Yes,No,"Office Road activity, Proccessing activity",DA/RH,-,800,-
+1,3,2013-09-20,2013-10-20,0.9095,0.7953,-,-,6.26,2,No,No,"Office Road activity, Proccessing activity",RH/CR,-,2500,-
+1,3,2013-10-20,2013-11-21,0.9825,0.7863,-,-,10.41,3,Yes,No,"Office Road activity, Proccessing activity",CR/RH,-,5200,-
+1,3,2013-11-21,2013-12-20,0.9381,0.8038,-,-,7.36,10,No,No,"Office Road activity, Proccessing activity",AL,-,1750,-
+1,3,2013-12-20,2014-01-19,0.9108,0.7900,-,-,6.84,14,No,No,"Office Road activity, Proccessing activity",AL/RT,-,6500,-
+1,3,2014-01-19,2014-02-20,0.9574,0.7915,-,-,8.81,15,Yes,No,"Office Road activity, Proccessing activity",AP/RH,-,3750,-
+1,3,2014-02-20,2014-03-21,0.9542,0.8111,-,-,8.38,10,Yes,No,"Office Road activity, Proccessing activity",DA/CR,-,2000,-
+1,3,2014-03-21,2014-04-20,0.9037,0.783,-,-,6.83,5,No,No,"Office Road activity, Proccessing activity",DA/AL,-,3500,-
+1,3,2014-04-20,2014-05-20,0.9286,0.7962,-,-,7.5,2,No,No,"Office Road activity, Proccessing activity",AL/RT,-,2000,-
+1,3,2014-05-20,2014-06-21,0.9766,0.8006,-,-,9.34,2,No,No,"Office Road activity, Proccessing activity",RH,-,3000,-
+1,3,2014-06-22,2014-07-22,0.93,0.811,-,-,6.74,7,Yes,No,"Office Road activity, Proccessing activity",RH/RT,-,1750,-
+1,3,2014-07-22,2014-08-21,0.9397,0.7728,-,-,9.45,6,No,No,"Office Road activity, Proccessing activity",DA/AL,-,400,Added aquades 500 ml
+1,3,2014-08-21,2014-09-20,0.8941,0.8322,-,-,3.5,2,No,No,"Office Road activity, Proccessing activity",RH,-,1500,-
+1,3,2014-09-20,2014-10-22,1.0079,0.8316,-,-,9.36,3,No,No,"Office Road activity, Proccessing activity",RH,-,600,Added aquades 1000 ml
+1,3,2014-10-22,2014-11-20,0.9313,0.825,-,-,6.23,4,No,No,"Office Road activity, Proccessing activity",DA/AL,-,5500,-
+1,3,2014-11-20,2014-12-20,0.9909,0.8441,-,-,8.31,18,No,No,"Office Road activity, Proccessing activity",AP/CR/RT,-,4000,-
+1,3,2014-12-20,2015-01-20,0.9998,0.831,-,-,9.25,16,No,No,"Office Road activity, Proccessing activity",AL/BK,-,6800,-
+1,3,2015-01-20,2015-02-20,-,-,-,-,5,-,-,-,-,-,-,-,Botle send to WLN
+1,3,2015-02-20,2015-03-20,0.9939,0.8366,-,-,9.54,0,yes,No,"Office Road activity, Proccessing activity",AP/RH,-,2000,-
+1,3,2015-03-20,2015-04-20,0.9139,0.8322,-,-,4.48,0,yes,No,"Office Road activity, Proccessing activity",AP/RH,-,2650,-
+1,3,2015-04-20,2015-05-18,-,-,-,-,18,9,No,No,"Office Road activity, Proccessing activity",RH,-,-,-
+1,3,2015-05-19,2015-06-21,0.8828,0.806,-,-,3.95,10,No,No,"Office Road activity, Proccessing activity",AP/RT,-,1280,-
+1,3,2015-06-21,2015-07-21,0.8702,0.8135,-,-,3.21,4,No,No,"Office Road activity, Proccessing activity",AL/CR,-,520,Added 1000 ml aquades
+1,3,2015-07-21,2015-08-19,-,-,-,-,14,0,No,No,"Office Road activity, Proccessing activity",AL/RT,-,0,"Botle send to WLN, Add aquades 1000 ml"
+1,3,2015-08-19,2015-09-20,0.8339,0.7806,-,-,2.83,2,No,No,"Office Road activity, Proccessing activity",RT/BK,-,0,Added 1000 ml aquades
+1,3,2015-09-20,2015-10-20,0.974,0.7957,-,-,10.09,0,No,No,"Office Road activity, Proccessing activity",CR/RH,-,0,Added 1000 ml aquades
+1,3,2015-10-20,2015-11-19,-,-,-,-,59,4,No,No,"Office Road activity, Proccessing activity",RH/RT,-,1550,bottle send to WLN
+1,3,2015-11-19,2015-12-16,0.9866,0.8073,-,-,11.28,4,No,No,"Office Road activity, Proccessing activity",AL/CR,-,4000,-
+1,3,2015-12-16,2016-01-18,0.9502,0.8156,-,-,6.93,7,No,No,"Office Road activity, Proccessing activity",RT/BK,-,3750,-
+1,3,2016-01-18,2016-02-21,0.8297,0.8194,-,-,0.51,3,No,No,"Office Road activity, Proccessing activity",AP/AL,-,500,Added 1000 ml aquades
+1,3,2016-02-21,2016-03-22,-,-,-,-,4,1,No,No,"Office Road activity, Proccessing activity",CR/RT,-,1800,bottle send to WLN
+1,3,2016-03-22,2016-04-20,0.8133,0.8109,-,-,0.14,3,No,No,"Office Road activity, Proccessing activity",BK/CR,-,200,Added 1000 ml aquades
+1,3,2016-04-19,2016-05-23,-,-,-,-,20,5,No,No,"Office Road activity, Proccessing activity",RH/RT,-,8000,bottle send to WLN
+1,3,2016-05-23,2016-06-22,0.9267,0.7999,-,-,7.18,3,No,No,"Office Road activity, Proccessing activity",AP/RT,-,3750,Added 1000 ml aquades
+1,3,2016-06-22,2016-07-23,0.9667,0.8048,-,-,8.87,1,No,No,"Office Road activity, Proccessing activity",BK/RH/RT,-,2500,-
+1,3,2016-07-21,2016-08-22,0.9085,0.8128,-,-,5.08,5,No,No,"Office Road activity, Proccessing activity",AL/RT,-,3000,-
+1,3,2016-08-22,2016-09-21,-,-,-,-,17,5,No,No,"Office Road activity, Proccessing activity",RT/BK,-,2500,bottle send to WLN
+1,3,2016-09-21,2016-10-20,0.9795,0.807,-,-,10.1,0,No,No,"Office Road activity, Proccessing activity",RT/BK,-,5600,-
+1,3,2016-10-20,2016-11-22,0.9787,0.8011,-,-,9.14,9,No,No,"Office Road activity, Proccessing activity",RT/RH/BK,-,3700,-
+1,3,2016-11-22,2016-12-20,0.8935,0.8217,-,-,4.36,3,No,No,"Office Road activity, Proccessing activity",RH/RT,-,2400,-
+1,3,2016-12-20,2017-01-21,0.9603,0.8058,-,-,8.2,9,No,No,"Office Road activity, Proccessing activity",AL,-,4200,-
+1,3,2017-01-21,2017-02-20,0.9325,0.8137,-,-,6.73,5,No,No,"Grass Cutter Act, Office Road activity, Proccessing activity",DA/SP,-,13900,-
+1,3,2017-02-20,2017-03-21,0.9557,0.8208,-,-,7.9,10,No,No,"Grass Cutter Act, Office Road activity, Proccessing activity",AP,-,2800,-
+1,3,2017-03-21,2017-04-20,0.8585,0.823,-,-,2.01,10,No,No,"Grass Cutter Act, Office Road activity, Proccessing activity",AP/BK,-,3000,-
+1,3,2017-04-20,2017-05-21,0.94,0.8074,-,-,7.27,3,No,No,"Office Road activity, Proccessing activity",RT/RH,-,2000,-
+1,3,2017-05-21,2017-06-20,0.834,0.8068,5.5421,5.4717,7.49,-,-,-,-,-,50,2800,-
+1,3,2017-06-20,2017-07-23,0.8265,0.8257,5.5144,5.4743,4.82,-,-,-,-,-,25,1750,-
+1,3,2017-07-23,2017-08-20,-,-,-,-,6,5,No,No,"Office Road activity, Proccessing activity",RH/RT,-,690,bottle send to WLN
+1,3,2017-08-20,2017-09-21,0.9212,0.7982,5.7324,5.6921,6.21,6,No,No,"Office Road activity, Proccessing activity",RH/RT,25,2100,-
+1,3,2017-09-21,2017-10-21,0.9222,0.7978,5.7325,5.6932,8.54,6,No,No,"Office Road activity, Proccessing activity",RH/RT,25,2800,-
+1,3,2017-10-21,2017-11-21,0.8483,0.8062,5.4859,5.4426,7.99,6,No,No,"Office Road activity, Proccessing activity",RH/RT,25,2500,-
+1,3,2017-11-21,2017-12-21,0.8475,0.8054,5.4751,5.4427,6.19,6,No,No,"Office Road activity, Proccessing activity",RH/RT,25,2500,-
+1,3,2017-12-21,2018-01-21,0.8181,0.8142,5.4748,5.4737,0.33,7,No,No,"Office Road activity, Proccessing activity",AL/BK,25,4000,-
+1,3,2018-01-21,2018-02-21,0.9394,0.805,5.484,5.475,2.88,7,No,No,"Office Road activity, Proccessing activity",AL/BK,25,4000,-
+1,3,2018-02-21,2018-03-20,0.8192,0.815,5.46,5.4528,2.73,7,No,No,"Office Road activity, Proccessing activity",AL/BK,25,4500,-
+1,3,2018-03-20,2018-04-20,0.919,0.8163,5.4819,5.4739,2.53,7,No,No,"Office Road activity, Proccessing activity",AL/BK,25,4000,-
+1,3,2018-04-20,2018-05-20,0.8296,0.8242,5.4462,5.4261,6.84,7,No,No,"Office Road activity, Proccessing activity",AL/BK,25,4500,-
+1,3,2018-05-20,2018-06-20,0.9386,0.8042,5.4791,5.4726,2.24,8,No,No,"Office Road activity, Proccessing activity",AL/BK,25,4200,-
+1,3,2018-06-21,2018-07-24,0.8942,0.8358,5.4885,5.4829,0.56,0,No,No,"Office Road activity, Proccessing activity",AL/FP,25,1200,-
+1,3,2018-07-21,2018-08-24,0.882,0.8298,5.501,5.4916,1.62,0,No,No,"Office Road activity, Proccessing activity",AL/FP,25,2450,-
+1,3,2018-08-25,2018-09-24,-,-,-,-,0,0,No,No,"Office Road activity, Proccessing activity",AL/FP,25,2450,-
+1,3,2018-09-25,2018-10-29,0.8369,0.8177,5.5034,5.5029,0.07,0,No,No,"Office Road activity, Proccessing activity",AL/FP,25,1000,-
+1,3,2018-10-30,2018-11-27,-,-,-,-,0,2,No,No,"Office Road activity, Proccessing activity",RH/RT,-,-,Botol Send to WLN
+1,3,2018-11-28,2018-12-24,0.8821,0.8362,5.5103,5.5098,0.45,2,No,No,"Office Road activity, Proccessing activity",RH/RT,25,8000,-
+1,3,2018-12-25,2019-01-22,0.8669,0.8195,5.5422,5.5198,6.24,2,No,No,"Office Road activity, Proccessing activity",RH/RT,25,3390,-
+1,3,2019-01-23,2019-02-22,0.8458,0.8349,2.928,2.9226,1.45,2,No,No,"Office Road activity, Proccessing activity",RH/RT,25,3500,-
+1,3,2019-06-20,2019-07-20,0.848,0.8054,5.476,5.4439,6.87,2,No,No,"Office Road activity, Proccessing activity",BK,25,2800,-
+1,3,2018-07-20,2018-08-19,0.872,0.8288,5.511,5.4816,5.52,0,No,No,"Office Road activity, Proccessing activity",AL/FP,25,2450,-
+1,3,2019-08-20,2019-09-23,0.8261,0.7999,2.9279,2.9272,0.12,2,No,No,"Office Road activity, Proccessing activity",OS/FR,25,1550,-
+1,3,2019-09-23,2019-10-23,0.8216,0.7147,3.001,2.6956,14.03,2,No,No,"Office Road activity, Proccessing activity",RT,25,600,-
+1,3,2019-10-20,2019-11-20,1.071,0.844,3.009,3.0085,0.49,2,No,No,"Office Road activity, Proccessing activity",RH/RT,25,2025,-
+1,3,2019-11-20,2019-12-20,0.8876,0.8093,2.9555,2.9463,2.72,2,No,No,"Office Road activity, Proccessing activity",RT,25,3700,-
+1,3,2019-12-20,2020-01-20,1.0923,0.8282,3.5225,3.4808,15.1,6,No,No,"Office Road activity, Proccessing activity",AL/NB,25,4800,-
+1,3,2020-01-20,2020-02-25,-,-,-,-,0,-,-,-,"Office Road activity, Proccessing activity",-,25,-,-
+1,3,2020-02-25,2020-03-24,-,-,-,-,0,-,-,-,"Office Road activity, Proccessing activity",-,25,-,-
+1,3,2020-03-24,2020-04-22,-,-,-,-,0,-,-,-,"Office Road activity, Proccessing activity",-,25,-,-
+1,3,2020-04-22,2020-05-20,-,-,-,-,0,-,-,-,"Office Road activity, Proccessing activity",-,25,-,-
+1,3,2020-05-20,2020-06-23,-,-,-,-,0,-,-,-,"Office Road activity, Proccessing activity",-,25,-,-
+1,3,2020-06-23,2020-07-20,-,-,-,-,0,-,-,-,"Office Road activity, Proccessing activity",-,25,-,-
+1,3,2020-07-20,2020-08-20,0.9455,0.8138,5.4926,5.4853,1.25,2,Yes,No,"Office Road activity, Proccessing activity",AL/BK/JK,25,1900,-
+1,3,2020-08-20,2020-09-20,10.503,0.8102,5.5041,5.5018,17.77,10,No,No,"Office Road activity, Proccessing activity",FP/JK,25,400,-
+1,3,2020-09-20,2020-10-21,-,-,-,-,18,-,No,No,"Office Road activity, Proccessing activity",FP/JK,-,-,Botol Send to WLN
+1,3,2020-10-21,2020-11-21,0.8106,0.8082,5.5122,5.5059,18,3,No,No,"Office Road activity, Proccessing activity",FP/JK,25,500,-
+1,3,2020-11-21,2020-12-21,0.8813,0.8304,5.5279,5.5219,18,-,No,No,"Office Road activity, Proccessing activity",FP/JK,25,5550,-
+1,3,2020-12-21,2021-01-24,0.9538,0.8242,2.94,2.9352,10,15,No,No,"Office Road activity, Proccessing activity",FP/JK,25,3300,-
+1,3,2021-01-24,2021-02-25,-,-,-,-,0,14,No,No,"Office Road activity, Proccessing activity",-,25,-,Botol Send to WLN
+1,3,2021-02-25,2021-03-23,0.8703,0.8611,2.997,2.9489,19.71,5,No,No,"Office Road activity, Proccessing activity",JK/NB,25,4700,-
+1,3,2021-03-23,2021-04-22,0.9675,0.8154,5.5228,5.5207,0.32,15,No,No,"Office Road activity, Proccessing activity",JK/NB,25,208,-
+1,3,2021-04-22,2021-05-25,0.963,0.8298,5.5299,5.5252,1.52,5,No,No,"Office Road activity, Proccessing activity",BK/FR/RT,25,4000,-
+1,3,2021-05-25,2021-06-23,0.9862,0.8453,5.5271,5.5255,0.49,5,no,no,"Office Road activity, Proccessing activity",BK/FP,20,1400,-
+1,3,2021-06-23,2021-07-23,0.875,0.8409,5.5278,5.527,0.25,3,no,no,"Office Road activity, Proccessing activity",BK,20,2450,-
+1,3,2021-07-23,2021-08-19,-,-,-,-,4,5,no,no,"Office Road activity, Proccessing activity",BK/FP,-,-,Botol Send to WLN
+1,3,2021-08-19,2021-09-24,0.8497,0.8189,5.5322,5.5284,0.35,8,no,no,"Office Road activity, Proccessing activity",NB/FK,25,1250,-
+1,3,2021-09-24,2021-10-21,0.9945,0.826,5.5384,5.5283,0.98,2,no,no,"Office Road activity, Proccessing activity",BK/FR/HM,25,740,-
+1,3,2021-10-21,2021-11-23,1.0487,0.8258,5.5098,5.5001,4.31,4,no,no,"Office Road activity, Proccessing activity",BK/JK,25,5900,-
+1,3,2021-11-23,2021-12-21,1.0295,0.8411,5.4958,5.4941,0.85,7,no,no,"Office Road activity, Proccessing activity",BK/FR,25,3400,-
+1,3,2021-12-21,2022-01-22,0.841,0.8383,5.5044,5.5026,0.51,20,no,no,"Office Road activity, Proccessing activity",BK/FK,25,4000,-
+1,3,2022-01-22,2022-02-23,0.8376,0.8244,5.517,5.5075,2.71,7,no,no,"Office Road activity, Proccessing activity",BK/FP,25,4000,-
+1,3,2022-02-23,2022-03-27,1.0308,0.8406,5.512,5.5102,0.97,5,no,no,"Office Road activity, Proccessing activity",BK/JK,25,5000,-
+1,3,2022-03-27,2022-04-20,1.0363,0.8398,5.6016,5.5076,41.27,7,no,no,"Office Road activity, Proccessing activity",FR/BK,25,4600,-
+1,3,2022-04-20,2022-05-25,0.8498,0.8362,5.5099,5.5076,0.45,5,no,no,"Office Road activity, Proccessing activity",BK/JK,25,2870,-
+1,3,2022-05-25,2022-06-22,1.1175,0.8302,5.5252,5.5072,2.33,9,no,no,"Office Road activity, Proccessing activity",NB/HM/FP,25,1200,-
+1,3,2022-06-22,2022-07-24,0.8941,0.8204,5.4972,5.4958,0.33,12,no,no,"Office Road activity, Proccessing activity",NB,25,2000,-
+1,3,2022-07-24,2022-08-25,0.9951,0.8288,3.388,3.3843,0.82,7,no,no,"Office Road activity, Proccessing activity",BK,25,2000,-
+1,3,2022-08-25,2022-09-26,0.8431,0.8149,2.7888,2.782,0.82,7,no,no,"Office Road activity, Proccessing activity",BK/HM,25,1600,-
+1,3,2022-09-26,2022-10-27,0.8534,0.8257,5.5099,5.5076,0.39,6,no,no,"Office Road activity, Proccessing activity",BK/NB,25,2000,-
+1,3,2022-10-27,2022-11-28,0.8595,0.8575,3.2358,0.2345,743.43,4,no,no,"Office Road activity, Proccessing activity",BK/JK,25,3500,-
+1,3,2022-11-28,2022-12-22,0.8341,0.8291,2.4567,2.2485,19.66,4,no,no,"Office Road activity, Proccessing activity",BK/FR/JK,25,1000,-

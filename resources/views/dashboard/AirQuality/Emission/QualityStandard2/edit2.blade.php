@@ -307,10 +307,23 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <div class="form-group row">
-                                            <label style="font-size: 10px" class="col-sm-4 col-form-label">Nitrogen Oxide (NOX) as Nitrogen Dioxide (NO2) </label>
+                                            <label style="font-size: 10px" class="col-sm-4 col-form-label">Nitrogen Oxide (NOX)</label>
                                             <div class="col-sm-7">
-                                                <input name="nitrogen_oxide_nox_as_nitrogen_dioxide_no2" type="text" class="form-control form-control-sm @error('nitrogen_oxide_nox_as_nitrogen_dioxide_no2') is-invalid @enderror" value="{{ old('nitrogen_oxide_nox_as_nitrogen_dioxide_no2',$QualityStandard->nitrogen_oxide_nox_as_nitrogen_dioxide_no2) }}" />
-                                                @error('nitrogen_oxide_nox_as_nitrogen_dioxide_no2')
+                                                <input name="nitrogen_oxide_nox" type="text" class="form-control form-control-sm @error('nitrogen_oxide_nox') is-invalid @enderror" value="{{ old('nitrogen_oxide_nox',$QualityStandard->nitrogen_oxide_nox) }}" />
+                                                @error('nitrogen_oxide_nox')
+                                                <span class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group row">
+                                            <label style="font-size: 10px" class="col-sm-4 col-form-label">Nitrogen Dioxide (NO2)</label>
+                                            <div class="col-sm-7">
+                                                <input name="nitrogen_dioxide_no2" type="text" class="form-control form-control-sm @error('nitrogen_dioxide_no2') is-invalid @enderror" value="{{ old('nitrogen_dioxide_no2',$QualityStandard->nitrogen_dioxide_no2) }}" />
+                                                @error('nitrogen_dioxide_no2')
                                                 <span class=" invalid-feedback">{{ $message }}</span>
                                                 @enderror
                                             </div>

@@ -53,6 +53,10 @@
             <th>Fecal Coliform</th>
             <th>E- Coli</th>
             <th>Total Coliform Bacteria </th>
+			<th>Permanganate Number as KMnO4</th>
+			<th>Surfactant</th>
+			<th>Benzene</th>
+			<th>Total pesticides as organo Chlorine Pesticides</th>
         </tr>
     </thead>
     <tbody>
@@ -101,6 +105,10 @@
         <td>{{$item->fecal_coliform}}</td>
         <td>{{$item->c_coli}}</td>
         <td>{{$item->total_coliform_bacteria}}</td>
+		<td>{{$item->permanganate_number_as_kmno4}}</td>
+        <td>{{$item->surfactant}}</td>
+        <td>{{$item->benzene}}</td>
+		<td>{{$item->total_pesticides_as_organo_chlorine_pesticides}}</td>
         </tr>
         @endforeach
     </tbody>

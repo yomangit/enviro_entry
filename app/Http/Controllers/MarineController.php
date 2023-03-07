@@ -27,14 +27,16 @@ class MarineController extends Controller
         }
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
-        $grafiks= Marine::with('user')->filter(request(['fromDate','search']))->latest()->filter(request(['fromDate', 'search','location']))->paginate($table)->withQueryString();
+        $grafiks= Marine::with('user')->orderBy('date','desc')->latest()->filter(request(['fromDate', 'search','location','location1','location2']))->paginate($table)->withQueryString();
         $taxa_richness=[];
         $species_density=[];
         $diversity_index=[];
         $evenness_value=[];
         $dominance_index=[];
+        $nama=[];
         $date=[];
        foreach ($grafiks as $grafik ) {
+        $nama[]=$grafik->locationBiota->nama;
         $date[]=date('d-M-Y',strtotime($grafik->date));
         if (is_numeric($grafik->taxa_richness)) {
             $taxa_richness[]=doubleval($grafik->taxa_richness);
@@ -77,12 +79,13 @@ class MarineController extends Controller
             'LocationBiota'=>LocationBiota::all(),
             'breadcrumb' => 'Marine Monitoring',
             'date'=>$date,
+            'point'=>$nama,
             'taxa_richness'=> $taxa_richness,
             'species_density'=> $species_density,
             'diversity_index'=>$diversity_index,
             'evenness_value'=>$evenness_value,
             'dominance_index'=>$dominance_index,
-            'Marine' => Marine::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Marine' => Marine::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location','location1','location2']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
     public function ExportMarine()

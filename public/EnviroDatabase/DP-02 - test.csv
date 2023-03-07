@@ -1,0 +1,6 @@
+standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conductivity,tds,temperatur,salinity,turbidity,tl_wall,tl_tsf,water_condition,water_color,odor,rain,rain_during_sampling,oil_layer,source_pollution,sampler,cyanide,level,lvl_lgr,debit_s,debit_d,remarks
+7,1,2,2022-08-18,8:46,8:48,25,6.59,7.91,139,6170,3880,36,3.3,10,-,-,surut,Normal,Normal,tidak,Tidak,Tidak,PSP,FP/HM,-,0.74,-,-,-,-
+7,1,2,2022-08-19,8:20,8:22,48,8.15,7.02,122,6120,3830,36,3.2,26.8,-,-,Pasang,Agak Keruh,Normal,ADA,Tidak,Tidak,PSP,BK/JK,-,0.79,-,-,-,-
+7,1,2,2022-08-20,8:19,8:21,25,8.01,7.05,155,6130,3840,35,3.3,14.7,-,-,surut,Agak Keruh,Normal,tidak,Tidak,Tidak,PSP,NB/BK,-,0.74,-,-,-,-
+7,1,2,2022-08-21,9:49,9:51,8,7.82,6.7,163,6160,3850,35,3.3,10.3,-,-,surut,Normal,Normal,tidak,Tidak,Tidak,PSP,FP/FR/HM,-,0.73,-,-,-,-
+7,1,2,2022-08-22,8:02,8:04,8,7.67,7.19,174,6170,3860,36,3.3,9.8,-,-,surut,Normal,Normal,tidak,Tidak,Tidak,PSP,FR/FP/HM,-,0.74,-,-,-,-

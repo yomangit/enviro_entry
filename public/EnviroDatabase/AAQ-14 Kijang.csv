@@ -1,0 +1,7 @@
+user_id,point_id,date,sulphur_dioxide_so2,nitrogen_dioxide_no2,carbon_monoxide,ozone,total_suspended_particulate_24_hours,particulate_matter_10,particulate_matter_2_5,temperature_ambient,humidity,wind_speed,wind_direction,weather,barometric_pressure,lead_pb,hydrocarbon
+1,14,2019-08-30,23,5,115,20,13.8,6.2,4.3,26.0 - 34.4,48.1 - 71.8,1.1 - 5.5,West,Clear,751.7 - 755.9,-,-
+1,14,2020-02-28,20,5,100,-,16.6,11.1,4.9,26.4 - 30.1,75.0 - 84.4,0.9 - 1.0,West,Rainy - Cloudy - Clear,745.2 - 756.2,-,-
+1,14,2020-11-22,20,20,5000,10,10,10,10,31.2,78,1.3,West,Sunny,760,-,-
+1,14,2021-06-03,20,20,5000,10,10,10,10,31.1,70,1.5,East,Sunny,756,0.05,10
+1,14,2021-11-08,21,20,5000,10,11,10,10,30.7,65,2.1,West,Sunny,756,0.05,10
+1,14,2022-03-26,20,20,5000,10,10,10,10,29,74,1.1,South,Sunny,758,-,-

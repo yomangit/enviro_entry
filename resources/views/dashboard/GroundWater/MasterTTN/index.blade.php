@@ -43,9 +43,9 @@
                                     <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                 </div>
 
-                                <div style="width: 120px;" class="input-group mr-1">
+                                <div style="width: 118px;" class="input-group mr-1">
                                     <select class="form-control form-control-sm " name="search">
-                                        <option value="" disabled selected>Point ID</option>
+                                        <option value="" selected>Point ID</option>
                                         @foreach ($code_units as $code)
                                         @if ( request('search')==$code->nama)
                                         <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
@@ -55,6 +55,31 @@
                                         @endforeach
                                     </select>
                                 </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 <div class="mr-2">
                                     <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                 </div>
@@ -148,9 +173,9 @@
                                         <td>{{ $data->well }}</td>
                                         <td>{{ $data->well_water }}</td>
                                         <td>{{ $data->h }}</td>
-                                        <td>{{ $data->tablestandard->d_pipe }}</td>
-                                        <td>{{ $data->tablestandard->tt }}</td>
-                                        <td>{{ $data->tablestandard->r }}</td>
+                                        <td>0.0762</td>
+                                        <td>3.14</td>
+                                        <td>0.000645</td>
                                         <td>{{ $data->water_volume }}</td>
                                         <td>{{ $data->temperatur }}</td>
                                         <td>{{ $data->ph }}</td>
@@ -244,9 +269,12 @@
             text: ''
         },
       
-        xAxis: {
-            categories: {!!json_encode($date)!!}
-        },
+        xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
         yAxis: {
             title: {
                 text: 'Value'
@@ -268,6 +296,8 @@
         },
         series: [{
             name: 'Temperature',
+                xAxis: 0,
+            xAxis: 1,
             marker: {
                 symbol: 'square'
             },
@@ -277,6 +307,8 @@
         }, {
                 name: 'PH',
                 color:'#6AB187',
+                xAxis: 1,
+                xAxis: 0,
                 marker: {
                     symbol: 'triangle-down'
                 },

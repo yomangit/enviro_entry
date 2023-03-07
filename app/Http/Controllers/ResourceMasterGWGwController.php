@@ -11,6 +11,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 use App\Imports\GroundWaterImport;
 use App\Models\GroundWaterStandard;
+use App\Models\GroundWaterMonthStandard;
 
 class ResourceMasterGWGwController extends Controller
 {
@@ -28,15 +29,16 @@ class ResourceMasterGWGwController extends Controller
         }
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
-        $grafiks = Mastergw::with('user')
-            ->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
+        $grafiks = Mastergw::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
         $tanggal = [];
         $suhu = [];
         $ph = [];
+        $nama = [];
         $suhu1 = [];
         $ph1 = [];
         foreach ($grafiks as $grafik) 
         {
+            $nama[] = $grafik->GWCodeSample->nama;
             $tanggal[] = date('d-M-Y', strtotime($grafik->date));
             if ($suhu1[] = $grafik->temperatur === '-') {
                 //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
@@ -63,8 +65,9 @@ class ResourceMasterGWGwController extends Controller
             'breadcrumb'=>'Ground Water MSM',
             'date' => $tanggal,
             'suhu' => $suhu,
+            'point' => $nama,
             'ph' => $ph,
-            'Master'=>Mastergw::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->paginate(30)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Master'=>Mastergw::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
     }
@@ -81,7 +84,7 @@ class ResourceMasterGWGwController extends Controller
         }
         return view('dashboard.GroundWater.Mastergw.create',[
             "tittle"=>"Ground Water MSM",
-            'table_standard'=>GroundWaterStandard::all(),
+            'table_standard'=>GroundWaterMonthStandard::all(),
             'code_units'=>Codesamplegw::all(),
             'Codes'=>Mastergw::where('user_id',auth()->user()->id)->filter(request(['fromDate']))->get()//with diguanakan untuk mengatasi N+1 problem
          ]);

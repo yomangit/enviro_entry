@@ -1,0 +1,48 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,8,2008-08-25,2008-09-24,0.3001,0.2758,-,-,1.42,-,-,-,-,-,-,-,-
+1,8,2008-09-24,2008-10-25,0.4942,0.4707,-,-,1.29,2,Yes,No,-,Onlie&Rodie,-,-,-
+1,8,2008-10-25,2008-11-25,0.9917,0.9719,-,-,1.08,2,Yes,No,grass cutting 2 weeks ago,Onlie&Rodie,-,-,-
+1,8,2008-11-25,2008-12-24,0.5465,0.5212,-,-,1.48,20,-,-,grass cutting 2 weeks ago,Onlie&Rodie,-,-,-
+1,8,2008-12-24,2009-01-24,0.5877,0.5757,-,-,0.66,9,No,No,Grass cutting,Harjoko,-,-,-
+1,8,2009-01-24,2009-02-25,0.4017,0.3471,-,-,2.9,14,Yes,No,-,Jelly & Fanno,-,-,-
+1,8,2009-02-25,2009-03-25,0.671,0.6609,-,-,0.61,9,No,No,-,Jelly & Royke,-,-,-
+1,8,2009-03-25,2009-04-24,0.5296,0.4856,-,-,2.49,10,No,No,-,Jelly & Fanno,-,-,-
+1,8,2009-04-24,2009-05-20,0.4541,0.4106,-,-,2.84,11,Yes,No,"Bush fire close to the gauge, grass high",Jelly & Fanno,-,-,-
+1,8,2009-05-20,2009-06-22,0.8652,0.8099,-,-,2.85,12,No,No,grass cutting a week ago before sampling,-,-,-,-
+1,8,2009-06-22,2009-07-23,0.2566,0.2433,-,-,0.73,6,No,No,"Bush fire close to the gauge, grass high",Jelly & Roddy,-,-,-
+1,8,2009-07-23,2009-08-21,0.1011,0.0823,-,-,1.1,1,Yes,No,Burning Area,Jelly & Roddy,-,-,-
+1,8,2009-08-21,2009-09-22,0.416,0.4063,-,-,0.51,1,No,No,Burning Area. Close to rondor road.,Jelly & Roddy,-,-,-
+1,8,2009-09-22,2009-10-21,0.5217,0.5056,-,-,0.94,3,Yes,No,"Burning Area, near rondor road",Jelly & Royke,-,-,-
+1,8,2009-10-21,2009-11-22,4.4126,4.3756,-,-,1.96,12,Yes,No,Farmer Activity,JM,-,6600,-
+1,8,2009-11-22,2009-12-20,0.6908,0.6824,-,-,0.51,16,No,No,Farmer Activity,Rolke,-,5500,-
+1,8,2009-12-20,2010-01-20,2.676,2.6296,-,-,2.54,46,Yes,No,"Small insect, close with garden",Jelly & Royke,-,4020,-
+1,8,2010-01-20,2010-02-20,1.3541,1.3217,-,-,1.78,12,Yes,No,"Farmer Activity, near rondor road",Fanno & Mahmud,-,4850,-
+1,8,2010-02-20,2010-03-22,0.7615,0.7441,-,-,0.99,9,No,No,"Farmer Activity, near rondor road",Onlie,-,350,-
+1,8,2010-03-22,2010-04-20,0.9848,0.9749,-,-,0.58,11,Yes,No,"Alang-alang area, near the coconut fabrique",JM & Rolke,-,5900,-
+1,8,2010-04-20,2010-05-20,1.0284,1.0081,-,-,1.15,16,Yes,No,Farmer Activity,Onlie & Rolke,-,2670,-
+1,8,2010-05-20,2010-06-20,0.7947,0.7833,-,-,0.62,5,Yes,No,Farmer Activity,Onlie & Nus,-,2700,-
+1,8,2010-06-20,2010-07-20,0.8016,0.7915,-,-,0.57,7,No,No,Gardening/MTM worshop,JM/OS,-,3200,-
+1,8,2010-07-20,2010-08-20,0.7887,0.773,-,-,0.86,4,Yes,No,Gardening/MTM worshop,RDC/Robby.N,-,4600,-
+1,8,2010-08-20,2010-09-20,0.762,0.7477,-,-,0.78,8,Yes,No,Gardening/MTM worshop,OS/MW,-,2550,-
+1,8,2010-09-20,2010-10-20,0.8005,0.7961,-,-,0.25,1,No,No,Gardening Activity,OS/MW,-,2750,-
+1,8,2010-10-20,2010-11-23,0.835,0.8059,-,-,1.45,18,Yes,No,Gardening Activity,RDC/AL,-,4350,There was a lizard
+1,8,2010-11-23,2010-12-20,0.8329,0.8269,-,-,0.38,6,No,No,Farmer Activity,OS/AL,-,4200,-
+1,8,2010-12-20,2011-01-20,0.8296,0.7907,-,-,2.13,5,Yes,No,Farmer Activity,OS,-,3200,-
+1,8,2011-01-20,2011-02-20,-,-,-,-,0,-,-,-,-,OS/MW,-,-,Dust Gauge botlle and funnel missing
+1,8,2011-02-20,2011-03-20,0.7749,0.7722,-,-,0.16,1,No,No,"Farmer activity, near cattle",OS/MW,-,3800,-
+1,8,2011-03-20,2011-04-21,0.8479,0.8316,-,-,0.87,4,Yes,No,"Farmer activity, near the road",OS,-,2750,-
+1,8,2011-04-21,2011-05-21,0.8112,0.7898,-,-,1.21,11,Yes,No,"Farmer activity, near the road",OS,-,5150,-
+1,8,2011-05-21,2011-06-21,0.8002,0.795,-,-,0.28,5,No,No,"Farmer activity, near the road",OS,-,5700,-
+1,8,2011-06-21,2011-07-20,0.829,0.7948,-,-,1.87,0,Yes,No,"Gardening, near the road",OS,-,200,-
+1,8,2011-07-20,2011-08-20,0.7985,0.7932,-,-,0.29,1,No,No,Farmer activity,OS/MW,-,2000,-
+1,8,2011-08-20,2011-09-20,0.8323,0.7787,-,-,2.94,0,Yes,No,"Farmer activity, Close to Rondor road",FB/OL,-,1250,-
+1,8,2011-09-20,2011-10-21,0.8252,0.7854,-,-,2.18,2,Yes,No,"Farmer activity, Close to Rondor road",Novry/Anita,-,2450,-
+1,8,2011-10-21,2011-11-21,0.8536,0.8304,-,-,1.27,2,Yes,No,"Farmer activity, Close to Rondor road",Andrias/Anita,-,3100,-
+1,8,2011-11-21,2011-12-22,0.8168,0.8084,-,-,0.45,13,Yes,No,"Farmer activity, Close to Rondor road",Mahmud/Arter,-,4300,-
+1,8,2011-12-22,2012-01-20,0.8448,0.8314,-,-,0.78,6,No,No,"Activity org kebun , gardening",OS/OA,-,3250,-
+1,8,2012-01-20,2012-02-20,-,-,-,-,-,-,-,-,-,Onlie,-,-,Dust gauge bottle & funnel is lost
+1,8,2012-02-20,2012-03-20,-,-,-,-,-,-,-,-,-,AL,-,-,Do not put the dust gauge bottle
+1,8,2012-03-20,2012-04-20,-,-,-,-,-,-,-,-,-,FB/NR,-,-,Dust gauge bottle & funnel is lost
+1,8,2012-04-20,2012-06-11,-,-,-,-,-,-,-,-,-,-,-,-,Dust gauge bottle & funnel is lost
+1,8,2012-06-11,2012-06-20,0.7793,0.774,-,-,1,1,No,No,"Farmer activity, grass cutting act, close the road",AL/RH,-,7000,-
+1,8,2012-06-20,2012-07-20,0.8837,0.8131,-,-,4,7,Yes,No,"Road act, farmer act",AP/RH,-,1000,There was 3 beetles dead in the botle

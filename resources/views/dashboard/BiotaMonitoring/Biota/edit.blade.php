@@ -29,7 +29,7 @@
                 </div>
 
                 <!-- /.card-header -->
-                <form action="/monitoring/freshwater/biota/{{ $Codes->created_at }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                <form action="/monitoring/freshwater/biota/{{ $Codes->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                     @method('put')
                     @csrf
                     <div class="card-body">

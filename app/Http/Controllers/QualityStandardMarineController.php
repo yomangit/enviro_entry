@@ -22,7 +22,7 @@ class QualityStandardMarineController extends Controller
             'tittle'=>'Quality Standard',
             'code_units'=>PointIdDrinkwater::all(),
             'breadcrumb'=>'Quality Standard',
-            'QualityStd'=>QualityStandardMarine::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
+            'QualityStd'=>QualityStandardMarine::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
             // 'QualityStandard'=>QualityStdDrinkWater::where('user_id',auth()->user()->id)->paginate(10)->withQueryString()
         ]);
     }

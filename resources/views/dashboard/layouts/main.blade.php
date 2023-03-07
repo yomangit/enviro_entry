@@ -6,6 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $tittle }}</title>
+    <style>
+    a{
+        cursor: pointer;
+    }
+</style>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -67,6 +72,7 @@
     <link rel="stylesheet" href="/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">  
+    <link rel="stylesheet" href="/assets/dist/css/data.css">  
 <script src="https://kit.fontawesome.com/42d701198b.js" crossorigin="anonymous"></script>
 @stack('styles')
 </head>
@@ -141,7 +147,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
                 
             });
@@ -150,7 +156,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example3').DataTable({
@@ -158,7 +164,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example4').DataTable({
@@ -166,7 +172,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example5').DataTable({
@@ -174,7 +180,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example6').DataTable({
@@ -182,7 +188,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example7').DataTable({
@@ -190,7 +196,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example8').DataTable({
@@ -198,7 +204,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
         });
@@ -238,9 +244,18 @@
                     format: 'DD-MM-YYYY'
                 });
                 $('#reservationdate6').datetimepicker({
-                    format: 'MMM-YYYY'
+                    format: 'DD-MM-YYYY'
                 });
                 $('#reservationdate7').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                $('#reservationdate8').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                $('#reservationdate9').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                $('#reservationdate11').datetimepicker({
                     format: 'DD-MMM-YYYY'
                 });
                 //Timepicker
@@ -322,6 +337,40 @@
             bsCustomFileInput.init();
         });
     </script>
+    <script>
+/*  show 1 - hide 1  */
+
+$('.show-1-yes').click(function() {
+    $('#target-1').show(500);
+    $('.show-1-yes').hide(0);
+    $('.hide-1-yes').show(0);
+});
+$('.hide-1-yes').click(function() {
+    $('#target-1').hide(500);
+    $('.show-1-yes').show(0);
+    $('.hide-1-yes').hide(0);
+});
+
+
+
+/*  show 2 - hide 2  */
+
+$('.show-2-yes').click(function() {
+    $('#target-2').show(500);
+    $('.show-2-yes').hide(0);
+    $('.hide-2-yes').show(0);
+});
+$('.hide-2-yes').click(function() {
+    $('#target-2').hide(500);
+    $('.show-2-yes').show(0);
+    $('.hide-2-yes').hide(0);
+});
+
+
+
+
+
+</script>
 </body>
 
 </html>

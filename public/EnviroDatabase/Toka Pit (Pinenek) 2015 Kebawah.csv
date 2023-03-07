@@ -1,0 +1,602 @@
+id,user_id,point_id,standard_id,date,peak_vektor_std,time,transversal_freq,vertical_freq,longitudinal_freq,transversal_ppv,vertical_ppv,longitudinal_ppv,peak_vektor,noise_level,blast_location,weather,sampler,remarks
+1,1,18,8,2011-12-02,7,17:14:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-04,7,17:12:44,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-06,7,17:13:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-07,7,12:16:36,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-08,7,12:15:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-09,7,12:27:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-10,7,17:11:36,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-12,7,12:12:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-13,7,12:12:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-15,7,17:08:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-16,7,12:09:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-17,7,12:07:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-19,7,17:18:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-22,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-23,7,12:11:59,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-24,7,17:22:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-27,7,17:14:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-28,7,17:24:36,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-29,7,17:11:40,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2011-12-30,7,17:13:59,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-01-04,7,17:11:37,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-01-14,7,12:07:49,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-01-18,7,17:08:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-01-20,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-01-22,7,17:07:30,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-01-24,7,12:16:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-01,7,17:12:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-02,7,17:12:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-04,7,17:11:37,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-05,7,17:02:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-09,7,17:15:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-10,7,17:15:56,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-12,7,17:09:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-13,7,17:10:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-15,7,12:08:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-17,7,12:11:13,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-18,7,17:11:56,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-21,7,12:11:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-26,7,12:10:44,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-02-28,7,17:12:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-03-01,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2012-03-02,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2012-03-04,7,17:13:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2012-03-05,7,17:13:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2012-03-07,7,17:15:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2012-03-08,7,12:11:53,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2012-03-09,7,17:12:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2012-03-11,7,17:12:57,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2012-03-14,7,17:16:13,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-03-16,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-03-17,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-03-20,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-03-21,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2 ,-,-,-
+1,1,18,8,2012-03-25,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-03-27,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-03-29,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-03-31,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-04-01,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-05,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-09,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-04-15,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-16,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-04-17,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-18,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-19,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-04-20,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-21,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-04-22,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-04-26,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-04-29,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-02,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-03,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-04,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-05,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-07,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-09,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-10,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-11,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-13,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-14,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-16,7,17:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,-,-,-
+1,1,18,8,2012-05-18,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-20,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-21,7,17:15:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit II ,-,-,-
+1,1,18,8,2012-05-22,7,17:15:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-23,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-25,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-27,7,17:00:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-05-31,7,17:00:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,FB,-
+1,1,18,8,2012-06-01,7,17:00:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,FB,-
+1,1,18,8,2012-06-03,7,17:00:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,FB,-
+1,1,18,8,2012-06-07,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-06-08,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,-,-
+1,1,18,8,2012-06-10,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,AL,-
+1,1,18,8,2012-06-23,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,-,FB,-
+1,1,18,8,2012-06-26,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,RH/TL,-
+1,1,18,8,2012-06-28,7,17:00:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,-,-
+1,1,18,8,2012-06-30,7,17:00:00 PM,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Bright,-,-
+1,1,18,8,2012-07-01,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,FB/TL,-
+1,1,18,8,2012-07-03,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Bright,RH/AP,-
+1,1,18,8,2012-07-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Bright,FB/AP,-
+1,1,18,8,2012-07-08,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2012-07-10,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP/DA,-
+1,1,18,8,2012-07-11,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP/FB,-
+1,1,18,8,2012-07-13,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2012-07-16,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2012-07-25,7,17:07:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,AP,-
+1,1,18,8,2012-07-27,7,16:58:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Cloudy,DA/RK,-
+1,1,18,8,2012-07-31,7,16:57:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA/DK,-
+1,1,18,8,2012-08-03,7,16:56:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,FB,-
+1,1,18,8,2012-08-05,7,16:56:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB,-
+1,1,18,8,2012-08-07,7,17:00:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA,-
+1,1,18,8,2012-08-12,7,17:00:37,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,FB/AP,-
+1,1,18,8,2012-08-14,7,17:00:46,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2012-08-18,7,17:02:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2012-08-20,7,16:59:56,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2012-08-21,7,17:00:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2012-08-24,7,17:05:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB,-
+1,1,18,8,2012-08-25,7,16:58:52,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB,-
+1,1,18,8,2012-08-30,7,16:58:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB,-
+1,1,18,8,2012-09-01,7,12:12:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Cloudy,DA,-
+1,1,18,8,2012-09-03,7,17:04:43,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,Bright,FB/DA,-
+1,1,18,8,2012-09-06,7,16:57:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2012-09-07,7,16:57:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,FB/DA,-
+1,1,18,8,2012-09-10,7,17:02:01,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB,-
+1,1,18,8,2012-09-13,7,16:56:57,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB,-
+1,1,18,8,2012-09-14,7,16:56:50,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/RK,-
+1,1,18,8,2012-09-20,7,16:56:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2012-09-21,7,16:55:59,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2012-09-26,7,12:10:40,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2012-09-29,7,16:54:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2012-09-30,7,12:09:19,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2012-10-02,7,16:56:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2012-10-04,7,16:56:20,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2012-10-06,7,12:11:11,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2012-10-09,7,16:54:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2012-10-15,7,16:59:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2012-10-16,7,12:10:30,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2012-10-18,7,12:09:35,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB,-
+1,1,18,8,2012-10-20,7,16:59:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,DA/AL,-
+1,1,18,8,2012-10-21,7,12:08:12,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/AL,-
+1,1,18,8,2012-10-26,7,16:55:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/AL,-
+1,1,18,8,2012-10-28,7,16:54:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,DA/AL,-
+1,1,18,8,2012-11-02,7,17:00:36,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1 & 2,-,AP,-
+1,1,18,8,2012-11-03,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB/SP,-
+1,1,18,8,2012-11-05,7,12:14:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB,-
+1,1,18,8,2012-11-08,7,12:21:43,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2012-11-10,7,17:00:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2012-11-13,7,16:59:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,AP,-
+1,1,18,8,2012-11-14,7,12:14:58,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP/RH/SM,-
+1,1,18,8,2012-11-16,7,16:59:12,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP/FB,-
+1,1,18,8,2012-11-19,7,17:01:15,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,AP,-
+1,1,18,8,2012-11-21,7,16:59:20,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1 & 2,-,FB/AP,-
+1,1,18,8,2012-11-23,7,12:13:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AL,-
+1,1,18,8,2012-11-25,7,16:58:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,DA/CA,-
+1,1,18,8,2012-11-27,7,12:13:55,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AL/SM,-
+1,1,18,8,2012-11-29,7,12:15:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB/AL,-
+1,1,18,8,2012-12-01,7,12:15:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB/CA,-
+1,1,18,8,2012-12-03,7,12:15:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/CA,-
+1,1,18,8,2012-12-05,7,12:15:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/AL,-
+1,1,18,8,2012-12-07,7,16:59:21,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB/CA,-
+1,1,18,8,2012-12-08,7,17:01:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/CA,-
+1,1,18,8,2012-12-10,7,17:00:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/RK,-
+1,1,18,8,2012-12-12,7,12:12:58,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,DA/RH,-
+1,1,18,8,2012-12-14,7,16:57:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB,-
+1,1,18,8,2012-12-18,7,12:10:55,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2012-12-21,7,17:00:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,AP,-
+1,1,18,8,2012-12-23,7,17:09:22,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2012-12-29,7,16:57:53,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2012-12-31,7,16:57:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,AP,-
+1,1,18,8,2013-01-03,7,16:57:07,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2013-01-06,7,12:14:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP/DA,-
+1,1,18,8,2013-01-10,7,16:56:55,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB,-
+1,1,18,8,2013-01-12,7,12:13:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,FB,-
+1,1,18,8,2013-01-12,7,17:02:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,FB,-
+1,1,18,8,2013-01-15,7,16:57:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,FB/DA,-
+1,1,18,8,2013-01-18,7,16:59:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,FB/DA,-
+1,1,18,8,2013-01-20,7,12:10:19,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,FB/DA,-
+1,1,18,8,2013-01-23,7,16:59:46,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,FB/DA,-
+1,1,18,8,2013-01-26,7,16:58:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,AP/DA,-
+1,1,18,8,2013-01-30,7,17:00:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,AP/DA,-
+1,1,18,8,2013-02-02,7,16:59:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,AP,-
+1,1,18,8,2013-02-07,7,16:59:23,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,Bright,AP,-
+1,1,18,8,2013-02-09,7,12:13:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,AP,-
+1,1,18,8,2013-02-11,7,16:59:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,AP,-
+1,1,18,8,2013-02-13,7,16:56:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,Bright,AP,-
+1,1,18,8,2013-02-15,7,16:56:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,AP,-
+1,1,18,8,2013-02-21,7,16:58:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,Bright,FB/AI,-
+1,1,18,8,2013-02-23,7,12:10:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,Bright,DA/AL,-
+1,1,18,8,2013-02-26,7,16:56:11,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,Bright,DA/CA,-
+1,1,18,8,2013-03-01,7,-,-,-,-,-,-,-,-,-,-,-,-,Alat sedang dikalibrasi
+1,1,18,8,2013-03-03,7,-,-,-,-,-,-,-,-,-,-,-,-,Alat sedang dikalibrasi
+1,1,18,8,2013-03-04,7,-,-,-,-,-,-,-,-,-,-,-,-,Alat sedang dikalibrasi
+1,1,18,8,2013-04-19,7,16:58:30,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,AP,-
+1,1,18,8,2013-04-21,7,16:55:49,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 2,-,AP,-
+1,1,18,8,2013-04-23,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2013-04-25,7,16:55:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-04-27,7,16:55:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka pit 1,-,-,-
+1,1,18,8,2013-04-30,7,12:09:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2013-05-01,7,16:56:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-05-02,7,17:00:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-05-04,7,17:03:21,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2013-05-06,7,16:56:36,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB/AP,-
+1,1,18,8,2013-05-08,7,16:55:59,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,FB/AP,-
+1,1,18,8,2013-05-10,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/DA,-
+1,1,18,8,2013-05-12,7,16:58:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/DA,-
+1,1,18,8,2013-05-14,7,16:57:49,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,FB,-
+1,1,18,8,2013-05-15,7,12:12:40,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,RH/CR,-
+1,1,18,8,2013-05-18,7,12:12:19,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,RH/CR,-
+1,1,18,8,2013-05-20,7,16:58:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,FB,-
+1,1,18,8,2013-05-23,7,16:56:23,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,CR,-
+1,1,18,8,2013-05-24,7,16:56:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,CR,-
+1,1,18,8,2013-05-26,7,16:56:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA,-
+1,1,18,8,2013-05-27,7,17:00:52,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2013-05-29,7,16:57:07,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2013-06-07,7,16:57:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,FB/AP,-
+1,1,18,8,2013-06-08,7,12:10:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-06-08,7,16:56:11,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2013-06-10,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/FB,-
+1,1,18,8,2013-06-12,7,16:57:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB/AP,-
+1,1,18,8,2013-06-15,7,16:58:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2013-06-16,7,12:12:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-06-18,7,17:12:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2013-06-19,7,16:55:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-06-22,7,16:54:56,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2013-06-30,7,16:56:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/CA,-
+1,1,18,8,2013-07-02,7,16:58:12,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,FB,-
+1,1,18,8,2013-07-04,7,12:14:23,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/CR,-
+1,1,18,8,2013-07-06,7,12:14:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA,-
+1,1,18,8,2013-07-10,7,12:12:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/CR,-
+1,1,18,8,2013-07-11,7,16:56:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,FB,-
+1,1,18,8,2013-07-14,7,12:11:59,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/CR,-
+1,1,18,8,2013-07-15,7,16:57:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/AL,-
+1,1,18,8,2013-07-16,7,16:55:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/DA,-
+1,1,18,8,2013-07-17,7,12:11:48,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/RH,-
+1,1,18,8,2013-07-19,7,16:56:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-07-20,7,16:55:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-07-21,7,16:55:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-07-26,7,16:55:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-07-27,7,16:56:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-07-29,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-07-31,7,16:56:50,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/AI,-
+1,1,18,8,2013-08-03,7,16:55:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/AI,-
+1,1,18,8,2013-08-05,7,16:55:11,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/FB,-
+1,1,18,8,2013-08-09,7,16:54:49,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2013-08-11,7,12:09:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA,-
+1,1,18,8,2013-08-13,7,12:09:13,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2013-08-15,7,16:54:20,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2013-08-16,7,16:54:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/,-
+1,1,18,8,2013-08-19,7,16:54:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,FB,-
+1,1,18,8,2013-08-20,7,16:54:35,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB,-
+1,1,18,8,2013-08-21,7,12:08:59,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/CR,-
+1,1,18,8,2013-08-23,7,16:55:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2013-08-24,7,16:56:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-08-25,7,16:53:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-08-25,7,17:47:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-08-27,7,17:01:36,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/FB,-
+1,1,18,8,2013-08-28,7,16:59:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/FB,-
+1,1,18,8,2013-08-29,7,17:01:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/FB,-
+1,1,18,8,2013-08-30,7,16:55:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP/FB,-
+1,1,18,8,2013-08-31,7,17:06:46,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,AP,-
+1,1,18,8,2013-09-02,7,17:01:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB/CR,-
+1,1,18,8,2013-09-04,7,16:59:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AL/CR,-
+1,1,18,8,2013-09-05,7,16:58:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AL/CR,-
+1,1,18,8,2013-09-06,7,16:58:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2013-09-08,7,12:15:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2013-09-09,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-09-11,7,12:14:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-09-13,7,16:58:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP/AL,-
+1,1,18,8,2013-09-16,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP/CR,-
+1,1,18,8,2013-09-17,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP/CR/RH,-
+1,1,18,8,2013-09-19,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/RH,-
+1,1,18,8,2013-09-22,7,17:00:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/CA,-
+1,1,18,8,2013-09-23,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/RH,-
+1,1,18,8,2013-09-25,7,12:15:22,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/RH,-
+1,1,18,8,2013-09-26,7,12:15:22,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/RH,-
+1,1,18,8,2013-09-28,7,12:17:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/AL,-
+1,1,18,8,2013-09-30,7,16:59:48,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,FB/RH,-
+1,1,18,8,2013-10-01,7,12:15:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,RH/CR,-
+1,1,18,8,2013-10-02,7,12:15:22,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AL/CR,-
+1,1,18,8,2013-10-04,7,17:01:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,AL,The first blast
+1,1,18,8,2013-10-04,7,17:13:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,AL,The second blast
+1,1,18,8,2013-10-06,7,17:00:53,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,AP/AL,The first blast
+1,1,18,8,2013-10-06,7,17:01:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,AP/AL,The second blast
+1,1,18,8,2013-10-08,7,17:02:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP/DA,-
+1,1,18,8,2013-10-10,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-10-12,7,12:14:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-10-12,7,16:59:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,-,-,-
+1,1,18,8,2013-10-15,7,12:14:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,-,-
+1,1,18,8,2013-10-17,7,12:28:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AP,-
+1,1,18,8,2013-10-18,7,16:58:27,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AL,-
+1,1,18,8,2013-10-19,7,17:01:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AL/AP,-
+1,1,18,8,2013-10-20,7,12:28:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,AL/AP,-
+1,1,18,8,2013-10-21,7,12:10:15,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2013-10-25,7,17:01:52,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,-,DA/RH,-
+1,1,18,8,2013-10-27,7,17:00:13,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2013-10-29,7,12:29:48,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Rain,AP/DA,-
+1,1,18,8,2013-10-30,7,16:59:53,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,CR,-
+1,1,18,8,2013-11-02,7,12:29:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RH/CR,-
+1,1,18,8,2013-11-02,7,16:59:37,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA/CR,-
+1,1,18,8,2013-11-04,7,17:02:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Cloudy,DA/AL,-
+1,1,18,8,2013-11-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AL,-
+1,1,18,8,2013-11-09,7,12:29:19,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RH/CR,-
+1,1,18,8,2013-11-10,7,12:29:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA/RH,-
+1,1,18,8,2013-11-12,7,12:29:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Cloudy,AL/SM,-
+1,1,18,8,2013-11-13,7,17:15:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Cloudy,AL,-
+1,1,18,8,2013-11-16,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Rain,AP/DA,-
+1,1,18,8,2013-11-17,7,17:15:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,Cloudy,AP/DA,-
+1,1,18,8,2013-11-18,7,12:28:57,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Cloudy,AL,-
+1,1,18,8,2013-11-20,7,16:59:21,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Cloudy,FB/CR,-
+1,1,18,8,2013-11-24,7,12:30:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Cloudy,AP,-
+1,1,18,8,2013-11-29,7,16:58:46,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Cloudy,AL/CR,-
+1,1,18,8,2013-12-01,7,17:01:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Bright,AP,-
+1,1,18,8,2013-12-03,7,12:30:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,AP/AL,-
+1,1,18,8,2013-12-04,7,17:02:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Bright,AL,-
+1,1,18,8,2013-12-05,7,16:59:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Cloudy,AL,-
+1,1,18,8,2013-12-07,7,16:57:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,AP/CR,-
+1,1,18,8,2013-12-09,7,17:00:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,AP/AL,-
+1,1,18,8,2013-12-10,7,17:00:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,AP/AL,-
+1,1,18,8,2013-12-11,7,16:57:50,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 ,Bright,CR,-
+1,1,18,8,2013-12-12,7,17:17:40,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2 ,Bright,CR,The First Blast
+1,1,18,8,2013-12-12,7,17:17:48,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2 ,Bright,CR,The Second Blast
+1,1,18,8,2013-12-15,7,12:27:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,RH/CR,-
+1,1,18,8,2013-12-17,7,16:57:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Cloudy,AL,-
+1,1,18,8,2013-12-18,7,12:26:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,RH,-
+1,1,18,8,2013-12-19,7,16:56:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,DA/CA,-
+1,1,18,8,2013-12-20,7,16:56:30,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AL,-
+1,1,18,8,2013-12-21,7,17:32:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,CR,-
+1,1,18,8,2013-12-22,7,12:30:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA/CA,-
+1,1,18,8,2013-12-24,7,12:26:43,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA/AL,-
+1,1,18,8,2013-12-27,7,16:56:28,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2013-12-29,7,17:39:21,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2013-12-31,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-01-04,7,12:25:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-01-05,7,12:44:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-01-08,7,12:38:01,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AL/RT,-
+1,1,18,8,2014-01-11,7,17:10:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/RT,-
+1,1,18,8,2014-01-13,7,16:58:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-01-15,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-01-16,7,16:49:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,FB,-
+1,1,18,8,2014-01-17,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/AL,-
+1,1,18,8,2014-01-20,7,16:58:01,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/DA,-
+1,1,18,8,2014-01-23,7,16:58:35,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,AL,-
+1,1,18,8,2014-01-25,7,16:58:12,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,AL,-
+1,1,18,8,2014-01-29,7,16:57:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-01-30,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-01-31,7,17:07:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA/AL,-
+1,1,18,8,2014-02-01,7,16:58:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AL,-
+1,1,18,8,2014-02-02,7,12:27:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AL/DA,-
+1,1,18,8,2014-02-03,7,16:57:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,CR,-
+1,1,18,8,2014-02-05,7,16:57:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,FB/AL,-
+1,1,18,8,2014-02-07,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA,-
+1,1,18,8,2014-02-08,7,12:26:58,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,DA,-
+1,1,18,8,2014-02-10,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,CR,-
+1,1,18,8,2014-02-11,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2014-02-12,7,12:30:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AP,-
+1,1,18,8,2014-02-13,7,12:42:43,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 & 2,Bright,AP/CR,-
+1,1,18,8,2014-02-14,7,16:59:28,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1 ,Bright,AP,-
+1,1,18,8,2014-02-15,7,12:26:23,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-02-18,7,16:56:22,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,FB/AP,-
+1,1,18,8,2014-02-19,7,17:12:52,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,FB/AP,-
+1,1,18,8,2014-02-21,7,16:55:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,FB/AI,-
+1,1,18,8,2014-02-22,7,16:55:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-02-24,7,16:55:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-02-26,7,12:25:01,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,-,-
+1,1,18,8,2014-02-27,7,12:25:06,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,-,-
+1,1,18,8,2014-03-01,7,16:54:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/AL,-
+1,1,18,8,2014-03-04,7,16:56:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR/RH,-
+1,1,18,8,2014-03-06,7,12:24:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AL,-
+1,1,18,8,2014-03-07,7,16:55:58,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-03-08,7,16:57:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2014-03-09,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA/AL,-
+1,1,18,8,2014-03-10,7,16:54:15,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,RH,-
+1,1,18,8,2014-03-12,7,12:23:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,RH/DA,-
+1,1,18,8,2014-03-13,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,RH/DA,-
+1,1,18,8,2014-03-14,7,16:53:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-03-15,7,16:53:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,CR/RT,-
+1,1,18,8,2014-03-16,7,12:23:50,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 1,Bright,AL/RH,-
+1,1,18,8,2014-03-17,7,17:14:48,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA/CA,-
+1,1,18,8,2014-03-19,7,16:53:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA/OS,-
+1,1,18,8,2014-03-20,7,16:53:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR,-
+1,1,18,8,2014-03-22,7,16:53:11,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,CR/RT,-
+1,1,18,8,2014-03-23,7,16:57:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA/AL,-
+1,1,18,8,2014-03-27,7,16:52:46,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,CR/RH,-
+1,1,18,8,2014-03-29,7,12:22:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/CR,-
+1,1,18,8,2014-04-01,7,16:52:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/AL,-
+1,1,18,8,2014-04-04,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-10,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-12,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-14,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-17,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-19,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-22,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-23,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-25,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-26,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-04-28,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-01,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-03,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-04,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-07,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-08,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-09,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-10,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-12,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-13,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-17,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-20,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-22,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-05-25,7,17:01:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-05-27,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,-
+1,1,18,8,2014-05-30,7,17:00:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP/DA,-
+1,1,18,8,2014-06-01,7,17:04:01,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DK,-
+1,1,18,8,2014-06-03,7,17:23:31,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/AI,-
+1,1,18,8,2014-06-05,7,17:02:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-06-07,7,12:32:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-06-09,7,12:32:40,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,CR/RT,-
+1,1,18,8,2014-06-10,7,12:33:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AL/RH,-
+1,1,18,8,2014-06-13,7,16:59:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-06-14,7,17:00:57,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-06-19,7,17:01:28,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/DK,-
+1,1,18,8,2014-06-21,7,17:16:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-06-23,7,12:32:02,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2014-06-24,7,17:01:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-06-27,7,16:58:58,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-06-28,7,17:00:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-06-30,7,12:30:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-07-02,7,17:00:35,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-07-05,7,16:59:30,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-07-07,7,12:28:11,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-07-10,7,17:01:53,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-07-11,7,17:00:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-07-12,7,17:00:37,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-07-14,7,16:58:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,Samuel,-
+1,1,18,8,2014-07-18,7,17:01:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-07-20,7,17:01:14,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/CA,-
+1,1,18,8,2014-07-22,7,17:01:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-07-24,7,16:59:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-07-29,7,17:01:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,CR,-
+1,1,18,8,2014-07-31,7,12:29:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,CR/RH,-
+1,1,18,8,2014-08-02,7,17:00:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-03,7,12:30:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-05,7,17:08:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-08,7,17:09:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-09,7,16:58:45,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-11,7,12:30:04,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-15,7,16:58:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-19,7,16:58:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-08-21,7,16:58:01,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2014-08-23,7,17:01:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA,-
+1,1,18,8,2014-08-26,7,16:59:51,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DK,-
+1,1,18,8,2014-08-28,7,17:20:55,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DK,-
+1,1,18,8,2014-08-30,7,16:50:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/MU,-
+1,1,18,8,2014-09-02,7,17:00:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-09-04,7,16:58:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,MU,-
+1,1,18,8,2014-09-05,7,16:59:20,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,MU,-
+1,1,18,8,2014-09-27,7,12:13:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,DA/AL,-
+1,1,18,8,2014-10-03,7,16:28:20,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-10-07,7,16:57:54,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH/RT,-
+1,1,18,8,2014-10-08,7,16:58:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,CR/RT,-
+1,1,18,8,2014-10-11,7,17:11:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-10-16,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2014-10-20,7,16:59:16,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,CR,-
+1,1,18,8,2014-10-27,7,-,-,-,-,-,-,-,-,-,Toka Pit 4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-05,7,-,-,-,-,-,-,-,-,-,Toka Pit 2 & 4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-06,7,-,-,-,-,-,-,-,-,-,Toka Pit 4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-08,7,-,-,-,-,-,-,-,-,-,Toka Pit 4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-12,7,-,-,-,-,-,-,-,-,-,Toka Pit 4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-13,7,-,-,-,-,-,-,-,-,-,Toka Pit 2&4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-16,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-11-19,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-11-22,7,-,-,-,-,-,-,-,-,-,Toka Pit 4,-,-,recalibrated Equipment
+1,1,18,8,2014-11-24,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-11-25,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-11-27,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-11-28,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-11-29,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-01,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-02,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-03,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-05,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-07,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-09,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-11,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-13,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-16,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-18,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-23,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-24,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-27,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-28,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-29,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2014-12-31,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2015-01-04,7,-,-,-,-,-,-,-,-,-,Toka Pit 2,-,-,recalibrated Equipment
+1,1,18,8,2015-01-06,7,16:58:39,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-10,7,17:01:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,DA,-
+1,1,18,8,2015-01-11,7,13:16:50,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-12,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-13,7,17:02:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-14,7,17:02:24,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-17,7,16:59:15,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-19,7,17:07:18,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-21,7,16:57:41,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RT,-
+1,1,18,8,2015-01-22,7,16:57:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RT,-
+1,1,18,8,2015-01-23,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/BK,-
+1,1,18,8,2015-01-26,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP/BK,-
+1,1,18,8,2015-01-28,7,17:04:21,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RT,-
+1,1,18,8,2015-01-30,7,17:04:21,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RT,-
+1,1,18,8,2015-02-01,7,12:12:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2015-02-02,7,16:57:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2015-02-03,7,16:58:38,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2015-02-17,7,16:56:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Cloudy,RH,-
+1,1,18,8,2015-02-21,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Cloudy,RH,-
+1,1,18,8,2015-02-27,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Cloudy,RH,-
+1,1,18,8,2015-02-28,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,RT/BK,-
+1,1,18,8,2015-03-01,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,RT,-
+1,1,18,8,2015-03-03,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RH,-
+1,1,18,8,2015-03-04,7,17:00:07,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RH,-
+1,1,18,8,2015-03-05,7,16:55:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,AP,-
+1,1,18,8,2015-03-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,RH,-
+1,1,18,8,2015-03-08,7,12:09:10,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,RH,-
+1,1,18,8,2015-03-10,7,12:12:33,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,-,AP,-
+1,1,18,8,2015-03-11,7,17:03:28,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2015-03-13,7,16:58:20,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2015-03-14,7,16:54:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2015-03-15,7,17:04:34,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,RH,-
+1,1,18,8,2015-03-16,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,AP,-
+1,1,18,8,2015-03-21,7,16:58:30,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,-,-,-
+1,1,18,8,2015-03-23,7,16:58:42,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,-,RT,-
+1,1,18,8,2015-03-25,7,12:18:49,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RT/BK,-
+1,1,18,8,2015-03-27,7,12:18:49,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,AP/DA,-
+1,1,18,8,2015-03-29,7,12:07:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,AL/CR,-
+1,1,18,8,2015-03-30,7,17:09:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,DA,-
+1,1,18,8,2015-04-01,7,16:55:03,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,DA,-
+1,1,18,8,2015-04-02,7,16:58:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,RT,-
+1,1,18,8,2015-04-04,7,16:58:29,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,DA,-
+1,1,18,8,2015-04-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2&4,Bright,DA,-
+1,1,18,8,2015-04-07,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2&4,Bright,RT,-
+1,1,18,8,2015-04-08,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,RT,-,-
+1,1,18,8,2015-04-09,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,DA,-,-
+1,1,18,8,2015-04-10,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,DA,-
+1,1,18,8,2015-04-11,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,RT/BK,-
+1,1,18,8,2015-04-12,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,MU,-
+1,1,18,8,2015-04-13,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,AP,-
+1,1,18,8,2015-04-14,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2,Bright,RT,-
+1,1,18,8,2015-04-15,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,CR,-
+1,1,18,8,2015-04-16,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,Bright,AP/RT,-
+1,1,18,8,2015-04-17,7,16:59:09,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,-,AP,-
+1,1,18,8,2015-04-19,7,12:14:08,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,AP,-
+1,1,18,8,2015-04-22,7,17:38:32,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,AP,-
+1,1,18,8,2015-04-24,7,16:58:26,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,RH,-
+1,1,18,8,2015-04-26,7,12:14:25,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,AP/AL,-
+1,1,18,8,2015-04-29,7,17:17:05,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,AP,-
+1,1,18,8,2015-04-30,7,17:09:47,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,AP,-
+1,1,18,8,2015-05-01,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,AP,-
+1,1,18,8,2015-05-02,7,17:03:28,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,AP,-
+1,1,18,8,2015-05-03,7,17:08:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 2 & 4,-,AP,-
+1,1,18,8,2015-05-06,7,17:13:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka Pit 4,-,Ap,-
+1,1,18,8,2015-05-07,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-05-10,7,12:15:17,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,AP,-
+1,1,18,8,2015-05-11,7,16:59:44,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,RH,-
+1,1,18,8,2015-05-12,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-05-13,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-05-15,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RS,-
+1,1,18,8,2015-05-16,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RS,-
+1,1,18,8,2015-05-17,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,DA/MU,-
+1,1,18,8,2015-05-18,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,RH,-
+1,1,18,8,2015-05-26,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-05-28,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,DK,-
+1,1,18,8,2015-05-02,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,DK,-
+1,1,18,8,2015-05-04,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,DK,-
+1,1,18,8,2015-05-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 2,-,DK,-
+1,1,18,8,2015-05-18,7,15:30:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,DK,-
+1,1,18,8,2015-05-29,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RT,-
+1,1,18,8,2015-05-30,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,MU,-
+1,1,18,8,2015-07-11,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,MU,-
+1,1,18,8,2015-07-13,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-07-21,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-07-23,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-07-27,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-07-29,7,-,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-08-16,7,16:54:35,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,AL/DA,-
+1,1,18,8,2015-08-19,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-08-21,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-08-22,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,RH,-
+1,1,18,8,2015-08-23,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,DA/MU,-
+1,1,18,8,2015-08-28,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-08-30,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-09-03,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-09-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-09-15,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-09-27,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 1,-,-,-
+1,1,18,8,2015-09-29,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 1,-,-,-
+1,1,18,8,2015-10-03,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 1,-,-,-
+1,1,18,8,2015-10-04,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-10-05,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 1,-,-,-
+1,1,18,8,2015-10-06,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 1,-,-,-
+1,1,18,8,2015-10-13,7,17:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 1,-,-,-
+1,1,18,8,2015-10-17,7,16:58:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 3 & 4,-,-,-
+1,1,18,8,2015-10-18,7,12:00:00,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-
+1,1,18,8,2015-10-25,7,12:16:43,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Not trigered,Toka 4,-,-,-

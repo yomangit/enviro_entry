@@ -20,7 +20,7 @@ class BiotaController extends Controller
         return view('dashboard.BiotaMonitoring.Biota.index', [
             "tittle" => "Biota",
             'breadcrumb' => 'Biota',
-            'Codes' => Biota::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Codes' => Biota::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
 

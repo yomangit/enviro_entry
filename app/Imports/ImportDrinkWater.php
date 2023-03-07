@@ -65,6 +65,12 @@ class ImportDrinkWater implements ToModel, WithValidation, WithHeadingRow
             'fecal_coliform'=>$row['fecal_coliform'],
             'c_coli'=>$row['c_coli'],
             'total_coliform_bacteria'=>$row['total_coliform_bacteria'],
+			'permanganate_number_as_kmno4'=>$row['permanganate_number_as_kmno4'],
+			'surfactant'=>$row['surfactant'],
+			'benzene'=>$row['benzene'],
+			'total_pesticides_as_organo_chlorine_pesticides'=>$row['total_pesticides_as_organo_chlorine_pesticides'],
+			
+			
  ]);
  }
  public function rules(): array
@@ -113,7 +119,11 @@ class ImportDrinkWater implements ToModel, WithValidation, WithHeadingRow
         'zinc_zn'=>['required'],
         'fecal_coliform'=>['required'],
         'c_coli'=>['required'],
-        'total_coliform_bacteria'=>['required'],      
+        'total_coliform_bacteria'=>['required'],  
+        'permanganate_number_as_kmno4'=>['required'],  
+        'surfactant'=>['required'],  
+        'benzene'=>['required'],  
+        'total_pesticides_as_organo_chlorine_pesticides'=>['required'],  		
      ];
  }
 }

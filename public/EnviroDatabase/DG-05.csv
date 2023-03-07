@@ -1,0 +1,174 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,5,2008-07-25,2008-08-25,0.393,0.3663,-,-,1.46,2,No,No,-,Chalik & Roddy,-,-,-
+1,5,2008-08-25,2008-09-24,0.2836,0.2729,-,-,0.63,-,-,-,-,-,-,-,-
+1,5,2008-09-24,2008-10-25,0.1974,0.1831,-,-,0.78,2,Yes,No,-,Onlie&Rodie,-,-,-
+1,5,2008-10-25,2008-11-25,2.6313,2.6005,-,-,1.69,2,Yes,No,grass cutting 2 weeks ago,Onlie&Rodie,-,-,-
+1,5,2008-11-25,2008-12-24,0.3086,0.2982,-,-,0.61,20,-,-,grass cutting 2 weeks ago,Onlie&Rodie,-,-,-
+1,5,2008-12-24,2009-01-24,0.3726,0.3612,-,-,0.62,2,No,No,Grass cutting,Harjoko,-,-,-
+1,5,2009-01-24,2009-02-25,0.268,0.2548,-,-,0.7,2,No,Yes,-,Jelly & Fanno,-,-,-
+1,5,2009-02-25,2009-03-25,0.6153,0.5728,-,-,2.58,3,No,Yes,-,Jelly & Royke,-,-,-
+1,5,2009-03-25,2009-04-24,1.1489,1.0814,-,-,3.82,7,No,No,-,Jelly & Fanno,-,-,-
+1,5,2009-04-24,2009-05-20,0.545,0.5097,-,-,2.31,6,Yes,No,Bush fire on north toka hill,Jelly & Fanno,-,-,-
+1,5,2009-05-20,2009-06-22,0.4374,0.4065,-,-,1.59,5,No,No,"grass low, bushfire southern app 50 m distance",Harjoko,-,-,-
+1,5,2009-06-22,2009-07-23,0.4131,0.4038,-,-,0.51,0,no,no,"No Activity, grass high",Jelly & Roddy,-,-,-
+1,5,2009-07-23,2009-08-21,0.0846,0.0798,-,-,0.28,0,Yes,no,Burning Area,Jelly & Roddy,-,-,-
+1,5,2009-08-21,2009-09-22,0.5331,0.4887,-,-,2.36,0,Yes,No,Burning Area,Jelly & Roddy,-,-,-
+1,5,2009-09-22,2009-10-21,1.0958,1.0046,-,-,5.34,6,Yes,Yes,Burning Area,Jelly & Royke,-,-,-
+1,5,2009-10-21,2009-11-22,2.5767,2.4883,-,-,4.69,5,Yes,No,Farmer Activity,JM,-,7600,-
+1,5,2009-11-22,2009-12-20,1.3032,1.2721,-,-,1.89,7,Yes,No,Farmer Activity,Rolke,-,5300,-
+1,5,2009-12-20,2010-01-20,1.2547,1.2427,-,-,0.66,6,No,No,Farmer Activity,Jelly & Royke,-,4950,-
+1,5,2010-01-20,2010-02-20,1.5051,1.3906,-,-,6.27,2,Yes,No,"Farmer Activity, Near new pipe line",Fanno & Mahmud,-,4700,-
+1,5,2010-02-20,2010-03-22,0.9195,0.9032,-,-,0.92,5,No,No,"Farmer Activity, Near new pipe line",Onlie,-,600,-
+1,5,2010-03-22,2010-04-20,0.9966,0.9839,-,-,0.74,5,Yes,No,Alang-alang area,JM & Rolke,-,4950,-
+1,5,2010-04-20,2010-05-20,2.3816,2.3261,-,-,3.14,7,Yes,Yes,Farmer activity,Onlie & Rolke,-,-,-
+1,5,2010-05-20,2010-06-20,0.7838,0.7715,-,-,0.67,2,No,No,Farmer activity,Onlie & Nus,-,3100,-
+1,5,2010-06-20,2010-07-20,0.7841,0.781,-,-,0.18,4,No,No,Gardening activity,JM/OS,-,3140,-
+1,5,2010-07-20,2010-08-20,0.8002,0.7846,-,-,0.85,3,Yes,No,Gardening activity,RDC/Robby.N,-,4450,-
+1,5,2010-08-20,2010-09-20,0.755,0.7416,-,-,0.73,4,Yes,No,Gardening activity,OS/MW,-,2700,-
+1,5,2010-09-20,2010-10-20,0.8096,0.7928,-,-,0.95,3,Yes,No,Close the road,OS/MW,-,2600,-
+1,5,2010-10-20,2010-11-23,0.8258,0.8027,-,-,1.15,9,Yes,No,Farmer activity,RDC/AL,-,6050,-
+1,5,2010-11-23,2010-12-20,0.8243,0.8133,-,-,0.69,2,No,No,Farmer activity,OS/AL,-,4150,-
+1,5,2010-12-20,2011-01-20,1.5132,1.4752,-,-,2.08,3,Yes,Yes,Farmer activity,OS,-,3050,There was spider in the bottle
+1,5,2011-01-20,2011-02-20,0.7659,0.7561,-,-,0.54,0,No,No,Close the road,OS/MW,-,7500,-
+1,5,2011-02-20,2011-03-20,0.8115,0.804,-,-,0.45,4,No,No,Grass cutting,OS/MW,-,5450,-
+1,5,2011-03-20,2011-04-21,0.8169,0.7997,-,-,0.91,2,Yes,No,Exploration activity/drilling,OS,-,6450,-
+1,5,2011-04-21,2011-05-21,0.8169,0.7989,-,-,1.02,3,Yes,No,"Blasting, shoop contractor",OS,-,4750,-
+1,5,2011-05-21,2011-06-21,0.7913,0.7895,-,-,0.1,5,No,No,"Blasting, PSI worshop, Exploration activity",OS,-,5600,-
+1,5,2011-06-21,2011-07-20,0.8207,0.8026,-,-,0.99,1,No,No,"PSI worshop, gardening",OS,-,150,-
+1,5,2011-07-20,2011-08-20,0.8132,0.8077,-,-,0.3,1,Yes,No,"PSI worshop, blasting activity",OS/MW,-,2700,-
+1,5,2011-08-20,2011-09-20,0.7978,0.7702,-,-,1.51,3,Yes,No,"PSI worshop, blasting activity",OL,-,1500,-
+1,5,2011-09-20,2011-10-21,0.7998,0.7753,-,-,1.34,2,Yes,No,"PSI worshop, blasting activity",Novry/Anita,-,3000,-
+1,5,2011-10-21,2011-11-21,0.8581,0.8356,-,-,1.23,6,Yes,No,"PSI worshop, blasting activity",Andrias/Anita,-,3600,-
+1,5,2011-11-21,2011-12-22,0.8383,0.8276,-,-,0.57,5,-,-,"PSI worshop,Blasting ",Mahmud/Arter,-,4250,-
+1,5,2011-12-22,2012-01-20,0.838,0.811,-,-,1.58,1,No,No,"PSI worshop, exploration, & gardening activity.",OS/OA,-,2700,-
+1,5,2012-01-20,2012-02-20,0.909,0.8332,-,-,4.15,2,Yes,No,"PSI worshop activity, exploration, & blasting activity.",Onlie,-,5700,-
+1,5,2012-02-20,2012-03-20,0.8369,0.8324,-,-,0.25,1,Yes,No," PSI Worshop ,Exploration, blasting",Andrias.L,-,10000,-
+1,5,2012-03-20,2012-04-20,0.7922,0.76,-,-,1.82,5,Yes,No,"PSI worshop,Exploration.blasting act",FB/NR,-,3840,There was a dead spider in the bottle
+1,5,2012-04-20,2012-05-20,0.9102,0.8161,-,-,5.33,2,Yes,No,"PSI worshop,Exploration.blasting act",RH,-,7000,-
+1,5,2012-05-20,2012-06-20,0.8154,0.8004,-,-,0.85,4,Yes,No,"Grass cutting act, blast act",AL/RH,-,2800,-
+1,5,2012-06-20,2012-07-20,0.8072,0.7857,-,-,1.22,5,Yes,No,"PSI & Eksploration act, Road/traffic act",AP/RH,-,1800,There was 3  beetles dead in the bottle
+1,5,2012-07-20,2012-08-22,0.8172,0.8053,-,-,0.63,3,No,No,"Grass cuting act, blast act at toka",AL/TL,-,100,-
+1,5,2012-08-22,2012-09-20,0.8638,0.8206,-,-,2.53,3,No,No,Grass cuting act,DA/TL,-,1250,-
+1,5,2012-09-20,2012-10-20,0.8339,0.8232,-,-,0.61,3,No,No,Grass Cutting,CA/AL,-,750,-
+1,5,2012-10-20,2012-11-20,0.9322,0.8026,-,-,7.34,6,Yes,No,Grass cutting,RH/SM,-,7500,-
+1,5,2012-11-20,2012-12-20,0.8109,0.8078,-,-,0.18,2,No,No,"Grass cutting, Laydown activity",AL/JK,-,4600,-
+1,5,2012-12-20,2013-01-21,0.8178,0.806,-,-,0.63,4,No,No,"PSI & Eksploration act, Road/traffic act",RH,-,11690,-
+1,5,2013-01-21,2013-02-20,0.8333,0.8235,-,-,0.55,4,No,No,"Grass cutter act, Blast at Toka act.",AL/SM,-,10250,-
+1,5,2013-02-20,2013-03-20,0.8448,0.8314,-,-,0.81,4,No,No,"Grass cutter act, Blast at Toka act.",AL/CR,-,2600,-
+1,5,2013-03-20,2013-04-20,0.826,0.8018,-,-,1.33,4,No,No,"PSI & Eksploration act, Road/traffic act",AP/CR,-,7800,-
+1,5,2013-04-20,2013-05-20,0.8002,0.7952,-,-,0.27,3,No,No,"Eksploration act, Road/traffic act",DA/RH,-,5000,-
+1,5,2013-05-20,2013-06-21,0.7655,0.7551,-,-,0.55,7,No,No,"Eksploration act, Road/traffic act, Blast at Toka activity",AP/CR,-,2000,-
+1,5,2013-06-21,2013-07-20,0.815,0.8047,-,-,0.6,1,No,No,"Laydown act, PSI, Eksploration act, Road/traffic act.",AP/CR,-,5750,-
+1,5,2013-07-20,2013-08-20,0.7714,0.7667,-,-,0.26,10,No,No,"PSI & Eksploration act, Road/traffic act",DA/AL,-,2500,-
+1,5,2013-08-20,2013-09-20,0.7884,0.7878,-,-,0.03,1,No,No,"PSI & Eksploration act, Road/traffic act",DA/RH,-,600,-
+1,5,2013-09-20,2013-10-20,0.8723,0.8014,-,-,3.88,2,No,No,"PSI & Eksploration act, Road/traffic act, grass cutting act",RH/CR,-,2800,-
+1,5,2013-10-20,2013-11-21,0.8036,0.7979,-,-,0.3,2,No,No,"PSI & Eksploration act, Road/traffic act.",CR/RH,-,6250,-
+1,5,2013-11-21,2013-12-20,0.8521,0.8172,-,-,1.91,5,No,No,"Grass cutter act, traffic activity",AL,-,1800,-
+1,5,2013-12-20,2014-01-19,0.8206,0.809,-,-,0.66,5,No,No,"Grass cutter act, traffic activity",AL/RT,-,7750,-
+1,5,2014-01-19,2014-02-20,0.8225,0.822,-,-,0.03,5,No,No,"PSI & Eksploration act, Road/traffic act.",AP/RH,-,4500,-
+1,5,2014-02-20,2014-03-21,0.809,0.8071,-,-,0.11,3,No,No,"PSI & Eksploration act, Road/traffic act.",DA/CR,-,1800,-
+1,5,2014-03-21,2014-04-20,0.7614,0.7609,-,-,0.03,6,No,No,"PSI & Eksploration act, Road/traffic act.",DA/AL,-,4500,-
+1,5,2014-04-20,2014-05-20,0.7805,0.779,-,-,0.08,4,No,No,Grass cutter activity,AL/RT,-,1500,-
+1,5,2014-05-20,2014-06-21,0.794,0.7938,-,-,0.01,5,No,No,"Grass cutter activity, PSI & Eksploration act, Road",DA/AL,-,3000,-
+1,5,2014-06-21,2014-07-22,0.7999,0.7997,-,-,0.01,2,No,No,"Grass cutter activity, PSI & Eksploration act, Road",RH/RT,-,2000,-
+1,5,2014-07-22,2014-08-21,0.8055,0.7979,-,-,0.43,4,No,No,"Grass cutter activity, PSI & Eksploration act, Road",DA/AL,-,750,Added aquades 500 ml
+1,5,2014-08-21,2014-09-20,0.7927,0.7846,-,-,0.46,0,No,No,"Grass cutter activity, PSI & Eksploration act, Road",RH,-,1.475,-
+1,5,2014-09-20,2014-10-22,0.8537,0.8173,-,-,1.93,2,No,No,"Grass cutter activity, PSI & Eksploration act, Road",RH,-,750,Added aquades 1000 ml
+1,5,2014-10-22,2014-11-20,0.8389,0.814,-,-,1.46,3,No,No,"Grass cutter activity, PSI & Eksploration act, Road",DA/AL,-,4750,-
+1,5,2014-11-20,2014-12-20,0.8399,0.8303,-,-,0.54,4,No,No,"PSI & Eksploration act, Road",AP/CR/RT,-,3250,-
+1,5,2014-12-20,2015-01-20,0.8169,0.8161,-,-,0.04,7,No,No,"Grass cutter activity, PSI & Eksploration act",AL/BK/RT/CR,-,7000,-
+1,5,2015-01-20,2015-02-20,0.836,0.8355,-,-,0.03,8,No,No,PSI & Eksploration act,RH/BK,-,10300,-
+1,5,2015-02-20,2015-03-20,0.8347,0.8343,-,-,0.02,0,No,No,PSI & Eksploration act,AP/RH,-,0,Added 1500 ml Aquades
+1,5,2015-03-20,2015-04-20,0.8444,0.8359,-,-,0.47,0,No,No,PSI & Eksploration act,AP/RH,-,4350,-
+1,5,2015-04-20,2015-05-18,0.8353,0.8011,-,-,2.07,0,No,No,PSI & Eksploration act,RH,-,2050,-
+1,5,2015-05-19,2015-06-21,0.8135,0.809,-,-,0.23,3,No,No,PSI & Eksploration act,AP/RT,-,1400,-
+1,5,2015-06-21,2015-07-21,0.8033,0.8032,-,-,0.01,1,No,No,PSI & Eksploration act,AL/CR,-,400,Added 1000 ml Aquades
+1,5,2015-07-21,2015-08-19,0.764,0.7639,-,-,0.01,0,No,No,PSI & Eksploration act,AL/RT,-,0,Added 1000 ml Aquades
+1,5,2015-08-19,2015-09-20,0.7998,0.7995,-,-,0.02,1,No,No,PSI & Eksploration act,RT/BK,-,0,Added 1000 ml Aquades
+1,5,2015-09-20,2015-10-20,0.8092,0.8053,-,-,0.22,1,No,No,PSI & Eksploration act,CR/RH,-,0,Added 1000 ml Aquades
+1,5,2015-10-20,2015-11-19,0.8263,0.8152,-,-,0.63,5,No,No,PSI & Eksploration act,AP/AL,-,1500,-
+1,5,2015-11-19,2015-12-16,0.8287,0.8133,-,-,0.97,6,No,No,PSI & Eksploration act,AL/CR,-,2900,-
+1,5,2015-12-16,2016-01-18,0.8138,0.8102,-,-,0.19,6,No,No,PSI & Eksploration act,RT/BK,-,4025,-
+1,5,2016-01-18,2016-02-21,0.8562,0.8218,-,-,1.72,10,No,No,PSI & Eksploration act,RH/RT,-,4300,-
+1,5,2016-02-21,2016-03-22,0.8082,0.808,-,-,0.01,3,No,No,PSI & Eksploration act,CR/RT,-,2700,-
+1,5,2016-03-22,2016-04-20,0.7788,0.7778,-,-,0.06,5,No,No,PSI & Eksploration act,BK/CR,-,3500,-
+1,5,2016-04-20,2016-05-23,0.7929,0.7721,-,-,1.07,6,No,No,PSI & Eksploration act,RH/RT,-,4300,-
+1,5,2016-05-23,2016-06-22,0.8044,0.8041,-,-,0.02,No,No,No,PSI & Eksploration act,AP/RT,-,3750,-
+1,5,2016-06-22,2016-07-22,0.821,0.8131,-,-,0.45,1,No,No,PSI & Eksploration act,BK/RH,-,4050,-
+1,5,2016-07-22,2016-08-22,0.8071,0.8067,-,-,0.02,2,No,No,PSI & Eksploration act,AL/RT,-,3450,-
+1,5,2016-08-22,2016-09-20,0.8031,0.8022,-,-,0.05,3,No,No,PSI & Eksploration act,RT/CR/BK,-,1100,-
+1,5,2016-09-20,2016-10-20,0.8229,0.8055,-,-,0.99,3,No,No,PSI & Eksploration act,RT/BK,-,5900,-
+1,5,2016-10-20,2016-11-22,0.8358,0.8341,-,-,0.09,7,No,No,PSI & Eksploration act,RT/RH/BK,-,5400,-
+1,5,2016-11-22,2016-12-20,0.8159,0.8084,-,-,0.45,3,No,No,Toka Pit Act,RH/RT,-,2750,-
+1,5,2016-12-20,2017-01-19,0.8198,0.8186,-,-,0.07,2,No,No,Toka Pit Act,BK/CR,-,5900,-
+1,5,2017-01-19,2017-02-20,0.8123,0.8099,-,-,0.13,10,No,No,Toka Pit Act,RH/RT,-,13000,-
+1,5,2017-02-20,2017-03-21,0.8287,0.8271,-,-,0.09,16,No,No,Toka Pit Act,AP,-,2250,-
+1,5,2017-03-21,2017-04-20,0.8218,0.8198,-,-,0.11,7,No,No,Toka Pit Act,AP/BK,-,2300,-
+1,5,2017-04-20,2017-05-21,0.8158,0.8089,-,-,0.38,5,No,No,Maxidrill & Eksploration act,RT/RH,-,0,Added 1000 ml Aquades
+1,5,2017-05-21,2017-06-20,0.8196,0.8172,5.5491,5.5477,0.11,-,-,-,Toka Activity,-,50,2000,-
+1,5,2017-06-21,2017-07-23,0.8226,0.8217,5.5439,5.5411,0.75,-,-,-,Toka Activity,-,25,3800,-
+1,5,2017-07-23,2017-08-20,0.7937,0.7927,0.5552,0.5517,0.5,7,No,No,Toka Activity,RH/BK,25,1750,-
+1,5,2017-08-20,2017-09-21,0.8117,0.8106,5.4252,5.421,0.58,3,No,No,Toka Activity,RH/RT,25,1950,-
+1,5,2017-09-21,2017-10-21,-,-,-,-,<1,3,No,No,Toka Activity,RH/RT,-,-,-
+1,5,2017-10-21,2017-11-21,0.8239,0.8227,5.5849,5.5816,0.77,3,No,No,Toka Activity,RH/RT,25,3200,-
+1,5,2017-11-21,2017-12-21,0.8309,0.8301,5.461,5.428,3.24,3,No,No,Toka Activity,RH/RT,25,1300,-
+1,5,2017-12-21,2018-01-21,0.8164,0.8155,5.5434,5.5423,0.39,8,No,No,Toka Activity,AL/BK,25,4800,-
+1,5,2018-01-21,2018-02-21,0.839,0.8354,5.5435,5.5428,0.14,8,No,No,Toka Activity,AL/BK,25,2600,-
+1,5,2018-02-21,2018-03-20,-,-,-,-,0,8,No,No,Toka Activity,AL/BK,25,4800,-
+1,5,2018-03-20,2018-04-20,0.8241,0.8238,5.5492,5.5446,0.81,8,No,No,Toka Activity,AL/BK,25,2400,-
+1,5,2018-04-20,2018-05-20,0.8176,0.8168,5.3899,5.3891,0.3,8,No,No,Toka Activity,AL/BK,25,5000,-
+1,5,2018-05-20,2018-06-20,-,-,-,-,1,8,No,No,Toka Activity,AL/BK,-,-,Bottle Send to WLN
+1,5,2018-06-21,2018-07-24,0.8322,0.8281,5.5513,5.5489,0.3,0,No,No,Toka Activity,AL/FP,25,1800,-
+1,5,2018-07-24,2018-08-24,0.8322,0.8278,5.5607,5.5518,1.44,0,No,No,Toka Activity,AL/FP,25,2200,-
+1,5,2018-08-25,2018-09-24,-,-,-,-,3,5,No,No,Toka Activity,RH/RT,-,-,Bottle Send to Wln
+1,5,2018-09-25,2018-10-29,0.8239,0.8227,5.5849,5.5816,0.71,0,No,No,Toka Activity,AL/FP,25,3200,-
+1,5,2018-10-30,2018-11-27,-,-,-,-,< 1,2,No,No,Toka Activity,RH/RT,-,-,Botol Send to WLN
+1,5,2018-11-28,2018-12-24,0.842,0.8302,5.5683,5.568,0.11,2,No,No,Toka Activity,RH/RT,25,3250,-
+1,5,2018-12-25,2019-01-22,0.829,0.8285,5.5799,5.5731,2.81,2,No,No,Toka Activity,RH/RT,25,5100,-
+1,5,2019-01-23,2019-02-22,-,-,-,-,< 1,2,No,No,Toka Activity,RH/RT,-,-,Botol Send to WLN
+1,5,2019-02-23,2019-03-22,0.8432,0.8425,3.0655,3.0551,1.22,2,No,No,Toka Activity,RH/RT,25,1400,-
+1,5,2019-03-23,2019-04-25,0.867,0.8467,3.06,3.053,1.52,2,No,No,Toka Activity,RH/RT,25,3100,-
+1,5,2019-04-25,2019-05-27,-,-,-,-,< 1,2,No,No,Toka Activity,RH/RT,25,1400,-
+1,5,2019-05-27,2019-06-20,0.8176,0.8168,5.3899,5.3891,0.12,2,No,No,Toka Activity,AL/FP,25,1550,-
+1,5,2019-06-20,2019-07-20,0.833,0.832,5.462,5.43,3.14,2,No,No,Toka Activity,BK,25,1300,-
+1,5,2019-07-20,2019-08-20,-,-,-,-,4.2,2,No,No,Toka Activity,RH/RT,25,1400,Botol Send to ITS
+1,5,2019-08-20,2019-09-23,0.8299,0.8185,3.0732,3.0558,0.6,2,No,No,Toka Activity,OS/FR,25,500,-
+1,5,2019-09-23,2019-10-01,1.0816,0.8259,3.0668,3.06,1.2,2,No,No,Toka Activity,RT,25,1400,-
+1,5,2019-10-01,2019-11-20,-,-,-,-,5.4,2,No,No,Toka Activity,RH/RT,25,1400,Botol Send to ITS
+1,5,2019-11-20,2019-12-01,0.8914,0.8264,5.5654,5.5552,2.43,2,No,No,Toka Activity,RT,25,3000,-
+1,5,2019-12-20,2020-01-20,0.8202,0.8123,3.0654,3.0616,1.17,2,No,No,Toka Activity,BK/FR,25,4150,-
+1,5,2020-01-20,2020-02-01,-,-,-,-,0,-,No,No,Toka Activity,-,25,-,Botol Send to ITS
+1,5,2020-02-25,2020-03-01,0.8253,0.8221,5.6155,5.6115,0.17,16,No,No,Toka Activity,-,25,500,-
+1,5,2020-03-24,2020-04-01,0.8159,0.8143,5.515,5.5138,0.33,10,No,No,Toka Activity,-,25,3500,-
+1,5,2020-04-22,2020-05-01,0.8202,0.817,5.5695,5.5635,1.7,8,No,No,Toka Activity,-,25,3500,-
+1,5,2020-05-20,2020-06-23,0.8278,0.817,5.7043,5.6894,5.48,6,No,No,Toka Activity,-,25,5500,-
+1,5,2020-06-23,2020-07-23,-,-,-,-,0,6,No,No,Toka Activity,-,25,5500,-
+1,5,2020-07-23,2020-08-20,-,-,-,-,10,6,No,No,Toka Activity,-,25,5500,Botol Send to WLN
+1,5,2020-08-20,2020-09-20,0.8463,0.8244,3.0678,3.0653,0.21,13,No,No,Toka Activity,FP/JK,25,950,-
+1,5,2020-09-20,2020-10-21,-,-,-,-,6,-,No,No,Toka Activity,FP/JK,-,-,Botol Send to WLN
+1,5,2020-10-21,2020-11-21,0.8267,0.8256,5.3835,5.38,6,4,No,No,Toka Activity,BK/FP,25,580,-
+1,5,2020-11-21,2020-12-21,0.8361,0.8306,3.8758,3.8707,6,-,No,No,Toka Activity,RT/FP,25,2600,-
+1,5,2020-12-21,2021-01-24,0.8394,0.8296,5.5796,5.5721,8,11,No,No,Toka Activity,FP/JK,25,2100,-
+1,5,2021-01-24,2021-02-25,-,-,-,-,8,8,No,No,Toka Activity,FP/JK,25,-,Botol Send to WLN
+1,5,2021-02-25,2021-03-23,0.8373,0.8314,5.609,5.579,12.56,6,No,No,Toka Activity,BK/JK,25,4800,-
+1,5,2021-03-23,2021-04-22,0.8395,0.8373,5.069,5.0675,5,9,No,No,Toka Activity,BK/FR/RT,25,2500,-
+1,5,2021-04-22,2021-05-25,-,-,-,-,5,5,No,No,Toka Activity,BK/FP,25,-,Botol Send to WLN
+1,5,2021-05-25,2021-06-25,0.8319,0.8274,3.0674,3.067,0.09,6,No,No,Toka Activity,BK/FP,20,2200,-
+1,5,2021-06-25,2021-07-25,0.8344,0.831,0.0698,0.067,0.69,4,No,No,Toka Activity,BK/FP,20,2600,-
+1,5,2021-07-25,2021-08-19,-,-,-,-,2,6,No,No,Toka Activity,BK/FP,-,-,Botol Send to WLN
+1,5,2021-08-19,2021-09-24,0.8514,0.8283,3.0719,3.0693,0.18,5,Yes,No,Toka Activity,BK/FP,25,900,-
+1,5,2021-09-24,2021-10-21,0.8414,0.8166,3.0898,3.0705,1.35,5,Yes,No,Toka Activity,BK/FR/HM,25,800,-
+1,5,2021-10-21,2021-11-23,-,-,-,-,3,32,Yes,No,Toka Activity,BK/JK,-,-,Botol Send to WLN
+1,5,2021-11-23,2021-12-21,0.8516,0.848,5.5633,5.5625,0.17,9,Yes,No,Toka Activity,BK/FR,25,2500,-
+1,5,2021-12-21,2022-01-22,-,-,-,-,3,4,No,No,Toka Activity,BK/FK,-,-,Botol Send to WLN
+1,5,2022-01-22,2022-02-23,0.8204,0.8184,3.0681,3.0647,0.97,6,No,No,Toka Activity,BK/FP,25,4000,-
+1,5,2022-02-23,2022-03-27,0.8329,0.8227,3.068,3.0674,0.1,7,No,No,Toka Activity,BK/JK,25,2000,-
+1,5,2022-03-27,2022-04-20,-,-,-,-,3,5,No,No,Toka Activity,BK/FR,-,-,Botol Send to WLN
+1,5,2022-04-20,2022-05-25,0.839,0.8343,3.0699,3.0685,0.08,7,No,No,Toka Activity,BK/JK,25,780,-
+1,5,2022-05-25,2022-06-22,0.852,0.8376,3.0714,3.0691,0.36,6,No,No,Toka Activity,BK/JK,25,1800,-
+1,5,2022-06-22,2022-07-24,-,-,-,-,<   1,12,No,No,Toka Activity,BK/NB,-,-,Botol Send to WLN
+1,5,2022-07-24,2022-08-26,0.8355,0.8348,5.255,5.2544,0.03,4,No,No,Toka Activity,BK,25,800,-
+1,5,2022-08-26,2022-09-26,0.8245,0.8207,2.7097,2.708,0.26,4,No,No,Toka Activity,BK/HM,25,2000,-
+1,5,2022-09-26,2022-10-27,-,-,-,-,2,4,No,No,Toka Activity,BK/NB,-,-,Botol Send to WLN
+1,5,2022-10-27,2022-11-28,0.8678,0.866,5.5059,5.5045,0.25,5,No,No,Toka Activity,BK/JK,25,2500,-
+1,5,2022-11-28,2022-12-22,0.8252,0.8217,2.4569,2.4527,0.84,5,No,No,Toka Activity,BK/FR/JK,25,2100,-

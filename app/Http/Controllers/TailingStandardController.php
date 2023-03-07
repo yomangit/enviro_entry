@@ -20,7 +20,7 @@ class TailingStandardController extends Controller
         return view('dashboard.Tailing.QualityStandard.index', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
-            'QualityStd' => TailingQualityStandard::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+            'QualityStd' => TailingQualityStandard::with('user')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportQualityStandardTailing()

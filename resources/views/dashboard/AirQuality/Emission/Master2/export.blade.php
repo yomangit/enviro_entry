@@ -22,6 +22,7 @@
             <th> Hydrogen Chloride (HCl) </th>
             <th> Hydrogen Fluoride (HF) </th>
             <th> Nitrogen Dioxide (NO2) </th>
+			<th> Nitrogen Oxide (NOx) </th>
             <th> Opacity </th>
             <th> Total Particulate (isokinetic) </th>
             <th> Sulfur Dioxide (SO2) </th>
@@ -56,7 +57,8 @@
         <td>{{$item->chlorine_cl2}}</td>
         <td>{{$item->hydrogen_chloride_hcl}}</td>
         <td>{{$item->hydrogen_fluoride_hf}}</td>
-        <td>{{$item->nitrogen_oxide_nox_as_nitrogen_dioxide_no2}}</td>
+        <td>{{$item->nitrogen_dioxide_no2}}</td>
+		<td>{{$item->nitrogen_oxide_nox}}</td>
         <td>{{$item->opacity}}</td>
         <td>{{$item->total_particulate_isokinetic}}</td>
         <td>{{$item->sulfur_dioxide_so2}}</td>

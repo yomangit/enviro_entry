@@ -72,71 +72,71 @@
                         </div>
                         @endcan
                         @if ($Rainfall->count())
-                        <table role="grid" id="example2" class="table table-bordered table-hover ">
-                            <thead class="table-info">
-                                <tr class="text-center" style="font-size: 12px">
-                                    <th>No</th>
-                                   
-                                    <th>Date</th>
-                                    <th>Point Id</th>
-                                    <th>Rainfall</th>
-                                    @can('admin')
-                                    <th>Action</th>
-                                    @endcan
-                                </tr>
-                            </thead>
-                            <tbody >
-                                @php
-                                $no = 1 + ($Rainfall->currentPage() - 1) * $Rainfall->perPage();
-                                @endphp
-                                @foreach ($Rainfall as $code)
+                        <div class="table-responsive card card-primary card-outline">
+                        <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm ">
+                                <thead class="table-info">
+                                    <tr class="text-center" style="font-size: 12px">
+                                        <th>No</th>
+                                        <th>Date</th>
+                                        <th>Point Id</th>
+                                        <th>Rainfall</th>
+                                        @can('admin')
+                                        <th>Action</th>
+                                        @endcan
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    @php
+                                    $no = 1 + ($Rainfall->currentPage() - 1) * $Rainfall->perPage();
+                                    @endphp
+                                    @foreach ($Rainfall as $code)
 
-                                <tr class="text-center" style="font-size: 12px">
-                                    <td>{{ $no++ }}</td>
-                                    <td>{{ date('d-M-Y', strtotime( $code->date)) }}</td>
-                                    <td>{{ $code->PointId->nama }}</td>
-                                    <td>{{ $code->rainfall }}</td>
-                                    @can('admin')
-                                    <td>
-                                       
-                                       <a href="/weather/rainfall/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                           <i class="fas fa-pen"></i>
-                                       </a>
-                                       <form action="/weather/rainfall/{{ $code->id }}" method="POST" class="d-inline">
-                                           @method('delete')
-                                           @csrf
-                                           <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                               <i class="fas fa-trash"></i>
-                                           </button>
-                                       </form>
-                                    </td>
-                                    @endcan
-                                  
-                                </tr>
-                                @endforeach
-                                <tr class="text-center">
-                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Rain Fall /Month</th>
-                                    <th>{{$avg_rainfall}}</th>
-                                </tr>
-                                <tr class="text-center">
-                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Year to Date</th>
-                                    <th>{{$avg_year}}</th>
-                                </tr>
-                                <tr class="text-center">
-                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Max. Daily Rainfall</th>
-                                    <th>{{$max_rainfall}}</th>
-                                </tr>
-                                <tr class="text-center">
-                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Rain days</th>
-                                    <th>{{$rainday}}</th>
-                                </tr>
-                                <tr class="text-center">
-                                    <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Wet days</th>
-                                    <th>{{$wetday}}</th>
-                                </tr>
-                            </tbody>
-                        </table>
-
+                                    <tr class="text-center" style="font-size: 12px">
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ date('d-M-Y', strtotime( $code->date)) }}</td>
+                                        <td>{{ $code->PointId->nama }}</td>
+                                        <td>{{ $code->rainfall }}</td>
+                                        @can('admin')
+                                        <td>
+                                        
+                                        <a href="/weather/rainfall/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <form action="/weather/rainfall/{{ $code->id }}" method="POST" class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                        </td>
+                                        @endcan
+                                    
+                                    </tr>
+                                    @endforeach
+                                    <tr class="text-center">
+                                        <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Rain Fall /Month</th>
+                                        <th>{{$avg_rainfall}}</th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Year to Date</th>
+                                        <th>{{$avg_year}}</th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Max. Daily Rainfall</th>
+                                        <th>{{$max_rainfall}}</th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Rain days</th>
+                                        <th>{{$rainday}}</th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th @if(!auth()->user()->is_admin)colspan="3" @else colspan="4" @endif>Total Wet days</th>
+                                        <th>{{$wetday}}</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </section>
                 </div>
                 <div class="card-footer">
@@ -200,8 +200,16 @@
         </div><!-- /.container-fluid -->
     </section>
 </div>
-@foreach ($Rainfall as $code)
+
 <script>
+    	var data = {!! json_encode($milimeter) !!};
+    	var nama = {!! json_encode($lokasi) !!};
+	var processedData = data.map(function(dataEl, index){
+		return {x: index, y : dataEl}
+	});
+	var processedNama = nama.map(function(namaEl, index){
+		return { color: namaEl === 'Kopra' ? 'red' : 'yellow'}
+	});
     Highcharts.chart('container', {
         chart: {
             type: 'column'
@@ -209,10 +217,12 @@
         title: {
             text: ''
         },
-        xAxis: {
-            categories: {!! json_encode($tgl) !!},
-            crosshair: true
-        },
+        xAxis: [{
+                categories: {!! json_encode($tgl) !!}
+    },{
+        categories: {!! json_encode($lokasi) !!},
+        opposite: true
+    }],
         yAxis: {
             title: {
                 useHTML: true,
@@ -220,12 +230,9 @@
             }
         },
         tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
+            headerFormat: ' <b>{point.x}</b><br/>',
+            crosshairs: true,
+                shared: true
         },
         plotOptions: {
             column: {
@@ -234,12 +241,18 @@
             }
         },
         series: [{
-            name: '{!! json_encode($code->PointId->nama) !!}',
+            name: 'Milimeter',
+            
             color:'#6AB187',
-            data: {!! json_encode($milimeter) !!}
+            xAxis: 0,
+            xAxis: 1,
+           
+            data: processedData
 
-        }]
+        },
+       
+    ]
     });
 </script>
-@endforeach
+
 @endsection

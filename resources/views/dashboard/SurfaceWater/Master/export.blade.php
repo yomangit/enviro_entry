@@ -53,7 +53,7 @@
     <tbody>
         @foreach ($Input as $data)
         <tr>
-            <td>{{ $data->CodeSample->nama }}</td>
+            <td>{{ $data->PointId->nama }}</td>
             <td>{{ date('d-M-Y', strtotime( $data->date)) }}</td>
             <td>{{$data->start_time}}</td>         
             <td>{{$data->stop_time}}</td>         

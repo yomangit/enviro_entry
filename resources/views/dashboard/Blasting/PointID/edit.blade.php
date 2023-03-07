@@ -33,7 +33,7 @@
                     
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="/blasting/pointid/{{ $PointID->created_at }}" method="post"
+                        <form action="/blasting/pointid/{{ $PointID->id }}" method="post"
                             enctype="multipart/form-data" autocomplete="off">
                             @method('put')
                             @csrf

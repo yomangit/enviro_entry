@@ -1,0 +1,174 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,7,2008-07-25,2008-08-25,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,7,2008-08-25,2008-09-24,0.3005,0.276,-,-,1.43,-,-,-,-,-,-,-,-
+1,7,2008-09-24,2008-10-25,1.0562,1.0036,-,-,2.88,2,Yes,No,-,Onlie&Rodie,-,-,-
+1,7,2008-10-25,2008-11-25,1.0989,1.0666,-,-,1.77,2,Yes,No,grass cutting 2 weeks ago,Onlie&Rodie,-,-,-
+1,7,2008-11-25,2008-12-24,0.2532,0.225,-,-,1.65,20,-,-,grass cutting 2 weeks ago,Onlie&Rodie,-,-,-
+1,7,2008-12-24,2009-01-24,1.237,1.2034,-,-,1.84,11,No,No,No activity,Harjoko,-,-,-
+1,7,2009-01-24,2009-02-25,0.275,0.2651,-,-,0.53,2,No,No,-,Jelly & Fanno,-,-,-
+1,7,2009-02-25,2009-03-25,0.5039,0.4886,-,-,0.93,7,No,No,-,Jelly & Royke,-,-,-
+1,7,2009-03-25,2009-04-24,0.4309,0.4159,-,-,0.85,3,No,No,-,Jelly & Fanno,-,-,-
+1,7,2009-04-24,2009-05-20,N/A,N/A,-,-,N/A,N/A,N/A,N/A,-,Jelly & Fanno,-,-,dust gauge bottle loss
+1,7,2009-05-20,2009-06-22,0.4179,0.4054,-,-,0.64,2,No,No,"grass high, no bushfire arround",Harjoko,-,-,-
+1,7,2009-06-22,2009-07-23,0.3383,0.3283,-,-,0.55,2,No,No,Burning Gardening,Jelly & Roddy,-,-,-
+1,7,2009-07-23,2009-08-21,0.0865,0.082,-,-,0.26,2,No,No,No activity,Jelly & Roddy,-,-,-
+1,7,2009-08-21,2009-09-22,N/A,N/A,-,-,N/A,N/A,N/A,N/A,-,-,-,-,dust gauge bottle loss
+1,7,2009-09-22,2009-10-21,0.4393,0.4147,-,-,1.44,4,Yes,No,Burning Area,Jelly & Royke,-,-,-
+1,7,2009-10-21,2009-11-22,1.4581,1.4401,-,-,0.96,4,No,No,Farmer Activity,JM,-,5450,-
+1,7,2009-11-22,2009-12-20,0.5985,0.594,-,-,0.27,27,No,No,Farmer Activity,Rolke,-,5400,-
+1,7,2009-12-20,2010-01-20,1.101,1.0931,-,-,0.43,6,No,Yes,Farmer Activity,Jelly & Royke,-,3700,-
+1,7,2010-01-20,2010-02-20,0.9059,0.8975,-,-,0.46,10,No,No,No activity,Fanno & Mahmud,-,5250,-
+1,7,2010-02-20,2010-03-22,0.8335,0.8259,-,-,0.43,7,No,No,Farmer Activity,Onlie,-,450,-
+1,7,2010-03-22,2010-04-20,1.5714,1.5537,-,-,1.04,16,Yes,No,Alang-alang area,JM & Rolke,-,5700,-
+1,7,2010-04-20,2010-05-20,0.2642,0.2592,-,-,0.28,25,Yes,No,Farmer Activity,Onlie & Rolke,-,500,Dust gauge bottle break
+1,7,2010-05-20,2010-06-20,0.7909,0.777,-,-,0.76,4,Yes,No,Farmer Activity,Onlie & Nus,-,3180,-
+1,7,2010-06-20,2010-07-20,2.4354,2.3713,-,-,3.63,8,Yes,No,Close to contractor activity,JM/OS,-,2750,There was a lizard and a lot of leaves in the bottle
+1,7,2010-07-20,2010-08-20,0.7998,0.7819,-,-,0.98,6,Yes,No,Contractor activity,RDC/Robby.N,-,4950,-
+1,7,2010-08-20,2010-09-20,0.804,0.7665,-,-,2.05,2,Yes,Yes,Contractor MTM activity,OS/MW,-,3600,-
+1,7,2010-09-20,2010-10-20,0.7901,0.7687,-,-,1.21,8,Yes,No,Contractor activity,OS/MW,-,1950,-
+1,7,2010-10-20,2010-11-23,0.8294,0.8018,-,-,1.38,37,Yes,No,"Gardening,Contractor activity",RDC/AL,-,5100,-
+1,7,2010-11-23,2010-12-20,0.8239,0.797,-,-,1.69,5,Yes,No,Contractor activity,OS/AL,-,3650,-
+1,7,2010-12-20,2011-01-20,0.8005,0.7859,-,-,0.8,8,Yes,No,Contractor Orica Activity,OS,-,2900,-
+1,7,2011-01-20,2011-02-20,0.7402,0.7342,-,-,0.33,7,Yes,No,Contractor Orica Activity,OS/MW,-,7850,-
+1,7,2011-02-20,2011-03-20,0.7925,0.783,-,-,0.58,5,Yes,No,Orica Contractor Activity,OS/MW,-,5900,-
+1,7,2011-03-20,2011-04-21,0.8337,0.828,-,-,0.3,9,No,No,"Gardening,Orica Contractor activity, security post activity",OS,-,6500,-
+1,7,2011-04-21,2011-05-21,0.7958,0.7801,-,-,0.89,2,Yes,No,"Security post, Orica contractor activity",OS/MW,-,4150,-
+1,7,2011-05-21,2011-06-21,0.7895,0.7805,-,-,0.49,5,No,No,"Security post, Orica contractor activity, gardening",OS,-,6100,-
+1,7,2011-06-21,2011-07-20,0.8057,0.7736,-,-,1.76,1,Yes,No,"Security post, Orica contractor activity, leighton activity.",OS,-,150,-
+1,7,2011-07-20,2011-08-20,0.861,0.7922,-,-,3.77,3,Yes,No,"Mining activity, Orica contarctor activity",OS/MW,-,2700,-
+1,7,2011-08-20,2011-09-20,0.8501,0.7764,-,-,4.04,3,Yes,No,"Mining activity, Orica contarctor activity",FB/OL,-,1700,-
+1,7,2011-09-20,2011-10-21,0.8559,0.7764,-,-,4.36,3,Yes,No,"Mining activity, Orica contarctor activity",Novry/Anita,-,2800,-
+1,7,2011-10-21,2011-11-21,0.8892,0.8384,-,-,2.78,9,Yes,No,"Mining activity, Orica contarctor activity",Andrias/Anita,-,5100,-
+1,7,2011-11-21,2011-12-22,0.8441,0.8241,-,-,1.06,5,Yes,No,"Mining activity, Orica contarctor activity",Mahmud/Arter,-,5100,-
+1,7,2011-12-22,2012-01-20,0.8381,0.8272,-,-,0.64,5,No,No,Orica Contractor west dump,OS/OA,-,4350,-
+1,7,2012-01-20,2012-02-20,0.8354,0.8066,-,-,1.58,4,Yes,No,Orica Contractor west dump,Onlie,-,5700,-
+1,7,2012-02-20,2012-03-20,0.8499,0.8406,-,-,0.53,4,Yes,Yes,Orica Contractor west dump,Andrias.L,-,10 100,-
+1,7,2012-03-20,2012-04-20,0.7923,0.784,-,-,0.47,2,Yes,No,"Mining activity, Orica contarctor activity,Grass cutting act",FB/NR,-,5000,-
+1,7,2012-04-20,2012-05-23,0.7863,0.7058,-,-,4.14,3,Yes,No,"pSI worshop,Exploration,farmer  act,security pos act",AL,-,9500,-
+1,7,2012-05-23,2012-06-20,0.8271,0.7876,-,-,2.03,4,Yes,NO,"LCI/AP act, at pajajaran, security post act,orica contractor act,grass cutting act",AL/RH,-,3000,-
+1,7,2012-06-20,2012-07-20,0.9859,0.8146,-,-,9.7,11,No,No,Orica act/ Mining activity at Batupangah,AP/RH,-,1500,-
+1,7,2012-07-20,2012-08-22,0.8627,0.8137,-,-,2.6,1,Yes,NO,"LCI act at waste dump, orrica act,AP act, grass cuting act",AL/TL,-,0,Dry
+1,7,2012-08-22,2012-10-08,0.9155,0.8056,-,-,4.06,18,Yes,NO,"LCI act at waste dump, orrica act,AP act, grass cuting act",TL,-,2000,-
+1,7,2012-10-08,2012-10-20,0.86,0.835,-,-,3.54,5,No,No,"Orica,wast dam,blasting act, grass cutting act",CA/AL,-,200,-
+1,7,2012-10-20,2012-11-20,0.8839,0.813,-,-,4.01,12,Yes,No,"Mining act, orica act",RH/SM,-,8250,-
+1,7,2012-11-20,2012-12-20,0.8797,0.8119,-,-,3.84,9,No,No,"Orica contractor act,Waste dump act,grass cutting act, blast act",AL/JK,-,4500,-
+1,7,2012-12-20,2013-01-21,0.8302,0.795,-,-,1.87,9,Yes,No,"Orica contractor act,Waste dump act, mining mobile act",DA/RH,-,10990,-
+1,7,2013-01-21,2013-02-20,0.8176,0.7976,-,-,1.13,40,No,No,"Mining mobile act, waste dump act, grass cutter, Orica contractor, blast act.",AL/SM,-,10250,-
+1,7,2013-02-20,2013-03-20,0.9092,0.8097,-,-,6.04,13,Yes,No,"Mining mobile act, waste dump act, Orica contractor activity.",AP/RH,-,2000,-
+1,7,2013-03-20,2013-04-20,0.843,0.7913,-,-,2.83,10,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AP/CR,-,4500,-
+1,7,2013-04-20,2013-05-20,0.7969,0.7818,-,-,0.83,4,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/RH,-,4000,-
+1,7,2013-05-20,2013-06-21,0.7288,0.726,-,-,0.15,3,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AP/CR,-,4500,-
+1,7,2013-06-21,2013-07-20,0.781,0.778,-,-,0.18,4,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AP/CR,-,5250,-
+1,7,2013-07-20,2013-08-20,0.7853,0.7558,-,-,1.62,10,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/AL,-,2750,-
+1,7,2013-08-20,2013-09-20,0.82,0.7965,-,-,1.29,1,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/RH,-,750,-
+1,7,2013-09-20,2013-10-20,0.8122,0.7935,-,-,1.02,1,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",RH/CR,-,2800,-
+1,7,2013-10-20,2013-11-21,0.7982,0.7951,-,-,0.16,9,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",CR/RH,-,6000,-
+1,7,2013-11-21,2013-12-20,0.8163,0.8085,-,-,0.43,18,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AL,-,3000,-
+1,7,2013-12-20,2014-01-19,0.8023,0.7978,-,-,0.25,20,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",Al/RT,-,7000,-
+1,7,2014-01-19,2014-02-20,0.814,0.8137,-,-,0.02,15,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AP/RH,-,3500,-
+1,7,2014-02-20,2014-03-21,0.8483,0.8204,-,-,1.63,2,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/CR,-,2000,-
+1,7,2014-03-21,2014-04-20,0.7567,0.7427,-,-,0.79,6,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/AL,-,4700,-
+1,7,2014-04-20,2014-05-20,0.795,0.7873,-,-,0.44,7,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AL/RT,-,3500,-
+1,7,2014-05-20,2014-06-21,0.811,0.8034,-,-,0.4,6,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/AL,-,3200,-
+1,7,2014-06-21,2014-07-22,0.8323,0.8006,-,-,1.74,6,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",RH/RT,-,3750,-
+1,7,2014-07-22,2014-08-21,0.8645,0.805,-,-,3.37,4,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/AL,-,400,Added aquades 1000 ml
+1,7,2014-08-21,2014-09-20,0.8345,0.7859,-,-,2.75,2,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",RH,-,1500,-
+1,7,2014-09-20,2014-10-22,0.8659,0.8087,-,-,3.04,3,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",RH,-,500,Added aquades 1000 ml
+1,7,2014-10-22,2014-11-20,0.8897,0.8293,-,-,3.54,5,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",DA/AL,-,5250,-
+1,7,2014-11-20,2014-12-20,0.8539,0.8265,-,-,1.55,20,No,No,"Mining mobile act, waste dump act, Orica contractor activity.",AP/CR/RT,-,3800,-
+1,7,2014-12-20,2015-01-20,0.8849,0.838,-,-,2.57,15,No,No,"Mining mobile act, Orica contractor activity.",AL/TR/CR/BK,-,8000,-
+1,7,2015-01-20,2015-02-20,-,-,-,-,2,5,No,NO,"Mining mobile act, Orica contractor activity.",RH/BK,-,-,Botle send to WLN
+1,7,2015-02-20,2015-03-20,0.8315,0.8312,-,-,0.02,4,No,No,"Mining mobile act, Orica contractor activity.",AP/RT,-,2000,-
+1,7,2015-03-20,2015-04-20,0.8416,0.8283,-,-,0.73,4,No,No,"Mining mobile act, Orica contractor activity.",AP/RT,-,3650,-
+1,7,2015-04-20,2015-05-18,-,-,-,-,5,5,No,No,"Mining mobile act, Orica contractor activity.",RH,-,-,Botle send to WLN
+1,7,2015-05-19,2015-06-21,0.8241,0.8024,-,-,1.12,5,No,No,"Mining mobile act, Orica contractor activity.",AP/RT,-,1430,-
+1,7,2015-06-21,2015-07-21,0.794,0.7908,-,-,0.18,2,No,No,"Mining mobile act, Orica contractor activity.",AL/CR,-,750,Added aquades 1000 ml
+1,7,2015-07-21,2015-08-19,-,-,-,-,5,0,No,No,"Mining mobile act, Orica contractor activity.",AL/RT/BK,-,0,"Botle send to WLN, Add aquades 1000 ml"
+1,7,2015-08-19,2015-09-20,0.8816,0.7901,-,-,4.86,0,No,No,"Mining mobile act, Orica contractor activity.",AP/RT,-,0,Added aquades 1000 ml
+1,7,2015-09-20,2015-10-20,0.8816,0.801,-,-,4.56,1,No,No,"Mining mobile act, Orica contractor activity.",CR/RH,-,0,Added aquades 1000 ml
+1,7,2015-10-20,2015-11-19,-,-,-,-,58,16,No,No,"Mining mobile act, Orica contractor activity.",AP/AL,-,2175,bottle send to WLN
+1,7,2015-11-19,2015-12-16,0.8327,0.8058,-,-,1.69,12,No,No,"Mining mobile act, Orica contractor activity.",AL/CR,-,5200,-
+1,7,2015-12-16,2016-01-18,0.8315,0.7975,-,-,1.75,8,No,No,"Mining mobile act, Orica contractor activity.",RT/BK,-,2900,-
+1,7,2016-01-18,2016-02-21,0.9117,0.9114,-,-,0.01,4,No,No,"Mining mobile act, Orica contractor activity.",RH/RT,-,3240,-
+1,7,2016-02-21,2016-03-22,-,-,-,-,6,2,No,No,"Mining mobile act, Orica contractor activity.",CR/RT,-,1850,bottle send to WLN
+1,7,2016-03-22,2016-04-19,0.8166,0.8038,-,-,0.78,4,No,No,"Mining mobile act, Orica contractor activity.",BK/CR,-,3200,-
+1,7,2016-04-09,2016-05-23,-,-,-,-,10,5,No,No,"Mining mobile act, Orica contractor activity.",RH/RT,-,4400,bottle send to WLN
+1,7,2016-05-23,2016-06-22,0.8301,0.8087,-,-,1.21,4,No,No,"Mining mobile act, Orica contractor activity.",AP/RT,-,3750,-
+1,7,2016-06-22,2016-07-21,0.828,0.813,-,-,0.88,2,No,No,"Mining mobile act, Orica contractor activity.",BK/RH,-,3500,-
+1,7,2016-07-21,2016-08-22,0.8082,0.8062,-,-,0.11,7,No,No,"Mining mobile act, Orica contractor activity.",AL/RT,-,4200,-
+1,7,2016-08-22,2016-09-20,-,-,-,-,13,7,No,No,"Mining mobile act, Orica contractor activity.",RT/CR/BK,-,1950,bottle send to WLN
+1,7,2016-09-20,2016-10-20,0.8403,0.8091,-,-,1.77,4,No,No,"Mining mobile act, Orica contractor activity.",RT/BK,-,3250,-
+1,7,2016-10-20,2016-11-22,0.8112,0.8092,-,-,0.1,5,No,No,"Wastedump araren act, Orica contractor activity.",RH/RT/BK,-,5400,-
+1,7,2016-11-22,2016-12-20,0.8496,0.8236,-,-,1.58,7,No,No,"Wastedump araren act, Orica contractor activity.",RH/RT,-,2400,-
+1,7,2016-12-22,2017-01-19,0.8394,0.8386,-,-,0.05,3,No,No,"Wastedump araren act, Orica contractor activity.",BK/CR,-,6000,-
+1,7,2017-01-19,2017-02-20,0.807,0.805,-,-,0.11,15,No,No,"Wastedump araren act, Orica contractor activity.",DA/SP,-,13250,-
+1,7,2017-02-20,2017-03-22,0.8158,0.8003,-,-,0.88,8,No,No,"Wastedump araren act, Orica contractor activity.",AP,-,4400,-
+1,7,2017-03-22,2017-04-20,0.8354,0.8194,-,-,0.94,9,No,No,"Wastedump araren act, Orica contractor activity.",AP/BK,-,4000,-
+1,7,2017-04-20,2017-05-21,0.8512,0.8098,-,-,2.27,5,No,No,"Wastedump araren act, Orica contractor activity.",RT/RH,-,2800,-
+1,7,2017-05-21,2017-06-20,0.862,0.8223,5.3933,5.3818,1.64,-,-,-,-,-,50,3600,-
+1,7,2017-06-20,2017-07-23,0.8699,0.7989,5.3167,5.3107,1.19,-,-,-,-,-,25,2600,-
+1,7,2017-07-23,2017-08-20,-,-,-,-,4,7,No,No,"Wastedump araren act, Orica contractor activity.",RH/RT,-,810,bottle send to WLN
+1,7,2017-08-20,2017-09-21,0.8721,0.7969,5.3087,5.3017,1.2,3,No,No,"Pos security act, road traffic act",RH/RT,25,2150,-
+1,7,2017-09-21,2017-10-21,-,-,-,-,<1,3,No,No,"Pos security act, road traffic act",RH/RT,-,-,bottle send to WLN
+1,7,2017-10-21,2017-11-21,0.8726,0.7969,5.3872,5.3816,1.41,3,No,No,"Pos security act, road traffic act",RH/RT,25,3100,-
+1,7,2017-11-21,2017-12-21,0.9,0.821,5.547,5.543,1.12,3,No,No,"Pos security act, road traffic act",RH/RT,25,3200,-
+1,7,2017-12-21,2018-01-21,0.8289,0.8226,5.3164,5.3152,0.54,13,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,25,6000,-
+1,7,2018-01-21,2018-02-21,0.8393,0.8388,5.3178,5.3167,0.32,13,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,25,4000,-
+1,7,2018-02-21,2018-03-20,-,-,-,-,1,13,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,-,-,bottle send to WLN
+1,7,2018-03-20,2018-04-20,0.8264,0.8259,5.322,5.3175,1.35,13,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,25,4100,-
+1,7,2018-04-20,2018-05-20,0.8316,0.8256,5.485,5.4821,1.32,13,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,25,6000,-
+1,7,2018-05-20,2018-06-20,-,-,-,-,1,13,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,-,-,bottle send to WLN
+1,7,2018-06-21,2018-07-24,0.8591,0.8121,5.328,5.3217,0.64,0,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,25,1300,-
+1,7,2018-07-24,2018-08-24,0.8296,0.817,5.3405,5.328,2.31,0,Yes,No,Orica act/ Mining activity at Dump Pangisan,RH/BK,25,2500,-
+1,7,2018-08-25,2018-09-24,-,-,-,-,<1,5,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,-,-,Bottle Send to Wln
+1,7,2018-09-25,2018-10-29,0.8726,0.7969,5.3872,5.3816,1.28,0,No,No,Orica act/ Mining activity at Dump Pangisan,AL/FP,25,3100,-
+1,7,2018-10-30,2018-11-27,-,-,-,-,2,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,-,-,Botol Send to WLN
+1,7,2018-11-28,2018-12-24,0.825,0.8222,5.3476,5.3471,0.29,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,25,6600,-
+1,7,2018-12-25,2019-01-22,0.8312,0.8225,5.3617,5.3553,1.57,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,25,3000,-
+1,7,2019-01-23,2019-02-22,-,-,-,-,< 1,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,-,-,Botol Send to WLN
+1,7,2019-02-23,2019-03-22,0.8506,0.8439,2.9533,2.9491,0.45,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,25,1250,-
+1,7,2019-03-23,2019-04-25,0.8711,0.8447,2.951,2.9488,0.98,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,25,6200,-
+1,7,2019-04-25,2019-05-27,-,-,-,-,2,2,No,No,Orica act/ Mining activity at Dump Pangisan,-,-,-,-
+1,7,2019-05-27,2019-06-20,0.8296,0.817,5.3405,5.328,2.21,2,No,No,Orica act/ Mining activity at Dump Pangisan,AL/FP,25,1850,-
+1,7,2019-06-20,2019-07-20,0.906,0.82,5.549,5.544,1.29,2,No,No,Orica act/ Mining activity at Dump Pangisan,BK,25,3000,-
+1,7,2019-07-20,2019-08-20,-,-,-,-,20.5,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,25,1400,Botol Send to ITS
+1,7,2019-08-20,2019-09-23,0.8819,0.8406,2.9611,2.9546,0.29,2,No,No,Orica act/ Mining activity at Dump Pangisan,OS/FR,25,500,-
+1,7,2019-09-23,2019-10-01,0.8469,0.8391,2.9882,2.9639,0.38,2,No,No,Orica act/ Mining activity at Dump Pangisan,RT,25,200,-
+1,7,2019-10-01,2019-11-20,-,-,-,-,8,2,No,No,Orica act/ Mining activity at Dump Pangisan,RH/RT,25,1400,Botol Send to ITS
+1,7,2019-11-20,2019-12-01,1.2735,0.8291,3.008,2.9908,3.18,2,No,No,Orica act/ Mining activity at Dump Pangisan,RT,25,1800,-
+1,7,2019-12-20,2020-01-20,0.8231,0.8096,5.3324,5.3119,8.11,5,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FR,25,5400,-
+1,7,2020-01-20,2020-02-01,-,-,-,-,0,-,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,-,Botol Send to ITS
+1,7,2020-02-25,2020-03-01,0.8336,0.8231,5.3924,5.3342,9.44,8,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,2000,-
+1,7,2020-03-24,2020-04-01,0.8195,0.815,5.507,5.499,2.7,16,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,4300,-
+1,7,2020-04-22,2020-05-01,0.8099,0.8067,5.5775,5.5729,1.68,10,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,4500,-
+1,7,2020-05-20,2020-06-23,0.8717,0.8228,5.4432,5.4377,2.1,13,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,5500,-
+1,7,2020-06-23,2020-07-23,-,-,-,-,0,13,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,-,-
+1,7,2020-07-23,2020-08-20,-,-,-,-,17,13,No,No,Orica act/ Mining activity at Dump Pangisan,-,25,-,Botol Send to WLN
+1,7,2020-08-20,2020-09-20,0.8611,0.8158,5.3898,5.3884,0.14,13,No,No,Orica act/ Mining activity at Dump Pangisan,FP/JK,25,600,-
+1,7,2020-09-20,2020-10-21,-,-,-,-,6,-,No,No,Orica act/ Mining activity at Dump Pangisan,FP/JK,-,-,Botol Send to WLN
+1,7,2020-10-21,2020-11-21,0.8574,0.8211,5.3799,5.3787,0.14,4,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FP,25,850,-
+1,7,2020-11-21,2020-12-21,0.8023,0.7981,5.3846,5.3815,0.76,-,No,No,Orica act/ Mining activity at Dump Pangisan,RT/FP,25,3200,-
+1,7,2020-12-21,2021-01-24,0.8475,0.8252,2.9656,2.9628,0.91,9,No,No,Orica act/ Mining activity at Dump Pangisan,FP/JK,25,4700,-
+1,7,2021-01-24,2021-02-25,-,-,-,-,2,8,No,No,Orica act/ Mining activity at Dump Pangisan,FP/JK,25,-,Botol Send to WLN
+1,7,2021-02-25,2021-03-23,0.8417,0.8343,2.9671,2.962,2.22,4,No,No,Orica act/ Mining activity at Dump Pangisan,BK/JK,25,4950,-
+1,7,2021-03-23,2021-04-22,0.8276,0.8255,5.388,5.382,1.57,6,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FR/RT,25,3450,-
+1,7,2021-04-22,2021-05-25,-,-,-,-,5,6,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FP,25,-,Botol Send to WLN
+1,7,2021-05-25,2021-06-22,0.8327,0.8191,2.9653,2.9635,0.39,3,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FP,20,2000,-
+1,7,2021-06-22,2021-07-22,0.8463,0.8333,2.9657,2.965,0.17,5,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FP,20,2200,-
+1,7,2021-07-22,2021-08-19,-,-,-,-,<   1,7,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FP,-,-,Botol Send to WLN
+1,7,2021-08-19,2021-09-24,0.8278,0.82,2.9689,2.967,0.25,21,No,No,Orica act/ Mining activity at Dump Pangisan,NB/FK,25,2000,-
+1,7,2021-09-24,2021-10-21,0.9312,0.8393,5.3873,5.384,0.52,15,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FR/HM,25,1200,-
+1,7,2021-10-21,2021-11-23,-,-,-,-,1,8,No,No,Orica act/ Mining activity at Dump Pangisan,BK/JK,-,-,Botol Send to WLN
+1,7,2021-11-23,2021-12-21,0.867,0.8405,2.964,2.9614,0.64,4,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FR,25,2800,-
+1,7,2021-12-21,2022-01-22,-,-,-,-,1,15,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FK,-,-,Botol Send to WLN
+1,7,2022-01-22,2022-02-23,0.8484,0.8142,2.9698,2.9647,2.67,9,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FP,25,7234,-
+1,7,2022-02-23,2022-03-27,0.8532,0.5438,2.9697,2.9685,0.96,6,No,No,Orica act/ Mining activity at Dump Pangisan,BK/JK,25,4900,-
+1,7,2022-03-27,2022-04-20,-,-,-,-,<   1,8,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FR,-,-,Botol Send to WLN
+1,7,2022-04-20,2022-05-25,0.8319,0.8247,2.972,2.9674,0.34,6,No,No,Orica act/ Mining activity at Dump Pangisan,BK/JK,25,1100,-
+1,7,2022-05-25,2022-06-22,0.8567,0.8383,5.3862,5.3831,0.39,13,No,No,Orica act/ Mining activity at Dump Pangisan,NB/FP/HM,25,1400,-
+1,7,2022-06-22,2022-07-24,-,-,-,-,<   1,3,No,No,Orica act/ Mining activity at Dump Pangisan,BK,-,-,Botol Send to WLN
+1,7,2022-07-24,2022-08-25,0.8315,0.824,3.2899,3.2892,0.11,9,No,No,Orica act/ Mining activity at Dump Pangisan,FR/JK,25,2000,-
+1,7,2022-08-25,2022-09-26,0.8195,0.8131,5.6845,5.6835,0.15,9,No,No,Orica act/ Mining activity at Dump Pangisan,BK/HM,25,2000,-
+1,7,2022-09-26,2022-10-27,-,-,-,-,1,8,No,No,Orica act/ Mining activity at Dump Pangisan,NB/BK,-,-,Botol Send to WLN
+1,7,2022-10-27,2022-11-28,0.8025,0.8005,2.4667,2.465,0.54,4,No,No,Orica act/ Mining activity at Dump Pangisan,BK/JK,25,4500,-
+1,7,2022-11-28,2022-12-22,0.8564,0.8159,5.4298,5.4245,1.1,6,No,No,Orica act/ Mining activity at Dump Pangisan,BK/FR/JK,25,2000,-

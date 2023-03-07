@@ -21,7 +21,7 @@ class PointIdBlastingController extends Controller
         return view('dashboard.Blasting.PointID.index',[
             "tittle"=>"Point ID: Blasting",
             'breadcrumb'=>'Point ID: Blasting',
-      'PointID'=>PointIdBlasting::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+      'PointID'=>PointIdBlasting::with('user')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
     }

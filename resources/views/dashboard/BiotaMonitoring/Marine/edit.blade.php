@@ -28,7 +28,7 @@
                     <div class="card-titel m-2 font-weight-bold">Form Edit</div>
                 </div>
                 <!-- /.card-header -->
-                <form action="/monitoring/marine/{{ $Marine->created_at }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                <form action="/monitoring/marine/{{ $Marine->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @method('put')
                         @csrf
                 <div class="card-body">

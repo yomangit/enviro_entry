@@ -20,7 +20,7 @@ class QualityStandardController extends Controller
         return view('dashboard.Hydrometric.WaterLevel.QualityStandard.index', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
-            'QualityStandard' => QualityStandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'QualityStandard' => QualityStandard::with('user')->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
 
         ]);
     }

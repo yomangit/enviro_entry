@@ -29,7 +29,7 @@ class LocationBiotaImport implements ToModel,WithValidation, WithHeadingRow
     {
         return [
 
-            '*.nama' => ['unique:location_biotas']
+            '*.nama' => ['required']
         ];
     }
 }

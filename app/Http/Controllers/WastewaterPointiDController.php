@@ -20,7 +20,7 @@ class WastewaterPointiDController extends Controller
         return view('dashboard.WasteWater.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => Wastewaterpointid::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'Codes' => Wastewaterpointid::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
 

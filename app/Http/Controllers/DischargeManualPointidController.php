@@ -20,7 +20,7 @@ class DischargeManualPointidController extends Controller
         return view('dashboard.Hydrometric.DischargeManual.PointId.index',[
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => DischargeManualPointid::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() 
+            'Codes' => DischargeManualPointid::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() 
         ]);
     }
     public function ExportDischargeManualPointId()

@@ -20,7 +20,7 @@ class StdDrinkWaterController extends Controller
         return view('dashboard.SurfaceWater.DrinkWater.QualityStandard.index',[
             'tittle'=>'Quality Standard',
             'breadcrumb'=>'Quality Standard',
-            'QualityStd'=>QualityStdDrinkWater::where('user_id',auth()->user()->id)->filter(['fromDate','search'])->paginate(10)->withQueryString()
+            'QualityStd'=>QualityStdDrinkWater::with('user')->filter(['fromDate','search'])->paginate(10)->withQueryString()
         ]);
     }
 
@@ -109,7 +109,11 @@ class StdDrinkWaterController extends Controller
             'zinc_zn'=>'required',
             'fecal_coliform'=>'required',
             'c_coli'=>'required',
-            'total_coliform_bacteria'=>'required'
+            'total_coliform_bacteria'=>'required',
+			'permanganate_number_as_kmno4'=>'required',
+			'surfactant'=>'required',
+			'benzene'=>'required',
+			'total_pesticides_as_organo_chlorine_pesticides'=>'required'
         ]);
         $validatedData['user_id']=auth()->user()->id;
         QualityStdDrinkWater::create($validatedData);
@@ -193,7 +197,11 @@ class StdDrinkWaterController extends Controller
             'zinc_zn'=>'required',
             'fecal_coliform'=>'required',
             'c_coli'=>'required',
-            'total_coliform_bacteria'=>'required'
+            'total_coliform_bacteria'=>'required',
+			'permanganate_number_as_kmno4'=>'required',
+			'surfactant'=>'required',
+			'benzene'=>'required',
+			'total_pesticides_as_organo_chlorine_pesticides'=>'required',
         ]);
         $validatedData['user_id']=auth()->user()->id;
         QualityStdDrinkWater::where('id', $quantity->id)

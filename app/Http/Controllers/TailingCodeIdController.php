@@ -20,7 +20,7 @@ class TailingCodeIdController extends Controller
         return view('dashboard.Tailing.PointId.index',[
             'tittle'=>'Point ID',
             'breadcrumb'=>'Point ID',
-            'TailingCodeId'=>TailingCodeId::where('user_id',auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'TailingCodeId'=>TailingCodeId::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportPointID()

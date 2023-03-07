@@ -29,7 +29,7 @@
 
                 </div>
                 <!-- /.card-header -->
-                <form action="/airquality/dustgauge/dust/{{ $Codes->failed_at }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                <form action="/airquality/dustgauge/dust/{{ $Codes->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                     @method('put')
                     @csrf
                     <div class="card-body">

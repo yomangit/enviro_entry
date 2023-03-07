@@ -1,0 +1,327 @@
+standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conductivity,tds,temperatur,salinity,turbidity,tl_wall,tl_tsf,water_condition,water_color,odor,rain,rain_during_sampling,oil_layer,source_pollution,sampler,cyanide,level,lvl_lgr,debit_s,debit_d,remarks
+7,1,45,2021-10-07,8:52,8:54,79,7.72,7.35,126,252,164,25.2,0.1,96.1,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/NB/FR,-,-,-,-,-,-
+7,1,45,2021-10-08,9:02,9:04,-,7.96,7.21,180,275,178,26.3,0.3,1000,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-10-09,8:30,8:32,-,7.65,7.08,125,264,172,26,0.1,264,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/NB,-,-,-,-,-,-
+7,1,45,2021-10-10,8:37,8:39,152,7.34,7.14,158,241,156,26.8,0.1,168,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2021-10-11,9:34,9:36,106,7.39,7.24,102,268,174,27.6,0.1,144,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK/NB,-,-,-,-,-,-
+7,1,45,2021-10-12,8:40,8:42,79,7.63,7.15,115,270,176,27.3,0.1,130,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-10-13,8:29,8:31,178,7.6,7.08,130,255,165,26.8,0.1,118,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2021-10-14,9:41,9:43,37,8.4,7.3,136,273,177,28.2,0.1,40.9,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2021-10-15,9:31,9:33,61,7.8,7.64,105,287,187,28.2,0.1,64.6,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM/FR,-,-,-,-,-,-
+7,1,45,2021-10-16,8:32,8:34,46,8.24,7.13,124,305,198,26.4,0.1,42.4,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-10-17,8:35,8:37,31,7.95,6.99,136,284,185,26.7,0.1,35.8,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/NB,-,-,-,-,-,-
+7,1,45,2021-10-18,9:00,9:02,30,7.75,7.38,170,265,172,28.3,0.1,46.7,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK/NB,-,-,-,-,-,-
+7,1,45,2021-10-19,8:58,9:00,34,8.3,7.5,145,291,189,27.7,0.1,40.4,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2021-10-20,7:56,7:58,173,7.62,7.08,98,307,199,27.3,0.1,171,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2021-10-21,8:48,8:50,62,8.62,7.03,98,287,187,27.1,0.1,60.2,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/NB,-,-,-,-,-,-
+7,1,45,2021-10-22,13:41,13:43,30,8.1,7.18,113,273,177,29.7,0.1,31.6,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM/PP,-,-,-,-,-,-
+7,1,45,2021-10-23,8:42,8:44,4900,7.89,7.27,106,317,206,25.6,0.1,505,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-10-24,9:53,9:55,516,7.09,7.5,136,409,266,27.8,0.2,599,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/BK,-,-,-,-,-,-
+7,1,45,2021-10-25,14:18,14:20,4500,6.93,7.05,136,383,249,34,0.2,821,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2021-10-26,10:05,10:07,2400,7.22,7.28,117,325,211,29.5,0.1,231,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FK,-,-,-,-,-,-
+7,1,45,2021-10-27,8:48,8:50,112,7.89,7.13,137,266,170,26.2,0.1,67.9,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2021-10-28,9:38,9:40,76,7.43,7.3,112,275,179,28.1,0.1,104,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",JK/FK,-,-,-,-,-,-
+7,1,45,2021-10-29,11:01,11:03,562,7.37,7.2,174,293,190,30.3,0.1,457,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2021-10-30,8:49,8:51,260,7.61,7.21,122,274,178,26.7,0.1,220,-,-,Surut,Agak Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2021-10-31,9:33,9:35,20960,7.36,7.46,146,346,225,24.6,0.2,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2021-11-01,9:40,9:42,11660,8.48,7.24,137,395,257,27.7,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2021-11-02,13:54,13:56,4140,8.42,7.03,198,348,226,31.4,0.1,396,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FK/JK,-,-,-,-,-,-
+7,1,45,2021-11-03,9:34,9:36,820,8.2,7.14,183,331,215,28.6,0.1,1000,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2021-11-04,9:51,9:53,250,8.12,7.92,124,299,194,30.6,0.1,321,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2021-11-05,8:52,8:54,5580,7.81,271,146,417,271,27.1,0.2,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-06,7:26,7:28,2540,8.28,7.39,116,306,199,24.6,0.1,786,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/FP,-,-,-,-,-,-
+7,1,45,2021-11-07,7:20,7:22,216,8.08,7.2,126,284,185,26.2,0.1,243,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-11-08,9:18,9:20,560,7.74,7.62,138,271,176,27.5,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK/FK,-,-,-,-,-,-
+7,1,45,2021-11-09,7:08,7:10,400,8.06,6.74,147,279,180,24.8,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-10,7:15,7:17,197,7.91,6.87,120,256,167,26.1,0.1,254,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-11,7:08,7:10,420,7.65,6.53,137,258,168,26,0.1,581,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/BK,-,-,-,-,-,-
+7,1,45,2021-11-12,7:17,7:19,400,8.28,7.71,102,480,171,25.2,1.1,715,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-13,7:36,7:38,210,8.05,7.47,119,277,180,26.3,0.1,203,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-14,7:23,7:25,198,7.84,7.01,102,275,179,26.3,0.1,184,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2021-11-15,7:26,7:28,178,8.17,7.05,100,284,185,26.3,0.1,159,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2021-11-16,9:57,9:59,188,7.44,7.45,143,308,200,29.8,0.1,201,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2021-11-17,10:06,10:08,4380,7.38,7.37,132,328,213,27.4,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2021-11-18,7:33,7:35,261,7.73,7.04,120,303,197,25.7,0.1,297,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-19,7:26,7:28,509,7.17,8.12,105,313,203,24.5,0.1,501,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-20,7:20,7:22,234,7.25,7.23,141,308,193,24.9,0.1,226,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-21,7:05,7:07,390,7.4,7.28,170,254,165,26.5,0.1,304,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2021-11-22,9:10,9:12,1190,7.56,7.37,95,315,205,28.1,0.1,1000,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2021-11-23,12:31,12:33,1130,7.33,7.06,160,270,175,31,0.1,1000,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2021-11-24,7:33,7:35,430,7.7,8.1,126,309,201,26,0.1,400,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2021-11-25,10:11,10:13,220,7.88,7.86,98,249,162,28.7,0.1,228,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2021-11-26,7:29,7:31,121,7.75,8.05,103,306,199,26.7,0.1,116,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP,-,-,-,-,-,-
+7,1,45,2021-11-27,7:28,7:30,480,8.09,7.71,126,349,228,26.7,0.2,479,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-11-28,9:21,9:23,190,7.94,7.16,118,280,182,27.3,0.1,433,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2021-11-29,11:46,11:48,110,7.47,7.4,127,270,176,29.4,0.1,142,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2021-11-30,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+7,1,45,2021-12-01,11:15,11:17,119,7.96,7.13,126,273,178,28.5,0.1,115,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/FR/HM,-,-,-,-,-,-
+7,1,45,2021-12-02,9:59,10:01,59,7.9,7.25,166,274,177,26.7,0.1,59.1,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/JK,-,-,-,-,-,-
+7,1,45,2021-12-03,13:34,13:36,398,7.39,6.93,136,258,167,32.3,0.1,423,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK/FK,-,-,-,-,-,-
+7,1,45,2021-12-04,10:22,10:24,220,8.5,7.14,101,279,181,27,0.1,302,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2021-12-05,7:33,7:35,1210,7.58,8.04,175,321,209,24.5,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/FR,-,-,-,-,-,-
+7,1,45,2021-12-06,7:58,8:00,129,8.15,7.73,122,255,166,25.6,0.1,126,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-07,7:18,7:20,1360,7.6,7.21,145,283,183,25.6,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-12-08,7:04,7:06,360,7.75,7.4,115,296,192,25.3,0.1,923,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM/FP,-,-,-,-,-,-
+7,1,45,2021-12-09,10:22,10:24,130,8.59,7.13,99,278,181,28.8,0.1,159,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2021-12-10,9:24,9:26,340,7.48,7.3,139,273,178,26.9,0.1,329,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2021-12-11,8:53,8:55,63,7.78,7.06,110,275,179,26.9,0.1,78.7,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2021-12-12,7:50,7:52,45,8.1,7.65,129,278,181,26.7,0.1,43.3,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-13,7:32,7:34,33,8.12,6.17,103,293,141,26.2,0.1,30,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-14,8:35,8:37,24,8.1,7.1,125,278,181,27.1,0.1,34.8,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-12-15,7:58,8:00,256,8.1,7.13,118,285,185,25.1,0.1,342,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-12-16,7:14,7:16,699,7.75,7.05,139,250,162,26,0.1,134,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-12-17,9:45,9:47,92,8.53,7.4,112,332,216,27.8,0.1,117,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/BK/JK,-,-,-,-,-,-
+7,1,45,2021-12-18,9:16,9:18,42,7.91,7.22,132,283,184,27.5,0.1,61.2,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2021-12-19,8:24,8:26,169,7.89,8.1,112,301,196,26.1,0.1,172,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-20,7:36,7:38,125,8.21,6.73,112,316,206,25.7,0.1,105,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-21,8:42,8:44,1130,8.2,7.24,115,299,194,25.8,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/NB/HM,-,-,-,-,-,-
+7,1,45,2021-12-22,9:06,9:08,99,7.84,7.29,114,306,199,26.4,0.1,118,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/JK,-,-,-,-,-,-
+7,1,45,2021-12-23,7:27,7:29,1240,7.82,7.38,139,284,185,25.8,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2021-12-24,7:20,7:22,790,7.87,7.41,131,255,165,25.6,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/FK/JK,-,-,-,-,-,-
+7,1,45,2021-12-25,9:22,9:24,1060,7.53,7.49,152,289,188,27.1,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/JK,-,-,-,-,-,-
+7,1,45,2021-12-26,7:58,8:00,2610,8.2,7.13,138,267,174,26.2,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-27,8:03,8:05,3430,7.94,7.61,145,243,158,25.5,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-28,8:56,8:58,9680,7.91,8.2,144,285,185,26.3,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2021-12-29,9:34,9:36,3620,7.81,7.58,154,307,199,27.5,0.1,628,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/NB,-,-,-,-,-,-
+7,1,45,2021-12-30,7:19,7:21,790,8.41,7.37,129,320,208,5.4,0.2,849,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2021-12-31,6:57,6:59,705,7.75,7.42,143,259,168,25.3,0.1,805,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2022-01-01,8:37,8:39,250,8.25,7.03,151,359,233,26.6,0.1,295,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/JK,-,-,-,-,-,-
+7,1,45,2022-01-02,8:21,8:23,1600,8.28,7.84,142,293,186,26.2,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-01-03,8:33,8:35,800,8.15,7.61,137,277,180,26.1,0.1,865,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/PP,-,-,-,-,-,-
+7,1,45,2022-01-04,12:15,12:17,390,8.25,6.9,163,323,210,27.9,0.1,326,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/HM,-,-,-,-,-,-
+7,1,45,2022-01-05,11:19,11:21,211,8.42,7.6,210,327,213,27.4,0.1,317,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-01-06,8:16,8:18,760,8.05,7.94,152,340,221,26.1,0.2,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/FR,-,-,-,-,-,-
+7,1,45,2022-01-07,6:59,7:01,1520,7.6,7.4,163,334,217,24.2,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-01-08,11:25,11:27,258,7.95,7.45,149,358,233,28.7,0.2,287,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-01-09,7:25,7:27,120,7.88,7.63,145,350,228,28.3,0.2,116,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-01-10,10:42,10:44,119,7.55,7.11,138,439,285,28.5,0.2,118,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-01-11,10:16,10:18,66,8.09,7.9,129,352,239,27.8,0.1,58.8,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-01-12,13:26,13:28,9940,8.3,7.76,189,249,161,27.1,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",BK/HM,-,-,-,-,-,-
+7,1,45,2022-01-13,10:18,10:20,450,7.67,7.6,115,296,193,28.5,0.1,725,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-01-14,10:17,10:19,930,8.15,7.07,126,325,221,28.5,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2022-01-15,11:46,11:48,440,8.75,7.8,156,341,222,26.9,0.2,777,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-01-16,7:09,7:11,354,8.47,7.8,170,368,231,24.8,0.2,347,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-01-17,14:02,14:04,640,8.66,6.53,144,344,217,29.4,0.1,490,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-01-18,10:10,10:12,185,7.61,7.45,134,317,206,27.9,0.1,161,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FR,-,-,-,-,-,-
+7,1,45,2022-01-19,11:50,11:52,402,7.89,7.35,122,315,205,28,0.1,351,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/BK/JK,-,-,-,-,-,-
+7,1,45,2022-01-20,11:32,11:34,295,7.85,7.28,134,305,196,27.9,0.1,248,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/JK,-,-,-,-,-,-
+7,1,45,2022-01-21,11:00,11:02,670,8.03,7.22,137,328,213,27.5,0.1,793,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-01-22,13:30,13:32,1790,8.23,7.27,178,317,206,27.6,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-01-23,8:58,9:00,65,8.1,7.61,124,315,205,27.2,0.1,60.6,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-01-24,8:53,8:55,71,8.09,7.56,104,408,265,28.2,0.2,57.8,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2022-01-25,10:16,10:18,83,7.94,7.43,129,362,235,28.4,0.2,62.6,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-01-26,9:35,9:38,12,7.7,7.4,161,370,240,27.4,0.2,19.4,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2022-01-27,10:23,10:25,42,7.23,7.29,136,332,216,27.8,0.1,30.3,-,-,Surut,Agak Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",HM/JK,-,-,-,-,-,-
+7,1,45,2022-01-28,9:05,9:07,116,7.21,7.41,170,335,218,26.3,0.2,139,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/PP,-,-,-,-,-,-
+7,1,45,2022-01-29,12:38,12:40,86,8.4,7.56,140,359,233,29.8,0.2,84.2,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP,-,-,-,-,-,-
+7,1,45,2022-01-30,14:29,14:31,1270,7.15,7.4,163,349,227,30.4,0.1,889,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-01-31,11:23,11:25,900,7.75,7.33,138,348,226,29.2,0.2,758,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-02-01,8:05,8:07,2120,7.37,8.12,214,373,242,26.7,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP,-,-,-,-,-,-
+7,1,45,2022-02-02,14:29,14:31,890,8.07,7.09,249,382,248,28.8,0.2,970,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-03,11:32,11:34,190,7.49,7.38,188,355,231,27.1,0.1,209,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-02-04,13:49,13:51,2210,8.37,8.07,242,359,226,27.9,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-05,8:09,8:11,52,8.27,7.36,162,365,237,26.8,0.2,50.3,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-06,10:00,10:02,37,7.57,7.21,214,346,224,27.5,0.2,35.2,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-02-07,11:06,11:08,40,7.6,7.24,217,368,239,28.2,0.2,38.3,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-02-08,9:14,9:16,2340,7.96,7.84,241,356,236,27.2,0.2,228,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-09,9:56,9:58,160,8.19,8.08,168,348,226,27.3,0.2,194,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-10,10:05,10:07,36,7.02,7.11,185,398,259,28.1,0.2,41.3,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FK,-,-,-,-,-,-
+7,1,45,2022-02-11,10:03,10:05,37,7.13,7.31,223,392,254,27.7,0.2,33.5,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-12,9:17,9:19,2600,8.28,7.91,220,390,254,27.9,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-02-13,14:56,14:58,2290,7.01,7.24,218,454,295,28.5,0.2,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK/JK,-,-,-,-,-,-
+7,1,45,2022-02-14,14:35,14:37,179,6.12,7.39,208,344,224,29.6,0.1,189,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK/JK,-,-,-,-,-,-
+7,1,45,2022-02-15,9:10,9:12,68,7.53,7.44,131,327,212,27.6,0.1,70.9,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2022-02-16,9:07,9:09,104,7.15,7.48,200,327,213,27.2,0.1,115,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2022-02-17,8:55,8:57,145,6.89,7.28,230,306,199,26.7,0.1,157,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2022-02-18,7:54,7:56,447,8.16,6.94,220,304,198,26.3,0.1,539,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP,-,-,-,-,-,-
+7,1,45,2022-02-19,8:10,8:12,2070,8.47,6.96,209,283,184,26.5,0.1,195,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-02-20,13:40,13:42,510,8.15,7.04,190,310,201,27.2,0.1,738,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2022-02-21,15:14,15:16,380,7.48,7.32,176,325,211,28.8,0.1,246,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK,-,-,-,-,-,-
+7,1,45,2022-02-22,8:01,8:03,5540,8.08,8.27,253,261,150,24.5,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2022-02-23,7:46,7:48,780,7.6,7.6,184,316,206,26.2,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2022-02-24,7:45,7:47,840,8.47,8.12,236,279,190,25.7,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2022-02-25,8:20,8:22,1500,7.95,6.97,219,294,191,24.2,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP,-,-,-,-,-,-
+7,1,45,2022-02-26,7:58,8:00,180,7.81,7.37,154,348,226,27.1,0.2,172,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2022-02-27,13:45,13:47,95,7.48,7.28,136,395,257,29.6,0.2,84,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK,-,-,-,-,-,-
+7,1,45,2022-02-28,7:49,7:51,1300,7.74,6.11,204,297,193,25.4,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2022-03-01,13:59,14:01,115,7.52,7.21,158,408,261,29.5,0.2,122,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-03-02,10:31,10:33,1290,7.08,7.23,278,533,341,27.5,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",AL/JK,-,-,-,-,-,-
+7,1,45,2022-03-03,7:48,7:50,62,7.52,7.39,199,443,287,25.8,0.2,61.9,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/JK,-,-,-,-,-,-
+7,1,45,2022-03-04,8:59,9:01,1400,7.11,8.17,237,400,260,27.3,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-05,13:20,13:22,1700,7.94,7.49,218,482,313,28.3,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-03-06,9:16,9:18,107,7.86,7.41,81,433,282,27.8,0.2,103,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-03-07,9:08,9:10,1420,8.22,7.49,119,476,304,28.3,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-03-08,10:57,10:59,642,6.82,7.8,248,406,264,27.7,0.2,619,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",JK/HM,-,-,-,-,-,-
+7,1,45,2022-03-09,9:30,9:32,51,8.12,7.14,220,384,143,27.9,0.2,48.3,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-03-10,9:45,9:47,152,7.2,7.24,157,454,295,27.8,0.2,157,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-03-11,9:31,9:33,412,7.31,8.14,226,425,275,27.9,0.2,503,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-12,14:05,14:07,98,7.22,7.61,217,464,301,30.6,0.2,95.6,-,-,Surut,Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-13,10:06,10:08,675,8.2,7.23,278,348,226,27.5,0.2,348,-,-,Surut,Keruh,Normal,ADA,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-03-14,14:31,14:33,702,7.05,7.5,208,381,247,31,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-03-15,9:40,9:42,265,6.86,6.99,144,363,236,29.3,0.2,284,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/PP,-,-,-,-,-,-
+7,1,45,2022-03-16,10:11,10:13,82,7.93,7.73,202,210,136,28.2,0.1,116,-,-,Surut,Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-17,8:15,8:17,314,7.97,7.57,194,314,204,27.6,0.1,341,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-18,8:39,8:41,1242,7.83,8.01,235,296,192,28.2,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-19,9:58,10:00,2100,7.59,8.12,249,315,211,28.2,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-20,10:08,10:10,3990,8.09,7.67,215,285,185,27.1,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-03-21,9:32,9:34,601,7.6,7.54,159,290,190,27.9,0.1,594,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-03-22,9:18,9:20,1010,7.54,7.75,153,278,180,27.6,0.1,1000,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-03-23,9:49,9:51,1170,8.07,7.6,125,299,194,27.2,0.1,945,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-24,9:44,9:46,430,7.96,7.15,241,325,211,27.3,0.2,450,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-25,7:42,7:44,89,7.96,7.36,167,286,186,26.7,0.1,83.7,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-26,12:47,12:49,142,8.31,7.47,238,348,231,30.8,0.2,136,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-03-27,10:10,10:12,177,7.09,7.21,189,296,192,29,0.1,284,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-03-28,14:15,14:17,31,7.45,7.39,175,301,195,28.4,0.1,42.6,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-03-29,9:28,9:30,26,7.74,7.14,146,291,189,27.6,0.1,26.5,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FK,-,-,-,-,-,-
+7,1,45,2022-03-30,9:46,9:48,297,6.54,7.52,118,401,261,28.2,0.2,260,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-03-31,16:06,16:08,160,7.29,7.86,291,435,283,30.3,0.2,157,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-04-01,12:28,12:30,220,7.77,7.21,150,400,260,29,0.1,270,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/JK,-,-,-,-,-,-
+7,1,45,2022-04-02,9:36,9:38,126,6.89,7.65,94,422,275,28.8,0.2,75,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2022-04-03,9:26,9:28,36,6.79,7.6,188,372,242,28,0.2,34.6,-,-,Surut,Agak Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-04-04,8:23,8:24,132,7.35,7.2,129,432,280,26.8,0.2,101,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM/FR,-,-,-,-,-,-
+7,1,45,2022-04-05,13:39,13:41,1820,7.6,7.29,263,356,237,29.4,0.1,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/BK,-,-,-,-,-,-
+7,1,45,2022-04-06,8:31,8:33,129,8.3,7.74,216,396,260,27.2,0.2,114,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-04-07,9:47,9:49,73,7.65,7.45,244,380,247,28,0.2,85,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-04-08,11:14,11:16,452,7.38,7.28,268,354,230,29.8,0.1,454,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/PP,-,-,-,-,-,-
+7,1,45,2022-04-09,13:15,13:17,138,7.75,7.05,251,298,193,29,0.1,140,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-04-10,9:47,9:49,820,8.2,6.16,259,347,228,29.8,0.2,812,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-04-11,9:12,9:14,76,7.82,7.13,228,402,262,28.9,0.2,79.3,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-04-12,11:26,11:28,500,7.26,6.82,223,569,241,30.9,0.2,467,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-04-13,13:47,13:49,37,7.65,7.51,254,273,177,28.3,0.2,35.4,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-04-14,10:15,10:17,152,6.93,7.77,203,371,241,28.2,0.2,121,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-04-15,9:36,9:38,48,7.5,7.42,170,215,139,26.9,0.2,52.4,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/JK,-,-,-,-,-,-
+7,1,45,2022-04-16,8:42,8:44,190,7.48,7.54,234,294,191,27.5,0.1,200,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-04-17,8:12,8:14,592,8.2,7.86,206,281,183,26.7,0.1,587,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-04-18,7:44,7:46,112,7.31,7.46,235,352,229,26.8,0.2,107,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM,-,-,-,-,-,-
+7,1,45,2022-04-19,8:20,8:22,126,7.25,7.56,225,340,221,27.6,0.2,70.4,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-04-20,9:44,9:46,43,7.66,7.53,152,378,246,28.1,0.2,25.4,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/JK,-,-,-,-,-,-
+7,1,45,2022-04-21,9:28,9:30,30,7.7,7.36,237,390,254,28.1,0.2,24.9,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-04-22,13:15,13:17,6890,8.23,7.31,257,231,150,27.9,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-04-23,15:00,15:02,79,7.86,7.4,118,367,239,27.6,0.2,81.4,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-04-24,9:01,9:03,135,7.57,7.62,164,274,178,27.7,0.1,133,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM,-,-,-,-,-,-
+7,1,45,2022-04-25,13:57,13:59,122,8.01,7.84,196,294,191,29.5,0.1,102,-,-,Surut,Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-04-26,10:05,10:07,94,7.81,7.16,50,403,262,28.2,0.2,75.4,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM/JK,-,-,-,-,-,-
+7,1,45,2022-04-27,9:49,9:51,3220,8.21,7.46,217,243,158,26.6,0.1,777,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-04-28,15:08,15:10,4800,7.9,7.8,250,255,165,26.8,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/PP/FK,-,-,-,-,-,-
+7,1,45,2022-04-29,14:01,14:03,131,7.93,7.22,158,435,283,28.7,0.3,100,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-04-30,15:13,15:15,105,7.74,7.43,131,411,267,28.4,0.2,99.2,-,-,Surut,Keruh,Normal,ADA,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-01,8:54,8:56,53,7.96,7.9,229,418,273,27.7,0.2,50.2,-,-,Surut,Keruh,Normal,ADA,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-05-02,9:58,10:00,37,8.34,7.24,95,405,263,28.1,0.1,34.5,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-03,8:25,8:27,47,8.05,7.05,197,417,271,27.2,0.1,42.6,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/BK,-,-,-,-,-,-
+7,1,45,2022-05-04,9:18,9:20,10,7.51,7.39,167,380,247,28.6,0.2,8.5,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-05-05,13:47,13:49,47,8.04,7.35,110,420,273,28.4,0.2,46.8,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-05-06,10:08,10:10,63,8.2,7.18,125,346,225,29.2,0.2,57.1,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-07,14:10,14:12,298,8.41,7.21,149,342,223,29.7,0.1,330,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK/FR,-,-,-,-,-,-
+7,1,45,2022-05-08,9:31,9:33,38,7.96,6.84,224,370,240,29.3,0.2,36.5,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-05-09,10:04,10:06,34,8.16,7.48,209,389,249,28.6,0.2,28,-,-,Surut,Agak Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-05-10,13:42,13:44,748,8.36,7.64,237,285,182,26.7,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-05-11,10:31,10:33,78,6.45,7.34,124,325,163,28.3,0.1,75.4,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-05-12,15:29,15:31,1230,7.84,7.4,255,348,225,28.4,0.2,1000,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-05-13,10:58,11:00,109,8.48,7.42,191,443,288,28.7,0.2,123,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-14,10:08,10:10,118,8.06,7.35,220,417,271,28.2,0.2,122,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-05-15,8:20,8:22,245,8.17,6.74,179,416,270,27.3,0.2,267,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-05-16,10:07,10:09,81,7.83,7.41,170,424,275,28.7,0.2,78.3,-,-,Pasang,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR/HM,-,-,-,-,-,-
+7,1,45,2022-05-17,10:16,10:18,1112,7.68,7.44,109,410,269,29.4,0.2,815,-,-,Pasang,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-05-18,10:47,10:49,710,7.95,7.2,193,385,250,27.8,0.2,692,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FR,-,-,-,-,-,-
+7,1,45,2022-05-19,8:50,8:52,18,8.1,7.36,119,352,229,27.1,0.2,18,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FR,-,-,-,-,-,-
+7,1,45,2022-05-20,9:59,10:01,64,7.88,7.29,132,451,293,28.7,0.2,37.7,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-21,8:17,8:19,32,7.15,7.42,117,419,273,27.5,0.2,29.6,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-22,8:13,8:15,23,7.93,7.02,115,322,217,27.4,0.1,25.6,-,-,Pasang,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-05-23,10:43,10:45,16,8.32,7.04,204,415,270,29.5,0.2,14.8,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-05-24,13:58,14:00,35,7.49,7.35,120,458,298,30,0.2,31.7,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-05-25,10:19,10:21,12,7.46,7.41,112,421,274,28,0.2,10.8,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-26,8:18,8:20,127,8.28,7.22,205,478,310,27.1,0.1,129,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/JK,-,-,-,-,-,-
+7,1,45,2022-05-27,9:12,9:14,27,8.25,7.18,129,414,269,27.6,0.2,25.4,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-05-28,8:22,8:24,139,8.99,8.04,129,356,231,27,0.2,137,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-05-29,9:59,10:01,33,7.47,7.12,147,412,267,28.1,0.2,30.2,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-05-30,10:07,10:09,73,7.81,6.99,149,425,277,27.9,0.2,68.1,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FK/PP,-,-,-,-,-,-
+7,1,45,2022-05-31,8:01,8:03,216,7.97,7.23,197,308,200,26.7,0.1,213,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-06-01,9:54,9:56,225,7.84,7.28,171,308,203,29,0.1,212,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-06-02,13:25,13:27,195,8.19,7.1,206,358,231,29.7,0.1,161,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FP,-,-,-,-,-,-
+7,1,45,2022-06-03,14:39,14:41,130,8.13,7.79,160,398,259,30,0.2,132,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-06-04,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+7,1,45,2022-06-05,10:07,10:09,14,7.84,7.11,146,425,276,27.8,0.2,12.2,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-06-06,10:07,10:09,108,8.44,7.22,159,309,201,28.9,0.1,102,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK,-,-,-,-,-,-
+7,1,45,2022-06-07,14:18,14:20,306,6.62,7.56,175,324,211,30.9,0.1,317,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-06-08,9:31,9:33,31,7.75,7.41,115,322,210,28.7,0.1,34.5,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-06-09,10:07,10:09,246,7.4,7.3,157,484,314,30.5,0.2,245,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-06-10,8:23,8:25,159,8.22,7.3,132,324,210,27.9,0.1,97.8,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR,-,-,-,-,-,-
+7,1,45,2022-06-11,8:37,8:39,25,8.23,7.27,105,316,206,28,0.1,28.8,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-06-12,9:59,10:01,950,7.74,7.04,180,311,199,29.5,0.1,962,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-06-13,9:45,9:47,41,7.6,7.22,156,312,203,28.3,0.1,29.8,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-06-14,9:53,9:55,40,7.15,7.76,126,306,199,27.9,0.1,28.8,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-06-15,9:37,9:39,159,7.59,7.02,202,318,207,28.2,0.1,138,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-06-16,15:12,15:14,880,7.48,7.14,190,314,204,30.4,0.1,920,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-06-17,8:33,8:35,752,8.04,7.91,203,308,200,27.9,0.1,734,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM,-,-,-,-,-,-
+7,1,45,2022-06-18,8:20,8:22,323,7.59,7.41,215,327,211,27.4,0.2,306,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-06-19,10:01,10:03,1870,8.14,7.4,130,368,241,27.2,0.2,1000,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-06-20,10:58,11:00,240,7.75,7.4,168,405,256,29.5,0.1,240,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-06-21,10:36,10:38,2910,7.76,7.15,143,452,293,29.1,0.2,1000,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-06-22,13:34,13:36,39,7.49,7.16,122,410,266,29.7,0.2,26.7,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FR,-,-,-,-,-,-
+7,1,45,2022-06-23,10:12,10:14,72,8.01,7.54,113,430,279,29.2,0.2,70.5,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-06-24,8:20,8:22,27,7.49,7.38,137,428,282,26.6,0.2,29.8,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-06-25,8:20,8:22,34,8.3,7.4,120,420,271,25.6,0.2,33.2,-,-,Surut,Agak Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-06-26,10:23,10:24,24,7.89,7.43,119,453,294,28.4,0.2,49.2,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-06-27,14:05,14:07,8710,8.34,7.15,190,288,202,26.5,0.1,1000,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-06-28,9:24,9:26,55,7.6,7.32,121,430,275,27.5,0.2,45.3,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",HM/FR/NB,-,-,-,-,-,-
+7,1,45,2022-06-29,9:48,9:50,630,7.06,7.43,160,376,229,28.1,0.2,705,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-06-30,15:24,15:26,59,7.7,7.4,179,509,324,30.6,0.2,53.1,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-01,14:20,14:22,11,7.52,7.88,152,387,244,30.2,0.2,10.2,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-02,8:21,8:23,30,7.73,7.18,158,426,273,26.9,0.2,34.7,-,-,Surut,Agak Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-07-03,9:42,9:44,466,7.85,7.2,176,334,217,27.4,0.2,367,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-07-04,14:29,14:31,21,7.14,7.2,156,474,308,28.9,0.2,18.5,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-07-05,11:20,11:22,228,7.13,7.3,176,411,267,28.7,0.2,240,-,-,Pasang,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-07-06,14:46,14:48,47,8.02,7.22,125,461,299,29,0.2,40.6,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-07-07,10:33,10:35,37,8.21,7.76,126,455,295,27.5,0.2,33.4,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/HM,-,-,-,-,-,-
+7,1,45,2022-07-08,13:54,13:56,110,7.49,7.63,141,460,299,30,0.2,119,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-09,8:40,8:42,35,7.8,7.02,143,435,283,26.6,0.2,32.4,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-10,9:55,9:57,18,8.6,7.2,189,415,269,27,0.2,14.5,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-07-11,14:20,14:22,93,7.24,7.22,181,316,206,29.5,0.1,99.2,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-07-12,13:56,13:58,322,8.19,7.49,164,319,207,28.5,0.1,223,-,-,Surut,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-07-13,14:59,15:01,152,8.05,7.48,116,456,297,29.9,0.2,52.4,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FR,-,-,-,-,-,-
+7,1,45,2022-07-14,13:30,13:32,99,7.29,7.23,137,422,274,28.1,0.2,114,-,-,Pasang,Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",BK/FR,-,-,-,-,-,-
+7,1,45,2022-07-15,8:46,8:48,53,7.84,7.93,121,449,290,25.6,0.2,43.2,-,-,Surut,Agak Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-16,14:19,14:21,24,8.47,8.04,139,478,301,29.8,0.2,37.8,-,-,Surut,Agak Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-07-17,9:56,9:58,25,8.01,7.44,188,424,275,29,0.2,22.5,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-07-18,13:41,13:43,128,8.14,7.15,141,410,266,26.4,0.2,135,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-07-19,14:39,14:41,30,7.55,7.22,159,418,272,30.6,0.2,26,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FR,-,-,-,-,-,-
+7,1,45,2022-07-20,9:45,9:47,12,8.9,7.44,153,412,268,28.8,0.2,10.7,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2022-07-21,9:57,9:59,13,7.75,7.12,141,410,266,28,0.2,9.4,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2022-07-22,9:54,9:56,13,8.06,7.35,180,415,269,28.1,0.2,8.7,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB,-,-,-,-,-,-
+7,1,45,2022-07-23,13:50,13:52,3,7.49,7.3,174,421,269,29,0.2,3.2,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK,-,-,-,-,-,-
+7,1,45,2022-07-24,10:02,10:04,7,7.7,7.43,170,378,245,28.3,0.2,2.5,-,-,Surut,Normal,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-07-25,14:22,14:24,17,7.49,7.27,182,405,263,30.4,0.2,9.2,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-07-26,14:20,14:22,23,7.79,6.95,172,421,273,31.1,0.2,14.5,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/FP,-,-,-,-,-,-
+7,1,45,2022-07-27,13:44,13:46,25,7.82,7.64,162,418,270,31.6,0.2,16.2,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-28,14:09,14:11,14,8.42,7.53,193,423,257,31.4,0.2,10.2,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-29,14:25,14:27,11,8.52,7.84,190,438,236,31.8,0.2,9.8,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-30,13:39,13:41,8,8.28,7.44,197,416,284,31.4,0.2,9.8,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-07-31,9:37,9:39,11,8.01,7.15,168,445,289,27.9,0.2,11.2,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/HM,-,-,-,-,-,-
+7,1,45,2022-08-01,14:07,14:09,18,7.6,7.22,153,487,316,31.4,0.2,10.5,-,-,Surut,Normal,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-08-02,14:16,14:18,13,8.09,7.12,128,463,296,30.1,0.2,10.3,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK/HM,-,-,-,-,-,-
+7,1,45,2022-08-03,14:36,14:38,11,8.08,7.86,119,458,297,30.7,0.2,7.2,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/HM,-,-,-,-,-,-
+7,1,45,2022-08-04,13:42,13:44,10,8.12,7.23,148,410,266,28.1,0.2,13.6,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/HM,-,-,-,-,-,-
+7,1,45,2022-08-05,14:48,14:50,5,8.03,7.44,160,408,265,29.7,0.2,2.5,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-08-06,8:19,8:21,36,8.28,7.37,122,442,289,26.8,0.2,37.4,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP,-,-,-,-,-,-
+7,1,45,2022-08-07,9:37,9:39,20,7.15,7.63,160,421,274,27.4,0.2,9.6,-,-,Surut,Normal,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-08-08,12:47,12:49,38,7.36,7.48,112,434,282,28.1,0.2,39.2,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-08-09,10:07,10:09,21,7.9,7.25,140,425,276,28.2,0.2,14.7,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-08-10,14:17,14:19,8,7.74,7.23,189,462,291,31.2,0.2,4.7,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-11,9:45,9:47,6,8.01,7.22,170,426,276,28.7,0.2,2.8,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-08-12,14:12,14:14,10,8.22,7.2,110,369,239,32.3,0.2,7.2,-,-,Surut,Normal,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK/JK,-,-,-,-,-,-
+7,1,45,2022-08-13,13:59,14:01,31,8.17,7.35,196,443,287,31.2,0.2,29.8,-,-,Surut,Agak Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-08-14,14:35,14:37,10,8.31,7.65,194,465,290,30.1,0.2,8.7,-,-,Surut,Normal,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-15,9:06,9:08,24,7.58,7.74,152,409,266,26.4,0.2,26.6,-,-,Surut,Agak Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-16,10:30,10:32,31,8.37,7.48,204,426,268,27.4,0.2,28.4,-,-,Surut,Agak Keruh,Normal,Ada,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-17,11:17,11:19,10,8.2,7.68,197,442,278,30.3,0.2,10.6,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-18,14:48,14:50,1490,8.52,7.84,113,394,273,23.8,0.2,1000,-,-,Surut,Keruh,Normal,Tidak,Ada,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-19,14:18,14:20,64,7.4,7.18,180,403,251,29.1,0.2,60.5,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",BK/JK,-,-,-,-,-,-
+7,1,45,2022-08-20,14:07,14:09,25,8.07,7.3,225,476,309,30.4,0.2,28.7,-,-,Surut,Keruh,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-08-21,8:22,8:24,5,8.09,7.26,202,485,305,26.9,0.2,3.4,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-22,14:16,14:18,4,8.24,7.11,207,457,286,30.9,0.2,3.4,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-23,14:09,14:11,23,8.38,7.58,211,413,264,29.2,0.2,22.2,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-
+7,1,45,2022-08-24,13:39,13:41,7,7.94,7.22,148,617,401,30.2,0.3,5.8,-,-,Surut,Normal,Normal,Tidak,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/FP,-,-,-,-,-,-
+7,1,45,2022-08-25,14:12,14:14,157,7.1,7.28,149,415,269,31.9,0.2,169,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FR/JK,-,-,-,-,-,-
+7,1,45,2022-08-26,14:05,14:07,53,7.2,7.2,154,488,317,31.8,0.2,75.4,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/JK,-,-,-,-,-,-
+7,1,45,2022-08-27,13:35,13:37,54,7.82,7.21,202,473,307,29.8,0.2,37.6,-,-,Surut,Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",NB/BK,-,-,-,-,-,-
+7,1,45,2022-08-28,9:10,9:12,42,7.82,7.47,174,386,181,25.3,0.1,40.8,-,-,Surut,Agak Keruh,Normal,Ada,Tidak,Tidak,"WQ14A, WQ14B, Mining Act",FP/HM,-,-,-,-,-,-

@@ -55,7 +55,7 @@
                         <li class="nav-item">
                             <a class="nav-link" id="custom-content-above-Organics-tab" data-toggle="pill" href="#custom-content-above-Organics" role="tab" aria-controls="custom-content-above-Organics" aria-selected="false">Organics</a>
                         </li>
-
+                        
                     </ul>
                     <form action="/surfacewater/marinesurfacewater" method="post" checked enctype="multipart/form-data" autocomplete="off">
                         @csrf
@@ -65,6 +65,7 @@
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Point ID</label>
                                     <div class="col-sm-6">
                                         <select class="form-control form-control-sm " name="point_id">
+                                            <option value="" selected disabled>--SELECT--</option>
                                             @foreach ($code_units as $code)
                                             @if (old('point_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
@@ -161,8 +162,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Oil Layer</label>
                                                         <div class="col-sm-5">
-                                                            <input name="oil_ayer" type="text" class="form-control form-control-sm @error('oil_ayer') is-invalid @enderror" value="{{ old('oil_ayer') }}" />
-                                                            @error('oil_ayer')
+                                                            <input name="oil_layer" type="text" class="form-control form-control-sm @error('oil_layer') is-invalid @enderror" value="{{ old('oil_layer') }}" />
+                                                            @error('oil_layer')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>

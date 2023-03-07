@@ -29,7 +29,7 @@
                 </div>
 
                 <!-- /.card-header -->
-                <form action="/groundwater/masterttn/codesamplettn/{{ $Codes->failed_at }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                <form action="/groundwater/masterttn/codesamplettn/{{ $Codes->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                     @method('put')
                     @csrf
                     <div class="card-body">

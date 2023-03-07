@@ -20,7 +20,7 @@ class StdBlastingTable extends Controller
         return view('dashboard.Blasting.TblStandard.index',[
             "tittle"=>" Table Blasting",
             'breadcrumb'=>'Table Blasting',
-            'TableStandard'=>StandardBlasting::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+            'TableStandard'=>StandardBlasting::with('user')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
 
          ]);
     }

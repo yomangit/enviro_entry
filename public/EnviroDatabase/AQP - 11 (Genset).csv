@@ -1,0 +1,10 @@
+user_id,point_id,date,engine,fuel_type,capacity,ambient_temperature,stack_temperature,meter_temperature,moisture_content,actual_volume_sample,standard_volume_sample,actual_oxygen_o2,velocity_linear,dry_molecular_weight,actual_stack_flowrate,percent_of_isokinetic,total_particulate_isokinetic_actual,sulfur_dioxide_so2_actual,nitrogen_oxide_nox_as_nitrogen_dioxide_no2_actual,nitrogen_oxide_nox_actual,carbon_monoxide_co_actual,carbon_dioxide_co,opacity,total_particulate_isokinetic,sulfur_dioxide_so2,nitrogen_oxide_nox_as_nitrogen_dioxide_no2,nitrogen_oxide_nox,carbon_monoxide_co
+1,11,2018-03-18,Genset,Diesel,18.25,37,320,37,3.06,0.633,0.614,16.2,21,29.2,2,102.3,8,20,64,-,59,4,10,13,34,107,-,99
+1,11,2018-11-22,Genset,Diesel,18.25,35,404,35,15.9,0.909,0.89,10.6,40.4,29.7,3.9,99.4,50,20,20,-,143,8,10,39,20,20,-,110
+1,11,2019-04-15,Genset,Diesel,18.25,33,394,33,9.6,0.841,0.795,11.6,33.1,29.5,2.3,104,16,6,150,-,547,6,10,13,6,127,-,465
+1,11,2019-12-17,Genset,Diesel,18.25,38,388,38,9.2,1.44,1.35,12,31.2,29.5,2.2,100,21,82,10,-,390,-,-,19,73,10,-,346
+1,11,2020-03-17,Genset,Diesel,18.25,32.8,390,32.8,9.1,1.29,1.25,12,28.5,29.4,2.01,104,31,1,10,-,287,6,10,26,1,10,-,241
+1,11,2020-09-15,Genset,Diesel,18.25,34,391,34,8.7,1.63,1.6,13,35.6,29.5,4.5,104,28,69,252,1120,448,7,10,28,61,220,982,392
+1,11,2021-03-31,Genset,Diesel,18.25,33,392,33,6.2,1.47,1.44,13,32.3,29.6,4.1,101,21,53,54,770,602,7,12,21,44,45,640,501
+1,11,2021-09-15,Genset,Diesel,18.25,34.7,397,34.7,5.2,1.49,1.44,13,32.5,29.4,4.08,100,18,1,53,730,536,6,10,19,1,57,790,578
+1,11,2022-03-03,Genset,Diesel,18.25,37.3,306,37.3,7,1.56,1.49,14,30.7,29.4,3.85,97,14,387,46,670,517,5,13,16,439,52,760,587

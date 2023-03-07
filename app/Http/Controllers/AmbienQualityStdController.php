@@ -20,7 +20,7 @@ class AmbienQualityStdController extends Controller
         return view('dashboard.AirQuality.Ambien.QualityStandard.index', [
             'tittle'=>'Quality Standard',
             'breadcrumb'=>'Quality Standard',
-            'QualityStandard'=>AmbienQualityStd::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+            'QualityStandard'=>AmbienQualityStd::with('user')->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
         ]);
     }
 

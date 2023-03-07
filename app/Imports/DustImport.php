@@ -19,7 +19,9 @@ class DustImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-        return new Dust([
+		
+		
+			return new Dust([
             'user_id'=>$row['user_id'],
             'codedust_id'=>$row['codedust_id'],
             'date_in'=>$row['date_in'],
@@ -28,6 +30,7 @@ class DustImport implements ToModel,WithHeadingRow
             'm3'=>$row['m3'],
             'm6'=>$row['m6'],
             'm5'=>$row['m5'],
+			'total_solid'=>$row['total_solid'],
             'no_insect'=>$row['no_insect'],
             'vb_dirt'=>$row['vb_dirt'],
             'vb_algae'=>$row['vb_algae'],
@@ -37,6 +40,9 @@ class DustImport implements ToModel,WithHeadingRow
             'total_vlm_water'=>$row['total_vlm_water'],
             'remarks'=>$row['remarks'],
         ]);
+		
+		
+        
     }
     public function rules(): array
     {

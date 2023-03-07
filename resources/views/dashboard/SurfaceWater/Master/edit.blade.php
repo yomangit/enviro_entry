@@ -41,6 +41,7 @@
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
                                     <div class="col-sm-7">
                                         <select class="form-control form-control-sm " name="codesample_id">
+                                        <option  selected disabled>--SELECT--</option>
                                             @foreach ($code_units as $code)
                                             @if (old('codesample_id',$Input->codesample_id)===$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
@@ -56,11 +57,12 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="form-group row">
-                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
                                     <div class="col-sm-7">
-                                        <select class="form-control form-control-sm " name="standard_id">
+                                        <select class="form-control form-control-sm " name="codesample_id">
+                                            <option  selected disabled>--SELECT--</option>
                                             @foreach ($QualityStandard as $code)
-                                            @if (old('standard_id',$Input->standard_id)===$code->id)
+                                            @if (old('codesample_id',$Input->standard_id)==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
                                             @else
                                             <option value="{{$code->id}}">{{$code->nama}}</option>
@@ -72,6 +74,7 @@
 
                                 </div>
                             </div>
+                            
                             <div class="col-12 col-md-6">
                                 <div class="form-group row">
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>

@@ -20,7 +20,7 @@ class EvaporationPointIdController extends Controller
         return view('dashboard.Weather.Evaporation.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => Evaporationpointid::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'Codes' => Evaporationpointid::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportEvaporationPoinId()

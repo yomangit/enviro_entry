@@ -46,16 +46,21 @@
                     @endif
                   @can('admin')
                   <a href="/monitoring/marine/create" class="btn bg-gradient-secondary btn-xs ml-2 my-1"><i class="fas fa-plus mr-1"></i>Add Data</a>
-                    <a href="/exportfreshwater" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                    <a href="/exportmarine" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                     <a href="#" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                         <i class="fas fa-upload mr-1"></i>Excel
                     </a>
                   @endcan
                     <div class=" card-tools p-1 mr-2 form-inline">
                         <form action="/monitoring/marine" class="form-inline">
-                            <div class="input-group date mr-2" id="reservationdate7" style="width: 85px;" data-target-input="nearest">
-                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                            </div>
+                                <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                    <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                </div>
+                                <span class="input-group-text form-control-sm ">To</span>
+
+                                <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                    <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                </div>
                          
                             <div style="width: 118px;" class="input-group mr-1">
                                 <select class="form-control form-control-sm " name="search">
@@ -81,6 +86,30 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="location1">
+                                            <option value="" selected>Location 2</option>
+                                            @foreach ($LocationBiota as $code)
+                                            @if ( request('location1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="location2">
+                                            <option value="" selected>Location 3</option>
+                                            @foreach ($LocationBiota as $code)
+                                            @if ( request('location2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
                             <div class="mr-2">
                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                             </div>
@@ -132,10 +161,10 @@
                                     @can('admin')
                                     <td>
                                         <div style="width: 50px">
-                                            <a href="/monitoring/marine/{{ $freshwater->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <a href="/monitoring/marine/{{ $freshwater->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <form action="/monitoring/marine/{{ $freshwater->created_at }}" method="POST" class="d-inline">
+                                            <form action="/monitoring/marine/{{ $freshwater->id }}" method="POST" class="d-inline">
                                                 @method('delete')
                                                 @csrf
                                                 <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -187,7 +216,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form action="/importfreshwater" method="POST" enctype="multipart/form-data">
+                            <form action="/importmarine" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="modal-body">
                                     <div class="custom-file">
@@ -230,10 +259,18 @@
     title: {
         text:  {!! json_encode( $freshwater->Biota->nama) !!}
     },
-    xAxis: {
-        categories: {!! json_encode($date) !!},
-        crosshair: true
-    },
+    xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true,
+        labels: {
+                style: {
+                   
+                    fontSize:'8px'
+                }
+            }
+    }],
     yAxis: {
         min: 0,
         title: {
@@ -256,22 +293,26 @@
     },
     series: [{
         name: 'Taxa Richness',
+        xAxis: 1,
         color:'#003049',
         data: {!! json_encode($taxa_richness) !!}
 
     }, {
         name: 'Species Density',
         color:'#D62828',
+        xAxis: 1,
         data: {!! json_encode($species_density) !!}
 
     }, {
         name: 'Diversity Index',
         color:'#F77F00',
+        xAxis: 1,
         data: {!! json_encode($diversity_index) !!}
 
     }, {
         name: 'Evenness Value',
         color:'#FCBF49',
+        xAxis: 1,
         data: {!! json_encode($evenness_value) !!}
 
     },{

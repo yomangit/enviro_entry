@@ -116,6 +116,7 @@
                         <div class="tab-content" id="custom-content-above-tabContent">
                             <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
                                 @if ($Codes->count())
+                                <div class="table-responsive card card-primary card-outline">
                                 <table role="grid" class="table table-bordered table-sm table-head-fixed ">
                                     <thead style=" color:#005245">
                                         <tr>
@@ -644,8 +645,7 @@
 
                                     </tbody>
                                 </table>
-
-
+                                </div>
 
                             </div>
                             <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
@@ -894,11 +894,11 @@
                                             <tr class="text-center " style="font-size: 12px">
 
                                                 <td>{{$no++}}</td>
-                                                <td><input readonly style="width: 80px" name="locationResume" type="text" step="0.0001" class="form-control form-control-sm @error('locationResume') is-invalid @enderror" value="{{ $code->CodelocationNM->nama }}" /></td>
+                                                <td><input readonly style="width: 80px" name="locationresume" type="text" step="0.0001" class="form-control form-control-sm @error('locationresume') is-invalid @enderror" value="{{ $code->CodelocationNM->nama }}" /></td>
 
                                                 <form action="/airquality/noisemeter/resumebulanan" method="post" checked enctype="multipart/form-data" autocomplete="off">
                                                     @csrf
-                                                    <td hidden><input style="width: 80px" name="locationResume" type="text" step="0.0001" class="form-control form-control-sm @error('locationResume') is-invalid @enderror" value="{{ $code->CodelocationNM->id }}" /></td>
+                                                    <td hidden><input style="width: 80px" name="locationresume" type="text" step="0.0001" class="form-control form-control-sm @error('locationresume') is-invalid @enderror" value="{{ $code->CodelocationNM->id }}" /></td>
                                                     <td><input readonly style="width: 80px" name="date" type="text" class="form-control form-control-sm @error('date') is-invalid @enderror" value="{{ date('M-Y', strtotime( $code->date)) }}" /></td>
                                                     <td><input readonly style="width: 80px" name="l1" type="number" step="0.0001" class="form-control form-control-sm @error('l1') is-invalid @enderror" value="{{$a1}}" /></td>
                                                     <td><input readonly style="width: 80px" name="l2" type="number" step="0.0001" class="form-control form-control-sm @error('l2') is-invalid @enderror" value="{{$a2}}" /></td>

@@ -20,7 +20,7 @@ class SoilQualityStandardController extends Controller
         return view('dashboard.SoilQuality.QualityStandard.index', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
-            'QualityStandard' => Soilqualitystandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
+            'QualityStandard' => Soilqualitystandard::with('user')->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
         ]);
     }
 

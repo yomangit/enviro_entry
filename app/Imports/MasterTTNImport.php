@@ -21,7 +21,7 @@ class MasterTTNImport implements ToModel, WithHeadingRow
     {
         return new Masterttn([
             'user_id' => $row['user_id'],
-            'gwcodesample_id' => $row['gwcodesample_id'],
+            'codesamplettn_id' => $row['codesamplettn_id'],
             'gwtablestandard_id' => $row['gwtablestandard_id'],
             'date' => $row['date'],
             'start_time' => $row['start_time'],

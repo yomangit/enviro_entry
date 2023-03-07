@@ -54,15 +54,14 @@
                     <div class=" card-tools p-1 mr-2 form-inline">
                         <form action="/monitoring/freshwater/master" class="form-inline">
                             <!-- <label for="fromDate" class="mr-2">From</label> -->
-                            <div class="input-group date mr-2" id="reservationdate7" style="width: 85px;" data-target-input="nearest">
-                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate7" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
-                            </div>
-                            <!-- <label for="fromDate" class="mr-2 ml-2">To</label>
-    
-                                                            <div class="input-group date mr-2" id="reservationdate" style="width: 85px;" data-target-input="nearest">
-                                                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
-                                                            </div> -->
+                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                    <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                                </div>
+                                <span class="input-group-text form-control-sm ">To</span>
 
+                                <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                    <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                                </div>
                             <div style="width: 118px;" class="input-group mr-1">
                                 <select class="form-control form-control-sm " name="search">
                                     <option value="" selected>Biota</option>
@@ -87,6 +86,30 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="location1">
+                                            <option value="" selected>Location 2</option>
+                                            @foreach ($LocationBiota as $code)
+                                            @if ( request('location1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="location2">
+                                            <option value="" selected>Location 3</option>
+                                            @foreach ($LocationBiota as $code)
+                                            @if ( request('location2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
                             <div class="mr-2">
                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                             </div>
@@ -235,15 +258,26 @@
 <script>
    Highcharts.chart('container', {
     chart: {
+        
+        borderWidth: 1,
+        plotBorderWidth: 1,
         type: 'column'
     },
     title: {
         text:  {!! json_encode( $freshwater->Biota->nama) !!}
     },
-    xAxis: {
-        categories: {!! json_encode($date) !!},
-        crosshair: true
-    },
+    xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true,
+        labels: {
+                style: {
+                   
+                    fontSize:'8px'
+                }
+            }
+    }],
     yAxis: {
         min: 0,
         title: {
@@ -267,21 +301,25 @@
     series: [{
         name: 'Taxa Richness',
         color:'#003049',
+        xAxis: 1,
         data: {!! json_encode($taxa_richness) !!}
 
     }, {
         name: 'Species Density',
         color:'#D62828',
+        xAxis: 1,
         data: {!! json_encode($species_density) !!}
 
     }, {
         name: 'Diversity Index',
         color:'#F77F00',
+        xAxis: 1,
         data: {!! json_encode($diversity_index) !!}
 
     }, {
         name: 'Evenness Value',
         color:'#FCBF49',
+        xAxis: 1,
         data: {!! json_encode($evenness_value) !!}
 
     },{

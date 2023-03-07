@@ -20,7 +20,7 @@ class GwStandardController extends Controller
         return view('dashboard.GroundWater.Standard.index',[
             "tittle"=>"Ground Water table Standard",
             'breadcrumb'=>'Ground Water table Standard',
-            'Master'=>GroundWaterStandard::where('user_id',auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Master'=>GroundWaterStandard::with('user')->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
     }
