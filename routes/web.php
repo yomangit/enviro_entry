@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NoiseController;
 use App\Http\Controllers\AmbienController;
 use App\Http\Controllers\MarineController;
+use App\Http\Controllers\MestomController;
 use App\Http\Controllers\StdBlastingTable;
 use App\Http\Controllers\TailingController;
 use App\Http\Controllers\AuthDustController;
