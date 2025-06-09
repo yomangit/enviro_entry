@@ -17,14 +17,119 @@ class DrinkWaterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function index()
     {
-        return view('dashboard.SurfaceWater.DrinkWater.index',[
-            'tittle'=>'Drink Water',
-            'code_units'=>PointIdDrinkwater::all(),
-            'breadcrumb'=>'Drink Water',
-            'DrinkWater'=>DrinkWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString(),
-            'QualityStandard'=>QualityStdDrinkWater::all()
+        
+
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if (empty($firstDayofPreviousMonth)) {
+            $table = 30;
+        } else
+            $table = ($lastDayofPreviousMonth - $firstDayofPreviousMonth) / 86400;
+        $grafiks = DrinkWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
+        $tanggal = [];
+        $suhu = [];
+        $conductivity = [];
+        $tds = [];
+        $nama = [];
+        $lokasi = [];
+        $tss = [];
+        $do = [];
+        $ph = [];
+        $turbidity = [];
+        $tssStandard = [];
+        $tdsStandard = [];
+        $conductivityStandard = [];
+        $phMin = [];
+        $phMax = [];
+        $doStandard = [];
+
+        foreach ($grafiks as $grafik) {
+            $nama[] = $grafik->PointId->nama;
+            $lokasi[] = $grafik->PointId->lokasi;
+            // $doStandard[]=$grafik->standard->do;
+            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
+
+            if (is_numeric($grafik->temperatur)) {
+                $suhu[] = doubleval($grafik->temperatur);
+            } else {
+
+                $suhu[] = '';
+            }
+
+
+            if (is_numeric($grafik->conductivity)) {
+                $conductivity[] =  doubleval($grafik->conductivity);
+            } else {
+
+                $conductivity[] = '';
+            }
+            if (is_numeric($grafik->tds)) {
+
+                $tds[] =  doubleval($grafik->tds);
+            } else {
+                $tds[] = '';
+            }
+            if (is_numeric($grafik->tss)) {
+                $tss[] =  doubleval($grafik->tss);
+            } else {
+                $tss[] = '';
+            }
+            if (is_numeric($grafik->ph)) {
+                $ph[] =  doubleval($grafik->ph); # code...
+
+            } else {
+                $ph[] = '';
+            }
+            if (is_numeric($grafik->turbidity)) {
+                $turbidity[] =  doubleval($grafik->turbidity); # code...
+
+            } else {
+                $turbidity[] = '';
+            }
+            if (is_numeric($grafik->do)) {
+                $do[] =  doubleval($grafik->do); # code...
+
+            } else {
+                $do[] = '';
+            }
+
+
+
+
+           
+
+
+           
+        }
+        
+
+        return view('dashboard.SurfaceWater.DrinkWater.index', [
+            'tittle' => 'Drink Water',
+            'code_units' => PointIdDrinkwater::all(),
+            'date' => $tanggal,
+            'suhu' => $suhu,
+            'conductivity' => $conductivity,
+            'tds' => $tds,
+            'tss' => $tss,
+            'point' => $nama,
+            'ph' => $ph,
+            'turbidity' => $turbidity,
+            'do' => $do,
+            'doStandard' => $doStandard,
+            'tssStandard' => $tssStandard,
+            'tdsStandard' => $tdsStandard,
+            'cdvStd' => $conductivityStandard,
+            'phMin' => $phMin,
+            'phMax' => $phMax,
+            'breadcrumb' => 'Drink Water',
+            'DrinkWater' =>  DrinkWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString(),
+            'QualityStandard' => QualityStdDrinkWater::all()
         ]);
     }
     public function Exportdrinkwater()
@@ -58,13 +163,13 @@ class DrinkWaterController extends Controller
         if (!auth()->check() || !auth()->user()->is_admin) {
             abort(403);
         }
-        return view('dashboard.SurfaceWater.DrinkWater.create',[
-            'tittle'=>'Drink Water',
-            'breadcrumb'=>'Drink Water',
-            'code_units'=>PointIdDrinkwater::all(),
-            'DrinkWater'=>DrinkWater::where('user_id',auth()->user()->id)->filter(['fromDate','search'])->get()
+        return view('dashboard.SurfaceWater.DrinkWater.create', [
+            'tittle' => 'Drink Water',
+            'breadcrumb' => 'Drink Water',
+            'code_units' => PointIdDrinkwater::all(),
+            'DrinkWater' => DrinkWater::where('user_id', auth()->user()->id)->filter(['fromDate', 'search'])->get()
 
-            
+
         ]);
     }
 
@@ -77,55 +182,54 @@ class DrinkWaterController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'conductivity'=>'required',
-            'point_id'=>'required',
-            'date'=>'required',
-            'tds'=>'required',
-            'tss'=>'required',
-            'turbidity'=>'required',
-            'hardness'=>'required',
-            'color'=>'required',
-            'odor'=>'required',
-            'taste'=>'required',
-            'ph'=>'required',
-            'chloride'=>'required',
-            'fluoride'=>'required',
-            'residual_chlorine'=>'required',
-            'sulphate'=>'required',
-            'sulphite'=>'required',
-            'free_cyanide'=>'required',
-            'total_cyanide'=>'required',
-            'wad_cyanide'=>'required',
-            'ammonia_nh4'=>'required',
-            'ammonia_nnh3'=>'required',
-            'nitrate_no3'=>'required',
-            'nitrate_no2'=>'required',
-            'phosphate_po4'=>'required',
-            'aluminium_al'=>'required',
-            'arsenic_as'=>'required',
-            'barium_ba'=>'required',
-            'cadmium_cd'=>'required',
-            'chromium_cr'=>'required',
-            'chromium_hexavalent'=>'required',
-            'cobalt_co'=>'required',
-            'copper_cu'=>'required',
-            'iron_fe'=>'required',
-            'lead_pb'=>'required',
-            'manganese_mn'=>'required',
-            'mercury_hg'=>'required',
-            'nickel_ni'=>'required',
-            'selenium_se'=>'required',
-            'silver_ag'=>'required',
-            'zinc_zn'=>'required',
-            'fecal_coliform'=>'required',
-            'c_coli'=>'required',
-            'total_coliform_bacteria'=>'required'
+            'conductivity' => 'required',
+            'point_id' => 'required',
+            'date' => 'required',
+            'tds' => 'required',
+            'tss' => 'required',
+            'turbidity' => 'required',
+            'hardness' => 'required',
+            'color' => 'required',
+            'odor' => 'required',
+            'taste' => 'required',
+            'ph' => 'required',
+            'chloride' => 'required',
+            'fluoride' => 'required',
+            'residual_chlorine' => 'required',
+            'sulphate' => 'required',
+            'sulphite' => 'required',
+            'free_cyanide' => 'required',
+            'total_cyanide' => 'required',
+            'wad_cyanide' => 'required',
+            'ammonia_nh4' => 'required',
+            'ammonia_nnh3' => 'required',
+            'nitrate_no3' => 'required',
+            'nitrate_no2' => 'required',
+            'phosphate_po4' => 'required',
+            'aluminium_al' => 'required',
+            'arsenic_as' => 'required',
+            'barium_ba' => 'required',
+            'cadmium_cd' => 'required',
+            'chromium_cr' => 'required',
+            'chromium_hexavalent' => 'required',
+            'cobalt_co' => 'required',
+            'copper_cu' => 'required',
+            'iron_fe' => 'required',
+            'lead_pb' => 'required',
+            'manganese_mn' => 'required',
+            'mercury_hg' => 'required',
+            'nickel_ni' => 'required',
+            'selenium_se' => 'required',
+            'silver_ag' => 'required',
+            'zinc_zn' => 'required',
+            'fecal_coliform' => 'required',
+            'c_coli' => 'required',
+            'total_coliform_bacteria' => 'required'
         ]);
-        $validatedData['user_id']=auth()->user()->id;
-        $validatedData['date']=date('Y-m-d',strtotime(request('date')));
+        $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         DrinkWater::create($validatedData);
-        return redirect('/surfacewater/drinkwater/create')->with('success','New Data  has been added!');
-
+        return redirect('/surfacewater/drinkwater/create')->with('success', 'New Data  has been added!');
     }
 
     /**
@@ -150,13 +254,13 @@ class DrinkWaterController extends Controller
         if (!auth()->check() || !auth()->user()->is_admin) {
             abort(403);
         }
-        return view('dashboard.SurfaceWater.DrinkWater.edit',[
-            'tittle'=>'Drink Water',
-            'breadcrumb'=>'Drink Water',
-            'code_units'=>PointIdDrinkwater::all(),
-            'DrinkWater'=>$drinkwater
+        return view('dashboard.SurfaceWater.DrinkWater.edit', [
+            'tittle' => 'Drink Water',
+            'breadcrumb' => 'Drink Water',
+            'code_units' => PointIdDrinkwater::all(),
+            'DrinkWater' => $drinkwater
 
-            
+
         ]);
     }
 
@@ -170,56 +274,56 @@ class DrinkWaterController extends Controller
     public function update(Request $request, DrinkWater $drinkwater)
     {
         $rules = [
-            'point_id'=>'required',
-            'point_id'=>'required',
-            'conductivity'=>'required',
-            'tds'=>'required',
-            'tss'=>'required',
-            'turbidity'=>'required',
-            'hardness'=>'required',
-            'color'=>'required',
-            'odor'=>'required',
-            'taste'=>'required',
-            'ph'=>'required',
-            'chloride'=>'required',
-            'fluoride'=>'required',
-            'residual_chlorine'=>'required',
-            'sulphate'=>'required',
-            'sulphite'=>'required',
-            'free_cyanide'=>'required',
-            'total_cyanide'=>'required',
-            'wad_cyanide'=>'required',
-            'ammonia_nh4'=>'required',
-            'ammonia_nnh3'=>'required',
-            'nitrate_no3'=>'required',
-            'nitrate_no2'=>'required',
-            'phosphate_po4'=>'required',
-            'aluminium_al'=>'required',
-            'arsenic_as'=>'required',
-            'barium_ba'=>'required',
-            'cadmium_cd'=>'required',
-            'chromium_cr'=>'required',
-            'chromium_hexavalent'=>'required',
-            'cobalt_co'=>'required',
-            'copper_cu'=>'required',
-            'iron_fe'=>'required',
-            'lead_pb'=>'required',
-            'manganese_mn'=>'required',
-            'mercury_hg'=>'required',
-            'nickel_ni'=>'required',
-            'selenium_se'=>'required',
-            'silver_ag'=>'required',
-            'zinc_zn'=>'required',
-            'fecal_coliform'=>'required',
-            'c_coli'=>'required',
-            'total_coliform_bacteria'=>'required'
+            'point_id' => 'required',
+            'point_id' => 'required',
+            'conductivity' => 'required',
+            'tds' => 'required',
+            'tss' => 'required',
+            'turbidity' => 'required',
+            'hardness' => 'required',
+            'color' => 'required',
+            'odor' => 'required',
+            'taste' => 'required',
+            'ph' => 'required',
+            'chloride' => 'required',
+            'fluoride' => 'required',
+            'residual_chlorine' => 'required',
+            'sulphate' => 'required',
+            'sulphite' => 'required',
+            'free_cyanide' => 'required',
+            'total_cyanide' => 'required',
+            'wad_cyanide' => 'required',
+            'ammonia_nh4' => 'required',
+            'ammonia_nnh3' => 'required',
+            'nitrate_no3' => 'required',
+            'nitrate_no2' => 'required',
+            'phosphate_po4' => 'required',
+            'aluminium_al' => 'required',
+            'arsenic_as' => 'required',
+            'barium_ba' => 'required',
+            'cadmium_cd' => 'required',
+            'chromium_cr' => 'required',
+            'chromium_hexavalent' => 'required',
+            'cobalt_co' => 'required',
+            'copper_cu' => 'required',
+            'iron_fe' => 'required',
+            'lead_pb' => 'required',
+            'manganese_mn' => 'required',
+            'mercury_hg' => 'required',
+            'nickel_ni' => 'required',
+            'selenium_se' => 'required',
+            'silver_ag' => 'required',
+            'zinc_zn' => 'required',
+            'fecal_coliform' => 'required',
+            'c_coli' => 'required',
+            'total_coliform_bacteria' => 'required'
         ];
 
 
 
         $validatedData = $request->validate($rules);
-        $validatedData['user_id']=auth()->user()->id;
-        $validatedData['date']=date('Y-m-d',strtotime(request('date')));
+        $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['date'] = date('Y-m-d', strtotime(request('date')));
         DrinkWater::where('id', $drinkwater->id)
             ->update($validatedData);
         return redirect('/surfacewater/drinkwater')->with('success', ' Data has been updated!');
@@ -234,6 +338,6 @@ class DrinkWaterController extends Controller
     public function destroy(DrinkWater $drinkwater)
     {
         DrinkWater::destroy($drinkwater->id);
-        return redirect('/surfacewater/drinkwater')->with('success','Data has been deleted!');
+        return redirect('/surfacewater/drinkwater')->with('success', 'Data has been deleted!');
     }
 }

@@ -26,17 +26,18 @@ class FreshWaterController extends Controller
         }
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
-        $grafiks= FreshWater::with('user')->filter(request(['fromDate','search']))->paginate($table)->withQueryString();
+        $grafiks= FreshWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location','location1','location2']))->paginate($table)->withQueryString();
         $taxa_richness=[];
         $species_density=[];
         $diversity_index=[];
         $evenness_value=[];
         $dominance_index=[];
         $date=[];
+        $nama=[];
         $biotas=[];
        foreach ($grafiks as $grafik ) {
-        $date[]=date('d-M-Y', strtotime( $grafik->date));
-
+        $date[]=date('d-m-Y', strtotime( $grafik->date));
+        $nama[]=$grafik->locationBiota->nama;
         if ($grafik->taxa_richness==='-') {
             $taxa_richness[]='';
         }
@@ -80,13 +81,14 @@ class FreshWaterController extends Controller
             'LocationBiota'=>LocationBiota::all(),
             'breadcrumb' => 'Fresh Water Monitoring',
             'date'=>$date,
+            'point'=>$nama,
             'taxa_richness'=> $taxa_richness,
             'species_density'=> $species_density,
             'diversity_index'=>$diversity_index,
             'evenness_value'=>$evenness_value,
             'dominance_index'=>$dominance_index,
             'biotas'=>$biotas,
-            'Freshwaters' => FreshWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Freshwaters' => FreshWater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','location','location1','location2']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
 

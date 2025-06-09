@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\MasterTTNExport;
 use App\Imports\MasterTTNImport;
 use App\Models\Codesamplettn;
+use App\Models\GroundWaterMonthStandard;
 use App\Models\Masterttn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -26,17 +27,16 @@ class ResourceMasterTTNController extends Controller
         }
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
-        $grafiks = Masterttn::with('user')
-            ->filter(request(['fromDate', 'search']))
-            ->paginate($table)
-            ->withQueryString();
+        $grafiks = Masterttn::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
         $tanggal = [];
         $suhu = [];
         $ph = [];
+        $nama = [];
         $suhu1 = [];
         $ph1 = [];
         foreach ($grafiks as $grafik) 
         {
+            $nama[] = $grafik->CodeSampleTTN->nama;
             $tanggal[] = date('d-m-Y', strtotime($grafik->date));
             if ($suhu1[] = $grafik->temperatur === '-') {
                 //   $tanggal[]=date('d-m-Y', strtotime( $grafik->date));
@@ -62,8 +62,9 @@ class ResourceMasterTTNController extends Controller
             'breadcrumb'=>'Groundwell Community',
             'date' => $tanggal,
             'suhu' => $suhu,
+            'point' => $nama,
             'ph' => $ph,
-            'Master'=>Masterttn::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Master'=>Masterttn::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
             
          ]);
     }
@@ -93,6 +94,7 @@ class ResourceMasterTTNController extends Controller
         return view('dashboard.GroundWater.MasterTTN.create',[
             'breadcrumb'=>'Groundwell Community',
             "tittle"=>"Groundwell Community",
+            'table_standard'=>GroundWaterMonthStandard::all(),
             'code_units'=>Codesamplettn::all(),
             'Codes'=>Masterttn::where('user_id',auth()->user()->id)->filter(request(['fromDate']))->get()//with diguanakan untuk mengatasi N+1 problem
          ]);

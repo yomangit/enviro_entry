@@ -44,10 +44,10 @@
                 </div>
                 @endif
                 <div class="row mx-2">
-                    <div class="col-6 ">
+                    <div class="col-4 ">
                         <p class="card-titel m-2 font-weight-bold">Noise Monthly Resume</p>
                     </div>
-                    <div class="col-6  d-flex justify-content-end form-inline">
+                    <div class="col-8  d-flex justify-content-end form-inline">
                         <form action="/airquality/noisemeter/resumebulanan" class="form-inline" autocomplete="off">
                             {{-- <label for="fromDate" class="mr-2">From</label> --}}
                             <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
@@ -58,11 +58,43 @@
                                     <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
                                         <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                                     </div>
+<<<<<<< HEAD
+=======
+                                    <div class="input-group date mr-2" id="reservationdate6" style="width: 85px;" data-target-input="nearest">
+                                        <input type="text" name="bulan" placeholder="Month" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate6" data-toggle="datetimepicker" value="{{ request('bulan') }}" />
+                                    </div>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                             <div style="width: 125px;" class="input-group mr-1">
                                 <select class="form-control form-control-sm " name="location">
                                     <option value="" selected>Point ID</option>
                                     @foreach ($code_location as $location)
                                     @if ( request('location')==$location->nama)
+                                    <option value="{{($location->nama)}}" selected>{{$location->nama}}
+                                    </option>
+                                    @else
+                                    <option value="{{$location->nama}}">{{$location->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div style="width: 125px;" class="input-group mr-1">
+                                <select class="form-control form-control-sm " name="location1">
+                                    <option value="" selected>Point ID</option>
+                                    @foreach ($code_location as $location)
+                                    @if ( request('location1')==$location->nama)
+                                    <option value="{{($location->nama)}}" selected>{{$location->nama}}
+                                    </option>
+                                    @else
+                                    <option value="{{$location->nama}}">{{$location->nama}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div style="width: 125px;" class="input-group mr-1">
+                                <select class="form-control form-control-sm " name="location2">
+                                    <option value="" selected>Point ID</option>
+                                    @foreach ($code_location as $location)
+                                    @if ( request('location2')==$location->nama)
                                     <option value="{{($location->nama)}}" selected>{{$location->nama}}
                                     </option>
                                     @else
@@ -247,22 +279,23 @@
         </div>
     </section>
 </div>
-@foreach($ResumeBulanan as $resume)
+
 <script>
     Highcharts.chart('container', {
     chart: {
         type: 'spline'
     },
     title: {
-        text: 'Noise quality in {!! json_encode($resume->CodeLocationNM->nama)!!} '
+        
+        text: 'Noise quality '
     },
     
-    xAxis: {
-        categories: {!! json_encode($date)!!},
-        accessibility: {
-            description: 'Months of the year'
-        }
-    },
+    xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($nama) !!},
+        opposite: true
+    }],
     yAxis: {
         title: {
             text: 'Value'
@@ -285,39 +318,43 @@
     series: [{
         name: 'L-01',
          color:'#DE7A22',
+         xAxis: 1,
         marker: {
-            // symbol: 'square'
+           
         },
         data: {!! json_encode($l1) !!}
     },{
         name: 'L-02',
-         color:'#a0bbc4',
+         color:'#a0bbc4', 
+         xAxis: 1,
         marker: {
-            // symbol: 'square'
+           
         },
         data: {!! json_encode($l2) !!}
     },{
         name: 'L-03',
          color:'#187E32',
         marker: {
-            // symbol: 'square'
+           
         },
         data: {!! json_encode($l3) !!}
     },{
         name: 'L-04',
          color:'#417de2',
         marker: {
-            // symbol: 'square'
+           
         },
         data: {!! json_encode($l4) !!}
     },{
         name: 'L-05',
+        xAxis: 1,
        color:'#d14655',
         marker: {
             symbol: 'square'
         },
         data: {!! json_encode($l5) !!}
     },{
+        xAxis: 1,
         name: 'L-06',
          color:'#1ce091',
         marker: {
@@ -325,13 +362,15 @@
         },
         data: {!! json_encode($l6) !!}
     },{
+        xAxis: 1,
         name: 'L-07',
          color:'#ff1493',
         marker: {
-            // symbol: 'square'
+           
         },
         data: {!! json_encode($l7) !!}
     },{
+        xAxis: 1,
         name: 'L-s',
          color:'#00AEE1',
         marker: {
@@ -342,7 +381,7 @@
         name: 'L-m',
          color:'#ff7f50',
         marker: {
-            // symbol: 'square'
+           
         },
         data: {!! json_encode($lm) !!}
     },{
@@ -355,6 +394,5 @@
     }]
     });
 </script>
-@endforeach
 
 @endsection

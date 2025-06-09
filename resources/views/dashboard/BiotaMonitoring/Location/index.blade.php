@@ -86,8 +86,13 @@
 
                                         <td>{{ $code->nama }}</td>
                                         <td>
+<<<<<<< HEAD
 
                                             <a href="/monitoring/location/{{ $code->id  }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+=======
+                                            
+                                            <a href="/monitoring/location/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                                                 <i class="fas fa-pen"></i>
                                             </a>
                                             <form action="/monitoring/location/{{ $code->id }}" method="POST" class="d-inline">

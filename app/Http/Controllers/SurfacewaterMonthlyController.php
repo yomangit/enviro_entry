@@ -19,15 +19,151 @@ class SurfacewaterMonthlyController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         return view('dashboard.SurfaceWater.Monthly.index',[
+=======
+
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if (empty($firstDayofPreviousMonth)) {
+            $table = 30;
+        } else
+            $table = ($lastDayofPreviousMonth - $firstDayofPreviousMonth) / 86400;
+        $grafiks = SurfacewaterMonthly::orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
+        $tanggal = [];
+        $suhu = [];
+        $conductivity = [];
+        $tds = [];
+        $nama = [];
+        $lokasi = [];
+        $tss = [];
+        $ph = [];
+        $do = [];
+        $tssStandard = [];
+        $tdsStandard = [];
+        $conductivityStandard = [];
+        $phMin = [];
+        $phMax = [];
+        $doStandard = [];
+
+        foreach ($grafiks as $grafik) {
+            $nama[] = $grafik->PointId->nama;
+            $lokasi[] = $grafik->PointId->lokasi;
+            // $doStandard[]=$grafik->standard->do;
+            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
+
+            if (is_numeric($grafik->temperature)) {
+                $suhu[] = doubleval($grafik->temperature);
+            } else {
+
+                $suhu[] = '';
+            }
+
+
+            if (is_numeric($grafik->conductivity)) {
+                $conductivity[] =  doubleval($grafik->conductivity);
+            } else {
+
+                $conductivity[] = '';
+            }
+            if (is_numeric($grafik->total_dissolved_solids_tds)) {
+
+                $tds[] =  doubleval($grafik->total_dissolved_solids_tds);
+            } else {
+                $tds[] = '';
+            }
+            if (is_numeric($grafik->total_suspended_solids_tss)) {
+                $tss[] =  doubleval($grafik->total_suspended_solids_tss);
+            } else {
+                $tss[] = '';
+            }
+            if (is_numeric($grafik->ph)) {
+                $ph[] =  doubleval($grafik->ph); # code...
+                
+            } else {
+                $ph[] = '';
+            }
+            if (is_numeric($grafik->dissolved_oxygen_do)) {
+                $do[] =  doubleval($grafik->dissolved_oxygen_do); # code...
+
+            } else {
+                $do[] = '';
+            }
+
+
+            
+
+            if (!is_numeric($grafik->ph)) {
+                $phMax[] = '';
+                $phMin[] = '';
+            } 
+            elseif (is_numeric($grafik->ph) )
+            {
+               
+               
+                $phMax[] =  9;
+                $phMin[] =  6;
+            } 
+
+
+            if (!is_numeric($grafik->conductivity)) {
+                $conductivityStandard[] = '';
+            } 
+            elseif (is_numeric($grafik->conductivity)) {
+                $conductivityStandard[] = doubleval($grafik->standard->conductivity);
+            } else {
+                $conductivityStandard[] = '';
+            }
+            if (is_numeric($grafik->total_suspended_solids_tss)) {
+                
+            if ($grafik->standard->total_suspended_solids_tss) {
+                $tssStandard[] = doubleval($grafik->standard->total_suspended_solids_tss);
+            } else {
+                $tssStandard[] = '';
+            }
+            }
+            if (is_numeric($grafik->total_dissolved_solids_tds)) {
+                $tdsStandard[] = doubleval($grafik->standard->total_dissolved_solids_tds);
+            } 
+            else {
+                $tdsStandard[] = '';
+            }
+        
+            if (is_numeric($grafik->dissolved_oxygen_do)) {
+                $doStandard[] = doubleval($grafik->standard->dissolved_oxygen_do);
+            } else {
+                $doStandard[] = '';
+            }
+        }
+       
+        return view('dashboard.SurfaceWater.Monthly.index',[
+            'date' => $tanggal,
+            'suhu' => $suhu,
+            'conductivity' => $conductivity,
+            'tds' => $tds,
+            'tss' => $tss,
+            'point' => $nama,
+            'ph' => $ph,
+            'do' => $do,
+            'doStandard' => $doStandard,
+            'tssStandard' => $tssStandard,
+            'tdsStandard' => $tdsStandard,
+            'cdvStd' => $conductivityStandard,
+            'phMin' => $phMax,
+            'phMax' => $phMin,
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
             'tittle' => 'Table Monthly ',
             'breadcrumb' => 'Table Monthly ',
             'code_units' => Codesample::all(),
             'MonthStandard' => StandardSurfacewater::all(),
+<<<<<<< HEAD
             'Monthly' => SurfacewaterMonthly::orderBy('date', 'desc')
                 ->filter(request(['fromDate', 'search']))
                 ->paginate(30)
                 ->withQueryString()
+=======
+            'Monthly' => SurfacewaterMonthly::orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString()
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
         ]);
     }
     public function ImportMonthlySurfacewater(Request $request)

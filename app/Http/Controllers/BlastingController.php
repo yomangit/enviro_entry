@@ -31,16 +31,17 @@ class BlastingController extends Controller
         }
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
-        $grafiks = Blasting::with('user')->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
+        $grafiks = Blasting::with('user')->filter(request(['fromDate', 'search','search1','search2']))->orderBy('date','desc')->paginate($table)->withQueryString();
         $tanggal = [];
         $peak_std = [];
+        $nama = [];
         $noise_std = [];
         $noise = [];
         $peak = [];
         foreach ($grafiks as $grafik) {
 
-
-            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
+            $nama[]= $grafik->PointID->nama;
+            $tanggal[] = date('d-m-Y', strtotime($grafik->date));
 
             if (!is_numeric($grafik->peak_vektor)) {
                 $peak_std[] = '';
@@ -83,11 +84,12 @@ class BlastingController extends Controller
             'Point_ID' => PointIdBlasting::all(),
             'noise'=>$noise,
             'noise_std'=>$noise_std,
+            'point' => $nama,
             'peak' => $peak,
             'peak_std' => $peak_std,
             'date' => $tanggal,
             'Standard_id' => StandardBlasting::all(),
-            'Blasting' => Blasting::with('user')->filter(request(['fromDate', 'search']))->orderBy('date','desc')->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Blasting' => Blasting::with('user')->filter(request(['fromDate', 'search','search1','search2']))->orderBy('date','desc')->orderBy('date','desc')->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
 
         ]);
     }

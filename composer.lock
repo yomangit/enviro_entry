@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "4b6819b68b39b9e091e7a43c4ca7578a",
+=======
+    "content-hash": "1779fc50da3d13b7fca064efe2cae809",
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1883,6 +1887,7 @@
         },
         {
             "name": "livewire/livewire",
+<<<<<<< HEAD
             "version": "v2.12.3",
             "source": {
                 "type": "git",
@@ -1893,6 +1898,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/livewire/livewire/zipball/019b1e69d8cd8c7e749eba7a38e4fa69ecbc8f74",
                 "reference": "019b1e69d8cd8c7e749eba7a38e4fa69ecbc8f74",
+=======
+            "version": "v2.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/livewire.git",
+                "reference": "e92233f31dc1b88fb1ac242b32afe1ab7525ee05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/e92233f31dc1b88fb1ac242b32afe1ab7525ee05",
+                "reference": "e92233f31dc1b88fb1ac242b32afe1ab7525ee05",
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                 "shasum": ""
             },
             "require": {
@@ -1944,7 +1961,11 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/livewire/livewire/tree/v2.12.3"
+=======
+                "source": "https://github.com/livewire/livewire/tree/v2.11.2"
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
             },
             "funding": [
                 {
@@ -1952,7 +1973,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-03-03T20:12:38+00:00"
+=======
+            "time": "2023-01-29T23:45:02+00:00"
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
         },
         {
             "name": "maatwebsite/excel",

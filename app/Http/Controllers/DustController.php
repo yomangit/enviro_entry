@@ -25,12 +25,14 @@ class DustController extends Controller
         }
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
-        $grafik = Dust::with('user')->filter(request(['fromDate','search']))->paginate($table)->withQueryString();
+        $grafik = Dust::with('user')->filter(request(['fromDate','search','search1','search2']))->orderBy('date_out','desc')->paginate($table)->withQueryString();
         $date=[];
+        $nama=[];
         $insoluble1=[];$soluble1=[];
         $insoluble=[];$soluble=[];$total=[];
         $i=0;$s=0;
         foreach ($grafik as $grafiks) {
+            $nama[] = $grafiks->CodeDust->nama;
            
             $date[]= date('M-Y', strtotime($grafiks->date_out));
             if (!is_numeric($grafiks->m4) && !is_numeric($grafiks->m3)) {
@@ -55,7 +57,8 @@ class DustController extends Controller
             'breadcrumb'=>'Dust Gauge',
             'tanggal'=>$date,
             'value'=>$total,
-            'Dust'=>Dust::with('user')->orderBy('date_out','desc')->filter(request(['fromDate','search']))->paginate(30)->withQueryString()
+            'point'=>$nama,
+            'Dust'=>Dust::with('user')->filter(request(['fromDate','search','search1','search2']))->orderBy('date_out','desc')->paginate($table)->withQueryString()
         ]);
     }
     public function ExportDust()
@@ -101,10 +104,10 @@ class DustController extends Controller
             'codedust_id'=>'required',
             'date_in'=> 'required',
             'date_out'=>'required',
-            'm4'=>'required',
-            'm3'=>'required',
-            'm6'=>'required',
-            'm5'=>'required',
+            //'m4'=>'required',
+            //'m3'=>'required',
+            //'m6'=>'required',
+            //'m5'=>'required',
             'no_insect'=>'required',
             'vb_dirt'=>'required',
             'vb_algae'=>'required',
@@ -114,7 +117,19 @@ class DustController extends Controller
             'total_vlm_water'=>'required',
             'remarks'=>'required'
         ]);
-      
+		if(empty($request->m3) && empty($request->m4) && empty($request->m5) && empty($request->m6))
+		{
+	  $validatedData['m3']='-';
+	  $validatedData['m4']='-';
+	  $validatedData['m5']='-';
+	  $validatedData['m6']='-';
+		}
+		else{
+			$validatedData['m3']=$request->m3;
+			$validatedData['m4']=$request->m4;
+			$validatedData['m5']=$request->m5;
+			$validatedData['m6']=$request->m6;
+		}
         $validatedData['date_in']= date('Y-m-d',strtotime(request('date_in')));
         $validatedData['date_out']= date('Y-m-d',strtotime(request('date_out')));
         $validatedData['user_id']=auth()->user()->id;

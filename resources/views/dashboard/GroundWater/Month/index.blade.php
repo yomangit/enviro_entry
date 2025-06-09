@@ -48,10 +48,72 @@
 
                     </div>
                     @endif
+<<<<<<< HEAD
 
                     <h3 class="card-title">
                         <a href="/groundwater/monthly/create" class="btn bg-gradient-secondary btn-xs "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                         <a href="#" class="btn  bg-gradient-secondary btn-xs " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+=======
+						<div class="card-tools row p-2 mr-1 form-inline">
+                        <form action="/groundwater/monthly" class="form-inline" autocomplete="off">
+                            <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
+                            </div>
+                            <span class="input-group-text form-control-sm ">To</span>
+
+                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                            </div>
+
+                                <div style="width: 118px;" class="input-group mr-1">
+                                    <select class="form-control form-control-sm " name="search">
+                                        <option value="" selected>Point ID</option>
+                                        @foreach ($code_units as $code)
+                                        @if ( request('search')==$code->nama)
+                                        <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                        @else
+                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                            <div class="mr-2">
+                                <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
+                            </div>
+                        </form>
+                        <form action="/groundwater/monthly">
+                            <button type="submit" class="btn bg-gradient-dark btn-xs">refresh</button>
+                        </form>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="/groundwater/monthly/create" class="btn bg-gradient-secondary btn-xs "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                        <a href="/export/groundwater/monthly" class="btn  bg-gradient-secondary btn-xs " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                         <a href="#" class="btn  bg-gradient-secondary btn-xs " data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                             <i class="fas fa-upload mr-1"></i>Excel
                         </a>
@@ -691,7 +753,11 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+<<<<<<< HEAD
                             <form action="/import/surfacewater/monthly" method="POST" enctype="multipart/form-data">
+=======
+                            <form action="/import/groundwater/month" method="POST" enctype="multipart/form-data">
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                                 @csrf
                                 <div class="modal-body">
                                     <div class="custom-file">
@@ -709,9 +775,183 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+            <div class="card">
+            <div class="card-header">
+                <div class="card-title text center">{{$tittle}} </div>
+            </div>
+            <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+        </div>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
         </div>
     </section>
 </div>
 
+<<<<<<< HEAD
 
+=======
+<script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'spline',
+                zoomType: 'x',
+                panning: true,
+                panKey: 'shift'
+            },
+            title: {
+                text:''
+            },  
+            xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
+            yAxis: {
+                title: {
+                    text: 'Value'
+                }
+            },
+            legend: {
+            layout: 'horizontal',
+            align: 'left',
+            verticalAlign: 'bottom',
+            floating: false,
+            backgroundColor: 'rgba(255,255,255,0.3)',
+            borderWidth: 0,
+            enabled: true
+          },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+        name: 'Temperatur',
+            color: '#1F2833',
+            
+            data: {!!json_encode($suhu) !!},
+            marker: {
+                symbol: 'square'
+            },
+
+    },{
+            name: 'Conductivity (µS/cm)',
+            color: '#DE7A22',
+            
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($conductivity) !!}
+        }, {
+            name: 'Conductivity Std',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#BDB76B',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($cdvStd) !!}
+        },{
+            name: 'TDS',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#F4CC70',
+            marker: {
+                symbol: 'triangle'
+            },
+            data: {!!json_encode($tds) !!}
+        },  {
+            name: 'TDS Std',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#4d7902',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tdsStandard) !!}
+        }, {
+            name: 'TSS',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#20948B',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tss) !!}
+        },{
+            name: 'TSS Std',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#ffce30',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tssStandard) !!}
+        }, {
+            name: 'DO',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#288ba8',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($do) !!}
+        }, {
+            name: 'DO Std',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#e389b9',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($doStandard) !!}
+        }, {
+            name: 'PH',
+            xAxis: 1,
+                xAxis: 0,
+            color: '#6AB187',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($ph) !!}
+        }, {
+            name: 'PH Min',
+            xAxis: 1,
+            xAxis: 0,
+            color: '#ff00aa',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMin) !!}
+        }, {
+            name: 'PH Max',
+            xAxis: 1,
+           
+            color: '#0320fc',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMax) !!}
+        }]
+        });
+
+
+</script>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 @endsection

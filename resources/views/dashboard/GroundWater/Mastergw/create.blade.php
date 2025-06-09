@@ -60,6 +60,25 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Standard ID</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control form-control-sm " name="gwcodesample_id">
+                                            <option value="" selected disabled>--SELECT--</option>
+                                            @foreach ($table_standard as $code)
+                                            @if (old('gwcodesample_id')==$code->id)
+                                            <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->id}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group row">
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
                                     <div class="col-sm-7">
                                         <div class="input-group date" id="reservationdate4" data-target-input="nearest">

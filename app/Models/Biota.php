@@ -28,7 +28,13 @@ class Biota extends Model
     }
 
     public function getRouteKeyName()
+<<<<<<< HEAD
     {
         return 'id';
     }
+=======
+{
+    return 'id';
+}
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 }

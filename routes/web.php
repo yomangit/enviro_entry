@@ -76,6 +76,25 @@ use App\Http\Controllers\AuthResumeMonthlyNoiseController;
 use App\Http\Controllers\DischargeManualPointidController;
 use App\Http\Controllers\GroundWaterMonthStandardController;
 use App\Http\Controllers\DischargeManualQualityStandardController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\EvaporationController;
+use App\Http\Controllers\SurfacewaterMonthlyController;
+use App\Http\Controllers\StandardSurfacewaterController;
+use App\Http\Controllers\EvaporationPointIdController;
+use App\Http\Controllers\GroundWaterMonthController;
+use App\Http\Controllers\GroundWaterMonthStandardController;
+use App\Http\Controllers\MestomController;
+use App\Http\Controllers\RainfallController;
+use App\Http\Controllers\RainfallPointIdController;
+use App\Http\Controllers\SoilQualityController;
+use App\Http\Controllers\SoilQualityPointIDController;
+use App\Http\Controllers\SoilQualityStandardController;
+use App\Http\Controllers\WastewaterController;
+use App\Http\Controllers\WastewaterPointiDController;
+use App\Http\Controllers\WastewaterStandardController;
+
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 
 /*
 |--------------------------------------------------------------------------
@@ -101,6 +120,8 @@ Route::resource('/surfacewater/qualityperiode/codesample', ResourceCodeSampleCon
 Route::resource('/surfacewater/standardtable', StandardSurfacewaterController::class)->middleware('auth');
 Route::resource('/surfacewater/monthly', SurfacewaterMonthlyController::class)->middleware('auth');
 Route::resource('/surfacewater/qualityperiode', ResourceDataEntryController::class)->middleware('auth');
+Route::resource('/surfacewater/standardtable', StandardSurfacewaterController::class)->middleware('auth');
+Route::resource('/surfacewater/monthly', SurfacewaterMonthlyController::class)->middleware('auth');
 Route::resource('/surfacewater/drinkwater/quantity', StdDrinkWaterController::class)->middleware('admin');
 Route::resource('/surfacewater/drinkwater/pointid', PointIdDrinkWaterController::class)->middleware('admin');
 Route::resource('/surfacewater/drinkwater', DrinkWaterController::class)->middleware('auth');
@@ -146,6 +167,7 @@ Route::resource('/hydrometric/dischargemanual', DischargeManualController::class
 Route::resource('/tailing/qualitystandard', TailingStandardController::class)->middleware('admin');
 Route::resource('/tailing/codeid', TailingCodeIdController::class)->middleware('admin');
 Route::resource('/tailing', TailingController::class)->middleware('auth');
+Route::resource('/mestom', MestomController::class)->middleware('auth');
 Route::resource('/soilquality/soilqualitypointid',SoilQualityPointIDController::class)->middleware('admin');
 Route::resource('/soilquality/soilqualitystandard',SoilQualityStandardController::class)->middleware('admin');
 Route::resource('/soilquality',SoilQualityController::class)->middleware('auth');
@@ -270,3 +292,7 @@ Route::get('/export/surfacewater/standard', [StandardSurfacewaterController::cla
 Route::post('/import/surfacewater/standard', [StandardSurfacewaterController::class, 'ImportStandardSurfacewater'])->middleware('admin');
 Route::get('/export/surfacewater/monthly', [SurfacewaterMonthlyController::class, 'ExportMonthlySurfacewater'])->middleware('admin');
 Route::post('/import/surfacewater/monthly', [SurfacewaterMonthlyController::class, 'ImportMonthlySurfacewater'])->middleware('admin');
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3

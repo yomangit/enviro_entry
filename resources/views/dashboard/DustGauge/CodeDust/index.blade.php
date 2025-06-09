@@ -93,10 +93,10 @@
                                     <td>{{ $code->nama }}</td>
                                     <td>{{ $code->lokasi }}</td>
                                     <td>
-                                        <a href="/airquality/dustgauge/dust/codesampledg/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <a href="/airquality/dustgauge/dust/codesampledg/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                             <i class="fas fa-pen"></i>
                                         </a>
-                                        <form action="/airquality/dustgauge/dust/codesampledg/{{ $code->failed_at }}" method="POST" class="d-inline">
+                                        <form action="/airquality/dustgauge/dust/codesampledg/{{ $code->id }}" method="POST" class="d-inline">
                                             @method('delete')
                                             @csrf
                                             <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">

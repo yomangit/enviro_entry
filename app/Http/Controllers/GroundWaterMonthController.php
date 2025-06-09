@@ -19,21 +19,167 @@ class GroundWaterMonthController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         return view('dashboard.GroundWater.Month.index',[
             "tittle"=>"Ground Water Monthly",
             'breadcrumb'=>'Ground Water Monthly',
             'code_units'=>Codesamplegw::all(),
             'MonthStandard'=>GroundWaterMonthStandard::all(),
             'GroundwaterMonthly'=>GroundWaterMonth::with('user')->latest()->filter(request(['fromDate','search']))->paginate(30)->withQueryString()
+=======
+
+        $firstDayofPreviousMonth = doubleval(strtotime(request('fromDate')));
+        $lastDayofPreviousMonth = doubleval(strtotime(request('toDate')));
+        if (empty($firstDayofPreviousMonth)) {
+            $table = 30;
+        } else
+            $table = ($lastDayofPreviousMonth - $firstDayofPreviousMonth) / 86400;
+        $grafiks = GroundWaterMonth::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
+        $tanggal = [];
+        $suhu = [];
+        $conductivity = [];
+        $tds = [];
+        $nama = [];
+        $lokasi = [];
+        $tss = [];
+        $ph = [];
+        $do = [];
+        $tssStandard = [];
+        $tdsStandard = [];
+        $conductivityStandard = [];
+        $phMin = [];
+        $phMax = [];
+        $doStandard = [];
+
+        foreach ($grafiks as $grafik) {
+            $nama[] = $grafik->PointId->nama;
+            $lokasi[] = $grafik->PointId->lokasi;
+            // $doStandard[]=$grafik->standard->do;
+            $tanggal[] = date('d-M-Y', strtotime($grafik->date));
+
+            if (is_numeric($grafik->temperature)) {
+                $suhu[] = doubleval($grafik->temperature);
+            } else {
+
+                $suhu[] = '';
+            }
+
+
+            if (is_numeric($grafik->conductivity)) {
+                $conductivity[] =  doubleval($grafik->conductivity);
+            } else {
+
+                $conductivity[] = '';
+            }
+            if (is_numeric($grafik->total_dissolved_solids_tds)) {
+
+                $tds[] =  doubleval($grafik->total_dissolved_solids_tds);
+            } else {
+                $tds[] = '';
+            }
+            if (is_numeric($grafik->total_suspended_solids_tss)) {
+                $tss[] =  doubleval($grafik->total_suspended_solids_tss);
+                
+            } else {
+                $tss[] = '';
+            }
+            if (is_numeric($grafik->ph)) {
+                $ph[] =  doubleval($grafik->ph); # code...
+
+            } else {
+                $ph[] = '';
+            }
+            if (is_numeric($grafik->do)) {
+                $do[] =  doubleval($grafik->do); # code...
+
+            } else {
+                $do[] = '';
+            }
+
+
+
+
+            if (!is_numeric($grafik->ph)) {
+                $phMax[] = '';
+                $phMin[] = '';
+            } 
+            elseif (is_numeric($grafik->ph)) 
+            {
+                $phMax[] = 9;
+                $phMin[] = 6;
+            } 
+
+
+            if (!is_numeric($grafik->conductivity)) {
+                $conductivityStandard[] = '';
+            } 
+            if (is_numeric($grafik->conductivity)) {
+                $conductivityStandard[] = doubleval($grafik->standard->conductivity);
+            } else {
+                $conductivityStandard[] = '';
+            }
+
+          
+            if (!is_numeric($grafik->total_dissolved_solids_tds)) {
+
+                $tdsStandard[] = '';
+            } 
+            if ($grafik->total_dissolved_solids_tds) {
+                $tdsStandard[] = doubleval($grafik->standard->total_dissolved_solids_tds);
+            } else {
+                $tdsStandard[] = '';
+            }
+
+            if (is_numeric($grafik->standard->total_suspended_solids_tss)) {
+                $tssStandard[] = doubleval($grafik->standard->total_suspended_solids_tss);
+            } else {
+                $tssStandard[] = '';
+            }
+            if (is_numeric($grafik->do)) {
+                $doStandard[] = doubleval($grafik->standard->total_suspended_solids_tss);
+            } else if (!is_numeric($grafik->standard->total_suspended_solids_tss)) {
+                $doStandard[] = '';
+            }
+        }
+
+        return view('dashboard.GroundWater.Month.index',[
+            "tittle"=>"Ground Water Monthly",
+            'breadcrumb'=>'Ground Water Monthly',
+            'date' => $tanggal,
+            'suhu' => $suhu,
+            'conductivity' => $conductivity,
+            'tds' => $tds,
+            'tss' => $tss,
+            'ph' => $ph,
+            'point'=> $nama,
+            'do' => $do,
+            'doStandard' => $doStandard,
+            'tssStandard' => $tssStandard,
+            'tdsStandard' => $tdsStandard,
+            'cdvStd' => $conductivityStandard,
+            'phMin' => $phMin,
+            'phMax' => $phMax,
+            'code_units'=>Codesamplegw::all(),
+            'MonthStandard'=>GroundWaterMonthStandard::all(),
+            'GroundwaterMonthly'=>GroundWaterMonth::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString()
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
             
          ]);
     }
 
+<<<<<<< HEAD
     public function ExportMonthGroundwater()
     {
 
         return Excel::download(new exportMonthlyGW, 'Gw Monthly .csv');
     }
+=======
+    // public function ExportMonthGroundwater()
+    // {
+
+    //     return Excel::download(new exportMonthlyGW, 'Gw Monthly .csv');
+    // }
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
     public function ImportMonthGroundwater(Request $request)
     {
 

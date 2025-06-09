@@ -45,18 +45,44 @@
                                 <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                             </div>
 
+                           
                             <div style="width: 118px;" class="input-group mr-1">
-                                <select class="form-control form-control-sm " name="search">
-                                    <option value="" selected>Point ID</option>
-                                    @foreach ($Point_ID as $code)
-                                    @if ( request('search')==$code->nama)
-                                    <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
-                                    @else
-                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                    @endif
-                                    @endforeach
-                                </select>
-                            </div>
+                                    <select class="form-control form-control-sm " name="search">
+                                        <option value="" selected>Point ID</option>
+                                        @foreach ($Point_ID as $code)
+                                        @if ( request('search')==$code->nama)
+                                        <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                        @else
+                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($Point_ID as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($Point_ID as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
                             <div class="mr-2">
                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                             </div>
@@ -231,11 +257,14 @@
         type: 'column'
     },
     title: {
-        text: 'Hasil Pemantauan Tingkat Getaran di {!! json_encode($blast->PointID->lokasi) !!} Akibat Kegiatan Peledakan di{!! json_encode($blast->PointID->nama) !!}  Selama Tahun {!! json_encode(date('Y',strtotime($blast->date))) !!}'
+        text: 'Hasil Pemantauan Tingkat Getaran '
     }, 
-    xAxis: {
-        categories: {!! json_encode($date) !!}
-    },
+    xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
     yAxis: [{
         min: 0,
         title: {
@@ -262,6 +291,7 @@
     },
     series: [{
         name: 'maximum vibration class 3',
+        xAxis: 1,
         color: '#b2d8d8',
         data: {!! json_encode($peak_std) !!},
         pointPadding: 0.2,
@@ -282,16 +312,16 @@
         type: 'spline'
     },
     title: {
-        text: 'Hasil Pemantauan Tingkat Kebisingan di {!! json_encode($blast->PointID->lokasi) !!} Akibat Kegiatan Peledakan di {!! json_encode($blast->PointID->nama) !!}  Selama Tahun {!! json_encode(date('Y',strtotime($blast->date))) !!}'
+        text: 'Hasil Pemantauan Tingkat Kebisingan '
 
     },
    
-    xAxis: {
-        categories: {!!json_encode($date) !!},
-        accessibility: {
-            description: 'Months of the year'
-        }
-    },
+    xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
     yAxis: {
         title: {
             text: 'Value'
@@ -313,6 +343,7 @@
     series: [{
         name: 'Noise Quality Standard',
             color: '#7bc043',
+            xAxis: 1,
             dashStyle: 'longdash',
             data: {!!json_encode($noise_std) !!},
             marker: {

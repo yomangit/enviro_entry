@@ -52,7 +52,7 @@
                             Standard</a>
                         @endcan
                         <div class=" card-tools p-1 mr-2 form-inline">
-                            <form action="/surfacewater/qualityperiode" class="form-inline" autocomplete="off">
+                            <form action="/surfacewater/qualityperiode" method="get" class="form-inline" autocomplete="off">
 
                                 <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                     <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -75,6 +75,7 @@
                                         @endforeach
                                     </select>
                                 </div>
+<<<<<<< HEAD
                                 <div style="width: 118px;" class="input-group mr-1">
                                     <select class="form-control form-control-sm " name="search2">
                                         <option value="" selected>Point ID</option>
@@ -87,6 +88,36 @@
                                         @endforeach
                                     </select>
                                 </div>
+=======
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                         
+                             
+                                
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                                 <div class="mr-2">
                                     <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                 </div>
@@ -376,6 +407,7 @@
         </div><!-- /.container-fluid -->
     </section>
 </div>
+
 <script>
         Highcharts.chart('container', {
             chart: {
@@ -387,9 +419,12 @@
             title: {
                 text:''
             },  
-            xAxis: {
+            xAxis: [{
                 categories: {!! json_encode($date) !!}
-           },
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
             yAxis: {
                 title: {
                     text: 'Value'
@@ -420,23 +455,23 @@
             series: [{
         name: 'Temperatur',
             color: '#1F2833',
-            visible: false,
+            xAxis: 1,
             data: {!!json_encode($suhu) !!},
             marker: {
                 symbol: 'square'
             },
 
     },{
-            name: 'Conductivity (µS/cm)',
+            name: 'Conductivity (µS/cm) ',
             color: '#DE7A22',
-            visible: false,
+            xAxis: 1,
             marker: {
                 symbol: 'diamond'
             },
             data: {!!json_encode($conductivity) !!}
         }, {
             name: 'Conductivity Std',
-            visible: false,
+            xAxis: 1,
             color: '#BDB76B',
             dashStyle: 'longdash',
             marker: {
@@ -445,7 +480,7 @@
             data: {!!json_encode($cdvStd) !!}
         },{
             name: 'TDS',
-            visible: false,
+            xAxis: 1,
             color: '#F4CC70',
             marker: {
                 symbol: 'triangle'
@@ -453,7 +488,7 @@
             data: {!!json_encode($tds) !!}
         },  {
             name: 'TDS Std',
-            visible: false,
+            xAxis: 1,
             color: '#4d7902',
             dashStyle: 'longdash',
             marker: {
@@ -462,7 +497,7 @@
             data: {!!json_encode($tdsStandard) !!}
         }, {
             name: 'TSS',
-            visible: false,
+            
             color: '#20948B',
             marker: {
                 symbol: 'circle'
@@ -470,7 +505,7 @@
             data: {!!json_encode($tss) !!}
         },{
             name: 'TSS Std',
-            visible: false,
+            
             color: '#ffce30',
             dashStyle: 'longdash',
             marker: {
@@ -479,7 +514,7 @@
             data: {!!json_encode($tssStandard) !!}
         }, {
             name: 'DO',
-            visible: false,
+            xAxis: 1,
             color: '#288ba8',
             marker: {
                 symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
@@ -487,7 +522,7 @@
             data: {!!json_encode($do) !!}
         }, {
             name: 'DO Std',
-            visible: false,
+            
             color: '#e389b9',
             dashStyle: 'longdash',
             marker: {
@@ -496,7 +531,7 @@
             data: {!!json_encode($doStandard) !!}
         }, {
             name: 'PH',
-            visible: false,
+            xAxis: 1,
             color: '#6AB187',
             marker: {
                 symbol: 'triangle-down'
@@ -505,7 +540,7 @@
         }, {
             name: 'PH Min',
             visible: true,
-            color: '#32CD32',
+            color: '#ff00aa',
             dashStyle: 'longdash',
             marker: {
                 symbol: 'triangle-down'
@@ -513,8 +548,9 @@
             data: {!!json_encode($phMin) !!}
         }, {
             name: 'PH Max',
-            visible: false,
-            color: '#FF00FF',
+            xAxis: 1,
+            xAxis: 0,
+            color: '#0b9f72',
             dashStyle: 'longdash',
             marker: {
                 symbol: 'triangle-down'

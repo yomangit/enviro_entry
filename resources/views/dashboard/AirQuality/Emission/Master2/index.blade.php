@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-6 d-flex justify-content-end">
                             <div class=" row form-inline">
-                                <form action="/airquality/emission2 mt-1" class="form-inline" autocomplete="off">
+                                <form action="/airquality/emission2 " class="form-inline mt-1" autocomplete="off">
                                     <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                         <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                                     </div>

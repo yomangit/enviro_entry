@@ -85,7 +85,10 @@
                                 <p>Monthly Report</p>
                             </a>
                         </li>
+<<<<<<< HEAD
                         
+=======
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                         <li class="nav-item">
                             <a href="/surfacewater/drinkwater" class="nav-link {{ Request::is('surfacewater/drinkwater*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
@@ -168,7 +171,11 @@
                         </li>                      
                     </ul>
                 </li>
+<<<<<<< HEAD
                 <li class="nav-item {{ Request::is('sediment*') ? 'menu-open' : '' }}    ">
+=======
+                <!-- <li class="nav-item {{ Request::is('sediment*') ? 'menu-open' : '' }}    ">
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                     <a href="#" class="nav-link  {{ Request::is('sedimen*') ? 'active' : '' }}">
                       
                         <i class="fa-solid fa-hill-rockslide nav-icon"> </i>
@@ -191,7 +198,11 @@
                             </a>
                         </li>                      
                     </ul>
+<<<<<<< HEAD
                 </li>
+=======
+                </li> -->
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                 
                 <li class="nav-item">
                     <a href="/wastewater" class="nav-link btn-sm btn-sm {{ Request::is('wastewater*') ? 'active' : '' }}">

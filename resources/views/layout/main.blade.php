@@ -157,7 +157,10 @@
                     format: 'YYYY/MM/DD'
                 });
                 $('#reservationdate1').datetimepicker({
-                    format: 'YYYY/MM/DD'
+                    format: 'MM-YYYY'
+                }); 
+                $('#reservationdate2').datetimepicker({
+                    format: 'DD-MM-YYYY'
                 }); 
                 $('#reservationdate4').datetimepicker({
                     format: 'DD-MM-YYYY'
@@ -166,7 +169,7 @@
                     format: 'DD-MM-YYYY'
                 });
                 $('#reservationdate6').datetimepicker({
-                    format: 'MMM-YYYY'
+                    format: 'DD-MM-YYYY'
                 });
                 $('#reservationdate7').datetimepicker({
                     format: 'DD-MMM-YYYY'

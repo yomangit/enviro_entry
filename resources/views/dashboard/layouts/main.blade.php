@@ -6,6 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $tittle }}</title>
+    <style>
+    a{
+        cursor: pointer;
+    }
+</style>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -52,10 +57,17 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
     <script src="https://kit.fontawesome.com/42d701198b.js" crossorigin="anonymous"></script>
     @stack('styles')
     @livewireStyles
+=======
+    <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">  
+    <link rel="stylesheet" href="/assets/dist/css/data.css">  
+<script src="https://kit.fontawesome.com/42d701198b.js" crossorigin="anonymous"></script>
+@stack('styles')
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 </head>
 
 <body class="sidebar-mini layout-fixed  accent-olive layout-navbar-fixed text-sm sidebar-mini-xs ">
@@ -190,6 +202,7 @@
             });
         });
     </script>
+<<<<<<< HEAD
     <script>
         $(function() {
             //Initialize Select2 Elements
@@ -198,6 +211,65 @@
             //Initialize Select2 Elements
             $('.select2bs4').select2({
                 theme: 'bootstrap4'
+=======
+          <script>
+            $(function() {
+                //Initialize Select2 Elements
+                $('.select2').select2()
+    
+                //Initialize Select2 Elements
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+    
+                //Datemask dd-mm-yyyy
+                $('#datemask').inputmask('dd-mm-yyyy', {
+                    'placeholder': 'dd/mm/yyyy'
+                })
+                //Datemask2 mm/dd/yyyy
+                $('#datemask2').inputmask('mm/dd/yyyy', {
+                    'placeholder': 'mm/dd/yyyy'
+                })
+                //Money Euro
+                $('[data-mask]').inputmask()
+    
+                //Date picker
+                $('#reservationdate').datetimepicker({
+                    format: 'YYYY/MM/DD'
+                });
+                $('#reservationdate1').datetimepicker({
+                    format: 'YYYY/MM/DD'
+                }); 
+                $('#reservationdate4').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                });
+                $('#reservationdate5').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                });
+                $('#reservationdate6').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                });
+                $('#reservationdate7').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                $('#reservationdate8').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                $('#reservationdate9').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                $('#reservationdate11').datetimepicker({
+                    format: 'DD-MMM-YYYY'
+                });
+                //Timepicker
+                $('#timepicker').datetimepicker({
+                    format: 'LT'
+                })
+                $('#timepicker1').datetimepicker({
+                    format: 'LT'
+                })
+    
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
             })
 
             //Datemask dd-mm-yyyy
@@ -308,8 +380,45 @@
             bsCustomFileInput.init();
         });
     </script>
+<<<<<<< HEAD
 
 @livewireScripts
+=======
+    <script>
+/*  show 1 - hide 1  */
+
+$('.show-1-yes').click(function() {
+    $('#target-1').show(500);
+    $('.show-1-yes').hide(0);
+    $('.hide-1-yes').show(0);
+});
+$('.hide-1-yes').click(function() {
+    $('#target-1').hide(500);
+    $('.show-1-yes').show(0);
+    $('.hide-1-yes').hide(0);
+});
+
+
+
+/*  show 2 - hide 2  */
+
+$('.show-2-yes').click(function() {
+    $('#target-2').show(500);
+    $('.show-2-yes').hide(0);
+    $('.hide-2-yes').show(0);
+});
+$('.hide-2-yes').click(function() {
+    $('#target-2').hide(500);
+    $('.show-2-yes').show(0);
+    $('.hide-2-yes').hide(0);
+});
+
+
+
+
+
+</script>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 </body>
 
 </html>

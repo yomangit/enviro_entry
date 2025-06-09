@@ -1,0 +1,173 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,10,2008-07-25,2008-08-25,-,-,-,-,-,2,No,No,local community daily activity,Chalik & Roddy,-,-,-
+1,10,2008-08-25,2008-09-24,0.9849,0.9562,-,-,1.68,-,-,-,local community daily activity,-,-,-,-
+1,10,2008-09-24,2008-10-25,0.5733,0.5514,-,-,1.20,2,Yes,No,local community daily activity,Onlie&Rodie,-,-,-
+1,10,2008-10-25,2008-11-25,0.9643,0.9377,-,-,1.46,2,Yes,No,local community daily activity,Onlie&Rodie,-,-,-
+1,10,2008-11-25,2008-12-24,0.4859,0.4498,-,-,2.11,20,-,-,local community daily activity,Onlie&Rodie,-,-,-
+1,10,2008-12-24,2009-01-24,0.4519,0.4361,-,-,0.87,4,No,No,local community daily activity,Harjoko,-,-,-
+1,10,2009-01-24,2009-02-25,0.2692,0.2463,-,-,1.22,2,No,No,local community daily activity,Jelly & Fanno,-,-,-
+1,10,2009-02-25,2009-03-25,0.4992,0.4935,-,-,0.35,16,No,No,local community daily activity,Jelly & Royke,-,-,-
+1,10,2009-03-25,2009-04-24,0.5955,0.5665,-,-,1.64,15,No,No,local community daily activity,Jelly & Fanno,-,-,-
+1,10,2009-04-24,2009-05-20,0.1783,0.1665,-,-,0.77,2,No,No,local community daily activity,Jelly & Fanno,-,-,-
+1,10,2009-05-20,2009-06-22,0.6749,0.6474,-,-,1.42,4,No,No,"local community daily activity, coconut factory app 50 m south",Harjoko,-,-,-
+1,10,2009-06-22,2009-07-23,0.3332,0.3212,-,-,0.66,1,No,No,"local community daily activity, coconut factory app 50 m south",Jelly & Roddy,-,-,-
+1,10,2009-07-23,2009-08-21,0.0924,0.0815,-,-,0.64,0,No,No,"local community daily activity, coconut factory app 50 m south",Jelly & Roddy,-,-,-
+1,10,2009-08-21,2009-09-22,0.4253,0.4133,-,-,0.64,0,Yes,No,Community activity. Close to coconut fabrique/road,Jelly & Roddy,-,-,-
+1,10,2009-09-22,2009-10-21,0.5384,0.4996,-,-,2.27,2,Yes,No,Community activity and near coconut fabrique,Jelly & Royke,-,-,-
+1,10,2009-10-21,2009-11-22,0.6946,0.6794,-,-,0.81,5,No,No,Community activity and near coconut fabrique,JM,-,4800,-
+1,10,2009-11-22,2009-12-20,0.5193,0.5110,-,-,0.50,22,No,No,Community activity and near coconut fabrique,Rolke,-,5200,-
+1,10,2009-12-20,2010-01-20,2.1464,2.1332,-,-,0.72,14,No,No,Community activity and near coconut fabrique,Jelly & Royke,-,4740,-
+1,10,2010-01-20,2010-02-20,0.6546,0.6469,-,-,0.42,6,No,No,local community daily activity,Fanno & Mahmud,-,3750,-
+1,10,2010-02-20,2010-03-22,0.4133,0.4096,-,-,0.21,5,No,No,Community activity and near coconut fabrique,Onlie,-,-,-
+1,10,2010-03-22,2010-04-20,1.7397,1.7081,-,-,1.85,5,Yes,No,"Community activity, near coconut fabrique, near the kitchen",JM & Rolke,-,5450,-
+1,10,2010-04-20,2010-05-20,1.2193,1.1985,-,-,1.18,5,Yes,No,"Community activity, near coconut fabrique, near the kitchen",Onlie & Rolke,-,3450,-
+1,10,2010-05-20,2010-06-20,0.7901,0.7882,-,-,0.10,4,No,No,local community daily activity,Onlie & Nus,-,2950,-
+1,10,2010-06-20,2010-07-20,0.7953,0.7843,-,-,0.62,5,Yes,No,Community Activity,JM/OS,-,2880,-
+1,10,2010-07-20,2010-08-20,0.7704,0.7529,-,-,0.96,9,Yes,No,Community Activity,RDC/Robby.N,-,3720,-
+1,10,2010-08-20,2010-09-20,0.7615,0.7373,-,-,1.33,1,Yes,No,Community Activity,OS/MW,-,2150,-
+1,10,2010-09-20,2010-10-20,0.8110,0.8006,-,-,0.59,2,Yes,No,Community Activity,OS/MW,-,1850,-
+1,10,2010-10-20,2010-11-23,0.8125,0.8038,-,-,0.43,6,No,No,Community Activity,RDC/AL,-,5500,-
+1,10,2010-11-23,2010-12-20,0.8257,0.8213,-,-,0.28,1,No,No,Community Activity,OS/AL,-,4250,-
+1,10,2010-12-20,2011-01-20,0.8323,0.8129,-,-,1.06,6,Yes,No,"Community Activity, Gardening",OS,-,2600,Many dirt insect
+1,10,2011-01-20,2011-02-20,0.7673,0.7564,-,-,0.60,2,Yes,No,"Community Activity, Gardening",OS/MW,-,7900,-
+1,10,2011-02-20,2011-03-20,0.7898,0.7832,-,-,0.40,3,Yes,No,"Community activity, near the kitchen",OS/MW,-,3400,-
+1,10,2011-03-20,2011-04-21,0.8494,0.8188,-,-,1.62,7,Yes,No,"Community activity,gardening, near coconut fabrique, near the kitchen",OS,-,4600,"Two dead lizard was destroyed, many beetle has destroyed."
+1,10,2011-04-21,2011-05-21,0.8118,0.8062,-,-,0.32,1,No,No,"Gardening, community activity",OS/MW,-,4950,-
+1,10,2011-05-21,2011-06-21,0.8082,0.7919,-,-,0.89,5,Yes,No,"Gardening, community activity",OS,-,5850,Have a lizard in the bottle
+1,10,2011-06-21,2011-07-20,0.8039,0.7665,-,-,2.05,0,Yes,No,"Coconut plantation, community activity",OS,-,200,-
+1,10,2011-07-20,2011-08-20,0.8415,0.8147,-,-,1.47,0,Yes,No,"Community activity, coconut plantation, near coconut fabrique.",OS/MW,-,2800,Many ants
+1,10,2011-08-20,2011-09-20,0.8139,0.7879,-,-,1.42,0,Yes,No,"Community activity, near the road, near coconut fabrique.",FB/OL,-,1350,-
+1,10,2011-09-20,2011-10-21,0.8519,0.7839,-,-,3.73,0,Yes,No,"Community activity, near the road, near coconut fabrique.",Novry/Anita,-,2000,-
+1,10,2011-10-21,2011-11-21,0.8398,0.8306,-,-,0.50,3,Yes,No,"Community activity, near the road, near coconut fabrique.",Andrias/Anita,-,3500,-
+1,10,2011-11-21,2011-12-22,0.8541,0.8347,-,-,1.03,3,Yes,No,"Community activity, near the road, near coconut fabrique.",Mahmud/Arter,-,2800,-
+1,10,2011-12-22,2012-01-20,0.8608,0.8480,-,-,0.75,4,No,No,"Activity  community,coconut  gardens",OS/OA,-,3150,-
+1,10,2012-01-20,2012-02-20,0.8363,0.8348,-,-,0.08,5,No,No,Community & coconut farmer activity.,Onlie,-,5750,-
+1,10,2012-02-20,2012-03-20,0.8409,0.8286,-,-,0.70,1,No,Yes,Community & coconut farmer activity.,Andrias.L,-,8500,-
+1,10,2012-03-20,2012-04-20,0.7755,0.7634,-,-,0.69,0,No,No,"Community act, House keeping act, gardening",FB/NR,-,2600,-
+1,10,2012-04-20,2012-05-20,0.8979,0.8178,-,-,4.54,6,Yes,No,"Community act, House keeping act, gardening",RH,-,4750,-
+1,10,2012-05-20,2012-06-20,0.8641,0.7960,-,-,3.86,2,No,No,"Community act, House keeping act, gardening",AL/RH,-,1500,-
+1,10,2012-06-20,2012-07-20,0.8665,0.7949,-,-,4.05,1,No,No,"Community act, traffic act",AP/RH,-,750,-
+1,10,2012-07-20,2012-08-22,0.8615,0.8178,-,-,2.32,0,No,No,"Community Activity, Gardening, burning of grass",AL/TL,-,600,-
+1,10,2012-08-22,2012-09-20,0.8535,0.8136,-,-,2.34,0,Yes,No,Community act (carbon of waste combustion),DA/TL,-,1000,-
+1,10,2012-09-20,2012-10-20,0.8256,0.8222,-,-,0.19,0,No,No,"Community act, Road act",CA/AL,-,1000,-
+1,10,2012-10-20,2012-11-20,0.8531,0.7961,-,-,3.23,2,No,No,community act,RH/SM,-,4900,-
+1,10,2012-11-20,2012-12-20,0.8241,0.8142,-,-,0.56,2,No,No,community act,AL/JK,-,2800,-
+1,10,2012-12-20,2013-01-21,0.8273,0.8225,-,-,0.25,4,Yes,No,"Community act, Road act, gardening",DA/SM,-,3100,-
+1,10,2013-01-21,2013-02-20,0.8110,0.8072,-,-,0.22,10,No,No,"Community act, traffic act, gardening",AL/AP,-,8500,-
+1,10,2013-02-20,2013-03-20,0.8198,0.8044,-,-,0.93,5,No,No,"Community act, traffic act, gardening",AL/CR,-,3200,-
+1,10,2013-03-21,2013-04-20,0.8039,0.8031,-,-,0.05,1,No,No,"Community act, traffic act, gardening",DA/CR,-,2000,-
+1,10,2013-04-20,2013-05-20,0.772,0.7712,-,-,0.04,2,No,No,"Community act, traffic act, gardening",DA/RH,-,3000,-
+1,10,2013-05-20,2013-06-21,0.805,0.8037,-,-,0.07,3,No,No,"Community act, traffic act, gardening",AP/CR,-,2700,-
+1,10,2013-06-21,2013-07-20,0.7713,0.7698,-,-,0.09,1,No,No,"Community act, traffic act, gardening",AP/CR,-,4750,-
+1,10,2013-07-20,2013-08-20,0.7402,0.7397,-,-,0.03,1,No,No,"Community act, traffic act, gardening",DA/AL,-,1150,-
+1,10,2013-08-20,2013-09-20,0.8114,0.8049,-,-,0.36,0,No,No,"Community act, traffic act, gardening",DA/RH,-,650,-
+1,10,2013-09-20,2013-10-20,0.8015,0.7780,-,-,1.29,0,Yes,No,"Community act, traffic act, gardening",RH/CR,-,5400,-
+1,10,2013-10-20,2013-11-21,0.7897,0.7868,-,-,0.15,0,No,No,"Community act, traffic act, gardening",AP/DK,-,3600,-
+1,10,2013-11-21,2013-12-22,0.8098,0.8092,-,-,0.03,4,No,No,"Community act, traffic act, gardening",AL,-,2600,-
+1,10,2013-12-20,2014-01-19,0.7966,0.7965,-,-,0.01,2,No,No,"Community act, traffic act, gardening",AL/RT,-,2000,-
+1,10,2014-01-19,2014-02-20,0.8098,0.8039,-,-,0.31,3,No,No,"Community act, traffic act, gardening",AP/RH,-,1300,-
+1,10,2014-02-20,2014-03-22,0.7796,0.7793,-,-,0.02,1,No,No,"Community act, traffic act",CR/RT,-,1400,-
+1,10,2014-03-22,2014-04-21,0.7764,0.7760,-,-,0.02,5,No,No,"Community act, traffic act",DA/AL,-,3500,-
+1,10,2014-04-20,2014-05-20,0.7969,0.7909,-,-,0.34,1,No,No,"Community act, traffic act",AL/RT,-,1000,-
+1,10,2014-05-20,2014-06-21,0.797,0.7965,-,-,0.03,1,No,No,"Community act, traffic act",RH,-,1600,-
+1,10,2014-06-21,2014-07-22,0.7834,0.7804,-,-,0.16,0,No,No,"Community act, traffic act",RH/RT,-,1600,-
+1,10,2014-07-22,2014-08-21,0.7952,0.7844,-,-,0.61,15,No,No,"Community act, traffic act",DA/AL,-,300,Added aquades 1000 ml
+1,10,2014-08-21,2014-09-20,0.821,0.8117,-,-,0.53,2,Yes,No,"Community act, traffic act",RH,-,1000,-
+1,10,2014-09-20,2014-10-21,0.8602,0.8105,-,-,2.72,1,No,No,"Community act, traffic act",AL/CR,-,350,Added aquades 1000 ml
+1,10,2014-10-21,2014-11-20,0.863,0.8403,-,-,1.29,0,No,No,"Community act, traffic act",CR/RT,-,3750,-
+1,10,2014-11-20,2014-12-20,0.8356,0.8293,-,-,0.36,10,No,No,"Community act, traffic act",CR/RT,-,4500,-
+1,10,2014-12-20,2015-01-20,0.8171,0.8165,-,-,0.03,15,No,No,"Community act, traffic act",AL/BK,-,2500,-
+1,10,2015-01-20,2015-02-20,-,-,-,-,<1,0,No,No,"Community act, traffic act",RH/BK,-,-,Botle send to WLN
+1,10,2015-02-20,2015-03-20,0.8389,0.8386,-,-,0.02,0,No,No,"Community act, traffic act",AP/RH,-,2000,-
+1,10,2015-03-20,2015-04-20,0.8475,0.8400,-,-,0.41,0,No,No,"Community act, traffic act",AP/RH,-,1400,-
+1,10,2015-04-20,2015-05-18,-,-,-,-,6.00,1,No,No,"Community act, traffic act",RH/BK,-,-,Botle send to WLN
+1,10,2015-05-19,2015-06-21,0.8277,0.8248,-,-,0.15,0,No,No,"Community act, traffic act",AP/RT,-,1700,-
+1,10,2015-06-21,2015-07-21,0.82,0.7840,-,-,2.04,20,Yes,No,"Community act, traffic act",AL/CR,-,300,Added aquades 1000 ml
+1,10,2015-07-21,2015-08-19,-,-,-,-,8.00,0,No,No,"Community act, traffic act",AL/RT,-,0,"Botle send to WLN, Add aquades 1000 ml"
+1,10,2015-08-19,2015-09-20,0.8347,0.8223,-,-,0.66,0,No,No,"Community act, traffic act",RT/BK,-,0,Added aquades 1000 ml
+1,10,2015-09-20,2015-10-20,0.8317,0.7988,-,-,1.86,1,No,No,"Community act, traffic act",CR/RH,-,0,Added aquades 1000 ml
+1,10,2015-10-20,2015-11-19,-,-,-,-,24.00,1,No,No,"Community act, traffic act",RH/RT,-,1550,bottle send to WLN
+1,10,2015-11-19,2015-12-16,0.789,0.7808,-,-,0.52,7,No,No,"Community act, traffic act",CR,-,1900,-
+1,10,2015-12-16,2016-01-18,0.8239,0.8066,-,-,0.89,0,No,No,"Community act, traffic act",AP/RT,-,2050,-
+1,10,2016-01-18,2016-02-21,0.8358,0.8081,-,-,1.38,1,No,No,"Community act, traffic act",RH/RT,-,3250,-
+1,10,2016-02-21,2016-03-22,-,-,-,-,6.00,3,No,No,"Community act, traffic act",CR/RT,-,1850,bottle send to WLN
+1,10,2016-03-22,2016-04-19,0.8026,0.7950,-,-,0.46,0,No,No,"Community act, traffic act",BK/CR,-,2750,-
+1,10,2016-04-19,2016-05-23,-,-,-,-,16.00,3,No,No,"Community act, traffic act",RH/RT,-,1900,bottle send to WLN
+1,10,2016-05-23,2016-06-22,0.8674,0.8202,-,-,2.67,0,No,No,"Community act, traffic act",AP/RT,-,1350,-
+1,10,2016-06-22,2016-07-22,0.8214,0.8194,-,-,0.11,3,No,No,"Community act, traffic act",BK/RH,-,3500,-
+1,10,2016-07-22,2016-08-22,0.8047,0.8044,-,-,0.02,-,-,-,-,-,-,1500,-
+1,10,2016-08-22,2016-09-20,-,-,-,-,9.00,4,No,No,"Community act, traffic act",BK/CR,-,2600,bottle send to WLN
+1,10,2016-09-20,2016-10-20,0.794,0.7935,-,-,0.03,3,No,No,"Community act, traffic act",RT/BK,-,0,Added aquades 1000 ml
+1,10,2016-10-20,2016-11-22,0.8305,0.8220,-,-,0.44,15,No,No,"Community act, traffic act",RH/RT/BK,-,7000,Added aquades 1000 ml
+1,10,2016-11-22,2016-12-20,0.8125,0.8120,-,-,0.03,9,No,No,"Community act, traffic act",RH/RT,-,2750,-
+1,10,2016-12-20,2017-01-21,0.8363,0.8238,-,-,0.66,5,No,No,"Community act, traffic act",AL,-,6900,-
+1,10,2017-01-21,2017-02-21,0.8179,0.8175,-,-,0.02,4,No,No,"Community act, traffic act",DA/AL/HM/SM,-,15250,-
+1,10,2017-02-21,2017-03-22,0.829,0.8283,-,-,0.04,3,No,No,"Community act, traffic act",AP,-,4500,-
+1,10,2017-03-22,2017-04-20,0.8208,0.8196,-,-,0.07,9,No,No,"Community act, traffic act",AP/BK,-,4000,-
+1,10,2017-05-21,2017-06-20,0.8030,0.7979,5.4997,5.4883,0.70,-,-,-,-,-,50,1600,-
+1,10,2017-06-20,2017-07-23,0.8039,0.8000,5.4276,5.4230,1.08,-,-,-,-,-,25,3400,-
+1,10,2017-07-23,2017-08-20,-,-,-,-,3.00,0,No,No,"Community act, traffic act",RH/BK,-,1580,bottle send to WLN
+1,10,2017-08-20,2017-09-21,0.8149,0.81,5.4321,5.428,0.55,3,No,No,"Pos security act, road traffic act",RH/RT,25,1850,-
+1,10,2017-09-21,2017-10-21,-,-,-,-,<1,3,No,No,"Pos security act, road traffic act",RH/RT,-,-,bottle send to WLN
+1,10,2017-10-21,2017-11-21,0.8092,0.8000,5.5520,5.5481,1.01,6,No,No,"Pos security act, road traffic act",RH/RT,25,3500,-
+1,10,2017-11-21,2017-12-21,0.8300,0.8219,5.4278,5.4261,0.55,6,No,No,"Pos security act, road traffic act",RH/RT,25,4200,-
+1,10,2017-12-21,2018-01-21,0.8469,0.8294,5.4311,5.4298,0.51,8,No,No,Community Act,AL/BK,25,5000,-
+1,10,2018-01-21,2018-02-21,0.8227,0.8217,5.4432,5.4323,3.82,8,No,No,Community Act,AL/BK,25,4800,-
+1,10,2018-02-21,2018-03-20,-,-,-,-,1.00,8,No,No,Community Act,AL/BK,-,-,bottle send to WLN
+1,10,2018-03-20,2018-04-20,0.7977,0.7975,5.4380,5.4350,0.75,8,No,No,Community Act,AL/BK,25,3400,-
+1,10,2018-04-20,2018-05-20,0.8508,0.8324,5.6420,5.6392,1.05,8,No,No,Community Act,AL/BK,25,4800,-
+1,10,2018-05-20,2018-06-20,-,-,-,-,<1,8,No,No,Community Act,AL/BK,-,-,bottle send to WLN
+1,10,2018-06-21,2018-07-24,0.8110,0.8091,5.4414,5.4407,0.06,0,No,No,Community Act,AL/FP,25,1200,-
+1,10,2018-07-24,2018-08-24,0.8263,0.8229,5.4503,5.4411,0.68,0,No,No,Community Act,AL/FP,25,1000,-
+1,10,2018-08-25,2018-09-24,-,-,-,-,<1,5,No,No,Community Act,RH/RT,-,-,Bottle Send to Wln
+1,10,2018-09-25,2018-10-29,0.8092,0.8,5.552,5.5481,0.92,0,No,No,Community Act,AL/FP,25,3500,-
+1,10,2018-10-30,2018-11-27,-,-,-,-,< 1,2,No,No,Community Act,RH/RT,-,-,Botol Send to WLN
+1,10,2018-11-28,2018-12-24,0.8256,0.8222,5.4588,5.4582,0.39,2,No,No,Community Act,RH/RT,25,7400,-
+1,10,2018-12-25,2019-01-22,0.8174,0.8168,5.4639,5.462,0.78,2,No,No,Community Act,RH/RT,25,5100,-
+1,10,2019-01-23,2019-02-22,-,-,-,-,< 1,2,No,No,Community Act,RH/RT,-,-,Botol Send to WLN
+1,10,2019-02-23,2019-03-22,0.8390,0.8385,2.9881,2.9831,0.42,2,No,No,Community Act,-,25,1000,-
+1,10,2019-03-23,2019-04-25,0.8496,0.8448,2.98,2.9795,0.07,2,No,No,Community Act,RH/RT,25,1700,-
+1,10,2019-04-25,2019-05-27,-,-,-,-,3.00,2,No,No,Community Act,-,-,-,Botol Send to WLN
+1,10,2019-05-27,2019-06-20,0.8263,0.8229,5.4503,5.4411,1.74,2,No,No,Community Act,AL/FP,25,2000,-
+1,10,2019-06-20,2019-07-20,0.8399,0.83,5.434,5.43,1.08,2,No,No,Community Act,BK,25,3500,-
+1,10,2019-07-20,2019-08-20,-,-,-,-,4.00,2,No,No,Community Act,RH/RT,25,1400,Botol Send to ITS
+1,10,2019-08-20,2019-09-23,0.8348,0.8339,5.4492,5.4392,0.33,2,No,No,Community Act,OS/FR,25,500,-
+1,10,2019-09-23,2019-10-23,0.8433,0.8038,3.0199,2.9924,0.49,2,No,No,Community Act,RT,25,200,-
+1,10,2019-10-23,2019-11-20,-,-,-,-,8.40,2,No,No,Community Act,RH/RT,25,1400,Botol Send to ITS
+1,10,2019-11-20,2019-12-20,0.9639,0.8273,3.0279,3.0177,6.03,2,No,No,Community Act,RT,25,7500,-
+1,10,2019-12-20,2020-01-20,0.8518,0.8334,5.4463,5.4411,1.40,6,No,No,Community Act,AL/NB,25,3600,-
+1,10,2020-01-20,2020-02-25,-,-,-,-,0.00,-,No,No,Community Act,-,25,-,Botol Send to ITS
+1,10,2020-02-25,2020-03-24,0.8536,0.8243,5.4519,5.4495,0.78,10,No,No,Community Act,-,25,3700,-
+1,10,2020-03-24,2020-04-22,0.8116,0.8104,5.505,5.5038,0.14,5,No,No,Community Act,-,25,1500,-
+1,10,2020-04-22,2020-05-20,0.8310,0.827,2.9795,2.9775,0.33,13,No,No,Community Act,-,25,2000,-
+1,10,2020-05-20,2020-06-23,0.8196,0.8159,5.4694,5.4558,0.91,13,No,No,Community Act,-,25,1000,-
+1,10,2020-06-23,2020-07-23,-,-,-,-,0.00,13,No,No,Community Act,-,25,-,-
+1,10,2020-07-23,2020-08-20,-,-,-,-,15.00,13,No,No,Community Act,-,25,-,Botol Send to WLN
+1,10,2020-08-20,2020-09-20,0.8279,0.8262,5.4576,5.4552,0.06,5,No,No,Community Act,FP/JK,25,300,-
+1,10,2020-09-20,2020-10-21,-,-,-,-,18.00,-,No,No,Community Act,FP/JK,-,-,Botol Send to WLN
+1,10,2020-10-21,2020-11-21,0.8192,0.8168,2.9989,2.9961,0.11,7,No,No,Community Act,BK/FP,25,500,-
+1,10,2020-11-21,2020-12-21,0.8329,0.8247,5.4617,5.4604,0.26,-,No,No,Community Act,RT/BK,25,2500,-
+1,10,2020-12-21,2021-01-23,0.8300,0.8217,5.469,5.4629,0.12,7,No,No,Community Act,FP/JK,25,250,-
+1,10,2021-01-23,2021-02-25,-,-,-,-,67.00,-,No,No,Community Act,FP/JK,25,-,Botol Send to WLN
+1,10,2021-02-25,2021-03-23,0.8640,0.8626,5.4699,5.4683,0.62,2,No,No,Community Act,BK/JK,25,4450,-
+1,10,2021-03-23,2021-04-23,0.8328,0.831,3.0009,3.0003,0.01,13,No,No,Community Act,BK/FR/RT,25,100,-
+1,10,2021-04-23,2021-05-25,-,-,-,-,23.00,3,No,No,Community Act,BK/FP,25,-,Botol Send to WLN
+1,10,2021-05-25,2021-06-25,0.8258,0.8237,2.9999,2.9995,0.01,3,No,No,Community Act,BK/FP,20,100,-
+1,10,2021-06-25,2021-07-22,0.8279,0.8271,2.9991,2.9987,0.09,2,No,No,Community Act,BK/JK,20,2100,-
+1,10,2021-07-22,2021-08-20,-,-,-,-,13.00,5,No,No,Community Act,BK/JK,-,-,Botol Send to WLN
+1,10,2021-08-20,2021-09-24,0.7298,0.728,2.5848,2.5830,0.05,1,No,No,Community Act,NB/FK,25,400,-
+1,10,2021-09-24,2021-10-21,0.9201,0.8005,5.5253,5.5019,1.51,2,No,No,Community Act,BK/FR/HM,25,640,-
+1,10,2021-10-21,2021-11-23,-,-,-,-,#NA,3,No,No,Community Act,BK/JK,-,-,Botol Send to WLN
+1,10,2021-11-23,2021-12-20,0.8551,0.8504,2.9963,2.9943,0.26,3,No,No,Community Act,FR/PP,25,1500,-
+1,10,2021-12-20,2022-01-24,-,-,-,-,<   1,5,No,No,Community Act,FR/HM,-,-,Botol Send to WLN
+1,10,2022-01-24,2022-02-24,0.8478,0.8463,5.4921,5.4905,0.05,7,No,No,Community Act,BK/PP,25,420,-
+1,10,2022-02-24,2022-03-27,0.8552,0.8363,3.003,2.9992,0.31,5,No,No,Community Act,FK/FR,25,1000,-
+1,10,2022-03-27,2022-04-21,-,-,-,-,29.00,2,No,No,Community Act,BK/FR,-,-,Botol Send to WLN
+1,10,2022-04-21,2022-05-25,0.8257,0.8238,3.0058,3.0031,0.22,5,No,No,Community Act,FK/FR,25,1200,-
+1,10,2022-05-25,2022-06-23,0.8387,0.5364,3.0053,3.0047,0.64,0,No,No,Community Act,FR/FP,25,1000,-
+1,10,2022-06-23,2022-07-24,-,-,-,-,31.00,2,No,No,Community Act,BK/NB,-,-,Botol Send to WLN
+1,10,2022-07-24,2022-08-25,0.8341,0.8331,5.425,5.4247,0.02,3,No,No,Community Act,BK/PP,25,800,-
+1,10,2022-08-25,2022-09-26,0.8160,0.8152,5.8196,5.8185,0.09,3,No,No,Community Act,BK/HM,25,1200,-
+1,10,2022-09-26,2022-10-27,-,-,-,-,1.00,3,No,No,Community Act,BK/NB,-,-,Botol Send to WLN
+1,10,2022-10-27,2022-11-28,0.8789,0.8785,5.4561,5.4550,0.04,4,No,No,Community Act,BK/JK,25,500,-
+1,10,2022-11-28,2022-12-22,0.8256,0.8229,5.4139,5.4128,0.06,4,No,No,Community Act,BK/FR/JK,25,500,-

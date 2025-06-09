@@ -31,9 +31,10 @@ class WastewaterController extends Controller
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
 
-    $Wastewater = Wastewater::with('user')->filter(request(['fromDate','search']))->paginate($table)->withQueryString();
+    $Wastewater = Wastewater::with('user')->filter(request(['fromDate','search','search1','search2']))->orderBy('date','desc')->paginate($table)->withQueryString();
     $tanggal=[];
     $tss=[];
+    $nama =[];
     $tss_std=[];
     $ph=[];
     $ph_std=[];
@@ -41,7 +42,7 @@ class WastewaterController extends Controller
     foreach ($Wastewater as $item) 
     {
         $tanggal[] = date('d-M-Y', strtotime($item->date));
-        
+        $nama[] = $item->PointId->nama;
         if ( is_numeric($item->totalsuspendedsolids_tss) ) {
             $tss[]=doubleval($item->totalsuspendedsolids_tss);
         }
@@ -85,12 +86,13 @@ class WastewaterController extends Controller
             'breadcrumb' => 'Waste Water',
             'tanggal'=>$tanggal,
             'tss'=>$tss,
+            'point'=>$nama,
             'tss_std'=>$tss_std,
             'ph'=>$ph,
             'ph_std'=>$ph_std,
             'code_units'=>Wastewaterpointid::all(),
             'QualityStd' => Wastewaterstandard::all(),
-            'Wastewater' => Wastewater::with('user')->orderBy('date','desc')->filter(request(['fromDate','search']))->paginate(30)->withQueryString()
+            'Wastewater' => Wastewater::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate(30)->withQueryString()
         ]);
     }
 

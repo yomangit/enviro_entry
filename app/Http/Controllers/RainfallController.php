@@ -36,7 +36,7 @@ class RainfallController extends Controller
         $count = $rainday->count();
         $wetday = Rainfall::where('rainfall', '>', 5)->filter(request(['fromDate', 'search']))->get();
         $count2 = $wetday->count();
-        $grafiks = Rainfall::with('user')->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
+        $grafiks = Rainfall::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate($table)->withQueryString();
         $tanggal = [];
         $lokasi = [];
         $rainfall = [];
@@ -62,7 +62,7 @@ class RainfallController extends Controller
             'milimeter' => $rainfall,
             'code_units' => Rainfallpointid::all(),
             'breadcrumb' => 'Rainfall',
-            'Rainfall' => Rainfall::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search', 'toDate']))->paginate(30)->withQueryString()
+            'Rainfall' => Rainfall::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search', 'toDate']))->paginate($table)->withQueryString()
         ]);
     }
     public function ExportRainfall()

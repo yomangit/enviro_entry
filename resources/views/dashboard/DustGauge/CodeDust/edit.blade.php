@@ -31,7 +31,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="/airquality/dustgauge/dust/codesampledg/{{ $Codes->failed_at }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form action="/airquality/dustgauge/dust/codesampledg/{{ $Codes->id }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @method('put')
                         @csrf
                         <div class="row">

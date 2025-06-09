@@ -39,17 +39,42 @@
                                 <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                             </div>
                             <div style="width: 118px;" class="input-group mr-1">
-                                <select class="form-control form-control-sm " name="search">
-                                    <option value="" selected>Point Id</option>
-                                    @foreach ($code_units as $code)
-                                    @if ( request('search')==$code->nama)
-                                    <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
-                                    @else
-                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                    @endif
-                                    @endforeach
-                                </select>
-                            </div>
+                                    <select class="form-control form-control-sm " name="search">
+                                        <option value="" selected>Point ID</option>
+                                        @foreach ($code_units as $code)
+                                        @if ( request('search')==$code->nama)
+                                        <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                        @else
+                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
 
 
 
@@ -143,8 +168,11 @@
                                     @else
                                     <td>{{ $soluble= (round(((doubleval($code->m6) - doubleval($code->m5))* doubleval($code->total_vlm_water) )/(3.14*0.005625*$selisi*$code->volume_filtrat),2)) }}</td>
                                     @endif
-                                    <td>{{$total=round(($insoluble+$soluble),3)}}</td>
-
+									@if($code->m6 ==='-' && $code->m5==='-' && $code->m4 ==='-' && $code->m3==='-')
+                                    <td>{{$code->total_solid}}</td>
+									@else
+										<td>{{$total=round(($insoluble+$soluble),3)}}</td>
+									@endif
                                     <td>{{ $code->no_insect }}</td>
                                     <td>{{ $code->vb_dirt }}</td>
                                     <td>{{ $code->vb_algae }}</td>
@@ -156,10 +184,10 @@
                                     @can('admin')
                                     <td>
 
-<a href="/airquality/dustgauge/dust/{{ $code->failed_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+<a href="/airquality/dustgauge/dust/{{ $code->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
     <i class="fas fa-pen"></i>
 </a>
-<form action="/airquality/dustgauge/dust/{{ $code->failed_at }}" method="POST" class="d-inline">
+<form action="/airquality/dustgauge/dust/{{ $code->id }}" method="POST" class="d-inline">
     @method('delete')
     @csrf
     <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -244,12 +272,12 @@
     title: {
         text: ''
     },
-    xAxis: {
-        categories: {!! json_encode($tanggal) !!},
-        accessibility: {
-            description: 'Months of the year'
-        }
-    },
+    xAxis: [{
+                categories: {!! json_encode($tanggal) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
     yAxis: {
         title: {
             text: 'Value'
@@ -271,6 +299,7 @@
     series: [{
         name: 'Total Solid',
         color:'#0cd7da',
+        xAxis: 1,
         marker: {
             symbol: 'square'
         },

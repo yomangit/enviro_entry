@@ -56,6 +56,9 @@
                             <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
                                 <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                             </div>
+                            <div class="input-group date mr-2" id="reservationdate6" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="bulan" placeholder="Month" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate6" data-toggle="datetimepicker" value="{{ request('bulan') }}" />
+                            </div>
 
                             <div class="input-group mr-1" style="width: 90px;">
                                 <select class="form-control form-control-sm " name="search">
@@ -137,7 +140,12 @@
                                         @php
                                         $null=0;
                                         if ($evaporation>0) {$evaporation;}
+<<<<<<< HEAD
                                         elseif ($evaporation<0) {$evaporation=0; } @endphp <td>{{$evaporation}}</td>
+=======
+                                        elseif ($evaporation<0)
+                                         {$evaporation=0; } @endphp <td>{{$evaporation}}</td>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                                             <td>{{ $code->initial_water_elevation - $code->final_water_elevation }}</td>
                                             <td>{{ number_format($initial_v1= 3.14*60*60* doubleval($code->initial_water_elevation)) }}</td>
                                             <td>{{number_format($final_v2= 3.14*60*60* doubleval($code->final_water_elevation)) }}</td>
@@ -160,9 +168,16 @@
                                             </td>
                                             @endcan
                                     </tr>
+<<<<<<< HEAD
 
                                     @endforeach
                                     <tr>
+=======
+                                   
+                                    @endforeach
+                                    <tr>
+                                    @php $ass= max(array($evaporation)) @endphp
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                                         <th class="text-center " colspan="7">Maximum Evaporation</th>
                                         <th class="text-center " colspan="7">{{$max_evaporation}}</th>
                                     </tr>
@@ -235,5 +250,109 @@
         </div><!-- /.container-fluid -->
     </section>
 </div>
-
+<script>
+            $(function() {
+                //Initialize Select2 Elements
+                $('.select2').select2()
+    
+                //Initialize Select2 Elements
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+    
+                //Datemask dd-mm-yyyy
+                $('#datemask').inputmask('dd-mm-yyyy', {
+                    'placeholder': 'dd/mm/yyyy'
+                })
+                //Datemask2 mm/dd/yyyy
+                $('#datemask2').inputmask('mm/dd/yyyy', {
+                    'placeholder': 'mm/dd/yyyy'
+                })
+                //Money Euro
+                $('[data-mask]').inputmask()
+    
+                //Date picker
+             
+                $('#reservationdate2').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                }); 
+                $('#reservationdate4').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                });
+                $('#reservationdate5').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                });
+                $('#reservationdate6').datetimepicker({
+                    format: 'MM'
+                });
+               
+                //Timepicker
+                $('#timepicker').datetimepicker({
+                    format: 'LT'
+                })
+                $('#timepicker1').datetimepicker({
+                    format: 'LT'
+                })
+    
+            })
+            // BS-Stepper Init
+            document.addEventListener('DOMContentLoaded', function() {
+                window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+            })
+    
+            // DropzoneJS Demo Code Start
+            Dropzone.autoDiscover = false
+    
+            // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+            var previewNode = document.querySelector("#template")
+            previewNode.id = ""
+            var previewTemplate = previewNode.parentNode.innerHTML
+            previewNode.parentNode.removeChild(previewNode)
+    
+            var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+                url: "/target-url", // Set the url
+                thumbnailWidth: 80,
+                thumbnailHeight: 80,
+                parallelUploads: 20,
+                previewTemplate: previewTemplate,
+                autoQueue: false, // Make sure the files aren't queued until manually added
+                previewsContainer: "#previews", // Define the container to display the previews
+                clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+            })
+    
+            myDropzone.on("addedfile", function(file) {
+                // Hookup the start button
+                file.previewElement.querySelector(".start").onclick = function() {
+                    myDropzone.enqueueFile(file)
+                }
+            })
+    
+            // Update the total progress bar
+            myDropzone.on("totaluploadprogress", function(progress) {
+                document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+            })
+    
+            myDropzone.on("sending", function(file) {
+                // Show the total progress bar when upload starts
+                document.querySelector("#total-progress").style.opacity = "1"
+                // And disable the start button
+                file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+            })
+    
+            // Hide the total progress bar when nothing's uploading anymore
+            myDropzone.on("queuecomplete", function(progress) {
+                document.querySelector("#total-progress").style.opacity = "0"
+            })
+    
+            // Setup the buttons for all transfers
+            // The "add files" button doesn't need to be setup because the config
+            // `clickable` has already been specified.
+            document.querySelector("#actions .start").onclick = function() {
+                myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+            }
+            document.querySelector("#actions .cancel").onclick = function() {
+                myDropzone.removeAllFiles(true)
+            }
+           
+        </script>
 @endsection

@@ -1,0 +1,167 @@
+user_id,codedust_id,date_in,date_out,m4,m3,m6,m5,total_solid,no_insect,vb_dirt,vb_algae,area_observation,observer,volume_filtrat,total_vlm_water,remarks
+1,11,2008-09-24,2008-10-25,0.385,0.3685,-,-,0.9,2,Yes,No,local community daily activity,Onlie&Rodie,-,-,-
+1,11,2008-10-25,2008-11-25,0.8683,0.8504,-,-,0.98,2,Yes,No,local community daily activity,Onlie&Rodie,-,-,-
+1,11,2008-11-25,2008-12-24,0.1527,0.146,-,-,0.39,20,-,-,local community daily activity,Onlie&Rodie,-,-,-
+1,11,2008-12-24,2009-01-24,0.2381,0.2289,-,-,0.5,3,No,No,local community daily activity,Harjoko,-,-,-
+1,11,2009-01-24,2009-02-25,0.2604,0.2505,-,-,0.53,3,No,No,local community daily activity,Jelly & Fanno,-,-,-
+1,11,2009-02-25,2009-03-25,0.257,0.2485,-,-,0.52,2,No,No,local community daily activity,Jelly & Royke,-,-,-
+1,11,2009-03-25,2009-04-24,0.3344,0.322,-,-,0.7,8,No,No,local community daily activity,Jelly & Fanno,-,-,-
+1,11,2009-04-24,2009-05-20,0.1788,0.1662,-,-,0.82,2,No,No,local community daily activity,-,-,-,-
+1,11,2009-05-20,2009-06-22,0.3411,0.3232,-,-,0.92,2,No,No,local community daily activity,Harjoko,-,-,-
+1,11,2009-06-22,2009-07-23,0.2554,0.2398,-,-,0.85,0,No,No,local community daily activity,Jelly & Roddy,-,-,-
+1,11,2009-07-23,2009-08-21,0.1805,0.1657,-,-,0.87,0,No,No,local community daily activity,Jelly & Roddy,-,-,-
+1,11,2009-08-21,2009-09-22,0.697,0.6405,-,-,3,0,Yes,No,Community activity. Close the road (small),Jelly & Roddy,-,-,-
+1,11,2009-09-22,2009-10-21,1.7844,1.5039,-,-,16.43,4,Yes,No,Community Activity.,Jelly & Royke,-,-,-
+1,11,2009-10-21,2009-11-22,0.5195,0.5104,-,-,0.48,9,No,No,Community Activity,JM,-,8360,-
+1,11,2009-11-22,2009-12-20,0.515,0.5117,-,-,0.2,5,No,No,Community activity,Rolke,-,5250,-
+1,11,2009-12-20,2010-01-20,0.9426,0.9385,-,-,0.22,8,No,No,"Community activity, near school",Jelly & Royke,-,4200,-
+1,11,2010-01-20,2010-02-20,0.5814,0.5718,-,-,0.53,9,No,No,"Community activity, near school",Fanno & Mahmud,-,5100,-
+1,11,2010-02-20,2010-03-22,0.6614,0.6558,-,-,0.32,11,No,No,"Community activity, near school",Onlie,-,325,-
+1,11,2010-03-22,2010-04-20,1.1625,1.1478,-,-,0.86,6,No,No,"Community activity, near school",JM & Rolke,-,6750,-
+1,11,2010-04-20,2010-05-20,0.7856,0.7724,-,-,0.75,7,No,No,"Community activity, near school",Onlie & Rolke,-,4250,-
+1,11,2010-05-20,2010-06-20,0.8016,0.7971,-,-,0.25,3,No,No,"Community activity, near school",Onlie & Nus,-,3010,-
+1,11,2010-06-20,2010-07-20,0.7977,0.7939,-,-,0.22,6,No,No,Community activity,JM/OS,-,2850,-
+1,11,2010-07-20,2010-08-20,1.6325,1.5845,-,-,2.63,2,Yes,No,Community activity,RDC/Robby.N,-,4650,There was a lizard
+1,11,2010-08-20,2010-09-20,1.573,1.5486,-,-,1.34,5,Yes,No,Community activity,OS/MW,-,2370,-
+1,11,2010-09-20,2010-10-20,0.7815,0.771,-,-,0.59,0,No,No,Community activity,OS/MW,-,2890,-
+1,11,2010-10-20,2010-11-23,0.8216,0.793,-,-,1.43,8,Yes,No,Community activity,RDC/AL,-,7300,There was a lizard
+1,11,2010-11-23,2010-12-20,0.8206,0.8152,-,-,0.34,0,No,No,Community activity,OS/AL,-,4400,-
+1,11,2010-12-20,2011-01-20,0.8257,0.8145,-,-,0.61,3,Yes,No,Community activity,OS,-,2930,-
+1,11,2011-01-20,2011-02-20,0.7451,0.7415,-,-,0.2,0,No,No,Community activity,OS/MW,-,8050,-
+1,11,2011-02-20,2011-03-20,0.7986,0.7834,-,-,0.92,1,No,No,"Community activity, front of community house",OS/MW,-,4100,-
+1,11,2011-03-20,2011-04-21,0.8248,0.8232,-,-,0.08,3,No,No,"Community activity, front of community house, near school",OS,-,5900,-
+1,11,2011-04-21,2011-05-21,0.8094,0.7905,-,-,1.07,0,No,No,"Community activity, front of community house, near school",OS/MW,-,4550,-
+1,11,2011-05-21,2011-06-21,0.8085,0.7966,-,-,0.65,1,Yes,No,"Community activity, front of community house, near school",OS,-,5950,-
+1,11,2011-06-21,2011-07-20,0.8393,0.7759,-,-,3.47,1,Yes,No,"Community activity, front of community house, near school",OS,-,200,-
+1,11,2011-07-20,2011-08-20,0.8764,0.7753,-,-,5.54,0,Yes,No,"Community activity, front of community house, near school",OS/MW,-,2350,Have a lizard in the bottle
+1,11,2011-08-20,2011-09-20,0.8012,0.7541,-,-,2.58,0,Yes,No,"Community activity, front of community house, near school",FB/OL,-,1250,-
+1,11,2011-09-20,2011-10-21,0.8159,0.782,-,-,1.86,0,Yes,No,"Community activity, front of community house, near school",Novry/Anita,-,1700,-
+1,11,2011-10-21,2011-11-21,0.8377,0.8123,-,-,1.39,6,Yes,No,"Community activity, front of community house, near school",Andrias/Anita,-,3725,-
+1,11,2011-11-21,2011-12-22,0.8365,0.8243,-,-,0.65,2,Yes,No,"Community activity, front of community house, near school",Mahmud/Arter,-,5000,-
+1,11,2011-12-22,2012-01-20,0.8499,0.8313,-,-,1.09,1,No,No,"Community activity, front of community house, near school",OS/OA,-,3600,-
+1,11,2012-01-20,2012-02-20,0.8218,0.7969,-,-,1.36,3,No,No,"Community activity, front of community house, near the school",Onlie,-,5500,-
+1,11,2012-02-20,2012-03-20,0.8257,0.8144,-,-,0.64,3,No,No,"Community activity, front of community house, near the school",Andrias.L,-,9500,-
+1,11,2012-03-20,2012-04-20,0.7821,0.7724,-,-,0.55,1,Yes,No,"community act,house keeping,Traffic act",FB/NR,-,3300,-
+1,11,2012-04-20,2012-05-20,0.8218,0.7939,-,-,1.58,5,Yes,No,"community act,house keeping,Traffic act",RH,-,11500,Have a spider in the bottle
+1,11,2012-05-20,2012-06-20,0.7881,0.7754,-,-,0.72,2,No,No,community activity,AL/RH,-,2300,-
+1,11,2012-06-20,2012-07-20,0.8185,0.8087,-,-,0.55,3,No,No,community activity,AP/RH,-,1000,-
+1,11,2012-07-20,2012-08-22,0.8377,0.7945,-,-,2.45,2,Yes,No,Community activity,AL/TL,-,425,-
+1,11,2012-08-22,2012-09-20,0.823,0.8151,-,-,0.46,0,Yes,No,Community act (carbon of waste combustion),DA/TL,-,2400,-
+1,11,2012-09-20,2012-10-20,0.8877,0.8346,-,-,3.01,0,Yes,No,"Community activity, Road activity",CA/AL,-,750,-
+1,11,2012-10-20,2012-11-20,0.873,0.7902,-,-,4.69,3,No,No,community act,RH/SM,-,7725,-
+1,11,2012-11-20,2012-12-20,0.7972,0.789,-,-,0.46,0,No,No,community act,AL/JK,-,4000,-
+1,11,2012-12-20,2013-01-21,0.8139,0.8118,-,-,0.11,0,No,No,"Community activity, Road activity",DA/SM,-,9990,-
+1,11,2013-01-21,2013-02-20,0.81,0.808,-,-,0.11,4,No,No,Community act,AL/AP,-,9000,-
+1,11,2013-02-20,2013-03-20,0.8015,0.7959,-,-,0.34,0,No,No,"Community activity, traffic activity",FB/CR,-,2800,-
+1,11,2013-03-21,2013-04-20,0.8024,0.8016,-,-,0.05,0,No,No,"Community activity, traffic activity",DA/CR,-,3500,-
+1,11,2013-04-20,2013-05-20,0.7715,0.771,-,-,0.03,3,Yes,No,"Community activity, traffic activity",DA/RH,-,4050,-
+1,11,2013-05-20,2013-06-22,0.7988,0.7984,-,-,0.02,2,No,No,"Community activity, traffic activity",AL,-,3600,-
+1,11,2013-06-21,2013-07-20,0.7779,0.7742,-,-,0.22,3,No,No,"Community activity, traffic activity",AP/CR,-,3750,-
+1,11,2013-07-20,2013-08-20,0.7439,0.7282,-,-,0.86,1,No,No,"Community activity, traffic activity",DA/AL,-,3000,-
+1,11,2013-08-20,2013-09-20,0.8067,0.8032,-,-,0.19,0,No,No,"Community activity, traffic activity",DA/RH,-,600,-
+1,11,2013-09-20,2013-10-20,0.8686,0.7744,-,-,5.16,2,No,No,"Community activity, traffic activity",RH/CR,-,3200,-
+1,11,2013-10-20,2013-11-21,0.7784,0.7666,-,-,0.63,12,No,No,"Community activity, traffic activity",CR/RH,-,4500,-
+1,11,2013-11-21,2013-12-20,0.816,0.8156,-,-,0.02,4,No,No,"Community activity, traffic activity",AL,-,2150,-
+1,11,2013-12-20,2014-01-19,0.7976,0.7862,-,-,0.65,2,No,No,"Community activity, traffic activity",AL/RT,-,6000,-
+1,11,2014-01-19,2014-02-20,0.7833,0.783,-,-,0.02,0,No,No,"Community activity, traffic activity",AP/RH,-,4300,-
+1,11,2014-02-20,2014-03-22,0.7934,0.7932,-,-,0.01,0,No,No,"Community activity, traffic activity",CR/RT,-,1650,-
+1,11,2014-03-22,2014-04-21,0.7523,0.752,-,-,0.02,3,No,No,"Community activity, traffic activity",DA/AL,-,2750,-
+1,11,2014-04-20,2014-05-20,0.7948,0.792,-,-,0.16,2,No,No,"Community activity, traffic activity",AL/RT,-,2000,-
+1,11,2014-05-20,2014-06-21,0.7791,0.7508,-,-,1.5,1,No,No,"Community activity, traffic activity",RH,-,1700,-
+1,11,2014-06-21,2014-07-22,0.8086,0.7982,-,-,0.57,0,No,No,"Community activity, traffic activity",RH/RT,-,1750,-
+1,11,2014-07-22,2014-08-21,0.799,0.7989,-,-,0.01,8,No,No,"Community activity, traffic activity",DA/AL,-,300,Added aquades 500 ml
+1,11,2014-08-21,2014-09-20,0.8045,0.7914,-,-,0.74,2,No,No,"Community activity, traffic activity",RH,-,450,-
+1,11,2014-09-20,2014-10-22,0.847,0.8072,-,-,2.11,1,No,No,"Community activity, traffic activity",AL/CR,-,500,Added aquades 1000 ml
+1,11,2014-10-21,2014-11-20,0.8783,0.8397,-,-,2.19,0,No,No,"Community activity, traffic activity",CR/RT,-,3250,-
+1,11,2014-11-20,2014-12-20,0.8366,0.8297,-,-,0.39,0,No,No,"Community activity, traffic activity",CR/RT,-,3250,-
+1,11,2014-12-20,2015-01-20,0.8236,0.823,-,-,0.03,2,No,No,"Community activity, traffic activity",AL/BK,-,7500,-
+1,11,2015-01-20,2015-02-20,-,-,-,-,1,1,No,No,"Community activity, traffic activity",RH,-,-,Botle send to WLN
+1,11,2015-02-20,2015-03-20,0.8449,0.8442,-,-,0.04,0,No,No,"Community activity, traffic activity",AP/RH,-,3000,-
+1,11,2015-03-20,2015-04-20,0.8483,0.8449,-,-,0.19,0,No,No,"Community activity, traffic activity",AP/RH,-,2400,-
+1,11,2015-04-20,2015-05-18,-,-,-,-,5,0,No,No,"Community activity, traffic activity",RH,-,-,Botle send to WLN
+1,11,2015-05-19,2015-06-21,0.821,0.8119,-,-,0.47,1,No,No,"Community activity, traffic activity",AP/RT,-,1700,-
+1,11,2015-06-21,2015-07-21,0.8404,0.7918,-,-,2.75,1,No,No,"Community activity, traffic activity",AL/CR,-,900,Added 1000 ml Aquades
+1,11,2015-07-21,2015-08-19,-,-,-,-,5,0,No,No,"Community activity, traffic activity",AL/RT/BK,-,0,"Botle send to WLN, Add aquades 1000 ml"
+1,11,2015-08-19,2015-09-20,0.8023,0.8022,-,-,0.01,0,No,No,"Community activity, traffic activity",RT/BK,-,0,Added 1000 ml Aquades
+1,11,2015-09-20,2015-10-20,0.8055,0.8041,-,-,0.08,0,No,No,"Community activity, traffic activity",CR/RH,-,0,Added 1000 ml Aquades
+1,11,2015-10-20,2015-11-19,-,-,-,-,13,0,No,No,"Community activity, traffic activity",RH/RT,-,2100,bottle send to WLN
+1,11,2015-11-19,2015-12-16,0.8066,0.7866,-,-,1.26,3,No,No,"Community activity, traffic activity",AL,-,6200,-
+1,11,2015-12-16,2016-01-18,0.8065,0.7922,-,-,0.74,3,No,No,"Community activity, traffic activity",AP/RT,-,4300,-
+1,11,2016-01-18,2016-02-21,0.8374,0.8073,-,-,1.5,0,No,No,"Community activity, traffic activity",RH/RT,-,7000,-
+1,11,2016-02-21,2016-03-22,-,-,-,-,5,1,No,No,"Community activity, traffic activity",CR/RT,-,1850,bottle send to WLN
+1,11,2016-03-22,2016-04-19,0.8115,0.7992,-,-,0.75,1,No,No,"Community activity, traffic activity",BK/CR,-,2500,-
+1,11,2016-04-19,2016-05-23,-,-,-,-,7,3,No,No,"Community activity, traffic activity",RH/RT,-,4200,bottle send to WLN
+1,11,2016-05-23,2016-06-22,0.8541,0.8126,-,-,2.35,4,No,No,"Community activity, traffic activity",RH/AL,-,2050,-
+1,11,2016-06-22,2016-07-23,0.8214,0.8194,-,-,0.11,1,No,No,"Community activity, traffic activity",BK/RH/RT,-,2200,-
+1,11,2016-07-23,2016-08-22,0.81,0.8019,-,-,0.46,-,No,-,"Community activity, traffic activity",-,-,1750,-
+1,11,2016-08-22,2016-09-21,0.81,0.801,-,-,0.51,-,No,-,"Community activity, traffic activity",-,-,-,Internal
+1,11,2016-08-22,2016-09-21,-,-,-,-,17,0,No,No,"Community activity, traffic activity",BK/RT,-,3000,bottle send to WLN
+1,11,2016-09-20,2016-10-20,0.8132,0.8127,-,-,0.03,4,No,No,"Community activity, traffic activity",RT/BK,-,0,Add aquades 1000 ml
+1,11,2016-10-20,2016-11-22,0.8287,0.8227,-,-,0.31,10,No,No,"Community activity, traffic activity",RH/RT/BK,-,8700,-
+1,11,2016-11-22,2016-12-20,0.8317,0.819,-,-,0.77,1,No,No,"Community activity, traffic activity",RH/RT,-,2400,-
+1,11,2016-12-20,2017-01-21,0.8376,0.8326,-,-,0.27,3,No,No,"Community activity, traffic activity",AL,-,8400,-
+1,11,2017-01-21,2017-02-21,0.86,0.8299,-,-,1.65,1,No,No,"Community activity, traffic activity",DA/AL/HM/SM,-,12500,-
+1,11,2017-02-21,2017-03-22,0.86,0.8299,-,-,1.76,5,No,No,"Community activity, traffic activity",AP,-,2500,-
+1,11,2017-03-22,2017-04-20,0.8168,0.816,-,-,0.05,14,No,No,"Community activity, traffic activity",AP/BK,-,3000,-
+1,11,2017-04-20,2017-05-21,0.816,0.8136,-,-,0.13,0,No,No,"Community activity, traffic activity",RT/RH,-,4200,-
+1,11,2017-05-21,2017-06-21,0.8089,0.8088,5.4761,5.4738,0.34,-,-,-,"Community activity, traffic activity",-,25,2050,-
+1,11,2017-06-21,2017-07-23,0.8079,0.806,5.492,5.4903,0.48,-,-,-,"Community activity, traffic activity",-,25,4000,-
+1,11,2017-07-23,2017-08-20,-,-,-,-,1,5,No,No,"Community activity, traffic activity",RH/BK,-,875,bottle send to WLN
+1,11,2017-08-20,2017-09-21,0.801,0.7984,5.3283,5.3261,0.42,3,No,No,"Community activity, traffic activity",RH/RT,25,2700,-
+1,11,2017-09-21,2017-10-21,-,-,-,-,1,3,No,No,"Community activity, traffic activity",RH/RT,-,-,bottle send to WLN
+1,11,2017-10-21,2017-11-21,0.7949,0.7927,5.4909,5.4895,0.39,3,No,No,"Community activity, traffic activity",RH/RT,25,3800,-
+1,11,2017-11-21,2017-12-21,0.825,0.8211,5.423,5.4216,0.42,3,No,No,"Community activity, traffic activity",RH/RT,25,3900,-
+1,11,2017-12-21,2018-01-21,0.8441,0.8431,5.4941,5.4927,0.62,4,No,No,"Community activity, traffic activity",AL/BK,25,6025,-
+1,11,2018-01-21,2018-02-21,0.8468,0.8312,5.4963,5.4948,0.66,4,No,No,"Community activity, traffic activity",AL/BK,25,5800,-
+1,11,2018-02-21,2018-03-20,-,-,-,-,1,5,No,No,"Community activity, traffic activity",AL/BK,-,-,bottle send to WLN
+1,11,2018-03-20,2018-04-20,0.808,0.8078,5.4975,5.4968,0.21,5,No,No,"Community activity, traffic activity",AL/BK,25,4100,-
+1,11,2018-04-20,2018-05-20,0.844,0.8428,5.1309,5.1292,0.8,5,No,No,"Community activity, traffic activity",AL/BK,25,6250,-
+1,11,2018-05-20,2018-06-20,-,-,-,-,2,5,No,No,"Community activity, traffic activity",AL/BK,-,-,bottle send to WLN
+1,11,2018-06-21,2018-07-24,0.8124,0.8117,5.5023,5.4945,0.54,0,No,No,"Community activity, traffic activity",AL/BK,25,1000,-
+1,11,2018-07-24,2018-08-24,0.8175,0.8163,5.5189,5.502,2.78,0,No,No,"Community activity, traffic activity",AL/BK,25,2250,-
+1,11,2018-08-24,2018-09-24,-,-,-,-,-,-,-,-,"Community activity, traffic activity",-,-,-,-
+1,11,2018-09-24,2018-10-29,0.7949,0.7927,5.4909,5.4895,0.39,3,No,No,"Community activity, traffic activity",-,25,3800,-
+1,11,2018-11-27,2018-12-24,0.8293,0.8247,5.5222,5.5217,0.32,2,No,No,"Community activity, traffic activity",-,25,7400,-
+1,11,2018-12-25,2019-01-22,0.819,0.8182,5.5386,5.5281,5.14,2,No,No,"Community activity, traffic activity",-,25,6050,-
+1,11,2019-01-23,2019-02-22,-,-,-,-,1,2,No,No,"Community activity, traffic activity",RH/RT,-,-,Botol Send to WLN
+1,11,2019-02-23,2019-03-22,0.8069,0.8057,2.9602,2.953,0.94,2,No,No,"Community activity, traffic activity",-,25,1550,-
+1,11,2019-03-23,2019-04-25,0.8405,0.8372,5.331,5.321,2.41,2,No,No,"Community activity, traffic activity",RH/RT,25,3500,-
+1,11,2019-04-25,2019-05-27,-,-,-,-,1,2,No,No,"Community activity, traffic activity",-,-,-,Botol Send to WLN
+1,11,2019-05-27,2019-06-20,0.844,0.8428,5.1309,5.1292,0.34,2,No,No,"Community activity, traffic activity",AL/FP,25,2100,-
+1,11,2019-06-20,2019-07-20,0.8399,0.83,5.434,5.43,1.08,2,No,No,"Community activity, traffic activity",BK,25,3500,-
+1,11,2019-06-20,2019-07-20,0.8275,0.823,5.436,5.43,1.28,2,No,No,"Community activity, traffic activity",BK,25,2800,-
+1,11,2019-07-20,2019-08-20,-,-,-,-,8.5,2,No,No,"Community activity, traffic activity",RH/RT,25,1400,Botol Send to ITS
+1,11,2019-08-20,2019-09-23,0.8495,0.8295,5.4974,5.4956,0.09,2,No,No,"Community activity, traffic activity",OS/FR,25,500,-
+1,11,2019-09-23,2019-10-01,0.9106,0.7968,5.5627,5.5406,1.72,2,No,No,"Community activity, traffic activity",RT,25,900,-
+1,11,2019-10-01,2019-11-20,-,-,-,-,10.7,2,No,No,"Community activity, traffic activity",RH/RT,25,1400,Botol Send to ITS
+1,11,2019-11-20,2019-12-01,0.8439,0.817,5.5381,5.5224,4.55,2,No,No,"Community activity, traffic activity",RT,25,3800,-
+1,11,2019-12-20,2020-01-20,0.9825,0.8174,5.5894,5.5645,7.21,7,No,No,"Community activity, traffic activity",AL/NB,25,3800,-
+1,11,2020-07-23,2020-08-20,-,-,-,-,11,-,-,-,"Community activity, traffic activity",-,25,-,Botol Send to WLN
+1,11,2020-08-20,2020-09-20,0.8305,0.8235,5.5184,5.5144,0.17,3,No,No,"Community activity, traffic activity",FP/JK,25,550,-
+1,11,2020-09-20,2020-10-21,-,-,-,-,11,-,No,No,"Community activity, traffic activity",FP/JK,-,-,Botol Send to WLN
+1,11,2020-10-21,2020-11-21,0.8299,0.8263,5.5153,5.5134,0.13,8,No,No,"Community activity, traffic activity",BK/FP,25,900,-
+1,11,2020-11-21,2020-12-21,0.8011,0.7971,5.5207,5.5181,0.67,8,No,No,"Community activity, traffic activity",RT/FP,25,3350,-
+1,11,2020-12-21,2021-01-24,0.8085,0.8075,5.5212,5.5182,0.7,6,No,No,"Community activity, traffic activity",FP/JK,25,3500,-
+1,11,2021-01-24,2021-02-25,-,-,-,-,2,5,No,No,"Community activity, traffic activity",FP/JK,25,-,Botol Send to WLN
+1,11,2021-02-25,2021-03-23,0.8339,0.8327,5.5247,5.5209,1.62,4,No,No,"Community activity, traffic activity",BK/JK,25,4900,-
+1,11,2021-03-23,2021-04-23,0.8365,0.8291,5.5225,5.5197,0.93,5,No,No,"Community activity, traffic activity",BK/FR/RT,25,4500,-
+1,11,2021-04-23,2021-05-19,-,-,-,-,9,6,No,No,"Community activity, traffic activity",BK/FP,25,-,Botol Send to WLN
+1,11,2021-05-19,2021-06-22,0.842,0.8366,5.5252,5.5236,0.33,4,No,No,"Community activity, traffic activity",BK/FP,20,2400,-
+1,11,2021-06-22,2021-07-22,0.8334,0.8322,5.5253,5.5248,0.11,4,No,No,"Community activity, traffic activity",BK/JK,20,2300,-
+1,11,2021-07-22,2021-08-20,-,-,-,-,2,4,No,No,"Community activity, traffic activity",BK/JK,-,-,Botol Send to WLN
+1,11,2021-08-20,2021-09-24,0.8332,0.8282,5.5281,5.5235,0.56,0,No,No,"Community activity, traffic activity",NB/FK,25,1850,-
+1,11,2021-09-24,2021-10-21,0.8435,0.8269,5.5362,5.5276,0.4,4,No,No,"Community activity, traffic activity",BK/FR/HM,25,500,-
+1,11,2021-10-21,2021-11-23,-,-,-,-,13,7,No,No,"Community activity, traffic activity",BK/JK,-,-,Botol Send to WLN
+1,11,2021-11-23,2021-12-20,0.8508,0.8413,5.5161,5.4727,6.21,8,No,No,"Community activity, traffic activity",FR/PP,25,1700,-
+1,11,2021-12-20,2022-01-24,-,-,-,-,1,5,No,No,"Community activity, traffic activity",FR/HM,-,-,Botol Send to WLN
+1,11,2022-01-24,2022-02-24,0.8369,0.8345,5.5898,5.5872,0.46,9,No,No,"Community activity, traffic activity",BK/FP,25,2400,-
+1,11,2022-02-24,2022-03-27,0.8189,0.8111,5.5096,5.5085,0.35,10,No,No,"Community activity, traffic activity",FK/FR,25,4125,-
+1,11,2022-03-27,2022-04-21,-,-,-,-,1,3,No,No,"Community activity, traffic activity",BK/FR,-,-,Botol Send to WLN
+1,11,2022-04-21,2022-05-25,0.8285,0.8253,5.5217,5.5196,0.11,10,No,No,"Community activity, traffic activity",FK/FR,25,770,-
+1,11,2022-05-25,2022-06-23,1.0054,0.8245,5.5314,5.5203,1.57,0,No,No,"Community activity, traffic activity",FP/FR,25,1400,-
+1,11,2022-06-23,2022-07-24,-,-,-,-,1,5,No,No,"Community activity, traffic activity",BK/NB,-,-,Botol Send to WLN
+1,11,2022-07-24,2022-08-25,0.8204,0.8198,3.4839,3.4834,0.07,8,No,No,"Community activity, traffic activity",BK/PP,25,2000,-
+1,11,2022-08-25,2022-09-26,0.7958,0.793,3.2847,3.2832,0.15,8,No,No,"Community activity, traffic activity",BK/HM,25,1400,-
+1,11,2022-09-26,2022-10-26,-,-,-,-,2,7,No,No,"Community activity, traffic activity",BK/NB,-,-,Botol Send to WLN
+1,11,2022-10-26,2022-11-28,0.8899,0.887,3.2847,3.2832,0.42,3,No,No,"Community activity, traffic activity",BK/JK,25,4000,-
+1,11,2022-11-28,2022-12-22,0.8126,0.8095,5.4055,5.4045,0.18,7,No,No,"Community activity, traffic activity",BK/FR/JK,25,1800,-

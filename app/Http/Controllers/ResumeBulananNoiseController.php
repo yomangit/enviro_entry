@@ -27,17 +27,17 @@ class ResumeBulananNoiseController extends Controller
         else
         $table = ($lastDayofPreviousMonth-$firstDayofPreviousMonth)/86400;
 
-        $avg_l1= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l1');
-        $avg_l2= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l2');
-        $avg_l3= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l3');
-        $avg_l4= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l4');
-        $avg_l5= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l5');
-        $avg_l6= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l6');
-        $avg_l7= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('l7');
-        $avg_ls= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('ls');
-        $avg_lm= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('lm');
-        $avg_lsm= ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString()->avg('lsm');
-        $Resume=ResumeBulananNoise::with('user')->filter(request(['fromDate','search','location']))->paginate($table)->withQueryString();
+        $avg_l1= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l1');
+        $avg_l2= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l2');
+        $avg_l3= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l3');
+        $avg_l4= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l4');
+        $avg_l5= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l5');
+        $avg_l6= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l6');
+        $avg_l7= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('l7');
+        $avg_ls= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('ls');
+        $avg_lm= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('lm');
+        $avg_lsm= ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString()->avg('lsm');
+        $Resume=ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate($table)->withQueryString();
         $l1=[];
         $l2=[];
         $l3=[];
@@ -49,11 +49,15 @@ class ResumeBulananNoiseController extends Controller
         $lm=[];
         $lsm=[];
         $date=[];
-        $location=[];
+        $nama=[];
       
         foreach ($Resume as $item ) {
             $date[]=date('M-Y', strtotime( $item->date));
+<<<<<<< HEAD
 			
+=======
+			$nama[] = $item->CodeLocationNM->nama;
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
             $l1[]=doubleVal($item->l1);
             $l2[]=doubleval($item->l2);
             $l3[]=doubleval($item->l3);
@@ -64,7 +68,8 @@ class ResumeBulananNoiseController extends Controller
             $ls[]=doubleval($item->ls);
             $lm[]=doubleval($item->lm);
             $lsm[]=doubleval($item->lsm );
-            $location[]=$item->location;
+
+            
         }
 
         return view('dashboard.NoiseMeter.ResumeBulanan.index', [
@@ -81,7 +86,7 @@ class ResumeBulananNoiseController extends Controller
             'lm'=>$lm,
             'lsm'=>$lsm,
             'date'=>$date,
-            'location'=>$location,
+            'nama'=>$nama,
             'avg_l1'=>doubleval($avg_l1),
             'avg_l2'=>doubleval($avg_l2),
             'avg_l3'=>doubleval($avg_l3),
@@ -93,7 +98,7 @@ class ResumeBulananNoiseController extends Controller
             'avg_lm'=>doubleval($avg_lm),
             'avg_lsm'=>doubleval($avg_lsm),
             'code_location'=>Lokasi::all(),
-            'ResumeBulanan' => ResumeBulananNoise::with('user')->latest()->filter(request(['fromDate','search','location']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'ResumeBulanan' => ResumeBulananNoise::with('user')->orderBy('date','desc')->filter(request(['fromDate','location1','location2','location','bulan']))->paginate(30)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
         ]);
     }
 

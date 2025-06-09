@@ -155,8 +155,8 @@
                                                     <div class="form-group row">
                                                         <label style="font-size: 10px" class="col-sm-5 col-form-label">Oil Layer</label>
                                                         <div class="col-sm-5">
-                                                            <input name="oil_ayer" type="text" class="form-control form-control-sm @error('oil_ayer') is-invalid @enderror" value="{{ old('oil_ayer',$MarineSurfacewater->oil_ayer) }}" />
-                                                            @error('oil_ayer')
+                                                            <input name="oil_layer" type="text" class="form-control form-control-sm @error('oil_layer') is-invalid @enderror" value="{{ old('oil_layer',$MarineSurfacewater->oil_ayer) }}" />
+                                                            @error('oil_layer')
                                                             <span class=" invalid-feedback">{{ $message }}</span>
                                                             @enderror
                                                         </div>

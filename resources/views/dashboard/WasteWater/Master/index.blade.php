@@ -67,20 +67,43 @@
                                 <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
                             </div>
 
-                            <div class="input-group mr-1">
-                                <select class="form-control form-control-sm " name="search">
-                                    <option value="" selected disabled>Point ID</option>
-                                    @foreach ($code_units as $code)
-                                    @if ( request('search')==$code->nama)
-                                    <option value="{{($code->nama)}}" selected>
-                                        {{$code->nama}}
-                                    </option>
-                                    @else
-                                    <option value="{{$code->nama}}">{{$code->nama}}</option>
-                                    @endif
-                                    @endforeach
-                                </select>
-                            </div>
+                            <div style="width: 118px;" class="input-group mr-1">
+                                    <select class="form-control form-control-sm " name="search">
+                                        <option value="" selected>Point ID</option>
+                                        @foreach ($code_units as $code)
+                                        @if ( request('search')==$code->nama)
+                                        <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                        @else
+                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
                             <div class="mr-2">
                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                             </div>
@@ -797,6 +820,7 @@
 
         },
 
+<<<<<<< HEAD
         xAxis: {
             categories: {!!json_encode($tanggal) !!},
             accessibility: {
@@ -822,10 +846,38 @@
                 }
             }
         },
+=======
+        xAxis: [{
+                categories: {!! json_encode($tanggal) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
+        yAxis: {
+            title: {
+                text: 'value'
+            },
+
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#ff6f69',
+                    lineWidth: 1
+                }
+            }
+        },
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
         series: [{
             name: 'TSS Quality Standard',
             color: '#96ceb4',
             dashStyle: 'longdash',
+            xAxis: 1,
             data: {!!json_encode($tss_std) !!},
             marker: {
                 symbol: 'square'
@@ -853,6 +905,7 @@
 
         },
 
+<<<<<<< HEAD
         xAxis: {
             categories: {!!json_encode($tanggal) !!},
             accessibility: {
@@ -878,10 +931,38 @@
                 }
             }
         },
+=======
+        xAxis: [{
+                categories: {!! json_encode($tanggal) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
+        yAxis: {
+            title: {
+                text: 'value'
+            },
+
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
         series: [{
             name: 'pH Quality Standard',
             color: '#1F2833',
             dashStyle: 'longdash',
+            xAxis: 1,
             data: {!!json_encode($ph_std) !!},
             marker: {
                 symbol: 'square'

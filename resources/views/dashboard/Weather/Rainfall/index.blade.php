@@ -200,8 +200,16 @@
         </div><!-- /.container-fluid -->
     </section>
 </div>
-@foreach ($Rainfall as $code)
+
 <script>
+    	var data = {!! json_encode($milimeter) !!};
+    	var nama = {!! json_encode($lokasi) !!};
+	var processedData = data.map(function(dataEl, index){
+		return {x: index, y : dataEl}
+	});
+	var processedNama = nama.map(function(namaEl, index){
+		return { color: namaEl === 'Kopra' ? 'red' : 'yellow'}
+	});
     Highcharts.chart('container', {
         chart: {
             type: 'column'
@@ -209,10 +217,12 @@
         title: {
             text: ''
         },
-        xAxis: {
-            categories: {!! json_encode($tgl) !!},
-            crosshair: true
-        },
+        xAxis: [{
+                categories: {!! json_encode($tgl) !!}
+    },{
+        categories: {!! json_encode($lokasi) !!},
+        opposite: true
+    }],
         yAxis: {
             title: {
                 useHTML: true,
@@ -220,12 +230,9 @@
             }
         },
         tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
+            headerFormat: ' <b>{point.x}</b><br/>',
+            crosshairs: true,
+                shared: true
         },
         plotOptions: {
             column: {
@@ -234,12 +241,18 @@
             }
         },
         series: [{
-            name: '{!! json_encode($code->PointId->nama) !!}',
+            name: 'Milimeter',
+            
             color:'#6AB187',
-            data: {!! json_encode($milimeter) !!}
+            xAxis: 0,
+            xAxis: 1,
+           
+            data: processedData
 
-        }]
+        },
+       
+    ]
     });
 </script>
-@endforeach
+
 @endsection

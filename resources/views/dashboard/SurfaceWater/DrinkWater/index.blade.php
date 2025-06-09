@@ -61,6 +61,7 @@
                                 <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
                             </div>
                             <span class="input-group-text form-control-sm ">To</span>
+<<<<<<< HEAD
 
                             <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
                                 <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
@@ -80,6 +81,49 @@
 
 
 
+=======
+
+                            <div class="input-group date mr-2" id="reservationdate5" style="width: 85px;" data-target-input="nearest">
+                                <input type="text" name="toDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm" data-target="#reservationdate5" data-toggle="datetimepicker" value="{{ request('toDate') }}" />
+                            </div>
+                            <div style="width: 118px;" class="input-group mr-1">
+                                    <select class="form-control form-control-sm " name="search">
+                                        <option value="" selected>Point ID</option>
+                                        @foreach ($code_units as $code)
+                                        @if ( request('search')==$code->nama)
+                                        <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                        @else
+                                        <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                             <div class="mr-2">
                                 <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                             </div>
@@ -646,7 +690,12 @@
 
                 </div>
             </div>
+            <div class="card">
+            <div class="card-header">
+           
+            <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
         </div>
+<<<<<<< HEAD
 
         <div class="card">
             <div class="card-header">
@@ -654,6 +703,11 @@
             </div>
             <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
         </div>
+=======
+         
+
+        
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 
 </div>
 <!-- /.container-fluid -->
@@ -770,6 +824,7 @@
 </script>
 
 <script>
+<<<<<<< HEAD
     // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
     Highcharts.chart('container', {
         chart: {
@@ -846,4 +901,104 @@
         }]
     });
 </script>
+=======
+        Highcharts.chart('container', {
+            chart: {
+                type: 'spline',
+                zoomType: 'x',
+                panning: true,
+                panKey: 'shift'
+            },
+            title: {
+                text:''
+            },  
+            xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
+            yAxis: {
+                title: {
+                    text: 'Value'
+                }
+            },
+            legend: {
+            layout: 'horizontal',
+            align: 'left',
+            verticalAlign: 'bottom',
+            floating: false,
+            backgroundColor: 'rgba(255,255,255,0.3)',
+            borderWidth: 0,
+            enabled: true
+          },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+            name: 'Conductivity (µS/cm)',
+            color: '#DE7A22',
+            xAxis: 1,
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($conductivity) !!}
+        }, {
+            name: 'TDS',
+            
+            color: '#F4CC70',
+            marker: {
+                symbol: 'triangle'
+            },
+            data: {!!json_encode($tds) !!}
+        },  {
+            name: 'TSS',
+            
+            color: '#20948B',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tss) !!}
+        },
+        {
+            name: 'Turbidity',
+            
+            color: '#ff1a55',
+            marker: {
+                symbol: 'triangle'
+            },
+            data: {!!json_encode($turbidity) !!}
+        }, {
+            name: 'DO',
+            
+            color: '#288ba8',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($do) !!}
+        },  {
+            name: 'PH',
+            
+            color: '#6AB187',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($ph) !!}
+        }]
+        });
+
+
+</script>
+
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 @endsection

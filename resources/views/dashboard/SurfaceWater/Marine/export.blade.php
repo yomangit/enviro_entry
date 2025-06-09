@@ -54,7 +54,7 @@
             <td>{{$item->clarity}}</td>
             <td>{{$item->temperature_water}}</td>
             <td>{{$item->garbage}}</td>
-            <td>{{$item->oil_ayer}}</td>
+            <td>{{$item->oil_layer}}</td>
             <td>{{$item->odour}}</td>
             <td>{{$item->colour}}</td>
             <td>{{$item->turbidity}}</td>

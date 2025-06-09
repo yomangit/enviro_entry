@@ -49,7 +49,11 @@
                     </div>
                     @endif
                     <div class=" card-tools p-1 mr-2 form-inline">
+<<<<<<< HEAD
                             <form action="/surfacewater/monthly/" class="form-inline" autocomplete="off">
+=======
+                            <form action="/surfacewater/monthly/" method="GET" class="form-inline" autocomplete="off">
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 
                                 <div class="input-group date" id="reservationdate4" style="width: 85px;" data-target-input="nearest">
                                     <input type="text" name="fromDate" placeholder="Date" class="form-control datetimepicker-input form-control-sm " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ request('fromDate') }}" />
@@ -72,6 +76,35 @@
                                         @endforeach
                                     </select>
                                 </div>
+<<<<<<< HEAD
+=======
+
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search1">
+                                            <option value="" selected>Point ID 2</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search1')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div style="width: 118px;" class="input-group mr-1">
+                                        <select class="form-control form-control-sm " name="search2">
+                                            <option value="" selected>Point ID 3</option>
+                                            @foreach ($code_units as $code)
+                                            @if ( request('search2')==$code->nama)
+                                            <option value="{{($code->nama)}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->nama}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                         
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                                 <div class="mr-2">
                                     <button type="submit" class="btn bg-gradient-dark btn-xs">filter</button>
                                 </div>
@@ -721,6 +754,18 @@
                     </div>
                 </div>
                 @endif
+<<<<<<< HEAD
+=======
+
+                @if($Monthly->count())
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title text center">{{$tittle}} </div>
+                    </div>
+                    <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+                </div>
+                @endif
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -751,6 +796,161 @@
         </div>
     </section>
 </div>
+<<<<<<< HEAD
 
+=======
+<script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'spline',
+                zoomType: 'x',
+                panning: true,
+                panKey: 'shift'
+            },
+            title: {
+                text:''
+            },  
+            xAxis: [{
+                categories: {!! json_encode($date) !!}
+    },{
+        categories: {!! json_encode($point) !!},
+        opposite: true
+    }],
+            yAxis: {
+                title: {
+                    text: 'Value'
+                }
+            },
+            legend: {
+            layout: 'horizontal',
+            align: 'left',
+            verticalAlign: 'bottom',
+            floating: false,
+            backgroundColor: 'rgba(255,255,255,0.3)',
+            borderWidth: 0,
+            enabled: true
+          },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+        name: 'Temperatur',
+            color: '#1F2833',
+            xAxis: 1,
+            data: {!!json_encode($suhu) !!},
+            marker: {
+                symbol: 'square'
+            },
+
+    },{
+            name: 'Conductivity (µS/cm)',
+            color: '#DE7A22',
+            xAxis: 1,
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($conductivity) !!}
+        }, {
+            name: 'Conductivity Std',
+            xAxis: 1,
+            color: '#BDB76B',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: {!!json_encode($cdvStd) !!}
+        },{
+            name: 'TDS',
+            
+            color: '#F4CC70',
+            marker: {
+                symbol: 'triangle'
+            },
+            data: {!!json_encode($tds) !!}
+        },  {
+            name: 'TDS Std',
+            xAxis: 1,
+            color: '#4d7902',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tdsStandard) !!}
+        }, {
+            name: 'TSS',
+            xAxis: 1,
+            color: '#20948B',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tss) !!}
+        },{
+            name: 'TSS Std',
+            xAxis: 1,
+            color: '#ffce30',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'circle'
+            },
+            data: {!!json_encode($tssStandard) !!}
+        }, {
+            name: 'DO',
+            xAxis: 1,
+            color: '#288ba8',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($do) !!}
+        }, {
+            name: 'DO Std',
+            xAxis: 1,
+            color: '#e389b9',
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            data: {!!json_encode($doStandard) !!}
+        }, {
+            name: 'PH',
+            xAxis: 1,
+            color: '#6AB187',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($ph) !!}
+        }, {
+            name: 'PH Min',
+            color: '#ff00aa',
+            xAxis: 1,
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMin) !!}
+        }, {
+            name: 'PH Max',
+            color: '#FF00FF',
+            xAxis: 1,
+            dashStyle: 'longdash',
+            marker: {
+                symbol: 'triangle-down'
+            },
+            data: {!!json_encode($phMax) !!}
+        }]
+        });
+
+
+</script>
+>>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 
 @endsection
