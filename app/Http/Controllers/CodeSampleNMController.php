@@ -20,7 +20,7 @@ class CodeSampleNMController extends Controller
         return view('dashboard.NoiseMeter.CodeSampleNM.index',[
             "tittle"=>"Code Sample",
             'breadcrumb'=>'Code Sample Noise Meter ',
-      'Codes'=>Codesamplenm::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+      'Codes'=>Codesamplenm::with('user')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
     }

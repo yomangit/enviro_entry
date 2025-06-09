@@ -20,7 +20,7 @@ class DischargeManualQualityStandardController extends Controller
         return view('dashboard.Hydrometric.DischargeManual.QualityStandard.index',[
             'tittle'=>'Quality Standard',
             'breadcrumb'=>'Quality Standard',
-            'QualityStandard'=>DischargeManualQualitystandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+            'QualityStandard'=>DischargeManualQualitystandard::with('user')->latest()->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportDischargeManualStandard()

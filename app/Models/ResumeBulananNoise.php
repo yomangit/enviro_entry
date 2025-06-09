@@ -13,8 +13,8 @@ class ResumeBulananNoise extends Model
     public function scopefilter($query, array $filters)
     {
         
-        $query->when($filters['fromDate'] ?? false, function ($query) {
-            return  $query->where('date','like', '%'. date('Y-m', strtotime(request('fromDate'))) .'%' );
+                $query->when($filters['fromDate']?? false, function($query){
+        return $query->whereBetween('date', array( date('Y-m-d',strtotime(request('fromDate'))),date('Y-m-d',strtotime( request('toDate'))))); 
         });
         // $query->when($filters['location']??false,function($query,$location){
         //     return $query->where('location', 'like', '%' . $location . '%');

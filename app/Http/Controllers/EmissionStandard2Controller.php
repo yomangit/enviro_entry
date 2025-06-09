@@ -20,7 +20,7 @@ class EmissionStandard2Controller extends Controller
         return view('dashboard.AirQuality.Emission.QualityStandard.index', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
-            'QualityStandard' => EmissionStandard2::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'QualityStandard' => EmissionStandard2::with('user')->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
 
@@ -93,7 +93,7 @@ class EmissionStandard2Controller extends Controller
             'opacity'=>'required',
             'total_particulate_isokinetic'=>'required',
             'sulfur_dioxide_so2'=>'required',
-            'nitrogen_oxide_nox_as_nitrogen_dioxide_no2'=>'required',
+            'nitrogen_oxide_nox_nitrogen_dioxide_no2'=>'required',
             'nitrogen_oxide_nox'=>'required',
             'carbon_monoxide_co'=>'required',
             

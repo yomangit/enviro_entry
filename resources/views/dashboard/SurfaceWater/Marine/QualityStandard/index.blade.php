@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <!-- SELECT2 EXAMPLE -->
             <div class="card card-primary card-outline">
-                    <div class="card-header p-0 ">
+                <div class="card-header p-0 ">
                     @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -57,11 +57,11 @@
                     </table>
                     @endif
 
-                    @if(empty($QualityStd->count()))
+                    
                     <a href="/surfacewater/marinesurfacewater/quality/create" class="btn bg-gradient-secondary btn-xs ml-2 my-1"><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
                     <a href="/export/marinesurfacewater/quality" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                     <a href="#" class="btn  bg-gradient-secondary btn-xs my-1" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default"><i class="fas fa-upload mr-1"></i>Excel</a>
-                    @endif
+                   
 
                     <div class=" card-tools p-1 my-1 mr-2 form-inline">
                         <form action="/surfacewater/marinesurfacewater/quality">
@@ -78,8 +78,7 @@
                 </div>
                 <div class="card-body">
                     <div class="content">
-                        <div class="col-12">
-                            <div class="card">
+
                                 <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="custom-content-above-Physical-tab" data-toggle="pill" href="#custom-content-above-Physical" role="tab" aria-controls="custom-content-above-Physical" aria-selected="true">Physical Chemical</a>
@@ -102,270 +101,274 @@
 
                                 </ul>
 
-                                <div class="tab-content" id="custom-content-above-tabContent">
+                                <div class="tab-content mt-2" id="custom-content-above-tabContent">
 
                                     <div class="tab-pane fade show active" id="custom-content-above-Physical" role="tabpanel" aria-labelledby="custom-content-above-Physical-tab">
-                                        <div class="card">
+                                        <div class="table-responsive card card-primary card-outline">
 
-                                            <div class="card-body table-responsive">
-                                                <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th style="width:80px">Action</th>
-                                                            <th>No</th>
-                                                            <th>Quality Standard</th>
-                                                            <th>Clarity</th>
-                                                            <th>Temperature (Water)</th>
-                                                            <th>Garbage</th>
-                                                            <th>Oil Layer</th>
-                                                            <th>Odor</th>
-                                                            <th>Color</th>
-                                                            <th>Turbidity</th>
-                                                            <th>Total Suspended Solids</th>
-                                                            <th>Salinity in situ</th>
-                                                            <th>Total Dissolved Solids</th>
-                                                            <th>Conductivity (Insitu)</th>
 
-                                                        </tr>
+                                            <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 12px">
+                                                    <tr>
+                                                        
+                                                        <th>No</th>
+                                                        <th>Quality Standard</th>
+                                                        <th>Clarity</th>
+                                                        <th>Temperature (Water)</th>
+                                                        <th>Garbage</th>
+                                                        <th>Oil Layer</th>
+                                                        <th>Odor</th>
+                                                        <th>Color</th>
+                                                        <th>Turbidity</th>
+                                                        <th>Total Suspended Solids</th>
+                                                        <th>Salinity in situ</th>
+                                                        <th>Total Dissolved Solids</th>
+                                                        <th>Conductivity (Insitu)</th>
+                                                        <th style="width:80px">Action</th>
 
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody style="text-align:center" class=" border-1">
-                                                        @php
-                                                        $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStd as $item)
-                                                        <tr>
-                                                            <td>
-                                                                <a href="/surfacewater/marinesurfacewater/quality/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                    <i class="fas fa-pen"></i>
-                                                                </a>
-                                                                <form action="/surfacewater/marinesurfacewater/quality/{{ $item->id }}" method="POST" class="d-inline">
-                                                                    @method('delete')
-                                                                    @csrf
-                                                                    <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                        <i class="fas fa-trash"></i>
-                                                                    </button>
-                                                                </form>
-                                                            </td>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->nama}}</td>
-                                                            <td>{{$item->clarity}}</td>
-                                                            <td>{{$item->temperature_water}}</td>
-                                                            <td>{{$item->garbage}}</td>
-                                                            <td>{{$item->oil_ayer}}</td>
-                                                            <td>{{$item->odour}}</td>
-                                                            <td>{{$item->colour}}</td>
-                                                            <td>{{$item->turbidity}}</td>
-                                                            <td>{{$item->total_suspended_solids}}</td>
-                                                            <td>{{$item->salinity_in_situ}}</td>
-                                                            <td>{{$item->total_dissolved_solids}}</td>
-                                                            <td>{{$item->conductivity_insitu}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                    </tr>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="text-align:center" class=" border-1">
+                                                    @php
+                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStd as $item)
+                                                    <tr>
+                                                        
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->nama}}</td>
+                                                        <td>{{$item->clarity}}</td>
+                                                        <td>{{$item->temperature_water}}</td>
+                                                        <td>{{$item->garbage}}</td>
+                                                        <td>{{$item->oil_ayer}}</td>
+                                                        <td>{{$item->odour}}</td>
+                                                        <td>{{$item->colour}}</td>
+                                                        <td>{{$item->turbidity}}</td>
+                                                        <td>{{$item->total_suspended_solids}}</td>
+                                                        <td>{{$item->salinity_in_situ}}</td>
+                                                        <td>{{$item->total_dissolved_solids}}</td>
+                                                        <td>{{$item->conductivity_insitu}}</td>
+                                                        <td>
+                                                            <a href="/surfacewater/marinesurfacewater/quality/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <i class="fas fa-pen"></i>
+                                                            </a>
+                                                            <form action="/surfacewater/marinesurfacewater/quality/{{ $item->id }}" method="POST" class="d-inline">
+                                                                @method('delete')
+                                                                @csrf
+                                                                <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-content-above-Anions" role="tabpanel" aria-labelledby="custom-content-above-Anions-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Quality Standard</th>
-                                                            <th>pH</th>
-                                                            <th>Sulphide</th>
-                                                        </tr>
+                                        <div class="table-responsive card card-primary card-outline">
 
-                                                    </thead>
-                                                    <tbody style="text-align:center" class=" border-1">
-                                                        @php
-                                                        $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
-                                                        @endphp
+                                            <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 12px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Quality Standard</th>
+                                                        <th>pH</th>
+                                                        <th>Sulphide</th>
+                                                    </tr>
 
-                                                        @foreach($QualityStd as $item)
-                                                        <tr>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->nama}}</td>
-                                                            <td>{{$item->ph}}</td>
-                                                            <td>{{$item->sulphide}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                </thead>
+                                                <tbody style="text-align:center" class=" border-1">
+                                                    @php
+                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    @endphp
+
+                                                    @foreach($QualityStd as $item)
+                                                    <tr>
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->nama}}</td>
+                                                        <td>{{$item->ph}}</td>
+                                                        <td>{{$item->sulphide}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-content-above-Nutrient" role="tabpanel" aria-labelledby="custom-content-above-Nutrient-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Quality Standard</th>
-                                                            <th>Ammonia (N-NH3)</th>
-                                                            <th>Nitrate (N-NO3)</th>
-                                                            <th>Total-Phosphate (P-PO4)</th>
-                                                        </tr>
+                                        <div class="table-responsive card card-primary card-outline">
 
-                                                    </thead>
-                                                    <tbody style="text-align:center" class=" border-1">
-                                                        @php
-                                                        $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
-                                                        @endphp
+                                            <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 12px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Quality Standard</th>
+                                                        <th>Ammonia (N-NH3)</th>
+                                                        <th>Nitrate (N-NO3)</th>
+                                                        <th>Total-Phosphate (P-PO4)</th>
+                                                    </tr>
 
-                                                        @foreach($QualityStd as $item)
-                                                        <tr>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->nama}}</td>
-                                                            <td>{{$item->ammonia_n_nh3}}</td>
-                                                            <td>{{$item->nitrate_n_no3}}</td>
-                                                            <td>{{$item->total_phosphate_p_po4}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                </thead>
+                                                <tbody style="text-align:center" class=" border-1">
+                                                    @php
+                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    @endphp
+
+                                                    @foreach($QualityStd as $item)
+                                                    <tr>
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->nama}}</td>
+                                                        <td>{{$item->ammonia_n_nh3}}</td>
+                                                        <td>{{$item->nitrate_n_no3}}</td>
+                                                        <td>{{$item->total_phosphate_p_po4}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+
                                         </div>
 
                                     </div>
                                     <div class="tab-pane fade" id="custom-content-above-Cyanide" role="tabpanel" aria-labelledby="custom-content-above-Cyanide-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Quality Standard</th>
-                                                            <th>Cyanide (Total)</th>
-                                                            <th>Total Coliform</th>
-                                                        </tr>
+                                        <div class="table-responsive card card-primary card-outline">
 
-                                                    </thead>
-                                                    <tbody style="text-align:center" class=" border-1">
-                                                        @php
-                                                        $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
-                                                        @endphp
-                                                        @foreach($QualityStd as $item)
-                                                        <tr>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->nama}}</td>
-                                                            <td>{{$item->cyanide_total}}</td>
-                                                            <td>{{$item->total_coliform}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                            <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 12px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Quality Standard</th>
+                                                        <th>Cyanide (Total)</th>
+                                                        <th>Total Coliform</th>
+                                                    </tr>
+
+                                                </thead>
+                                                <tbody style="text-align:center" class=" border-1">
+                                                    @php
+                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    @endphp
+                                                    @foreach($QualityStd as $item)
+                                                    <tr>
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->nama}}</td>
+                                                        <td>{{$item->cyanide_total}}</td>
+                                                        <td>{{$item->total_coliform}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+
                                         </div>
                                     </div>
                                     <div class="tab-pane fade " id="custom-content-above-Metal" role="tabpanel" aria-labelledby="custom-content-above-Metal-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Quality Standard</th>
-                                                            <th>Chromium Hexavalent-Total(Cr-VI)</th>
-                                                            <th>Arsenic-Hydrid Dissolved (As)</th>
-                                                            <th>Boron-Dissolved (B)</th>
-                                                            <th>Cadmium-Dissolved (Cd)</th>
-                                                            <th>Copper-Dissolved (Cu)</th>
-                                                            <th>Lead-Dissolved (Pb)</th>
-                                                            <th>Nickel-Dissolved (Ni)</th>
-                                                            <th>Zinc-Dissolved (Zn)</th>
-                                                            <th>Mercury-Dissolved (Hg)</th>
-                                                        </tr>
+                                        <div class="table-responsive card card-primary card-outline">
 
-                                                    </thead>
-                                                    <tbody style="text-align:center" class=" border-1">
-                                                        @php
-                                                        $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
-                                                        @endphp
+                                            <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 12px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Quality Standard</th>
+                                                        <th>Chromium Hexavalent-Total(Cr-VI)</th>
+                                                        <th>Arsenic-Hydrid Dissolved (As)</th>
+                                                        <th>Boron-Dissolved (B)</th>
+                                                        <th>Cadmium-Dissolved (Cd)</th>
+                                                        <th>Copper-Dissolved (Cu)</th>
+                                                        <th>Lead-Dissolved (Pb)</th>
+                                                        <th>Nickel-Dissolved (Ni)</th>
+                                                        <th>Zinc-Dissolved (Zn)</th>
+                                                        <th>Mercury-Dissolved (Hg)</th>
+                                                    </tr>
 
-                                                        @foreach($QualityStd as $item)
-                                                        <tr>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->nama}}</td>
-                                                            <td>{{$item->chromium_hexavalent_total_cr_vi}}</td>
-                                                            <td>{{$item->arsenic_hydrid_dissolved_as}}</td>
-                                                            <td>{{$item->boron_dissolved_b}}</td>
-                                                            <td>{{$item->cadmium_dissolved_cd}}</td>
-                                                            <td>{{$item->copper_dissolved_cu}}</td>
-                                                            <td>{{$item->lead_dissolved_pb}}</td>
-                                                            <td>{{$item->nickel_dissolved_ni}}</td>
-                                                            <td>{{$item->zinc_dissolved_zn}}</td>
-                                                            <td>{{$item->mercury_dissolved_hg}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                </thead>
+                                                <tbody style="text-align:center" class=" border-1">
+                                                    @php
+                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    @endphp
+
+                                                    @foreach($QualityStd as $item)
+                                                    <tr>
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->nama}}</td>
+                                                        <td>{{$item->chromium_hexavalent_total_cr_vi}}</td>
+                                                        <td>{{$item->arsenic_hydrid_dissolved_as}}</td>
+                                                        <td>{{$item->boron_dissolved_b}}</td>
+                                                        <td>{{$item->cadmium_dissolved_cd}}</td>
+                                                        <td>{{$item->copper_dissolved_cu}}</td>
+                                                        <td>{{$item->lead_dissolved_pb}}</td>
+                                                        <td>{{$item->nickel_dissolved_ni}}</td>
+                                                        <td>{{$item->zinc_dissolved_zn}}</td>
+                                                        <td>{{$item->mercury_dissolved_hg}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-content-above-Organics" role="tabpanel" aria-labelledby="custom-content-above-Organics-tab">
-                                        <div class="card">
-                                            <div class="card-body table-responsive">
-                                                <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
-                                                    <thead class="text-center" style=" color:#581845;font-size: 10px">
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Biologycal Oxygen Demand</th>
-                                                            <th>Dissolved Oxygen</th>
-                                                            <th>Oil & Grease</th>
-                                                            <th>Surfactant</th>
-                                                            <th>Total Phenol</th>
-                                                            <th>Hydrocarbon</th>
-                                                            <th>Tributyl Tin</th>
-                                                            <th>Total Poly Chlor Biphenyl</th>
-                                                            <th>Poly Aromatic Hydrocarbon</th>
-                                                            <th>Total Pesticides as Organo Chlorine Pesticides</th>
-                                                            <th>Benzene Hexa Chloride</th>
-                                                            <th>Endrin</th>
-                                                            <th>Dichloro Diphenyl Trichloroethane</th>
-                                                            <th>Total Petroleum Hydrocarbons</th>
-                                                        </tr>
+                                        <div class="table-responsive card card-primary card-outline">
 
-                                                    </thead>
-                                                    <tbody style="text-align:center" class=" border-1">
-                                                        @php
-                                                        $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
-                                                        @endphp
+                                            <table role="grid" class="table table-bordered  table-sm table-head-fixed  table-striped">
+                                                <thead class="text-center" style=" color:#581845;font-size: 12px">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Biologycal Oxygen Demand</th>
+                                                        <th>Dissolved Oxygen</th>
+                                                        <th>Oil & Grease</th>
+                                                        <th>Surfactant</th>
+                                                        <th>Total Phenol</th>
+                                                        <th>Hydrocarbon</th>
+                                                        <th>Tributyl Tin</th>
+                                                        <th>Total Poly Chlor Biphenyl</th>
+                                                        <th>Poly Aromatic Hydrocarbon</th>
+                                                        <th>Total Pesticides as Organo Chlorine Pesticides</th>
+                                                        <th>Benzene Hexa Chloride</th>
+                                                        <th>Endrin</th>
+                                                        <th>Dichloro Diphenyl Trichloroethane</th>
+                                                        <th>Total Petroleum Hydrocarbons</th>
+                                                    </tr>
 
-                                                        @foreach($QualityStd as $item)
-                                                        <tr>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$item->nama}}</td>
-                                                            <td>{{$item->biologycal_oxygen_demand}}</td>
-                                                            <td>{{$item->dissolved_oxygen}}</td>
-                                                            <td>{{$item->oil_grease}}</td>
-                                                            <td>{{$item->surfactant}}</td>
-                                                            <td>{{$item->total_phenol}}</td>
-                                                            <td>{{$item->hydrocarbon}}</td>
-                                                            <td>{{$item->tributyl_tin}}</td>
-                                                            <td>{{$item->total_poly_chlor_biphenyl}}</td>
-                                                            <td>{{$item->poly_aromatic_hydrocarbon}}</td>
-                                                            <td>{{$item->total_pesticides_as_organo_chlorine_pesticides}}</td>
-                                                            <td>{{$item->benzene_hexa_chloride}}</td>
-                                                            <td>{{$item->endrin}}</td>
-                                                            <td>{{$item->dichloro_diphenyl_trichloroethane}}</td>
-                                                            <td>{{$item->total_petroleum_hydrocarbons}}</td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                </thead>
+                                                <tbody style="text-align:center" class=" border-1">
+                                                    @php
+                                                    $no = 1 + ($QualityStd->currentPage() - 1) * $QualityStd->perPage();
+                                                    @endphp
+
+                                                    @foreach($QualityStd as $item)
+                                                    <tr>
+                                                        <td>{{$no++}}</td>
+                                                        <td>{{$item->nama}}</td>
+                                                        <td>{{$item->biologycal_oxygen_demand}}</td>
+                                                        <td>{{$item->dissolved_oxygen}}</td>
+                                                        <td>{{$item->oil_grease}}</td>
+                                                        <td>{{$item->surfactant}}</td>
+                                                        <td>{{$item->total_phenol}}</td>
+                                                        <td>{{$item->hydrocarbon}}</td>
+                                                        <td>{{$item->tributyl_tin}}</td>
+                                                        <td>{{$item->total_poly_chlor_biphenyl}}</td>
+                                                        <td>{{$item->poly_aromatic_hydrocarbon}}</td>
+                                                        <td>{{$item->total_pesticides_as_organo_chlorine_pesticides}}</td>
+                                                        <td>{{$item->benzene_hexa_chloride}}</td>
+                                                        <td>{{$item->endrin}}</td>
+                                                        <td>{{$item->dichloro_diphenyl_trichloroethane}}</td>
+                                                        <td>{{$item->total_petroleum_hydrocarbons}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+
 
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="card-footer">
+                    </div>
+                </div>
+                <div class="card-footer">
                                     <div class="card-tools row form-inline">
                                         <div class="col-4">
                                             <div class="d-flex justify-content-start">
@@ -413,10 +416,6 @@
                                     </div>
 
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 </div>

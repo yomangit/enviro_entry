@@ -1,0 +1,194 @@
+standard_id,user_id,codesample_id,date,start_time,stop_time,tss,ph,do,orp,conductivity,tds,temperatur,salinity,turbidity,tl_wall,tl_tsf,water_condition,water_color,odor,rain,rain_during_sampling,oil_layer,source_pollution,sampler,cyanide,level,lvl_lgr,debit_s,debit_d,remarks
+7,1,38,2022-02-14,11:00,11:02,58,7.96,7.11,279,2310,1480,28.6,1.1,79.5,-,280.45,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/JK/NB,0.147,-,-,-,-,-
+7,1,38,2022-02-15,14:13,14:15,49,6.78,7.56,312,1850,1180,27.1,0.9,50.6,-,280.44,Surut,Keruh,Normal,tidak,ada,tidak,Plantsite,FP/JK,0.021,-,-,-,-,-
+7,1,38,2022-02-16,13:45,13:47,58,8.01,7.14,267,1920,1220,29.6,0.9,94.8,-,280.44,Surut,Keruh,Normal,ada,ada,tidak,Plantsite,FP/JK,> 0.240,-,-,-,-,-
+7,1,38,2022-02-17,14:29,14:31,118,8.86,7.1,285,1920,1230,26.5,0.9,84.1,-,280.46,Pasang,Agak Keruh,Normal,ada,ada,tidak,Plantsite,FP/JK,> 0.240,-,-,-,-,-
+7,1,38,2022-02-18,14:10,14:12,109,8.5,8.06,246,1620,1040,27,0.8,165,-,280.5,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,FP,2.09,-,-,-,-,-
+7,1,38,2022-02-19,10:05,10:07,1580,8.04,6.86,307,1730,1110,25.7,0.7,147,-,280.5,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.131,-,-,-,-,-
+7,1,38,2022-02-20,9:40,9:42,63,8.85,6.73,320,1500,946,25.4,0.8,104,-,280.5,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FK/JK,0.58,-,-,-,-,-
+7,1,38,2022-02-21,12:30,12:32,140,8.31,7.09,285,1380,879,26.9,0.7,135,-,280.5,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,BK,0.97,-,-,-,-,-
+7,1,38,2022-02-22,13:57,13:59,79,8.35,7.58,247,1360,869,25,0.7,134,-,280.5,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,BK/FP,0.54,-,-,-,-,-
+7,1,38,2022-02-23,7:58,8:00,62,8.02,7.01,278,1460,932,27.9,0.7,125,-,280.5,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/FP,0.232,-,-,-,-,-
+7,1,38,2022-02-24,7:10,7:12,84,8.45,7.08,279,1640,1050,27.4,0.8,165,-,282.37,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/FP,0.171,-,-,-,-,-
+7,1,38,2022-02-25,13:41,13:43,144,8.02,7.33,249,1730,1110,28.4,0.8,236,-,282.39,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FP,0.132,-,-,-,-,-
+7,1,38,2022-02-26,14:21,14:23,190,8.85,7.01,216,1870,1190,31.2,0.8,181,-,282.37,Surut,Keruh,Normal,tidak,ada,tidak,Plantsite,FP/BK,0.9,-,-,-,-,-
+7,1,38,2022-02-27,9:50,9:52,124,8.21,7.15,237,1880,1210,28,0.9,230,-,282.36,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK,0.77,-,-,-,-,-
+7,1,38,2022-02-28,7:55,7:57,230,7.41,7.2,274,1800,1150,25.8,0.9,211,-,282.43,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/BK,0.135,-,-,-,-,-
+7,1,38,2022-03-01,14:02,14:04,175,8.46,7.26,231,1970,1260,30.3,0.9,182,-,282.44,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FP,0.58,-,-,-,-,-
+7,1,38,2022-03-02,9:30,9:32,137,8.4,7.31,215,1870,1180,28.3,0.8,140,-,282.55,Surut,Keruh,Normal,ada,ada,tidak,Plantsite,FP/BK,0.4,-,-,-,-,-
+7,1,38,2022-03-03,13:53,13:55,142,8.32,6.91,263,2050,1310,29.8,1,152,-,282.47,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/JK,0.126,-,-,-,-,-
+7,1,38,2022-03-04,13:55,13:57,143,8.18,6.34,234,2020,1290,32.1,0.9,139,-,282.47,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,0.093,-,-,-,-,-
+7,1,38,2022-03-05,8:15,8:17,129,8.06,6.8,287,1820,1160,27.3,0.9,136,-,282.46,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/HM,0.126,-,-,-,-,-
+7,1,38,2022-03-06,13:34,13:36,65,7.96,7.38,292,1750,1120,29.8,0.8,127,-,282.42,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.89,-,-,-,-,-
+7,1,38,2022-03-07,13:40,13:42,147,7.96,7.75,245,1780,1140,29.4,0.8,133,-,282.35,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.059,-,-,-,-,-
+7,1,38,2022-03-08,13:28,13:30,128,6.78,7.04,218,1630,1050,26.8,0.8,135,-,282.22,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,HM/JK,0.022,-,-,-,-,-
+7,1,38,2022-03-09,13:18,13:20,88,8.48,7.04,223,1780,1130,31.4,0.8,124,-,282.15,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,0.41,-,-,-,-,-
+7,1,38,2022-03-10,13:58,14:00,59,7.67,7.83,201,1830,1170,31.9,0.8,98.4,-,282.08,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/HM,0.222,-,-,-,-,-
+7,1,38,2022-03-11,13:42,13:44,86,8.13,8.06,207,1830,1170,31.6,0.8,97.5,-,282.06,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,0.025,-,-,-,-,-
+7,1,38,2022-03-12,8:05,8:07,98,8.28,7.76,160,1830,1170,26.9,0.9,93.6,-,282.05,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,0.3,-,-,-,-,-
+7,1,38,2022-03-13,13:58,NF,NF,NF,NF,NF,NF,NF,NF,NF,NF,-,282.16,NF,NF,NF,NF,NF,NF,NF,NF,NF,-,-,-,-,-
+7,1,38,2022-03-14,9:07,NF,NF,NF,NF,NF,NF,NF,NF,NF,NF,-,282.2,NF,NF,NF,NF,NF,NF,NF,NF,NF,-,-,-,-,-
+7,1,38,2022-03-15,13:58,14:00,54,7.75,6.75,217,1420,910,30.5,0.6,109,-,282.21,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FK/PP,0.18,-,-,-,-,-
+7,1,38,2022-03-16,14:53,14:55,43,7.79,7.89,204,1570,1000,33.2,0.7,75.1,-,282.08,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,0.05,-,-,-,-,-
+7,1,38,2022-03-17,14:15,14:17,40,7.4,7.45,184,1630,1040,31.8,0.7,68.7,-,282.08,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,0.05,-,-,-,-,-
+7,1,38,2022-03-18,13:31,13:33,87,8.24,8.14,244,1670,1040,32.4,0.8,83.7,-,282.09,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,0.22,-,-,-,-,-
+7,1,38,2022-03-19,8:52,8:54,69,8.14,6.83,231,1740,1090,27.4,0.9,74.9,-,282.03,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FR,-,-,-,-,-,-
+7,1,38,2022-03-20,13:31,13:33,88,7.73,6.85,242,1580,1010,27.5,0.8,109,-,282.09,Surut,Keruh,Normal,ada,ada,tidak,Plantsite,NB/BK,0.078,-,-,-,-,-
+7,1,38,2022-03-21,14:06,14:08,71,7.39,6.88,259,1600,1020,31.8,0.7,105,-,282.07,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.177,-,-,-,-,-
+7,1,38,2022-03-22,14:19,14:21,88,7.45,6.84,202,1770,1630,33.8,0.8,148,-,282.05,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/HM,0.223,-,-,-,-,-
+7,1,38,2022-03-23,14:36,14:38,85,7.72,6.9,217,1770,1130,30.3,0.8,146,-,282.66,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FP/HM,0.24,-,-,-,-,-
+7,1,38,2022-03-24,14:14,14:16,116,7.69,6.9,169,1850,1190,31.8,0.8,115,-,280.21,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,0.229,-,-,-,-,-
+7,1,38,2022-03-25,13:59,14:01,120,8.39,7.04,214,2090,1220,31.9,0.9,113,-,280.23,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,0.201,-,-,-,-,-
+7,1,38,2022-03-26,9:18,9:20,83,7.89,6.2,228,1700,1090,28.6,0.8,79.1,-,280.25,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,0.182,-,-,-,-,-
+7,1,38,2022-03-27,14:00,14:02,58,8.09,7.09,238,1910,1220,30.1,0.9,99.1,-,280.21,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/JK,0.239,-,-,-,-,-
+7,1,38,2022-03-28,10:46,10:48,49,8.27,7.05,246,2020,1290,27.9,1,100,-,280.13,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/JK,0.53,-,-,-,-,-
+7,1,38,2022-03-29,13:20,13:22,126,8.18,7.6,233,2010,1260,27.8,1,120,-,280.16,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,NB/FK,0.28,-,-,-,-,-
+7,1,38,2022-03-30,13:18,13:20,195,7.65,7.09,253,1500,945,28.7,0.2,443,-,280.96,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,0.175,-,-,-,-,-
+7,1,38,2022-03-31,9:45,9:47,310,7.15,6.54,297,1580,995,27.2,0.2,305,-,281.88,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FR,-,-,-,-,-,-
+7,1,38,2022-04-01,9:40,9:42,96,7.21,6.92,285,1650,1030,27.6,1,112,-,281.96,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM/NB,0.008,-,-,-,-,-
+7,1,38,2022-04-02,13:16,13:17,97,8,6.85,221,564,361,30.1,0.2,145,-,281.91,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB,0.003,-,-,-,-,-
+7,1,38,2022-04-03,9:34,9:36,106,8.09,6.8,205,611,389,28.7,0.4,102.5,-,282.05,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FR,0.013,-,-,-,-,-
+7,1,38,2022-04-04,14:27,14:29,162,7.28,6.72,236,770,493,29.8,0.3,150,-,281.95,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM/FR,0.08,-,-,-,-,-
+7,1,38,2022-04-05,13:28,13:30,69,8.2,6.65,222,880,563,31.1,0.4,131,-,281.89,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,HM/NB,0.004,-,-,-,-,-
+7,1,38,2022-04-06,13:55,13:57,50,7.69,8.04,268,830,531,32.5,0.4,95.2,-,282,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.003,-,-,-,-,-
+7,1,38,2022-04-07,13:20,13:22,46,7.02,6.44,283,780,501,30.6,0.3,87,-,282.02,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FP,0.003,-,-,-,-,-
+7,1,38,2022-04-08,14:45,14:47,97,7.07,6.94,236,956,612,28.8,0.4,98.5,-,281.88,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/PP,0.008,-,-,-,-,-
+7,1,38,2022-04-09,8:30,8:32,24,7.36,6.91,298,884,568,27.8,0.4,58.4,-,281.9,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,0.005,-,-,-,-,-
+7,1,38,2022-04-10,13:19,13:21,89,8.23,7.02,256,897,568,32,0.4,87.5,-,281.92,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,0.008,-,-,-,-,-
+7,1,38,2022-04-11,13:46,13:48,76,8.4,6.57,227,1790,1130,32.2,0.8,73.4,-,281.9,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.006,-,-,-,-,-
+7,1,38,2022-04-12,8:18,8:20,27,7.87,6.13,224,1840,1120,28.4,0.9,69.7,-,282.03,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,0.003,-,-,-,-,-
+7,1,38,2022-04-13,8:20,8:22,40,7.53,6.95,259,975,623,27.4,0.5,56.9,-,282.06,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,0.073,-,-,-,-,-
+7,1,38,2022-04-14,13:10,13:12,51,7.4,6.98,267,1150,750,31.5,0.5,35.1,-,282.01,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,0.007,-,-,-,-,-
+7,1,38,2022-04-15,14:43,14:45,40,7.74,7.81,149,1150,735,26.4,0.6,39,-,281.95,Pasang,Keruh,Normal,tidak,ada,tidak,Plantsite,HM/JK,0.013,-,-,-,-,-
+7,1,38,2022-04-16,10:40,10:42,73,7.62,7.06,256,727,465,28.4,0.3,95.5,-,282.19,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.03,-,-,-,-,-
+7,1,38,2022-04-17,7:39,7:41,79,8.21,6.37,243,925,591,26.9,0.4,76.8,-,282.17,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,HM,0.032,-,-,-,-,-
+7,1,38,2022-04-18,13:25,13:27,42,7.2,7.93,262,942,603,30.8,0.4,39.7,-,282.07,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,HM,0.027,-,-,-,-,-
+7,1,38,2022-04-19,13:49,13:51,28,7.97,7.23,234,953,610,30.1,0.4,23.5,-,282.01,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/HM,0.045,-,-,-,-,-
+7,1,38,2022-04-20,13:30,13:32,20,6.78,6.9,245,1020,654,33.9,0.4,22.6,-,281.92,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/JK,0.031,-,-,-,-,-
+7,1,38,2022-04-21,13:30,13:32,27,7.96,7.64,284,1030,658,32.2,0.4,36.7,-,281.82,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/HM,0.054,-,-,-,-,-
+7,1,38,2022-04-22,9:57,9:59,25,8.61,7.13,214,1070,686,30,0.5,43.3,-,281.76,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/JK,0.067,-,-,-,-,-
+7,1,38,2022-04-23,10:20,10:22,25,8.69,7.16,227,1050,674,27.9,0.5,45.4,-,281.88,Surut,Keruh,Normal,ada,ada,tidak,Plantsite,BK/JK,0.086,-,-,-,-,-
+7,1,38,2022-04-24,13:20,13:22,45,8.19,7.59,233,1180,754,31.9,0.5,41.6,-,282.02,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,HM,0.088,-,-,-,-,-
+7,1,38,2022-04-25,9:10,9:12,43,8.47,7.67,198,1210,773,28.5,0.6,39.7,-,282.08,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/HM,0.079,-,-,-,-,-
+7,1,38,2022-04-26,13:36,13:38,54,7.99,7.41,219,1280,818,33.2,0.5,81.3,-,282.23,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM/JK,0.065,-,-,-,-,-
+7,1,38,2022-04-27,13:18,13:20,33,7.65,6.87,216,1290,825,28,0.6,56.6,-,282.33,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,0.044,-,-,-,-,-
+7,1,38,2022-04-28,10:24,10:26,38,7.9,6.94,216,2080,1330,30.2,1,57.2,-,282.37,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/PP/FK,0.047,-,-,-,-,-
+7,1,38,2022-04-29,9:16,9:18,64,8.35,6.98,253,2230,1420,29.2,1.1,68.7,-,282.47,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.037,-,-,-,-,-
+7,1,38,2022-04-30,9:04,9:06,107,7.88,6.98,240,2120,1330,28.3,1.1,105,-,282.49,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.039,-,-,-,-,-
+7,1,38,2022-05-01,14:26,14:28,36,8.55,7.98,210,2090,1340,33,1.1,33.5,-,252.6,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.041,-,-,-,-,-
+7,1,38,2022-05-02,14:25,14:27,38,8.45,6.92,183,2290,1460,30.9,1.1,35.8,-,282.63,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,0.027,-,-,-,-,-
+7,1,38,2022-05-03,13:55,13:57,36,7.98,6.91,214,2460,1580,33.8,1.1,38,-,282.64,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/BK,0.025,-,-,-,-,-
+7,1,38,2022-05-04,13:31,13:33,300,8.11,6.8,191,1630,1040,30.8,0.7,294,-,282.75,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FP,0.023,-,-,-,-,-
+7,1,38,2022-05-05,9:38,9:40,29,8.38,6.94,203,2400,1530,30.6,1.1,52,-,282.77,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FR/FP,0.112,-,-,-,-,-
+7,1,38,2022-05-06,13:48,13:50,27,8.47,6.89,203,2430,1550,34.2,1.1,27.2,-,282.84,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,> 0.240,-,-,-,-,-
+7,1,38,2022-05-07,8:53,8:55,19,7.93,6.88,200,2350,1500,30.4,1.1,15.5,-,282.86,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK/JK,> 0.240,-,-,-,-,-
+7,1,38,2022-05-08,13:41,13:43,19,8.05,6.16,198,2500,1610,34.1,1.1,17.6,-,282.87,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,> 0.240,-,-,-,-,-
+7,1,38,2022-05-09,13:54,13:56,27,8.52,6.08,190,2510,1610,31.7,1.1,26.1,-,282.87,Pasang,Agak Keruh,Normal,ada,ada,tidak,Plantsite,FR/FP/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-05-10,9:20,9:22,29,8.26,6.87,197,2380,1530,28.6,1.1,26.8,-,282.86,Pasang,Agak Keruh,Normal,ada,ada,tidak,Plantsite,NB/FP,> 0.240,-,-,-,-,-
+7,1,38,2022-05-11,9:04,9:06,29,7.79,6.94,253,2060,1040,29.9,1,27.4,-,282.93,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FP,> 0.240,-,-,-,-,-
+7,1,38,2022-05-12,9:35,9:37,19,8.13,6.84,133,1980,995,30.4,1,28.8,-,282.9,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FP,0.221,-,-,-,-,-
+7,1,38,2022-05-13,9:01,9:03,36,7.99,6.96,222,985,640,27,0.5,97.7,-,282.87,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.021,-,-,-,-,-
+7,1,38,2022-05-14,13:20,13:22,35,8.24,6.88,205,1680,1050,28.9,0.8,34.8,-,282.87,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,NB/JK,0.036,-,-,-,-,-
+7,1,38,2022-05-15,14:58,15:00,30,8,6.82,290,945,603,30.2,0.4,27,-,283,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.103,-,-,-,-,-
+7,1,38,2022-05-16,13:58,14:00,33,6.92,6.96,245,1670,1070,34.7,0.7,31.4,-,282.87,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FR/HM,0.108,-,-,-,-,-
+7,1,38,2022-05-17,13:41,13:43,22,6.95,6.87,236,1490,951,34.1,0.6,29.3,-,282.87,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FR,0.212,-,-,-,-,-
+7,1,38,2022-05-18,13:40,13:42,37,8.63,6.82,224,2300,1470,31.7,1,40.4,-,283.1,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/FR,0.117,-,-,-,-,-
+7,1,38,2022-05-19,11:00,11:02,45,8.35,6.89,326,2390,1530,30.9,1.1,38.5,-,283.07,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/FR,0.102,-,-,-,-,-
+7,1,38,2022-05-20,13:45,13:47,27,7.6,6.89,203,2210,1410,32.4,1,46.2,-,283.04,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,0.002,-,-,-,-,-
+7,1,38,2022-05-21,6:50,6:52,32,8.35,6.98,187,1300,833,25.9,0.6,29.6,-,283.01,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.057,-,-,-,-,-
+7,1,38,2022-05-22,13:39,13:41,49,7.74,6.7,245,1670,1070,32.6,0.7,47.8,-,283.05,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.061,-,-,-,-,-
+7,1,38,2022-05-23,13:57,13:59,38,8.28,6.74,220,1760,1110,32.4,0.8,40.8,-,283.03,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,0.059,-,-,-,-,-
+7,1,38,2022-05-24,10:01,10:03,26,7.92,6.88,184,1370,881,29.8,0.6,37.8,-,283,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FR,0.069,-,-,-,-,-
+7,1,38,2022-05-25,13:41,13:43,20,7.41,6.94,162,2490,1600,32,1.1,28.5,-,282.9,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,0.047,-,-,-,-,-
+7,1,38,2022-05-26,13:39,13:41,38,8.69,7.18,155,2580,1650,30.4,1.2,36.8,-,282.9,Surut,Keruh,Normal,ada,ada,tidak,Plantsite,HM/FK,0.049,-,-,-,-,-
+7,1,38,2022-05-27,13:58,14:00,28,8.42,6.78,186,1360,873,29.4,0.6,26.4,-,282.85,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,0.051,-,-,-,-,-
+7,1,38,2022-05-28,14:03,14:05,77,8.37,7.62,203,1010,645,27.8,0.5,71.5,-,282.82,Surut,Keruh,Normal,ada,ada,tidak,Plantsite,FR/FP,0.049,-,-,-,-,-
+7,1,38,2022-05-29,14:10,14:12,87,7.8,6.98,137,2800,1790,34.6,1.2,92.4,-,282.8,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.067,-,-,-,-,-
+7,1,38,2022-05-30,13:11,13:13,40,8.37,6.89,147,2780,1740,30.1,1.3,49.1,-,282.96,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FK/PP,0.02,-,-,-,-,-
+7,1,38,2022-05-31,14:10,14:12,49,7.28,6.42,148,1700,1080,31.8,0.7,43.5,-,282.95,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,0.021,-,-,-,-,-
+7,1,38,2022-06-01,13:50,13:52,35,8.15,6.98,203,2940,1880,35,1.3,46,-,282.95,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-06-02,9:30,9:32,46,8.4,6.67,170,2790,1390,32.1,1.3,43.1,-,282.06,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/HM,-,-,-,-,-,-
+7,1,38,2022-06-03,8:16,8:18,78,8.52,6.14,204,3060,1950,29.5,1.5,76.2,-,281.98,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-06-04,14:21,14:23,56,6.65,6.79,231,3060,1890,31.2,1.5,54.8,-,281.75,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-06-05,13:38,13:40,94,7.84,6.98,150,3600,2300,33.7,1.6,92.9,-,281.67,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-06-06,14:32,14:34,39,8.25,6.74,196,4140,2650,33.6,1.9,35,-,281.68,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK,-,-,-,-,-,-
+7,1,38,2022-06-07,9:10,9:12,29,7.98,6.51,203,3690,2360,29.7,1.7,32.7,-,281.86,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/HM,-,-,-,-,-,-
+7,1,38,2022-06-08,13:50,13:52,34,8.09,6.99,207,3960,2530,32.5,1.8,25.4,-,281.86,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/NB,-,-,-,-,-,-
+7,1,38,2022-06-09,13:16,13:18,35,8.59,6.88,175,4350,2790,34.5,1.9,26.8,-,281.93,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FR,-,-,-,-,-,-
+7,1,38,2022-06-10,14:07,14:09,63,7.53,6.73,160,4190,2680,33.2,1.9,67.5,-,282,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR,-,-,-,-,-,-
+7,1,38,2022-06-11,13:48,13:50,27,8.47,6.89,158,3960,2530,32.8,1.8,26.2,-,282.17,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/HM,-,-,-,-,-,-
+7,1,38,2022-06-12,13:27,13:29,24,8.67,7.12,244,4320,2760,34.3,1.9,22.3,-,282.1,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/JK,-,-,-,-,-,-
+7,1,38,2022-06-13,13:38,13:40,49,7.67,7.03,179,4420,2830,34.5,2,35.4,-,282.1,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-06-14,13:34,13:36,55,7.36,6.86,163,4460,2860,35.2,2,51.2,-,282.11,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,-,-,-,-,-,-
+7,1,38,2022-06-15,13:40,13:42,36,7.34,6.99,192,4580,2930,36.2,2,34.7,-,281.94,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,-,-,-,-,-,-
+7,1,38,2022-06-16,9:21,9:23,43,7.4,6.94,190,4500,2830,32.5,2,32.5,-,281.96,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,-,-,-,-,-,-
+7,1,38,2022-06-17,13:40,13:42,173,7.56,6.6,241,4350,2780,32.9,2,169,-,281.61,Surut,Keruh,Normal,tidak,ada,tidak,Plantsite,HM,-,-,-,-,-,-
+7,1,38,2022-06-18,13:50,13:52,24,8.04,6.59,168,4320,2750,30.8,2,22.6,-,282.11,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/HM,-,-,-,-,-,-
+7,1,38,2022-06-19,13:31,13:33,19,6.82,6.82,233,4100,2630,34.3,1.8,21.7,-,282.37,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-06-20,13:38,13:40,23,7.46,6.88,200,3810,2440,33.2,1.7,31.2,-,282.43,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,0.228,-,-,-,-,-
+7,1,38,2022-06-21,14:12,14:16,22,8.11,6.91,197,3800,2430,32.8,1.7,25.1,-,282.28,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,0.222,-,-,-,-,-
+7,1,38,2022-06-22,9:43,9:45,21,7.6,6.9,137,3920,2510,29.7,1.9,18.4,-,282.22,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/FR,-,-,-,-,-,-
+7,1,38,2022-06-23,13:28,13:30,35,8.02,6.76,172,3860,2470,36,1.7,30.4,-,282.07,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,0.098,-,-,-,-,-
+7,1,38,2022-06-24,14:09,14:11,56,8.43,7.02,162,4160,2640,32.6,2,52.4,-,282.09,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-06-25,14:14,14:16,46,8.27,6.65,127,4200,2660,32.2,2.1,43.8,-,282.09,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-06-26,13:36,13:38,29,8.08,6.93,155,4280,2730,30.3,2,20.1,-,282.8,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/JK,0.078,-,-,-,-,-
+7,1,38,2022-06-27,8:33,8:35,23,8.38,7.03,158,4360,2790,27.7,2.2,10.3,-,282.82,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,BK/JK,0.09,-,-,-,-,-
+7,1,38,2022-06-28,13:30,13:32,22,7.24,6.83,162,2520,1610,29.1,1.2,13.7,-,283.1,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FR/HM,0.065,-,-,-,-,-
+7,1,38,2022-06-29,13:31,13:33,25,8.14,6.89,159,2770,1770,30.5,1.3,25.4,-,283.05,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FR,> 0.240,-,-,-,-,-
+7,1,38,2022-06-30,8:50,8:52,18,8.28,7.4,123,3250,2080,28,1.6,20.7,-,283.22,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-07-01,9:06,9:08,30,8.47,6.57,165,3660,2320,29.3,2,26.7,-,283.18,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-07-02,13:45,13:47,20,8.53,6.57,129,3200,2050,29.2,1.5,16.7,-,282.66,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,> 0.240,-,-,-,-,-
+7,1,38,2022-07-03,14:05,14:07,26,8.16,6.73,156,3620,2320,32.1,1.7,19.6,-,284.54,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,> 0.240,-,-,-,-,-
+7,1,38,2022-07-04,9:08,9:10,20,8.06,6.91,153,3450,2210,28.5,1.7,17.2,-,283.18,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,> 0.240,-,-,-,-,-
+7,1,38,2022-07-05,8:43,8:45,17,8.37,6.72,123,3610,2310,29.3,1.8,15.8,-,283.23,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-07-06,9:18,9:20,30,8.2,6.61,211,2780,1780,28.9,1.3,28,-,283.66,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,158,-,-,-,-,-
+7,1,38,2022-07-07,13:40,13:42,30,7.81,6.8,155,2620,1680,28.9,1.3,24.7,-,283.6,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,FR/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-07-08,9:02,9:04,23,8.3,7.87,136,2640,1690,26.8,1.3,17.1,-,283.58,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-07-09,13:50,13:52,28,8.08,6.71,130,2820,1800,29.6,1.3,21,-,283.45,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-07-10,13:25,13:27,38,7.24,6.89,214,3020,1900,30.8,1.6,28.3,-,283.5,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FR,-,-,-,-,-,-
+7,1,38,2022-07-11,9:12,9:14,34,8.3,6.94,193,3080,1940,27.5,1.6,29.7,-,283.5,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,0.031,-,-,-,-,-
+7,1,38,2022-07-12,9:37,9:39,43,8.9,6.4,128,1950,1250,28.6,0.9,22.3,-,283.25,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,-,-,-,-,-,-
+7,1,38,2022-07-13,9:44,9:46,32,8.4,6.88,132,2050,1310,29.8,1,18.6,-,284.13,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/FR,> 0.240,-,-,-,-,-
+7,1,38,2022-07-14,9:40,9:42,37,8.02,6.99,136,1990,1280,29,0.9,28.4,-,284.17,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/FR,> 0.240,-,-,-,-,-
+7,1,38,2022-07-15,14:09,14:11,42,8.26,6.57,174,2670,1690,28.2,1.2,37.6,-,284.17,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,FR/FP/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-07-16,9:46,9:48,51,8.16,7.13,152,3030,1920,28.4,1,24.7,-,284.17,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,> 0.240,-,-,-,-,-
+7,1,38,2022-07-17,13:48,13:50,31,7.99,6.84,151,2200,1410,30.4,1.1,30.3,-,284.2,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-07-18,9:12,9:14,38,7.69,6.94,159,2100,1340,25.6,1.1,41,-,284.2,Pasang,Keruh,Normal,ada,ada,tidak,Plantsite,NB/BK,0.082,-,-,-,-,-
+7,1,38,2022-07-19,8:59,9:01,70,8.86,6.89,139,2170,1390,26.3,1.1,58.2,-,284.4,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/FR,-,-,-,-,-,-
+7,1,38,2022-07-20,13:38,13:40,40,8.4,6.84,150,2460,1550,32.1,1.1,35.4,-,284.24,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB,-,-,-,-,-,-
+7,1,38,2022-07-21,13:18,13:20,41,8.25,6.75,140,2240,1410,31.9,1.1,33.4,-,284.4,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB,-,-,-,-,-,-
+7,1,38,2022-07-22,13:48,13:50,41,8.24,6.96,168,2450,1540,32.8,2.1,34.7,-,284.41,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB,-,-,-,-,-,-
+7,1,38,2022-07-23,9:02,9:04,32,8.36,6.71,152,2170,1380,28.9,1.3,27.6,-,284.4,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK,-,-,-,-,-,-
+7,1,38,2022-07-24,13:38,13:40,68,7.6,7.06,167,1990,1270,33.3,0.9,62.6,-,284.2,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-07-25,9:12,9:14,38,8.02,7.09,186,1800,1150,27.7,0.9,44.9,-,284,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/JK,> 0.240,-,-,-,-,-
+7,1,38,2022-07-26,10:00,10:02,35,8.24,6.89,141,1840,1180,28.2,0.9,41.9,-,284,Surut,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/FP,> 0.240,-,-,-,-,-
+7,1,38,2022-07-27,9:16,9:18,28,8.46,6.78,133,1960,1250,30.1,0.9,39.5,-,284,Surut,Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-07-28,8:57,8:59,18,7.46,6.47,200,615,385,28.4,0.3,18.1,-,284,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-07-29,9:39,9:41,19,8.16,7.97,174,907,609,32.1,0.5,16.8,-,284,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-07-30,9:06,9:08,16,8.18,8.05,197,804,511,30.4,0.3,14.4,-,284,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-07-31,13:38,13:40,30,8.55,6.38,133,2270,1450,31.3,1,38.6,-,284.07,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/HM,> 0.240,-,-,-,-,-
+7,1,38,2022-08-01,10:39,10:41,32,8.11,6.53,130,2360,1510,29.5,1.1,39.8,-,284.07,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,-,-,-,-,-,-
+7,1,38,2022-08-02,8:38,8:40,32,8.2,6.88,145,2450,1543,28.7,1,30.4,-,284.08,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK/HM,-,-,-,-,-,-
+7,1,38,2022-08-03,9:30,9:32,25,8.31,7.03,126,2450,1570,28,1.2,29.5,-,284.1,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,BK/HM,-,-,-,-,-,-
+7,1,38,2022-08-04,8:26,8:28,28,8.24,8.14,130,2760,1770,28.4,1.3,20.9,-,283.98,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/NB,-,-,-,-,-,-
+7,1,38,2022-08-05,9:08,9:10,36,8.3,6.88,168,2340,1470,28.9,1,38.7,-,283.97,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FR,-,-,-,-,-,-
+7,1,38,2022-08-06,9:57,9:59,23,8.29,7.87,133,2420,1570,30.6,1.2,19.7,-,284,Surut,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FR/FP,-,-,-,-,-,-
+7,1,38,2022-08-07,13:40,13:42,35,8.36,6.89,107,2760,1760,31.3,1.3,41.8,-,284.3,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,-,-,-,-,-,-
+7,1,38,2022-08-08,9:57,9:59,25,8.74,6.78,137,2550,1630,27.6,1.3,20.9,-,284.36,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,-,-,-,-,-,-
+7,1,38,2022-08-09,13:30,13:32,35,8.58,6.88,145,2940,1850,30.1,1.2,30.1,-,284.36,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/JK,> 0.240,-,-,-,-,-
+7,1,38,2022-08-10,10:07,10:09,17,8.2,7.85,208,2740,1740,29.6,1,19.7,-,284.31,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-11,13:25,13:27,34,8.56,6.88,175,2590,1630,30.1,1.1,30.4,-,284.32,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FP,-,-,-,-,-,-
+7,1,38,2022-08-12,8:47,8:49,36,8.8,6.75,106,2590,1660,26.8,1.3,34.9,-,284.2,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,NB/BK/JK,-,-,-,-,-,-
+7,1,38,2022-08-13,9:01,9:03,27,8.12,7.09,128,2610,1670,28.4,1.3,32.1,-,284.22,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-08-14,9:48,9:50,24,8.31,6.57,182,2790,1760,29.8,1.3,22.4,-,284.38,Surut,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-15,13:48,13:50,22,8.26,6.94,206,2750,1770,29.7,1.4,19.3,-,284.48,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-16,14:04,14:06,27,8.47,6.57,197,2710,1710,28.2,1.4,23.7,-,284.4,Surut,Agak Keruh,Normal,ada,ada,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-17,13:41,13:43,33,8.28,8.04,211,2740,1740,30.4,1.4,30.4,-,284.4,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-18,10:26,10:28,75,8.14,7.04,169,2620,1710,28.6,1.4,16.9,-,284.57,Pasang,Agak Keruh,Normal,tidak,ada,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-19,9:29,9:31,51,8.14,6.37,108,3250,2080,27.8,1.7,17.6,-,285,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,BK/JK,-,-,-,-,-,-
+7,1,38,2022-08-20,9:19,9:21,23,8.2,6.88,151,3410,2190,27.5,1.8,31.7,-,284.92,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/BK,-,-,-,-,-,-
+7,1,38,2022-08-21,10:09,10:11,13,8.13,7.46,168,2690,1710,30.4,1.4,10.3,-,284.9,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-22,8:18,8:20,21,8.3,7.8,168,3040,1840,27.9,1.4,19.5,-,284.91,Pasang,Agak Keruh,Normal,tidak,tidak,tidak,Plantsite,FR/FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-23,9:34,9:36,51,8.13,8.07,174,2690,1710,28.2,1.4,49.7,-,284.92,Pasang,Agak Keruh,Normal,ada,tidak,tidak,Plantsite,FP/HM,-,-,-,-,-,-
+7,1,38,2022-08-24,9:20,9:22,42,8.24,6.84,184,2340,1470,28.7,1.3,38.4,-,284.94,Pasang,Keruh,Normal,tidak,tidak,tidak,Plantsite,NB/FP,-,-,-,-,-,-
+7,1,38,2022-08-25,10:13,10:15,159,7.97,6.69,172,2880,1840,31.7,1.3,82.8,-,284.94,Pasang,Keruh,Normal,ada,tidak,tidak,Plantsite,FR/JK,-,-,-,-,-,-

@@ -15,6 +15,7 @@ class CreateGroundWaterMonthsTable extends Migration
     {
         Schema::create('ground_water_months', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("user_id");
             $table->foreignId("point_id");
             $table->foreignId("standard_id");
             $table->date("date");

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in</title>
+    <title>Entry | Log in</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -54,7 +54,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="assets/index2.html"><b>MSM</b> & <b>TTN</b></a>
+            <a href="assets/index2.html"><b>Entry</b></a>
         </div>
 
         <div class="card">
@@ -121,7 +121,7 @@
 
                     
                     <p class="mb-0">
-                        <a href="/register" class="text-center">Register a new membership</a>
+                        <!--<a href="/register" class="text-center">Register a new membership</a> -->
                     </p>
                 </div>
 

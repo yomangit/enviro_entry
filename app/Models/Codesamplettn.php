@@ -25,6 +25,6 @@ class Codesamplettn extends Model
     }
     public function getRouteKeyName()
 {
-    return 'failed_at';
+    return 'id';
 }
 }

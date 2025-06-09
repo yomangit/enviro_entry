@@ -27,8 +27,8 @@
                 @endif
 
                 <div class="row my-1 ml-1 mr-1">
-                    <div class="col-6">
-                        <p class="card-titel p-0 font-weight-bold">Annual Resume</p>
+                    <div class="col-6 ">
+                        <h6 class="card-titel p-0 font-weight-bold">Annual Resume</h6>
                     </div>
                     <div class="col-6 d-flex justify-content-end form-inline">
                         <form action="/airquality/noisemeter/resumetahunan" class="form-inline" autocomplete="off">
@@ -63,101 +63,101 @@
             <div class="card-body">
                 <section class="content ">
                     @if($ResumeTahunan->count())
-          
-                    <table role="grid" class="table table-bordered table-sm table-head-fixed ">
-                        <thead style=" color:#005245">
-                            <tr class="text-center">
-                                <th>No</th>
-                               @can('admin')
-                               <th>Action</th>
-                               @endcan
-                                <th scope="col">Location</th>
-                                <th scope="col">Year</th>
-                                <th scope="col">L-01</th>
-                                <th scope="col">L-02</th>
-                                <th scope="col">L-03</th>
-                                <th scope="col">L-04</th>
-                                <th scope="col">L-05</th>
-                                <th scope="col">L-06</th>
-                                <th scope="col">L-07</th>
-                                <th scope="col">L-S</th>
-                                <th scope="col">L-M</th>
-                                <th scope="col">L-sm</th>
+
+                    <div class="table-responsive card card-primary card-outline">
+                        <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm ">
+                            <thead style=" color:#005245">
+                                <tr class="text-center">
+                                    <th>No</th>
+                                    @can('admin')
+                                    <th>Action</th>
+                                    @endcan
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">L-01</th>
+                                    <th scope="col">L-02</th>
+                                    <th scope="col">L-03</th>
+                                    <th scope="col">L-04</th>
+                                    <th scope="col">L-05</th>
+                                    <th scope="col">L-06</th>
+                                    <th scope="col">L-07</th>
+                                    <th scope="col">L-S</th>
+                                    <th scope="col">L-M</th>
+                                    <th scope="col">L-sm</th>
 
 
 
-                                {{-- <th scope="col">Action</th> --}}
-                            </tr>
-                        </thead>
-                        <tbody style="text-align: center">
-                            @php
-                            $total=0;$log=0;
-                            $a1=0;$a2=0; $a=0;$a2=0;$a3=0;$a4=0;$a5=0;$a6=0;$a7=0;
-                            $no = 1 + ($ResumeTahunan->currentPage() - 1) * $ResumeTahunan->perPage();
-                            @endphp
-                            @foreach ($ResumeTahunan as $resume)
-                            <tr>
-                                <td>{{$no++}}</td>
-                                @can('admin') <td>
-                                    <div>
+                                    {{-- <th scope="col">Action</th> --}}
+                                </tr>
+                            </thead>
+                            <tbody style="text-align: center">
+                                @php
+                                $total=0;$log=0;
+                                $a1=0;$a2=0; $a=0;$a2=0;$a3=0;$a4=0;$a5=0;$a6=0;$a7=0;
+                                $no = 1 + ($ResumeTahunan->currentPage() - 1) * $ResumeTahunan->perPage();
+                                @endphp
+                                @foreach ($ResumeTahunan as $resume)
+                                <tr>
+                                    <td>{{$no++}}</td>
+                                    @can('admin') <td>
+                                        <div>
 
-                                        <form action="/airquality/noisemeter/resumetahunan/{{ $resume->id }}" method="POST" class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                <i class="fas fa-trash"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>@endcan
-                                <td>{{$resume->CodeLocationNM->nama}}</td>
-                                <td>{{date('Y',strtotime($resume->date))}}</td>
-                                <td>{{$resume->l1}}</td>
-                                <td>{{$resume->l2}}</td>
-                                <td>{{$resume->l3}}</td>
-                                <td>{{$resume->l4}}</td>
-                                <td>{{$resume->l5}}</td>
-                                <td>{{$resume->l6}}</td>
-                                <td>{{$resume->l7}}</td>
-                                <td>{{$resume->ls}}</td>
-                                <td>{{$resume->lm}}</td>
-                                <td>{{$resume->lsm}}</td>
-                            </tr>
-                            @endforeach
-                            <tr>
-                                <th @if(!auth()->user()->is_admin) colspan="3" @else colspan="4" @endif>Standard Industri</th>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                                <td>70</td>
-                            </tr>
-                            <tr>
-                                <th @if(!auth()->user()->is_admin) colspan="3" @else colspan="4" @endif>Standard Pemukiman</th>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                                <td>55</td>
-                            </tr>
+                                            <form action="/airquality/noisemeter/resumetahunan/{{ $resume->id }}" method="POST" class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>@endcan
+                                    <td>{{$resume->CodeLocationNM->nama}}</td>
+                                    <td>{{date('Y',strtotime($resume->date))}}</td>
+                                    <td>{{$resume->l1}}</td>
+                                    <td>{{$resume->l2}}</td>
+                                    <td>{{$resume->l3}}</td>
+                                    <td>{{$resume->l4}}</td>
+                                    <td>{{$resume->l5}}</td>
+                                    <td>{{$resume->l6}}</td>
+                                    <td>{{$resume->l7}}</td>
+                                    <td>{{$resume->ls}}</td>
+                                    <td>{{$resume->lm}}</td>
+                                    <td>{{$resume->lsm}}</td>
+                                </tr>
+                                @endforeach
+                                <tr>
+                                    <th @if(!auth()->user()->is_admin) colspan="3" @else colspan="4" @endif>Standard Industri</th>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                    <td>70</td>
+                                </tr>
+                                <tr>
+                                    <th @if(!auth()->user()->is_admin) colspan="3" @else colspan="4" @endif>Standard Pemukiman</th>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                    <td>55</td>
+                                </tr>
 
 
 
-                        </tbody>
-                    </table>
-
-                    @else
-                    <p class="text-center fs-4">Not Data Found</p>
+                            </tbody>
+                        </table>
+                    </div>
+                    @else <p class="text-center fs-4">Not Data Found</p>
                     @endif
                 </section>
             </div>
@@ -208,13 +208,13 @@
 
         </div><!-- /.container-fluid -->
         @if($ResumeTahunan->count())
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title text center">{{$tittle}}</div>
-                </div>
-                <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title text center">{{$tittle}}</div>
             </div>
-            @endif
+            <div class="card-body table-responsive p-0" id="container" style=" width: auto"></div>
+        </div>
+        @endif
 
     </section>
 </div>

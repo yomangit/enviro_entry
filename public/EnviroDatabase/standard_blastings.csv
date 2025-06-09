@@ -1,16 +1,16 @@
 user_id,ci,frequency,ppv,kualitas_bangunan,noise_level
 1,CI1 ( 0 - 5),0 - 5,2,Bangunan Kelas 1,110
-1,CI1 ( 5 - 20),5 ? 20,3,Bangunan Kelas 1,110
+1,CI1 ( 5 - 20),5 -20,3,Bangunan Kelas 1,110
 1,CI1 ( 20- 100),20 - 100,5,Bangunan Kelas 1,110
 1,CI2 ( 0 - 5),0 - 5,3,Bangunan Kelas 2,110
-1,CI2 ( 5 - 20),5 ? 20,5,Bangunan Kelas 2,110
+1,CI2 ( 5 - 20),5 -20,5,Bangunan Kelas 2,110
 1,CI12( 20- 100),20 - 100,7,Bangunan Kelas 2,110
 1,CI3 ( 0 - 5),0 - 5,5,Bangunan Kelas 3,110
-1,CI3 ( 5 - 20),5 ? 20,7,Bangunan Kelas 3,110
+1,CI3 ( 5 - 20),5 -20,7,Bangunan Kelas 3,110
 1,CI13 ( 20- 100),20 - 100,12,Bangunan Kelas 3,110
 1,CI4 ( 0 - 5),0 - 5,7,Bangunan Kelas 4,110
-1,CI4 ( 5 - 20),5 ? 20,12,Bangunan Kelas 4,110
+1,CI4 ( 5 - 20),5 -20,12,Bangunan Kelas 4,110
 1,CI14 ( 20- 100),20 - 100,20,Bangunan Kelas 4,110
 1,CI5 ( 0 - 5),0 - 5,12,Bangunan Kelas 5,110
-1,CI5 ( 5 - 20),5 ? 20,24,Bangunan Kelas 5,110
+1,CI5 ( 5 - 20),5 -20,24,Bangunan Kelas 5,110
 1,CI15 ( 20- 100),20 - 100,40,Bangunan Kelas 5,110

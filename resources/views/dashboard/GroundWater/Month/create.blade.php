@@ -24,7 +24,7 @@
 
             <div class="card card-primary card-outline">
                 <div class="card-header">
-                @if (session()->has('success'))
+                    @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible form-inline m-2">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5 class="mr-2"><i class="icon fas fa-check"></i> Success</h5>
@@ -32,7 +32,7 @@
                     </div>
                     @endif
                     <h3 class="card-title">
-                       Form Create
+                        Form Create
                     </h3>
                 </div>
                 <div class="card-body">
@@ -41,57 +41,59 @@
                         @csrf
                         <div class="tab-content" id="custom-content-below-tabContent">
                             <div class="row">
-                            <div class="col-12 col-md-6 col-sm-10">
-                                <div class="form-group row">
-                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Point ID</label>
-                                    <div class="col-sm-7">
-                                        <select class="form-control form-control-sm " name="gwcodesample_id">
-                                            @foreach ($code_units as $code)
-                                            @if (old('gwcodesample_id')==$code->id)
-                                            <option value="{{$code->id}}" selected>{{$code->nama}}</option>
-                                            @else
-                                            <option value="{{$code->id}}">{{$code->nama}}</option>
-                                            @endif
-                                            @endforeach
-                                        </select>
+                                <div class="col-12 col-md-4 col-sm-10">
+                                    <div class="form-group row">
+                                        <label style="font-size: 12px" class="col-sm-4 col-form-label">Point ID</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-control form-control-sm " name="point_id">
+                                                <option value="" selected disabled>--SELECT--</option>
+                                                @foreach ($code_units as $code)
+                                                @if (old('point_id')==$code->id)
+                                                <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                                @else
+                                                <option value="{{$code->id}}">{{$code->nama}}</option>
+                                                @endif
+                                                @endforeach
+                                            </select>
 
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-sm-10">
-                                <div class="form-group row">
-                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
-                                    <div class="col-sm-7">
-                                        <select class="form-control form-control-sm " name="gwcodesample_id">
-                                            @foreach ($quality_units as $code)
-                                            @if (old('gwcodesample_id')==$code->id)
-                                            <option value="{{$code->id}}" selected>{{$code->nama}}</option>
-                                            @else
-                                            <option value="{{$code->id}}">{{$code->nama}}</option>
-                                            @endif
-                                            @endforeach
-                                        </select>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-sm-10">
-                                <div class="form-group row">
-                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
-                                    <div class="col-sm-7">
-                                        <div class="input-group date" id="reservationdate4" data-target-input="nearest">
-                                            <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date') }}" />
-                                            @error('date')
-                                            <span class=" invalid-feedback">{{ $message }}</span>
-                                            @enderror
                                         </div>
 
                                     </div>
-
                                 </div>
-                            </div>
+                                <div class="col-12 col-md-4 col-sm-10">
+                                    <div class="form-group row">
+                                        <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-control form-control-sm " name="standard_id">
+                                                <option value="" selected disabled>--SELECT--</option>
+                                                @foreach ($quality_units as $code)
+                                                @if (old('standard_id')==$code->id)
+                                                <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                                @else
+                                                <option value="{{$code->id}}">{{$code->nama}}</option>
+                                                @endif
+                                                @endforeach
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-sm-10">
+                                    <div class="form-group row">
+                                        <label style="font-size: 12px" class="col-sm-4 col-form-label">Date</label>
+                                        <div class="col-sm-7">
+                                            <div class="input-group date" id="reservationdate4" data-target-input="nearest">
+                                                <input type="text" name="date" class="form-control datetimepicker-input form-control-sm @error('date') is-invalid @enderror " data-target="#reservationdate4" data-toggle="datetimepicker" value="{{ old('date') }}" />
+                                                @error('date')
+                                                <span class=" invalid-feedback">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
                             <ul class="nav nav-tabs mb-2" id="custom-content-below-tab" role="tablist">

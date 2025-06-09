@@ -20,7 +20,7 @@ class WastewaterStandardController extends Controller
         return view('dashboard.WasteWater.QualityStandard.index', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
-            'QualityStd' => Wastewaterstandard::where('user_id', auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
+            'QualityStd' => Wastewaterstandard::with('user')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportWasteWaterStandard()

@@ -65,6 +65,7 @@
                                     <label style="font-size: 12px" class="col-sm-4 col-form-label">Point ID</label>
                                     <div class="col-sm-6">
                                         <select class="form-control form-control-sm " name="point_id">
+                                            <option value="" selected disabled>--SELECT--</option>
                                             @foreach ($code_units as $code)
                                             @if (old('point_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>

@@ -20,7 +20,7 @@ class PointIdDrinkWaterController extends Controller
         return view('dashboard.SurfaceWater.DrinkWater.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'PointID' => PointIdDrinkwater::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'PointID' => PointIdDrinkwater::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
 
         ]);
     }

@@ -37,10 +37,30 @@
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="form-group row">
-                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Point ID</label>
                                     <div class="col-sm-7">
                                         <select class="form-control form-control-sm " name="codesample_id">
+                                            <option  selected disabled>--SELECT--</option>
                                             @foreach ($code_units as $code)
+                                            @if (old('codesample_id')==$code->id)
+                                            <option value="{{$code->id}}" selected>{{$code->nama}}</option>
+                                            @else
+                                            <option value="{{$code->id}}">{{$code->nama}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group row">
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Quality Standard</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control form-control-sm " name="codesample_id">
+                                            <option  selected disabled>--SELECT--</option>
+                                            @foreach ($QualityStandard as $code)
                                             @if (old('codesample_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>
                                             @else
@@ -588,7 +608,7 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer d-flex justify-content-end">
-                    <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
+                        <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
                     </div>
                 </form>
             </div>

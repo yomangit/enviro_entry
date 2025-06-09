@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\SurfacewaterMonthly;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DustController;
 use App\Http\Controllers\BiotaController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\AuthGroundWaterMSM;
 use App\Http\Controllers\AuthGroundWaterTTN;
 use App\Http\Controllers\BlastingController;
 use App\Http\Controllers\EmissionController;
+use App\Http\Controllers\RainfallController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AuthNoiseController;
 use App\Http\Controllers\DashboardController;
@@ -23,7 +25,10 @@ use App\Http\Controllers\AuthMarineController;
 use App\Http\Controllers\DrinkWaterController;
 use App\Http\Controllers\FreshWaterController;
 use App\Http\Controllers\GwStandardController;
+use App\Http\Controllers\WastewaterController;
+use App\Http\Controllers\EvaporationController;
 use App\Http\Controllers\HydrometricController;
+use App\Http\Controllers\SoilQualityController;
 use App\Http\Controllers\AuthBlastingController;
 use App\Http\Controllers\CodeSampleNMController;
 use App\Http\Controllers\AmbienPointidController;
@@ -39,41 +44,38 @@ use App\Http\Controllers\DischargeManualController;
 use App\Http\Controllers\EmissionPointIdController;
 use App\Http\Controllers\PointIdBlastingController;
 use App\Http\Controllers\QualityStandardController;
+use App\Http\Controllers\RainfallPointIdController;
 use App\Http\Controllers\TailingStandardController;
 use App\Http\Controllers\AmbienQualityStdController;
 use App\Http\Controllers\AuthSurfaceWaterController;
 use App\Http\Controllers\EmissionStandardController;
+use App\Http\Controllers\GroundWaterMonthController;
 use App\Http\Controllers\AuthResumeTahunanController;
 use App\Http\Controllers\EmissionStandard2Controller;
 use App\Http\Controllers\PointIdDrinkWaterController;
 use App\Http\Controllers\ResourceDataEntryController;
 use App\Http\Controllers\ResourceMasterTTNController;
 use App\Http\Controllers\ResourceWellLevelController;
+use App\Http\Controllers\WastewaterPointiDController;
+use App\Http\Controllers\EvaporationPointIdController;
 use App\Http\Controllers\MarinesurfacewaterController;
 use App\Http\Controllers\ResourceCodeSampleController;
 use App\Http\Controllers\ResourceMasterGWGwController;
 use App\Http\Controllers\ResumeBulananNoiseController;
 use App\Http\Controllers\ResumeTahunanNoiseController;
+use App\Http\Controllers\SoilQualityPointIDController;
+use App\Http\Controllers\WastewaterStandardController;
+use App\Http\Controllers\SoilQualityStandardController;
+use App\Http\Controllers\SurfacewaterMonthlyController;
 use App\Http\Controllers\ResourceCodeSampleDgController;
 use App\Http\Controllers\ResourceCodeSampleGwController;
+use App\Http\Controllers\StandardSurfacewaterController;
 use App\Http\Controllers\QualityStandardMarineController;
 use App\Http\Controllers\ResourceCodeSampleTTNController;
 use App\Http\Controllers\AuthResumeMonthlyNoiseController;
 use App\Http\Controllers\DischargeManualPointidController;
-use App\Http\Controllers\DischargeManualQualityStandardController;
-use App\Http\Controllers\EvaporationController;
-use App\Http\Controllers\EvaporationPointIdController;
-use App\Http\Controllers\GroundWaterMonthController;
 use App\Http\Controllers\GroundWaterMonthStandardController;
-use App\Http\Controllers\RainfallController;
-use App\Http\Controllers\RainfallPointIdController;
-use App\Http\Controllers\SoilQualityController;
-use App\Http\Controllers\SoilQualityPointIDController;
-use App\Http\Controllers\SoilQualityStandardController;
-use App\Http\Controllers\WastewaterController;
-use App\Http\Controllers\WastewaterPointiDController;
-use App\Http\Controllers\WastewaterStandardController;
-
+use App\Http\Controllers\DischargeManualQualityStandardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,6 +98,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 //admin
 Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/surfacewater/qualityperiode/codesample', ResourceCodeSampleController::class)->middleware('admin');
+Route::resource('/surfacewater/standardtable', StandardSurfacewaterController::class)->middleware('auth');
+Route::resource('/surfacewater/monthly', SurfacewaterMonthlyController::class)->middleware('auth');
 Route::resource('/surfacewater/qualityperiode', ResourceDataEntryController::class)->middleware('auth');
 Route::resource('/surfacewater/drinkwater/quantity', StdDrinkWaterController::class)->middleware('admin');
 Route::resource('/surfacewater/drinkwater/pointid', PointIdDrinkWaterController::class)->middleware('admin');
@@ -260,3 +264,9 @@ Route::post('/import/wastewater', [WastewaterController::class, 'ImportWastewate
 Route::post('/import/noisebulanan', [ResumeBulananNoiseController::class, 'ImportResumeBulananNoise'])->middleware('admin');
 Route::get('/export/groundwater/standard', [GroundWaterMonthStandardController::class, 'ExportStandardGroundwater'])->middleware('admin');
 Route::post('/import/groundwater/standard', [GroundWaterMonthStandardController::class, 'ImportStandardGroundwater'])->middleware('admin');
+Route::get('/export/groundwater/month', [GroundWaterMonthController::class, 'ExportMonthGroundwater'])->middleware('admin');
+Route::post('/import/groundwater/month', [GroundWaterMonthController::class, 'ImportMonthGroundwater'])->middleware('admin');
+Route::get('/export/surfacewater/standard', [StandardSurfacewaterController::class, 'ExportStandardSurfacewater'])->middleware('admin');
+Route::post('/import/surfacewater/standard', [StandardSurfacewaterController::class, 'ImportStandardSurfacewater'])->middleware('admin');
+Route::get('/export/surfacewater/monthly', [SurfacewaterMonthlyController::class, 'ExportMonthlySurfacewater'])->middleware('admin');
+Route::post('/import/surfacewater/monthly', [SurfacewaterMonthlyController::class, 'ImportMonthlySurfacewater'])->middleware('admin');

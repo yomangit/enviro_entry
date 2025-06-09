@@ -20,7 +20,7 @@ class AmbienPointidController extends Controller
         return view('dashboard.AirQuality.Ambien.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => AmbienPointid::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() 
+            'Codes' => AmbienPointid::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() 
         ]);
     }
     public function ExportAmbienPointId()

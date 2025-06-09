@@ -54,10 +54,10 @@
                         @endforeach
                     </table>
                     @endif
-                   @can('admin')
-                   <p class="card-title"><a href="/airquality/emission/pointid" class="btn bg-gradient-info btn-xs my-1 ml-1 ">Point ID</a></p>
+                    @can('admin')
+                    <p class="card-title"><a href="/airquality/emission/pointid" class="btn bg-gradient-info btn-xs my-1 ml-1 ">Point ID</a></p>
                     <p class="card-title"><a href="/airquality/emission/standard" class="btn bg-gradient-info btn-xs my-1 ml-1 ">Quality Standard</a></p>
-                   @endcan
+                    @endcan
 
 
                 </div>
@@ -74,14 +74,14 @@
                     </ul>
 
                     <div class="row my-2">
-                        <div class="col-6  "> 
-                          @can('admin')
-                          <a href="/airquality/emission/create" class="btn bg-gradient-secondary btn-xs mx-1 "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
-                          <a href="/export/emission" class="btn  bg-gradient-secondary btn-xs mx-1 " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
+                        <div class="col-6  ">
+                            @can('admin')
+                            <a href="/airquality/emission/create" class="btn bg-gradient-secondary btn-xs mx-1 "><i class="fas fa-plus mr-1 mt"></i>Add Data</a>
+                            <a href="/export/emission" class="btn  bg-gradient-secondary btn-xs mx-1 " data-toggle="tooltip" data-placement="top" title="download"><i class="fas fa-download mr-1"></i>Excel</a>
                             <a href="#" class="btn  bg-gradient-secondary btn-xs mx-1 " data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Upload" data-target="#modal-default">
                                 <i class="fas fa-upload mr-1"></i>Excel
                             </a>
-                          @endcan
+                            @endcan
                         </div>
                         <div class="col-6 d-flex justify-content-end">
                             <div class=" row form-inline">
@@ -120,15 +120,15 @@
                         </div>
                     </div>
 
-             
+
 
                     @if($Emission->count())
-                    <div class="tab-content" id="custom-content-below-tabContent">
+                    <div class="tab-content m-2" id="custom-content-below-tabContent">
                         <div class="tab-pane fade show active" id="custom-content-below-standard1" role="tabpanel" aria-labelledby="custom-content-below-standard1-tab">
-                            <div class="card-body table-responsive">
-                                <table style="font-size: 11px" class="table  table-sm table-striped table-bordered">
+                            <div class="table-responsive card card-primary card-outline">
+                                <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm ">
                                     <thead class="table-info text-center ">
-                                        <tr >
+                                        <tr>
                                             <th class="align-middle" rowspan="2">No</th>
                                             <th class="align-middle" rowspan="2" @if(!auth()->user()->is_admin) colspan="4"@else colspan="6" @endif>Quality Standard</th>
                                             <th colspan="14">Isokinetic Sampling Stack Condition</th>
@@ -227,25 +227,25 @@
                                             @can('admin')
                                             <td colspan="2">
 
-<div style="width: 50px">
-    <a href="/airquality/emission/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
-        <i class="fas fa-pen"></i>
-    </a>
-    <form action="/airquality/emission/{{ $item->id }}" method="POST" class="d-inline">
-        @method('delete')
-        @csrf
-        <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
-            <i class="fas fa-trash"></i>
-        </button>
-    </form>
-</div>
-</td>
+                                                <div style="width: 50px">
+                                                    <a href="/airquality/emission/{{ $item->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                    <form action="/airquality/emission/{{ $item->id }}" method="POST" class="d-inline">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </td>
                                             @endcan
                                             <td colspan="2">
-                                                <div style="width: 60px">{{date('d-M-Y',strtotime($item->date))}}</div>
+                                                <div style="width: 85px">{{date('d-M-Y',strtotime($item->date))}}</div>
                                             </td>
                                             <td colspan="2">
-                                                <div style="width: 60px">{{$item->PointId->nama}}</div>
+                                                <div style="width: 85px">{{$item->PointId->nama}}</div>
                                             </td>
                                             <td>{{$item->engine}}</td>
                                             <td>{{$item->fuel_type}}</td>
@@ -279,60 +279,65 @@
 
                                 </table>
                             </div>
-                            <div class="card-footer">
-                                <div class="card-tools row form-inline">
-                                    <div class="col-4">
-                                        <div class="d-flex justify-content-start">
-                                            <small>Showing {{ $Emission->firstItem() }} to {{
+
+
+
+                        </div>
+                        @else
+                        <p class="text-center fs-4 p-1">Not Data Found</p>
+                        @endif
+
+                    </div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="card-tools row form-inline">
+                        <div class="col-4">
+                            <div class="d-flex justify-content-start">
+                                <small>Showing {{ $Emission->firstItem() }} to {{
                                                                     $Emission->lastItem() }} of {{ $Emission->total() }}
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="d-flex justify-content-end">
-                                            {{ $Emission->links() }}
-                                        </div>
-                                    </div>
-                                </div>
-
+                                </small>
                             </div>
                         </div>
-
-
-                    </div>
-                    @else
-                    <p class="text-center fs-4 p-1">Not Data Found</p>
-                    @endif
-                    <div class="modal fade" id="modal-default">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Import Data</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <form action="/import/emission" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="modal-body">
-                                        <div class="custom-file">
-                                            <input type="file" name="file" required class="custom-file-input" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer justify-content-between">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Import</button>
-                                    </div>
-                                </form>
+                        <div class="col-8">
+                            <div class="d-flex justify-content-end">
+                                {{ $Emission->links() }}
                             </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/import/emission" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file" required class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
                         </div>
 
                     </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 

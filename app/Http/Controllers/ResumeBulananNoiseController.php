@@ -53,6 +53,7 @@ class ResumeBulananNoiseController extends Controller
       
         foreach ($Resume as $item ) {
             $date[]=date('M-Y', strtotime( $item->date));
+			
             $l1[]=doubleVal($item->l1);
             $l2[]=doubleval($item->l2);
             $l3[]=doubleval($item->l3);
@@ -129,7 +130,7 @@ class ResumeBulananNoiseController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'locationResume'=>'required',
+            'locationresume'=>'required',
             'l1'=>'required',
             'l2'=>'required',
             'l3'=>'required',

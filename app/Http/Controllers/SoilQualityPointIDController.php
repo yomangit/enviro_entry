@@ -20,7 +20,7 @@ class SoilQualityPointIDController extends Controller
         return view('dashboard.SoilQuality.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => Soilqualitypointid::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'Codes' => Soilqualitypointid::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
 

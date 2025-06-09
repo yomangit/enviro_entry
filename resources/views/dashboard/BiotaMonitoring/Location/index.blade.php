@@ -80,17 +80,17 @@
                                     @foreach ($Codes as $code)
                                     <tr style="font-size: 12px">
                                         <td>{{ $no++ }}</td>
-                              
+
                                         </td>
 
 
                                         <td>{{ $code->nama }}</td>
                                         <td>
-                                            
-                                            <a href="/monitoring/location/{{ $code->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+
+                                            <a href="/monitoring/location/{{ $code->id  }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <form action="/monitoring/location/{{ $code->created_at }}" method="POST" class="d-inline">
+                                            <form action="/monitoring/location/{{ $code->id }}" method="POST" class="d-inline">
                                                 @method('delete')
                                                 @csrf
                                                 <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -98,13 +98,13 @@
                                                 </button>
                                             </form>
 
-                                        
+
                                     </tr>
                                     @endforeach
 
                                 </tbody>
                             </table>
-                       
+
                         </section>
                     </div>
                     <div class="card-footer p-0">

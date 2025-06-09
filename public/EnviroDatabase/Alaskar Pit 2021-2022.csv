@@ -1,0 +1,127 @@
+id,user_id,point_id,standard_id,date,peak_vektor_std,time,transversal_freq,vertical_freq,longitudinal_freq,transversal_ppv,vertical_ppv,longitudinal_ppv,peak_vektor,noise_level,blast_location,weather,sampler,remarks
+1,1,2,8,2021-04-27,7,13:35:40,15,19,11,2.286,2.159,1.651,2.42,60.8,Alaskar,Bright,FP/BK,-
+1,1,2,8,2021-05-20,7,13:34:49,20,57,51,1.143,1.27,1.524,1.591,51.9,Alaskar,Bright,FP/RT,-
+1,1,2,8,2021-05-21,7,11:54:22,24,51,22,2.032,1.905,1.651,2.44,57.2,Alaskar,Bright,FP/FK,-
+1,1,2,8,2021-05-25,7,12:13:27,27,20,20,2.286,3.81,2.413,3.877,58.1,Alaskar,Bright,BK/FR,-
+1,1,2,8,2021-05-28,7,12:18:13,24,26,14,0.635,0.635,0.889,1.122,52.4,Alaskar,Bright,BK/FK,-
+1,1,2,8,2021-05-29,7,11:59:15,26,22,20,3.175,5.08,3.81,5.55,55,Alaskar,Bright,BK/FR,-
+1,1,2,8,2021-05-31,7,12:01:10,18,30,20,1.143,1.143,1.524,2.102,53.4,Alaskar,Bright,JK/FP,-
+1,1,2,8,2021-06-02,7,12:40:47,39,43,11,1.524,1.524,1.778,1.943,53.7,Alaskar,Bright,JK/BK,-
+1,1,2,8,2021-06-05,7,14:05:32,39,23,11,1.27,1.778,2.032,2.304,53.9,Alaskar,Bright,FP/FK,-
+1,1,2,8,2021-06-07,7,11:59:05,28,39,11,1.016,0.762,1.143,1.264,52.1,Alaskar,Bright,BK/FP/NB,-
+1,1,2,8,2021-06-08,7,12:03:51,13,23,9.3,1.524,2.032,1.27,2.386,51.2,Alaskar,Bright,FP/NB/FR,-
+1,1,2,8,2021-06-09,7,11:47:53,24,51,32,2.286,3.937,2.794,5.102,68.7,Alaskar,Bright,FR/RT,GRAFIK HISTOGRAM
+1,1,2,8,2021-06-14,7,11:58:03,9.3,30,11,0.508,0.381,0.508,0.648,62.1,Alaskar,Bright,FP/NB,-
+1,1,2,8,2021-06-15,7,15:04:05,51,34,28,0.635,0.635,1.143,1.212,62,Alaskar,Bright,FP/NB,-
+1,1,2,8,2021-06-17,7,15:15:05,16,23,9.7,1.016,0.508,0.889,1.055,52.7,Alaskar,Bright,BK,Event Report Data Error Date
+1,1,2,8,2021-06-21,7,12:08:59,20,43,15,0.635,0.508,0.635,0.783,72.5,Alaskar,Bright,FP/NB,-
+1,1,2,8,2021-06-28,7,12:56:00,14,23,26,1.016,1.143,1.016,1.442,62.3,Alaskar,Bright,BK,-
+1,1,2,8,2021-07-15,7,12:23:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,NB/JK,-
+1,1,2,8,2021-07-20,7,16:00:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,NB/FR,-
+1,1,2,8,2021-07-27,7,12:30:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,NB/FR,-
+1,1,2,8,2021-08-03,7,12:00:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,-,-
+1,1,2,8,2021-08-04,7,12:00:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,-,-
+1,1,2,8,2021-08-07,7,12:00:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,-,-
+1,1,2,8,2021-08-12,7,12:29:32,6.1,10,20,0.37,0.355,0.575,0.674,54.3,Alaskar,Bright,FP/FK,-
+1,1,2,8,2021-08-14,7,12:23:27,7.2,8.8,6.9,1.206,0.481,1.23,1.394,75.5,Alaskar,Bright,BK/FK,-
+1,1,2,8,2021-08-18,7,12:07:58,12,13,7.5,1.671,0.733,1.49,1.731,66.4,Alaskar,Bright,BK,-
+1,1,2,8,2021-08-20,7,12:29:37,11,9,11,1.592,0.725,1.608,1.778,68.4,Alaskar,Bright,BK,-
+1,1,2,8,2021-08-23,7,13:17:08,18,16,16,2.601,1.214,2.845,3.514,66.2,Alaskar,Bright,JK/FK,-
+1,1,2,8,2021-08-28,7,13:33:59,20,28,32,1.876,2.491,1.521,2.7,68.2,Alaskar,Bright,FK/JK,-
+1,1,2,8,2021-09-01,7,12:42:27,11,17,14,2.01,0.843,1.49,2.254,81.1,Alaskar,Bright,FK,-
+1,1,2,8,2021-09-03,7,12:04:20,9.8,9.3,7.5,0.867,0.544,0.906,0.986,71.3,Alaskar,Bright,NB/FK/BK,-
+1,1,2,8,2021-09-06,7,12:23:24,23,28,28,3.003,3.373,2.893,3.59,66.9,Alaskar,Bright,FP/FR,-
+1,1,2,8,2021-09-07,7,12:00:00,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Not Recorded,Alaskar,Bright,-,-
+1,1,2,8,2021-09-11,7,12:17:23,12,18,6.7,1.868,1.072,2.262,2.727,53.6,Alaskar,Bright,BK,-
+1,1,2,8,2021-09-13,7,12:12:05,20,26,19,1.135,0.749,1.096,1.206,58.5,Alaskar,Bright,FP/HM,-
+1,1,2,8,2021-09-14,7,12:48:05,11,12,13,2.065,1.001,1.434,2.182,62.2,Alaskar,Bright,FP/HM,-
+1,1,2,8,2021-09-16,7,12:13:05,12,17,16,1.75,0.922,1.458,2.066,74.8,Alaskar,Bright,NB/BK,-
+1,1,2,8,2021-09-20,7,12:09:01,11,24,15,1.466,0.788,1.08,1.53,58.5,Alaskar,Bright,HM/FP/FR,-
+1,1,2,8,2021-09-21,7,12:02:56,10,18,13,1.04,0.323,0.638,1.186,49.5,Alaskar,Bright,FK/PP,-
+1,1,2,8,2021-10-20,7,12:39:08,13,11,8.7,2.932,1.009,1.663,3.228,69.6,Alaskar,Bright,FK/PP,-
+1,1,2,8,2021-10-21,7,11:58:10,18,18,18,0.678,0.394,0.646,0.748,67.6,Alaskar,Bright,FK/JK,-
+1,1,2,8,2021-10-22,7,12:22:21,13,20,18,1.348,0.843,1.474,1.599,58.5,Alaskar,Bright,BK,-
+1,1,2,8,2021-10-26,7,12:02:30,16,8.8,14,1.356,0.717,1.419,1.592,49.9,Alaskar,Bright,BK,-
+1,1,2,8,2021-10-29,7,13:15:10,14,18,13,3.129,1.316,3.098,3.465,58.5,Alaskar,Bright,BK/FP/FR,-
+1,1,2,8,2021-10-30,7,12:09:51,14,5,14,2.325,1.482,2.635,2.528,61.6,Alaskar,Bright,FR/PP,-
+1,1,2,8,2021-10-30,7,12:12:04,3.3,3.9,5.1,0.497,0.323,1.064,1.123,68.6,Alaskar,Bright,FR/PP,-
+1,1,2,8,2021-11-03,7,12:20:04,12,12,9,0.497,0.607,0.544,0.783,69.1,Alaskar,Bright,FK/BK,-
+1,1,2,8,2021-11-05,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2021-11-06,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2021-11-09,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2021-11-10,7,12:04:30,22,32,17,0.3,0.2,0.3,0.3,66.6,Alaskar,Bright,FK/PP,-
+1,1,2,8,2021-11-11,7,13:29:36,12,11,8.8,1.9,1.5,1.6,2.1,66.9,Alaskar,Bright,FK/BK,-
+1,1,2,8,2021-11-15,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,FK/BK,-
+1,1,2,8,2021-11-18,7,11:32:52,13,13,17,0.5,0.3,0.7,0.7,61.6,Alaskar,Bright,BK/FP/NB,-
+1,1,2,8,2021-11-19,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,BK/FP/NB,-
+1,1,2,8,2021-11-22,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,BK/FP/NB,-
+1,1,2,8,2021-11-23,7,11:56:36,16,14,13,0.4,0.3,0.5,0.6,73.8,Alaskar,Bright,BK/FP/NB,-
+1,1,2,8,2021-11-24,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2021-11-25,7,12:05:10,7.2,11,5.8,0.7,0.4,0.7,0.9,63.9,Alaskar,Bright,BK/FK/JK,-
+1,1,2,8,2021-11-26,7,12:23:51,15,19,14,0.7,0.6,1,1,62.2,Alaskar,Bright,FP,-
+1,1,2,8,2021-11-28,7,12:12:49,8.3,16,4.9,0.6,0.5,0.6,0.8,58.2,Alaskar,Bright,FP/HM,-
+1,1,2,8,2021-11-29,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2021-11-30,7,12:12:21,9,20,6.8,0.9,0.7,0.7,1.1,56.5,Alaskar,Bright,BK,-
+1,1,2,8,2021-12-01,7,12:02:08,7.5,20,8.7,1.5,0.7,1.4,1.5,54.8,Alaskar,Bright,HM/FR/FP,-
+1,1,2,8,2021-12-03,7,11:57:14,7.6,13,11,0.5,0.3,0.4,0.6,66.9,Alaskar,Bright,BK/NB,-
+1,1,2,8,2021-12-04,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2021-12-06,7,12:07:59,8.3,12,12,0.7,0.7,0.7,0.9,61.7,Alaskar,Bright,FP/NB,-
+1,1,2,8,2021-12-07,7,12:35:22,8.1,16,9.7,1.1,1.1,1.4,1.4,64.2,Alaskar,Bright,FP/HM,-
+1,1,2,8,2021-12-09,7,12:13:00,14,17,9.8,2.4,2.7,3.3,3.5,63.2,Alaskar,Bright,NBHM,-
+1,1,2,8,2021-12-13,7,12:10:34,13,20,9.5,2.8,2.6,3,4.1,61.3,Alaskar,Bright,FR,-
+1,1,2,8,2021-12-16,7,12:17:10,20,21,16,2.3,1.7,1.8,2.4,57.8,Alaskar,Bright,NB/HM,-
+1,1,2,8,2021-12-20,7,12:17:45,20,22,18,2.1,1.9,2.2,2.4,53.8,Alaskar,Bright,FR/PP,-
+1,1,2,8,2021-12-23,7,12:19:05,11,9.1,9.1,0.9,0.5,1,1.2,65.2,Alaskar,Bright,HM/JK,-
+1,1,2,8,2021-12-28,7,14:04:17,17,11,11,0.6,0.7,0.7,0.8,69.3,Alaskar,Bright,FR,-
+1,1,2,8,2022-01-03,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-01-04,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-01-05,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-01-10,7,13:00:11,9,20,13,1,0.5,0.9,1.1,56.5,Alaskar,Bright,FP/HM,-
+1,1,2,8,2022-01-11,7,13:11:31,17,15,17,0.8,0.3,0.5,0.8,74,Alaskar,Bright,FR/BK,-
+1,1,2,8,2022-01-12,7,12:03:02,16,13,20,0.7,0.7,1,1.2,58.5,Alaskar,Bright,HM/BK,-
+1,1,2,8,2022-01-14,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-01-15,7,11:50:40,24,51,8.5,1.5,0.3,0.9,1.5,Not Applicable,Alaskar,Bright,BK/JK,-
+1,1,2,8,2022-01-20,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-01-29,7,12:07:34,34,20,34,2.7,1.6,1.3,3.2,61.1,Alaskar,Bright,FP/FR,-
+1,1,2,8,2022-02-22,7,13:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-03-05,7,12:00:38,12.6,93,24,0.5,0.6,0.6,0.8,57.8,Alaskar,Bright,FR/HM,-
+1,1,2,8,2022-04-02,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-04-04,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-04-07,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-04-08,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-04-12,7,12:30:08,64,120,89,1.4,0.7,1.4,1.5,63.7,Alaskar,Bright,FP/HM,-
+1,1,2,8,2022-04-13,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-04-22,7,12:37:30,293,186,228,0.3,0.4,0.7,0.7,75.7,Alaskar,Bright,BK/JK,-
+1,1,2,8,2022-04-25,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-05-05,7,12:27:03,186,76,205,0.7,0.5,0.7,0.8,60.8,Alaskar,Bright,NB/BK,-
+1,1,2,8,2022-05-10,7,12:04:22,6.2,8.1,6,0.6,0.2,0.7,0.8,69.4,Alaskar,Bright,FP/NB,-
+1,1,2,8,2022-05-23,7,12:43:07,14.1,11.7,5.6,0.2,0.1,0.2,0.2,78,Alaskar,Bright,HM/FP,-
+1,1,2,8,2022-06-03,7,12:35:47,6.3,7.6,4.6,0.8,0.3,0.8,0.8,93.5,Alaskar,Bright,FR/PP,-
+1,1,2,8,2022-06-07,7,12:32:24,8.2,5.9,4.8,1.2,0.3,1.2,1.3,65,Alaskar,Bright,BK/FK,-
+1,1,2,8,2022-06-08,7,12:33:06,7.6,7,5.3,5.1,1.8,4.3,5.5,71.7,Alaskar,Bright,BK/HM,-
+1,1,2,8,2022-06-11,7,12:53:59,256,171,205,0.2,0.2,0.4,0.4,74.8,Alaskar,Bright,HM/FP,-
+1,1,2,8,2022-06-14,7,12:34:28,5.8,7.8,7,0.7,0.2,0.5,0.7,58,Alaskar,Bright,JK/BK,-
+1,1,2,8,2022-06-16,7,13:01:25,7.8,8.1,6.8,1.3,0.5,1.2,1.4,67.3,Alaskar,Bright,JK/BK,-
+1,1,2,8,2022-06-18,7,12:28:45,6.8,37.9,6.1,0.5,0.3,0.5,0.5,Eror,Alaskar,Bright,HM/FR,-
+1,1,2,8,2022-06-22,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-06-24,7,12:17:28,137,102,128,0.9,1.9,0.6,2,Eror,Alaskar,Bright,HM/FR,-
+1,1,2,8,2022-06-27,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-06-29,7,12:30:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,Bright,-,-
+1,1,2,8,2022-07-01,7,12:29:55,293,186,256,0.7,0.4,0.1,0.8,50.1,Alaskar,Bright,HM/FR,-
+1,1,2,8,2022-07-02,7,12:35:27,26.3,14.7,4.3,0.4,0.3,0.6,0.6,108.8,Alaskar,Bright,FR/FP,-
+1,1,2,8,2022-07-08,7,12:42:47,9.2,11.4,5.1,1.1,0.4,1,1.1,59.8,Alaskar,Bright,FR/FP,-
+1,1,2,8,2022-07-13,7,11:55:17,7,186,8.1,0.4,0.2,0.3,0.4,125.3,Alaskar,Cloudy,BK/FR,Suara bertepatan dengan petir
+1,1,2,8,2022-07-14,7,12:20:17,5.3,5.3,3.4,1.8,0.9,2,2.3,65.9,Alaskar,-,BK/FR,-
+1,1,2,8,2022-07-18,7,12:11:34,59,40,21.3,0.2,0.2,0.1,0.2,83.1,Alaskar,-,BK/NB,-
+1,1,2,8,2022-07-21,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,-,-,-
+1,1,2,8,2022-07-23,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,-,-,-
+1,1,2,8,2022-07-27,7,11:56:41,24,34,26,0.2,0.2,0.2,0.2,51.5,Alaskar,-,HM/FP,-
+1,1,2,8,2022-07-30,7,12:08:13,16,28,28,0.3,0.2,0.2,0.3,57.1,Alaskar,-,BK/FP,-
+1,1,2,8,2022-08-02,7,12:05:39,21,47,37,0.7,0.6,0.4,0.8,52.4,Alaskar,-,BK/HM,-
+1,1,2,8,2022-08-03,7,12:13:13,51,73,43,0,0,0.1,0.1,72.3,Alaskar,-,BK/HM,-
+1,1,2,8,2022-08-08,7,12:00:48,7.3,6.2,4.7,0.4,0.3,0.4,0.5,68.6,Alaskar,-,FK/JK/PP,-
+1,1,2,8,2022-08-13,7,12:00:00,No Sampling,No Sampling,No Sampling,No Sampling,No Sampling,No Sampling,No Sampling,No Sampling,Alaskar,-,-,-
+1,1,2,8,2022-08-22,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,-,-,-
+1,1,2,8,2022-08-27,7,11:53:34,9.8,8.7,13,0.2,0.2,0.2,0.2,96.9,Alaskar,-,BK/NB,-
+1,1,2,8,2022-08-29,7,12:00:00,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,No triggered,Alaskar,-,-,-
+1,1,2,8,2022-08-30,7,11:59:34,8,8.3,10,0.2,0.2,0.2,0.2,57.5,Alaskar,-,HM/FP,-

@@ -270,7 +270,7 @@ class GroundWaterMonthStandardController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         GroundWaterMonthStandard::where('id', $standard->id)
             ->update($validatedData);
-        return redirect('/groundwater/standard')->with('success', ' Data biota freshwater has been updated!');
+        return redirect('/groundwater/standard')->with('success', ' Data  has been updated!');
     }
 
     /**

@@ -16,7 +16,7 @@ class CreateBiotasTable extends Migration
         Schema::create('biotas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('nama')->unique();
+            $table->string('nama');
             $table->timestamps();
         });
     }

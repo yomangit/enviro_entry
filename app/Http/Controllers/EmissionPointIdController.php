@@ -20,7 +20,7 @@ class EmissionPointIdController extends Controller
         return view('dashboard.AirQuality.Emission.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => EmissionPointId::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'Codes' => EmissionPointId::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportEmissionPointId()

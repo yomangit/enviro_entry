@@ -47,7 +47,7 @@ class DataImport implements ToModel, WithHeadingRow
             'oil_layer'           =>$row['oil_layer'],
             'source_pollution'    =>$row['source_pollution'],
             'sampler'    =>$row['sampler'],
-            'cyanide'    =>$row['level'],
+            'cyanide'    =>$row['cyanide'],
             'level'    =>$row['level'],
             'lvl_lgr'    =>$row['lvl_lgr'],
             'debit_s'    =>$row['debit_s'],

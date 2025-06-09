@@ -52,6 +52,6 @@ class Marine extends Model
     }
     public function getRouteKeyName()
     {
-        return 'created_at';
+        return 'id';
     }
 }

@@ -21,7 +21,7 @@ class ResourceCodeSampleGwController extends Controller
         return view('dashboard.GroundWater.Codesamplegw.index',[
             "tittle"=>"Code Sample MSM",
             'breadcrumb'=>'Code Sample MSM ',
-      'Codes'=>Codesamplegw::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+      'Codes'=>Codesamplegw::with('user')->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
     }

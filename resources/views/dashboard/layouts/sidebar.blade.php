@@ -65,12 +65,27 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                            <a href="/surfacewater/standardtable" class="nav-link {{ Request::is('surfacewater/standardtable*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+
+                                <p>Table Standard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="/surfacewater/qualityperiode" class="nav-link {{ Request::is('surfacewater/qualityperiode*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
 
                                 <p>Quality Periode</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/surfacewater/monthly" class="nav-link {{ Request::is('surfacewater/monthly*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+
+                                <p>Monthly Report</p>
+                            </a>
+                        </li>
+                        
                         <li class="nav-item">
                             <a href="/surfacewater/drinkwater" class="nav-link {{ Request::is('surfacewater/drinkwater*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
@@ -102,12 +117,7 @@
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
                                 <p>Table Standard</p>
                             </a>
-                        <li class="nav-item">
-                            <a href="/groundwater/monthly" class="nav-link btn-sm btn-sm {{ Request::is('groundwater/monthly*') ? 'active' : '' }}">
-                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
-                                <p>Monthly Report</p>
-                            </a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a href="/groundwater/mastergw" class="nav-link btn-sm btn-sm {{ Request::is('groundwater/mastergw*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
@@ -126,7 +136,12 @@
                                 <p>Groundwell Community </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="/groundwater/monthly" class="nav-link btn-sm btn-sm {{ Request::is('groundwater/monthly*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Monthly Report</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item {{ Request::is('weather*') ? 'menu-open' : '' }}    ">
@@ -149,6 +164,30 @@
                             <a href="/weather/evaporation" class="nav-link  {{ Request::is('weather/evaporation*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
                                 <p>Evaporation</p>
+                            </a>
+                        </li>                      
+                    </ul>
+                </li>
+                <li class="nav-item {{ Request::is('sediment*') ? 'menu-open' : '' }}    ">
+                    <a href="#" class="nav-link  {{ Request::is('sedimen*') ? 'active' : '' }}">
+                      
+                        <i class="fa-solid fa-hill-rockslide nav-icon"> </i>
+                        <p>
+                        Sediment
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/sediment/freshwater" class="nav-link  {{ Request::is('sediment/freshwater*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Freshwater</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/sediment/marine" class="nav-link  {{ Request::is('sediment/marine*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Marine</p>
                             </a>
                         </li>                      
                     </ul>

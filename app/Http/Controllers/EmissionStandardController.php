@@ -20,7 +20,7 @@ class EmissionStandardController extends Controller
         return view('dashboard.AirQuality.Emission.QualityStandard2.index2', [
             'tittle' => 'Quality Standard',
             'breadcrumb' => 'Quality Standard',
-            'QualityStandard' => EmissionStandard::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
+            'QualityStandard' => EmissionStandard::with('user')->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString(),
         ]);
     }
     public function ExportQualityStandard2()
@@ -87,7 +87,8 @@ class EmissionStandardController extends Controller
             'chlorine_cl2' => 'required',
             'hydrogen_chloride_hcl' => 'required',
             'hydrogen_fluoride_hf' => 'required',
-            'nitrogen_oxide_nox_as_nitrogen_dioxide_no2' => 'required',
+            'nitrogen_oxide_nox' => 'required',
+			'nitrogen_dioxide_no2'=>'required',
             'opacity' => 'required',
             'total_particulate_isokinetic' => 'required',
             'sulfur_dioxide_so2' => 'required',
@@ -162,7 +163,8 @@ class EmissionStandardController extends Controller
             'chlorine_cl2' => 'required',
             'hydrogen_chloride_hcl' => 'required',
             'hydrogen_fluoride_hf' => 'required',
-            'nitrogen_oxide_nox_as_nitrogen_dioxide_no2' => 'required',
+            'nitrogen_oxide_nox' => 'required',
+			'nitrogen_dioxide_no2'=>'required',
             'opacity' => 'required',
             'total_particulate_isokinetic' => 'required',
             'sulfur_dioxide_so2' => 'required',

@@ -20,7 +20,7 @@ class RainfallPointIdController extends Controller
         return view('dashboard.Weather.Rainfall.PointId.index', [
             "tittle" => "Point ID",
             'breadcrumb' => 'Point ID',
-            'Codes' => Rainfallpointid::where('user_id', auth()->user()->id)->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
+            'Codes' => Rainfallpointid::with('user')->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString()
         ]);
     }
     public function ExportRainfallPointId()

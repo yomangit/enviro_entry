@@ -20,7 +20,7 @@ class LocationBiotaController extends Controller
         return view('dashboard.BiotaMonitoring.Location.index',[
             "tittle"=>"Code Location: Biota",
             'breadcrumb'=>'Code Location : Biota ',
-            'Codes'=>LocationBiota::where('user_id',auth()->user()->id)->filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
+            'Codes'=>LocationBiota::filter(request(['fromDate','search']))->paginate(10)->withQueryString()//with diguanakan untuk mengatasi N+1 problem
 
          ]);
     }

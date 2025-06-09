@@ -41,9 +41,10 @@
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="form-group row">
-                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Code Sample</label>
+                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Point ID</label>
                                     <div class="col-sm-7">
                                         <select class="form-control form-control-sm " name="gwcodesample_id">
+                                            <option value="" selected disabled>--SELECT--</option>
                                             @foreach ($code_units as $code)
                                             @if (old('gwcodesample_id')==$code->id)
                                             <option value="{{$code->id}}" selected>{{$code->nama}}</option>

@@ -1,0 +1,12 @@
+id,user_id,gwcodesample_id,date,gwtablestandard_id,start_time,stop_time,well,well_water,h,water_volume,temperatur,ph,conductivity,tds,redox,do,salinity,turbidity,water_color,odor,rain_before_sampling,rain_during_sampling,oil_layer,source_pollution,sampler,remarks
+1,1,1,2016-11-08,1,10:04,10:13,8,6,2,3532.5,29.8,7.07,604,395,204,5.2,-,-,Normal,no,yes,no,no,community activity,AP/AL/CR/FR/HM,
+1,1,1,2017-05-31,1,9:38,9:42,8,2.5,5.5,9714.375,30.7,7.4,514,276,220,3.07,-,-,Normal,no,no,no,no,community activity,AL/RH/NL,
+1,1,1,2017-11-28,1,10:05,10:13,8,2.5,5.5,9714.375,31.6,7.56,430,231,271,3.9,-,-,Normal,no,no,no,no,community activity,AL/RH/MW/HM,
+1,1,1,2018-06-26,1,10:26,10:34,8,2.5,5.5,9714.375,28.3,7.73,374,243,229,5.52,-,-,Normal,no,no,no,no,community activity,RT/RH/AL/RK/OS/MW/HM,
+1,1,1,2018-11-27,1,10:18,10:25,8,2,6,10597.5,29.2,7.01,392,281,218,3.43,-,-,Normal,no,no,no,no,community activity,AL/AP/RH/RKM,
+1,1,1,2019-03-05,1,9:56,10:04,8,2,6,10597.5,28.7,7.32,432,281,241,4.11,-,-,Normal,no,no,no,no,community activity,OS/AL/BK,
+1,1,1,2020-12-08,1,9:24,9:36,8,6,2,3532.5,29.1,7.13,603,301,21,6.02,-,-,Normal,no,no,no,no,community activity,RT/BK/OS,
+1,1,1,2021-05-18,1,10:29,10:35,8,7,1,1766.25,27.3,7.68,435,283,90,7.3,-,-,Normal,no,no,no,no,community activity,BK/RT/FR,
+1,1,1,2021-10-19,1,9:15,9:21,8,8,0,0,30.8,7.67,436,283,212,4.68,0.21,-,Normal,no,no,no,no,community activity,BK/NB/FR/HM,
+1,1,1,2022-05-12,1,10:12,10:19,8,8,0,0,31.3,6.26,401,261,273,3.97,0.2,-,Normal,no,no,no,no,community activity,BK/FR/HM,
+1,1,1,2022-09-16,1,9:58,10:08,8,6,2,3532.5,29.4,7.18,337,219,238,3.96,0.1,-,Normal,no,no,no,no,community activity,BK/HM/NB,

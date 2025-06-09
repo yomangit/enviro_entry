@@ -86,17 +86,17 @@
 
                     </ul>
                     @if($QualityStandard->count())
-                    <div class="tab-content" id="custom-content-below-tabContent">
+                    <div class="tab-content m-2" id="custom-content-below-tabContent">
                         <div class="tab-pane fade show active" id="custom-content-below-standard1" role="tabpanel" aria-labelledby="custom-content-below-standard1-tab">
-                            <div class="card-body table-responsive">
-                                <table style="font-size: 11px" class="table table-head-fixed table-sm table-striped table-bordered">
-                                    <thead style="background-color: #067eaa ;color:#ded8d8" class="text-center ">
-                                        <tr style="background-color: #067eaa">
-                                            <th class="align-middle" style="background-color: #067eaa" rowspan="2">No</th>
-                                            <th class="align-middle" style="background-color: #067eaa" rowspan="2">Action</th>
-                                            <th class="align-middle" style="background-color: #067eaa" rowspan="2">Quality Standard</th>
-                                            <th style="background-color: #067eaa" colspan="14">Isokinetic Sampling Stack Condition</th>
-                                            <th style="background-color: #067eaa" colspan="15">Emission Air (Actual)</th>
+                            <div class="table-responsive card card-primary card-outline">
+                                <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm ">
+                                    <thead  class="text-center table-info">
+                                        <tr >
+                                            <th class="align-middle"  rowspan="2">No</th>
+                                            <th class="align-middle"  rowspan="2">Action</th>
+                                            <th class="align-middle"  rowspan="2">Quality Standard</th>
+                                            <th  colspan="14">Isokinetic Sampling Stack Condition</th>
+                                            <th  colspan="16">Emission Air (Actual)</th>
 
                                         </tr>
                                         <tr>
@@ -118,7 +118,8 @@
                                             <th class="align-middle"> Chlorine (Cl2) </th>
                                             <th class="align-middle"> Hydrogen Chloride (HCl) </th>
                                             <th class="align-middle"> Hydrogen Fluoride (HF) </th>
-                                            <th class="align-middle"> Nitrogen Oxide (NOX) </th>
+                                            <th class="align-middle"> Nitrogen Dioxide (NO2) </th>
+											<th class="align-middle"> Nitrogen Oxide (NOX) </th>
                                             <th class="align-middle"> Opacity </th>
                                             <th class="align-middle"> Total Particulate (isokinetic) </th>
                                             <th class="align-middle"> Sulfur Dioxide (SO2) </th>
@@ -173,7 +174,8 @@
                                             <td>{{$standard2->chlorine_cl2}}</td>
                                             <td>{{$standard2->hydrogen_chloride_hcl}}</td>
                                             <td>{{$standard2->hydrogen_fluoride_hf}}</td>
-                                            <td>{{$standard2->nitrogen_oxide_nox_as_nitrogen_dioxide_no2}}</td>
+                                            <td>{{$standard2->nitrogen_dioxide_no2}}</td>
+											<td>{{$standard2->nitrogen_oxide_nox}}</td>
                                             <td>{{$standard2->opacity}}</td>
                                             <td>{{$standard2->total_particulate_isokinetic}}</td>
                                             <td>{{$standard2->sulfur_dioxide_so2}}</td>
@@ -194,23 +196,7 @@
 
                                 </table>
                             </div>
-                            <div class="card-footer">
-                                <div class="card-tools row form-inline">
-                                    <div class="col-4">
-                                        <div class="d-flex justify-content-start">
-                                            <small>Showing {{ $QualityStandard->firstItem() }} to {{
-                                                                    $QualityStandard->lastItem() }} of {{ $QualityStandard->total() }}
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="d-flex justify-content-end">
-                                            {{ $QualityStandard->links() }}
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
                         </div>
 
 
@@ -218,36 +204,53 @@
                     @else
                     <p class="text-center fs-4 p-1">Not Data Found</p>
                     @endif
-                    <div class="modal fade" id="modal-default">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Import Data</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <form action="/import/emission/standard2" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="modal-body">
-                                        <div class="custom-file">
-                                            <input type="file" name="file" required class="custom-file-input" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
 
-                                    </div>
-                                    <div class="modal-footer justify-content-between">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Import</button>
-                                    </div>
-                                </form>
+                </div>
+                <div class="card-footer">
+                    <div class="card-tools row form-inline">
+                        <div class="col-4">
+                            <div class="d-flex justify-content-start">
+                                <small>Showing {{ $QualityStandard->firstItem() }} to {{
+                                                                    $QualityStandard->lastItem() }} of {{ $QualityStandard->total() }}
+                                </small>
                             </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex justify-content-end">
+                                {{ $QualityStandard->links() }}
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="modal fade" id="modal-default">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Import Data</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/import/emission/standard2" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="custom-file">
+                                        <input type="file" name="file" required class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                </div>
+                            </form>
                         </div>
 
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </section>

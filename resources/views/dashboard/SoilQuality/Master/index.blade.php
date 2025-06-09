@@ -96,7 +96,9 @@
                         </div>
                         @endcan
                         @if($Soil->count())
-                        <table style="font-size: 11px" class="table  table-striped table-sm table-bordered">
+
+                        <div class="table-responsive card card-primary card-outline">
+                    <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm ">
                             <thead class="text-center table-info ">
 
                                 <tr>
@@ -274,7 +276,7 @@
 
                             </tbody>
                         </table>
-
+                    </div>
                     </div>
                     <div class="card-footer p-0">
                         <div class="card-tools mt-2 form-inline">

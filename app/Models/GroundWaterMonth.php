@@ -24,6 +24,9 @@ class GroundWaterMonth extends Model
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
+    public function PointId(){
+        return $this->belongsTo(Codesamplegw::class,'point_id');
+    }
     public function standard(){
         return $this->belongsTo(GroundWaterMonthStandard::class,'standard_id');
     }

@@ -20,7 +20,7 @@ class Dataentry extends Model
         return $query->whereBetween('date', array( date('Y-m-d',strtotime(request('fromDate'))),date('Y-m-d',strtotime( request('toDate'))))); 
         });
         $query->when($filters['search']??false,function($query,$search){
-            return $query->whereHas('CodeSample',function($query)use($search){
+            return $query->whereHas('PointId',function($query)use($search){
                 $query->where('nama', 'like',  $search );
             });
         });

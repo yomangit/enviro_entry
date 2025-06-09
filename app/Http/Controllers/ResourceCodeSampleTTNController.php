@@ -24,7 +24,7 @@ class ResourceCodeSampleTTNController extends Controller
         return view('dashboard.GroundWater.CodesampleTTN.index', [
             "tittle" => "Code Sample",
             'breadcrumb' => 'Code Sample Groundwell Community',
-            'Codes' => Codesamplettn::where('user_id', auth()->user()->id)->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
+            'Codes' => Codesamplettn::with('user')->latest()->filter(request(['fromDate', 'search']))->paginate(10)->withQueryString() //with diguanakan untuk mengatasi N+1 problem
 
         ]);
     }

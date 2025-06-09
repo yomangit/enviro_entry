@@ -20,6 +20,7 @@
             <th> Chlorine (Cl2) </th>
             <th> Hydrogen Chloride (HCl) </th>
             <th> Hydrogen Fluoride (HF) </th>
+			<th> Nitrogen Oxide (NOx) </th>
             <th> Nitrogen Dioxide (NO2) </th>
             <th> Opacity </th>
             <th> Total Particulate (isokinetic) </th>
@@ -55,7 +56,8 @@
             <td>{{$standard2->chlorine_cl2}}</td>
             <td>{{$standard2->hydrogen_chloride_hcl}}</td>
             <td>{{$standard2->hydrogen_fluoride_hf}}</td>
-            <td>{{$standard2->nitrogen_oxide_nox_as_nitrogen_dioxide_no2}}</td>
+            <td>{{$standard2->nitrogen_oxide_nox}}</td>
+			<td>{{$standard2->nitrogen_dioxide_no2}}</td>
             <td>{{$standard2->opacity}}</td>
             <td>{{$standard2->total_particulate_isokinetic}}</td>
             <td>{{$standard2->sulfur_dioxide_so2}}</td>

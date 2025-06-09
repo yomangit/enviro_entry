@@ -55,6 +55,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" id="custom-content-above-microbiology-tab" data-toggle="pill" href="#custom-content-above-microbiology" role="tab" aria-controls="custom-content-above-microbiology" aria-selected="false">Microbiology</a>
                             </li>
+							<li class="nav-item">
+                                <a  class="nav-link" id="custom-content-above-organic-tab" data-toggle="pill" href="#custom-content-above-organic" role="tab" aria-controls="custom-content-above-organic" aria-selected="false">Organic</a>
+                            </li>
 
                         </ul>
 
@@ -724,12 +727,77 @@
 
                                 </div>
                             </div>
+							<div class="tab-pane fade" id="custom-content-above-organic" role="tabpanel" aria-labelledby="custom-content-above-organic-tab">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-4">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Permanganate Number as KMnO4</label>
+                                                        <div class="col-sm-5">
+                                                            <input name="permanganate_number_as_kmno4" type="text" class="form-control form-control-sm @error('permanganate_number_as_kmno4') is-invalid @enderror" value="{{ old('permanganate_number_as_kmno4') }}" />
+                                                            @error('permanganate_number_as_kmno4')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
+                                            <div class="col-12 col-sm-4">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Surfactant</label>
+                                                        <div class="col-sm-5">
+                                                            <input name="surfactant" type="text" class="form-control form-control-sm @error('surfactant') is-invalid @enderror" value="{{ old('surfactant') }}" />
+                                                            @error('surfactant')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
 
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
+                                            <div class="col-12 col-sm-4">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Benzene</label>
+                                                        <div class="col-sm-5">
+                                                            <input name="benzene" type="text" class="form-control form-control-sm @error('benzene') is-invalid @enderror" value="{{ old('benzene') }}" />
+                                                            @error('benzene')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
+											<div class="col-12 col-sm-4">
+                                                <div class="form-group">
+                                                    <div class="form-group row">
+                                                        <label style="font-size: 10px" class="col-sm-5 col-form-label">Total pesticides as organo Chlorine Pesticides</label>
+                                                        <div class="col-sm-5">
+                                                            <input name="total_pesticides_as_organo_chlorine_pesticides" type="text" class="form-control form-control-sm @error('total_pesticides_as_organo_chlorine_pesticides') is-invalid @enderror" value="{{ old('total_pesticides_as_organo_chlorine_pesticides') }}" />
+                                                            @error('total_pesticides_as_organo_chlorine_pesticides')
+                                                            <span class=" invalid-feedback">{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
+                                        </div><!-- end row -->
+                                    </div>
+ <div class="card-footer d-flex justify-content-end">
                     <button type="submit" class="btn bg-gradient-primary btn-sm ">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
                 </form>
             </div>
         </div>

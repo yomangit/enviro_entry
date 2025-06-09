@@ -394,7 +394,7 @@
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <div class="form-group row">
-                                                    <label style="font-size: 10px" class="col-sm-4 col-form-label">Emission Air (Corrected to 13% Oxygen at 25°C, 1 atm)</label>
+                                                    <label style="font-size: 12px" class="col-sm-4 col-form-label">Nitrogen Dioxide (NO2)</label>
                                                     <div class="col-sm-7">
                                                         <input name="nitrogen_oxide_nox_as_nitrogen_dioxide_no2" type="text" class="form-control form-control-sm @error('nitrogen_oxide_nox_as_nitrogen_dioxide_no2') is-invalid @enderror" value="{{ old('nitrogen_oxide_nox_as_nitrogen_dioxide_no2') }}" />
                                                         @error('nitrogen_oxide_nox_as_nitrogen_dioxide_no2')

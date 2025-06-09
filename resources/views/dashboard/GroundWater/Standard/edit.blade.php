@@ -928,7 +928,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end mt-2">
-                                    <button type="submit" class="btn btn-gradient btn-primary btn-xs">Create<i class="fa-solid fa-folder-plus ml-3"></i></button>
+                                    <button type="submit" class="btn btn-gradient btn-success btn-xs">Save<i class="fa-solid fa-floppy-disk ml-3"></i></button>
                                 </div>
                             </div>
                         </div>

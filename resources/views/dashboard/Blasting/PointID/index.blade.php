@@ -93,10 +93,10 @@
                                         <td>{{ $point_id->nama }}</td>
                                         <td>{{ $point_id->lokasi }}</td>
                                         <td>
-                                            <a href="/blasting/pointid/{{ $point_id->created_at }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <a href="/blasting/pointid/{{ $point_id->id }}/edit" class="btn btn-outline-warning btn-xs btn-group" data-toggle="tooltip" data-placement="top" title="Edit">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <form action="/blasting/pointid/{{ $point_id->created_at }}" method="POST" class="d-inline">
+                                            <form action="/blasting/pointid/{{ $point_id->id }}" method="POST" class="d-inline">
                                                 @method('delete')
                                                 @csrf
                                                 <button class="btn btn btn-outline-danger btn-xs btn-group" onclick="return confirm('are you sure?')" data-toggle="tooltip" data-placement="top" title="Delete">

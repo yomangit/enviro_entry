@@ -131,8 +131,8 @@ class DischargeManualController extends Controller
             'tssStandard'=>$tssStandard,
             'tdsStandard'=>$tdsStandard,
             'cdvStd'=>$conductivityStandard,
-            'phMin'=>'6',
-            'phMax'=>'9',
+            'phMin'=>$phMin,
+            'phMax'=>$phMax,
             'Hydrometric' => DischargeManual::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search']))->paginate(30)->withQueryString()
         ]);
     }

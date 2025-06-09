@@ -21,17 +21,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        TblStandard::create([
 
-           'tss'         =>'50.0',
-           'ph_max'      =>'9.0',
-           'ph_min'      =>'6.0',
-           'do'          =>'4.0',
-           'redox'       =>'No std',
-           'conductivity'=>'No std',
-           'tds'         =>'1000',
-           'temperatur'  =>'No std'
-        ]);
         User::create([
             'name'=>'yoman banea',
             'username'=>'yomanbanea',
@@ -39,13 +29,7 @@ class DatabaseSeeder extends Seeder
             'password'=>bcrypt('123'),
             'is_admin'=>'1'
         ]);
-        GroundWaterStandard::create([
-            'user_id'=>'1',
-            'd_pipe'=>'0.0762',
-            'tt'=>'3.14',
-            'r'=>'0.000645'
-        ]);
-     
+       
        
     }
 }
