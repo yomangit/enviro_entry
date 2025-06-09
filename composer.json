@@ -12,11 +12,7 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-<<<<<<< HEAD
-        "livewire/livewire": "^2.12",
-=======
-        "livewire/livewire": "^2.11",
->>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
+
         "maatwebsite/excel": "^3.1",
         "nesbot/carbon": "^2.58",
         "psr/simple-cache": "1.0"

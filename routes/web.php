@@ -76,25 +76,7 @@ use App\Http\Controllers\AuthResumeMonthlyNoiseController;
 use App\Http\Controllers\DischargeManualPointidController;
 use App\Http\Controllers\GroundWaterMonthStandardController;
 use App\Http\Controllers\DischargeManualQualityStandardController;
-<<<<<<< HEAD
-=======
-use App\Http\Controllers\EvaporationController;
-use App\Http\Controllers\SurfacewaterMonthlyController;
-use App\Http\Controllers\StandardSurfacewaterController;
-use App\Http\Controllers\EvaporationPointIdController;
-use App\Http\Controllers\GroundWaterMonthController;
-use App\Http\Controllers\GroundWaterMonthStandardController;
-use App\Http\Controllers\MestomController;
-use App\Http\Controllers\RainfallController;
-use App\Http\Controllers\RainfallPointIdController;
-use App\Http\Controllers\SoilQualityController;
-use App\Http\Controllers\SoilQualityPointIDController;
-use App\Http\Controllers\SoilQualityStandardController;
-use App\Http\Controllers\WastewaterController;
-use App\Http\Controllers\WastewaterPointiDController;
-use App\Http\Controllers\WastewaterStandardController;
 
->>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
 
 /*
 |--------------------------------------------------------------------------
@@ -168,16 +150,16 @@ Route::resource('/tailing/qualitystandard', TailingStandardController::class)->m
 Route::resource('/tailing/codeid', TailingCodeIdController::class)->middleware('admin');
 Route::resource('/tailing', TailingController::class)->middleware('auth');
 Route::resource('/mestom', MestomController::class)->middleware('auth');
-Route::resource('/soilquality/soilqualitypointid',SoilQualityPointIDController::class)->middleware('admin');
-Route::resource('/soilquality/soilqualitystandard',SoilQualityStandardController::class)->middleware('admin');
-Route::resource('/soilquality',SoilQualityController::class)->middleware('auth');
-Route::resource('/wastewater/wastewaterpointid',WastewaterPointiDController::class)->middleware('admin');
-Route::resource('/wastewater/wastewaterstandard',WastewaterStandardController::class)->middleware('admin');
-Route::resource('/wastewater',WastewaterController::class)->middleware('auth');
-Route::resource('/weather/rainfall/rainfallpointid',RainfallPointIdController::class)->middleware('admin');
-Route::resource('/weather/rainfall',RainfallController::class)->middleware('auth');
-Route::resource('/weather/evaporation/evaporationpointid',EvaporationPointIdController::class)->middleware('admin');
-Route::resource('/weather/evaporation',EvaporationController::class)->middleware('auth');
+Route::resource('/soilquality/soilqualitypointid', SoilQualityPointIDController::class)->middleware('admin');
+Route::resource('/soilquality/soilqualitystandard', SoilQualityStandardController::class)->middleware('admin');
+Route::resource('/soilquality', SoilQualityController::class)->middleware('auth');
+Route::resource('/wastewater/wastewaterpointid', WastewaterPointiDController::class)->middleware('admin');
+Route::resource('/wastewater/wastewaterstandard', WastewaterStandardController::class)->middleware('admin');
+Route::resource('/wastewater', WastewaterController::class)->middleware('auth');
+Route::resource('/weather/rainfall/rainfallpointid', RainfallPointIdController::class)->middleware('admin');
+Route::resource('/weather/rainfall', RainfallController::class)->middleware('auth');
+Route::resource('/weather/evaporation/evaporationpointid', EvaporationPointIdController::class)->middleware('admin');
+Route::resource('/weather/evaporation', EvaporationController::class)->middleware('auth');
 // export & import
 Route::get('/exportdata', [ResourceDataEntryController::class, 'dataexport'])->middleware('admin');
 Route::post('/importdata', [ResourceDataEntryController::class, 'dataimportexcel'])->middleware('admin');
@@ -292,7 +274,3 @@ Route::get('/export/surfacewater/standard', [StandardSurfacewaterController::cla
 Route::post('/import/surfacewater/standard', [StandardSurfacewaterController::class, 'ImportStandardSurfacewater'])->middleware('admin');
 Route::get('/export/surfacewater/monthly', [SurfacewaterMonthlyController::class, 'ExportMonthlySurfacewater'])->middleware('admin');
 Route::post('/import/surfacewater/monthly', [SurfacewaterMonthlyController::class, 'ImportMonthlySurfacewater'])->middleware('admin');
-<<<<<<< HEAD
-=======
-
->>>>>>> d0a6326defbeba8c21bdbfff3da64407ba3b31e3
