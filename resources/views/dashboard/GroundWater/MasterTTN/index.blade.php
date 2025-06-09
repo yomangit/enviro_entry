@@ -148,9 +148,9 @@
                                         <td>{{ $data->well }}</td>
                                         <td>{{ $data->well_water }}</td>
                                         <td>{{ $data->h }}</td>
-                                        <td>{{ $data->tablestandard->d_pipe }}</td>
-                                        <td>{{ $data->tablestandard->tt }}</td>
-                                        <td>{{ $data->tablestandard->r }}</td>
+                                        <td>0.0762</td>
+                                        <td>3.14</td>
+                                        <td>0.000645</td>
                                         <td>{{ $data->water_volume }}</td>
                                         <td>{{ $data->temperatur }}</td>
                                         <td>{{ $data->ph }}</td>

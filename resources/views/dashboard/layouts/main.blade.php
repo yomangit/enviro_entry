@@ -141,7 +141,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
                 
             });
@@ -150,7 +150,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example3').DataTable({
@@ -158,7 +158,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example4').DataTable({
@@ -166,7 +166,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example5').DataTable({
@@ -174,7 +174,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example6').DataTable({
@@ -182,7 +182,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example7').DataTable({
@@ -190,7 +190,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
             $('#example8').DataTable({
@@ -198,7 +198,7 @@
                 "lengthChange": false,
                 "paging": false,
                 "info": false,
-                "autoWidth": false,
+                "autoWidth": true,
                 "searching": false
             });
         });

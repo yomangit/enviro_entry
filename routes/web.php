@@ -63,6 +63,8 @@ use App\Http\Controllers\DischargeManualPointidController;
 use App\Http\Controllers\DischargeManualQualityStandardController;
 use App\Http\Controllers\EvaporationController;
 use App\Http\Controllers\EvaporationPointIdController;
+use App\Http\Controllers\GroundWaterMonthController;
+use App\Http\Controllers\GroundWaterMonthStandardController;
 use App\Http\Controllers\RainfallController;
 use App\Http\Controllers\RainfallPointIdController;
 use App\Http\Controllers\SoilQualityController;
@@ -103,9 +105,11 @@ Route::resource('/surfacewater/marinesurfacewater/quality', QualityStandardMarin
 Route::resource('/surfacewater/marinesurfacewater', MarinesurfacewaterController::class)->middleware('auth');
 Route::resource('/groundwater/masterttn/codesamplettn', ResourceCodeSampleTTNController::class)->middleware('admin');
 Route::resource('/groundwater/mastergw/codesamplegw', ResourceCodeSampleGwController::class)->middleware('admin');
+Route::resource('/groundwater/standard', GroundWaterMonthStandardController::class)->middleware('admin');
+Route::resource('/groundwater/monthly', GroundWaterMonthController::class)->middleware('admin');
 Route::resource('/groundwater/mastergw', ResourceMasterGWGwController::class)->middleware('auth');
 Route::resource('/groundwater/masterttn', ResourceMasterTTNController::class)->middleware('auth');
-Route::resource('/groundwater/standard', GwStandardController::class)->middleware('admin');
+// Route::resource('/groundwater/standard', GwStandardController::class)->middleware('admin');
 Route::resource('/groundwater/level', ResourceWellLevelController::class)->except('show', 'edit', 'delete')->middleware('auth');
 Route::resource('/airquality/dustgauge/dust/codesampledg', ResourceCodeSampleDgController::class)->middleware('admin');
 Route::resource('/airquality/dustgauge/dust', DustController::class)->middleware('auth');
@@ -254,3 +258,5 @@ Route::post('/import/evaporation', [EvaporationController::class, 'ImportEvapora
 Route::get('/export/wastewater', [WastewaterController::class, 'ExportWastewater'])->middleware('admin');
 Route::post('/import/wastewater', [WastewaterController::class, 'ImportWastewater'])->middleware('admin');
 Route::post('/import/noisebulanan', [ResumeBulananNoiseController::class, 'ImportResumeBulananNoise'])->middleware('admin');
+Route::get('/export/groundwater/standard', [GroundWaterMonthStandardController::class, 'ExportStandardGroundwater'])->middleware('admin');
+Route::post('/import/groundwater/standard', [GroundWaterMonthStandardController::class, 'ImportStandardGroundwater'])->middleware('admin');

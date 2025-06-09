@@ -103,6 +103,12 @@
                                 <p>Table Standard</p>
                             </a>
                         <li class="nav-item">
+                            <a href="/groundwater/monthly" class="nav-link btn-sm btn-sm {{ Request::is('groundwater/monthly*') ? 'active' : '' }}">
+                                <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
+                                <p>Monthly Report</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="/groundwater/mastergw" class="nav-link btn-sm btn-sm {{ Request::is('groundwater/mastergw*') ? 'active' : '' }}">
                                 <i style="font-size: 10px" class="nav-icon fa-solid fa-circle-dot"></i>
                                 <p>Monitoring Master(MSM) </p>
